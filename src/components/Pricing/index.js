@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
 import Title from "../Title"
+import Features from "../Features"
 import styles from "./index.module.scss"
 
 const prices = [
@@ -116,14 +117,7 @@ export default () => {
             <Link className={styles.link} to="/">
               {card.link}
             </Link>
-            <ul className={styles.features}>
-              {card.features.map((feature, i) => (
-                <li key={i} className={styles.feature}>
-                  <Icon type="checkmark" className={styles.feature__icon} />
-                  {feature}
-                </li>
-              ))}
-            </ul>
+            <Features data={card.features} classes={styles} />
           </div>
         ))}
       </div>

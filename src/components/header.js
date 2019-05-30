@@ -5,7 +5,7 @@ import styles from "./header.module.scss"
 
 const Header = ({ siteTitle }) => (
   <header className={styles.header}>
-    <div className={styles.logo}>
+    <Link className={styles.logo} to="/">
       <svg
         width="32"
         height="32"
@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => (
         <div className={styles.logo__title}>santiment</div>
         <div className={styles.logo__desc}>app programming interface</div>
       </div>
-    </div>
+    </Link>
     <nav>
       <Link className={styles.link} to="#pricing">
         Pricing
@@ -33,7 +33,7 @@ const Header = ({ siteTitle }) => (
       <Link className={styles.link} to="#support">
         Support
       </Link>
-      <Link className={styles.login} to="/login">
+      <Link className={styles.login} to="/account">
         Sign up
       </Link>
     </nav>

@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Pricing from "../components/Pricing"
 import WhySantiment from "../components/WhySantiment"
+import Advantages from "../components/Advantages"
 import UseCases from "../components/UseCases"
 import FAQ from "../components/FAQ"
 import ReadyToStart from "../components/ReadyToStart"
@@ -73,6 +74,7 @@ const IndexPage = () => (
       </div>
     </section>
     <WhySantiment />
+    <Advantages />
     <UseCases />
     <Pricing />
     <FAQ />

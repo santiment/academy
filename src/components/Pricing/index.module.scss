@@ -57,19 +57,12 @@
 }
 
 .feature {
-  font-size: 14px;
-  line-height: 20px;
-  display: flex;
-  position: relative;
   padding-left: 18px;
   margin-bottom: 16px;
+  font-size: 14px;
 
-  &__icon {
-    margin-right: 10px;
-    position: absolute;
-    left: 0;
-    top: 6px;
-    fill: var(--dodger-blue);
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 

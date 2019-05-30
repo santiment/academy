@@ -11,7 +11,7 @@ export default () => (
       <br />
       channel to share your solutions with the world
     </p>
-    <Link to="/" className={styles.btn}>
+    <Link to="/account" className={styles.btn}>
       Get access
     </Link>
   </section>

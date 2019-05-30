@@ -1,6 +1,7 @@
 import React from "react"
 import Title from "./Title"
 import Subtitle from "./Subtitle"
+import Features from "./Features"
 import styles from "./WhySantiment.module.scss"
 
 const whys = [
