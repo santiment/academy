@@ -1,0 +1,47 @@
+@import "~@santiment-network/ui/variables.scss";
+@import "../mixins.scss";
+
+.header {
+  @extend .container;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  &__desc {
+    color: var(--waterloo);
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
+
+.link {
+  font-size: 14px;
+  color: var(--waterloo);
+  margin-right: 35px;
+}
+
+.login {
+  font-size: 14px;
+  border: 1px solid var(--dodger-blue);
+  border-radius: $border-radius;
+  color: var(--dodger-blue);
+  padding: 6px 35px;
+}

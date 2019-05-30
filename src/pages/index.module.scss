@@ -1,0 +1,131 @@
+@import "~@santiment-network/ui/variables.scss";
+
+.wrapper {
+  display: flex;
+}
+
+.info {
+}
+
+.title {
+  &,
+  &__mark {
+    font-size: 52px;
+    line-height: 66px;
+  }
+
+  &__mark {
+    display: inline-block;
+    color: var(--dodger-blue);
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      background: var(--dodger-blue-light);
+      bottom: 0;
+      top: 0;
+      left: -8px;
+      right: -8px;
+      border-radius: $border-radius;
+      z-index: -1;
+    }
+  }
+}
+
+.desc {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: normal;
+  color: var(--waterloo);
+  margin: 32px 0;
+}
+
+.access {
+  color: var(--white);
+  background: var(--dodger-blue);
+  padding: 10px 34px;
+  border-radius: $border-radius;
+  margin-right: 32px;
+}
+
+.doc {
+  color: var(--dodger-blue);
+  fill: var(--dodger-blue);
+
+  &__icon {
+    margin-left: 10px;
+  }
+}
+
+.code {
+  border: 1px solid #f2f4fa;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 50px rgba(56, 74, 167, 0.04),
+    0px 60px 40px rgba(56, 74, 167, 0.02);
+  border-radius: 8px;
+  background: #fff;
+  margin-left: 90px;
+  min-width: 600px;
+  margin-right: -30px;
+  margin-top: -50px;
+
+  :global(&__keyword) {
+    color: var(--dodger-blue);
+    font-size: 14px;
+  }
+
+  &__header {
+    background: #f0f2f7;
+    height: 36px;
+    padding: 11px;
+    line-height: 0;
+  }
+
+  &__btn {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    background: #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  :global(&__number) {
+    user-select: none;
+    margin-right: 36px;
+    font-size: 14px;
+    color: #9faac4;
+  }
+
+  :global(&__tab) {
+    margin-right: 15px;
+  }
+}
+
+.source {
+  padding: 20px 14px;
+  position: relative;
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 1px;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    background: #f2f4fa;
+  }
+
+  &__line {
+    font-size: 14px;
+    color: #9faac4;
+  }
+}
+
+:global {
+  section {
+    margin-bottom: 150px;
+  }
+}

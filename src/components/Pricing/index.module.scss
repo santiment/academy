@@ -1,0 +1,103 @@
+.ast {
+  color: var(--casper);
+  margin: -2px 0 0 2px;
+}
+
+.title {
+  margin-bottom: 32px;
+}
+
+.cards {
+  display: flex;
+}
+
+.card {
+  background: #fff;
+  display: inline-block;
+  border: 1px solid var(--porcelain);
+  padding: 32px 24px 28px;
+  transition: transform 200ms;
+
+  &:hover {
+    border-radius: 4px;
+    box-shadow: 0px 14px 20px rgba(24, 27, 43, 0.06);
+    transform: scale(1.03);
+  }
+}
+
+.desc {
+  margin: 6px 0 36px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 44px;
+
+  &__type {
+    color: var(--waterloo);
+  }
+}
+
+.discount {
+  color: var(--casper);
+  font-size: 14px;
+  line-height: 20px;
+  margin: 5px 0 20px;
+}
+
+.link {
+  color: var(--dodger-blue);
+  border: 1px solid var(--dodger-blue);
+  border-radius: 4px;
+  display: block;
+  padding: 8px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.feature {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 16px;
+
+  &__icon {
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    fill: var(--dodger-blue);
+  }
+}
+
+.more {
+  cursor: pointer;
+  color: var(--dodger-blue);
+  fill: var(--dodger-blue);
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 20px;
+
+  svg {
+    margin-bottom: -2px;
+    margin-right: 10px;
+  }
+}
+
+.detailed {
+  display: none;
+  margin-top: 56px;
+}
+
+.checkbox {
+  display: none;
+
+  &:checked + .detailed {
+    display: block;
+  }
+}

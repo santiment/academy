@@ -1,0 +1,21 @@
+.subtitle {
+  margin: 16px 0 100px;
+}
+
+.case {
+  margin-bottom: 70px;
+  width: 40%;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  &__desc {
+    text-align: left;
+  }
+}

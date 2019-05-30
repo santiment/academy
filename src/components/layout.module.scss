@@ -1,0 +1,36 @@
+@import "~@santiment-network/ui/main.scss";
+@import "../mixins.scss";
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  color: var(--mirage);
+  font-size: 16px;
+  line-height: 24px;
+  list-style: none;
+}
+
+.main {
+  @extend .container;
+  margin-top: 120px;
+  &::before {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 650px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 46%,
+        var(--white) 100%
+      ),
+      url(../images/waves.svg);
+  }
+}
