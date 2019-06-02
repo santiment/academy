@@ -1,7 +1,8 @@
 .wrapper {
-  width: 460px;
+  width: 500px;
   margin: 0 auto;
   padding: 30px 80px 36px;
+  text-align: center;
 }
 
 .title {
@@ -15,11 +16,41 @@
 }
 
 .btn {
-  display: block;
+  display: flex;
+  align-items: center;
   background: #7a859e;
   border-radius: 4px;
   color: #fff;
   fill: #fff;
   padding: 8px 12px;
-  text-align: center;
+  text-align: left;
+
+  &__icon {
+    margin-right: 10px;
+  }
+}
+
+.email {
+  &__subtitle {
+    font-size: 12px;
+    font-weight: normal;
+  }
+
+  &__form {
+    margin-top: 20px;
+  }
+
+  &__btn {
+    margin: 15px 0 30px;
+  }
+
+  &__link {
+    font-size: 12px;
+  }
+
+  &__pointer {
+    transform: rotate(180deg);
+    margin-right: 5px;
+    vertical-align: middle;
+  }
 }
