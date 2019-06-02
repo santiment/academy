@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
+import cx from "classnames"
 import Icon from "@santiment-network/ui/Icon"
 import Title from "../Title"
 import Features from "../Features"
+import PricingDetails from "./PricingDetails.js"
 import styles from "./index.module.scss"
 
 const prices = [
@@ -45,6 +47,7 @@ const prices = [
   },
   {
     title: "Pro",
+    isPopular: true,
     desc: "For traders, developers, investors and side projects",
     price: "$359",
     priceType: "/mo",
@@ -96,7 +99,16 @@ const prices = [
   },
 ]
 
+function useToggle() {
+  const [toggled, newToggle] = useState(false)
+  function setToggle() {
+    newToggle(state => !state)
+  }
+  return [toggled, setToggle]
+}
+
 export default () => {
+  const [toggled, setToggle] = useToggle()
   return (
     <section id="pricing">
       <Title className={styles.title}>
@@ -106,9 +118,17 @@ export default () => {
       </Title>
       <div className={styles.cards}>
         {prices.map(card => (
-          <div className={styles.card} key={card.title}>
-            <h3 className={styles.title}>{card.title}</h3>
-            <div className={styles.desc} />
+          <div
+            className={cx(styles.card, card.isPopular && styles.card_popular)}
+            key={card.title}
+          >
+            <h3 className={styles.card__title}>
+              {card.title}
+              {card.isPopular && (
+                <span className={styles.popular}>Popular</span>
+              )}
+            </h3>
+            <div className={styles.desc}>{card.desc}</div>
             <div className={styles.price}>
               {card.price}
               <span className={styles.price__type}>{card.priceType}</span>
@@ -121,16 +141,11 @@ export default () => {
           </div>
         ))}
       </div>
-      <label htmlFor="detailed-pricing" className={styles.more}>
-        <Icon type="plus-round-small" />
-        See full feature table
-      </label>
-      <input
-        id="detailed-pricing"
-        type="checkbox"
-        className={styles.checkbox}
-      />
-      <div className={styles.detailed}>Detailed pricing</div>
+      <div className={styles.more} onClick={setToggle}>
+        <Icon type={toggled ? "subtract-round" : "plus-round-small"} />
+        {toggled ? `Hide` : `See full`} feature table
+      </div>
+      {toggled && <PricingDetails />}
     </section>
   )
 }

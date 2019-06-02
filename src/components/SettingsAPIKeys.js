@@ -23,7 +23,7 @@ const SettingsAPIKeys = ({ apikeys = [], generateAPIKey, revokeAPIKey }) => (
         <div className={styles.setting_apikey}>
           {apikeys.length > 0 ? (
             apikeys.map(apikey => (
-              <>
+              <React.Fragment key={apikey}>
                 <div className={styles.apikey}>
                   <input
                     className={styles.apikey__input}
@@ -36,10 +36,15 @@ const SettingsAPIKeys = ({ apikeys = [], generateAPIKey, revokeAPIKey }) => (
                     className={styles.apikey__icon}
                   />
                 </div>
-                <Button onClick={() => revokeAPIKey(apikey)} accent="negative">
+                <Button
+                  onClick={() => {
+                    revokeAPIKey({ variables: { apikey } })
+                  }}
+                  accent="negative"
+                >
                   Revoke
                 </Button>
-              </>
+              </React.Fragment>
             ))
           ) : (
             <Button onClick={generateAPIKey} variant="fill" accent="positive">

@@ -10,9 +10,15 @@
     margin-bottom: 0px;
   }
 
+  &__icon {
+    margin-right: 9px;
+  }
+
   &__title {
     margin-bottom: 16px;
     text-align: left;
+    display: flex;
+    align-items: center;
   }
 
   &__desc {

@@ -10,15 +10,18 @@
 .why {
   width: 30%;
 
-  &__img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin: 0 auto;
-    background: var(--dodger-blue-light);
-  }
-
   &__title {
     margin: 24px 0 16px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 15px;
+  }
+
+  &__desc {
+    text-align: left;
   }
 }
