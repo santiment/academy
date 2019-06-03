@@ -10,9 +10,9 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import styles from "./layout.module.scss"
 
-const Layout = ({ children }) => (
+const Layout = ({ children, isAccountPage }) => (
   <div className={styles.container}>
-    <Header />
+    <Header isAccountPage={isAccountPage} />
     <main className={styles.main}>{children}</main>
   </div>
 )

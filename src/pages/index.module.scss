@@ -46,6 +46,11 @@
   font-weight: normal;
   color: var(--waterloo);
   margin: 32px 0;
+
+  @include responsive("phone", "phone-xs") {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 .access {
@@ -54,11 +59,21 @@
   padding: 10px 34px;
   border-radius: $border-radius;
   margin-right: 32px;
+
+  @include responsive("phone", "phone-xs") {
+    margin-right: 25px;
+    font-size: 14px;
+    padding: 10px 25px;
+  }
 }
 
 .doc {
   color: var(--dodger-blue);
   fill: var(--dodger-blue);
+
+  @include responsive("phone", "phone-xs") {
+    font-size: 14px;
+  }
 
   &__icon {
     margin-left: 10px;
@@ -77,7 +92,7 @@
   margin-right: -30px;
   margin-top: -50px;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive("tablet", "phone", "phone-xs") {
     display: none;
   }
 

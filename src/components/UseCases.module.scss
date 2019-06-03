@@ -9,13 +9,13 @@
 .subtitle {
   margin: 16px 0 100px;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive("tablet", "phone", "phone-xs") {
     margin-bottom: 50px;
   }
 }
 
 .br {
-  @include responsive("phone", "phone-xs") {
+  @include responsive("tablet", "phone", "phone-xs") {
     display: none;
   }
 }
@@ -24,7 +24,7 @@
   margin-bottom: 70px;
   width: 40%;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive("tablet", "phone", "phone-xs") {
     width: 100%;
     margin-bottom: 50px;
   }
@@ -36,7 +36,7 @@
   &__icon {
     margin-right: 9px;
 
-    @include responsive("phone", "phone-xs") {
+    @include responsive("tablet", "phone", "phone-xs") {
       margin: 0 0 5px;
     }
   }
@@ -47,7 +47,7 @@
     display: flex;
     align-items: center;
 
-    @include responsive("phone", "phone-xs") {
+    @include responsive("tablet", "phone", "phone-xs") {
       flex-direction: column;
       justify-content: center;
     }
@@ -55,5 +55,9 @@
 
   &__desc {
     text-align: left;
+
+    @include responsive("tablet", "phone", "phone-xs") {
+      text-align: center;
+    }
   }
 }

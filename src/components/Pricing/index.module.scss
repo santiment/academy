@@ -8,7 +8,7 @@
 .cards {
   display: flex;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive("tablet", "phone", "phone-xs") {
     flex-direction: column;
   }
 }
@@ -33,7 +33,7 @@
   transition: transform 200ms;
   flex: 1;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive("tablet", "phone", "phone-xs") {
     margin-bottom: 20px;
     border-radius: 4px;
   }
@@ -54,7 +54,7 @@
         rgba(255, 255, 255, 0) 100%
       );
 
-      @include responsive("phone", "phone-xs") {
+      @include responsive("tablet", "phone", "phone-xs") {
         display: none;
       }
     }
@@ -68,7 +68,7 @@
   }
 
   &__title {
-    @include responsive("phone", "phone-xs") {
+    @include responsive("tablet", "phone", "phone-xs") {
       font-size: 22px;
       line-height: 30px;
     }
@@ -83,7 +83,7 @@
   &__arrow {
     min-width: 15px;
 
-    @include responsive("desktop", "laptop", "tablet") {
+    @include responsive("desktop", "laptop") {
       display: none;
     }
   }
@@ -111,7 +111,7 @@
 }
 
 .details {
-  @include responsive("phone", "phone-xs") {
+  @include responsive("tablet", "phone", "phone-xs") {
     display: none;
   }
 
@@ -173,7 +173,7 @@
   font-size: 14px;
   line-height: 20px;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive("tablet", "phone", "phone-xs") {
     display: none;
   }
 

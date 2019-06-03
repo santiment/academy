@@ -5,9 +5,12 @@ import { setContext } from "apollo-link-context"
 import { from } from "apollo-link"
 import { InMemoryCache } from "apollo-cache-inmemory"
 
+export const getAuthorizeUser = () =>
+  JSON.parse(localStorage.getItem("client") || '""')
+
 const authLink = setContext((_, { headers }) => {
   // TODO: handle exception on parse
-  const { token } = JSON.parse(localStorage.getItem("client") || '""')
+  const { token } = getAuthorizeUser()
   if (!token) {
     return headers
   }

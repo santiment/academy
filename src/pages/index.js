@@ -42,6 +42,7 @@ const IndexPage = () => (
       <div>
         <h1 className={styles.title}>
           Comprehensive
+          <br />
           <span className={styles.title__mark}>crypto API</span>
         </h1>
         <h2 className={styles.desc}>

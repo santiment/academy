@@ -59,7 +59,7 @@ const updateCache = (
 }
 
 export default () => (
-  <Layout>
+  <Layout isAccountPage>
     <Query query={CURRENT_USER_QUERY}>
       {({ loading = true, data }) => {
         if (loading) {
