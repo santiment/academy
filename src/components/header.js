@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
 import Button from "@santiment-network/ui/Button"
-import PropTypes from "prop-types"
 import { getAuthorizeUser } from "../apollo/client"
 import styles from "./header.module.scss"
 
@@ -45,7 +44,7 @@ const Header = ({ isAccountPage }) => {
         <Link className={styles.link} to="#support">
           Support
         </Link>
-        <Link className={!isAuthorize && styles.login} to="/account">
+        <Link className={isAuthorize ? "" : styles.login} to="/account">
           {isAuthorize ? (
             <Button
               variant="flat"
