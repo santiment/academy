@@ -28,6 +28,7 @@
 
   &__arrow {
     fill: var(--waterloo);
+    min-width: 15px;
 
     :global(.opened) & {
       fill: var(--dodger-blue);

@@ -37,7 +37,6 @@
     margin-bottom: 20px;
     border-radius: 4px;
   }
-
   &_popular {
     &::before {
       z-index: -1;
@@ -67,6 +66,37 @@
     box-shadow: 0px 14px 20px rgba(24, 27, 43, 0.06);
     transform: scale(1.03);
   }
+
+  &__title {
+    @include responsive("phone", "phone-xs") {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__arrow {
+    min-width: 15px;
+
+    @include responsive("desktop", "laptop", "tablet") {
+      display: none;
+    }
+  }
+
+  &_opened {
+    .details {
+      display: block;
+    }
+    .card__arrow {
+      transform: rotate(180deg);
+      fill: var(--dodger-blue);
+    }
+  }
 }
 
 .popular {
@@ -80,8 +110,16 @@
   font-weight: 100;
 }
 
+.details {
+  @include responsive("phone", "phone-xs") {
+    display: none;
+  }
+
+  margin-top: 36px;
+}
+
 .desc {
-  margin: 6px 0 36px;
+  margin-top: 6px;
   font-size: 14px;
   line-height: 20px;
   color: var(--waterloo);

@@ -77,7 +77,7 @@
   margin-right: -30px;
   margin-top: -50px;
 
-  @include responsive("phone-xs") {
+  @include responsive("phone", "phone-xs") {
     display: none;
   }
 
