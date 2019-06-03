@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Icon from "@santiment-network/ui/Icon"
 import PropTypes from "prop-types"
 import styles from "./header.module.scss"
 
@@ -23,7 +24,14 @@ const Header = ({ siteTitle }) => (
         <div className={styles.logo__desc}>app programming interface</div>
       </div>
     </Link>
-    <nav>
+    <label htmlFor="hamburger">
+      <Icon type="hamburger" />
+    </label>
+    <input id="hamburger" type="checkbox" />
+    <nav className={styles.nav}>
+      <label htmlFor="hamburger" className={styles.close}>
+        <Icon type="close" />
+      </label>
       <Link className={styles.link} to="#pricing">
         Pricing
       </Link>

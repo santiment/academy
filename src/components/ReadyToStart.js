@@ -8,7 +8,7 @@ export default () => (
     <Title>Ready to get started?</Title>
     <p className={styles.text}>
       Click below to access the Santiment API or join the Discord
-      <br />
+      <br className={styles.br} />
       channel to share your solutions with the world
     </p>
     <Link to="/account" className={styles.btn}>

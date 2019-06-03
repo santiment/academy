@@ -186,11 +186,11 @@ const cases = [
 ]
 
 export default () => (
-  <section id="use-cases">
+  <section className={styles.wrapper} id="use-cases">
     <Title>Use cases</Title>
     <Subtitle className={styles.subtitle}>
-      Santiment is more than just an analytics platform.
-      <br />
+      Santiment is more than just an analytics platform.{" "}
+      <br className={styles.br} />
       With our data, you can predict changes in the market
     </Subtitle>
 

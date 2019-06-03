@@ -1,10 +1,33 @@
+@import "~@santiment-network/ui/mixins.scss";
+
+.wrapper {
+  @include responsive("desktop", "laptop") {
+    background: url("../images/cases.svg") no-repeat 520px 250px;
+  }
+}
+
 .subtitle {
   margin: 16px 0 100px;
+
+  @include responsive("phone", "phone-xs") {
+    margin-bottom: 50px;
+  }
+}
+
+.br {
+  @include responsive("phone", "phone-xs") {
+    display: none;
+  }
 }
 
 .case {
   margin-bottom: 70px;
   width: 40%;
+
+  @include responsive("phone", "phone-xs") {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 
   &:last-child {
     margin-bottom: 0px;
@@ -12,6 +35,10 @@
 
   &__icon {
     margin-right: 9px;
+
+    @include responsive("phone", "phone-xs") {
+      margin: 0 0 5px;
+    }
   }
 
   &__title {
@@ -19,6 +46,11 @@
     text-align: left;
     display: flex;
     align-items: center;
+
+    @include responsive("phone", "phone-xs") {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__desc {

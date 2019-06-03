@@ -1,3 +1,5 @@
+@import "~@santiment-network/ui/mixins.scss";
+
 .wrapper {
   width: 100%;
 }
@@ -39,6 +41,10 @@
   min-height: 60px;
   padding: 17px 20px;
 
+  @include responsive("phone", "phone-xs") {
+    flex-direction: column;
+  }
+
   &:last-child {
     border-bottom: none;
   }
@@ -46,6 +52,11 @@
   &__left {
     display: flex;
     flex-direction: column;
+
+    @include responsive("phone", "phone-xs") {
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
 
     &_form {
       flex-direction: row;

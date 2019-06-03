@@ -1,3 +1,5 @@
+@import "~@santiment-network/ui/mixins.scss";
+
 .ast {
   color: var(--casper);
   margin: -2px 0 0 2px;
@@ -5,10 +7,20 @@
 
 .cards {
   display: flex;
+
+  @include responsive("phone", "phone-xs") {
+    flex-direction: column;
+  }
 }
 
 .title {
   margin-bottom: 32px;
+}
+
+.br {
+  @include responsive("phone", "phone-xs") {
+    display: none;
+  }
 }
 
 .card {
@@ -20,6 +32,11 @@
   padding: 32px 24px 28px;
   transition: transform 200ms;
   flex: 1;
+
+  @include responsive("phone", "phone-xs") {
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
 
   &_popular {
     &::before {
@@ -37,6 +54,10 @@
         #e7eaf3 0%,
         rgba(255, 255, 255, 0) 100%
       );
+
+      @include responsive("phone", "phone-xs") {
+        display: none;
+      }
     }
   }
 
@@ -113,6 +134,10 @@
   margin-top: 12px;
   font-size: 14px;
   line-height: 20px;
+
+  @include responsive("phone", "phone-xs") {
+    display: none;
+  }
 
   svg {
     margin-bottom: -2px;

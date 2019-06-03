@@ -1,8 +1,15 @@
+@import "~@santiment-network/ui/mixins.scss";
+
 .wrapper {
   width: 500px;
   margin: 0 auto;
   padding: 30px 80px 36px;
   text-align: center;
+
+  @include responsive("phone", "phone-xs") {
+    width: 100%;
+    padding: 15px 30px;
+  }
 }
 
 .title {
@@ -34,6 +41,8 @@
   &__subtitle {
     font-size: 12px;
     font-weight: normal;
+    line-height: 18px;
+    margin: 10px 0;
   }
 
   &__form {

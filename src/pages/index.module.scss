@@ -1,3 +1,4 @@
+@import "~@santiment-network/ui/mixins.scss";
 @import "~@santiment-network/ui/variables.scss";
 
 .wrapper {
@@ -12,6 +13,11 @@
   &__mark {
     font-size: 52px;
     line-height: 66px;
+
+    @include responsive("phone", "phone-xs") {
+      font-size: 38px;
+      line-height: 44px;
+    }
   }
 
   &__mark {
@@ -71,6 +77,10 @@
   margin-right: -30px;
   margin-top: -50px;
 
+  @include responsive("phone-xs") {
+    display: none;
+  }
+
   :global(&__keyword) {
     color: var(--dodger-blue);
     font-size: 14px;
@@ -127,5 +137,8 @@
 :global {
   section {
     margin-bottom: 150px;
+    @include responsive("phone", "phone-xs") {
+      margin-bottom: 80px;
+    }
   }
 }

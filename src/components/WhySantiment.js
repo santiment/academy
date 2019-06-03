@@ -136,8 +136,9 @@ export default () => (
   <section>
     <Title>Made for Developers</Title>
     <Subtitle className={styles.subtitle}>
-      Average response time is <br /> Transactions are added in less than 5
-      minutes
+      Average response time is 3 seconds.
+      <br />
+      Transactions are added in less than 5 minutes
     </Subtitle>
 
     <ul className={styles.whys}>
