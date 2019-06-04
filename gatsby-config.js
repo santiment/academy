@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Neuro - Santiment API`,
+    description: `Get 100% custom-built and unique terabytes of processed on-chain, social, github and fundamental data sets`,
+    author: `Santiment Team`,
   },
   plugins: [
     {
