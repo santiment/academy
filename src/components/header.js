@@ -23,8 +23,8 @@ const Header = ({ isAccountPage }) => {
           />
         </svg>
         <div className={styles.logo__text}>
-          <div className={styles.logo__title}>santiment</div>
-          <div className={styles.logo__desc}>app programming interface</div>
+          <div className={styles.logo__title}>neuro</div>
+          <div className={styles.logo__desc}>santiment api</div>
         </div>
       </Link>
       <label htmlFor="hamburger">

@@ -36,7 +36,7 @@ const table = {
         { name: "Distribution between mining pools" },
         { name: "Top holders percent of total supply" },
         { name: "Percent of total supply on exchanges" },
-        { name: "Realized value" },
+        { name: "Realized value", checks: [false, false, true, true, true] },
         { name: "MVRV ratio", checks: [false, false, true, true, true] },
         { name: "NVT", checks: [false, false, true, true, true] },
         {
@@ -63,12 +63,14 @@ export default () => (
   <table className={styles.table}>
     <tbody>
       <tr className={styles.headers}>
-        {table.columns.map(column => (
-          <th className={styles.head}>{column}</th>
+        {table.columns.map((column, y) => (
+          <th className={styles.head} key={y}>
+            {column}
+          </th>
         ))}
       </tr>
-      {table.rows.map(row => (
-        <>
+      {table.rows.map((row, i) => (
+        <React.Fragment key={i}>
           <tr>
             <td className={cx(styles.group, styles.cell)}>{row.group}</td>
             <td className={styles.cell} />
@@ -92,7 +94,7 @@ export default () => (
               ))}
             </tr>
           ))}
-        </>
+        </React.Fragment>
       ))}
 
       <tr>
