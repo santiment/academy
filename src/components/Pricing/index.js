@@ -16,9 +16,12 @@ const prices = [
     discount: "Free forever",
     link: "Your current plan",
     features: [
-      "Historical data access to last 3 months",
-      `20 API calls / minute
-5k API calls / month`,
+      "Historical data access to last 3 months excluding the last 24 hours",
+      <>
+        20 API calls / minute
+        <br />
+        5k API calls / month
+      </>,
       <>
         Standard metrics <span className={styles.ast}>*</span>
       </>,
@@ -37,8 +40,11 @@ const prices = [
     link: "Upgrade now",
     features: [
       "Historical data access to last 6 months",
-      `60 API calls / minute
-      10k API calls / month`,
+      <>
+        60 API calls / minute
+        <br />
+        10k API calls / month
+      </>,
       <>
         Standard metrics <span className={styles.ast}>*</span>
       </>,
@@ -55,8 +61,11 @@ const prices = [
     link: "Upgrade now",
     features: [
       "Historical data access to last 18 months",
-      `120 API calls / minute
-      150k API calls / month`,
+      <>
+        120 API calls / minute
+        <br />
+        150k API calls / month
+      </>,
       <>
         Advanced metrics <span className={styles.ast}>*</span>
       </>,
@@ -72,8 +81,11 @@ const prices = [
     link: "Upgrade now",
     features: [
       "Unlimited historical data access",
-      `180 API calls / min
-500k API calls / month`,
+      <>
+        180 API calls / min
+        <br />
+        500k API calls / month
+      </>,
       <>
         Advanced metrics <span className={styles.ast}>*</span>
       </>,

@@ -36,14 +36,14 @@ const advantages = [
     ),
     features: [
       "Data from forums and chats",
-      "Telegram, Reddit, Discord, Twitter",
+      "Telegram, Twitter, Reddit and more",
       "Volume of social mentions",
       "Comprehensive word clouds",
       "Top Social Gainers",
       "Dev Activity measurement",
       "1.7 BN Github events",
       "Hourly updates",
-      "Historical data starts from 2013",
+      "Historical data starts from 2009",
     ],
   },
   {
