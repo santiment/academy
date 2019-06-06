@@ -1,5 +1,8 @@
 import React from "react"
+import cx from "classnames"
+import Button from "@santiment-network/ui/Button"
 import Title from "./Title"
+import Subtitle from "./Subtitle"
 import Features from "./Features"
 import styles from "./Advantages.module.scss"
 
@@ -48,13 +51,7 @@ const advantages = [
   },
   {
     type: "Financial",
-    title: (
-      <>
-        1200+
-        <br />
-        projects
-      </>
-    ),
+    title: "1200+ projects",
     features: [
       "Price",
       "Volume",
@@ -63,18 +60,56 @@ const advantages = [
       "227 exchange wallets",
     ],
   },
+  {
+    type: "Developer activity",
+    title: "4.5 TB of processed data",
+    features: [
+      "Github data for 970+ projects",
+      "1.7 BN Github events",
+      "New way of measuring Dev Activity",
+      "Hourly updates",
+      "Historical data starts from 2013",
+    ],
+  },
 ]
+
+const Advantage = ({ className, advantage: { type, title, features } }) => (
+  <div className={cx(styles.advantage, className)}>
+    <h4 className={styles.advantage__type}>{type}</h4>
+    <Title className={styles.advantage__title}>{title}</Title>
+    <Features data={features} classes={styles} />
+  </div>
+)
 
 export default () => (
   <section>
-    <ul className={styles.advantages}>
-      {advantages.map(({ type, title, features }) => (
-        <li key={type} className={styles.advantage}>
-          <h4 className={styles.advantage__type}>{type}</h4>
-          <Title className={styles.advantage__title}>{title}</Title>
-          <Features data={features} classes={styles} />
-        </li>
-      ))}
-    </ul>
+    <div className={styles.advantages}>
+      <div className={styles.left}>
+        <div className={styles.left__top}>
+          <Advantage
+            advantage={advantages[0]}
+            className={styles.advantage_onchain}
+          />
+          <Advantage advantage={advantages[1]} />
+        </div>
+        <div className={styles.left__bottom}>
+          <Title small className={styles.text}>
+            Sounds interesting?
+          </Title>
+          <Subtitle className={cx(styles.text, styles.text_desc)}>
+            Create your custom solutions by using our API and comprehensive set
+            of data
+          </Subtitle>
+          <Button className={styles.btn}>Try free now</Button>
+        </div>
+      </div>
+      <div className={styles.right}>
+        <Advantage
+          advantage={advantages[2]}
+          className={styles.advantage_financial}
+        />
+        <Advantage advantage={advantages[3]} />
+      </div>
+    </div>
   </section>
 )

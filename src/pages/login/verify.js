@@ -37,7 +37,12 @@ export default ({ location: { search } }) => (
           return "Can't verify this email"
         }
         if (data) {
-          localStorage.setItem("client", JSON.stringify(data.emailLoginVerify))
+          if (typeof localStorage !== undefined) {
+            localStorage.setItem(
+              "client",
+              JSON.stringify(data.emailLoginVerify)
+            )
+          }
           navigate("/account")
         }
 
