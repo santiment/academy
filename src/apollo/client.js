@@ -6,7 +6,7 @@ import { from } from "apollo-link"
 import { InMemoryCache } from "apollo-cache-inmemory"
 
 export const getAuthorizeUser = () => {
-  if (typeof localStorage !== undefined) {
+  if (typeof window !== "undefined") {
     return JSON.parse(localStorage.getItem("client") || '""')
   }
 
