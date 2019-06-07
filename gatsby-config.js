@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Neuro - Santiment API`,
-    description: `Get 100% custom-built and unique terabytes of processed on-chain, social, github and fundamental data sets`,
+    title: `Neuro - Crypto’s Most Comprehensive API`,
+    description: `Raw data access to on-chain, social media, development activity and pricing information for 1000+ crypto assets. Unlimited historical and real time data. Backtest strategies, build custom signals, DIY dashboards and much more with the most all-inclusive crypto API on the market.`,
     author: `Santiment Team`,
   },
   plugins: [
@@ -36,7 +36,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

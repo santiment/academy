@@ -37,7 +37,7 @@ const lines = code.split(`\n`).map((line, i) => {
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Landing" />
     <section className={styles.wrapper}>
       <div>
         <h1 className={styles.title}>
