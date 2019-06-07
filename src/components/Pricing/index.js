@@ -2,8 +2,10 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import cx from "classnames"
 import Icon from "@santiment-network/ui/Icon"
+import Dialog from "@santiment-network/ui/Dialog"
 import Title from "../Title"
 import Features from "../Features"
+import Loader from "../Loader"
 import PricingDetails from "./PricingDetails.js"
 import styles from "./index.module.scss"
 
@@ -15,6 +17,8 @@ const prices = [
     priceType: "",
     discount: "Free forever",
     link: "Your current plan",
+    pipedrive:
+      "https://pipedrivewebforms.com/form/1b8273966098dc4746bb0b4e63d4ac9a4144829",
     features: [
       "Historical data access to last 3 months excluding the last 24 hours",
       <>
@@ -38,6 +42,8 @@ const prices = [
     priceType: "/mo",
     discount: "20% off with 200 SAN",
     link: "Upgrade now",
+    pipedrive:
+      "https://pipedrivewebforms.com/form/bf289352f9c4b07a996b454353fd4dff4144829",
     features: [
       "Historical data access to last 6 months",
       <>
@@ -59,6 +65,8 @@ const prices = [
     priceType: "/mo",
     discount: "20% off with 1000 SAN",
     link: "Upgrade now",
+    pipedrive:
+      "https://pipedrivewebforms.com/form/2562e7ee67e1191d6d6ae934eb8ec1194144829",
     features: [
       "Historical data access to last 18 months",
       <>
@@ -79,6 +87,8 @@ const prices = [
     priceType: "/mo",
     discount: "20% off with 1000 SAN",
     link: "Upgrade now",
+    pipedrive:
+      "https://pipedrivewebforms.com/form/e4053d472913f8b7963b269fb0370f3a4144829",
     features: [
       "Unlimited historical data access",
       <>
@@ -93,12 +103,14 @@ const prices = [
     ],
   },
   {
-    title: "Corporate",
+    title: "Enterprise",
     desc: "For organizations that need advanced data and support",
     price: "Custom",
     priceType: "",
     discount: "Based on your needs",
     link: "Contact sales",
+    pipedrive:
+      "https://pipedrivewebforms.com/form/0527db4d781f7c4c0760b7bc7a58549c4144829",
     features: [
       "Unlimited historical data access",
       `Custom development
@@ -123,8 +135,17 @@ function toggleCardDetails({ currentTarget }) {
   currentTarget.classList.toggle(styles.card_opened)
 }
 
+function useFormLoading() {
+  const [loading, setLoading] = useState(false)
+  function toggleLoading() {
+    setLoading(state => !state)
+  }
+  return [loading, toggleLoading]
+}
+
 export default () => {
   const [toggled, setToggle] = useToggle()
+  const [loading, toggleLoading] = useFormLoading()
   return (
     <section id="pricing">
       <Title className={styles.title}>
@@ -167,9 +188,30 @@ export default () => {
                 <span className={styles.price__type}>{card.priceType}</span>
               </div>
               <div className={styles.discount}>{card.discount}</div>
-              <Link className={styles.link} to="/">
-                {card.link}
-              </Link>
+              <Dialog
+                title="Contact Information"
+                classes={{ dialog: styles.dialog }}
+                trigger={<button className={styles.link}>{card.link}</button>}
+                onOpen={toggleLoading}
+              >
+                <div className={styles.dialog__content}>
+                  <div
+                    className={cx(
+                      styles.dialog__loading,
+                      !loading && styles.dialog__loading_end
+                    )}
+                  >
+                    <Loader />
+                  </div>
+                  <iframe
+                    height="100%"
+                    width="100%"
+                    frameBorder="0"
+                    src={card.pipedrive}
+                    onLoad={toggleLoading}
+                  />
+                </div>
+              </Dialog>
               <Features data={card.features} classes={styles} />
             </div>
           </div>
