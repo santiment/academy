@@ -80,14 +80,13 @@
 }
 
 .login {
-  font-size: 14px;
-  border: 1px solid var(--dodger-blue);
-  border-radius: $border-radius;
-  color: var(--dodger-blue);
   padding: 6px 35px;
 }
 
 .account {
   display: inline-block;
   vertical-align: middle;
+  &:hover {
+    fill: var(--dodger-blue);
+  }
 }

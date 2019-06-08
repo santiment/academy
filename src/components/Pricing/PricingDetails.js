@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
+import Button from "@santiment-network/ui/Button"
 import cx from "classnames"
 import styles from "./PricingDetails.module.scss"
 import pricingStyles from "./index.module.scss"
@@ -100,29 +101,64 @@ export default () => (
       <tr>
         <td />
         <td className={styles.link}>
-          <Link to="/" className={pricingStyles.link}>
+          <Button
+            as={Link}
+            to="/"
+            className={pricingStyles.link}
+            border
+            fluid
+            accent="blue"
+          >
             Current plan
-          </Link>
+          </Button>
         </td>
         <td className={styles.link}>
-          <Link to="/" className={pricingStyles.link}>
+          <Button
+            as={Link}
+            to="/"
+            className={pricingStyles.link}
+            border
+            fluid
+            accent="blue"
+          >
             Upgrade now
-          </Link>
+          </Button>
         </td>
         <td className={styles.link}>
-          <Link to="/" className={pricingStyles.link}>
+          <Button
+            as={Link}
+            to="/"
+            className={pricingStyles.link}
+            border
+            fluid
+            accent="blue"
+          >
             Upgrade now
-          </Link>
+          </Button>
         </td>
         <td className={styles.link}>
-          <Link to="/" className={pricingStyles.link}>
+          <Button
+            as={Link}
+            to="/"
+            className={pricingStyles.link}
+            border
+            fluid
+            accent="blue"
+          >
             Upgrade now
-          </Link>
+          </Button>
         </td>
         <td className={styles.link}>
-          <Link to="/" className={pricingStyles.link}>
+          <Button
+            as={Link}
+            to="/"
+            className={pricingStyles.link}
+            border
+            fluid
+            accent="blue"
+          >
             Upgrade now
-          </Link>
+          </Button>
         </td>
       </tr>
     </tbody>

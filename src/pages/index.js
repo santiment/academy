@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
+import Button from "@santiment-network/ui/Button"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Pricing from "../components/Pricing"
@@ -49,9 +50,15 @@ const IndexPage = () => (
           Get 100% custom-built and unique terabytes of processed on-chain,
           social, github and fundamental data sets
         </h2>
-        <Link to="/" className={styles.access}>
+        <Button
+          as={Link}
+          to="/"
+          className={styles.access}
+          variant="fill"
+          accent="blue"
+        >
           Get access
-        </Link>
+        </Button>
         <Link to="/" className={styles.doc}>
           Documentation <Icon type="arrow-right" className={styles.doc__icon} />
         </Link>

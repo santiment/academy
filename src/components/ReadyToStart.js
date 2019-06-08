@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Title from "./Title"
+import Button from "@santiment-network/ui/Button"
 import styles from "./ReadyToStart.module.scss"
 
 export default () => (
@@ -11,8 +12,14 @@ export default () => (
       <br className={styles.br} />
       channel to share your solutions with the world
     </p>
-    <Link to="/account" className={styles.btn}>
+    <Button
+      as={Link}
+      to="/account"
+      variant="fill"
+      accent="blue"
+      className={styles.btn}
+    >
       Get access
-    </Link>
+    </Button>
   </section>
 )

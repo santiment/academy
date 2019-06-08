@@ -100,7 +100,9 @@ export default () => (
             Create your custom solutions by using our API and comprehensive set
             of data
           </Subtitle>
-          <Button className={styles.btn}>Try free now</Button>
+          <Button variant="fill" accent="blue">
+            Try free now
+          </Button>
         </div>
       </div>
       <div className={styles.right}>

@@ -5,6 +5,16 @@ import Button from "@santiment-network/ui/Button"
 import { getAuthorizeUser } from "../apollo/client"
 import styles from "./header.module.scss"
 
+const btnProps = {
+  false: {
+    accent: "blue",
+    border: true,
+    className: styles.login,
+    children: "Sign up",
+  },
+  true: { className: styles.account, children: <Icon type="profile" /> },
+}
+
 const Header = ({ isAccountPage }) => {
   const isAuthorize = getAuthorizeUser()
   return (
@@ -44,19 +54,12 @@ const Header = ({ isAccountPage }) => {
         <a className={styles.link} href="#support">
           Support
         </a>
-        <Link className={isAuthorize ? "" : styles.login} to="/account">
-          {isAuthorize ? (
-            <Button
-              variant="flat"
-              className={styles.account}
-              isActive={isAccountPage}
-            >
-              <Icon type="profile" />
-            </Button>
-          ) : (
-            "Sign up"
-          )}
-        </Link>
+        <Button
+          as={Link}
+          to="/account"
+          {...btnProps[Boolean(true)]}
+          accent={isAccountPage && "blue"}
+        />
       </nav>
     </header>
   )

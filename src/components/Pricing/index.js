@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import cx from "classnames"
 import Icon from "@santiment-network/ui/Icon"
+import Button from "@santiment-network/ui/Button"
 import Dialog from "@santiment-network/ui/Dialog"
 import Title from "../Title"
 import Features from "../Features"
@@ -191,7 +192,11 @@ export default () => {
               <Dialog
                 title="Contact Information"
                 classes={{ dialog: styles.dialog }}
-                trigger={<button className={styles.link}>{card.link}</button>}
+                trigger={
+                  <Button className={styles.link} fluid border accent="blue">
+                    {card.link}
+                  </Button>
+                }
                 onOpen={toggleLoading}
               >
                 <div className={styles.dialog__content}>

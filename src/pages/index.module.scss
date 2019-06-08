@@ -54,11 +54,9 @@
 }
 
 .access {
-  color: var(--white);
-  background: var(--dodger-blue);
   padding: 10px 34px;
-  border-radius: $border-radius;
   margin-right: 32px;
+  height: 50px;
 
   @include responsive("phone", "phone-xs") {
     margin-right: 25px;

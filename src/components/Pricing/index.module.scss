@@ -144,15 +144,9 @@
 }
 
 .link {
-  color: var(--dodger-blue);
-  border: 1px solid var(--dodger-blue);
-  border-radius: 4px;
-  display: block;
-  padding: 8px;
-  text-align: center;
+  height: 40px;
   margin-bottom: 40px;
-  width: 100%;
-  cursor: pointer;
+  justify-content: center;
 }
 
 .feature {

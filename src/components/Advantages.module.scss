@@ -39,15 +39,6 @@
   }
 }
 
-.btn {
-  background: var(--dodger-blue);
-  color: var(--white);
-  &:hover {
-    color: var(--white);
-    background: var(--dodger-blue-hover);
-  }
-}
-
 .right {
   flex: 1;
 
