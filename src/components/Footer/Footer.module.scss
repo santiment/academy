@@ -1,5 +1,9 @@
 @import "~@santiment-network/ui/mixins.scss";
 
+:global(footer) {
+  margin-top: 200px;
+}
+
 .categories {
   display: flex;
   justify-content: space-between;

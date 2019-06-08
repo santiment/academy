@@ -57,8 +57,8 @@ const Header = ({ isAccountPage }) => {
         <Button
           as={Link}
           to="/account"
-          {...btnProps[Boolean(true)]}
           accent={isAccountPage && "blue"}
+          {...btnProps[Boolean(isAuthorize)]}
         />
       </nav>
     </header>
