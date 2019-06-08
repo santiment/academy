@@ -3,7 +3,7 @@ import gql from "graphql-tag"
 import { navigate } from "gatsby"
 import { Mutation } from "react-apollo"
 import { parse } from "query-string"
-import Layout from "../../components/layout"
+import Layout from "../components/layout"
 
 const VERIFY_EMAIL_MUTATION = gql`
   mutation emailLoginVerify($email: String!, $token: String!) {

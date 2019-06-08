@@ -8,12 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Header from "./header"
+import Footer from "./Footer/Footer.js"
 import styles from "./layout.module.scss"
 
 const Layout = ({ children, isAccountPage }) => (
   <div className={styles.container}>
     <Header isAccountPage={isAccountPage} />
     <main className={styles.main}>{children}</main>
+    <Footer />
   </div>
 )
 

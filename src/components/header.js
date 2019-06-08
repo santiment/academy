@@ -35,15 +35,15 @@ const Header = ({ isAccountPage }) => {
         <label htmlFor="hamburger" className={styles.close}>
           <Icon type="close" />
         </label>
-        <Link className={styles.link} to="#pricing">
+        <a className={styles.link} href="#pricing">
           Pricing
-        </Link>
-        <Link className={styles.link} to="#use-cases">
+        </a>
+        <a className={styles.link} href="#use-cases">
           Use cases
-        </Link>
-        <Link className={styles.link} to="#support">
+        </a>
+        <a className={styles.link} href="#support">
           Support
-        </Link>
+        </a>
         <Link className={isAuthorize ? "" : styles.login} to="/account">
           {isAuthorize ? (
             <Button
