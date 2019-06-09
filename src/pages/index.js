@@ -9,6 +9,7 @@ import WhySantiment from "../components/WhySantiment"
 import Advantages from "../components/Advantages"
 import UseCases from "../components/UseCases"
 import FAQ from "../components/FAQ"
+import Testimonials from "../components/Testimonials/Testimonials"
 import ReadyToStart from "../components/ReadyToStart"
 import styles from "./index.module.scss"
 
@@ -86,6 +87,7 @@ const IndexPage = () => (
     <UseCases />
     <Pricing />
     <FAQ />
+    <Testimonials />
     <ReadyToStart />
   </Layout>
 )

@@ -55,7 +55,7 @@ export default () => (
                 <Input placeholder="your@email.com" name="email" type="email" />
                 <Button
                   variant="fill"
-                  accent="positive"
+                  accent="blue"
                   className={styles.email__btn}
                   type="submit"
                   disabled={loading}
