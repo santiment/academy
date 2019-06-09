@@ -10,7 +10,6 @@ const categories = [
         children: "Social trends",
         href: "https://app.santiment.net/labs/trends",
       },
-      { children: "Social movers", href: "" },
       {
         children: "Eth spent",
         href: "https://app.santiment.net/projects/ethereum",
@@ -19,7 +18,7 @@ const categories = [
         children: "Historical balance",
         href: "https://app.santiment.net/labs/balance",
       },
-      { children: "Charts", href: "" },
+      { children: "Charts", href: "https://data.santiment.net" },
       { children: "Sheets", href: "https://santiment.net/sansheets/" },
     ],
   },
@@ -28,8 +27,7 @@ const categories = [
     links: [
       { children: "About us", href: "https://santiment.net/about-santiment/" },
       { children: "Pricing", href: "https://santiment.net/pricing/" },
-      { children: "Customers", href: "" },
-      { children: "Roadmap", href: "https://app.santiment.net/roadmap" },
+      { children: "Customers", href: "https://santiment.net/customers/" },
       { children: "Team", href: "https://santiment.net/about-santiment/team/" },
       { children: "Jobs", href: "https://santiment.net/about-santiment/jobs/" },
       {
@@ -41,16 +39,22 @@ const categories = [
   {
     title: "Resources",
     links: [
-      { children: "Getting started", href: "https://app.santiment.net/" },
-      { children: "Docs", href: "" },
-      { children: "API", href: "https://santiment.net/sanapi/" },
+      {
+        children: "Getting started",
+        href: "https://help.santiment.net/santiment-getting-started",
+      },
+      {
+        children: "Docs",
+        href: "https://help.santiment.net/metrics-explained#api",
+      },
+      { children: "API", href: "https://api.santiment.net/graphiql" },
       { children: "Blog", href: "https://santiment.net/blog/" },
-      { children: "Source code", href: "" },
+      { children: "Source code", href: "https://github.com/santiment/" },
       {
         children: "But SAN",
-        href: "https://santiment.net/about-santiment/how-to-buy-san/",
+        href:
+          "https://help.santiment.net/faq/general/how-to-buy-san-tokens-using-our-bancor-integration",
       },
-      { children: "Press", href: "" },
     ],
   },
   {
@@ -63,7 +67,10 @@ const categories = [
         children: "Youtube",
         href: "https://www.youtube.com/channel/UCSzP_Z3MrygWlbLMyrNmMkg",
       },
-      { children: "LinkedIn", href: "" },
+      {
+        children: "LinkedIn",
+        href: "https://www.linkedin.com/company/santiment",
+      },
       { children: "Medium", href: "https://medium.com/santiment" },
       { children: "Reddit", href: "https://reddit.com/r/santiment" },
     ],
