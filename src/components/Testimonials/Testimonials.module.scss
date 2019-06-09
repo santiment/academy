@@ -1,3 +1,5 @@
+@import "~@santiment-network/ui/mixins.scss";
+
 .title {
   margin-bottom: 60px;
 }
@@ -7,6 +9,10 @@
   margin: 0 auto;
   width: 600px;
   position: relative;
+
+  @include responsive("phone", "phone-xs") {
+    width: 100%;
+  }
 
   &__top {
     margin-bottom: 40px;
@@ -46,6 +52,20 @@
 
   &_right {
     right: -140px;
+  }
+
+  @include responsive("tablet") {
+    &_left {
+      left: -50px;
+    }
+
+    &_right {
+      right: -50px;
+    }
+  }
+
+  @include responsive("phone", "phone-xs") {
+    display: none;
   }
 }
 
