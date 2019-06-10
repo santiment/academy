@@ -1,10 +1,16 @@
-import React from "react"
+import React, { useRef } from "react"
 import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
 import styles from "./header.module.scss"
 import AccountBtn from "./AccountBtn"
 
 const Header = ({ isAccountPage }) => {
+  const toggle = useRef(null)
+
+  const closeNav = () => {
+    toggle.current.checked = false
+  }
+
   return (
     <header className={styles.header}>
       <Link className={styles.logo} to="/">
@@ -28,21 +34,25 @@ const Header = ({ isAccountPage }) => {
       <label htmlFor="hamburger">
         <Icon type="hamburger" />
       </label>
-      <input id="hamburger" type="checkbox" />
+      <input id="hamburger" type="checkbox" ref={toggle} />
       <nav className={styles.nav}>
         <label htmlFor="hamburger" className={styles.close}>
           <Icon type="close" />
         </label>
-        <a className={styles.link} href="/#pricing">
+        <Link className={styles.link} to="/#pricing" onClick={closeNav}>
           Pricing
-        </a>
-        <a className={styles.link} href="/#use-cases">
+        </Link>
+        <Link className={styles.link} to="/#use-cases" onClick={closeNav}>
           Use cases
-        </a>
-        <a className={styles.link} href="mailto:info@santiment.net">
+        </Link>
+        <a
+          className={styles.link}
+          href="mailto:info@santiment.net"
+          onClick={closeNav}
+        >
           Support
         </a>
-        <AccountBtn isAccountPage={isAccountPage} />
+        <AccountBtn isAccountPage={isAccountPage} onClick={closeNav} />
       </nav>
     </header>
   )
