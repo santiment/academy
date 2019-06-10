@@ -101,12 +101,14 @@ const Footer = () => (
       <div>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://santiment.net/terms-conditions/"
           className={cx(styles.text, styles.link)}
         >
           Terms
         </a>
         <a
+          rel="noopener noreferrer"
           target="_blank"
           href="https://app.santiment.net/privacy-policy"
           className={cx(styles.text, styles.link)}
