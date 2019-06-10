@@ -6,6 +6,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        whitelist: ["BACKEND_URL"],
+      },
+    },
+    {
       resolve: "gatsby-source-graphql",
       options: {
         // This type will contain remote schema Query type
