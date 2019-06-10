@@ -1,22 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
-import Button from "@santiment-network/ui/Button"
-import { getAuthorizeUser } from "../apollo/client"
 import styles from "./header.module.scss"
-
-const btnProps = {
-  false: {
-    accent: "blue",
-    border: true,
-    className: styles.login,
-    children: "Sign up",
-  },
-  true: { className: styles.account, children: <Icon type="profile" /> },
-}
+import AccountBtn from "./AccountBtn"
 
 const Header = ({ isAccountPage }) => {
-  const isAuthorize = getAuthorizeUser()
   return (
     <header className={styles.header}>
       <Link className={styles.logo} to="/">
@@ -45,21 +33,16 @@ const Header = ({ isAccountPage }) => {
         <label htmlFor="hamburger" className={styles.close}>
           <Icon type="close" />
         </label>
-        <a className={styles.link} href="#pricing">
+        <a className={styles.link} href="/#pricing">
           Pricing
         </a>
-        <a className={styles.link} href="#use-cases">
+        <a className={styles.link} href="/#use-cases">
           Use cases
         </a>
         <a className={styles.link} href="mailto:info@santiment.net">
           Support
         </a>
-        <Button
-          as={Link}
-          to="/account"
-          accent={isAccountPage && "blue"}
-          {...btnProps[Boolean(isAuthorize)]}
-        />
+        <AccountBtn isAccountPage={isAccountPage} />
       </nav>
     </header>
   )

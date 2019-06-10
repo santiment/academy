@@ -79,15 +79,3 @@
     color: var(--athens);
   }
 }
-
-.login {
-  padding: 6px 35px;
-}
-
-.account {
-  display: inline-block;
-  vertical-align: middle;
-  &:hover {
-    fill: var(--dodger-blue);
-  }
-}
