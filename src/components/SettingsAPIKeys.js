@@ -47,7 +47,7 @@ const SettingsAPIKeys = ({ apikeys = [], generateAPIKey, revokeAPIKey }) => (
               </React.Fragment>
             ))
           ) : (
-            <Button onClick={generateAPIKey} variant="fill" accent="positive">
+            <Button onClick={generateAPIKey} variant="fill" accent="blue">
               Generate
             </Button>
           )}
