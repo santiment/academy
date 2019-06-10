@@ -1,14 +1,11 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import cx from "classnames"
 import Icon from "@santiment-network/ui/Icon"
-import Button from "@santiment-network/ui/Button"
-import Dialog from "@santiment-network/ui/Dialog"
 import Title from "../Title"
 import Features from "../Features"
-import Loader from "../Loader"
 import PricingDetails from "./PricingDetails.js"
 import styles from "./index.module.scss"
+import Pipedrive from "../Pipedrive"
 
 const prices = [
   {
@@ -136,17 +133,8 @@ function toggleCardDetails({ currentTarget }) {
   currentTarget.classList.toggle(styles.card_opened)
 }
 
-function useFormLoading() {
-  const [loading, setLoading] = useState(false)
-  function toggleLoading() {
-    setLoading(state => !state)
-  }
-  return [loading, toggleLoading]
-}
-
 export default () => {
   const [toggled, setToggle] = useToggle()
-  const [loading, toggleLoading] = useFormLoading()
   return (
     <section id="pricing">
       <Title className={styles.title}>
@@ -189,34 +177,11 @@ export default () => {
                 <span className={styles.price__type}>{card.priceType}</span>
               </div>
               <div className={styles.discount}>{card.discount}</div>
-              <Dialog
-                title="Contact Information"
-                classes={{ dialog: styles.dialog }}
-                trigger={
-                  <Button className={styles.link} fluid border accent="blue">
-                    {card.link}
-                  </Button>
-                }
-                onOpen={toggleLoading}
-              >
-                <div className={styles.dialog__content}>
-                  <div
-                    className={cx(
-                      styles.dialog__loading,
-                      !loading && styles.dialog__loading_end
-                    )}
-                  >
-                    <Loader />
-                  </div>
-                  <iframe
-                    height="100%"
-                    width="100%"
-                    frameBorder="0"
-                    src={card.pipedrive}
-                    onLoad={toggleLoading}
-                  />
-                </div>
-              </Dialog>
+              <Pipedrive
+                title={card.title}
+                label={card.link}
+                src={card.pipedrive}
+              />
               <Features data={card.features} classes={styles} />
             </div>
           </div>

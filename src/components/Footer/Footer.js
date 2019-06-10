@@ -88,6 +88,7 @@ const Footer = () => (
               <a
                 key={i}
                 target="_blank"
+                rel="noopener noreferrer"
                 {...link}
                 className={cx(styles.text, styles.category__item)}
               />
@@ -105,14 +106,12 @@ const Footer = () => (
         >
           Terms
         </a>
-        <a target="_blank" href="" className={cx(styles.text, styles.link)}>
+        <a
+          target="_blank"
+          href="https://app.santiment.net/privacy-policy"
+          className={cx(styles.text, styles.link)}
+        >
           Privacy
-        </a>
-        <a target="_blank" href="" className={cx(styles.text, styles.link)}>
-          Security
-        </a>
-        <a target="_blank" href="" className={cx(styles.text, styles.link)}>
-          Sitemap
         </a>
       </div>
       <div className={cx(styles.text, styles.rights)}>

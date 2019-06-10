@@ -160,6 +160,7 @@
 }
 
 .more {
+  user-select: none;
   cursor: pointer;
   color: var(--dodger-blue);
   fill: var(--dodger-blue);

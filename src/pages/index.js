@@ -64,6 +64,7 @@ const IndexPage = () => (
           href="https://help.santiment.net/metrics-explained#api"
           className={styles.doc}
           target="_blank"
+          rel="noopener noreferrer"
         >
           Documentation <Icon type="arrow-right" className={styles.doc__icon} />
         </a>

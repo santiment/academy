@@ -1,5 +1,4 @@
 import React, { useRef } from "react"
-import Icon from "@santiment-network/ui/Icon"
 import cx from "classnames"
 import Slider from "react-slick"
 import Title from "../Title"
