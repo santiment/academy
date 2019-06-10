@@ -53,7 +53,7 @@ const IndexPage = () => (
         </h2>
         <Button
           as={Link}
-          to="/"
+          to="/account"
           className={styles.access}
           variant="fill"
           accent="blue"

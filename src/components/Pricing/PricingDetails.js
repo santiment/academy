@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
 import Button from "@santiment-network/ui/Button"
 import cx from "classnames"
+import Pipedrive from "../Pipedrive"
 import styles from "./PricingDetails.module.scss"
 import pricingStyles from "./index.module.scss"
 
@@ -101,64 +102,39 @@ export default () => (
       <tr>
         <td />
         <td className={styles.link}>
-          <Button
-            as={Link}
-            to="/"
-            className={pricingStyles.link}
-            border
-            fluid
-            accent="blue"
-          >
-            Current plan
-          </Button>
+          <Pipedrive
+            title="Free"
+            label="Current plan"
+            src="https://pipedrivewebforms.com/form/1b8273966098dc4746bb0b4e63d4ac9a4144829"
+          />
         </td>
         <td className={styles.link}>
-          <Button
-            as={Link}
-            to="/"
-            className={pricingStyles.link}
-            border
-            fluid
-            accent="blue"
-          >
-            Upgrade now
-          </Button>
+          <Pipedrive
+            title="Basic"
+            label="Upgrade now"
+            src="https://pipedrivewebforms.com/form/bf289352f9c4b07a996b454353fd4dff4144829"
+          />
         </td>
         <td className={styles.link}>
-          <Button
-            as={Link}
-            to="/"
-            className={pricingStyles.link}
-            border
-            fluid
-            accent="blue"
-          >
-            Upgrade now
-          </Button>
+          <Pipedrive
+            title="Pro"
+            label="Upgrade now"
+            src="https://pipedrivewebforms.com/form/2562e7ee67e1191d6d6ae934eb8ec1194144829"
+          />
         </td>
         <td className={styles.link}>
-          <Button
-            as={Link}
-            to="/"
-            className={pricingStyles.link}
-            border
-            fluid
-            accent="blue"
-          >
-            Upgrade now
-          </Button>
+          <Pipedrive
+            title="Premium"
+            label="Upgrade now"
+            src="https://pipedrivewebforms.com/form/e4053d472913f8b7963b269fb0370f3a4144829"
+          />
         </td>
         <td className={styles.link}>
-          <Button
-            as={Link}
-            to="/"
-            className={pricingStyles.link}
-            border
-            fluid
-            accent="blue"
-          >
-            Upgrade now
-          </Button>
+          <Pipedrive
+            title="Enterprise"
+            label="Contact sale"
+            src="https://pipedrivewebforms.com/form/0527db4d781f7c4c0760b7bc7a58549c4144829"
+          />
         </td>
       </tr>
     </tbody>

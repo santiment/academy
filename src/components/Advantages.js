@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import cx from "classnames"
 import Button from "@santiment-network/ui/Button"
 import Title from "./Title"
@@ -100,7 +101,7 @@ export default () => (
             Create your custom solutions by using our API and comprehensive set
             of data
           </Subtitle>
-          <Button variant="fill" accent="blue">
+          <Button as={Link} to="/account" variant="fill" accent="blue">
             Try free now
           </Button>
         </div>
