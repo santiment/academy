@@ -1,11 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
-import Button from "@santiment-network/ui/Button"
 import cx from "classnames"
 import Pipedrive from "../Pipedrive"
 import styles from "./PricingDetails.module.scss"
-import pricingStyles from "./index.module.scss"
 
 const table = {
   columns: ["", "Free", "Basic", "Pro", "Premium", "Corporate"],
