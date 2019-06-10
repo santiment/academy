@@ -51,7 +51,7 @@ const categories = [
       { children: "Blog", href: "https://santiment.net/blog/" },
       { children: "Source code", href: "https://github.com/santiment/" },
       {
-        children: "But SAN",
+        children: "Buy SAN",
         href:
           "https://help.santiment.net/faq/general/how-to-buy-san-tokens-using-our-bancor-integration",
       },

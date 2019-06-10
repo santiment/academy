@@ -51,7 +51,7 @@ const Header = ({ isAccountPage }) => {
         <a className={styles.link} href="#use-cases">
           Use cases
         </a>
-        <a className={styles.link} href="#support">
+        <a className={styles.link} href="mailto:info@santiment.net">
           Support
         </a>
         <Button

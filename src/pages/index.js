@@ -60,9 +60,13 @@ const IndexPage = () => (
         >
           Get access
         </Button>
-        <Link to="/" className={styles.doc}>
+        <a
+          href="https://help.santiment.net/metrics-explained#api"
+          className={styles.doc}
+          target="_blank"
+        >
           Documentation <Icon type="arrow-right" className={styles.doc__icon} />
-        </Link>
+        </a>
       </div>
 
       <div className={styles.code}>
