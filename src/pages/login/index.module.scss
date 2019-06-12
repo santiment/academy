@@ -3,7 +3,7 @@
 .wrapper {
   width: 500px;
   margin: 0 auto;
-  padding: 30px 80px 36px;
+  padding: 30px 60px 36px;
   text-align: center;
 
   @include responsive("phone", "phone-xs") {

@@ -29,7 +29,6 @@ const updateCache = (
     },
   }
 ) => {
-  const { currentUser } = cache.readQuery({ query: CURRENT_USER_QUERY })
   cache.writeQuery({
     query: CURRENT_USER_QUERY,
     data: { currentUser: user },

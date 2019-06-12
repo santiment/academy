@@ -27,17 +27,18 @@ export default () => (
       ) => (
         <Panel className={styles.wrapper}>
           <h2 className={cx(styles.title, styles.email__title)}>
-            Authenticate
+            Thanks for your interest in our free API plan!
           </h2>
           {success ? (
             <h3 className={styles.email__subtitle}>
               We sent an email to you. Please login in to email provider and
-              click the confirm link. Waiting for your confirmation...
+              click the confirm link
             </h3>
           ) : (
             <>
               <h3 className={styles.email__subtitle}>
-                To sign up or log in, fill in your email address below
+                Enter your email and you'll receive a link to your API key
+                (email titled: Sanbase Login Link).
               </h3>
               <form
                 className={styles.email__form}
