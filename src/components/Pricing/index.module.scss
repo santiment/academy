@@ -37,28 +37,6 @@
     margin-bottom: 20px;
     border-radius: 4px;
   }
-  &_popular {
-    &::before {
-      z-index: -1;
-      border-radius: 4px;
-      position: absolute;
-      content: "";
-      display: block;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      background: linear-gradient(
-        180deg,
-        #e7eaf3 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
-
-      @include responsive("tablet", "phone", "phone-xs") {
-        display: none;
-      }
-    }
-  }
 
   &:hover {
     z-index: 2;
@@ -68,6 +46,10 @@
   }
 
   &__title {
+    @include text("h4");
+    display: flex;
+    align-items: center;
+
     @include responsive("tablet", "phone", "phone-xs") {
       font-size: 22px;
       line-height: 30px;
@@ -102,8 +84,7 @@
 .popular {
   font-size: 12px;
   line-height: 18px;
-  background: var(--white);
-  color: var(--texas-rose);
+  background: $malibu-accent;
   padding: 3px 8px;
   border-radius: 2px;
   margin-left: 10px;
@@ -133,6 +114,7 @@
 
   &__type {
     color: var(--waterloo);
+    font-weight: 100;
   }
 }
 
