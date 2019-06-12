@@ -6,15 +6,18 @@ import Loader from "./Loader"
 import styles from "./Pricing/index.module.scss"
 
 function useFormLoading() {
-  const [loading, setLoading] = useState(false)
-  function toggleLoading() {
-    setLoading(state => !state)
+  const [loading, setLoading] = useState(true)
+  function toggleLoading(newSt) {
+    setLoading(state => newSt)
   }
   return [loading, toggleLoading]
 }
 
 const Pipedrive = ({ title, label, src }) => {
   const [loading, toggleLoading] = useFormLoading()
+
+  const startLoading = () => toggleLoading(true)
+  const stopLoading = () => toggleLoading(false)
 
   return (
     <Dialog
@@ -25,7 +28,7 @@ const Pipedrive = ({ title, label, src }) => {
           {label}
         </Button>
       }
-      onOpen={toggleLoading}
+      onOpen={startLoading}
     >
       <div className={styles.dialog__content}>
         <div
@@ -42,7 +45,7 @@ const Pipedrive = ({ title, label, src }) => {
           width="100%"
           frameBorder="0"
           src={src}
-          onLoad={toggleLoading}
+          onLoad={stopLoading}
         />
       </div>
     </Dialog>
