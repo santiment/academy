@@ -14,14 +14,22 @@ const settings = {
 
 const testimonials = [
   {
-    author: "Steven Quinn",
+    author: "Paolo Ardoino",
+    position: "CTO at Bitfinex",
     text:
-      "SanAPI is one of the most comprehensive crypto APIs on the market. For us, it is incredibly easy to fetch various data sets like on-chain, social media and development info directly to Bitfinex through their unified API and across different blockchains. The Santiment team has worked hard on creating a stable, reliable and all-inclusive data source for crypto, and they’ve more than delivered.",
+      "SANapi is one of the most comprehensive crypto APIs on the market. For us, it is incredibly easy to fetch various data sets like on-chain, social media and development info directly to Bitfinex through their unified API and across different blockchains. The Santiment team has worked hard on creating a stable, reliable and all-inclusive data source for crypto, and they’ve more than delivered.",
   },
   {
-    author: "Steven Quinn",
+    author: "Pramesh Tyagi",
+    position: "Director at ShillazTech",
     text:
-      "SanAPI is one of the most comprehensive crypto APIs on the market. For us, it is incredibly easy to fetch various data sets like on-chain, social media and development info directly to Bitfinex through their unified API and across different blockchains. The Santiment team has worked hard on creating a stable, reliable and all-inclusive data source for crypto, and they’ve more than delivered.",
+      "After switching from stock trading to crypto, I realized that on-chain data of any crypto asset provides vital information about market participants beyond OHLCV. Using a combination of pricing and blockchain data via Santiment’s API, I was quickly able to develop hybrid trade signals that have proven highly reliable, effective and - most importantly - profitable.",
+  },
+  {
+    author: "Jan Smirny",
+    position: "Data Scientist",
+    text:
+      "I work with both the Sanpy python module and the ‘naked’ SAN API since both have their advantages. The GraphiQL API is great if you want very specific data for your research or pipeline implementations. For quick and easy data access for my research, the sanpy module is the place to go because (after the import) it is literally one line of code to get the data. It doesn’t get easier than that!",
   },
 ]
 
@@ -64,14 +72,15 @@ const Testimonials = () => {
           </svg>
         </div>
         <Slider {...settings} ref={slider}>
-          {testimonials.map(({ author, text }, i) => (
-            <div key={i} className={styles.testimonial}>
+          {testimonials.map(({ author, text, position }) => (
+            <div key={author} className={styles.testimonial}>
               <div className={styles.slider__top}>
                 <p className={styles.text}>{text}</p>
               </div>
               <div className={styles.slider__bottom}>
                 {/* <img alt="" src=""/> */}
                 <h3 className={styles.author}>{author}</h3>
+                <h4 className={styles.position}>{position}</h4>
               </div>
             </div>
           ))}

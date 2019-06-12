@@ -16,22 +16,28 @@
 
   &__top {
     margin-bottom: 40px;
+    flex: 1;
   }
 }
 
 .text {
-  font-size: 18px;
-  line-height: 28px;
+  @include text("body-1", "t");
 }
 
 .author {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
+  @include text("body-2");
+}
+
+.position {
+  @include text("body-3");
+  color: var(--waterloo);
 }
 
 .testimonial {
   outline: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .arrow {
@@ -45,6 +51,7 @@
   cursor: pointer;
   position: absolute;
   top: 29%;
+  z-index: 10;
 
   &_left {
     left: -140px;
@@ -65,7 +72,17 @@
   }
 
   @include responsive("phone", "phone-xs") {
-    display: none;
+    // display: none;
+    top: initial;
+    bottom: 5px;
+
+    &_left {
+      left: 0;
+    }
+
+    &_right {
+      right: 0;
+    }
   }
 }
 
@@ -92,7 +109,7 @@
   .slick-list {
     position: relative;
 
-    display: block;
+    display: flex;
     overflow: hidden;
 
     margin: 0;
@@ -120,7 +137,7 @@
     top: 0;
     left: 0;
 
-    display: block;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
   }
@@ -136,7 +153,9 @@
   .slick-loading .slick-track {
     visibility: hidden;
   }
-
+  .slick-slide > div {
+    height: 100%;
+  }
   .slick-slide {
     display: none;
     float: left;
