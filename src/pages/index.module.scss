@@ -11,8 +11,7 @@
 .title {
   &,
   &__mark {
-    font-size: 52px;
-    line-height: 66px;
+    @include text("h1", "m");
 
     @include responsive("phone", "phone-xs") {
       font-size: 38px;
@@ -22,14 +21,13 @@
 
   &__mark {
     display: inline-block;
-    color: var(--dodger-blue);
     position: relative;
 
     &::before {
       content: "";
       display: block;
       position: absolute;
-      background: var(--dodger-blue-light);
+      background: $malibu-accent;
       bottom: 0;
       top: 0;
       left: -8px;
@@ -41,9 +39,8 @@
 }
 
 .desc {
-  font-size: 22px;
-  line-height: 30px;
-  font-weight: normal;
+  @include text("h4");
+  font-weight: 100;
   color: var(--waterloo);
   margin: 32px 0;
 
@@ -54,7 +51,7 @@
 }
 
 .access {
-  padding: 10px 34px;
+  padding: 10px 39px;
   margin-right: 32px;
   height: 50px;
 
@@ -100,17 +97,17 @@
   }
 
   &__header {
-    background: #f0f2f7;
     height: 36px;
     padding: 11px;
     line-height: 0;
+    border-bottom: 1px solid #f2f4fa; // NOTE(vanguard): Undefined color
   }
 
   &__btn {
     display: inline-block;
     height: 14px;
     width: 14px;
-    background: #fff;
+    background: var(--porcelain);
     border-radius: 50%;
     margin-right: 10px;
   }
@@ -143,7 +140,6 @@
 
   &__line {
     font-size: 14px;
-    color: #9faac4;
   }
 }
 

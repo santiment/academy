@@ -818,10 +818,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@santiment-network/ui@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@santiment-network/ui/-/ui-0.5.2.tgz#d412e68491a7a3979a19e1106c936352813d1112"
-  integrity sha512-eCVhjK9XaSIuSmDk1NPdmUWFjtan7eEytIYGAk/SBii7Ylq3qdtyqzL4f/93yuFUzn3uhnZ6/C70a2O+jlHdXQ==
+"@santiment-network/ui@^0.5.10":
+  version "0.5.10"
+  resolved "https://registry.yarnpkg.com/@santiment-network/ui/-/ui-0.5.10.tgz#802ef8cc397039813d149eb10af5e645d6860b98"
+  integrity sha512-U+HuLS0Nh6viG3vqiGgefcbj5ZaSMxSr81ouDOHmaA1xqM0Z3jhTonN1MrYZ11jCo65zrvGPz/iWnh50h+6Mvg==
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"

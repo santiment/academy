@@ -12,22 +12,28 @@
   display: flex;
   align-items: center;
 
+  &__icon {
+    width: 40px;
+    height: 40px;
+  }
+
   &__text {
     display: flex;
     flex-direction: column;
-    margin-left: 7px;
+    margin-left: 10px;
   }
 
   &__title {
     font-weight: bold;
-    font-size: 18px;
-    line-height: 1;
+    font-size: 28px;
+    line-height: 0.8;
+    margin-bottom: 3px;
   }
 
   &__desc {
     color: var(--waterloo);
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: 13px;
+    line-height: 1;
   }
 }
 
