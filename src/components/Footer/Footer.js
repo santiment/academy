@@ -4,7 +4,7 @@ import styles from "./Footer.module.scss"
 
 const categories = [
   {
-    title: "Products",
+    title: "Labs",
     links: [
       {
         children: "Social trends",
