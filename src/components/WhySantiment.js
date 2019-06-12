@@ -12,6 +12,7 @@ const whys = [
         height="79"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={styles.icon_improving}
       >
         <path
           d="M67 40.2C65 50.8 51.5 54 39 60s-24-4.4-24-19.8S35.5 11 47.5 16 69 29.5 67 40.2z"
@@ -107,6 +108,7 @@ const whys = [
         height="75"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={styles.icon_scaling}
       >
         <path
           d="M65.8 43C64.3 54.3 51.6 60.6 38 62.7 24.2 64.6 20.5 59 15.8 43c-4.7-16 12.6-25.3 26.9-22.7C56.9 23.1 67.4 32 65.8 43.1z"
@@ -202,6 +204,7 @@ const whys = [
         height="80"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={styles.icon_python}
       >
         <path
           d="M70.6 46C68.8 55.5 49.4 68.2 35 64c-14.3-4.2-23-13.1-19.2-23.6 3.7-10.4 18.7-30 35.7-23 17 7 20.8 19 19 28.6z"

@@ -1,61 +1,40 @@
 @import "~@santiment-network/ui/mixins.scss";
 
 .advantages {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-areas: "chain social financial" "chain social financial" "chain social developer" "interest interest developer";
 
   @include responsive("phone", "phone-xs") {
-    flex-direction: column-reverse;
+    grid-template-areas: "chain" "social" "financial" "developer" "interest";
   }
 }
 
-.left {
-  display: flex;
-  flex-direction: column;
-  margin-right: 24px;
+.interest {
+  background: var(--athens);
+  border-radius: 4px;
+  padding: 32px;
+  grid-area: interest;
+  position: relative;
 
-  @include responsive("phone", "phone-xs") {
-    margin: 0;
-  }
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 222px;
+    width: 200px;
+    background: url("../images/interest.svg");
+    right: 0;
+    top: 18px;
 
-  &__top {
-    display: flex;
-    margin-bottom: 24px;
-
-    @include responsive("phone") {
-      margin: 0px;
+    @include responsive("laptop", "desktop") {
+      right: 9%;
     }
-
-    @include responsive("phone-xs") {
-      display: block;
-      margin: 0px;
-    }
   }
 
-  &__bottom {
-    background: var(--athens);
-    border-radius: 4px;
-    padding: 32px;
-  }
-}
-
-.right {
-  flex: 1;
-
-  @include responsive("tablet") {
-    flex: auto;
-  }
-
-  @include responsive("phone") {
-    display: flex;
-  }
-}
-
-.text {
-  text-align: left;
-
-  &_desc {
+  &__text {
     margin: 12px 0 20px;
+    width: 60%;
     @include responsive("desktop") {
       width: 47%;
     }
@@ -65,31 +44,53 @@
       font-size: 14px;
     }
   }
+
+  @include responsive("phone-xs") {
+    padding: 0;
+    background: transparent;
+    &__text,
+    &__title,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.text {
+  text-align: left;
+}
+
+.btn {
+  @include text("body-2");
+  padding: 8px 44px;
+  height: auto;
+
+  @include responsive("phone-xs") {
+    height: 50px;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 .advantage {
   &_onchain {
-    margin-right: 24px;
+    grid-area: chain;
   }
   &_financial {
-    margin-bottom: 24px;
-
-    @include responsive("phone") {
-      margin-right: 24px;
-      margin-bottom: 24px;
-    }
+    grid-area: financial;
+  }
+  &_social {
+    grid-area: social;
+  }
+  &_developer {
+    grid-area: developer;
   }
   padding: 30px 40px;
-  background: var(--dodger-blue-light);
+  background: $malibu-accent;
   border-radius: 8px;
 
   @include responsive("tablet") {
     padding: 20px;
-  }
-
-  @include responsive("phone", "phone-xs") {
-    width: 100%;
-    margin-bottom: 10px;
   }
 
   &__type {

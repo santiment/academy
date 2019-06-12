@@ -41,13 +41,13 @@ const advantages = [
     features: [
       "Data from forums and chats",
       "Telegram, Twitter, Reddit and more",
+      "Data from private trader chats",
       "Volume of social mentions",
+      "Social mentions for crypto projects",
       "Comprehensive word clouds",
       "Top Social Gainers",
-      "Dev Activity measurement",
-      "1.7 BN Github events",
-      "Hourly updates",
-      "Historical data starts from 2009",
+      "Sentiment score",
+      "# of project's Twitter followers",
     ],
   },
   {
@@ -85,34 +85,40 @@ const Advantage = ({ className, advantage: { type, title, features } }) => (
 export default () => (
   <section>
     <div className={styles.advantages}>
-      <div className={styles.left}>
-        <div className={styles.left__top}>
-          <Advantage
-            advantage={advantages[0]}
-            className={styles.advantage_onchain}
-          />
-          <Advantage advantage={advantages[1]} />
-        </div>
-        <div className={styles.left__bottom}>
-          <Title small className={styles.text}>
-            Sounds interesting?
-          </Title>
-          <Subtitle className={cx(styles.text, styles.text_desc)}>
-            Create your custom solutions by using our API and comprehensive set
-            of data
-          </Subtitle>
-          <Button as={Link} to="/account" variant="fill" accent="blue">
-            Try free now
-          </Button>
-        </div>
+      <Advantage
+        advantage={advantages[0]}
+        className={styles.advantage_onchain}
+      />
+      <Advantage
+        advantage={advantages[1]}
+        className={styles.advantage_social}
+      />
+      <div className={styles.interest}>
+        <Title small className={cx(styles.text, styles.interest__title)}>
+          Sounds interesting?
+        </Title>
+        <Subtitle className={cx(styles.text, styles.interest__text)}>
+          Create your custom solutions by using our API and comprehensive set of
+          data
+        </Subtitle>
+        <Button
+          as={Link}
+          to="/account"
+          variant="fill"
+          accent="blue"
+          className={styles.btn}
+        >
+          Try free now
+        </Button>
       </div>
-      <div className={styles.right}>
-        <Advantage
-          advantage={advantages[2]}
-          className={styles.advantage_financial}
-        />
-        <Advantage advantage={advantages[3]} />
-      </div>
+      <Advantage
+        advantage={advantages[2]}
+        className={styles.advantage_financial}
+      />
+      <Advantage
+        advantage={advantages[3]}
+        className={styles.advantage_developer}
+      />
     </div>
   </section>
 )

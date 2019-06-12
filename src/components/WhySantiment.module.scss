@@ -13,6 +13,23 @@
   }
 }
 
+.icon {
+  @include responsive("desktop", "laptop", "tablet") {
+    &_improving {
+      margin-left: -24px;
+      margin-right: 14px;
+    }
+    &_scaling {
+      margin-left: -19px;
+      margin-right: 10px;
+    }
+    &_python {
+      margin-left: -28px;
+      margin-right: 10px;
+    }
+  }
+}
+
 .why {
   width: 30%;
 
@@ -21,7 +38,7 @@
   }
 
   &__title {
-    margin: 24px 0 16px;
+    margin: 20px 0 0;
     text-align: left;
     display: flex;
     align-items: center;
@@ -29,6 +46,7 @@
     @include responsive("phone", "phone-xs") {
       justify-content: center;
       flex-direction: column;
+      margin-bottom: 12px;
     }
   }
 

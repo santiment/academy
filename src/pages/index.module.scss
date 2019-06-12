@@ -54,7 +54,7 @@
   padding: 10px 39px;
   margin-right: 32px;
   height: 50px;
-
+  @include text("body-2");
   @include responsive("phone", "phone-xs") {
     margin-right: 25px;
     font-size: 14px;
