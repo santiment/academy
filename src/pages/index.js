@@ -39,7 +39,7 @@ const lines = code.split(`\n`).map((line, i) => {
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Landing" />
+    <SEO title="Santiment's Neuro - Crypto’s Most Comprehensive API" />
     <section className={styles.wrapper}>
       <div>
         <h1 className={styles.title}>
