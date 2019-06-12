@@ -4,6 +4,7 @@ import { navigate } from "gatsby"
 import { Mutation } from "react-apollo"
 import { parse } from "query-string"
 import Layout from "../components/layout"
+import { CURRENT_USER_QUERY } from "./account"
 
 const VERIFY_EMAIL_MUTATION = gql`
   mutation emailLoginVerify($email: String!, $token: String!) {
@@ -14,21 +15,30 @@ const VERIFY_EMAIL_MUTATION = gql`
         email
         username
         privacyPolicyAccepted
-        marketingAccepted
-        consent_id
-        sanBalance
-        ethAccounts {
-          address
-          sanBalance
-        }
+        apikeys
       }
     }
   }
 `
 
+const updateCache = (
+  cache,
+  {
+    data: {
+      emailLoginVerify: { user },
+    },
+  }
+) => {
+  const { currentUser } = cache.readQuery({ query: CURRENT_USER_QUERY })
+  cache.writeQuery({
+    query: CURRENT_USER_QUERY,
+    data: { currentUser: user },
+  })
+}
+
 export default ({ location: { search } }) => (
   <Layout>
-    <Mutation mutation={VERIFY_EMAIL_MUTATION}>
+    <Mutation mutation={VERIFY_EMAIL_MUTATION} update={updateCache}>
       {(verifyEmail, { called, error, data }) => {
         if (!called) {
           verifyEmail({ variables: parse(search) })
