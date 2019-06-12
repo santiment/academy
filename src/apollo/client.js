@@ -16,7 +16,9 @@ const authLink = setContext((_, { headers }) => {
 
 const httpLink = createHttpLink({
   uri: `${
-    window.env ? window.env.BACKEND_URL : "https://api-stage.santiment.net"
+    typeof window !== "undefined" && window.env
+      ? window.env.BACKEND_URL
+      : "https://api-stage.santiment.net"
   }/graphql`,
   credentials: "include",
 })
