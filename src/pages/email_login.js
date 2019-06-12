@@ -1,6 +1,6 @@
 import React from "react"
 import gql from "graphql-tag"
-import { navigate } from "gatsby"
+import { replace } from "gatsby"
 import { Mutation } from "react-apollo"
 import { parse } from "query-string"
 import Layout from "../components/layout"
@@ -46,7 +46,7 @@ export default ({ location: { search } }) => (
           return "Can't verify this email"
         }
         if (data) {
-          setTimeout(() => navigate("/account"), 100)
+          setTimeout(() => replace("/account"), 100)
         }
 
         return "Verifying ...."

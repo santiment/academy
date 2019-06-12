@@ -1,5 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
+import { replace } from "gatsby"
 import { Query, Mutation } from "react-apollo"
 import gql from "graphql-tag"
 import Layout from "../components/layout"
@@ -67,7 +67,7 @@ export default () => (
         }
 
         if (data && !data.currentUser) {
-          navigate("/login")
+          replace("/login")
           return null
         }
 
