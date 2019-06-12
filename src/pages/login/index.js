@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, navigate } from "gatsby"
+import { Link, replace } from "gatsby"
 import cx from "classnames"
 import { Query } from "react-apollo"
 import Icon from "@santiment-network/ui/Icon"
@@ -10,10 +10,10 @@ import styles from "./index.module.scss"
 
 export default () => (
   <Layout>
-    <Query query={CURRENT_USER_QUERY}>
+    <Query query={CURRENT_USER_QUERY} fetchPolicy="network-only">
       {({ loading = true, data }) => {
         if (!loading && data && data.currentUser) {
-          navigate("/account")
+          replace("/account")
           return null
         }
         return (

@@ -46,7 +46,8 @@ export default ({ location: { search } }) => (
           return "Can't verify this email"
         }
         if (data) {
-          setTimeout(() => replace("/account"), 100)
+          replace("/account")
+          return
         }
 
         return "Verifying ...."
