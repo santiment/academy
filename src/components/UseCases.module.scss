@@ -14,6 +14,21 @@
   }
 }
 
+.icon {
+  @include responsive("desktop", "laptop") {
+    &_mover {
+      margin-left: -15px;
+    }
+    &_backtest {
+      margin-left: -29px;
+      margin-bottom: -10px;
+    }
+    &_integration {
+      margin-left: -20px;
+    }
+  }
+}
+
 .br {
   @include responsive("tablet", "phone", "phone-xs") {
     display: none;
@@ -42,7 +57,6 @@
   }
 
   &__title {
-    margin-bottom: 16px;
     text-align: left;
     display: flex;
     align-items: center;
@@ -50,6 +64,7 @@
     @include responsive("tablet", "phone", "phone-xs") {
       flex-direction: column;
       justify-content: center;
+      margin-bottom: 12px;
     }
   }
 

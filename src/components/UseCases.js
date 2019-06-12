@@ -12,6 +12,7 @@ const cases = [
         height="73"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={styles.icon_mover}
       >
         <path
           d="M9.6 26.9C8.3 45.4 17.8 61.7 30 63 42.3 64.6 41.5 46.8 57.9 38c16.5-8.8-4.3-24.4-15.4-26.9-11-2.4-31.7-2.7-33 15.8z"
@@ -123,6 +124,7 @@ const cases = [
         height="93"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={styles.icon_backtest}
       >
         <path
           d="M35 75C22.6 73 13.5 59.6 19 41.9a30.9 30.9 0 0 1 35.7-22C69 22.2 76 39 63.7 50c-12.3 10.9-16 27-28.6 25z"
@@ -242,6 +244,7 @@ const cases = [
         height="85"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={styles.icon_integration}
       >
         <path
           d="M54.2 13.3c15.3 1.5 17.7 22.1 9.1 31.4-8.6 9.3-13.6 27.6-32.2 23.1S11 45.7 14.4 36c3.3-9.7 24.5-24.2 39.8-22.7z"

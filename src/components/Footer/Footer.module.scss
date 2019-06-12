@@ -50,6 +50,7 @@
 }
 
 .rights {
+  color: var(--casper);
   @include responsive("phone", "phone-xs") {
     margin-top: 20px;
   }
