@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import cx from "classnames"
+import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
+import Button from "@santiment-network/ui/Button"
 import Title from "../Title"
 import Features from "../Features"
 import PricingDetails from "./PricingDetails.js"
-import styles from "./index.module.scss"
 import Pipedrive from "../Pipedrive"
+import styles from "./index.module.scss"
 
 const prices = [
   {
@@ -177,11 +179,24 @@ export default () => {
                 <span className={styles.price__type}>{card.priceType}</span>
               </div>
               <div className={styles.discount}>{card.discount}</div>
-              <Pipedrive
-                title={card.title}
-                label={card.link}
-                src={card.pipedrive}
-              />
+              {card.title === "Free" ? (
+                <Button
+                  as={Link}
+                  to="/account"
+                  fluid
+                  accent="blue"
+                  border
+                  className={styles.link}
+                >
+                  {card.link}
+                </Button>
+              ) : (
+                <Pipedrive
+                  title={card.title}
+                  label={card.link}
+                  src={card.pipedrive}
+                />
+              )}
               <Features data={card.features} classes={styles} />
             </div>
           </div>

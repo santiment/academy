@@ -1,8 +1,11 @@
 import React from "react"
 import Icon from "@santiment-network/ui/Icon"
+import { Link } from "gatsby"
+import Button from "@santiment-network/ui/Button"
 import cx from "classnames"
 import Pipedrive from "../Pipedrive"
 import styles from "./PricingDetails.module.scss"
+import cardStyles from "./index.module.scss"
 
 const table = {
   columns: ["", "Free", "Basic", "Pro", "Premium", "Corporate"],
@@ -99,11 +102,16 @@ export default () => (
       <tr>
         <td />
         <td className={styles.link}>
-          <Pipedrive
-            title="Free"
-            label="Current plan"
-            src="https://pipedrivewebforms.com/form/1b8273966098dc4746bb0b4e63d4ac9a4144829"
-          />
+          <Button
+            as={Link}
+            to="/account"
+            className={cardStyles.link}
+            border
+            fluid
+            accent="blue"
+          >
+            Current plan
+          </Button>
         </td>
         <td className={styles.link}>
           <Pipedrive
