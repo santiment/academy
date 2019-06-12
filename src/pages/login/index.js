@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, navigate } from "gatsby"
 import cx from "classnames"
-import { Query, Mutation } from "react-apollo"
+import { Query } from "react-apollo"
 import Icon from "@santiment-network/ui/Icon"
 import Panel from "@santiment-network/ui/Panel/Panel"
 import Layout from "../../components/layout"

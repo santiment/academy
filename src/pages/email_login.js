@@ -31,7 +31,7 @@ const updateCache = (
 ) => {
   cache.writeQuery({
     query: CURRENT_USER_QUERY,
-    data: { currentUser: user },
+    data: { currentUser: { ...user } },
   })
 }
 
@@ -46,7 +46,7 @@ export default ({ location: { search } }) => (
           return "Can't verify this email"
         }
         if (data) {
-          navigate("/account")
+          setTimeout(() => navigate("/account"), 100)
         }
 
         return "Verifying ...."
