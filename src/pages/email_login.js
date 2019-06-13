@@ -29,10 +29,11 @@ const updateCache = (
     },
   }
 ) => {
+  const currentUser = { ...user }
   setTimeout(() => {
     cache.writeQuery({
       query: CURRENT_USER_QUERY,
-      data: { currentUser: { ...user } },
+      data: { currentUser },
     })
     replace("/account")
   }, 1000)
