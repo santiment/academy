@@ -19,7 +19,7 @@ const btnProps = {
 const AccountBtn = ({ isAccountPage }) => {
   return (
     <Query query={CURRENT_USER_QUERY}>
-      {({ data: { currentUser } }) => {
+      {({ data: { currentUser } = {} }) => {
         return (
           <Button
             as={Link}
