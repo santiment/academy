@@ -114,7 +114,7 @@ const cases = [
       </svg>
     ),
     desc:
-      "On-chain data is collected directly from running nodes, not 3rd parties, making it faster and more reliable, by eliminating another potential point of failure.",
+      "Instantly react to on-chain events, changes in developer activity or shifts in social volume. Build your own custom signals and trade bots to immediately retort any market behavior.",
   },
   {
     title: "Backtesting strategies",
@@ -234,7 +234,7 @@ const cases = [
       </svg>
     ),
     desc:
-      "Use GraphQL for freedom and flexibility, or SanPy, our custom Python wrapper that is ideal for data scientists. Our SanSDK in GitHub includes examples for Ruby, R and more soon!",
+      "Boost your ROI by running trading simulations and backtesting investment strategies. Whether you’re day, swing or long-term trading, find a trading model that works for you.",
   },
   {
     title: "Third-party Integration",
@@ -346,7 +346,7 @@ const cases = [
       </svg>
     ),
     desc:
-      "The SanAPI is SSL-encrypted (signed API requests, generated API Key) and low-latency. Our robust CDN connects you to the API server closest to you.",
+      "Take your crypto app to next level with the industry’s most comprehensive data sets. Zoom in or as far out of any market event as you want.",
   },
 ]
 
