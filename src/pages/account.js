@@ -60,10 +60,10 @@ const updateCache = (
 
 export default () => (
   <Layout isAccountPage>
-    <Query query={CURRENT_USER_QUERY}>
+    <Query query={CURRENT_USER_QUERY} fetchPolicy="network-only">
       {({ loading = true, data }) => {
         if (loading) {
-          return "loading..."
+          return null
         }
 
         if (data && !data.currentUser) {

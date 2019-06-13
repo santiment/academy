@@ -17,6 +17,24 @@ const SettingsAPIKeys = ({ apikeys = [], generateAPIKey, revokeAPIKey }) => (
           <br />
           The api key can only be used to fetch data and not to execute graphql
           mutations.
+          <br />
+          You can try out queries through our{" "}
+          <a
+            href="https://api.santiment.net/graphiql?query=%7B%0A%20%20networkGrowth(from%3A%20%222019-05-09T11%3A25%3A04.894Z%22%2C%20interval%3A%20%221d%22%2C%20slug%3A%20%22ethereum%22%2C%20to%3A%20%222019-06-23T11%3A25%3A04.894Z%22)%20%7B%0A%20%20%20%20newAddresses%0A%20%20%20%20datetime%0A%20%20%7D%0A%7D%0A&variables=%7B%7D"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            web explorer
+          </a>{" "}
+          or explore our{" "}
+          <a
+            href="https://help.santiment.net/collections/1470439-santiment-getting-started#sanbase-api"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            documentation
+          </a>{" "}
+          to get started.
         </Label>
       </div>
       <div>

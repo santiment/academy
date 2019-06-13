@@ -39,7 +39,7 @@ const GDPRPage = ({ togglePrivacyPolicy, privacyPolicyAccepted }) => {
         <Button
           disabled={!isGDPR}
           variant="fill"
-          accent="positive"
+          accent="blue"
           onClick={() =>
             togglePrivacyPolicy({
               variables: { privacyPolicyAccepted: true },
