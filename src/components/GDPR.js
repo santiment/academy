@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { navigate } from "gatsby"
+import { replace } from "gatsby"
 import Panel from "@santiment-network/ui/Panel/Panel"
 import Button from "@santiment-network/ui/Button"
 import Checkboxes from "@santiment-network/ui/Checkboxes"
@@ -10,7 +10,7 @@ const GDPRPage = ({ togglePrivacyPolicy, privacyPolicyAccepted }) => {
   const toggleGDPR = () => setGDPR(!isGDPR)
 
   if (privacyPolicyAccepted) {
-    navigate("/account")
+    replace("/account")
   }
 
   return (

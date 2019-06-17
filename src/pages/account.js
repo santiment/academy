@@ -67,7 +67,7 @@ export default () => (
         }
 
         if (data && !data.currentUser) {
-          replace("/login")
+          replace("/login/email")
           return null
         }
 
