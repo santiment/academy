@@ -86,6 +86,27 @@
   }
 }
 
+.pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0 auto;
+  background-size: cover;
+
+  &_yan {
+    background-image: url("../../images/yan.jpg");
+  }
+
+  &_pramesh {
+    background-image: url("../../images/pramesh_tyagi.jpg");
+  }
+
+  &_paolo {
+    background-image: url("../../images/paolo-ardoino.jpg");
+  }
+}
+
 :global {
   /* Slider */
   .slick-slider {
