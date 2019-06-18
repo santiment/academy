@@ -137,7 +137,7 @@ export default () => (
         <td className={styles.link}>
           <Pipedrive
             title="Enterprise"
-            label="Contact sale"
+            label="Contact us"
             src="https://pipedrivewebforms.com/form/0527db4d781f7c4c0760b7bc7a58549c4144829"
           />
         </td>

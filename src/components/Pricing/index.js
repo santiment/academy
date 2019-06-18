@@ -24,7 +24,7 @@ const prices = [
       <>
         20 API calls / minute
         <br />
-        5k API calls / month
+        1k API calls / month
       </>,
       <>
         Standard metrics <span className={styles.ast}>*</span>
@@ -108,7 +108,7 @@ const prices = [
     price: "Custom",
     priceType: "",
     discount: "Based on your needs",
-    link: "Contact sales",
+    link: "Contact us",
     pipedrive:
       "https://pipedrivewebforms.com/form/0527db4d781f7c4c0760b7bc7a58549c4144829",
     features: [
