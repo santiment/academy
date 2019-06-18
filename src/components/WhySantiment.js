@@ -193,8 +193,21 @@ const whys = [
         <circle cx="43" cy="44" r="7" stroke="#181B2B" strokeWidth="2" />
       </svg>
     ),
-    desc:
-      "Use GraphQL for freedom and flexibility, or SanPy, our custom Python wrapper that is ideal for data scientists. Our SanSDK in GitHub includes examples for Ruby, R and more soon!",
+    desc: (
+      <>
+        Use GraphQL for freedom and flexibility, or SanPy, our custom Python
+        wrapper that is ideal for data scientists. Our{" "}
+        <a
+          href="https://github.com/santiment/san-sdk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.link}
+        >
+          SanSDK in GitHub
+        </a>{" "}
+        includes examples for Ruby, R and more soon!
+      </>
+    ),
   },
   {
     title: "Python library",

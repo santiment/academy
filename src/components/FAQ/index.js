@@ -26,19 +26,34 @@ const questions = [
     ),
   },
   {
-    question: "How do I get my API key?",
+    question: "How far back is the data available?",
     answer: (
       <>
         <p className={styles.text}>
-          You can create the API key yourself through our SANbase platform. Find
-          out more{" "}
+          For our on-chain metrics - all the way back. This means all BTC
+          metrics are available for as far back as the BTC blockchain existed;
+          same goes for Ethereum and other chains that we track at the moment
+          and will track in the future.
+        </p>
+        <p className={styles.text}>
+          For our social metrics, it will obviously differ based on the age of a
+          particular social channel, but we have more than enough data for most
+          machine learning applications.
+        </p>
+        <p className={styles.text}>
+          For our development activity metrics, the data goes back to the first
+          git commit/event executed in a project’s public Github repo.
+        </p>
+        <p className={styles.text}>
+          Feel free to ask{" "}
           <a
-            href="https://help.santiment.net/faq/general/how-to-create-an-api-key"
+            href="https://santiment.net/discord"
             rel="noopener noreferrer"
             target="_blank"
           >
-            here.
-          </a>
+            on our Discord
+          </a>{" "}
+          for more details.
         </p>
       </>
     ),

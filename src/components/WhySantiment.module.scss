@@ -4,6 +4,13 @@
   margin: 16px 0 40px;
 }
 
+.link {
+  color: var(--dodger-blue);
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .whys {
   display: flex;
   justify-content: space-between;
