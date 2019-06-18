@@ -35,7 +35,7 @@
 
 .testimonial {
   outline: none;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   height: 100%;
 }
@@ -72,9 +72,8 @@
   }
 
   @include responsive("phone", "phone-xs") {
-    // display: none;
     top: initial;
-    bottom: 5px;
+    bottom: 35px;
 
     &_left {
       left: 0;
