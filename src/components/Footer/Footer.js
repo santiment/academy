@@ -26,7 +26,6 @@ const categories = [
     title: "Company",
     links: [
       { children: "About us", href: "https://santiment.net/about-santiment/" },
-      { children: "Pricing", href: "https://santiment.net/pricing/" },
       { children: "Customers", href: "https://santiment.net/customers/" },
       { children: "Team", href: "https://santiment.net/about-santiment/team/" },
       { children: "Jobs", href: "https://santiment.net/about-santiment/jobs/" },
