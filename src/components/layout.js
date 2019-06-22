@@ -5,26 +5,29 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import Header from "./header"
-import Footer from "./Footer/Footer.js"
-import styles from "./layout.module.scss"
-import Helmet from "react-helmet"
+import React from 'react'
+import PropTypes from 'prop-types'
+import StripeProviderSSR from './StripeProviderSSR'
+import Header from './header'
+import Footer from './Footer/Footer.js'
+import styles from './layout.module.scss'
+import Helmet from 'react-helmet'
 
-const envScript = process.env.NODE_ENV === "production" && (
+const envScript = process.env.NODE_ENV === 'production' && (
   <Helmet>
-    <script src="/env.js" />
+    <script src='/env.js' />
   </Helmet>
 )
 
 const Layout = ({ children, isAccountPage }) => (
-  <div className={styles.container}>
-    {envScript}
-    <Header isAccountPage={isAccountPage} />
-    <main className={styles.main}>{children}</main>
-    <Footer />
-  </div>
+  <StripeProviderSSR>
+    <div className={styles.container}>
+      {envScript}
+      <Header isAccountPage={isAccountPage} />
+      <main className={styles.main}>{children}</main>
+      <Footer />
+    </div>
+  </StripeProviderSSR>
 )
 
 Layout.propTypes = {
