@@ -1,12 +1,13 @@
-import React from "react"
-import Panel from "@santiment-network/ui/Panel/PanelWithHeader"
-import styles from "../pages/account.module.scss"
+import React from 'react'
+import cx from 'classnames'
+import Panel from '@santiment-network/ui/Panel/PanelWithHeader'
+import styles from '../pages/account.module.scss'
 
-const Settings = props => (
+const Settings = ({ classes = {}, ...props }) => (
   <Panel
     {...props}
-    className={styles.settings}
-    headerClassName={styles.settings__header}
+    className={cx(styles.settings, classes.wrapper)}
+    headerClassName={cx(styles.settings__header, classes.header)}
     contentClassName={styles.settings__content}
   />
 )

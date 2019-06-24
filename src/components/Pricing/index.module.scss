@@ -157,6 +157,10 @@
   font-size: 14px;
   line-height: 20px;
 
+  &_bottom {
+    margin-top: 45px;
+  }
+
   @include responsive('tablet', 'phone', 'phone-xs') {
     display: none;
   }
