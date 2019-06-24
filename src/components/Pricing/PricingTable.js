@@ -104,7 +104,8 @@ export default ({ classes = {} }) => {
                             <div className={styles.discount}>
                               {card.discount}
                             </div>
-                            {card.title === 'Free' ? (
+                            {card.title === 'Free' ||
+                            card.title === 'Enterprise' ? (
                               <Button
                                 as={Link}
                                 to='/account'
