@@ -12,12 +12,13 @@ const Intercom = ({ children }) => {
   updateIntercom()
   return (
     <Query query={CURRENT_USER_QUERY}>
-      {({ data: { currentUser = {} }, loading }) => {
+      {({ data: { currentUser }, loading }) => {
         if (!loading) {
+          const { email, username: name } = currentUser || {}
           window.Intercom('boot', {
             app_id: 'cyjjko9u',
-            email: currentUser.email,
-            name: currentUser.username,
+            email,
+            name,
           })
         }
 
