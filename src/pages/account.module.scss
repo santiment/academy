@@ -1,4 +1,29 @@
-@import "~@santiment-network/ui/mixins.scss";
+@import '~@santiment-network/ui/mixins.scss';
+
+.title {
+  @include text('h3');
+}
+
+.tabs {
+  margin: 25px 0;
+  width: 100%;
+}
+
+.tab_selected {
+  color: var(--dodger-blue) !important;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    height: 2px;
+    left: 0;
+    right: 0;
+    border-radius: 1px;
+    background: var(--dodger-blue);
+  }
+}
 
 .settings {
   margin-bottom: 50px;
@@ -20,7 +45,7 @@
   min-height: 60px;
   padding: 17px 20px;
 
-  @include responsive("tablet", "phone", "phone-xs") {
+  @include responsive('tablet', 'phone', 'phone-xs') {
     flex-direction: column;
   }
 
@@ -42,7 +67,7 @@
     display: flex;
     flex-direction: column;
 
-    @include responsive("tablet", "phone", "phone-xs") {
+    @include responsive('tablet', 'phone', 'phone-xs') {
       flex-direction: column;
       margin-bottom: 10px;
     }
@@ -76,12 +101,12 @@
   border-radius: 4px;
   position: relative;
   min-width: 250px;
-  @include responsive("phone-xs") {
+  @include responsive('phone-xs') {
     min-width: 0;
   }
 
   &::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     right: 32px;

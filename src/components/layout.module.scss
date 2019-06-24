@@ -1,17 +1,21 @@
-@import "~@santiment-network/ui/main.scss";
-@import "~@santiment-network/ui/mixins.scss";
-@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+@import '~@santiment-network/ui/main.scss';
+@import '~@santiment-network/ui/mixins.scss';
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body {
+  color: var(--mirage);
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: "Rubik", sans-serif;
-  color: var(--mirage);
+  font-family: 'Rubik', sans-serif;
   font-size: 16px;
   line-height: 24px;
   list-style: none;
+  color: inherit;
 }
 
 a:hover {
@@ -22,11 +26,11 @@ a:hover {
   max-width: 1140px;
   margin: 0 auto;
 
-  @include responsive("tablet") {
+  @include responsive('tablet') {
     max-width: 768px;
   }
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     width: 100%;
     padding: 0 15px;
   }
@@ -35,7 +39,7 @@ a:hover {
 .main {
   margin-top: 120px;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     margin-top: 60px;
   }
 
@@ -43,7 +47,7 @@ a:hover {
     z-index: -1;
     position: absolute;
     display: block;
-    content: "";
+    content: '';
     top: 0;
     left: 0;
     right: 0;
@@ -62,7 +66,7 @@ a:hover {
 :global(#___gatsby) {
   overflow-x: hidden;
 
-  @include responsive("laptop") {
+  @include responsive('laptop') {
     padding: 0 15px;
   }
 }
