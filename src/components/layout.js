@@ -7,8 +7,9 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import Header from './header'
+import StripeProviderSSR from './StripeProviderSSR'
 import Intercom from './Intercom'
+import Header from './header'
 import Footer from './Footer/Footer.js'
 import styles from './layout.module.scss'
 import Helmet from 'react-helmet'
@@ -20,14 +21,16 @@ const envScript = process.env.NODE_ENV === 'production' && (
 )
 
 const Layout = ({ children, isAccountPage }) => (
-  <Intercom>
-    <div className={styles.container}>
-      {envScript}
-      <Header isAccountPage={isAccountPage} />
-      <main className={styles.main}>{children}</main>
-      <Footer />
-    </div>
-  </Intercom>
+  <StripeProviderSSR>
+    <Intercom>
+      <div className={styles.container}>
+        {envScript}
+        <Header isAccountPage={isAccountPage} />
+        <main className={styles.main}>{children}</main>
+        <Footer />
+      </div>
+    </Intercom>
+  </StripeProviderSSR>
 )
 
 Layout.propTypes = {

@@ -818,10 +818,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@santiment-network/ui@^0.5.10":
-  version "0.5.10"
-  resolved "https://registry.yarnpkg.com/@santiment-network/ui/-/ui-0.5.10.tgz#802ef8cc397039813d149eb10af5e645d6860b98"
-  integrity sha512-U+HuLS0Nh6viG3vqiGgefcbj5ZaSMxSr81ouDOHmaA1xqM0Z3jhTonN1MrYZ11jCo65zrvGPz/iWnh50h+6Mvg==
+"@santiment-network/ui@^0.5.18":
+  version "0.5.18"
+  resolved "https://registry.yarnpkg.com/@santiment-network/ui/-/ui-0.5.18.tgz#60e193d4ff7c8dd5395f15b46c185af569e0f6be"
+  integrity sha512-T63xh9YrPO4X3eBYXeBNdP+iyj56KaBiDCP8WK2tJt0IFzqpmBPOd9G+mLoCsVUqXKgJ7eiU1CC33bsCfpJNTg==
 
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
@@ -9280,6 +9280,13 @@ react-slick@^0.24.0:
     json2mq "^0.2.0"
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
+
+react-stripe-elements@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-stripe-elements/-/react-stripe-elements-3.0.0.tgz#8b5e354e6e421b85f909329c9818a719b132410a"
+  integrity sha512-ouGHPmPhdg7KUTOFVuYIr0UWVgBjG5CqmOn9/y0vaJICryPB6llkiOGeUXKrac7fu1/vtPdn8t/4JKnbi8PT8g==
+  dependencies:
+    prop-types "^15.5.10"
 
 react@^16.8.4, react@^16.8.6:
   version "16.8.6"

@@ -1,0 +1,21 @@
+@import '~@santiment-network/ui/mixins';
+
+.card {
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.wrapper {
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+.header {
+  border: 1px solid var(--porcelain);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom: none;
+}

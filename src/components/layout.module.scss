@@ -2,16 +2,20 @@
 @import '~@santiment-network/ui/mixins.scss';
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
+body {
+  color: var(--mirage);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-decoration: none;
   font-family: 'Rubik', sans-serif;
-  color: var(--mirage);
   font-size: 16px;
   line-height: 24px;
   list-style: none;
+  color: inherit;
 }
 
 a:hover {

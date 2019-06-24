@@ -1,5 +1,5 @@
-@import "~@santiment-network/ui/mixins.scss";
-@import "~@santiment-network/ui/variables.scss";
+@import '~@santiment-network/ui/mixins.scss';
+@import '~@santiment-network/ui/variables.scss';
 .header {
   display: flex;
   align-items: center;
@@ -11,6 +11,10 @@
 .logo {
   display: flex;
   align-items: center;
+
+  &:hover {
+    color: var(--mirage);
+  }
 
   &__icon {
     width: 40px;
@@ -41,8 +45,8 @@
   display: none;
 }
 
-:global([for="hamburger"]) {
-  @include responsive("desktop", "laptop", "tablet") {
+:global([for='hamburger']) {
+  @include responsive('desktop', 'laptop', 'tablet') {
     display: none;
   }
 }
@@ -55,7 +59,7 @@
 }
 
 .nav {
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     display: none;
     position: fixed;
     z-index: 10;
@@ -79,7 +83,7 @@
   color: var(--waterloo);
   margin-right: 35px;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     margin-right: 0;
     margin-bottom: 20px;
     color: var(--athens);

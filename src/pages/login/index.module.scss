@@ -1,4 +1,4 @@
-@import "~@santiment-network/ui/mixins.scss";
+@import '~@santiment-network/ui/mixins.scss';
 
 .wrapper {
   width: 500px;
@@ -6,7 +6,7 @@
   padding: 30px 60px 36px;
   text-align: center;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     width: 100%;
     padding: 15px 30px;
   }
@@ -65,5 +65,12 @@
     transform: rotate(180deg);
     margin-right: 5px;
     vertical-align: middle;
+  }
+}
+
+.input {
+  &:hover,
+  &:focus {
+    border-color: var(--dodger-blue);
   }
 }

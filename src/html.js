@@ -19,8 +19,9 @@ export default function HTML(props) {
           name='viewport'
           content='width=device-width, initial-scale=1, shrink-to-fit=no'
         />
-        {intercomScript}
         {props.headComponents}
+        <script src='https://js.stripe.com/v3/' />
+        {intercomScript}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
