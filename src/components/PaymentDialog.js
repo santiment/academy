@@ -20,7 +20,7 @@ const SUBSCRIBE_MUTATION = gql`
 `
 
 function useFormLoading() {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   function toggleLoading() {
     setLoading(state => !state)
   }
@@ -106,6 +106,7 @@ const PaymentDialog = ({
                         })
                         .then(console.log)
                         .then(toggleLoading)
+                        .catch(alert)
                     }}
                   >
                     Pay

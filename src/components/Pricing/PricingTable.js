@@ -132,7 +132,7 @@ export default ({ classes = {} }) => {
                                   }
                                   src={card.pipedrive}
                                   price={card.price}
-                                  planId={id}
+                                  planId={+id}
                                   disabled={sameAsUserPlan}
                                   isLoggedIn={currentUser}
                                 />
