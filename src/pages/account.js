@@ -18,6 +18,15 @@ export const CURRENT_USER_QUERY = gql`
       username
       privacyPolicyAccepted
       apikeys
+      subscriptions {
+        plan {
+          id
+          name
+          product {
+            name
+          }
+        }
+      }
     }
   }
 `
@@ -75,7 +84,7 @@ const tabs = [
     index: 2,
     content: (
       <Link className={styles.tab} to='/account#subscription'>
-        Connections
+        Subscription
       </Link>
     ),
   },

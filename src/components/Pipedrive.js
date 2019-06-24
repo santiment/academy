@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'gatsby'
 import gql from 'graphql-tag'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
@@ -28,59 +29,92 @@ function useFormLoading() {
   return [loading, toggleLoading]
 }
 
-const Pipedrive = ({ title, label, src, stripe }) => {
+const Pipedrive = ({
+  title,
+  label,
+  src,
+  price,
+  planId,
+  stripe,
+  disabled,
+  isLoggedIn,
+}) => {
   const [loading, toggleLoading] = useFormLoading()
+  const [paymentVisible, setPaymentVisiblity] = useState(false)
+
+  function hidePayment() {
+    setPaymentVisiblity(false)
+  }
+
+  function showPayment() {
+    setPaymentVisiblity(true)
+  }
+
+  const anonProps = { onClick: undefined, as: Link, to: '/account' }
 
   return (
-    <Dialog
-      title='Payment'
-      classes={{ dialog: styles.dialog }}
-      trigger={
-        <Button className={styles.link} fluid border accent='blue'>
-          {label}
-        </Button>
-      }
-    >
-      <Mutation mutation={SUBSCRIBE_MUTATION}>
-        {(subscribe, { called, loading, error, data }) => {
-          return (
-            <>
-              <Dialog.ScrollContent withPadding>
-                <CheckoutForm plan={title} />
-              </Dialog.ScrollContent>
-              <Dialog.Actions>
-                <Dialog.Cancel className={styles.action_cancel}>
-                  Close
-                </Dialog.Cancel>
-                <Dialog.Approve
-                  variant='fill'
-                  accent='blue'
-                  disabled={loading}
-                  className={styles.action}
-                  onClick={() => {
-                    toggleLoading()
-                    stripe
-                      .createToken({ name: 'Test name' })
-                      .then(({ token, error }) => {
-                        if (error) {
-                          return Promise.reject(error)
-                        }
-                        return subscribe({
-                          variables: { cardToken: token.id, planId: 5 },
+    <>
+      <Button
+        className={styles.link}
+        fluid
+        border
+        accent='blue'
+        disabled={disabled}
+        onClick={showPayment}
+        {...anonProps}
+      >
+        {label}
+      </Button>
+      <Dialog
+        title={`Payment for "${title}" plan (${price}/month)`}
+        classes={{ dialog: styles.dialog }}
+        open={paymentVisible}
+        onClose={hidePayment}
+      >
+        <Mutation mutation={SUBSCRIBE_MUTATION}>
+          {(subscribe, { called, loading, error, data }) => {
+            return (
+              <>
+                <Dialog.ScrollContent withPadding>
+                  <CheckoutForm plan={title} />
+                </Dialog.ScrollContent>
+                <Dialog.Actions>
+                  <Dialog.Cancel
+                    className={styles.action_cancel}
+                    onClick={hidePayment}
+                  >
+                    Close
+                  </Dialog.Cancel>
+                  <Dialog.Approve
+                    variant='fill'
+                    accent='blue'
+                    disabled={loading}
+                    className={styles.action}
+                    onClick={() => {
+                      toggleLoading()
+                      stripe
+                        .createToken({ name: 'Test name' })
+                        .then(({ token, error }) => {
+                          if (error) {
+                            return Promise.reject(error)
+                          }
+                          return subscribe({
+                            variables: { cardToken: token.id, planId },
+                          })
                         })
-                      })
-                      .then(console.log)
-                      .then(toggleLoading)
-                  }}
-                >
-                  Pay
-                </Dialog.Approve>
-              </Dialog.Actions>
-            </>
-          )
-        }}
-      </Mutation>
-    </Dialog>
+                        .then(console.log)
+                        .then(toggleLoading)
+                    }}
+                  >
+                    Pay
+                  </Dialog.Approve>
+                </Dialog.Actions>
+              </>
+            )
+          }}
+        </Mutation>
+      </Dialog>
+    </>
   )
 }
 
