@@ -3,9 +3,9 @@ import { Query } from 'react-apollo'
 import { CURRENT_USER_QUERY } from '../pages/account'
 
 const updateIntercom = () => {
-  /* if (process.env.NODE_ENV === 'production') { */
-  window.Intercom('update')
-  /* } */
+  if (typeof window !== 'undefined') {
+    window.Intercom('update')
+  }
 }
 
 const Intercom = ({ children }) => {
