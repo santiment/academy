@@ -4,9 +4,7 @@ import gql from 'graphql-tag'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
-import cx from 'classnames'
 import { Elements, injectStripe } from 'react-stripe-elements'
-import Loader from './Loader'
 import CheckoutForm from './CheckoutForm'
 import styles from './Pricing/index.module.scss'
 
@@ -29,7 +27,7 @@ function useFormLoading() {
   return [loading, toggleLoading]
 }
 
-const Pipedrive = ({
+const PaymentDialog = ({
   title,
   label,
   src,
@@ -76,7 +74,7 @@ const Pipedrive = ({
         onClose={hidePayment}
       >
         <Mutation mutation={SUBSCRIBE_MUTATION}>
-          {(subscribe, { called, loading, error, data }) => {
+          {(subscribe, { called, error, data }) => {
             return (
               <>
                 <Dialog.ScrollContent withPadding>
@@ -122,7 +120,7 @@ const Pipedrive = ({
   )
 }
 
-const InjectedForm = injectStripe(Pipedrive)
+const InjectedForm = injectStripe(PaymentDialog)
 
 export default props => (
   <Elements>

@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import Button from '@santiment-network/ui/Button'
 import { CURRENT_USER_QUERY } from '../../pages/account'
 import Features from '../Features'
-import Pipedrive from '../Pipedrive'
+import PaymentDialog from '../PaymentDialog'
 import PricingDetailsToggle from './PricingDetailsToggle.js'
 import prices from './prices'
 import styles from './index.module.scss'
@@ -117,7 +117,7 @@ export default ({ classes = {} }) => {
                                 {card.link}
                               </Button>
                             ) : (
-                              <Pipedrive
+                              <PaymentDialog
                                 title={card.title}
                                 label={
                                   sameAsUserPlan

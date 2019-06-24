@@ -3,7 +3,7 @@ import Icon from '@santiment-network/ui/Icon'
 import { Link } from 'gatsby'
 import Button from '@santiment-network/ui/Button'
 import cx from 'classnames'
-import Pipedrive from '../Pipedrive'
+import PaymentDialog from '../PaymentDialog'
 import styles from './PricingDetails.module.scss'
 import prices from './prices'
 import cardStyles from './index.module.scss'
@@ -115,7 +115,7 @@ export default ({ isLoggedIn }) => (
           </Button>
         </td>
         <td className={styles.link}>
-          <Pipedrive
+          <PaymentDialog
             label='Upgrade now'
             isLoggedIn={isLoggedIn}
             price={prices.ESSENTIAL.price}
@@ -123,7 +123,7 @@ export default ({ isLoggedIn }) => (
           />
         </td>
         <td className={styles.link}>
-          <Pipedrive
+          <PaymentDialog
             label='Upgrade now'
             isLoggedIn={isLoggedIn}
             price={prices.PRO.price}
@@ -131,7 +131,7 @@ export default ({ isLoggedIn }) => (
           />
         </td>
         <td className={styles.link}>
-          <Pipedrive
+          <PaymentDialog
             label='Upgrade now'
             isLoggedIn={isLoggedIn}
             price={prices.PREMIUM.price}
@@ -139,7 +139,7 @@ export default ({ isLoggedIn }) => (
           />
         </td>
         <td className={styles.link}>
-          <Pipedrive label='Contact us' />
+          <PaymentDialog label='Contact us' />
         </td>
       </tr>
     </tbody>
