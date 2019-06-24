@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Query } from 'react-apollo'
 import { CURRENT_USER_QUERY } from '../pages/account'
 
