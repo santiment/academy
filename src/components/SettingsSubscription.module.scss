@@ -1,0 +1,8 @@
+@import '~@santiment-network/ui/mixins';
+
+.card {
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    margin: 0;
+    border-radius: 0;
+  }
+}

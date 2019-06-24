@@ -55,6 +55,13 @@
 }
 
 .icon {
+  width: 13px;
+  height: 13px;
+  fill: var(--casper);
+  vertical-align: text-top;
+  margin-left: 5px;
+  cursor: pointer;
+
   &_active {
     fill: var(--dodger-blue);
   }
