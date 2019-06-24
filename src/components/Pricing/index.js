@@ -6,7 +6,6 @@ import Button from '@santiment-network/ui/Button'
 import Title from '../Title'
 import Features from '../Features'
 import PricingTable from './PricingTable.js'
-import PricingDetailsToggle from './PricingDetailsToggle.js'
 import Pipedrive from '../Pipedrive'
 import styles from './index.module.scss'
 
@@ -28,7 +27,6 @@ export default () => {
         for your aims
       </Title>
       <PricingTable />
-      <PricingDetailsToggle />
     </section>
   )
 }

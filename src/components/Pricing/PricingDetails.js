@@ -1,59 +1,60 @@
-import React from "react"
-import Icon from "@santiment-network/ui/Icon"
-import { Link } from "gatsby"
-import Button from "@santiment-network/ui/Button"
-import cx from "classnames"
-import Pipedrive from "../Pipedrive"
-import styles from "./PricingDetails.module.scss"
-import cardStyles from "./index.module.scss"
+import React from 'react'
+import Icon from '@santiment-network/ui/Icon'
+import { Link } from 'gatsby'
+import Button from '@santiment-network/ui/Button'
+import cx from 'classnames'
+import Pipedrive from '../Pipedrive'
+import styles from './PricingDetails.module.scss'
+import prices from './prices'
+import cardStyles from './index.module.scss'
 
 const table = {
-  columns: ["", "Free", "Basic", "Pro", "Premium", "Corporate"],
+  columns: ['', 'Free', 'Basic', 'Pro', 'Premium', 'Corporate'],
   rows: [
     {
-      group: "Financial data",
+      group: 'Financial data',
       data: [
-        { name: "Open/High/Low/Close" },
+        { name: 'Open/High/Low/Close' },
         {
-          name: "Price-volume difference indicator",
+          name: 'Price-volume difference indicator',
         },
       ],
     },
     {
-      group: "On-chain data",
+      group: 'On-chain data',
       data: [
-        { name: "Open/High/Low/Close" },
+        { name: 'Open/High/Low/Close' },
         {
-          name: "Network growth",
+          name: 'Network growth',
         },
 
-        { name: "Token age consumed" },
-        { name: "Average token age consumed" },
-        { name: "Exchange flow" },
-        { name: "Total ERC20 exchange funds flow" },
-        { name: "Transaction volume" },
-        { name: "Total circulation (beta)" },
-        { name: "Velocity of tokens (beta)" },
-        { name: "ETH gas used" },
-        { name: "Distribution between mining pools" },
-        { name: "Top holders percent of total supply" },
-        { name: "Percent of total supply on exchanges" },
-        { name: "Realized value", checks: [false, false, true, true, true] },
-        { name: "MVRV ratio", checks: [false, false, true, true, true] },
-        { name: "NVT", checks: [false, false, true, true, true] },
+        { name: 'Token age consumed' },
+        { name: 'Average token age consumed' },
+        { name: 'Exchange flow' },
+        { name: 'Total ERC20 exchange funds flow' },
+        { name: 'Transaction volume' },
+        { name: 'Total circulation (beta)' },
+        { name: 'Velocity of tokens (beta)' },
+        { name: 'ETH gas used' },
+        { name: 'Distribution between mining pools' },
+        { name: 'Top holders percent of total supply' },
+        { name: 'Percent of total supply on exchanges' },
+        { name: 'Realized value', checks: [false, false, true, true, true] },
+        { name: 'MVRV ratio', checks: [false, false, true, true, true] },
+        { name: 'NVT', checks: [false, false, true, true, true] },
         {
-          name: "Daily active deposits",
+          name: 'Daily active deposits',
           checks: [false, false, true, true, true],
         },
       ],
     },
     {
-      group: "Social data",
+      group: 'Social data',
       data: [
-        { name: "Dev activity" },
-        { name: "Topic search" },
-        { name: "Relative social dominance" },
-        { name: "Total social volume" },
+        { name: 'Dev activity' },
+        { name: 'Topic search' },
+        { name: 'Relative social dominance' },
+        { name: 'Total social volume' },
       ],
     },
   ],
@@ -61,7 +62,7 @@ const table = {
 
 const all = [true, true, true, true, true]
 
-export default () => (
+export default ({ isLoggedIn }) => (
   <table className={styles.table}>
     <tbody>
       <tr className={styles.headers}>
@@ -89,7 +90,7 @@ export default () => (
                   {check && (
                     <Icon
                       className={styles.feature__check}
-                      type="checkmark-round"
+                      type='checkmark-round'
                     />
                   )}
                 </td>
@@ -104,42 +105,41 @@ export default () => (
         <td className={styles.link}>
           <Button
             as={Link}
-            to="/account"
+            to='/account'
             className={cardStyles.link}
             border
             fluid
-            accent="blue"
+            accent='blue'
           >
             Current plan
           </Button>
         </td>
         <td className={styles.link}>
           <Pipedrive
-            title="Basic"
-            label="Upgrade now"
-            src="https://pipedrivewebforms.com/form/bf289352f9c4b07a996b454353fd4dff4144829"
+            label='Upgrade now'
+            isLoggedIn={isLoggedIn}
+            price={prices.ESSENTIAL.price}
+            title={prices.ESSENTIAL.title}
           />
         </td>
         <td className={styles.link}>
           <Pipedrive
-            title="Pro"
-            label="Upgrade now"
-            src="https://pipedrivewebforms.com/form/2562e7ee67e1191d6d6ae934eb8ec1194144829"
+            label='Upgrade now'
+            isLoggedIn={isLoggedIn}
+            price={prices.PRO.price}
+            title={prices.PRO.title}
           />
         </td>
         <td className={styles.link}>
           <Pipedrive
-            title="Premium"
-            label="Upgrade now"
-            src="https://pipedrivewebforms.com/form/e4053d472913f8b7963b269fb0370f3a4144829"
+            label='Upgrade now'
+            isLoggedIn={isLoggedIn}
+            price={prices.PREMIUM.price}
+            title={prices.PREMIUM.title}
           />
         </td>
         <td className={styles.link}>
-          <Pipedrive
-            title="Enterprise"
-            label="Contact us"
-            src="https://pipedrivewebforms.com/form/0527db4d781f7c4c0760b7bc7a58549c4144829"
-          />
+          <Pipedrive label='Contact us' />
         </td>
       </tr>
     </tbody>

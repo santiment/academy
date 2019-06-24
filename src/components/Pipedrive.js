@@ -50,7 +50,11 @@ const Pipedrive = ({
     setPaymentVisiblity(true)
   }
 
-  const anonProps = { onClick: undefined, as: Link, to: '/account' }
+  const anonProps = !isLoggedIn && {
+    onClick: undefined,
+    as: Link,
+    to: '/account',
+  }
 
   return (
     <>
