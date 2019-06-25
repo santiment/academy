@@ -1,4 +1,7 @@
 import React from 'react'
+import Button from '@santiment-network/ui/Button'
+import PaymentDialogBtn from '../PaymentDialog'
+import PipedriveDialogBtn from '../Pipedrive/Pipedrive'
 import styles from './index.module.scss'
 
 export default {
@@ -9,6 +12,11 @@ export default {
     priceType: '',
     discount: 'Free forever',
     link: 'Change to this plan',
+    Component: () => (
+      <Button accent='blue' border fluid className={styles.link} disabled>
+        Default plan
+      </Button>
+    ),
     features: [
       'Historical data access to last 3 months excluding the last 24 hours',
       <>
@@ -32,6 +40,7 @@ export default {
     priceType: '/mo',
     discount: '20% off with 200 SAN',
     link: 'Upgrade now',
+    Component: PaymentDialogBtn,
     features: [
       'Historical data access to last 6 months',
       <>
@@ -52,6 +61,7 @@ export default {
     price: '$359',
     priceType: '/mo',
     discount: '20% off with 1000 SAN',
+    Component: PaymentDialogBtn,
     link: 'Upgrade now',
     features: [
       'Historical data access to last 18 months',
@@ -72,6 +82,7 @@ export default {
     price: '$719',
     priceType: '/mo',
     discount: '20% off with 1000 SAN',
+    Component: PaymentDialogBtn,
     link: 'Upgrade now',
     features: [
       'Unlimited historical data access',
@@ -93,6 +104,13 @@ export default {
     priceType: '',
     discount: 'Based on your needs',
     link: 'Contact us',
+    Component: props => (
+      <PipedriveDialogBtn
+        {...props}
+        title='Enterprise plan Pipedrive form'
+        src='https://pipedrivewebforms.com/form/0527db4d781f7c4c0760b7bc7a58549c4144829'
+      />
+    ),
     features: [
       'Unlimited historical data access',
       `Custom development

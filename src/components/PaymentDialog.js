@@ -35,7 +35,6 @@ const PaymentDialog = ({
   planId,
   stripe,
   disabled,
-  isLoggedIn,
 }) => {
   const [loading, toggleLoading] = useFormLoading()
   const [paymentVisible, setPaymentVisiblity] = useState(false)
@@ -48,12 +47,6 @@ const PaymentDialog = ({
     setPaymentVisiblity(true)
   }
 
-  const anonProps = !isLoggedIn && {
-    onClick: undefined,
-    as: Link,
-    to: '/account',
-  }
-
   return (
     <>
       <Button
@@ -63,7 +56,6 @@ const PaymentDialog = ({
         accent='blue'
         disabled={disabled}
         onClick={showPayment}
-        {...anonProps}
       >
         {label}
       </Button>

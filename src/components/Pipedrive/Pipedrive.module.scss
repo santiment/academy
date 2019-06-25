@@ -33,10 +33,9 @@
   transition: transform 200ms;
   flex: 1;
 
-  @include responsive('desktop', 'laptop') {
-    &:nth-of-type(2n) {
-      margin: 0 -1px;
-    }
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    margin-bottom: 20px;
+    border-radius: 4px;
   }
 
   &:hover {
@@ -44,16 +43,6 @@
     border-radius: 4px;
     box-shadow: 0px 14px 20px rgba(24, 27, 43, 0.06);
     transform: scale(1.03);
-  }
-
-  @include responsive('tablet', 'phone', 'phone-xs') {
-    margin-bottom: 20px;
-    border-radius: 4px;
-
-    &:hover {
-      transform: none;
-      box-shadow: none;
-    }
   }
 
   &__title {
@@ -163,10 +152,6 @@
   font-size: 14px;
   line-height: 20px;
 
-  &_bottom {
-    margin-top: 45px;
-  }
-
   @include responsive('tablet', 'phone', 'phone-xs') {
     display: none;
   }
@@ -180,13 +165,41 @@
 }
 
 .dialog {
-  width: 440px;
+  width: 100%;
+  height: 100%;
+
+  &__content {
+    position: relative;
+    flex: 1;
+  }
+
+  &__loading {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_end {
+      animation: loading-end 400ms forwards;
+    }
+  }
 }
 
-.action {
-  margin-left: 16px;
+@keyframes loading-end {
+  0% {
+    opacity: 1;
+  }
 
-  &_cancel:hover {
-    color: var(--dodger-blue);
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
   }
 }
