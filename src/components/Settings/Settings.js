@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import Panel from '@santiment-network/ui/Panel/PanelWithHeader'
-import styles from '../pages/account.module.scss'
+import styles from './Settings.module.scss'
 
 const Settings = ({ classes = {}, ...props }) => (
   <Panel

@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Icon from '@santiment-network/ui/Icon'
 import Button from '@santiment-network/ui/Button'
 import { Query } from 'react-apollo'
-import { CURRENT_USER_QUERY } from '../pages/account'
+import { CURRENT_USER_QUERY } from '../gql/user'
 import styles from './AccountBtn.module.scss'
 
 const btnProps = {

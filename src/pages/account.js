@@ -10,9 +10,9 @@ import {
   GDPR_MUTATION,
 } from '../gql/user'
 import Layout from '../components/layout'
-import SettingsAPIKeys from '../components/SettingsAPIKeys'
-import SettingsSubscription from '../components/SettingsSubscription'
-import GDPR from '../components/GDPR'
+import SettingsAPIKeys from '../components/Settings/SettingsAPIKeys'
+import SettingsSubscription from '../components/Settings/SettingsSubscription'
+import GDPR from '../components/GDPR/GDPR'
 import styles from './account.module.scss'
 
 const updateCache = (

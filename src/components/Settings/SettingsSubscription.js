@@ -1,5 +1,5 @@
 import React from 'react'
-import PricingTable from './Pricing/PricingTable'
+import PricingTable from '../Pricing/PricingTable'
 import Settings from './Settings'
 import styles from './SettingsSubscription.module.scss'
 
