@@ -1,30 +1,14 @@
 import React from 'react'
 import { Query } from 'react-apollo'
 import cx from 'classnames'
-import gql from 'graphql-tag'
 import { Link } from 'gatsby'
 import Button from '@santiment-network/ui/Button'
-import { CURRENT_USER_QUERY } from '../../pages/account'
+import { CURRENT_USER_QUERY } from '../../gql/user'
 import Features from '../Features'
-import PaymentDialog from '../PaymentDialog'
 import PricingDetailsToggle from './PricingDetailsToggle.js'
-import PipedriveBtn from '../Pipedrive/Pipedrive'
+import { PLANS_QUERY } from '../../gql/plans'
 import prices from './prices'
 import styles from './index.module.scss'
-
-const PLANS_QUERY = gql`
-  query productsWithPlans {
-    productsWithPlans {
-      name
-      plans {
-        id
-        name
-        amount
-        interval
-      }
-    }
-  }
-`
 
 const PlanRestrictBtn = ({ sameAsUserPlan }) => {
   const props = sameAsUserPlan

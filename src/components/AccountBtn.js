@@ -1,19 +1,19 @@
-import React from "react"
-import { Link } from "gatsby"
-import Icon from "@santiment-network/ui/Icon"
-import Button from "@santiment-network/ui/Button"
-import { Query } from "react-apollo"
-import { CURRENT_USER_QUERY } from "../pages/account"
-import styles from "./AccountBtn.module.scss"
+import React from 'react'
+import { Link } from 'gatsby'
+import Icon from '@santiment-network/ui/Icon'
+import Button from '@santiment-network/ui/Button'
+import { Query } from 'react-apollo'
+import { CURRENT_USER_QUERY } from '../pages/account'
+import styles from './AccountBtn.module.scss'
 
 const btnProps = {
   false: {
-    accent: "blue",
+    accent: 'blue',
     border: true,
     className: styles.login,
-    children: "Sign up",
+    children: 'Sign up',
   },
-  true: { className: styles.account, children: <Icon type="profile" /> },
+  true: { className: styles.account, children: <Icon type='profile' /> },
 }
 
 const AccountBtn = ({ isAccountPage }) => {
@@ -23,8 +23,8 @@ const AccountBtn = ({ isAccountPage }) => {
         return (
           <Button
             as={Link}
-            to="/account"
-            accent={isAccountPage && "blue"}
+            to='/account'
+            accent={isAccountPage && 'blue'}
             {...btnProps[Boolean(currentUser)]}
           />
         )

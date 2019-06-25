@@ -4,23 +4,15 @@ import Panel from '@santiment-network/ui/Panel/Panel'
 import Input from '@santiment-network/ui/Input'
 import Button from '@santiment-network/ui/Button'
 import Icon from '@santiment-network/ui/Icon'
-import gql from 'graphql-tag'
 import cx from 'classnames'
 import { Mutation } from 'react-apollo'
 import Layout from '../../components/layout'
+import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
 import styles from './index.module.scss'
-
-const mutation = gql`
-  mutation($email: String!, $consent: String!) {
-    emailLogin(email: $email, consent: $consent) {
-      success
-    }
-  }
-`
 
 export default () => (
   <Layout>
-    <Mutation mutation={mutation}>
+    <Mutation mutation={EMAIL_LOGIN_MUTATION}>
       {(
         addBlog,
         { loading, error, data: { emailLogin: { success } = {} } = {} },

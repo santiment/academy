@@ -1,23 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import gql from 'graphql-tag'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import { Elements, injectStripe } from 'react-stripe-elements'
 import CheckoutForm from './CheckoutForm'
+import { SUBSCRIBE_MUTATION } from '../gql/plans'
 import styles from './Pricing/index.module.scss'
-
-const SUBSCRIBE_MUTATION = gql`
-  mutation subscribe($cardToken: String!, $planId: Int!) {
-    subscribe(cardToken: $cardToken, planId: $planId) {
-      plan {
-        id
-        name
-      }
-    }
-  }
-`
 
 function useFormLoading() {
   const [loading, setLoading] = useState(false)

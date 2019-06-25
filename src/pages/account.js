@@ -3,58 +3,17 @@ import { replace } from 'gatsby'
 import { Query, Mutation } from 'react-apollo'
 import { Link } from 'gatsby'
 import Tabs from '@santiment-network/ui/Tabs'
-import gql from 'graphql-tag'
+import {
+  CURRENT_USER_QUERY,
+  GENERATE_APIKEY_MUTATION,
+  REVOKE_APIKEY_MUTATION,
+  GDPR_MUTATION,
+} from '../gql/user'
 import Layout from '../components/layout'
 import SettingsAPIKeys from '../components/SettingsAPIKeys'
 import SettingsSubscription from '../components/SettingsSubscription'
 import GDPR from '../components/GDPR'
 import styles from './account.module.scss'
-
-export const CURRENT_USER_QUERY = gql`
-  query {
-    currentUser {
-      id
-      email
-      username
-      privacyPolicyAccepted
-      apikeys
-      subscriptions {
-        plan {
-          id
-          name
-          product {
-            name
-          }
-        }
-      }
-    }
-  }
-`
-
-const GENERATE_APIKEY_MUTATION = gql`
-  mutation {
-    apikeysMutation: generateApikey {
-      apikeys
-    }
-  }
-`
-
-const REVOKE_APIKEY_MUTATION = gql`
-  mutation revokeApikey($apikey: String!) {
-    apikeysMutation: revokeApikey(apikey: $apikey) {
-      apikeys
-    }
-  }
-`
-
-const GDPR_MUTATION = gql`
-  mutation updateTermsAndConditions($privacyPolicyAccepted: Boolean!) {
-    updateTermsAndConditions(privacyPolicyAccepted: $privacyPolicyAccepted) {
-      id
-      privacyPolicyAccepted
-    }
-  }
-`
 
 const updateCache = (
   cache,
