@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import Title from "./Title"
-import Button from "@santiment-network/ui/Button"
-import styles from "./ReadyToStart.module.scss"
+import React from 'react'
+import { Link } from 'gatsby'
+import Title from '../Title/Title'
+import Button from '@santiment-network/ui/Button'
+import styles from './ReadyToStart.module.scss'
 
 export default () => (
   <section className={styles.wrapper}>
@@ -14,9 +14,9 @@ export default () => (
     </p>
     <Button
       as={Link}
-      to="/account"
-      variant="fill"
-      accent="blue"
+      to='/account'
+      variant='fill'
+      accent='blue'
       className={styles.btn}
     >
       Get access

@@ -1,5 +1,5 @@
 import React from 'react'
-import Title from '../Title'
+import Title from '../Title/Title'
 import PricingTable from './PricingTable.js'
 import styles from './index.module.scss'
 

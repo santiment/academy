@@ -3,7 +3,7 @@ import cx from 'classnames'
 import Tooltip from '@santiment-network/ui/Tooltip'
 import Icon from '@santiment-network/ui/Icon'
 import Panel from '@santiment-network/ui/Panel/Panel'
-import styles from './CheckoutForm.module.scss'
+import styles from './CheckoutForm/CheckoutForm.module.scss'
 
 const Trigger = ({ isActive, ...props }) => (
   <Icon

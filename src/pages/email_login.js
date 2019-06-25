@@ -1,25 +1,9 @@
-import React from "react"
-import gql from "graphql-tag"
-import { replace } from "gatsby"
-import { Mutation } from "react-apollo"
-import { parse } from "query-string"
-import Layout from "../components/layout"
-import { CURRENT_USER_QUERY } from "./account"
-
-const VERIFY_EMAIL_MUTATION = gql`
-  mutation emailLoginVerify($email: String!, $token: String!) {
-    emailLoginVerify(email: $email, token: $token) {
-      token
-      user {
-        id
-        email
-        username
-        privacyPolicyAccepted
-        apikeys
-      }
-    }
-  }
-`
+import React from 'react'
+import { replace } from 'gatsby'
+import { Mutation } from 'react-apollo'
+import { parse } from 'query-string'
+import Layout from '../components/layout'
+import { CURRENT_USER_QUERY, VERIFY_EMAIL_MUTATION } from '../gql/user'
 
 const updateCache = (
   cache,
@@ -27,7 +11,7 @@ const updateCache = (
     data: {
       emailLoginVerify: { user },
     },
-  }
+  },
 ) => {
   const currentUser = { ...user }
   setTimeout(() => {
@@ -35,7 +19,7 @@ const updateCache = (
       query: CURRENT_USER_QUERY,
       data: { currentUser },
     })
-    replace("/account")
+    replace('/account')
   }, 1000)
 }
 
@@ -50,7 +34,7 @@ export default ({ location: { search } }) => (
           return "Can't verify this email"
         }
 
-        return "Verifying ...."
+        return 'Verifying ....'
       }}
     </Mutation>
   </Layout>

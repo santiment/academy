@@ -1,29 +1,23 @@
 import React from 'react'
 import { Query } from 'react-apollo'
 import cx from 'classnames'
-import gql from 'graphql-tag'
 import { Link } from 'gatsby'
 import Button from '@santiment-network/ui/Button'
-import { CURRENT_USER_QUERY } from '../../pages/account'
-import Features from '../Features'
-import PaymentDialog from '../PaymentDialog'
+import { CURRENT_USER_QUERY } from '../../gql/user'
+import Features from '../Features/Features'
 import PricingDetailsToggle from './PricingDetailsToggle.js'
+import { PLANS_QUERY } from '../../gql/plans'
 import prices from './prices'
 import styles from './index.module.scss'
 
-const PLANS_QUERY = gql`
-  query productsWithPlans {
-    productsWithPlans {
-      name
-      plans {
-        id
-        name
-        amount
-        interval
-      }
-    }
-  }
-`
+const PlanRestrictBtn = ({ sameAsUserPlan }) => {
+  const props = sameAsUserPlan
+    ? { children: 'Your current plan', disabled: true }
+    : { children: 'Upgrade now', as: Link, to: '/account' }
+  return (
+    <Button fluid accent='blue' border className={styles.link} {...props} />
+  )
+}
 
 function toggleCardDetails({ currentTarget }) {
   currentTarget.classList.toggle(styles.card_opened)
@@ -110,31 +104,16 @@ export default ({ classes = {} }) => {
                               <div className={styles.discount}>
                                 {card.discount}
                               </div>
-                              {card.title === 'Free' ||
-                              card.title === 'Enterprise' ? (
-                                <Button
-                                  as={Link}
-                                  to='/account'
-                                  fluid
-                                  accent='blue'
-                                  border
-                                  className={styles.link}
-                                >
-                                  {card.link}
-                                </Button>
+                              {!currentUser || sameAsUserPlan ? (
+                                <PlanRestrictBtn
+                                  sameAsUserPlan={sameAsUserPlan}
+                                />
                               ) : (
-                                <PaymentDialog
+                                <card.Component
                                   title={card.title}
-                                  label={
-                                    sameAsUserPlan
-                                      ? 'Your current plan'
-                                      : card.link
-                                  }
-                                  src={card.pipedrive}
+                                  label={card.link}
                                   price={card.price}
                                   planId={+id}
-                                  disabled={sameAsUserPlan}
-                                  isLoggedIn={currentUser}
                                 />
                               )}
                               <Features data={card.features} classes={styles} />

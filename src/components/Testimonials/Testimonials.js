@@ -1,8 +1,8 @@
-import React, { useRef } from "react"
-import cx from "classnames"
-import Slider from "react-slick"
-import Title from "../Title"
-import styles from "./Testimonials.module.scss"
+import React, { useRef } from 'react'
+import cx from 'classnames'
+import Slider from 'react-slick'
+import Title from '../Title/Title'
+import styles from './Testimonials.module.scss'
 
 const settings = {
   infinite: true,
@@ -14,25 +14,25 @@ const settings = {
 
 const testimonials = [
   {
-    author: "Paolo Ardoino",
-    pic: "paolo",
-    position: "CTO at Bitfinex",
+    author: 'Paolo Ardoino',
+    pic: 'paolo',
+    position: 'CTO at Bitfinex',
     text:
-      "SANapi is one of the most comprehensive crypto APIs on the market. For us, it is incredibly easy to fetch various data sets like on-chain, social media and development info directly to Bitfinex through their unified API and across different blockchains. The Santiment team has worked hard on creating a stable, reliable and all-inclusive data source for crypto, and they’ve more than delivered.",
+      'SANapi is one of the most comprehensive crypto APIs on the market. For us, it is incredibly easy to fetch various data sets like on-chain, social media and development info directly to Bitfinex through their unified API and across different blockchains. The Santiment team has worked hard on creating a stable, reliable and all-inclusive data source for crypto, and they’ve more than delivered.',
   },
   {
-    author: "Pramesh Tyagi",
-    pic: "pramesh",
-    position: "Director at ShillazTech",
+    author: 'Pramesh Tyagi',
+    pic: 'pramesh',
+    position: 'Director at ShillazTech',
     text:
-      "After switching from stock trading to crypto, I realized that on-chain data of any crypto asset provides vital information about market participants beyond OHLCV. Using a combination of pricing and blockchain data via Santiment’s API, I was quickly able to develop hybrid trade signals that have proven highly reliable, effective and - most importantly - profitable.",
+      'After switching from stock trading to crypto, I realized that on-chain data of any crypto asset provides vital information about market participants beyond OHLCV. Using a combination of pricing and blockchain data via Santiment’s API, I was quickly able to develop hybrid trade signals that have proven highly reliable, effective and - most importantly - profitable.',
   },
   {
-    author: "Jan Smirny",
-    pic: "yan",
-    position: "Data Scientist",
+    author: 'Jan Smirny',
+    pic: 'yan',
+    position: 'Data Scientist',
     text:
-      "I work with both the Sanpy python module and the ‘naked’ SAN API since both have their advantages. The GraphiQL API is great if you want very specific data for your research or pipeline implementations. For quick and easy data access for my research, the sanpy module is the place to go because (after the import) it is literally one line of code to get the data. It doesn’t get easier than that!",
+      'I work with both the Sanpy python module and the ‘naked’ SAN API since both have their advantages. The GraphiQL API is great if you want very specific data for your research or pipeline implementations. For quick and easy data access for my research, the sanpy module is the place to go because (after the import) it is literally one line of code to get the data. It doesn’t get easier than that!',
   },
 ]
 
@@ -58,19 +58,19 @@ const Testimonials = () => {
           onClick={slickPrev}
         >
           <svg
-            width="7"
-            height="12"
-            viewBox="0 0 7 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            width='7'
+            height='12'
+            viewBox='0 0 7 12'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              d="M6 11L1 6L6 1"
-              stroke="#181B2B"
-              strokeWidth="2"
-              strokeMiterlimit="10"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              d='M6 11L1 6L6 1'
+              stroke='#181B2B'
+              strokeWidth='2'
+              strokeMiterlimit='10'
+              strokeLinecap='round'
+              strokeLinejoin='round'
             />
           </svg>
         </div>
@@ -94,19 +94,19 @@ const Testimonials = () => {
           onClick={slickNext}
         >
           <svg
-            width="7"
-            height="12"
-            viewBox="0 0 7 12"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            width='7'
+            height='12'
+            viewBox='0 0 7 12'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              d="M1 11L6 6L1 1"
-              stroke="#181B2B"
-              strokeWidth="2"
-              strokeMiterlimit="10"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              d='M1 11L6 6L1 1'
+              stroke='#181B2B'
+              strokeWidth='2'
+              strokeMiterlimit='10'
+              strokeLinecap='round'
+              strokeLinejoin='round'
             />
           </svg>
         </div>

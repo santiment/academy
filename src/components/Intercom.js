@@ -1,6 +1,6 @@
 import React from 'react'
 import { Query } from 'react-apollo'
-import { CURRENT_USER_QUERY } from '../pages/account'
+import { CURRENT_USER_QUERY } from '../gql/user'
 
 const updateIntercom = () => {
   if (typeof window !== 'undefined') {
