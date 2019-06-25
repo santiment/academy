@@ -27,7 +27,7 @@ export default () => (
       ) => (
         <Panel className={styles.wrapper}>
           <h2 className={cx(styles.title, styles.email__title)}>
-            Thanks for your interest in our free API plan!
+            Thanks for your interest in our API!
           </h2>
           {success ? (
             <h3 className={styles.email__subtitle}>
