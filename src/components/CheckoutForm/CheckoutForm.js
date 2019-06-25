@@ -6,7 +6,7 @@ import {
   CardCVCElement,
 } from 'react-stripe-elements'
 import vars from '@santiment-network/ui/variables.scss'
-import CVCExplanation from './CVCExplanation'
+import CVCExplanation from '../CVCExplanation'
 import styles from './CheckoutForm.module.scss'
 
 const style = {

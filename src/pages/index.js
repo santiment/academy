@@ -1,17 +1,17 @@
-import React from "react"
-import { Link } from "gatsby"
-import Icon from "@santiment-network/ui/Icon"
-import Button from "@santiment-network/ui/Button"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Pricing from "../components/Pricing"
-import WhySantiment from "../components/WhySantiment"
-import Advantages from "../components/Advantages"
-import UseCases from "../components/UseCases"
-import FAQ from "../components/FAQ"
-import Testimonials from "../components/Testimonials/Testimonials"
-import ReadyToStart from "../components/ReadyToStart"
-import styles from "./index.module.scss"
+import React from 'react'
+import { Link } from 'gatsby'
+import Icon from '@santiment-network/ui/Icon'
+import Button from '@santiment-network/ui/Button'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Pricing from '../components/Pricing'
+import WhySantiment from '../components/WhySantiment/WhySantiment'
+import Advantages from '../components/Advantages/Advantages'
+import UseCases from '../components/UseCases/UseCases'
+import FAQ from '../components/FAQ'
+import Testimonials from '../components/Testimonials/Testimonials'
+import ReadyToStart from '../components/ReadyToStart/ReadyToStart'
+import styles from './index.module.scss'
 
 const code = `#keyword[import] san
 
@@ -53,20 +53,20 @@ const IndexPage = () => (
         </h2>
         <Button
           as={Link}
-          to="/account"
+          to='/account'
           className={styles.access}
-          variant="fill"
-          accent="blue"
+          variant='fill'
+          accent='blue'
         >
           Get access
         </Button>
         <a
-          href="https://help.santiment.net/metrics-explained#api"
+          href='https://help.santiment.net/metrics-explained#api'
           className={styles.doc}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
         >
-          Documentation <Icon type="arrow-right" className={styles.doc__icon} />
+          Documentation <Icon type='arrow-right' className={styles.doc__icon} />
         </a>
       </div>
 

@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
-import cx from "classnames"
-import Button from "@santiment-network/ui/Button"
-import Title from "./Title"
-import Subtitle from "./Subtitle"
-import Features from "./Features"
-import styles from "./Advantages.module.scss"
+import React from 'react'
+import { Link } from 'gatsby'
+import cx from 'classnames'
+import Button from '@santiment-network/ui/Button'
+import Title from '../Title/Title'
+import Subtitle from '../Subtitle/Subtitle'
+import Features from '../Features/Features'
+import styles from './Advantages.module.scss'
 
 const advantages = [
   {
-    type: "On-chain",
+    type: 'On-chain',
     title: (
       <>
         4.0+ TB of
@@ -18,19 +18,19 @@ const advantages = [
       </>
     ),
     features: [
-      "Token Age Consumed",
-      "Exchange Inflow/Outflow",
-      "Token Circulation/Velocity",
-      "Daily Active Addresses",
-      "Network Growth",
-      "Top 100 transactions",
-      "RV, MVRV, NVT",
-      "Top Token Holders",
-      "Eth Mining Metrics",
+      'Token Age Consumed',
+      'Exchange Inflow/Outflow',
+      'Token Circulation/Velocity',
+      'Daily Active Addresses',
+      'Network Growth',
+      'Top 100 transactions',
+      'RV, MVRV, NVT',
+      'Top Token Holders',
+      'Eth Mining Metrics',
     ],
   },
   {
-    type: "Social",
+    type: 'Social',
     title: (
       <>
         200+ GB
@@ -39,37 +39,37 @@ const advantages = [
       </>
     ),
     features: [
-      "Data from forums and chats",
-      "Telegram, Twitter, Reddit and more",
-      "Data from private trader chats",
-      "Volume of social mentions",
-      "Social mentions for crypto projects",
-      "Comprehensive word clouds",
-      "Top Social Gainers",
-      "Sentiment score",
+      'Data from forums and chats',
+      'Telegram, Twitter, Reddit and more',
+      'Data from private trader chats',
+      'Volume of social mentions',
+      'Social mentions for crypto projects',
+      'Comprehensive word clouds',
+      'Top Social Gainers',
+      'Sentiment score',
       "# of project's Twitter followers",
     ],
   },
   {
-    type: "Financial",
-    title: "1200+ projects",
+    type: 'Financial',
+    title: '1200+ projects',
     features: [
-      "Price",
-      "Volume",
-      "Market Cap",
-      "Open, Close, High, Low",
-      "227 exchange wallets",
+      'Price',
+      'Volume',
+      'Market Cap',
+      'Open, Close, High, Low',
+      '227 exchange wallets',
     ],
   },
   {
-    type: "Developer activity",
-    title: "4.5 TB of processed data",
+    type: 'Developer activity',
+    title: '4.5 TB of processed data',
     features: [
-      "Github data for 970+ projects",
-      "1.7 BN Github events",
-      "New way of measuring Dev Activity",
-      "Hourly updates",
-      "Historical data starts from 2013",
+      'Github data for 970+ projects',
+      '1.7 BN Github events',
+      'New way of measuring Dev Activity',
+      'Hourly updates',
+      'Historical data starts from 2013',
     ],
   },
 ]
@@ -103,9 +103,9 @@ export default () => (
         </Subtitle>
         <Button
           as={Link}
-          to="/account"
-          variant="fill"
-          accent="blue"
+          to='/account'
+          variant='fill'
+          accent='blue'
           className={styles.btn}
         >
           Try free now

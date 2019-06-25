@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import cx from 'classnames'
-import Loader from '../Loader'
+import Loader from '../Loader/Loader'
 import styles from './Pipedrive.module.scss'
 
 function useFormLoading() {

@@ -3,7 +3,7 @@ import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import { Elements, injectStripe } from 'react-stripe-elements'
-import CheckoutForm from './CheckoutForm'
+import CheckoutForm from './CheckoutForm/CheckoutForm'
 import { SUBSCRIBE_MUTATION } from '../gql/plans'
 import styles from './Pricing/index.module.scss'
 
