@@ -1,5 +1,9 @@
 @import '~@santiment-network/ui/mixins.scss';
 
+.main {
+  margin-top: 40px;
+}
+
 .title {
   @include text('h3');
 }

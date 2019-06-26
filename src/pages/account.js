@@ -50,8 +50,8 @@ const tabs = [
 ]
 
 export default () => (
-  <Layout isAccountPage>
-    <Query query={CURRENT_USER_QUERY} fetchPolicy='network-only'>
+  <Layout isAccountPage classes={styles}>
+    <Query query={CURRENT_USER_QUERY}>
       {({ loading = true, data }) => {
         if (loading) {
           return null

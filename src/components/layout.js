@@ -7,6 +7,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import StripeProviderSSR from './StripeProviderSSR'
 import Intercom from './Intercom'
 import Header from './Header/Header'
@@ -20,13 +21,13 @@ const envScript = process.env.NODE_ENV === 'production' && (
   </Helmet>
 )
 
-const Layout = ({ children, isAccountPage }) => (
+const Layout = ({ children, isAccountPage, classes = {} }) => (
   <StripeProviderSSR>
     <Intercom>
       <div className={styles.container}>
         {envScript}
         <Header isAccountPage={isAccountPage} />
-        <main className={styles.main}>{children}</main>
+        <main className={cx(styles.main, classes.main)}>{children}</main>
         <Footer />
       </div>
     </Intercom>
