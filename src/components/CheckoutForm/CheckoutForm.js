@@ -1,10 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
-import {
-  CardNumberElement,
-  CardExpiryElement,
-  CardCVCElement,
-} from 'react-stripe-elements'
+import Input from '@santiment-network/ui/Input'
+import { CardElement } from 'react-stripe-elements'
 import vars from '@santiment-network/ui/variables.scss'
 import CVCExplanation from '../CVCExplanation'
 import styles from './CheckoutForm.module.scss'
@@ -25,23 +22,55 @@ const style = {
 
 const CheckoutForm = ({ stripe, plan }) => {
   return (
-    <div className={styles.wrapper}>
-      <label className={styles.label}>
-        Card number
-        <CardNumberElement style={style} />
+    <>
+      <label className={cx(styles.label, styles.label_card)}>
+        Card details
+        <CardElement style={style} />
       </label>
-      <div className={styles.bottom}>
-        <label className={styles.label}>
-          Expiration date
-          <CardExpiryElement style={style} />
-        </label>
-        <label className={cx(styles.label, styles.label_cvc)}>
-          CVC
-          <CVCExplanation />
-          <CardCVCElement style={style} />
-        </label>
+
+      <label className={styles.label}>Billing address</label>
+      <Input
+        className={styles.input}
+        placeholder='Full Name'
+        required
+        name='name'
+      />
+      <div className={styles.row}>
+        <Input className={styles.input} placeholder='Country' required />
+        <Input
+          className={cx(styles.input, styles.input_right)}
+          placeholder='City'
+          required
+          name='address_city'
+        />
       </div>
-    </div>
+      <div className={styles.row}>
+        <Input
+          className={styles.input}
+          placeholder='State/Region'
+          required
+          name='address_state'
+        />
+        <Input
+          className={cx(styles.input, styles.input_address)}
+          placeholder='Street Address'
+          required
+          name='address_line1'
+        />
+        <Input
+          className={styles.input}
+          placeholder='Postal Code'
+          required
+          name='address_zip'
+        />
+      </div>
+      <Input
+        className={styles.input}
+        placeholder='Phone Number'
+        type='tel'
+        required
+      />
+    </>
   )
 }
 

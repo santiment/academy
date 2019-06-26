@@ -1,17 +1,37 @@
 @import '~@santiment-network/ui/mixins';
 @import '~@santiment-network/ui/variables';
 
-.wrapper {
+.row {
+  display: flex;
+}
+
+.input {
+  margin-bottom: 10px;
+  &:hover,
+  &:focus {
+    border-color: var(--dodger-blue);
+  }
+
+  &_right {
+    margin-left: 10px;
+  }
+
+  &_address {
+    margin: 0 10px;
+  }
+}
+
+.label_card {
   :global {
     .StripeElement {
       border: 1px solid var(--porcelain);
       box-sizing: border-box;
       border-radius: 4px;
       display: block;
-      padding: 5px 10px;
+      padding: 7px 10px;
       outline: 0;
       background: var(--white);
-      margin-top: 3px;
+      margin-bottom: 5px;
 
       &--focus {
         border-color: var(--dodger-blue);
@@ -28,6 +48,7 @@
   @include text('caption', 'm');
   color: var(--waterloo);
   flex: 1;
+  margin-bottom: 3px;
 
   &_cvc {
     margin-left: 16px;
