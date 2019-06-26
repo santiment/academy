@@ -5,6 +5,7 @@ import Dialog from '@santiment-network/ui/Dialog'
 import { Elements, injectStripe } from 'react-stripe-elements'
 import CheckoutForm from './CheckoutForm/CheckoutForm'
 import { SUBSCRIBE_MUTATION } from '../gql/plans'
+import { CURRENT_USER_QUERY } from '../gql/user'
 import styles from './Pricing/index.module.scss'
 
 function useFormLoading() {
@@ -13,6 +14,16 @@ function useFormLoading() {
     setLoading(state => !state)
   }
   return [loading, toggleLoading]
+}
+
+function updateCache(cache, { data: { subscribe } }) {
+  const user = cache.readQuery({ query: CURRENT_USER_QUERY })
+  console.log(user.subscriptions, subscribe)
+  /* const currentUser = { ...user } */
+  /* cache.writeQuery({ */
+  /* query: CURRENT_USER_QUERY, */
+  /* data: { currentUser }, */
+  /* }) */
 }
 
 const PaymentDialog = ({
@@ -53,7 +64,7 @@ const PaymentDialog = ({
         open={paymentVisible}
         onClose={hidePayment}
       >
-        <Mutation mutation={SUBSCRIBE_MUTATION}>
+        <Mutation mutation={SUBSCRIBE_MUTATION} update={updateCache}>
           {(subscribe, { called, error, data }) => {
             return (
               <>
@@ -86,7 +97,10 @@ const PaymentDialog = ({
                         })
                         .then(console.log)
                         .then(toggleLoading)
-                        .catch(alert)
+                        .catch(e => {
+                          alert(JSON.stringify(e))
+                          toggleLoading()
+                        })
                     }}
                   >
                     Pay
