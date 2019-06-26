@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
+import Panel from '@santiment-network/ui/Panel/Panel'
 import { Elements, injectStripe } from 'react-stripe-elements'
 import CheckoutForm from './CheckoutForm/CheckoutForm'
 import { SUBSCRIBE_MUTATION } from '../gql/plans'
@@ -24,6 +25,19 @@ function updateCache(cache, { data: { subscribe } }) {
   /* query: CURRENT_USER_QUERY, */
   /* data: { currentUser }, */
   /* }) */
+}
+
+const Form = props => <Panel as='form' {...props} />
+
+const getTokenDataByForm = form => {
+  const res = {}
+  new FormData(form).forEach((value, key) => {
+    if (key === 'name') {
+      return
+    }
+    res[key] = value
+  })
+  return res
 }
 
 const PaymentDialog = ({
@@ -58,59 +72,67 @@ const PaymentDialog = ({
       >
         {label}
       </Button>
-      <Dialog
-        title={`Payment for "${title}" plan (${price}/month)`}
-        classes={{ dialog: styles.dialog }}
-        open={paymentVisible}
-        onClose={hidePayment}
-      >
-        <Mutation mutation={SUBSCRIBE_MUTATION} update={updateCache}>
-          {(subscribe, { called, error, data }) => {
-            return (
-              <>
-                <Dialog.ScrollContent withPadding>
-                  <CheckoutForm plan={title} />
-                </Dialog.ScrollContent>
-                <Dialog.Actions>
-                  <Dialog.Cancel
-                    className={styles.action_cancel}
-                    onClick={hidePayment}
-                  >
-                    Close
-                  </Dialog.Cancel>
-                  <Dialog.Approve
-                    variant='fill'
-                    accent='blue'
-                    disabled={loading}
-                    className={styles.action}
-                    onClick={() => {
+
+      <Mutation mutation={SUBSCRIBE_MUTATION} update={updateCache}>
+        {(subscribe, { called, error, data }) => {
+          return (
+            <Dialog
+              title={`Payment for "${title}" plan (${price}/month)`}
+              classes={{ dialog: styles.dialog }}
+              open={paymentVisible}
+              onClose={hidePayment}
+              as={Form}
+              modalProps={{
+                onSubmit: e => {
+                  e.preventDefault()
+
+                  const form = e.currentTarget
+                  const tokenData = getTokenDataByForm(form)
+
+                  toggleLoading()
+                  stripe
+                    .createToken({ name: form.name.value }, tokenData)
+                    .then(({ token, error }) => {
+                      if (error) {
+                        return Promise.reject(error)
+                      }
+                      return subscribe({
+                        variables: { cardToken: token.id, planId },
+                      })
+                    })
+                    .then(console.log)
+                    .then(toggleLoading)
+                    .catch(e => {
+                      alert(JSON.stringify(e))
                       toggleLoading()
-                      stripe
-                        .createToken({ name: 'Test name' })
-                        .then(({ token, error }) => {
-                          if (error) {
-                            return Promise.reject(error)
-                          }
-                          return subscribe({
-                            variables: { cardToken: token.id, planId },
-                          })
-                        })
-                        .then(console.log)
-                        .then(toggleLoading)
-                        .catch(e => {
-                          alert(JSON.stringify(e))
-                          toggleLoading()
-                        })
-                    }}
-                  >
-                    Pay
-                  </Dialog.Approve>
-                </Dialog.Actions>
-              </>
-            )
-          }}
-        </Mutation>
-      </Dialog>
+                    })
+                },
+              }}
+            >
+              <Dialog.ScrollContent withPadding>
+                <CheckoutForm plan={title} />
+              </Dialog.ScrollContent>
+              <Dialog.Actions>
+                <Dialog.Cancel
+                  className={styles.action_cancel}
+                  onClick={hidePayment}
+                >
+                  Close
+                </Dialog.Cancel>
+                <Dialog.Approve
+                  variant='fill'
+                  accent='blue'
+                  disabled={loading}
+                  className={styles.action}
+                  type='submit'
+                >
+                  Pay
+                </Dialog.Approve>
+              </Dialog.Actions>
+            </Dialog>
+          )
+        }}
+      </Mutation>
     </>
   )
 }
