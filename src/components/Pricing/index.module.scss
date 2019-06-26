@@ -56,6 +56,14 @@
     }
   }
 
+  &_active {
+    z-index: 3;
+    border-radius: 4px !important;
+    box-shadow: 0px 14px 20px rgba(24, 27, 43, 0.06) !important;
+    transform: scale(1.03) !important;
+    border-color: var(--dodger-blue);
+  }
+
   &__title {
     @include text('h4');
     display: flex;

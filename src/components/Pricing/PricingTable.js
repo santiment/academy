@@ -66,6 +66,7 @@ export default ({ classes = {} }) => {
                               styles.card,
                               classes.card,
                               card.isPopular && styles.card_popular,
+                              sameAsUserPlan && styles.card_active,
                             )}
                             key={card.title}
                             onClick={toggleCardDetails}
