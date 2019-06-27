@@ -8,6 +8,7 @@ import Label from '@santiment-network/ui/Label'
 import { CURRENT_USER_QUERY } from '../../gql/user'
 import Features from '../Features/Features'
 import PricingDetailsToggle from './PricingDetailsToggle.js'
+import PlanRestrictBtn from './PlanRestrictBtn'
 import { PLANS_QUERY } from '../../gql/plans'
 import PLANS from './prices'
 import {
@@ -17,15 +18,6 @@ import {
   formatPrice,
 } from './utils'
 import styles from './index.module.scss'
-
-const PlanRestrictBtn = ({ sameAsUserPlan }) => {
-  const props = sameAsUserPlan
-    ? { children: 'Your current plan', disabled: true }
-    : { children: 'Upgrade now', as: Link, to: '/account' }
-  return (
-    <Button fluid accent='blue' border className={styles.link} {...props} />
-  )
-}
 
 const billingOptions = [
   { index: 'month', content: 'Bill monthly' },
