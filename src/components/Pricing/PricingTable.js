@@ -7,7 +7,7 @@ import { CURRENT_USER_QUERY } from '../../gql/user'
 import Features from '../Features/Features'
 import PricingDetailsToggle from './PricingDetailsToggle.js'
 import { PLANS_QUERY } from '../../gql/plans'
-import prices from './prices'
+import PLANS from './prices'
 import styles from './index.module.scss'
 
 const PlanRestrictBtn = ({ sameAsUserPlan }) => {
@@ -45,20 +45,20 @@ export default ({ classes = {} }) => {
       {({ data: { currentUser } }) => {
         const userPlan = getCurrentNeuroSubscription(currentUser)
         return (
-          <>
-            <Query query={PLANS_QUERY}>
-              {({ data: { productsWithPlans = [] } }) => {
-                const neuro = productsWithPlans.find(findNeuroPlan)
-                if (!neuro) {
-                  return null
-                }
+          <Query query={PLANS_QUERY}>
+            {({ data: { productsWithPlans = [] } }) => {
+              const neuro = productsWithPlans.find(findNeuroPlan)
+              if (!neuro) {
+                return null
+              }
 
-                return (
+              return (
+                <>
                   <div className={styles.cards}>
                     {neuro.plans
                       .filter(({ interval }) => interval === 'month')
                       .map(({ id, name }) => {
-                        const card = prices[name]
+                        const card = PLANS[name]
                         const sameAsUserPlan = id === userPlan
                         return (
                           <div
@@ -123,11 +123,15 @@ export default ({ classes = {} }) => {
                         )
                       })}
                   </div>
-                )
-              }}
-            </Query>
-            <PricingDetailsToggle isLoggedIn={currentUser} />
-          </>
+                  <PricingDetailsToggle
+                    isLoggedIn={currentUser}
+                    plans={neuro.plans}
+                    userPlan={userPlan}
+                  />
+                </>
+              )
+            }}
+          </Query>
         )
       }}
     </Query>

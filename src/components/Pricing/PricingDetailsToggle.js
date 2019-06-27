@@ -12,7 +12,7 @@ function useToggle() {
   return [toggled, setToggle]
 }
 
-export default ({ isLoggedIn }) => {
+export default props => {
   const [toggled, setToggle] = useToggle()
   return (
     <>
@@ -22,7 +22,7 @@ export default ({ isLoggedIn }) => {
       </div>
       {toggled && (
         <>
-          <PricingDetails isLoggedIn={isLoggedIn} />
+          <PricingDetails {...props} />
 
           <div
             className={cx(styles.more, styles.more_bottom)}
