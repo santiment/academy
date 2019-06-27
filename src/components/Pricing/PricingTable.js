@@ -1,8 +1,6 @@
 import React from 'react'
 import { Query } from 'react-apollo'
 import cx from 'classnames'
-import { Link } from 'gatsby'
-import Button from '@santiment-network/ui/Button'
 import RadioBtns from '@santiment-network/ui/RadioBtns'
 import Label from '@santiment-network/ui/Label'
 import { CURRENT_USER_QUERY } from '../../gql/user'

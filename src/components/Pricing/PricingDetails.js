@@ -1,14 +1,11 @@
 import React from 'react'
 import Icon from '@santiment-network/ui/Icon'
-import { Link } from 'gatsby'
-import Button from '@santiment-network/ui/Button'
 import cx from 'classnames'
 import PlanRestrictBtn from './PlanRestrictBtn'
 import PLANS from './prices'
 import DETAILS from './details'
 import { formatPrice } from './utils'
 import styles from './PricingDetails.module.scss'
-import cardStyles from './index.module.scss'
 
 const all = [true, true, true, true, true]
 
