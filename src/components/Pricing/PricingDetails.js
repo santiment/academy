@@ -1,25 +1,15 @@
 import React from 'react'
 import Icon from '@santiment-network/ui/Icon'
-import { Link } from 'gatsby'
-import Button from '@santiment-network/ui/Button'
 import cx from 'classnames'
-import styles from './PricingDetails.module.scss'
+import PlanRestrictBtn from './PlanRestrictBtn'
 import PLANS from './prices'
 import DETAILS from './details'
-import cardStyles from './index.module.scss'
-
-const PlanRestrictBtn = ({ sameAsUserPlan }) => {
-  const props = sameAsUserPlan
-    ? { children: 'Your current plan', disabled: true }
-    : { children: 'Upgrade now', as: Link, to: '/account' }
-  return (
-    <Button fluid accent='blue' border className={cardStyles.link} {...props} />
-  )
-}
+import { formatPrice } from './utils'
+import styles from './PricingDetails.module.scss'
 
 const all = [true, true, true, true, true]
 
-export default ({ isLoggedIn, userPlan, plans }) => (
+export default ({ isLoggedIn, billing, userPlan, plans }) => (
   <table className={styles.table}>
     <tbody>
       <tr className={styles.headers}>
@@ -60,10 +50,13 @@ export default ({ isLoggedIn, userPlan, plans }) => (
       <tr>
         <td />
         {plans
-          .filter(({ interval }) => interval === 'month')
-          .map(({ id, name }) => {
+          .filter(
+            ({ interval, name }) => interval === billing || name === 'FREE',
+          )
+          .map(({ id, name, amount }) => {
             const plan = PLANS[name]
             const sameAsUserPlan = id === userPlan
+            const [price] = formatPrice(amount)
 
             return (
               <td key={id} className={styles.link}>
@@ -73,8 +66,9 @@ export default ({ isLoggedIn, userPlan, plans }) => (
                   <plan.Component
                     title={plan.title}
                     label={plan.link}
-                    price={plan.price}
+                    price={price}
                     planId={+id}
+                    billing={billing}
                   />
                 )}
               </td>

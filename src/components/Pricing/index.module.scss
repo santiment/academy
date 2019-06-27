@@ -199,3 +199,18 @@
     color: var(--dodger-blue);
   }
 }
+
+.billing {
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 40px;
+  --green: var(--dodger-blue);
+}
+
+.bill {
+  margin-right: 30px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
