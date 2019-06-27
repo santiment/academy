@@ -6,6 +6,7 @@ import cx from 'classnames'
 import styles from './PricingDetails.module.scss'
 import PLANS from './prices'
 import DETAILS from './details'
+import { formatPrice } from './utils'
 import cardStyles from './index.module.scss'
 
 const PlanRestrictBtn = ({ sameAsUserPlan }) => {
@@ -19,7 +20,7 @@ const PlanRestrictBtn = ({ sameAsUserPlan }) => {
 
 const all = [true, true, true, true, true]
 
-export default ({ isLoggedIn, userPlan, plans }) => (
+export default ({ isLoggedIn, billing, userPlan, plans }) => (
   <table className={styles.table}>
     <tbody>
       <tr className={styles.headers}>
@@ -60,10 +61,13 @@ export default ({ isLoggedIn, userPlan, plans }) => (
       <tr>
         <td />
         {plans
-          .filter(({ interval }) => interval === 'month')
-          .map(({ id, name }) => {
+          .filter(
+            ({ interval, name }) => interval === billing || name === 'FREE',
+          )
+          .map(({ id, name, amount }) => {
             const plan = PLANS[name]
             const sameAsUserPlan = id === userPlan
+            const [price] = formatPrice(amount)
 
             return (
               <td key={id} className={styles.link}>
@@ -73,8 +77,9 @@ export default ({ isLoggedIn, userPlan, plans }) => (
                   <plan.Component
                     title={plan.title}
                     label={plan.link}
-                    price={plan.price}
+                    price={price}
                     planId={+id}
+                    billing={billing}
                   />
                 )}
               </td>

@@ -48,6 +48,7 @@ const getTokenDataByForm = form => {
 
 const PaymentDialog = ({
   title,
+  billing,
   label,
   src,
   price,
@@ -85,7 +86,7 @@ const PaymentDialog = ({
             {(subscribe, { called, error, data }) => {
               return (
                 <Dialog
-                  title={`Payment for "${title}" plan (${price}/month)`}
+                  title={`Payment for the "${title}" plan (${price}/${billing})`}
                   classes={{ dialog: sharedStyles.dialog }}
                   open={paymentVisible}
                   onClose={hidePayment}

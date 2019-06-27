@@ -8,8 +8,6 @@ export default {
   FREE: {
     title: 'Free',
     desc: 'For individuals just getting started with crypto',
-    price: '$0',
-    priceType: '',
     discount: 'Free forever',
     link: 'Change to this plan',
     Component: () => (
@@ -36,8 +34,6 @@ export default {
   ESSENTIAL: {
     title: 'Basic',
     desc: 'For traders, developers, investors and side projects',
-    price: '$119',
-    priceType: '/mo',
     discount: '20% off with 200 SAN',
     link: 'Upgrade now',
     Component: PaymentDialog,
@@ -58,8 +54,6 @@ export default {
     title: 'Pro',
     isPopular: true,
     desc: 'For traders, developers, investors and side projects',
-    price: '$359',
-    priceType: '/mo',
     discount: '20% off with 1000 SAN',
     Component: PaymentDialog,
     link: 'Upgrade now',
@@ -79,8 +73,6 @@ export default {
   PREMIUM: {
     title: 'Premium',
     desc: 'For traders, developers, investors and side projects',
-    price: '$719',
-    priceType: '/mo',
     discount: '20% off with 1000 SAN',
     Component: PaymentDialog,
     link: 'Upgrade now',
@@ -100,8 +92,6 @@ export default {
   CUSTOM: {
     title: 'Enterprise',
     desc: 'For organizations that need advanced data and support',
-    price: 'Custom',
-    priceType: '',
     discount: 'Based on your needs',
     link: 'Contact us',
     Component: props => (
