@@ -43,7 +43,7 @@ export default ({ classes = {} }) => {
   const [billing, setBilling] = React.useState('month')
   return (
     <>
-      <div className={styles.billing}>
+      <div className={cx(styles.billing, classes.billing)}>
         <RadioBtns
           options={billingOptions}
           defaultSelectedIndex='month'
