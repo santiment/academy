@@ -3,14 +3,14 @@ import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import Panel from '@santiment-network/ui/Panel/Panel'
-import Loader from './Loader/Loader'
 import { Elements, injectStripe } from 'react-stripe-elements'
-import CheckoutForm from './CheckoutForm/CheckoutForm'
-import { NotificationsContext } from './Notifications/Notifications'
-import { SUBSCRIBE_MUTATION } from '../gql/plans'
-import { CURRENT_USER_QUERY } from '../gql/user'
-import styles from './Pricing/index.module.scss'
-import stylesDialog from './PaymentDialog.module.scss'
+import CheckoutForm from '../CheckoutForm/CheckoutForm'
+import { NotificationsContext } from '../Notifications/Notifications'
+import Loader from '../Loader/Loader'
+import { SUBSCRIBE_MUTATION } from '../../gql/plans'
+import { CURRENT_USER_QUERY } from '../../gql/user'
+import styles from './PaymentDialog.module.scss'
+import sharedStyles from '../Pricing/index.module.scss'
 
 function useFormLoading() {
   const [loading, setLoading] = useState(false)
@@ -69,7 +69,7 @@ const PaymentDialog = ({
   return (
     <>
       <Button
-        className={styles.link}
+        className={sharedStyles.link}
         fluid
         border
         accent='blue'
@@ -86,7 +86,7 @@ const PaymentDialog = ({
               return (
                 <Dialog
                   title={`Payment for "${title}" plan (${price}/month)`}
-                  classes={{ dialog: styles.dialog }}
+                  classes={{ dialog: sharedStyles.dialog }}
                   open={paymentVisible}
                   onClose={hidePayment}
                   as={Form}
@@ -130,7 +130,7 @@ const PaymentDialog = ({
                   }}
                 >
                   {loading && (
-                    <div className={stylesDialog.loader}>
+                    <div className={styles.loader}>
                       <Loader />
                     </div>
                   )}
@@ -139,7 +139,7 @@ const PaymentDialog = ({
                   </Dialog.ScrollContent>
                   <Dialog.Actions>
                     <Dialog.Cancel
-                      className={styles.action_cancel}
+                      className={sharedStyles.action_cancel}
                       onClick={hidePayment}
                     >
                       Close
@@ -148,7 +148,7 @@ const PaymentDialog = ({
                       variant='fill'
                       accent='blue'
                       disabled={loading}
-                      className={styles.action}
+                      className={sharedStyles.action}
                       type='submit'
                     >
                       Pay
