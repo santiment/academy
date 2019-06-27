@@ -12,6 +12,8 @@ export const CURRENT_USER_QUERY = gql`
         plan {
           id
           name
+          amount
+          interval
           product {
             name
           }

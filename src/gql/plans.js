@@ -20,6 +20,11 @@ export const SUBSCRIBE_MUTATION = gql`
       plan {
         id
         name
+        amount
+        interval
+        product {
+          name
+        }
       }
     }
   }

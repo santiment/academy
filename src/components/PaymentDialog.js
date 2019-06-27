@@ -3,11 +3,14 @@ import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import Panel from '@santiment-network/ui/Panel/Panel'
+import Loader from './Loader/Loader'
 import { Elements, injectStripe } from 'react-stripe-elements'
 import CheckoutForm from './CheckoutForm/CheckoutForm'
+import PendingDots from './PendingDots/PendingDots'
 import { SUBSCRIBE_MUTATION } from '../gql/plans'
 import { CURRENT_USER_QUERY } from '../gql/user'
 import styles from './Pricing/index.module.scss'
+import stylesDialog from './PaymentDialog.module.scss'
 
 function useFormLoading() {
   const [loading, setLoading] = useState(false)
@@ -18,13 +21,16 @@ function useFormLoading() {
 }
 
 function updateCache(cache, { data: { subscribe } }) {
-  const user = cache.readQuery({ query: CURRENT_USER_QUERY })
-  console.log(user.subscriptions, subscribe)
-  /* const currentUser = { ...user } */
-  /* cache.writeQuery({ */
-  /* query: CURRENT_USER_QUERY, */
-  /* data: { currentUser }, */
-  /* }) */
+  const { currentUser } = cache.readQuery({ query: CURRENT_USER_QUERY })
+
+  let subscriptions = currentUser.subscriptions
+    ? [subscribe, ...currentUser.subscriptions]
+    : [subscribe]
+
+  cache.writeQuery({
+    query: CURRENT_USER_QUERY,
+    data: { currentUser: { ...currentUser, subscriptions } },
+  })
 }
 
 const Form = props => <Panel as='form' {...props} />
@@ -86,6 +92,8 @@ const PaymentDialog = ({
                 onSubmit: e => {
                   e.preventDefault()
 
+                  if (loading) return
+
                   const form = e.currentTarget
                   const tokenData = getTokenDataByForm(form)
 
@@ -101,7 +109,6 @@ const PaymentDialog = ({
                       })
                     })
                     .then(console.log)
-                    .then(toggleLoading)
                     .catch(e => {
                       alert(JSON.stringify(e))
                       toggleLoading()
@@ -109,6 +116,11 @@ const PaymentDialog = ({
                 },
               }}
             >
+              {loading && (
+                <div className={stylesDialog.loader}>
+                  <Loader />
+                </div>
+              )}
               <Dialog.ScrollContent withPadding>
                 <CheckoutForm plan={title} />
               </Dialog.ScrollContent>
