@@ -12,6 +12,7 @@ import StripeProviderSSR from './StripeProviderSSR'
 import Intercom from './Intercom'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
+import Notifications from './Notifications/Notifications'
 import styles from './layout.module.scss'
 import Helmet from 'react-helmet'
 
@@ -24,12 +25,14 @@ const envScript = process.env.NODE_ENV === 'production' && (
 const Layout = ({ children, isAccountPage, classes = {} }) => (
   <StripeProviderSSR>
     <Intercom>
-      <div className={styles.container}>
-        {envScript}
-        <Header isAccountPage={isAccountPage} />
-        <main className={cx(styles.main, classes.main)}>{children}</main>
-        <Footer />
-      </div>
+      <Notifications>
+        <div className={styles.container}>
+          {envScript}
+          <Header isAccountPage={isAccountPage} />
+          <main className={cx(styles.main, classes.main)}>{children}</main>
+          <Footer />
+        </div>
+      </Notifications>
     </Intercom>
   </StripeProviderSSR>
 )

@@ -6,7 +6,7 @@ import Panel from '@santiment-network/ui/Panel/Panel'
 import Loader from './Loader/Loader'
 import { Elements, injectStripe } from 'react-stripe-elements'
 import CheckoutForm from './CheckoutForm/CheckoutForm'
-import PendingDots from './PendingDots/PendingDots'
+import { NotificationsContext } from './Notifications/Notifications'
 import { SUBSCRIBE_MUTATION } from '../gql/plans'
 import { CURRENT_USER_QUERY } from '../gql/user'
 import styles from './Pricing/index.module.scss'
@@ -79,72 +79,87 @@ const PaymentDialog = ({
         {label}
       </Button>
 
-      <Mutation mutation={SUBSCRIBE_MUTATION} update={updateCache}>
-        {(subscribe, { called, error, data }) => {
-          return (
-            <Dialog
-              title={`Payment for "${title}" plan (${price}/month)`}
-              classes={{ dialog: styles.dialog }}
-              open={paymentVisible}
-              onClose={hidePayment}
-              as={Form}
-              modalProps={{
-                onSubmit: e => {
-                  e.preventDefault()
+      <NotificationsContext.Consumer>
+        {({ add: addNot }) => (
+          <Mutation mutation={SUBSCRIBE_MUTATION} update={updateCache}>
+            {(subscribe, { called, error, data }) => {
+              return (
+                <Dialog
+                  title={`Payment for "${title}" plan (${price}/month)`}
+                  classes={{ dialog: styles.dialog }}
+                  open={paymentVisible}
+                  onClose={hidePayment}
+                  as={Form}
+                  modalProps={{
+                    onSubmit: e => {
+                      e.preventDefault()
 
-                  if (loading) return
-
-                  const form = e.currentTarget
-                  const tokenData = getTokenDataByForm(form)
-
-                  toggleLoading()
-                  stripe
-                    .createToken({ name: form.name.value }, tokenData)
-                    .then(({ token, error }) => {
-                      if (error) {
-                        return Promise.reject(error)
-                      }
-                      return subscribe({
-                        variables: { cardToken: token.id, planId },
-                      })
-                    })
-                    .then(console.log)
-                    .catch(e => {
-                      alert(JSON.stringify(e))
+                      if (loading) return
                       toggleLoading()
-                    })
-                },
-              }}
-            >
-              {loading && (
-                <div className={stylesDialog.loader}>
-                  <Loader />
-                </div>
-              )}
-              <Dialog.ScrollContent withPadding>
-                <CheckoutForm plan={title} />
-              </Dialog.ScrollContent>
-              <Dialog.Actions>
-                <Dialog.Cancel
-                  className={styles.action_cancel}
-                  onClick={hidePayment}
+
+                      const form = e.currentTarget
+                      const tokenData = getTokenDataByForm(form)
+
+                      stripe
+                        .createToken({ name: form.name.value }, tokenData)
+                        .then(({ token, error }) => {
+                          if (error) {
+                            return Promise.reject(error)
+                          }
+                          return subscribe({
+                            variables: { cardToken: token.id, planId },
+                          })
+                        })
+                        .then(() => {
+                          addNot({
+                            variant: 'success',
+                            title: `You have successfully upgraded to the "${title}" plan!`,
+                            dismissAfter: 90000,
+                          })
+                        })
+                        .catch(e => {
+                          addNot({
+                            variant: 'error',
+                            title: `Error during the payment`,
+                            description: e.message,
+                            dismissAfter: 90000,
+                          })
+                          toggleLoading()
+                        })
+                    },
+                  }}
                 >
-                  Close
-                </Dialog.Cancel>
-                <Dialog.Approve
-                  variant='fill'
-                  accent='blue'
-                  disabled={loading}
-                  className={styles.action}
-                  type='submit'
-                >
-                  Pay
-                </Dialog.Approve>
-              </Dialog.Actions>
-            </Dialog>
-          )
-        }}
-      </Mutation>
+                  {loading && (
+                    <div className={stylesDialog.loader}>
+                      <Loader />
+                    </div>
+                  )}
+                  <Dialog.ScrollContent withPadding>
+                    <CheckoutForm plan={title} />
+                  </Dialog.ScrollContent>
+                  <Dialog.Actions>
+                    <Dialog.Cancel
+                      className={styles.action_cancel}
+                      onClick={hidePayment}
+                    >
+                      Close
+                    </Dialog.Cancel>
+                    <Dialog.Approve
+                      variant='fill'
+                      accent='blue'
+                      disabled={loading}
+                      className={styles.action}
+                      type='submit'
+                    >
+                      Pay
+                    </Dialog.Approve>
+                  </Dialog.Actions>
+                </Dialog>
+              )
+            }}
+          </Mutation>
+        )}
+      </NotificationsContext.Consumer>
     </>
   )
 }
