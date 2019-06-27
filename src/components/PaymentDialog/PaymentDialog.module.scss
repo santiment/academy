@@ -1,0 +1,23 @@
+.loader {
+  position: absolute;
+  z-index: 2;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  left: -1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  animation: open forwards 0.2s 0.3s;
+  opacity: 0;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

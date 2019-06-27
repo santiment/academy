@@ -1,0 +1,36 @@
+$notify-duration: 300;
+
+.notifications {
+  z-index: 10000;
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  white-space: nowrap;
+}
+
+.notification {
+  position: absolute;
+  transform: translateY(var(--y-offset));
+  transition: transform 200ms;
+  transition-delay: #{$notify-duration - 100}ms;
+}
+
+.enter {
+  animation: notify #{$notify-duration}ms forwards;
+}
+
+.exit {
+  animation: notify #{$notify-duration}ms reverse forwards;
+}
+
+@keyframes notify {
+  0% {
+    transform: translate3d(-120%, var(--y-offset), 0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate3d(0, var(--y-offset), 0);
+    opacity: 1;
+  }
+}
