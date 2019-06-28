@@ -5,6 +5,7 @@ import Dialog from '@santiment-network/ui/Dialog'
 import Panel from '@santiment-network/ui/Panel/Panel'
 import PricingTable from '../Pricing/PricingTable'
 import Settings from './Settings'
+import PLANS from '../Pricing/prices'
 import { formatPrice } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
 import styles from './SettingsSubscription.module.scss'
@@ -28,7 +29,7 @@ const SettingsAPIKeys = ({ subscription }) => {
       <Settings.Row>
         <Panel className={styles.plan}>
           <div>
-            <div className={styles.title}>Pro Plan</div>
+            <div className={styles.title}>{PLANS[name].title} Plan</div>
 
             <div className={styles.desc}>
               {price} per {interval}.{' '}
