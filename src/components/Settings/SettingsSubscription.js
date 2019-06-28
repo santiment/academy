@@ -3,9 +3,9 @@ import Label from '@santiment-network/ui/Label'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import Panel from '@santiment-network/ui/Panel/Panel'
-import PricingTable from '../Pricing/PricingTable'
 import Settings from './Settings'
 import PLANS from '../Pricing/prices'
+import PlanDialog from './PlanDialog'
 import { formatPrice } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
 import styles from './SettingsSubscription.module.scss'
@@ -65,9 +65,7 @@ const SettingsAPIKeys = ({ subscription }) => {
           <div>
             <PlanText subscription={subscription} />
           </div>
-          <Button accent='blue' variant='fill'>
-            {subscription ? 'Change' : 'Upgrade'} plan
-          </Button>
+          <PlanDialog subscription={subscription} />
         </Panel>
       </Settings.Row>
       {subscription && (

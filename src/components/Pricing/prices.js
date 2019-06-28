@@ -63,7 +63,7 @@ export default {
     isPopular: true,
     desc: 'For traders, developers, investors and side projects',
     discount: '20% off with 1000 SAN',
-    Component: PaymentDialog,
+    Component: Test,
     link: 'Upgrade now',
     features: [
       'Historical data access to last 18 months',
@@ -82,7 +82,7 @@ export default {
     title: 'Premium',
     desc: 'For traders, developers, investors and side projects',
     discount: '20% off with 1000 SAN',
-    Component: PaymentDialog,
+    Component: Test,
     link: 'Upgrade now',
     features: [
       'Unlimited historical data access',
