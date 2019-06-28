@@ -35,7 +35,7 @@ export default {
     title: 'Basic',
     desc: 'For traders, developers, investors and side projects',
     discount: '20% off with 200 SAN',
-    link: 'Upgrade now',
+    link: 'Change to this plan',
     Component: PaymentDialog,
     features: [
       'Historical data access to last 6 months',
@@ -56,7 +56,7 @@ export default {
     desc: 'For traders, developers, investors and side projects',
     discount: '20% off with 1000 SAN',
     Component: PaymentDialog,
-    link: 'Upgrade now',
+    link: 'Change to this plan',
     features: [
       'Historical data access to last 18 months',
       <>
@@ -75,7 +75,7 @@ export default {
     desc: 'For traders, developers, investors and side projects',
     discount: '20% off with 1000 SAN',
     Component: PaymentDialog,
-    link: 'Upgrade now',
+    link: 'Change to this plan',
     features: [
       'Unlimited historical data access',
       <>

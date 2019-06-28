@@ -9,6 +9,9 @@ export const CURRENT_USER_QUERY = gql`
       privacyPolicyAccepted
       apikeys
       subscriptions {
+        id
+        cancelAtPeriodEnd
+        currentPeriodEnd
         plan {
           id
           name

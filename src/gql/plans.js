@@ -17,6 +17,9 @@ export const PLANS_QUERY = gql`
 export const SUBSCRIBE_MUTATION = gql`
   mutation subscribe($cardToken: String!, $planId: Int!) {
     subscribe(cardToken: $cardToken, planId: $planId) {
+      id
+      cancelAtPeriodEnd
+      currentPeriodEnd
       plan {
         id
         name

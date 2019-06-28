@@ -13,6 +13,7 @@ import Layout from '../components/layout'
 import SettingsAPIKeys from '../components/Settings/SettingsAPIKeys'
 import SettingsSubscription from '../components/Settings/SettingsSubscription'
 import GDPR from '../components/GDPR/GDPR'
+import { getCurrentNeuroSubscription } from '../components/Pricing/utils'
 import styles from './account.module.scss'
 
 const updateCache = (
@@ -106,7 +107,9 @@ export default () => (
                 </Mutation>
               )}
             </Mutation>
-            <SettingsSubscription />
+            <SettingsSubscription
+              subscription={getCurrentNeuroSubscription(data.currentUser)}
+            />
           </>
         )
       }}
