@@ -44,7 +44,8 @@ export default ({ classes = {} }) => {
       </div>
       <Query query={CURRENT_USER_QUERY}>
         {({ data: { currentUser } }) => {
-          const userPlan = getCurrentNeuroSubscription(currentUser).plan.id
+          const subscription = getCurrentNeuroSubscription(currentUser)
+          const userPlan = subscription && subscription.plan.id
           return (
             <Query query={PLANS_QUERY}>
               {({ data: { productsWithPlans = [] } }) => {
@@ -125,6 +126,7 @@ export default ({ classes = {} }) => {
                                     price={price}
                                     billing={billing}
                                     planId={+id}
+                                    subscription={subscription}
                                   />
                                 )}
                                 <Features

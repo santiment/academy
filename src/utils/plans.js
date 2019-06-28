@@ -16,7 +16,6 @@ export const getCurrentNeuroSubscription = user => {
   if (!user) return
   const { subscriptions: subs } = user
 
-  if (subs.length === 0) return
   return subs.find(
     ({
       plan: {

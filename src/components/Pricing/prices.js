@@ -1,15 +1,23 @@
 import React from 'react'
 import Button from '@santiment-network/ui/Button'
 import PaymentDialog from '../PaymentDialog/PaymentDialog'
+import ChangePlanDialog from '../ChangePlanDialog/ChangePlanDialog'
 import PipedriveDialogBtn from '../Pipedrive/Pipedrive'
 import styles from './index.module.scss'
+
+const Test = props =>
+  props.subscription ? (
+    <ChangePlanDialog {...props} />
+  ) : (
+    <PaymentDialog {...props} />
+  )
 
 export default {
   FREE: {
     title: 'Free',
     desc: 'For individuals just getting started with crypto',
     discount: 'Free forever',
-    link: 'Change to this plan',
+    link: 'Upgrade now',
     Component: () => (
       <Button accent='blue' border fluid className={styles.link} disabled>
         Default plan
@@ -35,8 +43,8 @@ export default {
     title: 'Basic',
     desc: 'For traders, developers, investors and side projects',
     discount: '20% off with 200 SAN',
-    link: 'Change to this plan',
-    Component: PaymentDialog,
+    link: 'Upgrade now',
+    Component: Test,
     features: [
       'Historical data access to last 6 months',
       <>
@@ -56,7 +64,7 @@ export default {
     desc: 'For traders, developers, investors and side projects',
     discount: '20% off with 1000 SAN',
     Component: PaymentDialog,
-    link: 'Change to this plan',
+    link: 'Upgrade now',
     features: [
       'Historical data access to last 18 months',
       <>
@@ -75,7 +83,7 @@ export default {
     desc: 'For traders, developers, investors and side projects',
     discount: '20% off with 1000 SAN',
     Component: PaymentDialog,
-    link: 'Change to this plan',
+    link: 'Upgrade now',
     features: [
       'Unlimited historical data access',
       <>
