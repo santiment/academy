@@ -1,7 +1,6 @@
 import React from 'react'
 import Label from '@santiment-network/ui/Label'
 import Button from '@santiment-network/ui/Button'
-import Dialog from '@santiment-network/ui/Dialog'
 import Panel from '@santiment-network/ui/Panel/Panel'
 import Settings from './Settings'
 import PlansTableDialog from '../PlansTableDialog'
