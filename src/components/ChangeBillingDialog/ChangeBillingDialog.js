@@ -21,8 +21,9 @@ const ChangeBillingDialog = ({
   const { MMMM, DD, YYYY } = getDateFormats(new Date(currentPeriodEnd))
   const date = `${MMMM} ${DD}, ${YYYY}`
 
-  const monthToYear = amount * 12
-  const [monthToYearPrice] = formatPrice(monthToYear)
+  const newAmountMul = oldInterval === 'month' ? 1 : 12
+  const monthToYear = oldInterval === 'month' ? amount * 12 : amount
+  let monthToYearPrice = formatPrice(monthToYear)[0]
 
   return (
     <Mutation mutation={UPDATE_SUBSCRIPTION_MUTATION}>
@@ -41,7 +42,12 @@ const ChangeBillingDialog = ({
               )
               newPlanId = newId
               newPrice = formatPrice(amount)[0]
-              yearBillSave = formatPrice((monthToYear - amount) / 12)[0]
+              yearBillSave = formatPrice(
+                Math.abs(monthToYear - amount * newAmountMul) / 12,
+              )[0]
+              if (interval === 'month') {
+                monthToYearPrice = formatPrice(amount * newAmountMul)[0]
+              }
             }
 
             return (
