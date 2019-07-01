@@ -5,6 +5,7 @@ import Panel from '@santiment-network/ui/Panel/Panel'
 import Settings from './Settings'
 import PlansTableDialog from '../PlansTableDialog'
 import CancelSubscriptionDialog from '../CancelSubscriptionDialog'
+import ChangeBillingDialog from '../ChangeBillingDialog/ChangeBillingDialog'
 import { formatPrice } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
 import PLANS from '../Pricing/prices'
@@ -32,11 +33,7 @@ const PlanText = ({ subscription }) => {
         <div className={styles.title}>{PLANS[name].title} Plan</div>
         <div className={styles.desc}>
           {price} per {interval}.{' '}
-          {notCanceled && (
-            <Button accent='blue' className={styles.btn}>
-              Change billing period
-            </Button>
-          )}
+          {notCanceled && <ChangeBillingDialog subscription={subscription} />}
         </div>
         <div className={styles.desc}>
           Will automatically {PERIOD_END_ACTION[cancelAtPeriodEnd]} on {MMMM}{' '}
