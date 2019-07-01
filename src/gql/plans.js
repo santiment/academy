@@ -32,3 +32,31 @@ export const SUBSCRIBE_MUTATION = gql`
     }
   }
 `
+
+export const UPDATE_SUBSCRIPTION_MUTATION = gql`
+  mutation updateSubscription($subscriptionId: Int!, $planId: Int!) {
+    updateSubscription(subscriptionId: $subscriptionId, planId: $planId) {
+      id
+      cancelAtPeriodEnd
+      currentPeriodEnd
+      plan {
+        id
+        name
+        amount
+        interval
+        product {
+          name
+        }
+      }
+    }
+  }
+`
+
+export const CANCEL_SUBSCRIPTION_MUTATION = gql`
+  mutation cancelSubscription($subscriptionId: Int!) {
+    cancelSubscription(subscriptionId: $subscriptionId) {
+      isScheduledForCancellation
+      scheduledForCancellationAt
+    }
+  }
+`

@@ -4,6 +4,8 @@
 
 body {
   color: var(--mirage);
+  font-size: 16px;
+  line-height: 24px;
 }
 
 * {
@@ -12,8 +14,6 @@ body {
   padding: 0;
   text-decoration: none;
   font-family: 'Rubik', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
   list-style: none;
   color: inherit;
 }
