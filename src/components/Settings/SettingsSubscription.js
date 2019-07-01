@@ -4,11 +4,11 @@ import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import Panel from '@santiment-network/ui/Panel/Panel'
 import Settings from './Settings'
-import PLANS from '../Pricing/prices'
-import PlanDialog from './PlanDialog'
-import CancelPlanDialog from './CancelPlanDialog'
+import PlansTableDialog from '../PlansTableDialog'
+import CancelSubscriptionDialog from '../CancelSubscriptionDialog'
 import { formatPrice } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
+import PLANS from '../Pricing/prices'
 import styles from './SettingsSubscription.module.scss'
 
 const PERIOD_END_ACTION = {
@@ -71,7 +71,7 @@ const SettingsAPIKeys = ({ subscription }) => {
             <PlanText subscription={subscription} />
           </div>
           {(!subscription || notCanceled) && (
-            <PlanDialog subscription={subscription} />
+            <PlansTableDialog subscription={subscription} />
           )}
         </Panel>
       </Settings.Row>
@@ -85,7 +85,7 @@ const SettingsAPIKeys = ({ subscription }) => {
               most recent data
             </Label>
           </div>
-          <CancelPlanDialog subscription={subscription} />
+          <CancelSubscriptionDialog subscription={subscription} />
         </Settings.Row>
       )}
     </Settings>

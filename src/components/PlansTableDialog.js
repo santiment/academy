@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
-import PricingTable from '../Pricing/PricingTable'
+import PricingTable from './Pricing/PricingTable'
 
 const PlanDialog = ({ subscription }) => {
   return (
