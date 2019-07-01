@@ -25,3 +25,28 @@
   border-top-right-radius: 4px;
   border-bottom: none;
 }
+
+.plan {
+  padding: 24px;
+  box-shadow: none;
+  background: var(--athens);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  @include text('h4');
+  margin-bottom: 4px;
+}
+.desc {
+  color: var(--waterloo);
+  @include text('body-3');
+}
+
+.btn {
+  padding: 0;
+  height: auto;
+  background: transparent;
+}

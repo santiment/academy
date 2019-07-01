@@ -3,7 +3,6 @@ import cx from 'classnames'
 import Input from '@santiment-network/ui/Input'
 import { CardElement } from 'react-stripe-elements'
 import vars from '@santiment-network/ui/variables.scss'
-import CVCExplanation from '../CVCExplanation'
 import styles from './CheckoutForm.module.scss'
 
 const style = {

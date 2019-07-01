@@ -44,7 +44,10 @@ export default ({ classes = {} }) => {
       </div>
       <Query query={CURRENT_USER_QUERY}>
         {({ data: { currentUser } }) => {
-          const userPlan = getCurrentNeuroSubscription(currentUser)
+          const subscription = getCurrentNeuroSubscription(currentUser)
+          const userPlan = subscription && subscription.plan.id
+          const isSubscriptionCanceled =
+            subscription && subscription.cancelAtPeriodEnd
           return (
             <Query query={PLANS_QUERY}>
               {({ data: { productsWithPlans = [] } }) => {
@@ -114,9 +117,14 @@ export default ({ classes = {} }) => {
                                 <div className={styles.discount}>
                                   {card.discount}
                                 </div>
-                                {!currentUser || sameAsUserPlan ? (
+                                {!currentUser ||
+                                sameAsUserPlan ||
+                                isSubscriptionCanceled ? (
                                   <PlanRestrictBtn
                                     sameAsUserPlan={sameAsUserPlan}
+                                    isSubscriptionCanceled={
+                                      isSubscriptionCanceled
+                                    }
                                   />
                                 ) : (
                                   <card.Component
@@ -125,6 +133,7 @@ export default ({ classes = {} }) => {
                                     price={price}
                                     billing={billing}
                                     planId={+id}
+                                    subscription={subscription}
                                   />
                                 )}
                                 <Features
