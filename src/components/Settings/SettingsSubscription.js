@@ -26,7 +26,7 @@ const PlanText = ({ subscription }) => {
 
     const { MMMM, DD, YYYY } = getDateFormats(new Date(currentPeriodEnd))
     const [price] = formatPrice(amount, name)
-    const notCanceled = !currentPeriodEnd
+    const notCanceled = !cancelAtPeriodEnd
 
     return (
       <>
