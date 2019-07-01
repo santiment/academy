@@ -6,19 +6,31 @@ import { NotificationsContext } from '../Notifications/Notifications'
 import sharedStyles from '../Pricing/index.module.scss'
 import { formatPrice } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
-import { UPDATE_SUBSCRIPTION_MUTATION } from '../../gql/plans'
+import { CANCEL_SUBSCRIPTION_MUTATION } from '../../gql/plans'
+import { CURRENT_USER_QUERY } from '../../gql/user'
 import PLANS from '../Pricing/prices'
 
-const ChangePlanDialog = ({
+const createCacheUpdate = subsId =>
+  function updateCache(cache, { data: { cancelSubscription } }) {
+    const { currentUser } = cache.readQuery({ query: CURRENT_USER_QUERY })
+
+    const canceled = currentUser.subscriptions.find(({ id }) => id === subsId)
+
+    canceled.cancelAtPeriodEnd = cancelSubscription.isScheduledForCancellation
+    canceled.currentPeriodEnd = cancelSubscription.scheduledForCancellationAt
+
+    cache.writeQuery({
+      query: CURRENT_USER_QUERY,
+      data: { currentUser: { ...currentUser } },
+    })
+  }
+
+const CancelPlanDialog = ({
   subscription: {
     id,
     currentPeriodEnd,
     plan: { amount, name, interval },
   },
-  title,
-  price,
-  billing,
-  planId,
 }) => {
   const [oldPrice] = formatPrice(amount)
   const { MMMM, DD, YYYY } = getDateFormats(new Date(currentPeriodEnd))
@@ -27,27 +39,20 @@ const ChangePlanDialog = ({
   return (
     <NotificationsContext.Consumer>
       {({ add: addNot }) => (
-        <Mutation mutation={UPDATE_SUBSCRIPTION_MUTATION}>
-          {(updateSubscription, { loading }) => (
+        <Mutation
+          mutation={CANCEL_SUBSCRIPTION_MUTATION}
+          update={createCacheUpdate(id)}
+        >
+          {(cancelSubscription, { loading }) => (
             <Dialog
-              trigger={
-                <Button
-                  fluid
-                  className={sharedStyles.link}
-                  border
-                  accent='blue'
-                >
-                  Change to this plan
-                </Button>
-              }
-              title='Plan change'
+              title='Subscription cancelling'
+              trigger={<Button accent='blue'>Cancel subscription</Button>}
             >
               <Dialog.ScrollContent withPadding>
-                Your current plan ({PLANS[name].title} {oldPrice}/{interval}) is
-                active until {date}.
+                Are you sure you want to cancel you subscription?
                 <br />
-                Are you sure you want to change to the {title} plan ({price}/
-                {billing}) on {date}?
+                Your current plan ({PLANS[name].title} {oldPrice}/{interval})
+                will be active until {date}.
               </Dialog.ScrollContent>
               <Dialog.Actions>
                 <Dialog.Cancel>Cancel</Dialog.Cancel>
@@ -55,27 +60,28 @@ const ChangePlanDialog = ({
                   accent='blue'
                   isLoading={loading}
                   onClick={() =>
-                    updateSubscription({
-                      variables: { subscriptionId: +id, planId: +planId },
+                    cancelSubscription({
+                      variables: { subscriptionId: +id },
                     })
                       .then(() =>
                         addNot({
                           variant: 'success',
-                          title: `You have successfully upgraded to the "${title}" plan!`,
+                          title: `You have successfully canceled your subscription.`,
+                          description: 'We will miss you!',
                           dismissAfter: 90000,
                         }),
                       )
                       .catch(e =>
                         addNot({
                           variant: 'error',
-                          title: `Error during the plan change`,
+                          title: `Error during the cancellation`,
                           description: e.message,
                           dismissAfter: 90000,
                         }),
                       )
                   }
                 >
-                  Confirm change
+                  Confirm cancellation
                 </Dialog.Approve>
               </Dialog.Actions>
             </Dialog>
@@ -86,4 +92,4 @@ const ChangePlanDialog = ({
   )
 }
 
-export default ChangePlanDialog
+export default CancelPlanDialog

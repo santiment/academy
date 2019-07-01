@@ -6,6 +6,7 @@ import Panel from '@santiment-network/ui/Panel/Panel'
 import Settings from './Settings'
 import PLANS from '../Pricing/prices'
 import PlanDialog from './PlanDialog'
+import CancelPlanDialog from './CancelPlanDialog'
 import { formatPrice } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
 import styles from './SettingsSubscription.module.scss'
@@ -25,15 +26,18 @@ const PlanText = ({ subscription }) => {
 
     const { MMMM, DD, YYYY } = getDateFormats(new Date(currentPeriodEnd))
     const [price] = formatPrice(amount, name)
+    const notCanceled = !currentPeriodEnd
 
     return (
       <>
         <div className={styles.title}>{PLANS[name].title} Plan</div>
         <div className={styles.desc}>
           {price} per {interval}.{' '}
-          <Button accent='blue' className={styles.btn}>
-            Change billing period
-          </Button>
+          {notCanceled && (
+            <Button accent='blue' className={styles.btn}>
+              Change billing period
+            </Button>
+          )}
         </div>
         <div className={styles.desc}>
           Will automatically {PERIOD_END_ACTION[cancelAtPeriodEnd]} on {MMMM}{' '}
@@ -58,6 +62,7 @@ const PlanText = ({ subscription }) => {
 }
 
 const SettingsAPIKeys = ({ subscription }) => {
+  const notCanceled = subscription && !subscription.cancelAtPeriodEnd
   return (
     <Settings id='subscription' header='Subscription'>
       <Settings.Row>
@@ -65,10 +70,12 @@ const SettingsAPIKeys = ({ subscription }) => {
           <div>
             <PlanText subscription={subscription} />
           </div>
-          <PlanDialog subscription={subscription} />
+          {(!subscription || notCanceled) && (
+            <PlanDialog subscription={subscription} />
+          )}
         </Panel>
       </Settings.Row>
-      {subscription && (
+      {notCanceled && (
         <Settings.Row>
           <div>
             <div>Cancel subscription</div>
@@ -78,18 +85,7 @@ const SettingsAPIKeys = ({ subscription }) => {
               most recent data
             </Label>
           </div>
-          <Dialog
-            title='Subscription cancelling'
-            trigger={<Button accent='blue'>Cancel subscription</Button>}
-          >
-            <Dialog.ScrollContent withPadding>123</Dialog.ScrollContent>
-            <Dialog.Actions>
-              <Dialog.Cancel>Cancel</Dialog.Cancel>
-              <Dialog.Approve accent='blue'>
-                Confirm cancellation
-              </Dialog.Approve>
-            </Dialog.Actions>
-          </Dialog>
+          <CancelPlanDialog subscription={subscription} />
         </Settings.Row>
       )}
     </Settings>
