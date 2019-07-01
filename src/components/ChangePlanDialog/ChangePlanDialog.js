@@ -3,11 +3,12 @@ import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import { Mutation } from 'react-apollo'
 import { NotificationsContext } from '../Notifications/Notifications'
-import sharedStyles from '../Pricing/index.module.scss'
-import { formatPrice } from '../../utils/plans'
-import { getDateFormats } from '../../utils/dates'
 import { UPDATE_SUBSCRIPTION_MUTATION } from '../../gql/plans'
 import PLANS from '../Pricing/prices'
+import { formatPrice } from '../../utils/plans'
+import { getDateFormats } from '../../utils/dates'
+import sharedStyles from '../Pricing/index.module.scss'
+import dialogStyles from '../Dialog.module.scss'
 
 const ChangePlanDialog = ({
   subscription: {
@@ -50,7 +51,9 @@ const ChangePlanDialog = ({
                 {billing}) on {date}?
               </Dialog.ScrollContent>
               <Dialog.Actions>
-                <Dialog.Cancel>Cancel</Dialog.Cancel>
+                <Dialog.Cancel className={dialogStyles.cancel}>
+                  Cancel
+                </Dialog.Cancel>
                 <Dialog.Approve
                   accent='blue'
                   isLoading={loading}

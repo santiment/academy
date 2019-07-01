@@ -3,12 +3,12 @@ import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import { Mutation } from 'react-apollo'
 import { NotificationsContext } from '../Notifications/Notifications'
-import sharedStyles from '../Pricing/index.module.scss'
 import { formatPrice } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
 import { CANCEL_SUBSCRIPTION_MUTATION } from '../../gql/plans'
 import { CURRENT_USER_QUERY } from '../../gql/user'
 import PLANS from '../Pricing/prices'
+import dialogStyles from '../Dialog.module.scss'
 
 const createCacheUpdate = subsId =>
   function updateCache(cache, { data: { cancelSubscription } }) {
@@ -55,7 +55,9 @@ const CancelPlanDialog = ({
                 will be active until {date}.
               </Dialog.ScrollContent>
               <Dialog.Actions>
-                <Dialog.Cancel>Cancel</Dialog.Cancel>
+                <Dialog.Cancel className={dialogStyles.cancel}>
+                  Cancel
+                </Dialog.Cancel>
                 <Dialog.Approve
                   accent='blue'
                   isLoading={loading}
