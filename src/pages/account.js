@@ -12,6 +12,7 @@ import {
 import Layout from '../components/layout'
 import SettingsAPIKeys from '../components/Settings/SettingsAPIKeys'
 import SettingsSubscription from '../components/Settings/SettingsSubscription'
+import SettingsBilling from '../components/Settings/SettingsBilling'
 import GDPR from '../components/GDPR/GDPR'
 import { getCurrentNeuroSubscription } from '../components/Pricing/utils'
 import styles from './account.module.scss'
@@ -45,6 +46,14 @@ const tabs = [
     content: (
       <Link className={styles.tab} to='/account#subscription'>
         Subscription
+      </Link>
+    ),
+  },
+  {
+    index: 3,
+    content: (
+      <Link className={styles.tab} to='/account#billing'>
+        Billing
       </Link>
     ),
   },
@@ -110,6 +119,7 @@ export default () => (
             <SettingsSubscription
               subscription={getCurrentNeuroSubscription(data.currentUser)}
             />
+            <SettingsBilling />
           </>
         )
       }}

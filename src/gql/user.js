@@ -1,5 +1,17 @@
 import gql from 'graphql-tag'
 
+export const USER_PAYMENTS = gql`
+  query {
+    payments {
+      amount
+      createdAt
+      description
+      receiptUrl
+      status
+    }
+  }
+`
+
 export const CURRENT_USER_QUERY = gql`
   query {
     currentUser {

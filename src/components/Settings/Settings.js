@@ -12,6 +12,8 @@ const Settings = ({ classes = {}, ...props }) => (
   />
 )
 
-Settings.Row = props => <div className={styles.setting} {...props} />
+Settings.Row = ({ className, ...props }) => (
+  <div className={cx(styles.setting, className)} {...props} />
+)
 
 export default Settings
