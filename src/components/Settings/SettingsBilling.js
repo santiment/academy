@@ -22,7 +22,7 @@ const BillingTable = ({ payments }) => {
           const { MMMM, DD, YYYY } = getDateFormats(new Date(createdAt))
           const [price] = formatPrice(amount)
           return (
-            <tr key={createdAt} className={styles.items}>
+            <tr key={createdAt} className={styles.row}>
               <td className={styles.cell}>
                 {MMMM} {DD}, {YYYY}
               </td>

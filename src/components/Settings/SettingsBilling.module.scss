@@ -19,20 +19,21 @@
   text-align: left;
   color: var(--waterloo);
   background: var(--athens);
+
+  .cell {
+    border: none;
+  }
 }
 
 .cell {
   padding: 9px 23px;
-
-  &_head {
-    border-bottom: 1px solid var(--porcelain);
-  }
+  border-top: 1px solid var(--porcelain);
 
   &_invoice {
     text-align: right;
   }
 }
 
-.items {
+.row {
   @include text('body-3');
 }

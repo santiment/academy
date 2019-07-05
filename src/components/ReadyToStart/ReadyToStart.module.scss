@@ -14,7 +14,8 @@
   position: relative;
 
   @include responsive('phone', 'phone-xs') {
-    background: none;
+    background: url('./bg.svg') no-repeat -410px 0;
+    z-index: 0;
   }
 }
 

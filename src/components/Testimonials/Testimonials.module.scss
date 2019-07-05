@@ -12,9 +12,13 @@
     top: -150px;
     height: 500px;
     left: calc((1140px - 100vw) / 2);
-
+    z-index: -1;
     background: url('./blur.svg') no-repeat 0 -70px;
     background-size: 30%;
+
+    @include responsive('phone', 'phone-xs') {
+      background: none;
+    }
   }
 }
 

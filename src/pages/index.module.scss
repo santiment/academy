@@ -28,6 +28,10 @@
 
   &::after {
     background: url('./blurs.svg') -220% 40% no-repeat;
+
+    @include responsive('phone', 'phone-xs') {
+      background-position: -100px -90px;
+    }
   }
 }
 
