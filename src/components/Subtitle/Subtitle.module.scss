@@ -1,5 +1,7 @@
+@import '~@santiment-network/ui/mixins';
+
 .subtitle {
-  font-weight: normal;
+  @include text('body-2');
   text-align: center;
   color: var(--waterloo);
 }

@@ -1,19 +1,42 @@
-@import "~@santiment-network/ui/mixins.scss";
-@import "~@santiment-network/ui/variables.scss";
+@import '~@santiment-network/ui/mixins';
+@import '~@santiment-network/ui/variables';
 
 .wrapper {
   display: flex;
-}
 
-.info {
+  &::before,
+  &::after {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 850px;
+  }
+  &::before {
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 46%,
+        var(--white) 100%
+      ),
+      url(../images/waves.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &::after {
+    background: url('./blurs.svg') -220% 40% no-repeat;
+  }
 }
 
 .title {
   &,
   &__mark {
-    @include text("h1", "m");
+    @include text('h1', 'm');
 
-    @include responsive("phone", "phone-xs") {
+    @include responsive('phone', 'phone-xs') {
       font-size: 38px;
       line-height: 44px;
     }
@@ -24,7 +47,7 @@
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       background: $malibu-accent;
@@ -39,12 +62,12 @@
 }
 
 .desc {
-  @include text("h4");
+  @include text('h4');
   font-weight: 100;
   color: var(--waterloo);
   margin: 32px 0;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     font-size: 18px;
     line-height: 26px;
   }
@@ -54,8 +77,8 @@
   padding: 10px 39px;
   margin-right: 32px;
   height: 50px;
-  @include text("body-2");
-  @include responsive("phone", "phone-xs") {
+  @include text('body-2');
+  @include responsive('phone', 'phone-xs') {
     margin-right: 25px;
     font-size: 14px;
     padding: 10px 25px;
@@ -66,7 +89,7 @@
   color: var(--dodger-blue);
   fill: var(--dodger-blue);
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     font-size: 14px;
   }
 
@@ -86,8 +109,9 @@
   min-width: 600px;
   margin-right: -30px;
   margin-top: -50px;
+  position: relative;
 
-  @include responsive("tablet", "phone", "phone-xs") {
+  @include responsive('tablet', 'phone', 'phone-xs') {
     display: none;
   }
 
@@ -130,7 +154,7 @@
   &::before {
     position: absolute;
     display: block;
-    content: "";
+    content: '';
     width: 1px;
     top: 0;
     bottom: 0;
@@ -146,8 +170,37 @@
 :global {
   section {
     margin-bottom: 150px;
-    @include responsive("phone", "phone-xs") {
+    @include responsive('phone', 'phone-xs') {
       margin-bottom: 80px;
     }
+  }
+}
+
+.gathered {
+  position: absolute;
+  background: var(--white);
+  box-shadow: 0px 4px 50px rgba(56, 74, 167, 0.04),
+    0px 60px 40px rgba(56, 74, 167, 0.02);
+  border-radius: 8px;
+  padding: 36px 45px 25px;
+  width: 266px;
+  height: 218px;
+  bottom: -16px;
+  right: -16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url('./gathered.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+
+  &__percent {
+    @include text('h3', 'm');
+  }
+
+  &__label {
+    @include text('body-3');
+    color: var(--waterloo);
   }
 }

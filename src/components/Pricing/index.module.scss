@@ -65,7 +65,7 @@
   }
 
   &__title {
-    @include text('h4');
+    @include text('h4', 'm');
     display: flex;
     align-items: center;
 
@@ -133,6 +133,7 @@
 
   &__type {
     color: var(--waterloo);
+    font-size: 16px;
     font-weight: 100;
   }
 }
@@ -141,7 +142,7 @@
   color: var(--casper);
   font-size: 14px;
   line-height: 20px;
-  margin: 5px 0 20px;
+  margin: -3px 0 20px;
 }
 
 .link {
@@ -167,9 +168,8 @@
   fill: var(--dodger-blue);
   display: block;
   text-align: center;
-  margin-top: 12px;
-  font-size: 14px;
-  line-height: 20px;
+  margin-top: 22px;
+  @include text('body-3');
 
   &_bottom {
     margin-top: 45px;

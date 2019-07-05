@@ -1,8 +1,18 @@
 @import '~@santiment-network/ui/mixins.scss';
 
 .wrapper {
+  position: relative;
   @include responsive('desktop', 'laptop') {
-    background: url('../../images/cases.svg') no-repeat 520px 250px;
+    &::before {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: '';
+      top: 0;
+      bottom: -50px;
+      width: 100vw;
+      background: url('../../images/cases.svg') no-repeat 410px 50px;
+    }
   }
 }
 
@@ -36,7 +46,7 @@
 }
 
 .case {
-  margin-bottom: 70px;
+  margin-bottom: 35px;
   width: 40%;
 
   @include responsive('tablet', 'phone', 'phone-xs') {
@@ -70,8 +80,7 @@
 
   &__desc {
     text-align: left;
-
-    @include responsive('tablet', 'phone', 'phone-xs') {
+    @include text('body-2') @include responsive('tablet', 'phone', 'phone-xs') {
       text-align: center;
     }
   }

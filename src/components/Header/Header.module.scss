@@ -6,6 +6,17 @@
   justify-content: space-between;
   padding: 20px 0;
   user-select: none;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  @include responsive('tablet') {
+    max-width: 768px;
+  }
+
+  @include responsive('phone', 'phone-xs') {
+    width: 100%;
+    padding: 20px 15px;
+  }
 }
 
 .logo {

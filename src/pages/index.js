@@ -85,6 +85,10 @@ const IndexPage = () => (
             />
           ))}
         </ol>
+        <div className={styles.gathered}>
+          <h3 className={styles.gathered__percent}>78.6 %</h3>
+          <h4 className={styles.gathered__label}>data gathered</h4>
+        </div>
       </div>
     </section>
     <WhySantiment />

@@ -22,7 +22,7 @@ a:hover {
   color: var(--dodger-blue);
 }
 
-.container {
+section {
   max-width: 1140px;
   margin: 0 auto;
 
@@ -41,25 +41,6 @@ a:hover {
 
   @include responsive('phone', 'phone-xs') {
     margin-top: 60px;
-  }
-
-  &::before {
-    z-index: -1;
-    position: absolute;
-    display: block;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 650px;
-    background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 46%,
-        var(--white) 100%
-      ),
-      url(../images/waves.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
 

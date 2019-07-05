@@ -1,3 +1,5 @@
+@import '~@santiment-network/ui/mixins';
+
 .questions {
   margin: 50px auto 0;
   max-width: 720px;
@@ -30,7 +32,7 @@
   }
 
   &__text {
-    font-weight: normal;
+    @include text('body-2');
 
     :global(.opened) & {
       color: var(--dodger-blue);
