@@ -46,7 +46,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section>
+    <section className={styles.wrapper}>
       <Title className={styles.title}>
         What people
         <br />
@@ -102,7 +102,6 @@ const Testimonials = () => {
           >
             <path
               d='M1 11L6 6L1 1'
-              stroke='#181B2B'
               strokeWidth='2'
               strokeMiterlimit='10'
               strokeLinecap='round'

@@ -1,4 +1,22 @@
-@import "~@santiment-network/ui/mixins.scss";
+@import '~@santiment-network/ui/mixins.scss';
+
+.wrapper {
+  background: url('./bg.svg') no-repeat 50%;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100vw;
+    top: -150px;
+    height: 500px;
+    left: calc((1140px - 100vw) / 2);
+
+    background: url('./blur.svg') no-repeat 0 -70px;
+    background-size: 30%;
+  }
+}
 
 .title {
   margin-bottom: 60px;
@@ -10,7 +28,7 @@
   width: 600px;
   position: relative;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     width: 100%;
   }
 
@@ -21,15 +39,15 @@
 }
 
 .text {
-  @include text("body-1", "t");
+  @include text('body-1', 't');
 }
 
 .author {
-  @include text("body-2");
+  @include text('body-2');
 }
 
 .position {
-  @include text("body-3");
+  @include text('body-3');
   color: var(--waterloo);
 }
 
@@ -50,31 +68,23 @@
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  top: 29%;
   z-index: 10;
+  bottom: 35px;
+  stroke: var(--mirage);
+
+  &:hover {
+    stroke: var(--dodger-blue) !important;
+  }
 
   &_left {
-    left: -140px;
+    left: 20%;
   }
 
   &_right {
-    right: -140px;
+    right: 20%;
   }
 
-  @include responsive("tablet") {
-    &_left {
-      left: -50px;
-    }
-
-    &_right {
-      right: -50px;
-    }
-  }
-
-  @include responsive("phone", "phone-xs") {
-    top: initial;
-    bottom: 35px;
-
+  @include responsive('phone', 'phone-xs') {
     &_left {
       left: 0;
     }
@@ -94,15 +104,15 @@
   background-size: cover;
 
   &_yan {
-    background-image: url("../../images/yan.jpg");
+    background-image: url('../../images/yan.jpg');
   }
 
   &_pramesh {
-    background-image: url("../../images/pramesh_tyagi.jpg");
+    background-image: url('../../images/pramesh_tyagi.jpg');
   }
 
   &_paolo {
-    background-image: url("../../images/paolo-ardoino.jpg");
+    background-image: url('../../images/paolo-ardoino.jpg');
   }
 }
 
@@ -165,7 +175,7 @@
   .slick-track:after {
     display: table;
 
-    content: "";
+    content: '';
   }
   .slick-track:after {
     clear: both;
@@ -183,7 +193,7 @@
     height: 100%;
     min-height: 1px;
   }
-  [dir="rtl"] .slick-slide {
+  [dir='rtl'] .slick-slide {
     float: right;
   }
   .slick-slide img {

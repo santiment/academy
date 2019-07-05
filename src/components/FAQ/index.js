@@ -81,7 +81,7 @@ const questions = [
 ]
 
 export default () => (
-  <section>
+  <section className={styles.wrapper}>
     <Title>Frequently asked questions</Title>
     <ul className={styles.questions}>
       {questions.map(({ question, answer }) => (
