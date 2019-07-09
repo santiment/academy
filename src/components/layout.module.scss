@@ -6,6 +6,11 @@ body {
   color: var(--mirage);
   font-size: 16px;
   line-height: 24px;
+  --jungle-green: var(--dodger-blue);
+  --green: var(--dodger-blue);
+  --jungle-green-hover: var(--dodger-blue-hover);
+  --green-hover: var(--dodger-blue-hover);
+  --jungle-green-light: var(--dodger-blue-light);
 }
 
 * {
