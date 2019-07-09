@@ -24,12 +24,15 @@
 .question {
   background: #fff;
   border: 1px solid var(--porcelain);
-  box-shadow: 0px 20px 50px rgba(24, 27, 43, 0.08);
   border-radius: 4px;
   padding: 18px 24px;
   cursor: pointer;
   margin-bottom: 16px;
   user-select: none;
+
+  &:global(.opened) {
+    box-shadow: 0px 20px 50px rgba(24, 27, 43, 0.08);
+  }
 
   &__top {
     display: flex;

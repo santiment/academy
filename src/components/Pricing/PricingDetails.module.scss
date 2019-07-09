@@ -1,3 +1,5 @@
+@import '~@santiment-network/ui/mixins';
+
 .table {
   width: 100%;
   border-spacing: 0;
@@ -40,6 +42,7 @@
   &__title {
     padding: 15px 20px 15px 0;
     white-space: nowrap;
+    @include text('body-3');
   }
 
   &__cell {
