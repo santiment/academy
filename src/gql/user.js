@@ -1,5 +1,29 @@
 import gql from 'graphql-tag'
 
+const userDataFragment = gql`
+  fragment userDataFragment on User {
+    id
+    email
+    username
+    privacyPolicyAccepted
+    apikeys
+    subscriptions {
+      id
+      cancelAtPeriodEnd
+      currentPeriodEnd
+      plan {
+        id
+        name
+        amount
+        interval
+        product {
+          name
+        }
+      }
+    }
+  }
+`
+
 export const USER_PAYMENTS = gql`
   query {
     payments {
@@ -15,27 +39,10 @@ export const USER_PAYMENTS = gql`
 export const CURRENT_USER_QUERY = gql`
   query {
     currentUser {
-      id
-      email
-      username
-      privacyPolicyAccepted
-      apikeys
-      subscriptions {
-        id
-        cancelAtPeriodEnd
-        currentPeriodEnd
-        plan {
-          id
-          name
-          amount
-          interval
-          product {
-            name
-          }
-        }
-      }
+      ...userDataFragment
     }
   }
+  ${userDataFragment}
 `
 
 export const GENERATE_APIKEY_MUTATION = gql`
@@ -68,14 +75,12 @@ export const VERIFY_EMAIL_MUTATION = gql`
     emailLoginVerify(email: $email, token: $token) {
       token
       user {
-        id
-        email
-        username
-        privacyPolicyAccepted
-        apikeys
+        ...userDataFragment
       }
     }
   }
+
+  ${userDataFragment}
 `
 
 export const EMAIL_LOGIN_MUTATION = gql`

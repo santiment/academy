@@ -40,15 +40,15 @@ const CancellationScreen = ({
             cancelSubscription({
               variables: { subscriptionId: +id },
             })
-              .then(() =>
+              .then(() => {
+                closeDialog()
                 addNot({
                   variant: 'success',
                   title: `You have successfully canceled your subscription.`,
                   description: 'We will miss you!',
                   dismissAfter: 90000,
-                }),
-              )
-              .then(closeDialog)
+                })
+              })
               .catch(e =>
                 addNot({
                   variant: 'error',

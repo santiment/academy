@@ -5,11 +5,12 @@ import PLANS from '../Pricing/prices'
 import styles from './MissYouScreen.module.scss'
 
 const MissYouScreen = ({ closeDialog, nextScreen, name }) => {
+  const plan = PLANS[name].title
   return (
     <Dialog.ScrollContent className={styles.wrapper}>
       <h2 className={styles.title}>We will miss you</h2>
       <p className={styles.text}>
-        Are you sure you want to cancel your {PLANS[name].title} plan
+        Are you sure you want to cancel your {plan} plan
         <br />
         and downgrage to a free version of Neuro?
       </p>
@@ -19,7 +20,7 @@ const MissYouScreen = ({ closeDialog, nextScreen, name }) => {
         onClick={closeDialog}
         className={styles.btn}
       >
-        Keep using Pro plan
+        Keep using {plan} plan
       </Button>
       <br />
       <Button accent='blue' onClick={nextScreen}>

@@ -19,6 +19,8 @@ const createCacheUpdate = subsId =>
     canceled.cancelAtPeriodEnd = cancelSubscription.isScheduledForCancellation
     canceled.currentPeriodEnd = cancelSubscription.scheduledForCancellationAt
 
+    currentUser.subscriptions = [...currentUser.subscriptions]
+
     cache.writeQuery({
       query: CURRENT_USER_QUERY,
       data: { currentUser: { ...currentUser } },
