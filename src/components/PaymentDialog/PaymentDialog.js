@@ -152,7 +152,7 @@ const PaymentDialog = ({
                       className={sharedStyles.action}
                       type='submit'
                     >
-                      Pay
+                      Confirm payment
                     </Dialog.Approve>
                   </Dialog.Actions>
                 </Dialog>

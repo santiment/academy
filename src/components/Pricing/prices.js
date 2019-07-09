@@ -41,7 +41,7 @@ export default {
   },
   ESSENTIAL: {
     title: 'Basic',
-    desc: 'For traders, developers, investors and side projects',
+    desc: 'Great for short-term analysis and prototyping',
     discount: '20% off with 200 SAN',
     link: 'Upgrade now',
     Component: PlanActionDialog,
@@ -61,7 +61,7 @@ export default {
   PRO: {
     title: 'Pro',
     isPopular: true,
-    desc: 'For traders, developers, investors and side projects',
+    desc: 'Advanced metrics & serious backtesting potential',
     discount: '20% off with 1000 SAN',
     Component: PlanActionDialog,
     link: 'Upgrade now',
@@ -80,7 +80,7 @@ export default {
   },
   PREMIUM: {
     title: 'Premium',
-    desc: 'For traders, developers, investors and side projects',
+    desc: 'Full historical data and generous rate limits',
     discount: '20% off with 1000 SAN',
     Component: PlanActionDialog,
     link: 'Upgrade now',

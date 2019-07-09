@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@santiment-network/ui": "^0.5.34",
+    "@santiment-network/ui": "^0.5.44",
     "apollo-boost": "^0.4.0",
     "apollo-client": "^2.6.0",
     "apollo-link-context": "^1.0.17",
