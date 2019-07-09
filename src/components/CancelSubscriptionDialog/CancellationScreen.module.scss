@@ -1,0 +1,13 @@
+.list {
+  margin-top: 9px;
+}
+
+.item {
+  &::before {
+    content: '●';
+    display: inline-block;
+    font-size: 10px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+}
