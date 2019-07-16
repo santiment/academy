@@ -60,3 +60,13 @@ export const CANCEL_SUBSCRIPTION_MUTATION = gql`
     }
   }
 `
+
+export const RENEW_SUBSCRIPTION_MUTATION = gql`
+  mutation renewCancelledSubscription($id: Int!) {
+    renewCancelledSubscription(subscriptionId: $id) {
+      id
+      cancelAtPeriodEnd
+      currentPeriodEnd
+    }
+  }
+`

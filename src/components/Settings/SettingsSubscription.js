@@ -1,4 +1,5 @@
 import React from 'react'
+import { Mutation } from 'react-apollo'
 import Label from '@santiment-network/ui/Label'
 import Button from '@santiment-network/ui/Button'
 import Panel from '@santiment-network/ui/Panel/Panel'
@@ -9,6 +10,7 @@ import ChangeBillingDialog from '../ChangeBillingDialog/ChangeBillingDialog'
 import { formatPrice } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
 import PLANS from '../Pricing/prices'
+import { RENEW_SUBSCRIPTION_MUTATION } from '../../gql/plans'
 import styles from './SettingsSubscription.module.scss'
 
 const PERIOD_END_ACTION = {
@@ -57,8 +59,27 @@ const PlanText = ({ subscription }) => {
   )
 }
 
-const SettingsAPIKeys = ({ subscription }) => {
+const SubscriptionRenewButton = ({ subscription: { id } }) => {
+  return (
+    <Mutation mutation={RENEW_SUBSCRIPTION_MUTATION}>
+      {(renew, { loading }) => (
+        <Button
+          variant='fill'
+          accent='blue'
+          isLoading={loading}
+          onClick={() => renew({ variables: { id: +id } })}
+        >
+          Renew Subscription
+        </Button>
+      )}
+    </Mutation>
+  )
+}
+
+const SettingsSubscription = ({ subscription }) => {
   const notCanceled = subscription && !subscription.cancelAtPeriodEnd
+
+  const PlanBtn = notCanceled ? PlansTableDialog : SubscriptionRenewButton
   return (
     <Settings id='subscription' header='Subscription'>
       <Settings.Row>
@@ -66,9 +87,7 @@ const SettingsAPIKeys = ({ subscription }) => {
           <div>
             <PlanText subscription={subscription} />
           </div>
-          {(!subscription || notCanceled) && (
-            <PlansTableDialog subscription={subscription} />
-          )}
+          <PlanBtn subscription={subscription} />
         </Panel>
       </Settings.Row>
       {notCanceled && (
@@ -88,4 +107,4 @@ const SettingsAPIKeys = ({ subscription }) => {
   )
 }
 
-export default SettingsAPIKeys
+export default SettingsSubscription

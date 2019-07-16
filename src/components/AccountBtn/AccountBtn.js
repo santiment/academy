@@ -24,7 +24,8 @@ const AccountBtn = ({ isAccountPage }) => {
           <Button
             as={Link}
             to='/account'
-            accent={isAccountPage && 'blue'}
+            variant='flat'
+            isActive={isAccountPage}
             {...btnProps[Boolean(currentUser)]}
           />
         )
