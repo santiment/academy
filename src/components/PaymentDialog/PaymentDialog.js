@@ -115,7 +115,7 @@ const PaymentDialog = ({
                           addNot({
                             variant: 'success',
                             title: `You have successfully upgraded to the "${title}" plan!`,
-                            dismissAfter: 90000,
+                            dismissAfter: 5000,
                           })
                         })
                         .catch(e => {
@@ -123,7 +123,7 @@ const PaymentDialog = ({
                             variant: 'error',
                             title: `Error during the payment`,
                             description: e.message,
-                            dismissAfter: 90000,
+                            dismissAfter: 5000,
                           })
                           toggleLoading()
                         })

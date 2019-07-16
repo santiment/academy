@@ -65,7 +65,7 @@ const ChangePlanDialog = ({
                         addNot({
                           variant: 'success',
                           title: `You have successfully upgraded to the "${title}" plan!`,
-                          dismissAfter: 90000,
+                          dismissAfter: 5000,
                         }),
                       )
                       .catch(e =>
@@ -73,7 +73,7 @@ const ChangePlanDialog = ({
                           variant: 'error',
                           title: `Error during the plan change`,
                           description: e.message,
-                          dismissAfter: 90000,
+                          dismissAfter: 5000,
                         }),
                       )
                   }

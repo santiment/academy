@@ -46,7 +46,7 @@ const CancellationScreen = ({
                   variant: 'success',
                   title: `You have successfully canceled your subscription.`,
                   description: 'We will miss you!',
-                  dismissAfter: 90000,
+                  dismissAfter: 5000,
                 })
               })
               .catch(e =>
@@ -54,7 +54,7 @@ const CancellationScreen = ({
                   variant: 'error',
                   title: `Error during the cancellation`,
                   description: e.message,
-                  dismissAfter: 90000,
+                  dismissAfter: 5000,
                 }),
               )
           }
