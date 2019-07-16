@@ -20,6 +20,7 @@ const ChangePlanDialog = ({
   price,
   billing,
   planId,
+  onDialogClose = () => {},
 }) => {
   const [oldPrice] = formatPrice(amount)
   const { MMMM, DD, YYYY } = getDateFormats(new Date(currentPeriodEnd))
@@ -68,6 +69,7 @@ const ChangePlanDialog = ({
                           dismissAfter: 5000,
                         }),
                       )
+                      .then(onDialogClose)
                       .catch(e =>
                         addNot({
                           variant: 'error',

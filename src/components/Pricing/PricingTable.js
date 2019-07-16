@@ -29,7 +29,7 @@ const billingOptions = [
   },
 ]
 
-export default ({ classes = {} }) => {
+export default ({ classes = {}, onDialogClose }) => {
   const [billing, setBilling] = React.useState('month')
   return (
     <>
@@ -134,6 +134,7 @@ export default ({ classes = {} }) => {
                                     billing={billing}
                                     planId={+id}
                                     subscription={subscription}
+                                    onDialogClose={onDialogClose}
                                   />
                                 )}
                                 <Features

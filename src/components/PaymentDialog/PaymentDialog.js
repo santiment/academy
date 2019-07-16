@@ -55,6 +55,7 @@ const PaymentDialog = ({
   planId,
   stripe,
   disabled,
+  onDialogClose = () => {},
 }) => {
   const [loading, toggleLoading] = useFormLoading()
   const [paymentVisible, setPaymentVisiblity] = useState(false)
@@ -117,6 +118,7 @@ const PaymentDialog = ({
                             title: `You have successfully upgraded to the "${title}" plan!`,
                             dismissAfter: 5000,
                           })
+                          onDialogClose()
                         })
                         .catch(e => {
                           addNot({
