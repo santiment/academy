@@ -9,6 +9,7 @@ import { NotificationsContext } from '../Notifications/Notifications'
 import Loader from '../Loader/Loader'
 import { SUBSCRIBE_MUTATION } from '../../gql/plans'
 import { CURRENT_USER_QUERY } from '../../gql/user'
+import { getBilling } from '../../utils/plans'
 import styles from './PaymentDialog.module.scss'
 import sharedStyles from '../Pricing/index.module.scss'
 
@@ -119,6 +120,7 @@ const PaymentDialog = ({
                             dismissAfter: 5000,
                           })
                           onDialogClose()
+                          return getBilling()
                         })
                         .catch(e => {
                           addNot({

@@ -5,7 +5,7 @@ import { Mutation } from 'react-apollo'
 import { NotificationsContext } from '../Notifications/Notifications'
 import { UPDATE_SUBSCRIPTION_MUTATION } from '../../gql/plans'
 import PLANS from '../Pricing/prices'
-import { formatPrice } from '../../utils/plans'
+import { formatPrice, getBilling } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
 import sharedStyles from '../Pricing/index.module.scss'
 import dialogStyles from '../Dialog.module.scss'
@@ -70,6 +70,7 @@ const ChangePlanDialog = ({
                         }),
                       )
                       .then(onDialogClose)
+                      .then(getBilling)
                       .catch(e =>
                         addNot({
                           variant: 'error',

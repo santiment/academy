@@ -59,7 +59,7 @@ const PlanText = ({ subscription }) => {
   )
 }
 
-const SubscriptionRenewButton = ({ subscription: { id } }) => {
+const SubscriptionRenewButton = ({ subscription: { id } = {} }) => {
   return (
     <Mutation mutation={RENEW_SUBSCRIPTION_MUTATION}>
       {(renew, { loading }) => (
@@ -79,7 +79,8 @@ const SubscriptionRenewButton = ({ subscription: { id } }) => {
 const SettingsSubscription = ({ subscription }) => {
   const notCanceled = subscription && !subscription.cancelAtPeriodEnd
 
-  const PlanBtn = notCanceled ? PlansTableDialog : SubscriptionRenewButton
+  const PlanBtn =
+    !subscription || notCanceled ? PlansTableDialog : SubscriptionRenewButton
   return (
     <Settings id='subscription' header='Subscription'>
       <Settings.Row>

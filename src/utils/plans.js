@@ -1,3 +1,6 @@
+import { client } from '../apollo/client'
+import { USER_PAYMENTS } from '../gql/user'
+
 const BILLING_PRICE_TYPE = {
   year: '/y',
   month: '/mo',
@@ -24,3 +27,6 @@ export const getCurrentNeuroSubscription = user => {
     }) => name === 'SANapi',
   )
 }
+
+export const getBilling = () =>
+  client.query({ query: USER_PAYMENTS, fetchPolicy: 'network-only' })
