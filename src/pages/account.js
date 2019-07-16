@@ -13,6 +13,7 @@ import Layout from '../components/layout'
 import SettingsAPIKeys from '../components/Settings/SettingsAPIKeys'
 import SettingsSubscription from '../components/Settings/SettingsSubscription'
 import SettingsBilling from '../components/Settings/SettingsBilling'
+import SettingsLogout from '../components/Settings/SettingsLogout'
 import GDPR from '../components/GDPR/GDPR'
 import { getCurrentNeuroSubscription } from '../components/Pricing/utils'
 import styles from './account.module.scss'
@@ -54,6 +55,14 @@ const tabs = [
     content: (
       <Link className={styles.tab} to='/account#billing'>
         Billing
+      </Link>
+    ),
+  },
+  {
+    index: 4,
+    content: (
+      <Link className={styles.tab} to='/account#logout'>
+        Logout
       </Link>
     ),
   },
@@ -120,6 +129,7 @@ export default () => (
               subscription={getCurrentNeuroSubscription(data.currentUser)}
             />
             <SettingsBilling />
+            <SettingsLogout />
           </>
         )
       }}
