@@ -7,12 +7,19 @@ import copy from 'copy-to-clipboard'
 import Settings from './Settings'
 import styles from './SettingsAPIKeys.module.scss'
 
+let genTimer
+
 const SettingsAPIKeys = ({ apikeys = [], generateAPIKey, revokeAPIKey }) => {
   const [copiedShown, setCopiedShown] = useState(false)
 
   function showCopiedTooltip() {
     setCopiedShown(true)
     setTimeout(() => setCopiedShown(false), 1000)
+  }
+
+  function onGenClick() {
+    clearTimeout(genTimer)
+    genTimer = setTimeout(generateAPIKey, 300)
   }
 
   return (
@@ -47,7 +54,7 @@ const SettingsAPIKeys = ({ apikeys = [], generateAPIKey, revokeAPIKey }) => {
           <div className={styles.wrapper}>
             {apikeys.length > 0 ? (
               apikeys.map(apikey => (
-                <React.Fragment key={apikey}>
+                <div key={apikey} className={styles.keyContainer}>
                   <div
                     className={cx(styles.apikey, copiedShown && styles.copied)}
                   >
@@ -73,10 +80,10 @@ const SettingsAPIKeys = ({ apikeys = [], generateAPIKey, revokeAPIKey }) => {
                   >
                     Revoke
                   </Button>
-                </React.Fragment>
+                </div>
               ))
             ) : (
-              <Button onClick={generateAPIKey} variant='fill' accent='blue'>
+              <Button onClick={onGenClick} variant='fill' accent='blue'>
                 Generate
               </Button>
             )}

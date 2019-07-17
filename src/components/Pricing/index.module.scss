@@ -18,7 +18,7 @@
 }
 
 .br {
-  @include responsive('phone', 'phone-xs') {
+  @include responsive('phone-xs') {
     display: none;
   }
 }

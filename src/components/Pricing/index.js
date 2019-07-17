@@ -8,8 +8,7 @@ export default () => {
     <section id='pricing'>
       <Title className={styles.title}>
         Choose the right plan
-        <br className={styles.br} />
-        for your aims
+        <br className={styles.br} /> for your aims
       </Title>
       <PricingTable />
     </section>

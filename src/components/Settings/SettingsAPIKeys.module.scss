@@ -3,6 +3,7 @@
 
 .wrapper {
   display: flex;
+  flex-direction: column;
 }
 
 .apikey {
@@ -50,6 +51,15 @@
     &:hover {
       fill: var(--jungle-green);
     }
+  }
+}
+
+.keyContainer {
+  display: flex;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin: 0;
   }
 }
 
