@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import GA from 'react-ga'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
@@ -100,6 +101,11 @@ const PaymentDialog = ({
                       if (loading) return
                       toggleLoading()
 
+                      GA.event({
+                        category: 'User',
+                        action: 'Payment form submitted',
+                      })
+
                       const form = e.currentTarget
                       const tokenData = getTokenDataByForm(form)
 
@@ -109,6 +115,7 @@ const PaymentDialog = ({
                           if (error) {
                             return Promise.reject(error)
                           }
+
                           return subscribe({
                             variables: { cardToken: token.id, planId },
                           })
