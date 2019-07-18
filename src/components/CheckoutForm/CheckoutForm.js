@@ -51,16 +51,10 @@ const CheckoutForm = ({ stripe, plan }) => {
           name='address_state'
         />
         <Input
-          className={cx(styles.input, styles.input_address)}
+          className={cx(styles.input, styles.input_right)}
           placeholder='Street Address'
           required
           name='address_line1'
-        />
-        <Input
-          className={styles.input}
-          placeholder='Postal Code'
-          required
-          name='address_zip'
         />
       </div>
       <Input
