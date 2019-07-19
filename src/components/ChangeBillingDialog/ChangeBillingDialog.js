@@ -3,7 +3,11 @@ import { Query, Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Panel from '@santiment-network/ui/Panel/Panel'
 import Dialog from '@santiment-network/ui/Dialog'
-import { formatPrice, findNeuroPlan } from '../../utils/plans'
+import {
+  formatPrice,
+  findNeuroPlan,
+  getAlternativeBillingPlan,
+} from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
 import { PLANS_QUERY, UPDATE_SUBSCRIPTION_MUTATION } from '../../gql/plans'
 import PLANS from '../Pricing/prices'
@@ -36,10 +40,12 @@ const ChangeBillingDialog = ({
 
             if (!loading) {
               const neuro = productsWithPlans.find(findNeuroPlan) || []
-              const { amount, interval, id: newId } = neuro.plans.find(
-                ({ name, interval }) =>
-                  name === oldName && interval !== oldInterval,
+              const { amount, interval, id: newId } = getAlternativeBillingPlan(
+                neuro.plans,
+                oldName,
+                oldInterval,
               )
+
               newPlanId = newId
               newPrice = formatPrice(amount)[0]
               yearBillSave = formatPrice(

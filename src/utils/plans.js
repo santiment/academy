@@ -27,3 +27,13 @@ export const getCurrentNeuroSubscription = user => {
 
 export const getBilling = () =>
   client.query({ query: USER_PAYMENTS, fetchPolicy: 'network-only' })
+
+export const getAlternativeBillingPlan = (
+  plans,
+  currentPlan,
+  currentInterval,
+) =>
+  plans.find(
+    ({ name, interval }) =>
+      name === currentPlan && interval !== currentInterval,
+  )

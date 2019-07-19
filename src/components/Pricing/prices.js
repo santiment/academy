@@ -42,7 +42,6 @@ export default {
   ESSENTIAL: {
     title: 'Basic',
     desc: 'Great for short-term analysis and prototyping',
-    discount: '20% off with 200 SAN',
     link: 'Upgrade now',
     Component: PlanActionDialog,
     features: [
@@ -62,7 +61,6 @@ export default {
     title: 'Pro',
     isPopular: true,
     desc: 'Advanced metrics & serious backtesting potential',
-    discount: '20% off with 1000 SAN',
     Component: PlanActionDialog,
     link: 'Upgrade now',
     features: [
@@ -81,7 +79,6 @@ export default {
   PREMIUM: {
     title: 'Premium',
     desc: 'Full historical data and generous rate limits',
-    discount: '20% off with 1000 SAN',
     Component: PlanActionDialog,
     link: 'Upgrade now',
     features: [

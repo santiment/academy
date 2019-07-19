@@ -13,6 +13,7 @@ import {
   findNeuroPlan,
   getCurrentNeuroSubscription,
   formatPrice,
+  getAlternativeBillingPlan,
 } from '../../utils/plans'
 import styles from './index.module.scss'
 
@@ -74,6 +75,20 @@ export default ({ classes = {}, onDialogClose }) => {
                             name,
                             billing,
                           )
+
+                          const { amount: altAmount, interval: altInterval } =
+                            getAlternativeBillingPlan(
+                              neuro.plans,
+                              name,
+                              billing,
+                            ) || {}
+
+                          const [altPrice] = formatPrice(
+                            altAmount,
+                            null,
+                            altInterval,
+                          )
+
                           return (
                             <div
                               className={cx(
@@ -117,7 +132,8 @@ export default ({ classes = {}, onDialogClose }) => {
                                   </span>
                                 </div>
                                 <div className={styles.discount}>
-                                  {card.discount}
+                                  {card.discount ||
+                                    `${altPrice} if billed ${altInterval}ly`}
                                 </div>
                                 {!currentUser ||
                                 sameAsUserPlan ||
