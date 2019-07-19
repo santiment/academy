@@ -1,5 +1,7 @@
 import React from 'react'
+import { navigate } from 'gatsby'
 import { Mutation } from 'react-apollo'
+import cx from 'classnames'
 import Label from '@santiment-network/ui/Label'
 import Button from '@santiment-network/ui/Button'
 import Panel from '@santiment-network/ui/Panel/Panel'
@@ -12,6 +14,8 @@ import { getDateFormats } from '../../utils/dates'
 import PLANS from '../Pricing/prices'
 import { RENEW_SUBSCRIPTION_MUTATION } from '../../gql/plans'
 import styles from './SettingsSubscription.module.scss'
+
+const resetHighlight = () => navigate('/account#subscription')
 
 const PERIOD_END_ACTION = {
   false: 'renew',
@@ -59,24 +63,31 @@ const PlanText = ({ subscription }) => {
   )
 }
 
-const SubscriptionRenewButton = ({ subscription: { id } = {} }) => {
+const SubscriptionRenewButton = ({
+  subscription: { id } = {},
+  isHighlighted,
+}) => {
   return (
     <Mutation mutation={RENEW_SUBSCRIPTION_MUTATION}>
       {(renew, { loading }) => (
-        <Button
-          variant='fill'
-          accent='blue'
-          isLoading={loading}
-          onClick={() => renew({ variables: { id: +id } })}
-        >
-          Renew Subscription
-        </Button>
+        <div className={cx(styles.renew, isHighlighted && styles.highlighted)}>
+          <Button
+            variant='fill'
+            accent='blue'
+            isLoading={loading}
+            onClick={() =>
+              renew({ variables: { id: +id } }).then(resetHighlight)
+            }
+          >
+            Renew Subscription
+          </Button>
+        </div>
       )}
     </Mutation>
   )
 }
 
-const SettingsSubscription = ({ subscription }) => {
+const SettingsSubscription = ({ subscription, shouldHighlightRenew }) => {
   const notCanceled = subscription && !subscription.cancelAtPeriodEnd
 
   const PlanBtn =
@@ -88,7 +99,10 @@ const SettingsSubscription = ({ subscription }) => {
           <div>
             <PlanText subscription={subscription} />
           </div>
-          <PlanBtn subscription={subscription} />
+          <PlanBtn
+            subscription={subscription}
+            isHighlighted={shouldHighlightRenew}
+          />
         </Panel>
       </Settings.Row>
       {notCanceled && (

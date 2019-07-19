@@ -68,71 +68,78 @@ const tabs = [
   },
 ]
 
-export default () => (
-  <Layout isAccountPage classes={styles}>
-    <Query query={CURRENT_USER_QUERY}>
-      {({ loading = true, data }) => {
-        if (loading) {
-          return null
-        }
+export default ({ location: { hash } }) => {
+  const shouldHighlightRenew = hash.includes('renew')
+  return (
+    <Layout isAccountPage classes={styles}>
+      <Query query={CURRENT_USER_QUERY}>
+        {({ loading = true, data }) => {
+          if (loading) {
+            return null
+          }
 
-        if (data && !data.currentUser) {
-          replace('/login/email')
-          return null
-        }
+          if (data && !data.currentUser) {
+            replace('/login/email')
+            return null
+          }
 
-        if (!data.currentUser.privacyPolicyAccepted) {
+          if (!data.currentUser.privacyPolicyAccepted) {
+            return (
+              <Mutation mutation={GDPR_MUTATION}>
+                {(
+                  togglePrivacyPolicy,
+                  {
+                    data: {
+                      updateTermsAndConditions: { privacyPolicyAccepted } = {},
+                    } = {},
+                  },
+                ) => (
+                  <GDPR
+                    togglePrivacyPolicy={togglePrivacyPolicy}
+                    privacyPolicyAccepted={privacyPolicyAccepted}
+                  />
+                )}
+              </Mutation>
+            )
+          }
           return (
-            <Mutation mutation={GDPR_MUTATION}>
-              {(
-                togglePrivacyPolicy,
-                {
-                  data: {
-                    updateTermsAndConditions: { privacyPolicyAccepted } = {},
-                  } = {},
-                },
-              ) => (
-                <GDPR
-                  togglePrivacyPolicy={togglePrivacyPolicy}
-                  privacyPolicyAccepted={privacyPolicyAccepted}
-                />
-              )}
-            </Mutation>
+            <>
+              <h1 className={styles.title}>Account Settings</h1>
+              <Tabs
+                className={styles.tabs}
+                options={tabs}
+                defaultSelectedIndex={1}
+                selectedClassName={styles.tab_selected}
+              />
+              <Mutation
+                mutation={GENERATE_APIKEY_MUTATION}
+                update={updateCache}
+              >
+                {(generateAPIKey, { data: apikeyData }) => (
+                  <Mutation
+                    mutation={REVOKE_APIKEY_MUTATION}
+                    update={updateCache}
+                  >
+                    {(revokeAPIKey, { data: apikeys }) => (
+                      <SettingsAPIKeys
+                        revokeAPIKey={revokeAPIKey}
+                        generateAPIKey={generateAPIKey}
+                        apikeys={data.currentUser.apikeys}
+                      />
+                    )}
+                  </Mutation>
+                )}
+              </Mutation>
+              <SettingsSubscription
+                subscription={getCurrentNeuroSubscription(data.currentUser)}
+                shouldHighlightRenew={shouldHighlightRenew}
+              />
+              <SettingsBilling />
+              <SettingsLogout />
+            </>
           )
-        }
-        return (
-          <>
-            <h1 className={styles.title}>Account Settings</h1>
-            <Tabs
-              className={styles.tabs}
-              options={tabs}
-              defaultSelectedIndex={1}
-              selectedClassName={styles.tab_selected}
-            />
-            <Mutation mutation={GENERATE_APIKEY_MUTATION} update={updateCache}>
-              {(generateAPIKey, { data: apikeyData }) => (
-                <Mutation
-                  mutation={REVOKE_APIKEY_MUTATION}
-                  update={updateCache}
-                >
-                  {(revokeAPIKey, { data: apikeys }) => (
-                    <SettingsAPIKeys
-                      revokeAPIKey={revokeAPIKey}
-                      generateAPIKey={generateAPIKey}
-                      apikeys={data.currentUser.apikeys}
-                    />
-                  )}
-                </Mutation>
-              )}
-            </Mutation>
-            <SettingsSubscription
-              subscription={getCurrentNeuroSubscription(data.currentUser)}
-            />
-            <SettingsBilling />
-            <SettingsLogout />
-          </>
-        )
-      }}
-    </Query>
-  </Layout>
-)
+        }}
+      </Query>
+    </Layout>
+  )
+}

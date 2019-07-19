@@ -7,7 +7,7 @@ const PlanRestrictBtn = ({ sameAsUserPlan, isSubscriptionCanceled }) => {
   const props = sameAsUserPlan
     ? { children: 'Your current plan', disabled: true }
     : isSubscriptionCanceled
-    ? { children: 'Subscription canceled', disabled: true }
+    ? { children: 'Upgrade now', as: Link, to: '/account#subscription?renew' }
     : { children: 'Upgrade now', as: Link, to: '/account' }
   return (
     <Button fluid accent='blue' border className={styles.link} {...props} />

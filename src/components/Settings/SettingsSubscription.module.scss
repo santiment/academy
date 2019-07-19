@@ -1,4 +1,5 @@
 @import '~@santiment-network/ui/mixins';
+@import '~@santiment-network/ui/variables';
 
 .card {
   @include responsive('tablet', 'phone', 'phone-xs') {
@@ -54,4 +55,36 @@
   padding: 0;
   height: auto;
   background: transparent;
+}
+
+.renew {
+  position: relative;
+  z-index: 1;
+}
+
+.highlighted::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+  transform: scale(1.5);
+  background: rgba($dodger-blue, 0.3);
+  border-radius: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.1, 1.4);
+  }
+  50% {
+    transform: scale(1.2, 1.7);
+  }
+  100% {
+    transform: scale(1.1, 1.4);
+  }
 }
