@@ -1,6 +1,6 @@
 import React from 'react'
 import Dialog from '@santiment-network/ui/Dialog'
-import { formatError } from '../../utils/notifications'
+import { formatError, contactAction } from '../../utils/notifications'
 import dialogStyles from '../Dialog.module.scss'
 import styles from './CancellationScreen.module.scss'
 
@@ -56,6 +56,7 @@ const CancellationScreen = ({
                   title: `Error during the cancellation`,
                   description: formatError(e.message),
                   dismissAfter: 5000,
+                  actions: contactAction,
                 }),
               )
           }

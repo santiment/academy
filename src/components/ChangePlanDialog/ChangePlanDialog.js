@@ -7,7 +7,7 @@ import { UPDATE_SUBSCRIPTION_MUTATION } from '../../gql/plans'
 import PLANS from '../Pricing/prices'
 import { formatPrice, getBilling } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
-import { formatError } from '../../utils/notifications'
+import { formatError, contactAction } from '../../utils/notifications'
 import sharedStyles from '../Pricing/index.module.scss'
 import dialogStyles from '../Dialog.module.scss'
 
@@ -78,6 +78,7 @@ const ChangePlanDialog = ({
                           title: `Error during the plan change`,
                           description: formatError(e.message),
                           dismissAfter: 5000,
+                          actions: contactAction,
                         }),
                       )
                   }

@@ -61,7 +61,7 @@ class Notifications extends Component {
                 className={styles.notification}
                 onClose={() => this.remove(notification)}
                 style={{
-                  '--y-offset': `calc(-${i}00% - ${i}0px)`,
+                  '--y-offset': `calc(-${i}00% - ${i}0px - 25px)`,
                 }}
               />
             </CSSTransition>

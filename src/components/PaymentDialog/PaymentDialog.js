@@ -11,7 +11,7 @@ import Loader from '../Loader/Loader'
 import { SUBSCRIBE_MUTATION } from '../../gql/plans'
 import { CURRENT_USER_QUERY } from '../../gql/user'
 import { getBilling } from '../../utils/plans'
-import { formatError } from '../../utils/notifications'
+import { formatError, contactAction } from '../../utils/notifications'
 import styles from './PaymentDialog.module.scss'
 import sharedStyles from '../Pricing/index.module.scss'
 
@@ -136,6 +136,7 @@ const PaymentDialog = ({
                             title: `Error during the payment`,
                             description: formatError(e.message),
                             dismissAfter: 5000,
+                            actions: contactAction,
                           })
                           toggleLoading()
                         })
