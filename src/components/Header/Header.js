@@ -48,7 +48,7 @@ const Header = ({ isAccountPage }) => {
         </Link>
         <a
           className={styles.link}
-          href='mailto:info@santiment.net'
+          href='mailto:support@santiment.net'
           onClick={closeNav}
         >
           Support
