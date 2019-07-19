@@ -22,7 +22,7 @@ const ChangePlanDialog = ({
   planId,
   onDialogClose = () => {},
 }) => {
-  const [oldPrice] = formatPrice(amount)
+  const [oldPrice] = formatPrice(amount, null, interval)
   const { MMMM, DD, YYYY } = getDateFormats(new Date(currentPeriodEnd))
   const date = `${MMMM} ${DD}, ${YYYY}`
 
@@ -45,11 +45,11 @@ const ChangePlanDialog = ({
               title='Plan change'
             >
               <Dialog.ScrollContent withPadding>
-                Your current plan ({PLANS[name].title} {oldPrice}/{interval}) is
+                Your current plan ({PLANS[name].title} {oldPrice}/month) is
                 active until {date}.
                 <br />
-                Are you sure you want to change to the {title} plan ({price}/
-                {billing}) on {date}?
+                Are you sure you want to change to the {title} plan ({price}
+                /month) on {date}?
               </Dialog.ScrollContent>
               <Dialog.Actions>
                 <Dialog.Cancel className={dialogStyles.cancel}>

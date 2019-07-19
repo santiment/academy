@@ -15,7 +15,7 @@ import SettingsSubscription from '../components/Settings/SettingsSubscription'
 import SettingsBilling from '../components/Settings/SettingsBilling'
 import SettingsLogout from '../components/Settings/SettingsLogout'
 import GDPR from '../components/GDPR/GDPR'
-import { getCurrentNeuroSubscription } from '../components/Pricing/utils'
+import { getCurrentNeuroSubscription } from '../utils/plans'
 import styles from './account.module.scss'
 
 const updateCache = (

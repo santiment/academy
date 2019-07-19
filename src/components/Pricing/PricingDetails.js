@@ -4,7 +4,7 @@ import cx from 'classnames'
 import PlanRestrictBtn from './PlanRestrictBtn'
 import PLANS from './prices'
 import DETAILS from './details'
-import { formatPrice } from './utils'
+import { formatPrice } from '../../utils/plans'
 import styles from './PricingDetails.module.scss'
 
 const all = [true, true, true, true, true]

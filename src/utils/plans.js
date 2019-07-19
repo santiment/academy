@@ -1,16 +1,13 @@
 import { client } from '../apollo/client'
 import { USER_PAYMENTS } from '../gql/user'
 
-const BILLING_PRICE_TYPE = {
-  year: '/y',
-  month: '/mo',
-}
-
 export const formatPrice = (price, name, billing) => {
   if (name === 'FREE') return ['$0']
   if (!price) return ['Custom']
 
-  return [`$${parseInt(price / 100, 10)}`, BILLING_PRICE_TYPE[billing]]
+  const devider = 100 * (billing === 'year' ? 12 : 1)
+
+  return [`$${parseInt(price / devider, 10)}`, '/mo']
 }
 
 export const findNeuroPlan = ({ name }) => name === 'SANapi'

@@ -10,15 +10,16 @@ import PlanRestrictBtn from './PlanRestrictBtn'
 import { PLANS_QUERY } from '../../gql/plans'
 import PLANS from './prices'
 import {
-  toggleCardDetails,
   findNeuroPlan,
   getCurrentNeuroSubscription,
   formatPrice,
-} from './utils'
+} from '../../utils/plans'
 import styles from './index.module.scss'
 
+const toggleCardDetails = ({ currentTarget }) =>
+  currentTarget.classList.toggle(styles.card_opened)
+
 const billingOptions = [
-  { index: 'month', content: 'Bill monthly' },
   {
     index: 'year',
     content: (
@@ -27,16 +28,17 @@ const billingOptions = [
       </>
     ),
   },
+  { index: 'month', content: 'Bill monthly' },
 ]
 
 export default ({ classes = {}, onDialogClose }) => {
-  const [billing, setBilling] = React.useState('month')
+  const [billing, setBilling] = React.useState('year')
   return (
     <>
       <div className={cx(styles.billing, classes.billing)}>
         <RadioBtns
           options={billingOptions}
-          defaultSelectedIndex='month'
+          defaultSelectedIndex='year'
           labelOnRight
           onSelect={res => setBilling(res)}
           className={styles.bill}
