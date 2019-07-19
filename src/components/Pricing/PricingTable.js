@@ -149,7 +149,7 @@ export default ({ classes = {}, onDialogClose }) => {
                                     title={card.title}
                                     label={card.link}
                                     price={price}
-                                    billing={billing}
+                                    billing='month'
                                     planId={+id}
                                     subscription={subscription}
                                     onDialogClose={onDialogClose}
