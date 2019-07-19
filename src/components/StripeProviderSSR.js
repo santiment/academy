@@ -7,7 +7,13 @@ class StripeProviderSSR extends React.Component {
     this.state = { stripe: null }
   }
   componentDidMount() {
-    this.setState({ stripe: window.Stripe('pk_test_gy9lndGDPXEFslDp8mJ24C3p') })
+    this.setState({
+      stripe: window.Stripe(
+        window.location.host.includes('-stage')
+          ? 'pk_test_gy9lndGDPXEFslDp8mJ24C3p'
+          : 'pk_live_t7lOPOW79IIVcxjPPK5QfESD',
+      ),
+    })
   }
   render() {
     return (
