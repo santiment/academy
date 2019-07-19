@@ -75,6 +75,7 @@ export default ({ classes = {}, onDialogClose }) => {
                             name,
                             billing,
                           )
+                          const [realPrice] = formatPrice(amount, name)
 
                           const { amount: altAmount, interval: altInterval } =
                             getAlternativeBillingPlan(
@@ -148,8 +149,8 @@ export default ({ classes = {}, onDialogClose }) => {
                                   <card.Component
                                     title={card.title}
                                     label={card.link}
-                                    price={price}
-                                    billing='month'
+                                    price={realPrice}
+                                    billing={billing}
                                     planId={+id}
                                     subscription={subscription}
                                     onDialogClose={onDialogClose}
