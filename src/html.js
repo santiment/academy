@@ -37,6 +37,18 @@ twq('track','PageView');`,
   />
 )
 
+const gtagScript = (
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-100571693-8');`,
+    }}
+  />
+)
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -52,6 +64,11 @@ export default function HTML(props) {
         {intercomScript}
         {hotjarScript}
         {twitterScript}
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=UA-100571693-8'
+        />
+        {gtagScript}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

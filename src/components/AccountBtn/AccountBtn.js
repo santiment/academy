@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import GA from 'react-ga'
 import Icon from '@santiment-network/ui/Icon'
 import Button from '@santiment-network/ui/Button'
 import { Query } from 'react-apollo'
@@ -14,10 +13,7 @@ const btnProps = {
     className: styles.login,
     children: 'Sign up',
     onClick: () => {
-      GA.event({
-        category: 'User',
-        action: `Click on the "Sign up"`,
-      })
+      window.gtag('event', 'sign_up', { method: 'email' })
     },
   },
   true: { className: styles.account, children: <Icon type='profile' /> },

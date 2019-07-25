@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import GA from 'react-ga'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
@@ -102,9 +101,10 @@ const PaymentDialog = ({
                       if (loading) return
                       toggleLoading()
 
-                      GA.event({
-                        category: 'User',
-                        action: 'Payment form submitted',
+                      window.gtag('event', 'begin_checkout', {
+                        currency: 'USD',
+                        value: price.slice(1),
+                        items: title,
                       })
 
                       const form = e.currentTarget
@@ -127,6 +127,13 @@ const PaymentDialog = ({
                             title: `You have successfully upgraded to the "${title}" plan!`,
                             dismissAfter: 5000,
                           })
+
+                          window.gtag('event', 'purchase', {
+                            currency: 'USD',
+                            value: price.slice(1),
+                            items: title,
+                          })
+
                           onDialogClose()
                           return getBilling()
                         })
