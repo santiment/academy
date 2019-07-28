@@ -5,15 +5,21 @@ import styles from './CookiePopup.module.scss'
 
 const COOKIE_POLICY_ACCEPTED = 'COOKIE_POLICY_ACCEPTED'
 
+const getLSItem = key => {
+  if (typeof window === 'undefined') {
+    return
+  }
+
+  return localStorage.getItem(key)
+}
+
 const acceptCookiePolicy = () => {
   window.gtag('event', 'cookie_accept')
   localStorage.setItem(COOKIE_POLICY_ACCEPTED, true)
 }
 
 const CookiePopup = () => {
-  const [shown, setShown] = useState(
-    !localStorage.getItem(COOKIE_POLICY_ACCEPTED),
-  )
+  const [shown, setShown] = useState(!getLSItem(COOKIE_POLICY_ACCEPTED))
 
   function accept() {
     acceptCookiePolicy()
