@@ -170,6 +170,8 @@ export default ({ classes = {}, onDialogClose }) => {
                       plans={neuro.plans}
                       userPlan={userPlan}
                       billing={billing}
+                      subscription={subscription}
+                      onDialogClose={onDialogClose}
                     />
                   </>
                 )

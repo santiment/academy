@@ -9,7 +9,14 @@ import styles from './PricingDetails.module.scss'
 
 const all = [true, true, true, true, true]
 
-export default ({ isLoggedIn, billing, userPlan, plans }) => (
+export default ({
+  isLoggedIn,
+  billing,
+  userPlan,
+  plans,
+  subscription,
+  onDialogClose,
+}) => (
   <table className={styles.table}>
     <tbody>
       <tr className={styles.headers}>
@@ -69,6 +76,8 @@ export default ({ isLoggedIn, billing, userPlan, plans }) => (
                     price={price}
                     planId={+id}
                     billing={billing}
+                    subscription={subscription}
+                    onDialogClose={onDialogClose}
                   />
                 )}
               </td>
