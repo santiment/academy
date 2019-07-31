@@ -26,6 +26,7 @@ export default () => (
         variant='fill'
         accent='blue'
         className={styles.btn}
+        onClick={onGetAccessClick}
       >
         Get access
       </Button>
