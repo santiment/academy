@@ -4,6 +4,13 @@ import Title from '../Title/Title'
 import Button from '@santiment-network/ui/Button'
 import styles from './ReadyToStart.module.scss'
 
+function onGetAccessClick() {
+  window.gtag('event', 'login_action_call', {
+    location: '"Ready to start?" section',
+    text: 'Get access',
+  })
+}
+
 export default () => (
   <section className={styles.wrapper}>
     <div>

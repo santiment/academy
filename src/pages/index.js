@@ -37,6 +37,17 @@ const lines = code.split(`\n`).map((line, i) => {
   return `<span class="code__number">${i + 1}</span>${formatted}`
 })
 
+function onGetAccessClick() {
+  window.gtag('event', 'login_action_call', {
+    location: 'Main section',
+    text: 'Get access',
+  })
+}
+
+function onDocumentationClick() {
+  window.gtag('event', 'documentation_clicked')
+}
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Santiment's Neuro - Crypto’s Most Comprehensive API" />
@@ -57,6 +68,7 @@ const IndexPage = () => (
           className={styles.access}
           variant='fill'
           accent='blue'
+          onClick={onGetAccessClick}
         >
           Get access
         </Button>
@@ -65,6 +77,7 @@ const IndexPage = () => (
           className={styles.doc}
           target='_blank'
           rel='noopener noreferrer'
+          onClick={onDocumentationClick}
         >
           Documentation <Icon type='arrow-right' className={styles.doc__icon} />
         </a>
