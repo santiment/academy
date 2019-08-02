@@ -13,7 +13,10 @@ const btnProps = {
     className: styles.login,
     children: 'Sign up',
     onClick: () => {
-      window.gtag('event', 'sign_up', { method: 'email' })
+      window.gtag('event', 'login_action_call', {
+        location: 'Navbar',
+        text: 'Sign up',
+      })
     },
   },
   true: { className: styles.account, children: <Icon type='profile' /> },

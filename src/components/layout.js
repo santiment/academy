@@ -14,6 +14,7 @@ import Intercom from './Intercom'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Notifications from './Notifications/Notifications'
+import CookiePopup from './CookiePopup/CookiePopup'
 import styles from './layout.module.scss'
 import Helmet from 'react-helmet'
 
@@ -40,6 +41,7 @@ const Layout = ({ children, isAccountPage, classes = {} }) => (
           <Footer />
         </div>
       </Notifications>
+      <CookiePopup />
     </Intercom>
   </StripeProviderSSR>
 )
