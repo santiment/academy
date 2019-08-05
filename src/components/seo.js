@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import neuro from "../images/neuro.png"
+import neuro from "../images/neuro-square.png"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -76,6 +76,18 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:image`,
           content: imageUrl,
+        },
+        {
+          name: `twitter:image:alt`,
+          content: "neuro",
+        },
+        {
+          name: `og:image:width`,
+          content: 810,
+        },
+        {
+          name: `og:image:height`,
+          content: 810,
         }
       ].concat(meta)}
     />
