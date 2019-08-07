@@ -10,7 +10,8 @@ export const formatPrice = (price, name, billing) => {
   return [`$${parseInt(price / devider, 10)}`, '/mo']
 }
 
-export const findNeuroPlan = ({ name }) => name === 'SANapi'
+export const apiProductId = "1"
+export const findNeuroPlan = ({ id }) => id === apiProductId
 
 export const getCurrentNeuroSubscription = user => {
   if (!user) return
@@ -19,9 +20,9 @@ export const getCurrentNeuroSubscription = user => {
   return subs.find(
     ({
       plan: {
-        product: { name },
+        product: { id },
       },
-    }) => name === 'SANapi',
+    }) => id === apiProductId,
   )
 }
 
