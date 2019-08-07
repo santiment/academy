@@ -10,7 +10,7 @@ export const formatPrice = (price, name, billing) => {
   return [`$${parseInt(price / devider, 10)}`, '/mo']
 }
 
-export const apiProductId = 1
+export const apiProductId = "1"
 export const findNeuroPlan = ({ id }) => id === apiProductId
 
 export const getCurrentNeuroSubscription = user => {
