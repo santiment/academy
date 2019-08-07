@@ -17,6 +17,7 @@ const userDataFragment = gql`
         amount
         interval
         product {
+          id
           name
         }
       }

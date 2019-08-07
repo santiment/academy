@@ -3,6 +3,7 @@ import gql from 'graphql-tag'
 export const PLANS_QUERY = gql`
   query productsWithPlans {
     productsWithPlans {
+      id
       name
       plans {
         id
@@ -26,6 +27,7 @@ export const SUBSCRIBE_MUTATION = gql`
         amount
         interval
         product {
+          id
           name
         }
       }
@@ -45,6 +47,7 @@ export const UPDATE_SUBSCRIPTION_MUTATION = gql`
         amount
         interval
         product {
+          id
           name
         }
       }
