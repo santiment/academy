@@ -30,7 +30,7 @@
   margin-bottom: 16px;
   user-select: none;
 
-  &:global(.opened) {
+  .opened {
     box-shadow: 0px 20px 50px rgba(24, 27, 43, 0.08);
   }
 
