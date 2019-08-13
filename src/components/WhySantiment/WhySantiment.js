@@ -101,7 +101,7 @@ const whys = [
       'On-chain data is collected directly from running nodes, not 3rd parties, making it faster and more reliable, by eliminating another potential point of failure.',
   },
   {
-    title: 'Global scaling',
+    title: 'Python library',
     icon: (
       <svg
         width='83'
@@ -195,7 +195,13 @@ const whys = [
     ),
     desc: (
       <>
-        Use GraphQL for freedom and flexibility, or SanPy, our custom Python
+        Use GraphQL for freedom and flexibility, or{' '}
+        <a
+          href='https://github.com/santiment/sanpy'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={styles.link}
+        >SanPy</a>, our custom Python
         wrapper that is ideal for data scientists. Our{' '}
         <a
           href='https://github.com/santiment/san-sdk'
@@ -210,7 +216,7 @@ const whys = [
     ),
   },
   {
-    title: 'Python library',
+    title: 'Global scaling',
     icon: (
       <svg
         width='86'
