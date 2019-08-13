@@ -44,17 +44,29 @@
     fill: var(--waterloo);
     min-width: 15px;
 
-    :global(.opened) & {
+    .opened {
       fill: var(--dodger-blue);
       transform: rotate(180deg);
     }
   }
 
   &__text {
-    @include text('body-2');
+    @include text("body-2");
 
-    :global(.opened) & {
+    .opened {
       color: var(--dodger-blue);
+    }
+  }
+
+  @include responsive("laptop", "desktop") {
+    &:hover {
+      .question__arrow {
+        fill: var(--dodger-blue);
+      }
+
+      .question__text {
+        color: var(--dodger-blue);
+      }
     }
   }
 
@@ -65,12 +77,22 @@
     & * {
       font-size: 14px;
     }
-
-    :global(.opened) & {
-      display: block;
-    }
   }
 }
+
+.opened {
+  .question__answer {
+    display: block;
+  }
+  .question__text {
+    color: var(--dodger-blue);
+  }
+  .question__arrow {
+    fill: var(--dodger-blue);
+    transform: rotate(180deg);
+  }
+}
+
 .heading {
   margin: 30px 0 20px;
   font-size: 18px;
@@ -85,18 +107,27 @@
   }
 }
 
-.text {
+.text,
+.item {
   margin-bottom: 20px;
 
   a {
     color: var(--dodger-blue);
     &:hover {
-      color: var(--dodger-blue-hover);
       text-decoration: underline;
     }
+  }
+
+  b {
+    font-weight: 700;
+    margin: 0 1px;
   }
 
   &:last-child {
     margin: 0;
   }
+}
+
+.item {
+  margin-bottom: 6px;
 }
