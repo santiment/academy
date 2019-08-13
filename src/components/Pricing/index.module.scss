@@ -214,3 +214,52 @@
     margin: 0;
   }
 }
+
+
+.sanTokens {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  color: var(--dodger-blue);
+  padding: 7px;
+}
+
+.tooltip {
+  max-width: 550px;
+  a {
+    color: var(--dodger-blue);
+  }
+}
+
+.tooltipTrigger {
+  @include responsive('phone', 'phone-xs') {
+    width: 70%;
+    text-align: center;
+  }
+}
+
+.icon {
+  margin: 0 0 -3px 6px;
+  color: var(--dodger-blue);
+  fill: var(--dodger-blue);
+}
+
+.text {
+  margin: 25px 0;
+
+  &:first-child {
+    margin-top: 5px;
+  }
+
+  &:last-child {
+    margin-bottom: 5px;
+  }
+}
+
+.list {
+
+}
+
+.item {
+  margin: 7px 0;
+}

@@ -1,41 +1,109 @@
-import React from 'react'
-import { Query } from 'react-apollo'
-import cx from 'classnames'
-import RadioBtns from '@santiment-network/ui/RadioBtns'
-import Label from '@santiment-network/ui/Label'
-import { CURRENT_USER_QUERY } from '../../gql/user'
-import Features from '../Features/Features'
-import PricingDetailsToggle from './PricingDetailsToggle.js'
-import PlanRestrictBtn from './PlanRestrictBtn'
-import { PLANS_QUERY } from '../../gql/plans'
-import PLANS from './prices'
+import React from "react"
+import { Query } from "react-apollo"
+import cx from "classnames"
+import RadioBtns from "@santiment-network/ui/RadioBtns"
+import Label from "@santiment-network/ui/Label"
+import Icon from "@santiment-network/ui/Icon"
+import Tooltip from "@santiment-network/ui/Tooltip"
+import Panel from "@santiment-network/ui/Panel/Panel"
+import { CURRENT_USER_QUERY } from "../../gql/user"
+import Features from "../Features/Features"
+import PricingDetailsToggle from "./PricingDetailsToggle.js"
+import PlanRestrictBtn from "./PlanRestrictBtn"
+import { PLANS_QUERY } from "../../gql/plans"
+import PLANS from "./prices"
 import {
   findNeuroPlan,
   getCurrentNeuroSubscription,
   formatPrice,
   getAlternativeBillingPlan,
-} from '../../utils/plans'
-import styles from './index.module.scss'
+} from "../../utils/plans"
+import styles from "./index.module.scss"
 
 const toggleCardDetails = ({ currentTarget }) =>
   currentTarget.classList.toggle(styles.card_opened)
 
 const billingOptions = [
   {
-    index: 'year',
+    index: "year",
     content: (
       <>
         Bill yearly <Label accent='waterloo'>(save 10%)</Label>
       </>
     ),
   },
-  { index: 'month', content: 'Bill monthly' },
+  { index: "month", content: "Bill monthly" },
 ]
 
 export default ({ classes = {}, onDialogClose }) => {
-  const [billing, setBilling] = React.useState('year')
+  const [billing, setBilling] = React.useState("year")
   return (
     <>
+      <div className={styles.sanTokens}>
+        <Tooltip
+          trigger={
+            <div className={styles.tooltipTrigger}>
+              <span>
+                Holding 1000 SAN tokens will result in a 20% discount on all
+                plans
+              </span>
+              <Icon type='question-round' className={styles.icon} />
+            </div>
+          }
+        >
+          <Panel padding className={styles.tooltip}>
+            <p className={styles.text}>
+              <b>Here’s how to claim the SAN holding discount:</b>
+            </p>
+            <ul className={styles.list}>
+              <li className={styles.item}>
+                - Buy 1000 or more SAN tokens (
+                <a
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  href='https://help.santiment.net/en/articles/2542674-how-to-buy-san'
+                >
+                  here's how
+                </a>
+                )
+              </li>
+              <li className={styles.item}>
+                - Log in to SANbase (
+                <a
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  href='https://app.santiment.net/'
+                >
+                  https://app.santiment.net/
+                </a>
+                ). If you don’t have a SANbase account, you can create one with
+                email or MetaMask{" "}
+              </li>
+              <li className={styles.item}>
+                - After logging in to SANbase, head to{" "}
+                <a
+                  rel='noopener noreferrer'
+                  target='_blank'
+                  href='https://app.santiment.net/account'
+                >
+                  Account settings
+                </a>{" "}
+                and connect your account with your MetaMask wallet
+              </li>
+              <li className={styles.item}>- Refresh this page and proceed with your purchase</li>
+              <li className={styles.item}>
+                - Our system checks your SANbase account for 1000+ SAN during the
+                checkout, and automatically applies a 20% discount
+              </li>
+            </ul>
+            <p className={styles.text}>
+              <b>Note:</b> To claim the 20% discount, you just need to hold/HODL
+              enough SAN. The tokens still belong to you - our system simply
+              checks if you have them in your wallet
+            </p>
+          </Panel>
+        </Tooltip>
+      </div>
       <div className={cx(styles.billing, classes.billing)}>
         <RadioBtns
           options={billingOptions}
@@ -65,15 +133,16 @@ export default ({ classes = {}, onDialogClose }) => {
                       {neuro.plans
                         .filter(
                           ({ name, interval }) =>
-                            interval === billing || name === 'FREE',
+                            interval === billing || name === "FREE"
                         )
+                        .sort(({ id: a }, { id: b }) => a - b)
                         .map(({ id, name, amount }) => {
                           const card = PLANS[name]
                           const sameAsUserPlan = id === userPlan
                           const [price, priceType] = formatPrice(
                             amount,
                             name,
-                            billing,
+                            billing
                           )
                           const [realPrice] = formatPrice(amount, name)
 
@@ -81,13 +150,13 @@ export default ({ classes = {}, onDialogClose }) => {
                             getAlternativeBillingPlan(
                               neuro.plans,
                               name,
-                              billing,
+                              billing
                             ) || {}
 
                           const [altPrice] = formatPrice(
                             altAmount,
                             null,
-                            altInterval,
+                            altInterval
                           )
 
                           return (
@@ -96,7 +165,7 @@ export default ({ classes = {}, onDialogClose }) => {
                                 styles.card,
                                 classes.card,
                                 card.isPopular && styles.card_popular,
-                                sameAsUserPlan && styles.card_active,
+                                sameAsUserPlan && styles.card_active
                               )}
                               key={card.title}
                               onClick={toggleCardDetails}
