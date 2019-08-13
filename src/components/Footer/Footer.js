@@ -83,12 +83,13 @@ const Footer = () => (
         {categories.map(({ title, links }) => (
           <li key={title} className={styles.category}>
             <h4 className={styles.category__title}>{title}</h4>
-            {links.map((link, i) => (
+            {links.map(({children, href}, i) => (
               <a
                 key={i}
                 target='_blank'
                 rel='noopener noreferrer'
-                {...link}
+                children={children}
+                href={href}
                 className={cx(styles.text, styles.category__item)}
               />
             ))}
