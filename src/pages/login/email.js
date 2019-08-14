@@ -35,7 +35,8 @@ export default () => {
               <>
                 <h3 className={styles.email__subtitle}>
                   Enter your email and you'll receive a link to your API key
-                  (email titled: Sanbase Login Link).
+                  <br/>
+                  (email from <b>Santiment Neuro</b> with title: <b>Login link</b>).
                 </h3>
                 <form
                   className={styles.email__form}
