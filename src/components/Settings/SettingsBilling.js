@@ -1,12 +1,12 @@
-import React from 'react'
-import cx from 'classnames'
-import Label from '@santiment-network/ui/Label'
-import { Query } from 'react-apollo'
-import Settings from './Settings'
-import { USER_PAYMENTS } from '../../gql/user'
-import { getDateFormats } from '../../utils/dates'
-import { formatPrice } from '../../utils/plans'
-import styles from './SettingsBilling.module.scss'
+import React from "react"
+import cx from "classnames"
+import Label from "@santiment-network/ui/Label"
+import { Query } from "react-apollo"
+import Settings from "./Settings"
+import { USER_PAYMENTS } from "../../gql/user"
+import { getDateFormats } from "../../utils/dates"
+import { formatPrice } from "../../utils/plans"
+import styles from "./SettingsBilling.module.scss"
 
 const BillingTable = ({ payments }) => {
   return (
@@ -44,23 +44,21 @@ const BillingTable = ({ payments }) => {
 const SettingsBilling = () => {
   return (
     <Query query={USER_PAYMENTS}>
-      {({ data: { payments = [] } }) => {
-        return (
-          payments.length > 0 && (
-            <Settings id='billing' header='Billing'>
-              <Settings.Row className={styles.row}>
-                <div>
-                  Billing history
-                  <br />
-                  <Label accent='waterloo'>
-                    History for all payments made on your SANbase account
-                  </Label>
-                </div>
-                <BillingTable payments={payments} />
-              </Settings.Row>
-            </Settings>
-          )
-        )
+      {({ data = {} }) => {
+        return data.payments && data.payments.length > 0 ? (
+          <Settings id='billing' header='Billing'>
+            <Settings.Row className={styles.row}>
+              <div>
+                Billing history
+                <br />
+                <Label accent='waterloo'>
+                  History for all payments made on your SANbase account
+                </Label>
+              </div>
+              <BillingTable payments={data.payments} />
+            </Settings.Row>
+          </Settings>
+        ) : null
       }}
     </Query>
   )

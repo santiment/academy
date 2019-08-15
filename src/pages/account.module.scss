@@ -20,6 +20,10 @@
   @include text('h3');
 }
 
+.email {
+  @include text('body-2');
+}
+
 .tabs {
   margin: 25px 0;
   width: 100%;
