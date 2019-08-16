@@ -1,0 +1,135 @@
+@import '~@santiment-network/ui/mixins.scss';
+
+.pic {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  background-size: cover;
+  box-shadow: 0px 6px 20px rgba(56, 74, 167, 0.15);
+  --scale-from: 1;
+  --scale-to: 1;
+  --radius: 0;
+  --x: 0;
+  --y: 0;
+
+
+
+  @include responsive('phone', 'phone-xs', 'tablet') {
+    display: none;
+  }
+
+  &_dima {
+    width: 40px;
+    height: 40px;
+    top: 10%;
+    left: 20%;
+    background-image: url('./dima.jpeg');
+    animation: moving 7s infinite ease-in-out;
+    --x: 2px;
+    --y: 6px;
+  }
+
+  &_ibis {
+    width: 36px;
+    height: 36px;
+    top: 40%;
+    left: 0;
+    background-image: url('./ibis.jpg');
+    animation: moving 10s infinite ease-in-out;
+    --x: 5px;
+    --y: 9px;
+    --scale-to: 1.4;
+    --radius: -10deg;
+  }
+
+  &_nasty {
+    width: 32px;
+    height: 32px;
+    top: 4%;
+    right: 16%;
+    background-image: url('./nasty.jpg');
+    animation: moving 6s infinite ease-in-out;
+    --x: 11px;
+    --y: 0;
+    --radius: 15deg;
+  }
+
+  &_nemo {
+    width: 28px;
+    height: 28px;
+    bottom: 13%;
+    right: 0;
+    background-image: url('./nemo.jpeg');
+    animation: moving 8s infinite ease-in-out;
+    --x: 4px;
+    --y: -9px;
+    --scale-to: 1.6;
+    --radius: 22deg;
+  }
+
+  &_garry {
+    width: 48px;
+    height: 48px;
+    bottom: 30%;
+    right: 15%;
+    background-image: url('./garry.jpeg');
+    animation: moving 6s infinite ease-in-out;
+    --x: 0;
+    --y: -9px;
+    --radius: 5deg;
+  }
+
+  &_yura {
+    width: 50px;
+    height: 50px;
+    bottom: 20%;
+    left: 5%;
+    background-image: url('./yura.jpeg');
+    animation: moving 8s infinite ease-in-out;
+    --x: 5px;
+    --y: -5px;
+  }
+
+  &_thumbs_up {
+    top: 35%;
+    right: 3%;
+    box-shadow: none;
+    animation: moving 4s infinite ease-in-out;
+    transform-origin: 0 100%;
+    --radius: -10deg;
+    --scale-to: 1.4;
+    --scale-from: 1.4;
+
+    &::before {
+      content: '👍'
+    }
+  }
+
+  &_hand {
+    bottom: 45%;
+    left: 15%;
+    box-shadow: none;
+    animation: moving 6s infinite ease-in-out;
+    transform-origin: 100% 100%;
+    --radius: 20deg;
+    --scale-to: 1.4;
+    --scale-from: 1.4;
+
+    &::before {
+      content: ' 👋'
+    }
+  }
+}
+
+@keyframes moving {
+  0% {
+    transform: translateY(0) scale(var(--scale-from)) rotate(0deg);
+  }
+  50% {
+    transform: translate(var(--x), var(--y)) scale(var(--scale-to)) rotate(var(--radius));
+  }
+
+  100% {
+    transform: translateY(0) scale(var(--scale-from)) rotate(0deg);
+  }
+}
