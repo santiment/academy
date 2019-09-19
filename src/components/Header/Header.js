@@ -1,10 +1,10 @@
 import React, { useRef } from 'react'
-import { Link } from 'gatsby'
 import Icon from '@santiment-network/ui/Icon'
+import { injectIntl, Link } from 'gatsby-plugin-intl'
 import styles from './Header.module.scss'
 import AccountBtn from '../AccountBtn/AccountBtn'
 
-const Header = ({ isAccountPage }) => {
+const Header = ({ isAccountPage, intl }) => {
   const toggle = useRef(null)
 
   const closeNav = () => {
@@ -40,22 +40,22 @@ const Header = ({ isAccountPage }) => {
         <label htmlFor='hamburger' className={styles.close}>
           <Icon type='close' />
         </label>
-        <Link className={styles.link} to='/#pricing' onClick={closeNav}>
-          Pricing
-        </Link>
         <Link className={styles.link} to='/#use-cases' onClick={closeNav}>
-          Use cases
+          {intl.formatMessage({ id: 'header.use_cases' })}
+        </Link>
+        <Link className={styles.link} to='/#pricing' onClick={closeNav}>
+          {intl.formatMessage({ id: 'header.pricing' })}
         </Link>
         <a
           className={styles.link}
           href='mailto:support@santiment.net'
           onClick={closeNav}
         >
-          Support
+          {intl.formatMessage({ id: 'header.support' })}
         </a>
         <AccountBtn isAccountPage={isAccountPage} onClick={closeNav} />
       </nav>
     </header>
   )
 }
-export default Header
+export default injectIntl(Header)

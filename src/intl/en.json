@@ -1,0 +1,21 @@
+{
+  "header.metrics": "Metrics",
+  "header.use_cases": "Use cases",
+  "header.pricing": "Pricing",
+  "header.support": "Support",
+  "main.comprehensive": "Comprehensive",
+  "main.crypto_api": "crypto API",
+  "main.description": "Get 100% custom-built and unique terabytes of processed on-chain, social, github and fundamental data sets",
+  "main.get_access": "Get access",
+  "main.documentation": "Documentation",
+  "main.data": "data gathered",
+  "why.title": "Made for Developers",
+  "why.subtitle.upper": "Average response time is 3 seconds.",
+  "why.subtitle.bottom": "Blockchain transactions are added in less than 5 minutes",
+  "why.reason.always.title": "Always improving",
+  "why.reason.always.desc": "On-chain data is collected directly from running nodes, not 3rd parties, making it faster and more reliable, by eliminating another potential point of failure",
+  "why.reason.global.title": "Global scaling",
+  "why.reason.global.desc": "Use GraphQL for freedom and flexibility, or SanPy, our custom Python wrapper that is ideal for data scientists. Our SanSDK in GitHub includes examples for Ruby",
+  "why.reason.python.title": "Python library",
+  "why.reason.python.desc": "The SanAPI is SSL-encrypted (signed API requests, generated key) and low-latency. Our robust CDN connects you to the API server closest to you"
+}

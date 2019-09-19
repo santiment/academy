@@ -1,11 +1,12 @@
 import React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import Title from '../Title/Title'
 import Subtitle from '../Subtitle/Subtitle'
 import styles from './WhySantiment.module.scss'
 
 const whys = [
   {
-    title: 'Always improving',
+    reason: 'always',
     icon: (
       <svg
         width='83'
@@ -96,12 +97,9 @@ const whys = [
         />
       </svg>
     ),
-
-    desc:
-      'On-chain data is collected directly from running nodes, not 3rd parties, making it faster and more reliable, by eliminating another potential point of failure.',
   },
   {
-    title: 'Global scaling',
+    reason: 'global',
     icon: (
       <svg
         width='83'
@@ -193,24 +191,9 @@ const whys = [
         <circle cx='43' cy='44' r='7' stroke='#181B2B' strokeWidth='2' />
       </svg>
     ),
-    desc: (
-      <>
-        Use GraphQL for freedom and flexibility, or SanPy, our custom Python
-        wrapper that is ideal for data scientists. Our{' '}
-        <a
-          href='https://github.com/santiment/san-sdk'
-          target='_blank'
-          rel='noopener noreferrer'
-          className={styles.link}
-        >
-          SanSDK in GitHub
-        </a>{' '}
-        includes examples for Ruby, R and more soon!
-      </>
-    ),
   },
   {
-    title: 'Python library',
+    reason: 'python',
     icon: (
       <svg
         width='86'
@@ -319,30 +302,29 @@ const whys = [
         />
       </svg>
     ),
-    desc:
-      'The SanAPI is SSL-encrypted (signed API requests, generated API Key) and low-latency. Our robust CDN connects you to the API server closest to you.',
   },
 ]
 
-export default () => (
+export default injectIntl(({ intl }) => (
   <section>
-    <Title>Made for Developers</Title>
+    <Title>{intl.formatMessage({ id: 'why.title' })}</Title>
     <Subtitle className={styles.subtitle}>
-      Average response time is 3 seconds.
+      {intl.formatMessage({ id: 'why.subtitle.upper' })}
       <br />
-      Blockchain transactions are added in less than 5 minutes
+      {intl.formatMessage({ id: 'why.subtitle.bottom' })}
     </Subtitle>
 
     <ul className={styles.whys}>
-      {whys.map(({ title, icon, desc }) => (
-        <li className={styles.why} key={title}>
+      {whys.map(({ type, icon }) => (
+        <li className={styles.why} key={type}>
           <Title className={styles.why__title} small>
-            {icon}
-            {title}
+            {intl.formatMessage({ id: `why.reason.${type}.title` })}
           </Title>
-          <Subtitle className={styles.why__desc}>{desc}</Subtitle>
+          <Subtitle className={styles.why__desc}>
+            {intl.formatMessage({ id: `why.reason.${type}.desc` })}
+          </Subtitle>
         </li>
       ))}
     </ul>
   </section>
-)
+))

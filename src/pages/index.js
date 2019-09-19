@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { injectIntl, Link } from 'gatsby-plugin-intl'
 import Icon from '@santiment-network/ui/Icon'
 import Button from '@santiment-network/ui/Button'
 import Layout from '../components/layout'
@@ -48,19 +48,20 @@ function onDocumentationClick() {
   window.gtag('event', 'documentation_clicked')
 }
 
-const IndexPage = () => (
+const IndexPage = ({ intl }) => (
   <Layout>
     <SEO title="Santiment's Neuro - Crypto’s Most Comprehensive API" />
     <section className={styles.wrapper}>
       <div>
         <h1 className={styles.title}>
-          Comprehensive
+          {intl.formatMessage({ id: 'main.comprehensive' })}
           <br />
-          <span className={styles.title__mark}>crypto API</span>
+          <span className={styles.title__mark}>
+            {intl.formatMessage({ id: 'main.crypto_api' })}
+          </span>
         </h1>
         <h2 className={styles.desc}>
-          Get 100% custom-built and unique terabytes of processed on-chain,
-          social, github and fundamental data sets
+          {intl.formatMessage({ id: 'main.description' })}
         </h2>
         <Button
           as={Link}
@@ -70,7 +71,7 @@ const IndexPage = () => (
           accent='blue'
           onClick={onGetAccessClick}
         >
-          Get access
+          {intl.formatMessage({ id: 'main.get_access' })}
         </Button>
         <a
           href='https://help.santiment.net/metrics-explained#api'
@@ -79,7 +80,8 @@ const IndexPage = () => (
           rel='noopener noreferrer'
           onClick={onDocumentationClick}
         >
-          Documentation <Icon type='arrow-right' className={styles.doc__icon} />
+          {intl.formatMessage({ id: 'main.documentation' })}
+          <Icon type='arrow-right' className={styles.doc__icon} />
         </a>
       </div>
 
@@ -100,7 +102,9 @@ const IndexPage = () => (
         </ol>
         <div className={styles.gathered}>
           <h3 className={styles.gathered__percent}>78.6 %</h3>
-          <h4 className={styles.gathered__label}>data gathered</h4>
+          <h4 className={styles.gathered__label}>
+            {intl.formatMessage({ id: 'main.data' })}
+          </h4>
         </div>
       </div>
     </section>
@@ -114,4 +118,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default injectIntl(IndexPage)
