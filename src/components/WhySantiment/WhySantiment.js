@@ -315,13 +315,14 @@ export default injectIntl(({ intl }) => (
     </Subtitle>
 
     <ul className={styles.whys}>
-      {whys.map(({ type, icon }) => (
-        <li className={styles.why} key={type}>
+      {whys.map(({ reason, icon }) => (
+        <li className={styles.why} key={reason}>
           <Title className={styles.why__title} small>
-            {intl.formatMessage({ id: `why.reason.${type}.title` })}
+            {icon}
+            {intl.formatMessage({ id: `why.reason.${reason}.title` })}
           </Title>
           <Subtitle className={styles.why__desc}>
-            {intl.formatMessage({ id: `why.reason.${type}.desc` })}
+            {intl.formatMessage({ id: `why.reason.${reason}.desc` })}
           </Subtitle>
         </li>
       ))}

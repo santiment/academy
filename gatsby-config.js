@@ -13,7 +13,7 @@ module.exports = {
         // supported language
         languages: [`en`, `ja`],
         // language file path
-        defaultLanguage: `ja`,
+        defaultLanguage: `en`,
         // option to redirect to `/ko` when connecting `/`
         redirect: true,
       },
