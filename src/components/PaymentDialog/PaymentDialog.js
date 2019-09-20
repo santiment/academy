@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
@@ -11,8 +12,8 @@ import { SUBSCRIBE_MUTATION } from '../../gql/plans'
 import { CURRENT_USER_QUERY } from '../../gql/user'
 import { getBilling } from '../../utils/plans'
 import { formatError, contactAction } from '../../utils/notifications'
-import styles from './PaymentDialog.module.scss'
 import { tr } from '../../utils/translate'
+import styles from './PaymentDialog.module.scss'
 import sharedStyles from '../Pricing/index.module.scss'
 
 function useFormLoading() {
@@ -50,6 +51,7 @@ const getTokenDataByForm = form => {
 }
 
 const PaymentDialog = ({
+  intl,
   title,
   billing,
   label,
@@ -90,9 +92,13 @@ const PaymentDialog = ({
             {(subscribe, { called, error, data }) => {
               return (
                 <Dialog
-                  title={`${tr('payment.title.left')}"${title}"${tr(
-                    'payment.title.right',
-                  )}(${price}${tr('billing.' + billing)})`}
+                  title={`${intl.formatMessage({
+                    id: 'payment.title.left',
+                  })}"${title}"${intl.formatMessage({
+                    id: 'payment.title.right',
+                  })}(${price}${intl.formatMessage({
+                    id: 'billing.' + billing,
+                  })})`}
                   classes={{ dialog: sharedStyles.dialog }}
                   open={paymentVisible}
                   onClose={hidePayment}
@@ -188,7 +194,7 @@ const PaymentDialog = ({
   )
 }
 
-const InjectedForm = injectStripe(PaymentDialog)
+const InjectedForm = injectIntl(injectStripe(PaymentDialog))
 
 export default props => (
   <Elements>

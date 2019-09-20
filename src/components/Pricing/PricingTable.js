@@ -1,4 +1,5 @@
 import React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Query } from 'react-apollo'
 import cx from 'classnames'
 import RadioBtns from '@santiment-network/ui/RadioBtns'
@@ -18,7 +19,7 @@ import {
   formatPrice,
   getAlternativeBillingPlan,
 } from '../../utils/plans'
-import { tr } from '../../utils/translate'
+import { tr, trStr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 const toggleCardDetails = ({ currentTarget }) =>
@@ -37,7 +38,7 @@ const billingOptions = [
   { index: 'month', content: tr('pricing.bill.month') },
 ]
 
-export default ({ classes = {}, onDialogClose }) => {
+export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
   const [billing, setBilling] = React.useState('year')
   return (
     <>
@@ -166,7 +167,7 @@ export default ({ classes = {}, onDialogClose }) => {
                             altInterval,
                           )
 
-                          const title = tr(intlId + '.title')
+                          const title = trStr(intl, intlId + '.title')
 
                           return (
                             <div
@@ -270,4 +271,4 @@ export default ({ classes = {}, onDialogClose }) => {
       </Query>
     </>
   )
-}
+})
