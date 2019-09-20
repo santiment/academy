@@ -215,5 +215,19 @@
   "faq.slug": "What is a ‘slug’ - and where can I find a list of them?",
   "faq.slug.left": "‘slug’ is a parameter that most API endpoints share; it acts as a unique identifier for a project or asset. Check out this query to find all available slugs ",
   "faq.slug.link": "here",
-  "faq.slug.right": "."
+  "faq.slug.right": ".",
+
+  "pricing.discount": "Holding 1000 SAN tokens will result in a 20% discount on all plans",
+  "pricing.discount.expl": "Here’s how to claim the SAN holding discount:",
+  "pricing.discount.step.buy": "Buy 1000 or more SAN tokens ",
+  "pricing.discount.step.buy.link": "here's how",
+  "pricing.discount.step.login.left": "Log in to SANbase ",
+  "pricing.discount.step.login.right": "If you don’t have a SANbase account, you can create one with email or MetaMask",
+  "pricing.discount.step.settings.left":"After logging in to SANbase, head to ",
+  "pricing.discount.step.settings.link":"Account Settings",
+  "pricing.discount.step.settings.right":" and connect your account with your MetaMask wallet",
+  "pricing.discount.step.refresh":"Refresh this page and proceed with your purchase",
+  "pricing.discount.step.system":"Our system checks your SANbase account for 1000+ SAN during the checkout, and automatically applies a 20% discount",
+  "pricing.discount.note":"Note"
+  "pricing.discount.note.text":"To claim the 20% discount, you just need to hold/HODL enough SAN. The tokens still belong to you - our system simply checks if you have them in your wallet"
 }

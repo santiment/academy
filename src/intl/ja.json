@@ -216,5 +216,19 @@
   "faq.slug": "「slug」とは何ですか？どこにその一覧がありますか？",
   "faq.slug.left": "slug」とは、ほとんどのAPI端末がシェアするパラメーターです。プロジェクトやアセットでの一意識別子として機能します。",
   "faq.slug.link": "こちら",
-  "faq.slug.right": "から利用可能なSlugをチェックしましょう。"
+  "faq.slug.right": "から利用可能なSlugをチェックしましょう。",
+
+  "pricing.discount": "1000SANトークンで、全てのプランが20％オフでご利用いただけます",
+  "pricing.discount.expl": "SANトークンを下記方法で、ご利用ください。",
+  "pricing.discount.step.buy": "SANを1000トークン以上ご購入ください",
+  "pricing.discount.step.buy.link": "ご購入方法はこちら",
+  "pricing.discount.step.login.left": "SANベースにログインしてください",
+  "pricing.discount.step.login.right": "SANベースアカウントをお持ちでない場合、メールアドレスもしくはMetaMaskにてご登録いただけます。",
+  "pricing.discount.step.settings.left":"SANベースにログインしたら、",
+  "pricing.discount.step.settings.link":"Account settings（アカウント設定）",
+  "pricing.discount.step.settings.right":"に行き、アカウントとMetaMaskウォレットをリンクさせます。",
+  "pricing.discount.step.refresh":"このページを更新して、ご購入手続きを完了してください。",
+  "pricing.discount.step.system":"SANベースアカウントに、1000以上のSANトークンが確認されると、自動的に20％オフが適用されます。",
+  "pricing.discount.note":"ご注意",
+  "pricing.discount.note.text":"20％オフを適用するには、1000以上のSANトークンをホールドする必要があります。あなたのウォレットに必要なトークンがあるか、システムで確認されます。"
 }

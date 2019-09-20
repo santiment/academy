@@ -45,32 +45,29 @@ export default ({ classes = {}, onDialogClose }) => {
         <Tooltip
           trigger={
             <div className={styles.tooltipTrigger}>
-              <span>
-                Holding 1000 SAN tokens will result in a 20% discount on all
-                plans
-              </span>
+              <span>{tr('pricing.discount')}</span>
               <Icon type='question-round' className={styles.icon} />
             </div>
           }
         >
           <Panel padding className={styles.tooltip}>
             <p className={styles.text}>
-              <b>Here’s how to claim the SAN holding discount:</b>
+              <b>{tr('pricing.discount')}</b>
             </p>
             <ul className={styles.list}>
               <li className={styles.item}>
-                - Buy 1000 or more SAN tokens (
+                - {tr('pricing.discount.step.buy')}(
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
                   href='https://help.santiment.net/en/articles/2542674-how-to-buy-san'
                 >
-                  here's how
+                  {tr('pricing.discount.step.buy.link')}
                 </a>
                 )
               </li>
               <li className={styles.item}>
-                - Log in to SANbase (
+                - {tr('pricing.discount.step.login.left')}(
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
@@ -78,32 +75,29 @@ export default ({ classes = {}, onDialogClose }) => {
                 >
                   https://app.santiment.net/
                 </a>
-                ). If you don’t have a SANbase account, you can create one with
-                email or MetaMask{' '}
+                ). {tr('pricing.discount.step.login.right')}{' '}
               </li>
               <li className={styles.item}>
-                - After logging in to SANbase, head to{' '}
+                - {tr('pricing.discount.step.settings.left')}
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
                   href='https://app.santiment.net/account'
                 >
-                  Account settings
-                </a>{' '}
-                and connect your account with your MetaMask wallet
+                  {tr('pricing.discount.step.settings.link')}
+                </a>
+                {tr('pricing.discount.step.settings.right')}
               </li>
               <li className={styles.item}>
-                - Refresh this page and proceed with your purchase
+                - {tr('pricing.discount.step.refresh')}
               </li>
               <li className={styles.item}>
-                - Our system checks your SANbase account for 1000+ SAN during
-                the checkout, and automatically applies a 20% discount
+                - {tr('pricing.discount.step.system')}{' '}
               </li>
             </ul>
             <p className={styles.text}>
-              <b>Note:</b> To claim the 20% discount, you just need to hold/HODL
-              enough SAN. The tokens still belong to you - our system simply
-              checks if you have them in your wallet
+              <b>{tr('pricing.discount.note')}: </b>
+              {tr('pricing.discount.note.text')}
             </p>
           </Panel>
         </Tooltip>
