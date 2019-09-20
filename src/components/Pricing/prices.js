@@ -16,9 +16,9 @@ export default {
   FREE: {
     discount: 'Free forever',
     link: 'Upgrade now',
-    Component: () => (
+    Component: ({ intl }) => (
       <Button accent='blue' border fluid className={styles.link} disabled>
-        Default plan
+        {intl.formatMessage({ id: 'cta.default_plan' })}
       </Button>
     ),
     features: [
@@ -112,7 +112,7 @@ export default {
   },
   CUSTOM: {
     discount: 'Based on your needs',
-    link: 'Contact us',
+    link: 'cta.contact',
     Component: props => (
       <PipedriveDialogBtn
         {...props}

@@ -155,5 +155,13 @@
   "footer.privacy": "プライバシー",
   "footer.rights": "© 2019 Santiment, Inc. 無断複写・転載を禁じます。",
 
- "cta.sign_up": "サインアップ"
+  "cta.sign_up": "サインアップ",
+  "cta.upgrade_now": "今すぐアップグレード",
+  "cta.your_plan": "現在の計画",
+  "cta.default_plan": "基本プラン",
+  "cta.change_plan": "このプランへの変更",
+  "cta.contact": "お問い合わせ先",
+
+  "plan.custom.price": "カスタム",
+  "price.interval": "/月"
 }

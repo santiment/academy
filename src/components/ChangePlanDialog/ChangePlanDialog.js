@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import { Mutation } from 'react-apollo'
@@ -12,6 +13,7 @@ import sharedStyles from '../Pricing/index.module.scss'
 import dialogStyles from '../Dialog.module.scss'
 
 const ChangePlanDialog = ({
+  intl,
   subscription: {
     id,
     currentPeriodEnd,
@@ -52,7 +54,7 @@ const ChangePlanDialog = ({
                   accent='blue'
                   onClick={showDialog}
                 >
-                  Change to this plan
+                  {intl.formatMessage({ id: 'cta.change_plan' })}
                 </Button>
               }
               title='Plan change'
@@ -109,4 +111,4 @@ const ChangePlanDialog = ({
   )
 }
 
-export default ChangePlanDialog
+export default injectIntl(ChangePlanDialog)

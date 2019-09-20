@@ -146,11 +146,22 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                         .map(({ id, name, amount }) => {
                           const card = PLANS[name]
                           const sameAsUserPlan = id === userPlan
-                          const [price, priceType] = formatPrice(
+                          let [price, priceType] = formatPrice(
                             amount,
                             name,
                             billing,
                           )
+                          if (price === 'Custom') {
+                            price = intl.formatMessage({
+                              id: 'plan.custom.price',
+                            })
+                          }
+                          if (priceType) {
+                            priceType = intl.formatMessage({
+                              id: 'price.interval',
+                            })
+                          }
+
                           const intlId = `plan.${name.toLowerCase()}`
                           const [realPrice] = formatPrice(amount, name)
 
@@ -175,7 +186,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                 card.isPopular && styles.card_popular,
                                 sameAsUserPlan && styles.card_active,
                               )}
-                              key={card.title}
+                              key={name}
                               onClick={toggleCardDetails}
                             >
                               <div className={styles.card__top}>
@@ -230,6 +241,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                   />
                                 ) : (
                                   <card.Component
+                                    intl={intl}
                                     title={card.title}
                                     label={card.link}
                                     price={realPrice}

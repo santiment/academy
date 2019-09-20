@@ -154,5 +154,13 @@
   "footer.privacy": "Privacy",
   "footer.rights": "© 2019 Santiment Inc. All rights reserved",
 
- "cta.sign_up": "Sign up"
+  "cta.sign_up": "Sign up",
+  "cta.upgrade_now": "Upgrade now",
+  "cta.your_plan": "Your current plan",
+  "cta.default_plan": "Default plan",
+  "cta.change_plan": "Change to this plan",
+  "cta.contact": "Your current plan",
+
+  "plan.custom.price": "Custom",
+  "price.interval": "/mo"
 }
