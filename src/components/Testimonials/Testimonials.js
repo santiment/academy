@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import cx from 'classnames'
 import Slider from 'react-slick'
 import Title from '../Title/Title'
+import FluidItem from "./FluidItem/FluidItem"
 import styles from './Testimonials.module.scss'
 
 const settings = {
@@ -11,6 +12,17 @@ const settings = {
   slidesToScroll: 1,
   arrows: false,
 }
+
+const pics = [
+  "nasty",
+  "ibis",
+  "dima",
+  "yura",
+  "thumbs_up",
+  "hand",
+  "nemo",
+  "garry",
+]
 
 const testimonials = [
   {
@@ -47,6 +59,7 @@ const Testimonials = () => {
 
   return (
     <section className={styles.wrapper}>
+      {pics.map(pic => <FluidItem key={pic} pic={pic} />)}
       <Title className={styles.title}>
         What people
         <br />

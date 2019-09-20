@@ -28,14 +28,15 @@ export default () => {
             </h2>
             {success ? (
               <h3 className={styles.email__subtitle}>
-                We sent an email to you. Please login in to email provider and
+                We sent an email to you.
+                <br/>
+                Please login in to email provider and
                 click the confirm link
               </h3>
             ) : (
               <>
                 <h3 className={styles.email__subtitle}>
-                  Enter your email and you'll receive a link to your API key
-                  (email titled: Sanbase Login Link).
+                  Enter your email and you'll receive a login link
                 </h3>
                 <form
                   className={styles.email__form}

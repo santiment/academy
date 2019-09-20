@@ -105,6 +105,7 @@ export default ({ location: { hash } }) => {
           return (
             <>
               <h1 className={styles.title}>Account Settings</h1>
+              <h3 className={styles.email}>{data.currentUser.email}</h3>
               <Tabs
                 className={styles.tabs}
                 options={tabs}
