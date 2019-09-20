@@ -1,5 +1,4 @@
 import React from 'react'
-import { injectIntl } from 'gatsby-plugin-intl'
 import { Query } from 'react-apollo'
 import cx from 'classnames'
 import RadioBtns from '@santiment-network/ui/RadioBtns'
@@ -19,27 +18,26 @@ import {
   formatPrice,
   getAlternativeBillingPlan,
 } from '../../utils/plans'
+import { tr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 const toggleCardDetails = ({ currentTarget }) =>
   currentTarget.classList.toggle(styles.card_opened)
 
-const billingOptions = intl => [
+const billingOptions = [
   {
     index: 'year',
     content: (
       <>
-        {intl.formatMessage({ id: 'pricing.bill.year' })}
-        <Label accent='waterloo'>
-          ({intl.formatMessage({ id: 'pricing.bill.year.save' })})
-        </Label>
+        {tr('pricing.bill.year')}
+        <Label accent='waterloo'>({tr('pricing.bill.year.save')})</Label>
       </>
     ),
   },
-  { index: 'month', content: intl.formatMessage({ id: 'pricing.bill.month' }) },
+  { index: 'month', content: tr('pricing.bill.month') },
 ]
 
-export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
+export default ({ classes = {}, onDialogClose }) => {
   const [billing, setBilling] = React.useState('year')
   return (
     <>
@@ -112,7 +110,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
       </div>
       <div className={cx(styles.billing, classes.billing)}>
         <RadioBtns
-          options={billingOptions(intl)}
+          options={billingOptions}
           defaultSelectedIndex='year'
           labelOnRight
           onSelect={res => setBilling(res)}
@@ -152,14 +150,10 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                             billing,
                           )
                           if (price === 'Custom') {
-                            price = intl.formatMessage({
-                              id: 'plan.custom.price',
-                            })
+                            price = tr('plan.custom.price')
                           }
                           if (priceType) {
-                            priceType = intl.formatMessage({
-                              id: 'billing.month.short',
-                            })
+                            priceType = tr('billing.month.short')
                           }
 
                           const intlId = `plan.${name.toLowerCase()}`
@@ -178,9 +172,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                             altInterval,
                           )
 
-                          const title = intl.formatMessage({
-                            id: intlId + '.title',
-                          })
+                          const title = tr(intlId + '.title')
 
                           return (
                             <div
@@ -198,9 +190,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                   {title}
                                   {card.isPopular && (
                                     <span className={styles.popular}>
-                                      {intl.formatMessage({
-                                        id: 'plan.popular',
-                                      })}
+                                      {tr('plan.popular')}
                                     </span>
                                   )}
                                 </h3>
@@ -219,7 +209,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                 </svg>
                               </div>
                               <div className={styles.desc}>
-                                {intl.formatMessage({ id: intlId + '.desc' })}
+                                {tr(intlId + '.desc')}
                               </div>
                               <div className={styles.details}>
                                 <div className={styles.price}>
@@ -230,18 +220,12 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                 </div>
                                 <div className={styles.discount}>
                                   {card.discount ? (
-                                    intl.formatMessage({
-                                      id: card.discount,
-                                    })
+                                    tr(card.discount)
                                   ) : (
                                     <>
-                                      {intl.formatMessage({
-                                        id: 'price.bill_discount.left',
-                                      })}
+                                      {tr('price.bill_discount.left')}
                                       {altPrice}
-                                      {intl.formatMessage({
-                                        id: `price.bill_discount.${altInterval}`,
-                                      })}
+                                      {tr(`price.bill_discount.${altInterval}`)}
                                     </>
                                   )}
                                 </div>
@@ -256,7 +240,6 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                   />
                                 ) : (
                                   <card.Component
-                                    intl={intl}
                                     title={title}
                                     label={card.link}
                                     price={realPrice}
@@ -269,7 +252,6 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                 <Features
                                   data={card.features}
                                   classes={styles}
-                                  intl={intl}
                                   intlId={`plan.${name.toLowerCase()}.feature.`}
                                 />
                               </div>
@@ -284,7 +266,6 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                       billing={billing}
                       subscription={subscription}
                       onDialogClose={onDialogClose}
-                      intl={intl}
                     />
                   </>
                 )
@@ -295,4 +276,4 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
       </Query>
     </>
   )
-})
+}

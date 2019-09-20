@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import cx from 'classnames'
 import Icon from '@santiment-network/ui/Icon'
 import PricingDetails from './PricingDetails.js'
+import { tr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 function useToggle() {
@@ -12,15 +13,13 @@ function useToggle() {
   return [toggled, setToggle]
 }
 
-export default ({ intl, ...props }) => {
+export default props => {
   const [toggled, setToggle] = useToggle()
   return (
     <>
       <div className={styles.more} onClick={setToggle}>
         <Icon type={toggled ? 'subtract-round' : 'plus-round-small'} />
-        {intl.formatMessage({
-          id: `plans.details.${toggled ? 'hide' : 'expand'}`,
-        })}
+        {tr(`plans.details.${toggled ? 'hide' : 'expand'}`)}
       </div>
       {toggled && (
         <>
@@ -31,9 +30,7 @@ export default ({ intl, ...props }) => {
             onClick={setToggle}
           >
             <Icon type='subtract-round' />
-            {intl.formatMessage({
-              id: 'plans.details.hide',
-            })}
+            {tr('plans.details.hide')}
           </div>
         </>
       )}

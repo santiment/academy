@@ -3,6 +3,7 @@ import Button from '@santiment-network/ui/Button'
 import PaymentDialog from '../PaymentDialog/PaymentDialog'
 import ChangePlanDialog from '../ChangePlanDialog/ChangePlanDialog'
 import PipedriveDialogBtn from '../Pipedrive/Pipedrive'
+import { tr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 const PlanActionDialog = props =>
@@ -16,33 +17,25 @@ export default {
   FREE: {
     discount: 'price.bill_discount.free',
     link: 'Upgrade now',
-    Component: ({ intl }) => (
+    Component: () => (
       <Button accent='blue' border fluid className={styles.link} disabled>
-        {intl.formatMessage({ id: 'cta.default_plan' })}
+        {tr('cta.default_plan')}
       </Button>
     ),
     features: [
       'HDA',
-      intl => (
-        <>
-          20 {intl.formatMessage({ id: 'plan.feature.AC' })}
-          <br />
-          1k {intl.formatMessage({ id: 'plan.feature.AC' })}
-        </>
-      ),
-      intl => (
-        <>
-          {intl.formatMessage({ id: 'plan.feature.SM' })}{' '}
-          <span className={styles.ast}>*</span>
-        </>
-      ),
 
-      intl => (
-        <>
-          {intl.formatMessage({ id: 'plan.free.feature.AR' })}{' '}
-          <span className={styles.ast}>**</span>
-        </>
-      ),
+      <>
+        20 {tr('plan.feature.AC')}
+        <br />
+        1k {tr('plan.feature.AC')}
+      </>,
+      <>
+        {tr('plan.feature.SM')} <span className={styles.ast}>*</span>
+      </>,
+      <>
+        {tr('plan.free.feature.AR')} <span className={styles.ast}>**</span>
+      </>,
     ],
   },
   ESSENTIAL: {
@@ -50,20 +43,16 @@ export default {
     Component: PlanActionDialog,
     features: [
       'HDA',
-      intl => (
-        <>
-          60 {intl.formatMessage({ id: 'plan.feature.AC' })}
-          <br />
-          10k {intl.formatMessage({ id: 'plan.feature.AC' })}
-        </>
-      ),
-      intl => (
-        <>
-          {intl.formatMessage({ id: 'plan.feature.SM' })}{' '}
-          <span className={styles.ast}>**</span>
-        </>
-      ),
-      intl => intl.formatMessage({ id: 'plan.feature.NA' }),
+
+      <>
+        60 {tr('plan.feature.AC')}
+        <br />
+        10k {tr('plan.feature.AC')}
+      </>,
+      <>
+        {tr('plan.feature.SM')} <span className={styles.ast}>**</span>
+      </>,
+      tr('plan.feature.NA'),
     ],
   },
   PRO: {
@@ -72,20 +61,16 @@ export default {
     link: 'Upgrade now',
     features: [
       'HDA',
-      intl => (
-        <>
-          120 {intl.formatMessage({ id: 'plan.feature.AC' })}
-          <br />
-          150k {intl.formatMessage({ id: 'plan.feature.AC' })}
-        </>
-      ),
-      intl => (
-        <>
-          {intl.formatMessage({ id: 'plan.feature.AM' })}{' '}
-          <span className={styles.ast}>*</span>
-        </>
-      ),
-      intl => intl.formatMessage({ id: 'plan.feature.NA' }),
+
+      <>
+        120 {tr('plan.feature.AC')}
+        <br />
+        150k {tr('plan.feature.AC')}
+      </>,
+      <>
+        {tr('plan.feature.AM')} <span className={styles.ast}>*</span>
+      </>,
+      tr('plan.feature.NA'),
     ],
   },
   PREMIUM: {
@@ -94,20 +79,16 @@ export default {
     link: 'Upgrade now',
     features: [
       'HDA',
-      intl => (
-        <>
-          180 {intl.formatMessage({ id: 'plan.feature.AC' })}
-          <br />
-          500k {intl.formatMessage({ id: 'plan.feature.AC' })}
-        </>
-      ),
-      intl => (
-        <>
-          {intl.formatMessage({ id: 'plan.feature.AM' })}{' '}
-          <span className={styles.ast}>*</span>
-        </>
-      ),
-      intl => intl.formatMessage({ id: 'plan.feature.NA' }),
+
+      <>
+        180 {tr('plan.feature.AC')}
+        <br />
+        500k {tr('plan.feature.AC')}
+      </>,
+      <>
+        {tr('plan.feature.AM')} <span className={styles.ast}>*</span>
+      </>,
+      tr('plan.feature.NA'),
     ],
   },
   CUSTOM: {
@@ -122,14 +103,14 @@ export default {
     ),
     features: [
       'HDA',
-      intl => `${intl.formatMessage({ id: 'plan.custom.feature.CDCR.top' })}
-      ${intl.formatMessage({ id: 'plan.custom.feature.CDCR.bottom' })}`,
-      intl => (
-        <>
-          {intl.formatMessage({ id: 'plan.feature.AM' })}{' '}
-          <span className={styles.ast}>*</span>
-        </>
-      ),
+      <>
+        {tr('plan.custom.feature.CDCR.top')}
+        {tr('plan.custom.feature.CDCR.bottom')}
+      </>,
+
+      <>
+        {tr('plan.feature.AM')} <span className={styles.ast}>*</span>
+      </>,
       'WLO',
     ],
   },
