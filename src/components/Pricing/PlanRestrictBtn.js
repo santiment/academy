@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { injectIntl, Link } from 'gatsby-plugin-intl'
 import Button from '@santiment-network/ui/Button'
 import styles from './index.module.scss'
 
@@ -10,20 +10,23 @@ function onGetAccessClick() {
   })
 }
 
-const PlanRestrictBtn = ({ sameAsUserPlan, isSubscriptionCanceled }) => {
+const PlanRestrictBtn = ({ intl, sameAsUserPlan, isSubscriptionCanceled }) => {
   const props = sameAsUserPlan
-    ? { children: 'Your current plan', disabled: true }
+    ? { children: 'your_plan', disabled: true }
     : isSubscriptionCanceled
-    ? { children: 'Upgrade now', as: Link, to: '/account#subscription?renew' }
+    ? { children: 'upgrade_now', as: Link, to: '/account#subscription?renew' }
     : {
-        children: 'Upgrade now',
+        children: 'upgrade_now',
         as: Link,
         to: '/account',
         onClick: onGetAccessClick,
       }
+  const { children, ...rest } = props
   return (
-    <Button fluid accent='blue' border className={styles.link} {...props} />
+    <Button fluid accent='blue' border className={styles.link} {...rest}>
+      {intl.formatMessage({ id: `cta.${children}` })}
+    </Button>
   )
 }
 
-export default PlanRestrictBtn
+export default injectIntl(PlanRestrictBtn)

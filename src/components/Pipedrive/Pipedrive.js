@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
 import cx from 'classnames'
@@ -13,7 +14,7 @@ function useFormLoading() {
   return [loading, toggleLoading]
 }
 
-const PipedriveBtn = ({ title, label, src }) => {
+const PipedriveBtn = ({ intl, title, label, src }) => {
   const [loading, toggleLoading] = useFormLoading()
 
   const startLoading = () => toggleLoading(true)
@@ -25,7 +26,7 @@ const PipedriveBtn = ({ title, label, src }) => {
       classes={{ dialog: styles.dialog }}
       trigger={
         <Button className={styles.link} fluid border accent='blue'>
-          {label}
+          {intl.formatMessage({ id: 'cta.contact' })}
         </Button>
       }
       onOpen={startLoading}
@@ -52,4 +53,4 @@ const PipedriveBtn = ({ title, label, src }) => {
   )
 }
 
-export default PipedriveBtn
+export default injectIntl(PipedriveBtn)

@@ -1,7 +1,6 @@
 import React from 'react'
-import { replace } from 'gatsby'
+import { Link, navigate } from 'gatsby-plugin-intl'
 import { Query, Mutation } from 'react-apollo'
-import { Link } from 'gatsby'
 import Tabs from '@santiment-network/ui/Tabs'
 import {
   CURRENT_USER_QUERY,
@@ -79,7 +78,7 @@ export default ({ location: { hash } }) => {
           }
 
           if (data && !data.currentUser) {
-            replace('/login/email')
+            navigate('/login/email', { replace: true })
             return null
           }
 

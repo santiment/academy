@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
@@ -11,6 +12,7 @@ import { SUBSCRIBE_MUTATION } from '../../gql/plans'
 import { CURRENT_USER_QUERY } from '../../gql/user'
 import { getBilling } from '../../utils/plans'
 import { formatError, contactAction } from '../../utils/notifications'
+import { tr } from '../../utils/translate'
 import styles from './PaymentDialog.module.scss'
 import sharedStyles from '../Pricing/index.module.scss'
 
@@ -49,6 +51,7 @@ const getTokenDataByForm = form => {
 }
 
 const PaymentDialog = ({
+  intl,
   title,
   billing,
   label,
@@ -80,7 +83,7 @@ const PaymentDialog = ({
         disabled={disabled}
         onClick={showPayment}
       >
-        {label}
+        {tr('cta.upgrade_now')}
       </Button>
 
       <NotificationsContext.Consumer>
@@ -89,7 +92,13 @@ const PaymentDialog = ({
             {(subscribe, { called, error, data }) => {
               return (
                 <Dialog
-                  title={`Payment for the "${title}" plan (${price}/${billing})`}
+                  title={`${intl.formatMessage({
+                    id: 'payment.title.left',
+                  })}"${title}"${intl.formatMessage({
+                    id: 'payment.title.right',
+                  })}(${price}${intl.formatMessage({
+                    id: 'billing.' + billing,
+                  })})`}
                   classes={{ dialog: sharedStyles.dialog }}
                   open={paymentVisible}
                   onClose={hidePayment}
@@ -163,7 +172,7 @@ const PaymentDialog = ({
                       className={sharedStyles.action_cancel}
                       onClick={hidePayment}
                     >
-                      Close
+                      {tr('payment.close')}
                     </Dialog.Cancel>
                     <Dialog.Approve
                       variant='fill'
@@ -172,7 +181,7 @@ const PaymentDialog = ({
                       className={sharedStyles.action}
                       type='submit'
                     >
-                      Confirm payment
+                      {tr('payment.confirm')}
                     </Dialog.Approve>
                   </Dialog.Actions>
                 </Dialog>
@@ -185,7 +194,7 @@ const PaymentDialog = ({
   )
 }
 
-const InjectedForm = injectStripe(PaymentDialog)
+const InjectedForm = injectIntl(injectStripe(PaymentDialog))
 
 export default props => (
   <Elements>

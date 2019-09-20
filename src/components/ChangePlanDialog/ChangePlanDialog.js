@@ -8,6 +8,7 @@ import PLANS from '../Pricing/prices'
 import { formatPrice, getBilling } from '../../utils/plans'
 import { getDateFormats } from '../../utils/dates'
 import { formatError, contactAction } from '../../utils/notifications'
+import { tr } from '../../utils/translate'
 import sharedStyles from '../Pricing/index.module.scss'
 import dialogStyles from '../Dialog.module.scss'
 
@@ -52,7 +53,7 @@ const ChangePlanDialog = ({
                   accent='blue'
                   onClick={showDialog}
                 >
-                  Change to this plan
+                  {tr('cta.change_plan')}
                 </Button>
               }
               title='Plan change'

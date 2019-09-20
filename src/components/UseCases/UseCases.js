@@ -1,11 +1,12 @@
 import React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import Title from '../Title/Title'
 import Subtitle from '../Subtitle/Subtitle'
 import styles from './UseCases.module.scss'
 
 const cases = [
   {
-    title: 'First mover advantage',
+    usecase: 'first',
     icon: (
       <svg
         width='75'
@@ -113,11 +114,9 @@ const cases = [
         />
       </svg>
     ),
-    desc:
-      'Instantly react to on-chain events, changes in developer activity or shifts in social volume. Build your own custom signals and trade bots to immediately retort any market behavior.',
   },
   {
-    title: 'Backtesting strategies',
+    usecase: 'backtest',
     icon: (
       <svg
         width='88'
@@ -233,11 +232,9 @@ const cases = [
         />
       </svg>
     ),
-    desc:
-      'Boost your ROI by running trading simulations and backtesting investment strategies. Whether you’re day, swing or long-term trading, find a trading model that works for you.',
   },
   {
-    title: 'Third-party Integration',
+    usecase: 'party',
     icon: (
       <svg
         width='79'
@@ -345,30 +342,30 @@ const cases = [
         />
       </svg>
     ),
-    desc:
-      'Take your crypto app to next level with the industry’s most comprehensive data sets. Zoom in or as far out of any market event as you want.',
   },
 ]
 
-export default () => (
+export default injectIntl(({ intl }) => (
   <section className={styles.wrapper} id='use-cases'>
-    <Title>Use cases</Title>
+    <Title>{intl.formatMessage({ id: 'usecases.title' })}</Title>
     <Subtitle className={styles.subtitle}>
-      Santiment is more than just an analytics platform.{' '}
+      {intl.formatMessage({ id: 'usecases.subtitle.top' })}{' '}
       <br className={styles.br} />
-      With our data, you can predict changes in the market
+      {intl.formatMessage({ id: 'usecases.subtitle.bottom' })}
     </Subtitle>
 
     <ul className={styles.cases}>
-      {cases.map(({ icon, title, desc }) => (
-        <li className={styles.case} key={title}>
+      {cases.map(({ usecase, icon }) => (
+        <li className={styles.case} key={usecase}>
           <Title small className={styles.case__title}>
             {icon}
-            {title}
+            {intl.formatMessage({ id: `usecases.${usecase}.title` })}
           </Title>
-          <Subtitle className={styles.case__desc}>{desc}</Subtitle>
+          <Subtitle className={styles.case__desc}>
+            {intl.formatMessage({ id: `usecases.${usecase}.desc` })}
+          </Subtitle>
         </li>
       ))}
     </ul>
   </section>
-)
+))

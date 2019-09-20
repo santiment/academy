@@ -1,8 +1,10 @@
 import React, { useRef } from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import Slider from 'react-slick'
 import Title from '../Title/Title'
-import FluidItem from "./FluidItem/FluidItem"
+import FluidItem from './FluidItem/FluidItem'
+import { tr } from '../../utils/translate'
 import styles from './Testimonials.module.scss'
 
 const settings = {
@@ -14,41 +16,19 @@ const settings = {
 }
 
 const pics = [
-  "nasty",
-  "ibis",
-  "dima",
-  "yura",
-  "thumbs_up",
-  "hand",
-  "nemo",
-  "garry",
+  'nasty',
+  'ibis',
+  'dima',
+  'yura',
+  'thumbs_up',
+  'hand',
+  'nemo',
+  'garry',
 ]
 
-const testimonials = [
-  {
-    author: 'Paolo Ardoino',
-    pic: 'paolo',
-    position: 'CTO at Bitfinex',
-    text:
-      'SANapi is one of the most comprehensive crypto APIs on the market. For us, it is incredibly easy to fetch various data sets like on-chain, social media and development info directly to Bitfinex through their unified API and across different blockchains. The Santiment team has worked hard on creating a stable, reliable and all-inclusive data source for crypto, and they’ve more than delivered.',
-  },
-  {
-    author: 'Pramesh Tyagi',
-    pic: 'pramesh',
-    position: 'Director at ShillazTech',
-    text:
-      'After switching from stock trading to crypto, I realized that on-chain data of any crypto asset provides vital information about market participants beyond OHLCV. Using a combination of pricing and blockchain data via Santiment’s API, I was quickly able to develop hybrid trade signals that have proven highly reliable, effective and - most importantly - profitable.',
-  },
-  {
-    author: 'Jan Smirny',
-    pic: 'yan',
-    position: 'Data Scientist',
-    text:
-      'I work with both the Sanpy python module and the ‘naked’ SAN API since both have their advantages. The GraphiQL API is great if you want very specific data for your research or pipeline implementations. For quick and easy data access for my research, the sanpy module is the place to go because (after the import) it is literally one line of code to get the data. It doesn’t get easier than that!',
-  },
-]
+const testimonials = ['paolo', 'pramesh', 'yan']
 
-const Testimonials = () => {
+const Testimonials = ({ intl }) => {
   const slider = useRef(null)
   const slickNext = () => {
     slider.current.slickNext()
@@ -59,11 +39,13 @@ const Testimonials = () => {
 
   return (
     <section className={styles.wrapper}>
-      {pics.map(pic => <FluidItem key={pic} pic={pic} />)}
+      {pics.map(pic => (
+        <FluidItem key={pic} pic={pic} />
+      ))}
       <Title className={styles.title}>
-        What people
+        {intl.formatMessage({ id: 'testimonials.title.top' })}
         <br />
-        are saying
+        {intl.formatMessage({ id: 'testimonials.title.bottom' })}
       </Title>
       <div className={styles.slider}>
         <div
@@ -88,15 +70,21 @@ const Testimonials = () => {
           </svg>
         </div>
         <Slider {...settings} ref={slider}>
-          {testimonials.map(({ author, text, position, pic }) => (
-            <div key={author} className={styles.testimonial}>
+          {testimonials.map(testi => (
+            <div key={testi} className={styles.testimonial}>
               <div className={styles.slider__top}>
-                <p className={styles.text}>{text}</p>
+                <p className={styles.text}>
+                  {tr(`testimonials.${testi}.text`)}
+                </p>
               </div>
               <div className={styles.slider__bottom}>
-                <div className={cx(styles.pic, styles[`pic_${pic}`])} />
-                <h3 className={styles.author}>{author}</h3>
-                <h4 className={styles.position}>{position}</h4>
+                <div className={cx(styles.pic, styles[`pic_${testi}`])} />
+                <h3 className={styles.author}>
+                  {tr(`testimonials.${testi}.name`)}
+                </h3>
+                <h4 className={styles.position}>
+                  {tr(`testimonials.${testi}.position`)}
+                </h4>
               </div>
             </div>
           ))}
@@ -127,4 +115,4 @@ const Testimonials = () => {
   )
 }
 
-export default Testimonials
+export default injectIntl(Testimonials)

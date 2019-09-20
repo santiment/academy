@@ -3,6 +3,7 @@ import Button from '@santiment-network/ui/Button'
 import PaymentDialog from '../PaymentDialog/PaymentDialog'
 import ChangePlanDialog from '../ChangePlanDialog/ChangePlanDialog'
 import PipedriveDialogBtn from '../Pipedrive/Pipedrive'
+import { tr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 const PlanActionDialog = props =>
@@ -14,91 +15,85 @@ const PlanActionDialog = props =>
 
 export default {
   FREE: {
-    title: 'Free',
-    desc: 'For individuals just getting started with crypto',
-    discount: 'Free forever',
+    discount: 'price.bill_discount.free',
     link: 'Upgrade now',
     Component: () => (
       <Button accent='blue' border fluid className={styles.link} disabled>
-        Default plan
+        {tr('cta.default_plan')}
       </Button>
     ),
     features: [
-      'Historical data access to last 3 months excluding the last 24 hours',
-      <>
-        20 API calls / minute
-        <br />
-        1k API calls / month
-      </>,
-      <>
-        Standard metrics <span className={styles.ast}>*</span>
-      </>,
+      'HDA',
 
       <>
-        Attribution required <span className={styles.ast}>**</span>
+        20 {tr('plan.feature.AC')}
+        <br />
+        1k {tr('plan.feature.AC')}
+      </>,
+      <>
+        {tr('plan.feature.SM')} <span className={styles.ast}>*</span>
+      </>,
+      <>
+        {tr('plan.free.feature.AR')} <span className={styles.ast}>**</span>
       </>,
     ],
   },
   ESSENTIAL: {
-    title: 'Basic',
-    desc: 'Great for short-term analysis and prototyping',
     link: 'Upgrade now',
     Component: PlanActionDialog,
     features: [
-      'Historical data access to last 6 months',
+      'HDA',
+
       <>
-        60 API calls / minute
+        60 {tr('plan.feature.AC')}
         <br />
-        10k API calls / month
+        10k {tr('plan.feature.AC')}
       </>,
       <>
-        Standard metrics <span className={styles.ast}>*</span>
+        {tr('plan.feature.SM')} <span className={styles.ast}>**</span>
       </>,
-      'No attribution',
+      tr('plan.feature.NA'),
     ],
   },
   PRO: {
-    title: 'Pro',
     isPopular: true,
-    desc: 'Advanced metrics & serious backtesting potential',
     Component: PlanActionDialog,
     link: 'Upgrade now',
     features: [
-      'Historical data access to last 18 months',
+      'HDA',
+
       <>
-        120 API calls / minute
+        120 {tr('plan.feature.AC')}
         <br />
-        150k API calls / month
+        150k {tr('plan.feature.AC')}
       </>,
       <>
-        Advanced metrics <span className={styles.ast}>*</span>
+        {tr('plan.feature.AM')} <span className={styles.ast}>*</span>
       </>,
-      'No attribution',
+      tr('plan.feature.NA'),
     ],
   },
   PREMIUM: {
-    title: 'Premium',
-    desc: 'Full historical data and generous rate limits',
+    desc: '',
     Component: PlanActionDialog,
     link: 'Upgrade now',
     features: [
-      'Unlimited historical data access',
+      'HDA',
+
       <>
-        180 API calls / min
+        180 {tr('plan.feature.AC')}
         <br />
-        500k API calls / month
+        500k {tr('plan.feature.AC')}
       </>,
       <>
-        Advanced metrics <span className={styles.ast}>*</span>
+        {tr('plan.feature.AM')} <span className={styles.ast}>*</span>
       </>,
-      'No attribution',
+      tr('plan.feature.NA'),
     ],
   },
   CUSTOM: {
-    title: 'Enterprise',
-    desc: 'For organizations that need advanced data and support',
-    discount: 'Based on your needs',
-    link: 'Contact us',
+    discount: 'price.bill_discount.custom',
+    link: 'cta.contact',
     Component: props => (
       <PipedriveDialogBtn
         {...props}
@@ -107,13 +102,16 @@ export default {
       />
     ),
     features: [
-      'Unlimited historical data access',
-      `Custom development
-      Custom reports`,
+      'HDA',
       <>
-        Advanced metrics <span className={styles.ast}>*</span>
+        {tr('plan.custom.feature.CDCR.top')}
+        {tr('plan.custom.feature.CDCR.bottom')}
       </>,
-      'White-label options',
+
+      <>
+        {tr('plan.feature.AM')} <span className={styles.ast}>*</span>
+      </>,
+      'WLO',
     ],
   },
 }
