@@ -4,6 +4,30 @@ import Title from '../Title/Title'
 import Subtitle from '../Subtitle/Subtitle'
 import styles from './WhySantiment.module.scss'
 
+/*
+desc: (
+  <>
+    Use GraphQL for freedom and flexibility, or{' '}
+    <a
+      href='https://github.com/santiment/sanpy'
+      target='_blank'
+      rel='noopener noreferrer'
+      className={styles.link}
+    >SanPy</a>, our custom Python
+  wrapper that is ideal for data scientists. Our{' '}
+  <a
+    href='https://github.com/santiment/san-sdk'
+    target='_blank'
+    rel='noopener noreferrer'
+    className={styles.link}
+  >
+    SanSDK in GitHub
+  </a>{' '}
+  includes examples for Ruby, R and more soon!
+  </>
+),
+*/
+
 const whys = [
   {
     reason: 'always',

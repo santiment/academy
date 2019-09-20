@@ -11,7 +11,9 @@ export default ({ intl, intlId, data, classes = {} }) => (
           type='checkmark'
           className={cx(styles.feature__icon, classes.feature__icon)}
         />
-        {intl.formatMessage({ id: intlId + feature })}
+        {typeof feature === 'function'
+          ? feature(intl)
+          : intl.formatMessage({ id: intlId + feature })}
       </li>
     ))}
   </ul>

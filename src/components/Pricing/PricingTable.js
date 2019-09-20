@@ -1,42 +1,46 @@
-import React from "react"
-import { Query } from "react-apollo"
-import cx from "classnames"
-import RadioBtns from "@santiment-network/ui/RadioBtns"
-import Label from "@santiment-network/ui/Label"
-import Icon from "@santiment-network/ui/Icon"
-import Tooltip from "@santiment-network/ui/Tooltip"
-import Panel from "@santiment-network/ui/Panel/Panel"
-import { CURRENT_USER_QUERY } from "../../gql/user"
-import Features from "../Features/Features"
-import PricingDetailsToggle from "./PricingDetailsToggle.js"
-import PlanRestrictBtn from "./PlanRestrictBtn"
-import { PLANS_QUERY } from "../../gql/plans"
-import PLANS from "./prices"
+import React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
+import { Query } from 'react-apollo'
+import cx from 'classnames'
+import RadioBtns from '@santiment-network/ui/RadioBtns'
+import Label from '@santiment-network/ui/Label'
+import Icon from '@santiment-network/ui/Icon'
+import Tooltip from '@santiment-network/ui/Tooltip'
+import Panel from '@santiment-network/ui/Panel/Panel'
+import { CURRENT_USER_QUERY } from '../../gql/user'
+import Features from '../Features/Features'
+import PricingDetailsToggle from './PricingDetailsToggle.js'
+import PlanRestrictBtn from './PlanRestrictBtn'
+import { PLANS_QUERY } from '../../gql/plans'
+import PLANS from './prices'
 import {
   findNeuroPlan,
   getCurrentNeuroSubscription,
   formatPrice,
   getAlternativeBillingPlan,
-} from "../../utils/plans"
-import styles from "./index.module.scss"
+} from '../../utils/plans'
+import styles from './index.module.scss'
 
 const toggleCardDetails = ({ currentTarget }) =>
   currentTarget.classList.toggle(styles.card_opened)
 
-const billingOptions = [
+const billingOptions = intl => [
   {
-    index: "year",
+    index: 'year',
     content: (
       <>
-        Bill yearly <Label accent='waterloo'>(save 10%)</Label>
+        {intl.formatMessage({ id: 'pricing.bill.year' })}
+        <Label accent='waterloo'>
+          ({intl.formatMessage({ id: 'pricing.bill.year.save' })})
+        </Label>
       </>
     ),
   },
-  { index: "month", content: "Bill monthly" },
+  { index: 'month', content: intl.formatMessage({ id: 'pricing.bill.month' }) },
 ]
 
-export default ({ classes = {}, onDialogClose }) => {
-  const [billing, setBilling] = React.useState("year")
+export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
+  const [billing, setBilling] = React.useState('year')
   return (
     <>
       <div className={styles.sanTokens}>
@@ -77,23 +81,25 @@ export default ({ classes = {}, onDialogClose }) => {
                   https://app.santiment.net/
                 </a>
                 ). If you don’t have a SANbase account, you can create one with
-                email or MetaMask{" "}
+                email or MetaMask{' '}
               </li>
               <li className={styles.item}>
-                - After logging in to SANbase, head to{" "}
+                - After logging in to SANbase, head to{' '}
                 <a
                   rel='noopener noreferrer'
                   target='_blank'
                   href='https://app.santiment.net/account'
                 >
                   Account settings
-                </a>{" "}
+                </a>{' '}
                 and connect your account with your MetaMask wallet
               </li>
-              <li className={styles.item}>- Refresh this page and proceed with your purchase</li>
               <li className={styles.item}>
-                - Our system checks your SANbase account for 1000+ SAN during the
-                checkout, and automatically applies a 20% discount
+                - Refresh this page and proceed with your purchase
+              </li>
+              <li className={styles.item}>
+                - Our system checks your SANbase account for 1000+ SAN during
+                the checkout, and automatically applies a 20% discount
               </li>
             </ul>
             <p className={styles.text}>
@@ -106,7 +112,7 @@ export default ({ classes = {}, onDialogClose }) => {
       </div>
       <div className={cx(styles.billing, classes.billing)}>
         <RadioBtns
-          options={billingOptions}
+          options={billingOptions(intl)}
           defaultSelectedIndex='year'
           labelOnRight
           onSelect={res => setBilling(res)}
@@ -119,6 +125,7 @@ export default ({ classes = {}, onDialogClose }) => {
           const userPlan = subscription && subscription.plan.id
           const isSubscriptionCanceled =
             subscription && subscription.cancelAtPeriodEnd
+
           return (
             <Query query={PLANS_QUERY}>
               {({ data: { productsWithPlans = [] } }) => {
@@ -133,7 +140,7 @@ export default ({ classes = {}, onDialogClose }) => {
                       {neuro.plans
                         .filter(
                           ({ name, interval }) =>
-                            interval === billing || name === "FREE"
+                            interval === billing || name === 'FREE',
                         )
                         .sort(({ id: a }, { id: b }) => a - b)
                         .map(({ id, name, amount }) => {
@@ -142,21 +149,22 @@ export default ({ classes = {}, onDialogClose }) => {
                           const [price, priceType] = formatPrice(
                             amount,
                             name,
-                            billing
+                            billing,
                           )
+                          const intlId = `plan.${name.toLowerCase()}`
                           const [realPrice] = formatPrice(amount, name)
 
                           const { amount: altAmount, interval: altInterval } =
                             getAlternativeBillingPlan(
                               neuro.plans,
                               name,
-                              billing
+                              billing,
                             ) || {}
 
                           const [altPrice] = formatPrice(
                             altAmount,
                             null,
-                            altInterval
+                            altInterval,
                           )
 
                           return (
@@ -165,17 +173,21 @@ export default ({ classes = {}, onDialogClose }) => {
                                 styles.card,
                                 classes.card,
                                 card.isPopular && styles.card_popular,
-                                sameAsUserPlan && styles.card_active
+                                sameAsUserPlan && styles.card_active,
                               )}
                               key={card.title}
                               onClick={toggleCardDetails}
                             >
                               <div className={styles.card__top}>
                                 <h3 className={styles.card__title}>
-                                  {card.title}
+                                  {intl.formatMessage({
+                                    id: intlId + '.title',
+                                  })}
                                   {card.isPopular && (
                                     <span className={styles.popular}>
-                                      Popular
+                                      {intl.formatMessage({
+                                        id: 'plan.popular',
+                                      })}
                                     </span>
                                   )}
                                 </h3>
@@ -193,7 +205,9 @@ export default ({ classes = {}, onDialogClose }) => {
                                   />
                                 </svg>
                               </div>
-                              <div className={styles.desc}>{card.desc}</div>
+                              <div className={styles.desc}>
+                                {intl.formatMessage({ id: intlId + '.desc' })}
+                              </div>
                               <div className={styles.details}>
                                 <div className={styles.price}>
                                   {price}
@@ -228,6 +242,8 @@ export default ({ classes = {}, onDialogClose }) => {
                                 <Features
                                   data={card.features}
                                   classes={styles}
+                                  intl={intl}
+                                  intlId={`plan.${name.toLowerCase()}.feature.`}
                                 />
                               </div>
                             </div>
@@ -251,4 +267,4 @@ export default ({ classes = {}, onDialogClose }) => {
       </Query>
     </>
   )
-}
+})

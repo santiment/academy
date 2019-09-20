@@ -3,12 +3,14 @@
   "header.use_cases": "活用例",
   "header.pricing": "プライス",
   "header.support": "サポート",
+
   "main.comprehensive": "多機能",
   "main.crypto_api": "暗号資産 API",
   "main.description": "100% カスタマイズされたオンチェーン、ソーシャル、Github、ファンダメンタルデータを活用しましょう。",
   "main.get_access": "アクセスする",
   "main.documentation": "ドキュメント ",
   "main.data": "データ収集",
+
   "why.title": "ディベロッパーの方に最適です",
   "why.subtitle.upper": "平均約3秒のレスポンス",
   "why.subtitle.bottom": "ブロックチェーン取引は5分以内に反映",
@@ -18,6 +20,7 @@
   "why.reason.global.desc": "GraphQLを自由自在に使ってみましょう。また、当社のカスタムPython ラッパー SanPyをお試しください。データサイエンティストの方に最適です。当社のGithub SanSDK は、Ruby、R その他たくさんご利用いただけます。",
   "why.reason.python.title": "パイソンライブラリー",
   "why.reason.python.desc": "SANAPI は、SSL暗号化（署名済みAPIリクエスト、生成APIキー）されており低遅延です。当社の優れたCDNで、APIサーバーにすばやくコネクトいただけます。",
+
   "advantages.interest": "是非お試しください！",
   "advantages.expl": "当社のAPI とデータセットを使って、カスタムソリューションを作成しましょう。",
   "advantages.try_free": "フリートライアルをお試しください！",
@@ -59,6 +62,7 @@
   "advantage.dev.feature.DA": "ディベロッパーアクティビティを確認する新しい方法",
   "advantage.dev.feature.HU": "一時間ごとにアップデート",
   "advantage.dev.feature.HD": "2013年以降のヒストリカルデータ",
+
   "usecases.title": "活用例",
   "usecases.subtitle.top": "Santiment は、単なる分析プラットフォームではありません。",
   "usecases.subtitle.bottom": "当社のデータを活用すれば、マーケットの変化が予測可能です。",
@@ -67,5 +71,38 @@
   "usecases.backtest.title": "バックテストストラテジー",
   "usecases.backtest.desc": "トレードシュミレーションを行い、投資戦略をバックテストして投資対効果を高めましょう。デイトレーダー、スイングトレーダー、ロングタームトレーダー、いずれの場合でもぴったりのトレードモデルが見つかります。",
   "usecases.party.title": "サードパーティを統合",
-  "usecases.party.desc": "業界で最も優れたデータセットを活用し、暗号資産アプリケーションをさらに有効利用しましょう。目的に応じてデータをズームイン・ズームアウトいただけます。"
+  "usecases.party.desc": "業界で最も優れたデータセットを活用し、暗号資産アプリケーションをさらに有効利用しましょう。目的に応じてデータをズームイン・ズームアウトいただけます。",
+
+  "pricing.title.top": "ニーズに合ったプランを",
+  "pricing.title.bottom": "ご選択ください",
+
+  "pricing.bill.year": "年間一括払い",
+  "pricing.bill.year.save": "10%オフ",
+  "pricing.bill.month": "月毎のお支払い",
+
+  "plan.popular": "最も人気のプラン",
+  "plan.free.title": "フリー",
+  "plan.free.desc": "暗号資産ビギナー向けです",
+  "plan.essential.title": "ベーシック",
+  "plan.essential.desc": "短期分析とやプロトタイプに最適です",
+  "plan.pro.title": "プロ",
+  "plan.pro.desc": "アドバンス・メトリック & バックテスト",
+  "plan.premium.title": "プレミアム",
+  "plan.premium.desc": "フル・ヒストリカル・データとフレキシブル・レート・リミット",
+  "plan.custom.title": "エンタープライズ",
+  "plan.custom.desc": "さらに専門的なデータ・サポートが必要な団体・企業向け",
+
+  "plan.feature.AC": "API コール/ 分",
+  "plan.feature.SM": "スタンダードメトリック",
+  "plan.feature.NA": "著作権情報表示不要",
+  "plan.feature.AM": "アドバンス・メトリック",
+  "plan.free.feature.AR": "著作権情報表示要",
+  "plan.free.feature.HDA": "最新24時間を除く過去3カ月のヒストリカルデータアクセス",
+  "plan.essential.feature.HDA": "過去6か月分のヒストリカルデータアクセス",
+  "plan.pro.feature.HDA": "過去18か月分のヒストリカルデータアクセス",
+  "plan.premium.feature.HDA": "無制限のヒストリカルデータアクセス",
+  "plan.custom.feature.HDA": "無制限のヒストリカルデータアクセス",
+  "plan.custom.feature.CDCR.top": "カスタム ディベロップメント",
+  "plan.custom.feature.CDCR.bottom": "カスタムレポート",
+  "plan.custom.feature.WLO": "ホワイト・レーベル　 オプション"
 }

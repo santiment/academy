@@ -14,8 +14,6 @@ const PlanActionDialog = props =>
 
 export default {
   FREE: {
-    title: 'Free',
-    desc: 'For individuals just getting started with crypto',
     discount: 'Free forever',
     link: 'Upgrade now',
     Component: () => (
@@ -24,79 +22,95 @@ export default {
       </Button>
     ),
     features: [
-      'Historical data access to last 3 months excluding the last 24 hours',
-      <>
-        20 API calls / minute
-        <br />
-        1k API calls / month
-      </>,
-      <>
-        Standard metrics <span className={styles.ast}>*</span>
-      </>,
+      'HDA',
+      intl => (
+        <>
+          20 {intl.formatMessage({ id: 'plan.feature.AC' })}
+          <br />
+          1k {intl.formatMessage({ id: 'plan.feature.AC' })}
+        </>
+      ),
+      intl => (
+        <>
+          {intl.formatMessage({ id: 'plan.feature.SM' })}{' '}
+          <span className={styles.ast}>*</span>
+        </>
+      ),
 
-      <>
-        Attribution required <span className={styles.ast}>**</span>
-      </>,
+      intl => (
+        <>
+          {intl.formatMessage({ id: 'plan.free.feature.AR' })}{' '}
+          <span className={styles.ast}>**</span>
+        </>
+      ),
     ],
   },
   ESSENTIAL: {
-    title: 'Basic',
-    desc: 'Great for short-term analysis and prototyping',
     link: 'Upgrade now',
     Component: PlanActionDialog,
     features: [
-      'Historical data access to last 6 months',
-      <>
-        60 API calls / minute
-        <br />
-        10k API calls / month
-      </>,
-      <>
-        Standard metrics <span className={styles.ast}>*</span>
-      </>,
-      'No attribution',
+      'HDA',
+      intl => (
+        <>
+          60 {intl.formatMessage({ id: 'plan.feature.AC' })}
+          <br />
+          10k {intl.formatMessage({ id: 'plan.feature.AC' })}
+        </>
+      ),
+      intl => (
+        <>
+          {intl.formatMessage({ id: 'plan.feature.SM' })}{' '}
+          <span className={styles.ast}>**</span>
+        </>
+      ),
+      intl => intl.formatMessage({ id: 'plan.feature.NA' }),
     ],
   },
   PRO: {
-    title: 'Pro',
     isPopular: true,
-    desc: 'Advanced metrics & serious backtesting potential',
     Component: PlanActionDialog,
     link: 'Upgrade now',
     features: [
-      'Historical data access to last 18 months',
-      <>
-        120 API calls / minute
-        <br />
-        150k API calls / month
-      </>,
-      <>
-        Advanced metrics <span className={styles.ast}>*</span>
-      </>,
-      'No attribution',
+      'HDA',
+      intl => (
+        <>
+          120 {intl.formatMessage({ id: 'plan.feature.AC' })}
+          <br />
+          150k {intl.formatMessage({ id: 'plan.feature.AC' })}
+        </>
+      ),
+      intl => (
+        <>
+          {intl.formatMessage({ id: 'plan.feature.AM' })}{' '}
+          <span className={styles.ast}>*</span>
+        </>
+      ),
+      intl => intl.formatMessage({ id: 'plan.feature.NA' }),
     ],
   },
   PREMIUM: {
-    title: 'Premium',
-    desc: 'Full historical data and generous rate limits',
+    desc: '',
     Component: PlanActionDialog,
     link: 'Upgrade now',
     features: [
-      'Unlimited historical data access',
-      <>
-        180 API calls / min
-        <br />
-        500k API calls / month
-      </>,
-      <>
-        Advanced metrics <span className={styles.ast}>*</span>
-      </>,
-      'No attribution',
+      'HDA',
+      intl => (
+        <>
+          180 {intl.formatMessage({ id: 'plan.feature.AC' })}
+          <br />
+          500k {intl.formatMessage({ id: 'plan.feature.AC' })}
+        </>
+      ),
+      intl => (
+        <>
+          {intl.formatMessage({ id: 'plan.feature.AM' })}{' '}
+          <span className={styles.ast}>*</span>
+        </>
+      ),
+      intl => intl.formatMessage({ id: 'plan.feature.NA' }),
     ],
   },
   CUSTOM: {
-    title: 'Enterprise',
-    desc: 'For organizations that need advanced data and support',
     discount: 'Based on your needs',
     link: 'Contact us',
     Component: props => (
@@ -107,13 +121,16 @@ export default {
       />
     ),
     features: [
-      'Unlimited historical data access',
-      `Custom development
-      Custom reports`,
-      <>
-        Advanced metrics <span className={styles.ast}>*</span>
-      </>,
-      'White-label options',
+      'HDA',
+      intl => `${intl.formatMessage({ id: 'plan.custom.feature.CDCR.top' })}
+      ${intl.formatMessage({ id: 'plan.custom.feature.CDCR.bottom' })}`,
+      intl => (
+        <>
+          {intl.formatMessage({ id: 'plan.feature.AM' })}{' '}
+          <span className={styles.ast}>*</span>
+        </>
+      ),
+      'WLO',
     ],
   },
 }
