@@ -158,7 +158,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                           }
                           if (priceType) {
                             priceType = intl.formatMessage({
-                              id: 'price.interval',
+                              id: 'billing.month.short',
                             })
                           }
 
@@ -178,6 +178,10 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                             altInterval,
                           )
 
+                          const title = intl.formatMessage({
+                            id: intlId + '.title',
+                          })
+
                           return (
                             <div
                               className={cx(
@@ -191,9 +195,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                             >
                               <div className={styles.card__top}>
                                 <h3 className={styles.card__title}>
-                                  {intl.formatMessage({
-                                    id: intlId + '.title',
-                                  })}
+                                  {title}
                                   {card.isPopular && (
                                     <span className={styles.popular}>
                                       {intl.formatMessage({
@@ -227,8 +229,21 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                   </span>
                                 </div>
                                 <div className={styles.discount}>
-                                  {card.discount ||
-                                    `${altPrice} if billed ${altInterval}ly`}
+                                  {card.discount ? (
+                                    intl.formatMessage({
+                                      id: card.discount,
+                                    })
+                                  ) : (
+                                    <>
+                                      {intl.formatMessage({
+                                        id: 'price.bill_discount.left',
+                                      })}
+                                      {altPrice}
+                                      {intl.formatMessage({
+                                        id: `price.bill_discount.${altInterval}`,
+                                      })}
+                                    </>
+                                  )}
                                 </div>
                                 {!currentUser ||
                                 sameAsUserPlan ||
@@ -242,7 +257,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                 ) : (
                                   <card.Component
                                     intl={intl}
-                                    title={card.title}
+                                    title={title}
                                     label={card.link}
                                     price={realPrice}
                                     billing={billing}

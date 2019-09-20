@@ -14,7 +14,7 @@ const PlanActionDialog = props =>
 
 export default {
   FREE: {
-    discount: 'Free forever',
+    discount: 'price.bill_discount.free',
     link: 'Upgrade now',
     Component: ({ intl }) => (
       <Button accent='blue' border fluid className={styles.link} disabled>
@@ -111,7 +111,7 @@ export default {
     ],
   },
   CUSTOM: {
-    discount: 'Based on your needs',
+    discount: 'price.bill_discount.custom',
     link: 'cta.contact',
     Component: props => (
       <PipedriveDialogBtn

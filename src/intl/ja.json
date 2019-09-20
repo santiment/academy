@@ -163,5 +163,28 @@
   "cta.contact": "お問い合わせ先",
 
   "plan.custom.price": "カスタム",
-  "price.interval": "/月"
+  "billing.month": "/月",
+  "billing.month.short": "/月",
+  "billing.year": "/年",
+
+  "price.bill_discount.free": "無料でご利用いただけます",
+  "price.bill_discount.custom": "ニーズに応じてカスタマイズ",
+  "price.bill_discount.left": "月払いの場合 ",
+  "price.bill_discount.month": "/月",
+  "price.bill_discount.year": "/年",
+
+  "payment.title.left": " ",
+  "payment.title.right": " プランお申し込み ",
+
+  "payment.card_details": "カード情報",
+  "payment.bill_address": "請求先住所",
+  "payment.full_name": "氏名",
+  "payment.country": "国名",
+  "payment.city": "都市名",
+  "payment.state": "市町村",
+  "payment.street": "番地",
+  "payment.phone": "お電話番号",
+
+  "payment.close": "閉じる",
+  "payment.confirm": "お支払"
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import Input from '@santiment-network/ui/Input'
 import { CardElement } from 'react-stripe-elements'
@@ -19,26 +20,42 @@ const style = {
   },
 }
 
-const CheckoutForm = ({ stripe, plan }) => {
+const CheckoutForm = ({ intl, stripe, plan }) => {
   return (
     <>
       <label className={cx(styles.label, styles.label_card)}>
-        Card details
+        {intl.formatMessage({
+          id: 'payment.card_details',
+        })}
         <CardElement style={style} />
       </label>
 
-      <label className={styles.label}>Billing address</label>
+      <label className={styles.label}>
+        {intl.formatMessage({
+          id: 'payment.bill_address',
+        })}
+      </label>
       <Input
         className={styles.input}
-        placeholder='Full Name'
+        placeholder={intl.formatMessage({
+          id: 'payment.full_name',
+        })}
         required
         name='name'
       />
       <div className={styles.row}>
-        <Input className={styles.input} placeholder='Country' required />
+        <Input
+          className={styles.input}
+          placeholder={intl.formatMessage({
+            id: 'payment.country',
+          })}
+          required
+        />
         <Input
           className={cx(styles.input, styles.input_right)}
-          placeholder='City'
+          placeholder={intl.formatMessage({
+            id: 'payment.city',
+          })}
           required
           name='address_city'
         />
@@ -46,20 +63,26 @@ const CheckoutForm = ({ stripe, plan }) => {
       <div className={styles.row}>
         <Input
           className={styles.input}
-          placeholder='State/Region'
+          placeholder={intl.formatMessage({
+            id: 'payment.state',
+          })}
           required
           name='address_state'
         />
         <Input
           className={cx(styles.input, styles.input_right)}
-          placeholder='Street Address'
+          placeholder={intl.formatMessage({
+            id: 'payment.street',
+          })}
           required
           name='address_line1'
         />
       </div>
       <Input
         className={styles.input}
-        placeholder='Phone Number'
+        placeholder={intl.formatMessage({
+          id: 'payment.phone',
+        })}
         type='tel'
         required
       />
@@ -67,4 +90,4 @@ const CheckoutForm = ({ stripe, plan }) => {
   )
 }
 
-export default CheckoutForm
+export default injectIntl(CheckoutForm)
