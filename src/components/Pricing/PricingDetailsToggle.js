@@ -12,13 +12,15 @@ function useToggle() {
   return [toggled, setToggle]
 }
 
-export default props => {
+export default ({ intl, ...props }) => {
   const [toggled, setToggle] = useToggle()
   return (
     <>
       <div className={styles.more} onClick={setToggle}>
         <Icon type={toggled ? 'subtract-round' : 'plus-round-small'} />
-        {toggled ? `Hide` : `See full`} feature table
+        {intl.formatMessage({
+          id: `plans.details.${toggled ? 'hide' : 'expand'}`,
+        })}
       </div>
       {toggled && (
         <>
@@ -29,7 +31,9 @@ export default props => {
             onClick={setToggle}
           >
             <Icon type='subtract-round' />
-            Hide feature table
+            {intl.formatMessage({
+              id: 'plans.details.hide',
+            })}
           </div>
         </>
       )}

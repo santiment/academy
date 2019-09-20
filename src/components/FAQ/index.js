@@ -1,7 +1,8 @@
-import React, { useState } from "react"
-import cx from "classnames"
-import Title from "../Title/Title"
-import styles from "./index.module.scss"
+import React, { useState } from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
+import cx from 'classnames'
+import Title from '../Title/Title'
+import styles from './index.module.scss'
 
 const questions = [
   {
@@ -77,20 +78,20 @@ const questions = [
   },
 ]
 
-export default () => {
+export default injectIntl(({ intl }) => {
   const [opened, setOpened] = useState(null)
   const onQuestionClick = question =>
     setOpened(question === opened ? null : question)
 
   return (
     <section className={styles.wrapper}>
-      <Title>Frequently asked questions</Title>
+      <Title>{intl.formatMessage({ id: 'faq.title' })}</Title>
       <ul className={styles.questions}>
         {questions.map(({ question, answer }) => (
           <li
             className={cx(
               styles.question,
-              opened === question && styles.opened
+              opened === question && styles.opened,
             )}
             onClick={() => onQuestionClick(question)}
             key={question}
@@ -117,4 +118,4 @@ export default () => {
       </ul>
     </section>
   )
-}
+})

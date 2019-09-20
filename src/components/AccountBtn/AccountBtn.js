@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { injectIntl, Link } from 'gatsby-plugin-intl'
 import Icon from '@santiment-network/ui/Icon'
 import Button from '@santiment-network/ui/Button'
 import { Query } from 'react-apollo'
@@ -11,7 +11,10 @@ const btnProps = {
     accent: 'blue',
     border: true,
     className: styles.login,
-    children: 'Sign up',
+    children: intl =>
+      intl.formatMessage({
+        id: 'cta.sign_up',
+      }),
     onClick: () => {
       window.gtag('event', 'login_action_call', {
         location: 'Navbar',
@@ -22,22 +25,25 @@ const btnProps = {
   true: { className: styles.account, children: <Icon type='profile' /> },
 }
 
-const AccountBtn = ({ isAccountPage }) => {
+const AccountBtn = ({ intl, isAccountPage }) => {
   return (
     <Query query={CURRENT_USER_QUERY}>
       {({ data: { currentUser } = {} }) => {
+        const { children, ...props } = btnProps[Boolean(currentUser)]
         return (
           <Button
             as={Link}
             to='/account'
             variant='flat'
             isActive={isAccountPage}
-            {...btnProps[Boolean(currentUser)]}
-          />
+            {...props}
+          >
+            {typeof children === 'function' ? children(intl) : children}
+          </Button>
         )
       }}
     </Query>
   )
 }
 
-export default AccountBtn
+export default injectIntl(AccountBtn)

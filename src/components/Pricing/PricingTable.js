@@ -257,6 +257,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                       billing={billing}
                       subscription={subscription}
                       onDialogClose={onDialogClose}
+                      intl={intl}
                     />
                   </>
                 )

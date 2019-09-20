@@ -1,94 +1,99 @@
 import React from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import styles from './Footer.module.scss'
 
 const categories = [
   {
-    title: 'Labs',
+    title: 'labs',
     links: [
       {
-        children: 'Social trends',
+        children: 'trends',
         href: 'https://app.santiment.net/labs/trends',
       },
       {
-        children: 'Eth spent',
+        children: 'eth',
         href: 'https://app.santiment.net/projects/ethereum',
       },
       {
-        children: 'Historical balance',
+        children: 'balance',
         href: 'https://app.santiment.net/labs/balance',
       },
-      { children: 'Charts', href: 'https://data.santiment.net' },
-      { children: 'Sheets', href: 'https://santiment.net/sansheets/' },
+      { children: 'charts', href: 'https://data.santiment.net' },
+      { children: 'sheets', href: 'https://santiment.net/sansheets/' },
     ],
   },
   {
-    title: 'Company',
+    title: 'company',
     links: [
-      { children: 'About us', href: 'https://santiment.net/about-santiment/' },
-      { children: 'Customers', href: 'https://santiment.net/customers/' },
-      { children: 'Team', href: 'https://santiment.net/about-santiment/team/' },
-      { children: 'Jobs', href: 'https://santiment.net/about-santiment/jobs/' },
+      { children: 'about', href: 'https://santiment.net/about-santiment/' },
+      { children: 'customers', href: 'https://santiment.net/customers/' },
+      { children: 'team', href: 'https://santiment.net/about-santiment/team/' },
+      { children: 'jobs', href: 'https://santiment.net/about-santiment/jobs/' },
       {
-        children: 'Contact us',
+        children: 'contact',
         href: 'https://santiment.net/about-santiment/contact/',
       },
     ],
   },
   {
-    title: 'Resources',
+    title: 'resources',
     links: [
       {
-        children: 'Getting started',
+        children: 'start',
         href: 'https://help.santiment.net/santiment-getting-started',
       },
       {
-        children: 'Docs',
+        children: 'docs',
         href: 'https://help.santiment.net/metrics-explained#api',
       },
-      { children: 'API', href: 'https://api.santiment.net/graphiql' },
-      { children: 'Blog', href: 'https://santiment.net/blog/' },
-      { children: 'Source code', href: 'https://github.com/santiment/' },
+      { children: 'api', href: 'https://api.santiment.net/graphiql' },
+      { children: 'blog', href: 'https://santiment.net/blog/' },
+      { children: 'source', href: 'https://github.com/santiment/' },
       {
-        children: 'Buy SAN',
+        children: 'buy',
         href:
           'https://help.santiment.net/faq/general/how-to-buy-san-tokens-using-our-bancor-integration',
       },
     ],
   },
   {
-    title: 'Social',
+    title: 'social',
     links: [
-      { children: 'Discord', href: 'https://discord.gg/6fMxk82' },
-      { children: 'Telegram', href: 'https://t.me/santiment_network' },
-      { children: 'Twitter', href: 'https://twitter.com/santimentfeed' },
+      { children: 'discord', href: 'https://discord.gg/6fMxk82' },
+      { children: 'telegram', href: 'https://t.me/santiment_network' },
+      { children: 'twitter', href: 'https://twitter.com/santimentfeed' },
       {
-        children: 'Youtube',
+        children: 'youtube',
         href: 'https://www.youtube.com/channel/UCSzP_Z3MrygWlbLMyrNmMkg',
       },
       {
-        children: 'LinkedIn',
+        children: 'linkedin',
         href: 'https://www.linkedin.com/company/santiment',
       },
-      { children: 'Medium', href: 'https://medium.com/santiment' },
-      { children: 'Reddit', href: 'https://reddit.com/r/santiment' },
+      { children: 'medium', href: 'https://medium.com/santiment' },
+      { children: 'reddit', href: 'https://reddit.com/r/santiment' },
     ],
   },
 ]
 
-const Footer = () => (
+const Footer = ({ intl }) => (
   <footer className={styles.footer}>
     <div className={styles.top}>
       <ul className={styles.categories}>
         {categories.map(({ title, links }) => (
           <li key={title} className={styles.category}>
-            <h4 className={styles.category__title}>{title}</h4>
-            {links.map(({children, href}, i) => (
+            <h4 className={styles.category__title}>
+              {intl.formatMessage({ id: `footer.${title}` })}
+            </h4>
+            {links.map(({ children, href }, i) => (
               <a
                 key={i}
                 target='_blank'
                 rel='noopener noreferrer'
-                children={children}
+                children={intl.formatMessage({
+                  id: `footer.${title}.${children}`,
+                })}
                 href={href}
                 className={cx(styles.text, styles.category__item)}
               />
@@ -105,7 +110,7 @@ const Footer = () => (
           href='https://santiment.net/terms-conditions/'
           className={cx(styles.text, styles.link)}
         >
-          Terms
+          {intl.formatMessage({ id: 'footer.terms' })}
         </a>
         <a
           rel='noopener noreferrer'
@@ -113,14 +118,14 @@ const Footer = () => (
           href='https://app.santiment.net/privacy-policy'
           className={cx(styles.text, styles.link)}
         >
-          Privacy
+          {intl.formatMessage({ id: 'footer.privacy' })}
         </a>
       </div>
       <div className={cx(styles.text, styles.rights)}>
-        &copy; 2019 Santiment Inc. All rights reserved
+        {intl.formatMessage({ id: 'footer.rights' })}
       </div>
     </div>
   </footer>
 )
 
-export default Footer
+export default injectIntl(Footer)

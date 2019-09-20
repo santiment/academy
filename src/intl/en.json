@@ -104,5 +104,55 @@
   "plan.custom.feature.HDA": "Unlimited historical data access",
   "plan.custom.feature.CDCR.top": "Custom development",
   "plan.custom.feature.CDCR.bottom": "Custom reports",
-  "plan.custom.feature.WLO": "White-label options"
+  "plan.custom.feature.WLO": "White-label options",
+
+  "plans.details.hide": "Hide feature table",
+  "plans.details.expand": "See full feature table",
+
+  "testimonials.title.top": "What people",
+  "testimonials.title.bottom": "are saying",
+
+  "faq.title": "Frequently asked questions",
+
+  "ready.title": "Ready to get started?",
+  "ready.text.top": "Click below to access the Santiment API or join the Discord",
+  "ready.text.bottom": "channel to share your solutions with the world",
+  "ready.btn": "Get access",
+
+  "footer.labs": "Labs",
+  "footer.labs.trends": "Social trends",
+  "footer.labs.eth": "Eth spent",
+  "footer.labs.balance": "Historical balance",
+  "footer.labs.charts": "Charts",
+  "footer.labs.sheets": "Sheets",
+
+  "footer.company": "Company",
+  "footer.company.about": "About us",
+  "footer.company.customers": "Customers",
+  "footer.company.team": "Team",
+  "footer.company.jobs": "Jobs",
+  "footer.company.contact": "Contact us",
+
+  "footer.resources": "Resources",
+  "footer.resources.start": "Getting started",
+  "footer.resources.docs": "Docs",
+  "footer.resources.api": "API",
+  "footer.resources.blog": "Blog",
+  "footer.resources.source": "Source code",
+  "footer.resources.buy": "Buy SAN",
+
+  "footer.social": "Social",
+  "footer.social.discord": "Discord",
+  "footer.social.telegram": "Telegram",
+  "footer.social.twitter": "Twitter",
+  "footer.social.youtube": "Youtube",
+  "footer.social.linkedin": "LinkedIn",
+  "footer.social.medium": "Medium",
+  "footer.social.reddit": "Reddit",
+
+  "footer.terms": "Terms",
+  "footer.privacy": "Privacy",
+  "footer.rights": "© 2019 Santiment Inc. All rights reserved",
+
+ "cta.sign_up": "Sign up"
 }

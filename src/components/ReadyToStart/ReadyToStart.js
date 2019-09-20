@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { injectIntl, Link } from 'gatsby-plugin-intl'
 import Title from '../Title/Title'
 import Button from '@santiment-network/ui/Button'
 import styles from './ReadyToStart.module.scss'
@@ -11,14 +11,14 @@ function onGetAccessClick() {
   })
 }
 
-export default () => (
+export default injectIntl(({ intl }) => (
   <section className={styles.wrapper}>
     <div>
-      <Title>Ready to get started?</Title>
+      <Title>{intl.formatMessage({ id: 'ready.title' })}</Title>
       <p className={styles.text}>
-        Click below to access the Santiment API or join the Discord
+        {intl.formatMessage({ id: 'ready.text.top' })}
         <br className={styles.br} />
-        channel to share your solutions with the world
+        {intl.formatMessage({ id: 'ready.text.bottom' })}
       </p>
       <Button
         as={Link}
@@ -28,8 +28,8 @@ export default () => (
         className={styles.btn}
         onClick={onGetAccessClick}
       >
-        Get access
+        {intl.formatMessage({ id: 'ready.btn' })}
       </Button>
     </div>
   </section>
-)
+))

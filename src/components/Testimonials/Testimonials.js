@@ -1,8 +1,9 @@
 import React, { useRef } from 'react'
+import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import Slider from 'react-slick'
 import Title from '../Title/Title'
-import FluidItem from "./FluidItem/FluidItem"
+import FluidItem from './FluidItem/FluidItem'
 import styles from './Testimonials.module.scss'
 
 const settings = {
@@ -14,14 +15,14 @@ const settings = {
 }
 
 const pics = [
-  "nasty",
-  "ibis",
-  "dima",
-  "yura",
-  "thumbs_up",
-  "hand",
-  "nemo",
-  "garry",
+  'nasty',
+  'ibis',
+  'dima',
+  'yura',
+  'thumbs_up',
+  'hand',
+  'nemo',
+  'garry',
 ]
 
 const testimonials = [
@@ -48,7 +49,7 @@ const testimonials = [
   },
 ]
 
-const Testimonials = () => {
+const Testimonials = ({ intl }) => {
   const slider = useRef(null)
   const slickNext = () => {
     slider.current.slickNext()
@@ -59,11 +60,13 @@ const Testimonials = () => {
 
   return (
     <section className={styles.wrapper}>
-      {pics.map(pic => <FluidItem key={pic} pic={pic} />)}
+      {pics.map(pic => (
+        <FluidItem key={pic} pic={pic} />
+      ))}
       <Title className={styles.title}>
-        What people
+        {intl.formatMessage({ id: 'testimonials.title.top' })}
         <br />
-        are saying
+        {intl.formatMessage({ id: 'testimonials.title.bottom' })}
       </Title>
       <div className={styles.slider}>
         <div
@@ -127,4 +130,4 @@ const Testimonials = () => {
   )
 }
 
-export default Testimonials
+export default injectIntl(Testimonials)

@@ -104,5 +104,56 @@
   "plan.custom.feature.HDA": "無制限のヒストリカルデータアクセス",
   "plan.custom.feature.CDCR.top": "カスタム ディベロップメント",
   "plan.custom.feature.CDCR.bottom": "カスタムレポート",
-  "plan.custom.feature.WLO": "ホワイト・レーベル　 オプション"
+  "plan.custom.feature.WLO": "ホワイト・レーベル　 オプション",
+
+
+  "plans.details.hide": "Hide feature table",
+  "plans.details.expand": "全ての機能を見る",
+
+  "testimonials.title.top": "利用者からの",
+  "testimonials.title.bottom": "コメント",
+
+  "faq.title": "よくある質問",
+
+  "ready.title": "さあ始めましょう！",
+  "ready.text.top": "下記リンクより、Santiment API アクセスや、Discord チャンネル",
+  "ready.text.bottom": "をご利用いただけます。",
+  "ready.btn": "をご利用いただけます。",
+
+  "footer.labs": "ラボ",
+  "footer.labs.trends": "ソーシャルトレンド",
+  "footer.labs.eth": "使用ETH",
+  "footer.labs.balance": "ヒストリカルバランス",
+  "footer.labs.charts": "チャート",
+  "footer.labs.sheets": "シート",
+
+  "footer.company": "会社概要",
+  "footer.company.about": "Santimentについて",
+  "footer.company.customers": "カスタマー",
+  "footer.company.team": "チーム",
+  "footer.company.jobs": "求人情報",
+  "footer.company.contact": "お問いあわせ先",
+
+  "footer.resources": "リソース",
+  "footer.resources.start": "スタート",
+  "footer.resources.docs": "ドキュメント",
+  "footer.resources.api": "API",
+  "footer.resources.blog": "ブログ",
+  "footer.resources.source": "ソースコード",
+  "footer.resources.buy": "SANを購入",
+
+  "footer.social": "ソーシャル",
+  "footer.social.discord": "Discord",
+  "footer.social.telegram": "Telegram",
+  "footer.social.twitter": "Twitter",
+  "footer.social.youtube": "Youtube",
+  "footer.social.linkedin": "LinkedIn",
+  "footer.social.medium": "Medium",
+  "footer.social.reddit": "Reddit",
+
+  "footer.terms": "契約条件",
+  "footer.privacy": "プライバシー",
+  "footer.rights": "© 2019 Santiment, Inc. 無断複写・転載を禁じます。",
+
+ "cta.sign_up": "サインアップ"
 }
