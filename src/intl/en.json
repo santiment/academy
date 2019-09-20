@@ -185,5 +185,35 @@
   "payment.phone":"Phone Number",
 
   "payment.close": "Close",
-  "payment.confirm": "Confirm payment"
+  "payment.confirm": "Confirm payment",
+
+  "testimonials.paolo.name": "Paolo Ardoino",
+  "testimonials.paolo.position": "CTO at Bitfinex",
+  "testimonials.paolo.text": "SANapi is one of the most comprehensive crypto APIs on the market. For us, it is incredibly easy to fetch various data sets like on-chain, social media and development info directly to Bitfinex through their unified API and across different blockchains. The Santiment team has worked hard on creating a stable, reliable and all-inclusive data source for crypto, and they’ve more than delivered.",
+
+  "testimonials.pramesh.name": "Pramesh Tyagi",
+  "testimonials.pramesh.position": "Director at ShillazTech",
+  "testimonials.pramesh.text": "After switching from stock trading to crypto, I realized that on-chain data of any crypto asset provides vital information about market participants beyond OHLCV. Using a combination of pricing and blockchain data via Santiment’s API, I was quickly able to develop hybrid trade signals that have proven highly reliable, effective and - most importantly - profitable.",
+
+  "testimonials.yan.name": "Jan Smirny",
+  "testimonials.yan.postion": "Data Scientist",
+  "testimonials.yan.text": "I work with both the Sanpy python module and the ‘naked’ SAN API since both have their advantages. The GraphiQL API is great if you want very specific data for your research or pipeline implementations. For quick and easy data access for my research, the sanpy module is the place to go because (after the import) it is literally one line of code to get the data. It doesn’t get easier than that!",
+
+  "faq.explore": "How can I easily explore the API and all endpoints it offers?",
+  "faq.explore.left": "You can try our API through a web explorer! Find out more ",
+  "faq.explore.link": "here",
+  "faq.explore.right": ".",
+
+  "faq.data": "How far back is the data available?",
+  "faq.data.p.1": "For our on-chain metrics - all the way back. This means all BTC metrics are available for as far back as the BTC blockchain existed; same goes for Ethereum and other chains that we track at the moment and will track in the future.",
+  "faq.data.p.2": "For our social metrics, it will obviously differ based on the age of a particular social channel, but we have more than enough data for most machine learning applications.",
+  "faq.data.p.3": "For our development activity metrics, the data goes back to the first git commit/event executed in a project’s public Github repo.",
+  "faq.data.left": "Feel free to ask ",
+  "faq.data.link": "on our Discord",
+  "faq.data.right": " for more details.",
+
+  "faq.slug": "What is a ‘slug’ - and where can I find a list of them?",
+  "faq.slug.left": "‘slug’ is a parameter that most API endpoints share; it acts as a unique identifier for a project or asset. Check out this query to find all available slugs ",
+  "faq.slug.link": "here",
+  "faq.slug.right": "."
 }

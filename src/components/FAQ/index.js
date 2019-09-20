@@ -1,91 +1,77 @@
 import React, { useState } from 'react'
-import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import Title from '../Title/Title'
+import { tr } from '../../utils/translate'
 import styles from './index.module.scss'
 
 const questions = [
   {
-    question: 'How can I easily explore the API and all endpoints it offers?',
+    question: 'faq.explore',
     answer: (
       <>
         <p className={styles.text}>
-          You can try our API through a web explorer! Find out more{' '}
+          {tr('faq.explore.left')}
           <a
             href='https://help.santiment.net/santiment-getting-started/sanbase-api/using-the-sanbase-api-explorer'
             rel='noopener noreferrer'
             target='_blank'
           >
-            here
+            {tr('faq.explore.link')}
           </a>
-          .
+          {tr('faq.explore.right')}
         </p>
       </>
     ),
   },
   {
-    question: 'How far back is the data available?',
+    question: 'faq.data',
     answer: (
       <>
+        <p className={styles.text}>{tr('faq.data.p.1')}</p>
+        <p className={styles.text}>{tr('faq.data.p.2')}</p>
+        <p className={styles.text}>{tr('faq.data.p.3')}</p>
         <p className={styles.text}>
-          For our on-chain metrics - all the way back. This means all BTC
-          metrics are available for as far back as the BTC blockchain existed;
-          same goes for Ethereum and other chains that we track at the moment
-          and will track in the future.
-        </p>
-        <p className={styles.text}>
-          For our social metrics, it will obviously differ based on the age of a
-          particular social channel, but we have more than enough data for most
-          machine learning applications.
-        </p>
-        <p className={styles.text}>
-          For our development activity metrics, the data goes back to the first
-          git commit/event executed in a project’s public Github repo.
-        </p>
-        <p className={styles.text}>
-          Feel free to ask{' '}
+          {tr('faq.data.left')}
           <a
             href='https://santiment.net/discord'
             rel='noopener noreferrer'
             target='_blank'
           >
-            on our Discord
-          </a>{' '}
-          for more details.
+            {tr('faq.data.link')}
+          </a>
+          {tr('faq.data.right')}
         </p>
       </>
     ),
   },
   {
-    question: 'What is a ‘slug’ - and where can I find a list of them?',
+    question: 'faq.slug',
     answer: (
       <>
         <p className={styles.text}>
-          ‘slug’ is a parameter that most API endpoints share; it acts as a
-          unique identifier for a project or asset. Check out this query to find
-          all available slugs{' '}
+          {tr('faq.slug.left')}
           <a
             href='https://api.santiment.net/graphiql?variables=%7B%7D&query=query%7BallProjects%20%7B%0A%20%20slug%0A%7D%7D'
             rel='noopener noreferrer'
             target='_blank'
           >
-            here
+            {tr('faq.slug.link')}
           </a>
-          .
+          {tr('faq.slug.right')}
         </p>
       </>
     ),
   },
 ]
 
-export default injectIntl(({ intl }) => {
+export default () => {
   const [opened, setOpened] = useState(null)
   const onQuestionClick = question =>
     setOpened(question === opened ? null : question)
 
   return (
     <section className={styles.wrapper}>
-      <Title>{intl.formatMessage({ id: 'faq.title' })}</Title>
+      <Title>{tr('faq.title')}</Title>
       <ul className={styles.questions}>
         {questions.map(({ question, answer }) => (
           <li
@@ -97,7 +83,7 @@ export default injectIntl(({ intl }) => {
             key={question}
           >
             <div className={styles.question__top}>
-              <h3 className={styles.question__text}>{question}</h3>
+              <h3 className={styles.question__text}>{tr(question)}</h3>
               <svg
                 width='15'
                 height='8'
@@ -118,4 +104,4 @@ export default injectIntl(({ intl }) => {
       </ul>
     </section>
   )
-})
+}
