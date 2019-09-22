@@ -3,6 +3,7 @@ import { injectIntl } from 'gatsby-plugin-intl'
 import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Dialog from '@santiment-network/ui/Dialog'
+import Icon from '@santiment-network/ui/Icon'
 import Panel from '@santiment-network/ui/Panel/Panel'
 import { Elements, injectStripe } from 'react-stripe-elements'
 import CheckoutForm from '../CheckoutForm/CheckoutForm'
@@ -92,14 +93,8 @@ const PaymentDialog = ({
             {(subscribe, { called, error, data }) => {
               return (
                 <Dialog
-                  title={`${intl.formatMessage({
-                    id: 'payment.title.left',
-                  })}"${title}"${intl.formatMessage({
-                    id: 'payment.title.right',
-                  })}(${price}${intl.formatMessage({
-                    id: 'billing.' + billing,
-                  })})`}
-                  classes={{ dialog: sharedStyles.dialog }}
+                  title='Payment details'
+                  classes={styles}
                   open={paymentVisible}
                   onClose={hidePayment}
                   as={Form}
@@ -164,26 +159,37 @@ const PaymentDialog = ({
                       <Loader />
                     </div>
                   )}
-                  <Dialog.ScrollContent withPadding>
+                  <Dialog.ScrollContent className={styles.content}>
+                    <div className={styles.plan}>
+                      <div className={styles.plan__left}>
+                        <Icon type='checkmark' className={styles.plan__check} />
+                        Pro yearly
+                      </div>
+                      <div className={styles.plan__right}>
+                        <div className={styles.plan__year}>$540 / year</div>
+                        <div className={styles.plan__month}>$540 / year</div>
+                      </div>
+                    </div>
+
                     <CheckoutForm plan={title} />
-                  </Dialog.ScrollContent>
-                  <Dialog.Actions>
-                    <Dialog.Cancel
-                      className={sharedStyles.action_cancel}
-                      onClick={hidePayment}
-                    >
-                      {tr('payment.close')}
-                    </Dialog.Cancel>
+
                     <Dialog.Approve
                       variant='fill'
                       accent='blue'
                       disabled={loading}
-                      className={sharedStyles.action}
                       type='submit'
                     >
                       {tr('payment.confirm')}
                     </Dialog.Approve>
-                  </Dialog.Actions>
+                  </Dialog.ScrollContent>
+                  <div className={styles.bottom}>
+                    <div className={styles.bottom__info}>
+                      Fully secured checkout
+                    </div>
+                    <div className={styles.bottom__info}>
+                      30 day money back guarantee
+                    </div>
+                  </div>
                 </Dialog>
               )
             }}

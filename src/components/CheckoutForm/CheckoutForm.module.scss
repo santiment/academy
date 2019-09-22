@@ -1,12 +1,25 @@
 @import '~@santiment-network/ui/mixins';
 @import '~@santiment-network/ui/variables';
 
+.top {
+  @include text('body-3');
+  color: var(--mirage);
+}
+
+.main {
+  border-radius: 4px;
+  background: var(--athens);
+  padding: 24px 32px;
+}
+
 .row {
   display: flex;
 }
 
 .input {
   margin-bottom: 10px;
+  height: 40px;
+
   &:hover,
   &:focus {
     border-color: var(--dodger-blue);
@@ -28,10 +41,11 @@
       box-sizing: border-box;
       border-radius: 4px;
       display: block;
-      padding: 7px 10px;
+      padding: 11px 10px;
       outline: 0;
       background: var(--white);
       margin-bottom: 5px;
+      height: 40px;
 
       &--focus {
         border-color: var(--dodger-blue);
