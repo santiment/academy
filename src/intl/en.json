@@ -196,7 +196,7 @@
   "testimonials.pramesh.text": "After switching from stock trading to crypto, I realized that on-chain data of any crypto asset provides vital information about market participants beyond OHLCV. Using a combination of pricing and blockchain data via Santiment’s API, I was quickly able to develop hybrid trade signals that have proven highly reliable, effective and - most importantly - profitable.",
 
   "testimonials.yan.name": "Jan Smirny",
-  "testimonials.yan.postion": "Data Scientist",
+  "testimonials.yan.position": "Data Scientist",
   "testimonials.yan.text": "I work with both the Sanpy python module and the ‘naked’ SAN API since both have their advantages. The GraphiQL API is great if you want very specific data for your research or pipeline implementations. For quick and easy data access for my research, the sanpy module is the place to go because (after the import) it is literally one line of code to get the data. It doesn’t get easier than that!",
 
   "faq.explore": "How can I easily explore the API and all endpoints it offers?",

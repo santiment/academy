@@ -1,7 +1,19 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
+import planetSvg from '../../images/planet.svg'
 import styles from './Footer.module.scss'
+
+const langProps = [
+  { link: '/ja', label: '日本語' },
+  { link: '/', label: 'English' },
+]
+
+const isJapanese = () =>
+  typeof window === 'undefined'
+    ? false
+    : window.location.pathname.includes('/ja')
 
 const categories = [
   {
@@ -77,55 +89,62 @@ const categories = [
   },
 ]
 
-const Footer = ({ intl }) => (
-  <footer className={styles.footer}>
-    <div className={styles.top}>
-      <ul className={styles.categories}>
-        {categories.map(({ title, links }) => (
-          <li key={title} className={styles.category}>
-            <h4 className={styles.category__title}>
-              {intl.formatMessage({ id: `footer.${title}` })}
-            </h4>
-            {links.map(({ children, href }, i) => (
-              <a
-                key={i}
-                target='_blank'
-                rel='noopener noreferrer'
-                children={intl.formatMessage({
-                  id: `footer.${title}.${children}`,
-                })}
-                href={href}
-                className={cx(styles.text, styles.category__item)}
-              />
-            ))}
-          </li>
-        ))}
-      </ul>
-    </div>
-    <div className={styles.bottom}>
-      <div>
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href='https://santiment.net/terms-conditions/'
-          className={cx(styles.text, styles.link)}
-        >
-          {intl.formatMessage({ id: 'footer.terms' })}
-        </a>
-        <a
-          rel='noopener noreferrer'
-          target='_blank'
-          href='https://app.santiment.net/privacy-policy'
-          className={cx(styles.text, styles.link)}
-        >
-          {intl.formatMessage({ id: 'footer.privacy' })}
-        </a>
+const Footer = ({ intl }) => {
+  const { link, label } = langProps[+isJapanese()]
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.top}>
+        <ul className={styles.categories}>
+          {categories.map(({ title, links }) => (
+            <li key={title} className={styles.category}>
+              <h4 className={styles.category__title}>
+                {intl.formatMessage({ id: `footer.${title}` })}
+              </h4>
+              {links.map(({ children, href }, i) => (
+                <a
+                  key={i}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  children={intl.formatMessage({
+                    id: `footer.${title}.${children}`,
+                  })}
+                  href={href}
+                  className={cx(styles.text, styles.category__item)}
+                />
+              ))}
+            </li>
+          ))}
+        </ul>
       </div>
-      <div className={cx(styles.text, styles.rights)}>
-        {intl.formatMessage({ id: 'footer.rights' })}
+      <div className={styles.bottom}>
+        <div>
+          <Link to={link} className={cx(styles.text, styles.link)}>
+            <img alt='planet' src={planetSvg} className={styles.planet} />
+            {label}
+          </Link>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://santiment.net/terms-conditions/'
+            className={cx(styles.text, styles.link)}
+          >
+            {intl.formatMessage({ id: 'footer.terms' })}
+          </a>
+          <a
+            rel='noopener noreferrer'
+            target='_blank'
+            href='https://app.santiment.net/privacy-policy'
+            className={cx(styles.text, styles.link)}
+          >
+            {intl.formatMessage({ id: 'footer.privacy' })}
+          </a>
+        </div>
+        <div className={cx(styles.text, styles.rights)}>
+          {intl.formatMessage({ id: 'footer.rights' })}
+        </div>
       </div>
-    </div>
-  </footer>
-)
+    </footer>
+  )
+}
 
 export default injectIntl(Footer)

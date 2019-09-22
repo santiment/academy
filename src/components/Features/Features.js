@@ -1,10 +1,10 @@
 import React from 'react'
 import cx from 'classnames'
 import Icon from '@santiment-network/ui/Icon'
-import { tr } from '../../utils/translate'
+import { trStr } from '../../utils/translate'
 import styles from './Features.module.scss'
 
-export default ({ intlId, data, classes = {} }) => (
+export default ({ intl, intlId, data, classes = {} }) => (
   <ul className={cx(styles.features, classes.features)}>
     {data.map((feature, i) => (
       <li key={i} className={cx(styles.feature, classes.feature)}>
@@ -12,7 +12,11 @@ export default ({ intlId, data, classes = {} }) => (
           type='checkmark'
           className={cx(styles.feature__icon, classes.feature__icon)}
         />
-        {typeof feature === 'object' ? feature : tr(intlId + feature)}
+        {typeof feature === 'object'
+          ? feature
+          : typeof feature === 'function'
+          ? feature(intl)
+          : trStr(intl, intlId + feature)}
       </li>
     ))}
   </ul>

@@ -35,7 +35,7 @@ const billingOptions = [
       </>
     ),
   },
-  { index: 'month', content: tr('pricing.bill.month') }
+  { index: 'month', content: tr('pricing.bill.month') },
 ]
 
 export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
@@ -245,6 +245,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                   />
                                 )}
                                 <Features
+                                  intl={intl}
                                   data={card.features}
                                   classes={styles}
                                   intlId={`plan.${name.toLowerCase()}.feature.`}
