@@ -177,10 +177,19 @@ const PaymentDialog = ({
                       variant='fill'
                       accent='blue'
                       disabled={loading}
+                      loading={loading}
                       type='submit'
+                      className={styles.btn}
                     >
                       {tr('payment.confirm')}
                     </Dialog.Approve>
+                    <h5 className={styles.expl}>
+                      Your card will be charged
+                      <b> $540 </b>
+                      every year until you decide to downgrade or unsubscribe.
+                      Next billing date will be
+                      <b> 19/09/20</b>
+                    </h5>
                   </Dialog.ScrollContent>
                   <div className={styles.bottom}>
                     <div className={styles.bottom__info}>

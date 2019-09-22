@@ -83,3 +83,16 @@
   justify-content: space-between;
   @include text('caption');
 }
+
+.btn {
+  height: 40px;
+  width: 100%;
+  justify-content: center;
+  margin: 24px 0 16px;
+}
+
+.expl {
+  @include text('caption');
+  color: var(--waterloo);
+  text-align: center;
+}
