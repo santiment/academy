@@ -6,6 +6,8 @@ import Dialog from '@santiment-network/ui/Dialog'
 import Icon from '@santiment-network/ui/Icon'
 import Panel from '@santiment-network/ui/Panel/Panel'
 import { Elements, injectStripe } from 'react-stripe-elements'
+import IconLock from './IconLock'
+import IconDollar from './IconDollar'
 import CheckoutForm from '../CheckoutForm/CheckoutForm'
 import { NotificationsContext } from '../Notifications/Notifications'
 import Loader from '../Loader/Loader'
@@ -13,6 +15,7 @@ import { SUBSCRIBE_MUTATION } from '../../gql/plans'
 import { CURRENT_USER_QUERY } from '../../gql/user'
 import { getBilling } from '../../utils/plans'
 import { formatError, contactAction } from '../../utils/notifications'
+import { getDateFormats } from '../../utils/dates'
 import { tr } from '../../utils/translate'
 import styles from './PaymentDialog.module.scss'
 import sharedStyles from '../Pricing/index.module.scss'
@@ -51,12 +54,28 @@ const getTokenDataByForm = form => {
   return res
 }
 
+const YEAR_MULT_DIV = [1, 12]
+const MONTH_MULT_DIV = [12, 1]
 const getPrices = (amount, billing) => {
-  const [mult, div] = billing === 'year' ? [1, 12] : [12, 1]
+  const [mult, div] = billing === 'year' ? YEAR_MULT_DIV : MONTH_MULT_DIV
   return [
     `$${parseInt((amount * mult) / 100, 10)}`,
     `$${parseInt(amount / (100 * div), 10)}`,
   ]
+}
+
+const NEXT_DATE_GET_SET_MONTH = ['setMonth', 'getMonth']
+const NEXT_DATE_GET_SET_YEAR = ['setFullYear', 'getFullYear']
+const getNextPaymentDates = billing => {
+  const [setter, getter] =
+    billing === 'year' ? NEXT_DATE_GET_SET_YEAR : NEXT_DATE_GET_SET_MONTH
+
+  const date = new Date()
+  date[setter](date[getter]() + 1)
+
+  const { DD, MM, YY } = getDateFormats(date)
+
+  return `${DD}/${MM}/${YY}`
 }
 
 const PaymentDialog = ({
@@ -204,15 +223,15 @@ const PaymentDialog = ({
                       <b> {billing === 'year' ? yearPrice : monthPrice} </b>
                       every {billing} until you decide to downgrade or
                       unsubscribe. Next billing date will be
-                      <b> 19/09/20</b>
+                      <b> {getNextPaymentDates(billing)}</b>
                     </h5>
                   </Dialog.ScrollContent>
                   <div className={styles.bottom}>
                     <div className={styles.bottom__info}>
-                      Fully secured checkout
+                      <IconLock /> Fully secured checkout
                     </div>
                     <div className={styles.bottom__info}>
-                      30 day money back guarantee
+                      <IconDollar /> 30 day money back guarantee
                     </div>
                   </div>
                 </Dialog>

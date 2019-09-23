@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import Input from '@santiment-network/ui/Input'
+import Icon from '@santiment-network/ui/Icon'
 import { CardElement } from 'react-stripe-elements'
 import vars from '@santiment-network/ui/variables.scss'
 import { tr, trStr } from '../../utils/translate'
@@ -24,6 +25,12 @@ const style = {
 }
 
 const CheckoutForm = ({ intl, stripe, plan }) => {
+  const [visible, setVisible] = useState()
+
+  function onToggleClick() {
+    setVisible(!visible)
+  }
+
   return (
     <>
       <div className={styles.top}>
@@ -55,33 +62,38 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
         </label>
       </div>
 
-      <div className={styles.top}>{tr('payment.bill_address')}</div>
-      <div className={styles.form}>
-        <label className={cx(styles.label, styles.label_card)}>
-          {tr('payment.street')}
-          <Input
-            className={styles.input}
-            placeholder='670 Glen Creek St.'
-            name='address_line1'
-          />
-        </label>
-        <label className={cx(styles.label, styles.label_card)}>
-          {tr('payment.city')}
-          <Input
-            className={styles.input}
-            placeholder='Seattle'
-            name='address_city'
-          />
-        </label>
-        <label className={cx(styles.label, styles.label_card)}>
-          {tr('payment.state')}
-          <Input
-            className={styles.input}
-            placeholder='Washington'
-            name='address_state'
-          />
-        </label>
+      <div className={styles.toggle} onClick={onToggleClick}>
+        <Icon type={visible ? 'subtract-round' : 'plus-round-small'} /> Add{' '}
+        {tr('payment.bill_address')}
       </div>
+      {visible && (
+        <div className={styles.form}>
+          <label className={cx(styles.label, styles.label_card)}>
+            {tr('payment.street')}
+            <Input
+              className={styles.input}
+              placeholder='670 Glen Creek St.'
+              name='address_line1'
+            />
+          </label>
+          <label className={cx(styles.label, styles.label_card)}>
+            {tr('payment.city')}
+            <Input
+              className={styles.input}
+              placeholder='Seattle'
+              name='address_city'
+            />
+          </label>
+          <label className={cx(styles.label, styles.label_card)}>
+            {tr('payment.state')}
+            <Input
+              className={styles.input}
+              placeholder='Washington'
+              name='address_state'
+            />
+          </label>
+        </div>
+      )}
     </>
   )
 }

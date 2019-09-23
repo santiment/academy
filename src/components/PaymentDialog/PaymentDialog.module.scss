@@ -78,11 +78,20 @@
   padding: 15px 24px;
   background: var(--athens);
   color: var(--waterloo);
-  fill: var(--waterloo);
+  fill: var(--casper);
   display: flex;
   align-items: center;
   justify-content: space-between;
   @include text('caption');
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin: 0 10px 0 0;
+    }
+  }
 }
 
 .btn {
