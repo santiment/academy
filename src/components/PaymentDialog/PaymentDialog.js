@@ -51,6 +51,14 @@ const getTokenDataByForm = form => {
   return res
 }
 
+const getPrices = (amount, billing) => {
+  const [mult, div] = billing === 'year' ? [1, 12] : [12, 1]
+  return [
+    `$${parseInt((amount * mult) / 100, 10)}`,
+    `$${parseInt(amount / (100 * div), 10)}`,
+  ]
+}
+
 const PaymentDialog = ({
   intl,
   title,
@@ -65,6 +73,8 @@ const PaymentDialog = ({
 }) => {
   const [loading, toggleLoading] = useFormLoading()
   const [paymentVisible, setPaymentVisiblity] = useState(false)
+  const [yearPrice, monthPrice] = getPrices(price, billing)
+  console.log({ title, price, billing, yearPrice, monthPrice })
 
   function hidePayment() {
     setPaymentVisiblity(false)
@@ -163,11 +173,17 @@ const PaymentDialog = ({
                     <div className={styles.plan}>
                       <div className={styles.plan__left}>
                         <Icon type='checkmark' className={styles.plan__check} />
-                        Pro yearly
+                        {title} {billing}ly
                       </div>
                       <div className={styles.plan__right}>
-                        <div className={styles.plan__year}>$540 / year</div>
-                        <div className={styles.plan__month}>$540 / year</div>
+                        <div>
+                          <b className={styles.plan__year}>{yearPrice}</b> /
+                          year
+                        </div>
+                        <div>
+                          <b className={styles.plan__month}>{monthPrice}</b> /
+                          month
+                        </div>
                       </div>
                     </div>
 
@@ -181,13 +197,13 @@ const PaymentDialog = ({
                       type='submit'
                       className={styles.btn}
                     >
-                      {tr('payment.confirm')}
+                      Go {title.toUpperCase()} now
                     </Dialog.Approve>
                     <h5 className={styles.expl}>
                       Your card will be charged
-                      <b> $540 </b>
-                      every year until you decide to downgrade or unsubscribe.
-                      Next billing date will be
+                      <b> {billing === 'year' ? yearPrice : monthPrice} </b>
+                      every {billing} until you decide to downgrade or
+                      unsubscribe. Next billing date will be
                       <b> 19/09/20</b>
                     </h5>
                   </Dialog.ScrollContent>

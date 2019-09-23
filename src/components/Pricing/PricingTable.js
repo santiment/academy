@@ -237,7 +237,7 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                                   <card.Component
                                     title={title}
                                     label={card.link}
-                                    price={realPrice}
+                                    price={amount}
                                     billing={billing}
                                     planId={+id}
                                     subscription={subscription}

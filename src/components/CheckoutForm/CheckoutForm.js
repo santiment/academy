@@ -62,7 +62,6 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
           <Input
             className={styles.input}
             placeholder='670 Glen Creek St.'
-            required
             name='address_line1'
           />
         </label>
@@ -71,7 +70,6 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
           <Input
             className={styles.input}
             placeholder='Seattle'
-            required
             name='address_city'
           />
         </label>
@@ -80,7 +78,6 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
           <Input
             className={styles.input}
             placeholder='Washington'
-            required
             name='address_state'
           />
         </label>
