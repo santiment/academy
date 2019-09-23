@@ -4,9 +4,22 @@
 .top {
   @include text('body-3');
   color: var(--mirage);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 16px;
+
+  &__cards {
+    display: flex;
+    align-items: center;
+  }
+
+  &__visa {
+    margin-right: 16px;
+  }
 }
 
-.main {
+.form {
   border-radius: 4px;
   background: var(--athens);
   padding: 24px 32px;

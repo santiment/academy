@@ -5,6 +5,8 @@ import Input from '@santiment-network/ui/Input'
 import { CardElement } from 'react-stripe-elements'
 import vars from '@santiment-network/ui/variables.scss'
 import { tr, trStr } from '../../utils/translate'
+import visaSrc from './visa.png'
+import mastercardSrc from './mastercard.png'
 import styles from './CheckoutForm.module.scss'
 
 const style = {
@@ -24,8 +26,14 @@ const style = {
 const CheckoutForm = ({ intl, stripe, plan }) => {
   return (
     <>
-      <div className={styles.top}>Card information</div>
-      <div className={styles.main}>
+      <div className={styles.top}>
+        Card information
+        <div className={styles.top__cards}>
+          <img alt='visa' src={visaSrc} className={styles.top__visa} />
+          <img alt='mastercard' src={mastercardSrc} />
+        </div>
+      </div>
+      <div className={styles.form}>
         <label className={cx(styles.label, styles.label_card)}>
           {tr('payment.full_name')}
           <Input
@@ -45,48 +53,37 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
           {tr('payment.country')}
           <Input className={styles.input} placeholder='USA' required />
         </label>
+      </div>
 
-        <label className={styles.label}>
-          {intl.formatMessage({
-            id: 'payment.bill_address',
-          })}
-        </label>
-        <div className={styles.row}>
-          <Input
-            className={cx(styles.input, styles.input_right)}
-            placeholder={intl.formatMessage({
-              id: 'payment.city',
-            })}
-            required
-            name='address_city'
-          />
-        </div>
-        <div className={styles.row}>
+      <div className={styles.top}>{tr('payment.bill_address')}</div>
+      <div className={styles.form}>
+        <label className={cx(styles.label, styles.label_card)}>
+          {tr('payment.street')}
           <Input
             className={styles.input}
-            placeholder={intl.formatMessage({
-              id: 'payment.state',
-            })}
-            required
-            name='address_state'
-          />
-          <Input
-            className={cx(styles.input, styles.input_right)}
-            placeholder={intl.formatMessage({
-              id: 'payment.street',
-            })}
+            placeholder='670 Glen Creek St.'
             required
             name='address_line1'
           />
-        </div>
-        <Input
-          className={styles.input}
-          placeholder={intl.formatMessage({
-            id: 'payment.phone',
-          })}
-          type='tel'
-          required
-        />
+        </label>
+        <label className={cx(styles.label, styles.label_card)}>
+          {tr('payment.city')}
+          <Input
+            className={styles.input}
+            placeholder='Seattle'
+            required
+            name='address_city'
+          />
+        </label>
+        <label className={cx(styles.label, styles.label_card)}>
+          {tr('payment.state')}
+          <Input
+            className={styles.input}
+            placeholder='Washington'
+            required
+            name='address_state'
+          />
+        </label>
       </div>
     </>
   )
