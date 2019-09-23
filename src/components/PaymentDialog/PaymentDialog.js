@@ -46,7 +46,7 @@ const Form = props => <Panel as='form' {...props} />
 const getTokenDataByForm = form => {
   const res = {}
   new FormData(form).forEach((value, key) => {
-    if (key === 'name') {
+    if (key === 'name' || key === 'coupon') {
       return
     }
     res[key] = value
@@ -93,7 +93,6 @@ const PaymentDialog = ({
   const [loading, toggleLoading] = useFormLoading()
   const [paymentVisible, setPaymentVisiblity] = useState(false)
   const [yearPrice, monthPrice] = getPrices(price, billing)
-  console.log({ title, price, billing, yearPrice, monthPrice })
 
   function hidePayment() {
     setPaymentVisiblity(false)
@@ -136,12 +135,15 @@ const PaymentDialog = ({
 
                       window.gtag('event', 'begin_checkout', {
                         currency: 'USD',
-                        value: price.slice(1),
+                        value: price / 100,
                         items: title,
                       })
 
                       const form = e.currentTarget
                       const tokenData = getTokenDataByForm(form)
+                      const {
+                        coupon: { value: coupon },
+                      } = form
 
                       stripe
                         .createToken({ name: form.name.value }, tokenData)
@@ -149,9 +151,14 @@ const PaymentDialog = ({
                           if (error) {
                             return Promise.reject(error)
                           }
+                          const variables = { cardToken: token.id, planId }
+
+                          if (coupon) {
+                            variables.coupon = coupon
+                          }
 
                           return subscribe({
-                            variables: { cardToken: token.id, planId },
+                            variables,
                           })
                         })
                         .then(() => {
@@ -163,7 +170,7 @@ const PaymentDialog = ({
 
                           window.gtag('event', 'purchase', {
                             currency: 'USD',
-                            value: price.slice(1),
+                            value: price / 100,
                             items: title,
                           })
 
@@ -183,7 +190,7 @@ const PaymentDialog = ({
                     },
                   }}
                 >
-                  {loading && (
+                  {false && loading && (
                     <div className={styles.loader}>
                       <Loader />
                     </div>
@@ -211,8 +218,7 @@ const PaymentDialog = ({
                     <Dialog.Approve
                       variant='fill'
                       accent='blue'
-                      disabled={loading}
-                      loading={loading}
+                      isLoading={loading}
                       type='submit'
                       className={styles.btn}
                     >

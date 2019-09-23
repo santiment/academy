@@ -5,7 +5,7 @@ import Input from '@santiment-network/ui/Input'
 import Icon from '@santiment-network/ui/Icon'
 import { CardElement } from 'react-stripe-elements'
 import vars from '@santiment-network/ui/variables.scss'
-import { tr, trStr } from '../../utils/translate'
+import { tr } from '../../utils/translate'
 import visaSrc from './visa.png'
 import mastercardSrc from './mastercard.png'
 import styles from './CheckoutForm.module.scss'
@@ -28,11 +28,7 @@ const DiscountInput = () => {
   return (
     <label className={cx(styles.label, styles.label_card)}>
       Discount code
-      <Input
-        className={styles.input}
-        placeholder='123 - 567'
-        name='discount_code'
-      />
+      <Input className={styles.input} placeholder='123 - 567' name='coupon' />
     </label>
   )
 }
@@ -47,7 +43,7 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
   return (
     <>
       <div className={styles.top}>
-        Card information
+        {tr('payment.card_details')}
         <div className={styles.top__cards}>
           <img
             width='40'
@@ -76,7 +72,12 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
 
         <label className={cx(styles.label, styles.label_card)}>
           {tr('payment.country')}
-          <Input className={styles.input} placeholder='USA' required />
+          <Input
+            className={styles.input}
+            name='address_country'
+            placeholder='US'
+            required
+          />
         </label>
       </div>
 

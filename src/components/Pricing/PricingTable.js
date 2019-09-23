@@ -152,7 +152,6 @@ export default injectIntl(({ intl, classes = {}, onDialogClose }) => {
                           }
 
                           const intlId = `plan.${name.toLowerCase()}`
-                          const [realPrice] = formatPrice(amount, name)
 
                           const { amount: altAmount, interval: altInterval } =
                             getAlternativeBillingPlan(
