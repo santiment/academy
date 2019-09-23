@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { injectIntl } from 'gatsby-plugin-intl'
 import cx from 'classnames'
 import Input from '@santiment-network/ui/Input'
+import Icon from '@santiment-network/ui/Icon'
 import { CardElement } from 'react-stripe-elements'
 import vars from '@santiment-network/ui/variables.scss'
+import { tr } from '../../utils/translate'
+import visaSrc from './visa.png'
+import mastercardSrc from './mastercard.png'
 import styles from './CheckoutForm.module.scss'
 
 const style = {
@@ -20,72 +24,96 @@ const style = {
   },
 }
 
+const DiscountInput = () => {
+  return (
+    <label className={cx(styles.label, styles.label_card)}>
+      Discount code
+      <Input className={styles.input} placeholder='123 - 567' name='coupon' />
+    </label>
+  )
+}
+
 const CheckoutForm = ({ intl, stripe, plan }) => {
+  const [visible, setVisible] = useState()
+
+  function onToggleClick() {
+    setVisible(!visible)
+  }
+
   return (
     <>
-      <label className={cx(styles.label, styles.label_card)}>
-        {intl.formatMessage({
-          id: 'payment.card_details',
-        })}
-        <CardElement style={style} />
-      </label>
+      <div className={styles.top}>
+        {tr('payment.card_details')}
+        <div className={styles.top__cards}>
+          <img
+            width='40'
+            alt='visa'
+            src={visaSrc}
+            className={styles.top__visa}
+          />
+          <img width='40' alt='mastercard' src={mastercardSrc} />
+        </div>
+      </div>
+      <div className={styles.form}>
+        <label className={cx(styles.label, styles.label_card)}>
+          {tr('payment.full_name')}
+          <Input
+            className={styles.input}
+            placeholder='John Doe'
+            required
+            name='name'
+          />
+        </label>
 
-      <label className={styles.label}>
-        {intl.formatMessage({
-          id: 'payment.bill_address',
-        })}
-      </label>
-      <Input
-        className={styles.input}
-        placeholder={intl.formatMessage({
-          id: 'payment.full_name',
-        })}
-        required
-        name='name'
-      />
-      <div className={styles.row}>
-        <Input
-          className={styles.input}
-          placeholder={intl.formatMessage({
-            id: 'payment.country',
-          })}
-          required
-        />
-        <Input
-          className={cx(styles.input, styles.input_right)}
-          placeholder={intl.formatMessage({
-            id: 'payment.city',
-          })}
-          required
-          name='address_city'
-        />
+        <label className={cx(styles.label, styles.label_card)}>
+          {tr('payment.card_details')}
+          <CardElement style={style} />
+        </label>
+
+        <label className={cx(styles.label, styles.label_card)}>
+          {tr('payment.country')}
+          <Input
+            className={styles.input}
+            name='address_country'
+            placeholder='US'
+            required
+          />
+        </label>
       </div>
-      <div className={styles.row}>
-        <Input
-          className={styles.input}
-          placeholder={intl.formatMessage({
-            id: 'payment.state',
-          })}
-          required
-          name='address_state'
-        />
-        <Input
-          className={cx(styles.input, styles.input_right)}
-          placeholder={intl.formatMessage({
-            id: 'payment.street',
-          })}
-          required
-          name='address_line1'
-        />
+
+      <div className={styles.toggle} onClick={onToggleClick}>
+        <Icon type={visible ? 'subtract-round' : 'plus-round-small'} /> Add{' '}
+        {tr('payment.bill_address')}
       </div>
-      <Input
-        className={styles.input}
-        placeholder={intl.formatMessage({
-          id: 'payment.phone',
-        })}
-        type='tel'
-        required
-      />
+      {visible && (
+        <div className={styles.form}>
+          <label className={cx(styles.label, styles.label_card)}>
+            {tr('payment.street')}
+            <Input
+              className={styles.input}
+              placeholder='670 Glen Creek St.'
+              name='address_line1'
+            />
+          </label>
+          <label className={cx(styles.label, styles.label_card)}>
+            {tr('payment.city')}
+            <Input
+              className={styles.input}
+              placeholder='Seattle'
+              name='address_city'
+            />
+          </label>
+          <label className={cx(styles.label, styles.label_card)}>
+            {tr('payment.state')}
+            <Input
+              className={styles.input}
+              placeholder='Washington'
+              name='address_state'
+            />
+          </label>
+        </div>
+      )}
+      <DiscountInput />
     </>
   )
 }

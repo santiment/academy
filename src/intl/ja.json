@@ -163,9 +163,9 @@
   "cta.contact": "お問い合わせ先",
 
   "plan.custom.price": "カスタム",
-  "billing.month": "/月",
+  "billing.month": "月",
   "billing.month.short": "/月",
-  "billing.year": "/年",
+  "billing.year": "年",
 
   "price.bill_discount.free": "無料でご利用いただけます",
   "price.bill_discount.custom": "ニーズに応じてカスタマイズ",

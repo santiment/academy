@@ -162,9 +162,9 @@
   "cta.contact": "Your current plan",
 
   "plan.custom.price": "Custom",
-  "billing.month": "/month",
+  "billing.month": "month",
   "billing.month.short": "/mo",
-  "billing.year": "/year",
+  "billing.year": "year",
 
   "price.bill_discount.free": "Free forever",
   "price.bill_discount.custom": "Based on your needs",
@@ -175,8 +175,8 @@
   "payment.title.left": "Payment for the ",
   "payment.title.right": " plan ",
 
-  "payment.card_details":"Card details",
-  "payment.bill_address":"Billing address",
+  "payment.card_details":"Card information",
+  "payment.bill_address":"billing address",
   "payment.full_name":"Full Name",
   "payment.country":"Country",
   "payment.city":"City",
