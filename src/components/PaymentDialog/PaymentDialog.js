@@ -16,7 +16,7 @@ import { CURRENT_USER_QUERY } from '../../gql/user'
 import { getBilling } from '../../utils/plans'
 import { formatError, contactAction } from '../../utils/notifications'
 import { getDateFormats } from '../../utils/dates'
-import { tr } from '../../utils/translate'
+import { tr, trStr } from '../../utils/translate'
 import styles from './PaymentDialog.module.scss'
 import sharedStyles from '../Pricing/index.module.scss'
 
@@ -196,12 +196,12 @@ const PaymentDialog = ({
                       </div>
                       <div className={styles.plan__right}>
                         <div>
-                          <b className={styles.plan__year}>{yearPrice}</b> /
-                          year
+                          <b className={styles.plan__year}>{yearPrice}</b> /{' '}
+                          {trStr(intl, 'billing.year')}
                         </div>
                         <div>
                           <b className={styles.plan__month}>{monthPrice}</b> /
-                          month
+                          {trStr(intl, 'billing.month')}
                         </div>
                       </div>
                     </div>

@@ -24,6 +24,19 @@ const style = {
   },
 }
 
+const DiscountInput = () => {
+  return (
+    <label className={cx(styles.label, styles.label_card)}>
+      Discount code
+      <Input
+        className={styles.input}
+        placeholder='123 - 567'
+        name='discount_code'
+      />
+    </label>
+  )
+}
+
 const CheckoutForm = ({ intl, stripe, plan }) => {
   const [visible, setVisible] = useState()
 
@@ -36,8 +49,13 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
       <div className={styles.top}>
         Card information
         <div className={styles.top__cards}>
-          <img alt='visa' src={visaSrc} className={styles.top__visa} />
-          <img alt='mastercard' src={mastercardSrc} />
+          <img
+            width='40'
+            alt='visa'
+            src={visaSrc}
+            className={styles.top__visa}
+          />
+          <img width='40' alt='mastercard' src={mastercardSrc} />
         </div>
       </div>
       <div className={styles.form}>
@@ -94,6 +112,7 @@ const CheckoutForm = ({ intl, stripe, plan }) => {
           </label>
         </div>
       )}
+      <DiscountInput />
     </>
   )
 }

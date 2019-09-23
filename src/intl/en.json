@@ -162,9 +162,9 @@
   "cta.contact": "Your current plan",
 
   "plan.custom.price": "Custom",
-  "billing.month": "/month",
+  "billing.month": "month",
   "billing.month.short": "/mo",
-  "billing.year": "/year",
+  "billing.year": "year",
 
   "price.bill_discount.free": "Free forever",
   "price.bill_discount.custom": "Based on your needs",
