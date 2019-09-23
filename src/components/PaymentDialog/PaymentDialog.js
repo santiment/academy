@@ -190,11 +190,6 @@ const PaymentDialog = ({
                     },
                   }}
                 >
-                  {false && loading && (
-                    <div className={styles.loader}>
-                      <Loader />
-                    </div>
-                  )}
                   <Dialog.ScrollContent className={styles.content}>
                     <div className={styles.plan}>
                       <div className={styles.plan__left}>
