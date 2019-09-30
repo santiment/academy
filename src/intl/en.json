@@ -93,6 +93,7 @@
   "plan.custom.desc": "For organizations that need advanced data and support",
 
   "plan.feature.AC": "API calls / minute",
+  "plan.feature.AC.month": "API calls / monthly",
   "plan.feature.SM": "Standard metrics",
   "plan.feature.NA": "No attribution",
   "plan.feature.AM": "Advanced metrics",

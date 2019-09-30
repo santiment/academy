@@ -93,6 +93,7 @@
   "plan.custom.desc": "さらに専門的なデータ・サポートが必要な団体・企業向け",
 
   "plan.feature.AC": "API コール/ 分",
+  "plan.feature.AC.month": "API コール/ 月",
   "plan.feature.SM": "スタンダードメトリック",
   "plan.feature.NA": "著作権情報表示不要",
   "plan.feature.AM": "アドバンス・メトリック",

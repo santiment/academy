@@ -29,7 +29,7 @@ export default {
         <>
           20 {trStr(intl, 'plan.feature.AC')}
           <br />
-          1k {trStr(intl, 'plan.feature.AC')}
+          1k {trStr(intl, 'plan.feature.AC.month')}
         </>
       ),
       <>
@@ -49,7 +49,7 @@ export default {
         <>
           60 {trStr(intl, 'plan.feature.AC')}
           <br />
-          10k {trStr(intl, 'plan.feature.AC')}
+          10k {trStr(intl, 'plan.feature.AC.month')}
         </>
       ),
       <>
@@ -69,7 +69,7 @@ export default {
         <>
           120 {trStr(intl, 'plan.feature.AC')}
           <br />
-          150k {trStr(intl, 'plan.feature.AC')}
+          150k {trStr(intl, 'plan.feature.AC.month')}
         </>
       ),
       <>
@@ -88,7 +88,7 @@ export default {
         <>
           180 {trStr(intl, 'plan.feature.AC')}
           <br />
-          500k {trStr(intl, 'plan.feature.AC')}
+          500k {trStr(intl, 'plan.feature.AC.month')}
         </>
       ),
       <>
