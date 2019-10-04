@@ -62,8 +62,8 @@ export default function HTML(props) {
         {props.headComponents}
         <script src='https://js.stripe.com/v3/' />
         {intercomScript}
-        {hotjarScript}
-        {twitterScript}
+        {/* {hotjarScript} */}
+        {/* {twitterScript} */}
         <script
           async
           src='https://www.googletagmanager.com/gtag/js?id=UA-100571693-8'
