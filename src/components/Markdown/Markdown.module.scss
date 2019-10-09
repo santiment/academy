@@ -28,7 +28,6 @@
     color: var(--rhino);
     @include text("h4", "m");
     padding-bottom: 8px;
-    border-bottom: 1px solid var(--porcelain);
     margin: 20px 0 10px;
   }
 
@@ -106,8 +105,8 @@
       white-space: pre;
       border: none;
     	overflow-y: hidden;
-      padding: 5px;
-      margin-bottom: -1px;
+      padding: 10px;
+      margin-bottom: -10px;
       background: inherit;
     }
   }

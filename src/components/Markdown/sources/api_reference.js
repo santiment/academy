@@ -70,23 +70,6 @@ $ curl \
 If the query does not return status code 200, then something else is happening. Here are some of the options:
 
 1. 429 - you are being rate limited. Reduce the amount of requests you are doing
-1. 429 - you are being rate limited. Reduce the amount of requests you are doing
-1. 429 - you are being rate limited. Reduce the amount of requests you are doing
-1. 429 - you are being rate limited. Reduce the amount of requests you are doing
-1. 429 - you are being rate limited. Reduce the amount of requests you are doing
-1. 429 - you are being rate limited. Reduce the amount of requests you are doing
-1. 429 - you are being rate limited. Reduce the amount of requests you are doing
-1. 429 - you are being rate limited. Reduce the amount of requests you are doing
-1. 502 - an internal error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
-at the #support channel
-1. 502 - an internal error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
-at the #support channel
-1. 502 - an internal error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
-at the #support channel
-1. 502 - an internal error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
-at the #support channel
-1. 502 - an internal error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
-at the #support channel
 1. 502 - an internal error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
 at the #support channel
 

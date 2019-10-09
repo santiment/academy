@@ -18,10 +18,10 @@ const IndexPage = ({ intl }) => (
     <section className={styles.wrapper}>
       {/* <Markdown markdown={Socials} /> */}
       {/* <Markdown markdown={DAA} /> */}
-      <Markdown markdown={API} />
+      {/* <Markdown markdown={API} /> */}
       {/* <Markdown markdown={SD} /> */}
       {/* <Markdown markdown={PLANS} /> */}
-      {/* <Markdown markdown={MCA} /> */}
+      <Markdown markdown={MCA} />
       {/* <Markdown markdown={STCP} /> */}
     </section>
   </Layout>
