@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
-import { flatten } from './utils'
+import Emoji from 'react-emoji-render';
 import Icon from '@santiment-network/ui/Icon'
 import styles from './Markdown.module.scss'
 
@@ -23,7 +23,7 @@ const TextRenderer = ({value}) => {
     )
   }
 
-  return <>{value}</>
+  return <Emoji text={value} />
 }
 
 TextRenderer.propTypes = {

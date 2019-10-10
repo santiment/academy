@@ -37,7 +37,6 @@ section {
 }
 
 .main {
-  margin-top: 120px;
 
   @include responsive('phone', 'phone-xs') {
     margin-top: 60px;

@@ -92,7 +92,6 @@
     border-radius: 4px;
     background: var(--white) !important;
     overflow-x: auto;
-    overflow-x: overlay;
     overflow-y: hidden;
     margin: 20px 0;
     padding: 0 !important;
@@ -103,6 +102,18 @@
       padding: 10px;
       margin-bottom: -10px;
       background: inherit;
+    }
+
+    code:first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 10px;
+      border: 1px solid var(--porcelain);
+    }
+
+    code:last-child {
+      padding: 10px 40px;
     }
   }
 
@@ -199,6 +210,40 @@
   }
 }
 
+.codeWrapper {
+  position: relative;
+}
+
+.copy {
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  right: 1px;
+  top: 10px;
+  width: 44px;
+  text-align: center;
+  fill: var(--casper);
+  background:linear-gradient(270deg,#fff,#fff 60%, hsla(0,0%,100%,0));
+
+  &:hover {
+    fill: var(--waterloo);
+    cursor: pointer;
+  }
+}
+
+.copied::before {
+  @include text('caption');
+
+  display: block;
+  content: 'Copied!';
+  position: absolute;
+  right: 0;
+  bottom: 120%;
+  padding: 3px 10px;
+  border-radius: 4px;
+  background: $fiord;
+  color: $white;
+}
+
 .checkmark {
   fill: var(--lima);
   background: var(--lima-light);
@@ -217,4 +262,10 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+
+  @include responsive('phone-xs') {
+    width: auto;
+    height: auto;
+    background: transparent;
+  }
 }
