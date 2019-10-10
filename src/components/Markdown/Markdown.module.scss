@@ -15,7 +15,7 @@
   color: var(--mirage);
 
   @include responsive('phone-xs', 'phone') {
-  	padding: 10px;
+  	padding: 0px;
   }
 
   h1 {
@@ -37,9 +37,8 @@
     margin: 10px 0 8px;
   }
 
-  h2,
-  h3,
-  h4 {
+  h1,
+  h2 {
     position: relative;
 
     &:hover > .anchor {
@@ -63,11 +62,7 @@
     }
 
     @include responsive('phone-xs', 'phone', 'tablet') {
-    	opacity: 1;
-
-    	&:hover {
-    		fill: var(--waterloo);
-    	}
+    	display: none;
     }
   }
 
@@ -159,6 +154,7 @@
 
     	P {
     		display: inline-block;
+        margin: 0;
     	}
     }
   }
@@ -201,4 +197,24 @@
   		padding: 6px 5px;
     }
   }
+}
+
+.checkmark {
+  fill: var(--lima);
+  background: var(--lima-light);
+}
+
+.cross {
+  fill: var(--persimmon);
+  background: var(--persimmon-light);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }

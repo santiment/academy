@@ -10,7 +10,7 @@ const HeadingRenderer = ({level, children}) => {
   const slug = text.replace(/\W/g, "");
 
   return React.createElement(`h${level}`, { id: slug }, [
-    level === 2 ?
+    level < 3 ?
     (<a href={`#${slug}`} key={slug} className={styles.anchor}>
       <Icon type="link" />
     </a>) : '',

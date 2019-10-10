@@ -1,31 +1,32 @@
 import React from "react"
 import PropTypes from "prop-types"
 import ReactMarkdown from "react-markdown"
-import MathJax from "@matejmazur/react-mathjax"
+import TeX from '@matejmazur/react-katex'
+import 'katex/dist/katex.min.css'
 import HeadingRenderer from './HeadingRenderer'
 import CodeBlockRenderer from './CodeBlockRenderer'
+import TextRenderer from './TextRenderer'
 import {replaceCheckMarkstoCustom} from './utils'
 import styles from './Markdown.module.scss'
 const RemarkMathPlugin = require("remark-math");
 
 const Markdown = ({markdown, ...rest}) => (
-<MathJax.Context input="tex">
   <ReactMarkdown
   	{...rest}
   	className={styles.wrapper}
-    source={replaceCheckMarkstoCustom(markdown)}
+    source={markdown}
     escapeHtml={false}
     plugins={[RemarkMathPlugin]}
     renderers={{
+    	text: TextRenderer,
     	heading: HeadingRenderer,
     	code: CodeBlockRenderer,
     	math: props =>
-        <MathJax.Node>{props.value}</MathJax.Node>,
+        <TeX block>{props.value}</TeX>,
       inlineMath: props =>
-        <MathJax.Node inline={true}>{props.value}</MathJax.Node>
+        <TeX>{props.value}</TeX>
     }}
   />
-</MathJax.Context>
 )
 
 Markdown.propTypes = {

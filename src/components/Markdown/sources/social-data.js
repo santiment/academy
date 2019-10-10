@@ -44,7 +44,6 @@ For each of the data sources we have a curated list of accounts/sub-sources from
 
   **History**: The historical data starts at \`2016-01-01\`.
 
-
 5. **Discord**
 
   We track a curated list with over 30 crypto related servers. For each of them we collect the messages from all the public chats on the given server.
@@ -52,7 +51,6 @@ For each of the data sources we have a curated list of accounts/sub-sources from
   **Latency**: All the messages are collected in real-time (1-2s delay max.)
 
   **History**: The historical data starts at \`2016-05-21\`.
-
 
 6. **Bitcointalk**
 

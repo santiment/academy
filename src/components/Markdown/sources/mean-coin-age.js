@@ -8,7 +8,7 @@ segments that exist at time $t$ will be denoted by $S_t$.
 Then, the formula for computing the mean coin age $MCA(t)$ is:
 
 $$
-MCA(t) := \frac{\sum_{x\in S_t} (t-ot_x)v_x}{\sum_{x\in S_t}v_x}
+MCA(t) := \\frac{\sum_{x\in S_t} (t-ot_x)v_x}{\sum_{x\in S_t}v_x}
 $$
 
 Let us call the quantity in the numerator, the **total coin age** and

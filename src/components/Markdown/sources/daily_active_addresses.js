@@ -59,7 +59,7 @@ dashboard.
 ### [Sanbase](https://app.santiment.net)
 
 The metric is available on our charts:
-<iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-04-02T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,mean_dollar_invested_age&scale=time&slug=maker&title=Maker%20%28MKR%29&to=2019-10-03T21%3A00%3A00.000Z&viewOnly=true"></iframe>
+<iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-02-12T22%3A00%3A00.000Z&amp;interval=1d&amp;metrics=historyPrice,dailyActiveAddresses&amp;slug=santiment&amp;title=Santiment%20Network%20Token%20%28SAN%29&amp;to=2019-08-13T21%3A00%3A00.000Z&amp;viewOnly=true"></iframe>
 
 ### [Neuro](https://neuro.santiment.net/)
 
@@ -71,10 +71,10 @@ The metric is available on Neuro
 
 |           | Free               | Basic              | Pro                | Premium            | Enterprise         |
 | --------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| Sanbase   | ✔ | ✔ | ✔ | ✔ | ✔ |
-| SANGraphs | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Neuro     | ✔ | ✔ | ✔ | ✔ | ✔ |
-| SANSheets | ✔ | ✔ | ✔ | ✔ | ✔ |
+| Sanbase   | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SANGraphs | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Neuro     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SANSheets | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 `
 
 export default Markdown
