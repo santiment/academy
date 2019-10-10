@@ -9,7 +9,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import GoogleAnalytics from 'react-ga'
-import StripeProviderSSR from './StripeProviderSSR'
 import Intercom from './Intercom'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
@@ -31,7 +30,6 @@ const envScript = process.env.NODE_ENV === 'production' && (
 )
 
 const Layout = ({ children, isAccountPage, classes = {} }) => (
-  <StripeProviderSSR>
     <Intercom>
       <Notifications>
         <div className={styles.container}>
@@ -43,7 +41,6 @@ const Layout = ({ children, isAccountPage, classes = {} }) => (
       </Notifications>
       <CookiePopup />
     </Intercom>
-  </StripeProviderSSR>
 )
 
 Layout.propTypes = {
