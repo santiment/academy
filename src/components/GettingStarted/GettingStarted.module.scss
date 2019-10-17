@@ -1,0 +1,75 @@
+@import '~@santiment-network/ui/mixins.scss';
+
+.title {
+	@include text('h4');
+	margin: 0 0 24px;
+	color: var(--mirage);
+}
+
+.blocks {
+	@include grid-wrap(2);
+}
+
+.block {
+	padding: 32px 40px 34px;
+
+
+	@include responsive('phone-xs') {
+		padding: 20px 28px 24px;
+	}
+}
+
+.heading {
+	@include text('h3', 'm');
+	margin: 0 0 16px;
+	color: var(--white);
+
+
+	@include responsive('phone-xs') {
+		@include text('h4', 'm');
+	}
+}
+
+.description {
+	@include text('body-1');
+	margin: 0;
+	color: var(--white);
+
+	@include responsive('phone-xs') {
+		@include text('body-3');
+		max-width: 100%;
+	}
+
+	@include responsive('phone', 'desktop', 'laptop') {
+	max-width: 85%;
+	}
+}
+
+.traiders {
+	background-color: var(--jungle-green);
+	background-image: url(./lines.svg);
+
+}
+
+.developers {
+	background-color: $rhino;
+	background-image: url(./scheme.svg);
+}
+
+.block {
+	height: 100%;
+	box-shadow: 0px 6px 50px rgba(24, 27, 43, 0.03);
+	border-radius: 4px;
+	transition: all ease-in-out 0.1s;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 100% 100%;
+
+	@include responsive('laptop', 'desktop') {
+		&:hover {
+			transform: translateY(-1px);
+			cursor: pointer;
+			box-shadow: 0px 10px 15px rgba(24, 27, 43, 0.03);
+		}
+	}
+}

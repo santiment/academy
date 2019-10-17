@@ -1,3 +1,4 @@
+/* eslint-disable */
 const Markdown = `## Definition
 
 By **Social data** we consider a set of crypto related discussions from the internet that we collect and store in the form of text documents. It includes chat conversations, forum posts and comments, tweets and other pieces of text (usually pretty short). In addition to the text itself we also store some metadata that depends on the data source: user_id, hashtags, chat_title, etc. The **Social data** serves as a base layer for various statistics and metrics that we build on top of it.

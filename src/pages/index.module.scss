@@ -5,3 +5,21 @@
   display: flex;
   flex-direction: column;
 }
+
+:global(.container) {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1170px;
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.startBlock {
+	// margin: 64px auto 80px;
+	margin: 34px auto 80px;
+
+	@include responsive('phone', 'phone-xs') {
+		margin: 24px auto 30px;
+	}
+}

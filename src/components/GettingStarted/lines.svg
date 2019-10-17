@@ -1,0 +1,48 @@
+<svg width="300" height="206" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0)" fill="#22CF9F">
+    <path d="M-4 155.8a2.5 2.5 0 115 0V206h-5v-50.2z"/>
+    <path d="M5 131.5a2.5 2.5 0 015 0V206H5v-74.5z"/>
+    <path d="M14 169.7a2.5 2.5 0 115 0V206h-5v-36.3z"/>
+    <path d="M23 141.2a2.5 2.5 0 015 0V206h-5v-64.8z"/>
+    <path d="M32 151.6a2.5 2.5 0 115 0V206h-5v-54.4z"/>
+    <path d="M41 112.1a2.5 2.5 0 015 0V206h-5v-93.9z"/>
+    <path d="M50 124.6a2.5 2.5 0 115 0V206h-5v-81.4z"/>
+    <path d="M59 73.3a2.5 2.5 0 115 0V206h-5V73.3z"/>
+    <path d="M68 108.6a2.5 2.5 0 015 0V206h-5v-97.4z"/>
+    <path d="M77 164.1a2.5 2.5 0 115 0V206h-5v-41.9z"/>
+    <path d="M86 141.2a2.5 2.5 0 015 0V206h-5v-64.8z"/>
+    <path d="M95 112.1a2.5 2.5 0 015 0V206h-5v-93.9z"/>
+    <path d="M104 124.6a2.5 2.5 0 115 0V206h-5v-81.4z"/>
+    <path d="M113 88.5a2.5 2.5 0 115 0V206h-5V88.5z"/>
+    <path d="M122 134.3a2.5 2.5 0 115 0V206h-5v-71.7z"/>
+    <path d="M131 88.5a2.5 2.5 0 115 0V206h-5V88.5z"/>
+    <path d="M140 131.5a2.5 2.5 0 015 0V206h-5v-74.5z"/>
+    <path d="M149 164.1a2.5 2.5 0 115 0V206h-5v-41.9z"/>
+    <path d="M158 134.3a2.5 2.5 0 115 0V206h-5v-71.7z"/>
+    <path d="M167 53.2a2.5 2.5 0 115 0V206h-5V53.2z"/>
+    <path d="M176 83a2.5 2.5 0 115 0v123h-5V83z"/>
+    <path d="M185 69.1a2.5 2.5 0 115 0V206h-5V69.1z"/>
+    <path d="M194 108.6a2.5 2.5 0 015 0V206h-5v-97.4z"/>
+    <path d="M203 141.2a2.5 2.5 0 015 0V206h-5v-64.8z"/>
+    <path d="M212 124.6a2.5 2.5 0 115 0V206h-5v-81.4z"/>
+    <path d="M221 88.5a2.5 2.5 0 115 0V206h-5V88.5z"/>
+    <path d="M230 39.3a2.5 2.5 0 115 0V206h-5V39.3z"/>
+    <path d="M239 69.1a2.5 2.5 0 115 0V206h-5V69.1z"/>
+    <path d="M248 96.9a2.5 2.5 0 115 0V206h-5V96.9z"/>
+    <path d="M257 119.7a2.5 2.5 0 015 0V206h-5v-86.3z"/>
+    <path d="M266 88.5a2.5 2.5 0 115 0V206h-5V88.5z"/>
+    <path d="M275 112.1a2.5 2.5 0 015 0V206h-5v-93.9z"/>
+    <path d="M284 39.3a2.5 2.5 0 115 0V206h-5V39.3z"/>
+    <path d="M293 88.5a2.5 2.5 0 115 0V206h-5V88.5z"/>
+  </g>
+  <path fill="url(#paint0_linear)" d="M0 0h300v206H0z"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="103" x2="300" y2="103" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#14C393"/>
+      <stop offset="1" stop-color="#14C393" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip0">
+      <path fill="#fff" transform="translate(0 16)" d="M0 0h298v190H0z"/>
+    </clipPath>
+  </defs>
+</svg>

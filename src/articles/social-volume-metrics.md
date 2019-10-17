@@ -1,19 +1,29 @@
-/* eslint-disable */
-const Socials = `# Social Volume Metrics
+---
+path: /social-volume-metrics
+title: Social volume metrics
+author: Ivan Klimuk
+date: 2019-09-19
+# REF metrics-hub/metricshub/social_volume.py
+# REF metrics-hub/metricshub/unique_social_volume.py
+# REF metrics-hub/metricshub/spam_index.py
+# REF metrics-hub/metricshub/social_dominance.py
+---
+
+# Social Volume Metrics
 
 ## 1. Social Volume
 
 ### Definition
 
-The total number of text documents that contain the given search term at least once. The search term can be one particular word (\`bitcoin\`), an exact phrase (\`"when moon"\`) or a combination of words, that are combined using binary set operations:
+The total number of text documents that contain the given search term at least once. The search term can be one particular word (`bitcoin`), an exact phrase (`"when moon"`) or a combination of words, that are combined using binary set operations:
 
-- \`OR\` - the union of two search results.
+- `OR` - the union of two search results.
 
-- \`AND\` - the intersection of two search results.
+- `AND` - the intersection of two search results.
 
-- \`NOT\` - the complement of a set with search results for a given word.
+- `NOT` - the complement of a set with search results for a given word.
 
-E.g. this could be a valid complex search query: \`(btc OR bitcoin) AND moon NOT lambo\` - it will result in all the documents that contain either the words \`btc\` and \`moon\` or \`bitcoin\` and \`moon\` in one document, excluding any documents that contain the word \`lambo\`.
+E.g. this could be a valid complex search query: `(btc OR bitcoin) AND moon NOT lambo` - it will result in all the documents that contain either the words `btc` and `moon` or `bitcoin` and `moon` in one document, excluding any documents that contain the word `lambo`.
 
 ### Measuring Unit
 
@@ -23,9 +33,9 @@ Amount of documents (messages, posts, comments, etc).
 
 We store each of the [social data](social-data/) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval**. Currently the time intervals we use are the following:
 
-- In [San-Graphs](https://graphs.santiment.net/social): \`6h\`, \`12h\`, \`1d\`.
+- In [San-Graphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
 
-- In [Metrics-hub](https://github.com/santiment/metrics-hub/): \`1h\`, \`3h\`, \`6h\`, \`12h\`, \`1d\`, \`2d\`, \`3d\`, \`7d\`.
+- In [Metrics-hub](https://github.com/santiment/metrics-hub/): `1h`, `3h`, `6h`, `12h`, `1d`, `2d`, `3d`, `7d`.
 
 ### Latency
 
@@ -35,7 +45,7 @@ The latency of **Social Volume** depends on the latency of the documents from ea
 
 We do not separate or filter the [social data](social-data/) being collected by assets. I.e. we can have the social volume for any asset.
 
-By default we use an auto-generated search query to track the volume of mentions for each project, e.g.: \`btc OR bitcoin NOT cash NOT gold NOT abc ...etc\`. These queries can be manually modified by our admins to exclude redundant results or include some additional word to the query if necessary.
+By default we use an auto-generated search query to track the volume of mentions for each project, e.g.: `btc OR bitcoin NOT cash NOT gold NOT abc ...etc`. These queries can be manually modified by our admins to exclude redundant results or include some additional word to the query if necessary.
 
 ### How to Access
 
@@ -149,7 +159,7 @@ The metric is available for **for any selected asset**.
 
 ### Definition
 
-The **Relative Social Dominance** (or Social Dominance) for a given asset is the ratio of the **Social Volume** of this asset in comparison to the sum of social volumes for a set of selected assets (by default it's top 50 by market capitalization). E.g. when on a given day the **Social Dominance** of \`Ethereum\` reaches 23%, this can be explained as _"From all the messages that mentioned any of the top 50 assets, 23% mentioned Ethereum"_.
+The **Relative Social Dominance** (or Social Dominance) for a given asset is the ratio of the **Social Volume** of this asset in comparison to the sum of social volumes for a set of selected assets (by default it's top 50 by market capitalization). E.g. when on a given day the **Social Dominance** of `Ethereum` reaches 23%, this can be explained as _"From all the messages that mentioned any of the top 50 assets, 23% mentioned Ethereum"_.
 
 ### Measuring Unit
 
@@ -188,6 +198,3 @@ The metric is available for **for any selected asset**.
 |SANGraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Neuro|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |SANSheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-`
-
-export default Socials

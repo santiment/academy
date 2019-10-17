@@ -1,24 +1,24 @@
 import React from 'react'
-import { injectIntl } from 'gatsby-plugin-intl'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Socials from './../components/Markdown/sources/social_volume_metrics'
-import DAA from './../components/Markdown/sources/daily_active_addresses'
-import SD from './../components/Markdown/sources/social-data'
-import MCA from './../components/Markdown/sources/mean-coin-age'
+// import Search from '../components/Search/Search'
 import Markdown from './../components/Markdown/Markdown'
+import Category from '../components/Category/Category'
+import {docs} from '../utils/docs'
+import GettingStarted from "../components/GettingStarted/GettingStarted"
 import styles from './index.module.scss'
 
-const IndexPage = ({ intl }) => (
+const IndexPage = () => (
   <Layout>
     <SEO title="Academy - Santiment Technical Documentation" />
     <section className={styles.wrapper}>
-      <Markdown markdown={Socials} />
-      <Markdown markdown={DAA} />
-      <Markdown markdown={SD} />
-      <Markdown markdown={MCA} />
+    	{/* <Search /> */}
+      <div className='container'>
+      <GettingStarted className={styles.startBlock}/>
+      {docs.map(({title, ...rest}) => <Category key={title} title={title} {...rest} />)}
+      </div>
     </section>
   </Layout>
 )
 
-export default injectIntl(IndexPage)
+export default IndexPage

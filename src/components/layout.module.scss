@@ -22,33 +22,8 @@ a:hover {
   color: var(--jungle-green-hover);
 }
 
-section {
-  max-width: 1140px;
-  margin: 0 auto;
-
-  @include responsive('tablet') {
-    max-width: 768px;
-  }
-
-  @include responsive('phone', 'phone-xs') {
-    width: 100%;
-    padding: 0 15px;
-  }
-}
-
-.main {
-
-  @include responsive('phone', 'phone-xs') {
-    margin-top: 60px;
-  }
-}
-
 :global(#___gatsby) {
   overflow-x: hidden;
-
-  @include responsive('laptop') {
-    padding: 0 15px;
-  }
 }
 
 :global(.intercom-namespace .intercom-1tsyd6q) {

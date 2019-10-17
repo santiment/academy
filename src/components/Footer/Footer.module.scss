@@ -1,17 +1,7 @@
 @import '~@santiment-network/ui/mixins.scss';
 
 .footer {
-  max-width: 1140px;
-  margin: 150px auto 0;
-
-  @include responsive('tablet') {
-    max-width: 768px;
-  }
-
-  @include responsive('phone', 'phone-xs') {
-    width: 100%;
-    padding: 0 15px;
-  }
+  margin-top: 150px;
 }
 
 .categories {
@@ -52,6 +42,7 @@
   border-top: 1px solid var(--porcelain);
   display: flex;
   justify-content: space-between;
+
 
   @include responsive('phone', 'phone-xs') {
     text-align: center;

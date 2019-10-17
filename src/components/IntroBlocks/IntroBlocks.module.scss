@@ -1,0 +1,36 @@
+@import '~@santiment-network/ui/mixins.scss';
+
+.block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--athens);
+	width: 100%;
+	max-width: 620px;
+	height: 282px;
+	margin-bottom: 37px;
+
+	@include text('h3', 'm');
+	color: var(--mirage);
+}
+
+.intro {
+	padding: 32px 40px 45px;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.heading {
+	margin: 0 0 16px;
+}
+
+.description {
+	@include text('body-1');
+	margin: 0 0 24px;
+}
+
+.join {
+	color: var(--white);
+	background: $rhino;
+	height: 174px;
+}

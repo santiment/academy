@@ -2,7 +2,7 @@
 
 .wrapper {
   width: 500px;
-  margin: 0 auto;
+  margin: 50px auto 0;
   padding: 30px 60px 36px;
   text-align: center;
 
@@ -71,6 +71,6 @@
 .input {
   &:hover,
   &:focus {
-    border-color: var(--dodger-blue);
+    border-color: var(--jungle-green);
   }
 }

@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Neuro - Crypto’s Most Comprehensive API`,
-    description: `Raw data access to on-chain, social media, development activity and pricing information for 1000+ crypto assets. Unlimited historical and real time data. Backtest strategies, build custom signals, DIY dashboards and much more with the most all-inclusive crypto API on the market.`,
+    title: `Academy - Santiment Technical Documentation`,
+    description: `Collected wisdom about rhe Santiment products, tools, metrics.`,
     author: `Santiment Team`,
-    siteUrl: 'https://neuro.santiment.net',
+    siteUrl: 'https://academy.santiment.net',
   },
   plugins: [
     {
@@ -45,6 +45,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/articles`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -58,7 +65,8 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
-    }
+    },
+    { resolve: `gatsby-transformer-remark`},
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

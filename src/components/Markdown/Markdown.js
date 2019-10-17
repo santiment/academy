@@ -5,7 +5,6 @@ import HeadingRenderer from './HeadingRenderer'
 import CodeBlockRenderer from './CodeBlockRenderer'
 import TextRenderer from './TextRenderer'
 import {MathRenderer, MathBlockRenderer} from './MathRenderer'
-import {replaceCheckMarkstoCustom} from './utils'
 import styles from './Markdown.module.scss'
 const RemarkMathPlugin = require("remark-math");
 

@@ -1,3 +1,4 @@
+/* eslint-disable */
 const Markdown = `## [Definition](#definition)
 
 Recall that a **coin-age model** allows us at each given point in time

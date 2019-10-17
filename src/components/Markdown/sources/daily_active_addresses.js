@@ -1,3 +1,4 @@
+/* eslint-disable */
 const Markdown = `# Daily Active Addresses
 
 ![Daily Active Addresses for

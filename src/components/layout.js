@@ -9,7 +9,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import GoogleAnalytics from 'react-ga'
-import Intercom from './Intercom'
+// import Intercom from './Intercom'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Notifications from './Notifications/Notifications'
@@ -30,7 +30,7 @@ const envScript = process.env.NODE_ENV === 'production' && (
 )
 
 const Layout = ({ children, isAccountPage, classes = {} }) => (
-    <Intercom>
+    <>
       <Notifications>
         <div className={styles.container}>
           {envScript}
@@ -40,7 +40,7 @@ const Layout = ({ children, isAccountPage, classes = {} }) => (
         </div>
       </Notifications>
       <CookiePopup />
-    </Intercom>
+    </>
 )
 
 Layout.propTypes = {

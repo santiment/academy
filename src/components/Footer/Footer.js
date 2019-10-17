@@ -93,7 +93,7 @@ const Footer = ({ intl }) => {
   const { link, label } = langProps[+isJapanese()]
   return (
     <footer className={styles.footer}>
-      <div className={styles.top}>
+      <div className={cx(styles.top, 'container')}>
         <ul className={styles.categories}>
           {categories.map(({ title, links }) => (
             <li key={title} className={styles.category}>
@@ -116,7 +116,7 @@ const Footer = ({ intl }) => {
           ))}
         </ul>
       </div>
-      <div className={styles.bottom}>
+      <div className={cx(styles.bottom, 'container')}>
         <div>
           <Link to={link} className={cx(styles.text, styles.link)}>
             <img alt='planet' src={planetSvg} className={styles.planet} />

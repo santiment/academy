@@ -1,5 +1,4 @@
 import React from 'react'
-import cx from 'classnames'
 import PropTypes from 'prop-types'
 import TeX from '@matejmazur/react-katex'
 import 'katex/dist/katex.min.css'

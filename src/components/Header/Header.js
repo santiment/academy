@@ -1,18 +1,19 @@
 import React, { useRef } from "react"
+import withSizes from "react-sizes"
+import cx from "classnames"
+import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
-import { injectIntl, Link } from "gatsby-plugin-intl"
+import { mapSizesToProps } from "../../utils/sizes"
+import Dropdown from "../Dropdown/Dropdown"
+import dropdownStyles from "../Dropdown/Dropdown.module.scss"
 import styles from "./Header.module.scss"
-import AccountBtn from "../AccountBtn/AccountBtn"
 
-const Header = ({ isAccountPage, intl }) => {
+const Header = ({ isDesktop, isTablet }) => {
   const toggle = useRef(null)
 
-  const closeNav = () => {
-    toggle.current.checked = false
-  }
-
   return (
-    <header className={styles.header}>
+    <header className={styles.wrapper}>
+      <div className={cx(styles.header, 'container')}>
       <Link className={styles.logo} to='/'>
         <svg
           width='175'
@@ -102,22 +103,22 @@ const Header = ({ isAccountPage, intl }) => {
         <label htmlFor='hamburger' className={styles.close}>
           <Icon type='close' />
         </label>
-        <Link className={styles.link} to='/#use-cases' onClick={closeNav}>
-          {intl.formatMessage({ id: "header.use_cases" })}
-        </Link>
-        <Link className={styles.link} to='/#pricing' onClick={closeNav}>
-          {intl.formatMessage({ id: "header.pricing" })}
-        </Link>
-        <a
-          className={styles.link}
-          href='mailto:support@santiment.net'
-          onClick={closeNav}
-        >
-          {intl.formatMessage({ id: "header.support" })}
-        </a>
-        <AccountBtn isAccountPage={isAccountPage} onClick={closeNav} />
+        {isDesktop || isTablet ? (
+          <Dropdown
+            title={<Icon type='profile' />}
+            isDesktop={isDesktop}
+          >
+            <div className={dropdownStyles.list}>
+              <Link to="/login">Log in</Link>
+            </div>
+          </Dropdown>
+        ) : (
+          <Link to="/login">Log in</Link>
+        )}
       </nav>
+    </div>
     </header>
   )
 }
-export default injectIntl(Header)
+
+export default withSizes(mapSizesToProps)(Header)
