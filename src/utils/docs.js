@@ -1,53 +1,35 @@
-import Socials from './../components/Markdown/sources/social_volume_metrics'
-import DAA from './../components/Markdown/sources/daily_active_addresses'
-import SD from './../components/Markdown/sources/social-data'
-import MCA from './../components/Markdown/sources/mean-coin-age'
-
-const Metrics = {
-	title: 'Metrics',
-	articles: [
-		{
-			title: 'Social volume metrics',
-			src: Socials
-		},
-		{
-			title: 'Daily Active Addresses',
-			src: DAA
-		},
-		{
-			title: 'Social data',
-			src: SD
-		},
-		{
-			title: 'Mean coin age',
-			src: MCA
-		},
-	]
+export const BLOCKS = {
+	metrics: {
+		title: 'Metrics',
+		articles: ['Social volume metrics','Daily Active Addresses','Social data','Mean coin age', 'sentiment-metrics']
+	},
+	aboutSanbase: {
+		title: 'About Sanbase',
+		articles: []
+	}
 }
 
-const aboutSanbase = {
-	title: 'About Sanbase', articles: []
-}
-
-export const docs = [
+export const CATEGORIES = [
 	{
 		title: 'Sanbase',
 		description: 'Platform for in-depth coin analysis, low-latency signals, asset watchlists',
-		blocks: [aboutSanbase, Metrics]
+		blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
 	},
 	{
 		title: 'Sansheets',
 		description: 'Google Spreadsheet plugin for Santiment data',
-		blocks: [aboutSanbase, Metrics]
+		blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
 	},
 	{
 		title: 'Sangraphs',
 		description: 'Advanced on-chain, social and development metrics and charts for 700+ coins',
-		blocks: [aboutSanbase, Metrics]
+		blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
 	},
 	{
 		title: 'Neuro API',
 		description: 'The most comprehensive crypto API on the market',
-		blocks: [aboutSanbase, Metrics]
+		blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
 	}
 ]
+
+export const titleToSlug = title => title.toLowerCase().split(' ').join('-')

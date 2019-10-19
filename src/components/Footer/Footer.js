@@ -89,10 +89,10 @@ const categories = [
   },
 ]
 
-const Footer = ({ intl }) => {
+const Footer = ({ intl, className }) => {
   const { link, label } = langProps[+isJapanese()]
   return (
-    <footer className={styles.footer}>
+    <footer className={cx(styles.footer, className)}>
       <div className={cx(styles.top, 'container')}>
         <ul className={styles.categories}>
           {categories.map(({ title, links }) => (
@@ -116,8 +116,9 @@ const Footer = ({ intl }) => {
           ))}
         </ul>
       </div>
-      <div className={cx(styles.bottom, 'container')}>
-        <div>
+      <div className={styles.bottomWrapper}>
+        <div className={cx(styles.bottom, 'container')}>
+          <div>
           <Link to={link} className={cx(styles.text, styles.link)}>
             <img alt='planet' src={planetSvg} className={styles.planet} />
             {label}
@@ -142,7 +143,8 @@ const Footer = ({ intl }) => {
         <div className={cx(styles.text, styles.rights)}>
           {intl.formatMessage({ id: 'footer.rights' })}
         </div>
-      </div>
+        </div>
+        </div>
     </footer>
   )
 }

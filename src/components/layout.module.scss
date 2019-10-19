@@ -1,6 +1,6 @@
-@import '~@santiment-network/ui/main.scss';
-@import '~@santiment-network/ui/mixins.scss';
-@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import "~@santiment-network/ui/main.scss";
+@import "~@santiment-network/ui/mixins.scss";
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
 
 body {
   color: var(--mirage);
@@ -13,9 +13,62 @@ body {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   list-style: none;
   color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  &.withSidebar {
+    @include responsive("laptop", "desktop") {
+      display: grid;
+      grid-template-areas:
+        "h h"
+        "s m";
+      grid-template-columns: 413px 1fr;
+      grid-template-rows: 70px 1fr;
+      height: 100vh;
+      overflow: hidden;
+      width: 100%;
+
+      & .main {
+        padding: 15px 15px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      & .footer {
+        margin: 0 -15px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.header {
+  grid-area: h;
+}
+
+.sidebar {
+  grid-area: s;
+}
+
+.main {
+  grid-area: m;
+}
+
+.sidebar, .main {
+
+  overflow: hidden;
+
+  &:hover, &:focus {
+    overflow-y: auto;
+    overflow-y: overlay;
+  }
 }
 
 a:hover {

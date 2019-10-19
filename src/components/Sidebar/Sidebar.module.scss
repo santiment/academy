@@ -1,0 +1,10 @@
+@import "~@santiment-network/ui/mixins.scss";
+
+.wrapper {
+	height: 100%;
+	background-color: var(--athens);
+
+	@include responsive('phone', 'phone-xs', 'tablet') {
+		display: none;
+	}
+}

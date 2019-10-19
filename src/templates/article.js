@@ -5,7 +5,7 @@ import Markdown from '../components/Markdown/Markdown'
 export default function Template({data}) {
   const {markdownRemark: article} = data
   return (
-    <Layout>
+    <Layout isShowSidebar={true}>
       <Markdown markdown={article.rawMarkdownBody} />
     </Layout>
   )

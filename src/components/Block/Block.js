@@ -1,11 +1,12 @@
 import React from "react"
 import cx from "classnames"
-import {Link} from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
+import {Link} from "gatsby"
+import {titleToSlug} from '../../utils/docs'
 import styles from "./Block.module.scss"
 
 const Block = ({title, articles}) => (
-	<article className={styles.block}>
+	<Link to={`/${titleToSlug(title)}`} className={styles.block}>
 		<div className={styles.icon}>
 		<Icon type='words-list' />
 		</div>
@@ -13,7 +14,7 @@ const Block = ({title, articles}) => (
 		<h4 className={styles.title}>{title}</h4>
 		<p className={styles.length}>{articles.length} guides</p>
 		</div>
-	</article>
+	</Link>
 )
 
 export default Block

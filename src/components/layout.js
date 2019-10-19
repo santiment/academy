@@ -12,6 +12,7 @@ import GoogleAnalytics from 'react-ga'
 import Intercom from './Intercom'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
+import Sidebar from './Sidebar/Sidebar'
 import Notifications from './Notifications/Notifications'
 import CookiePopup from './CookiePopup/CookiePopup'
 import styles from './layout.module.scss'
@@ -29,14 +30,17 @@ const envScript = process.env.NODE_ENV === 'production' && (
   </Helmet>
 )
 
-const Layout = ({ children, isAccountPage, classes = {} }) => (
+const Layout = ({ children, isShowSidebar, classes = {} }) => (
     <Intercom>
       <Notifications>
-        <div className={styles.container}>
+        <div className={cx(styles.container, isShowSidebar && styles.withSidebar)}>
           {envScript}
-          <Header isAccountPage={isAccountPage} />
-          <main className={cx(styles.main, classes.main)}>{children}</main>
-          <Footer />
+          <Header className={styles.header} />
+          {isShowSidebar && <Sidebar className={styles.sidebar} />}
+            <main className={cx(styles.main, classes.main)}>
+              {children}
+              <Footer className={isShowSidebar && styles.footer} />
+            </main>
         </div>
       </Notifications>
       <CookiePopup />

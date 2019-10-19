@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import IntroBlocks from '../components/IntroBlocks/IntroBlocks'
 
 const ForTraiders = () => (
-  <Layout>
+  <Layout isShowSidebar={true}>
     <SEO title="Academy - Intro for traiders" />
     <IntroBlocks userType='trader' />
   </Layout>

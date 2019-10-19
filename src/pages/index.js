@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 // import Search from '../components/Search/Search'
 import Markdown from './../components/Markdown/Markdown'
 import Category from '../components/Category/Category'
-import {docs} from '../utils/docs'
+import {CATEGORIES} from '../utils/docs'
 import GettingStarted from "../components/GettingStarted/GettingStarted"
 import styles from './index.module.scss'
 
@@ -15,7 +15,7 @@ const IndexPage = () => (
     	{/* <Search /> */}
       <div className='container'>
       <GettingStarted className={styles.startBlock}/>
-      {docs.map(({title, ...rest}) => <Category key={title} title={title} {...rest} />)}
+      {CATEGORIES.map(({title, ...rest}) => <Category key={title} title={title} {...rest} />)}
       </div>
     </section>
   </Layout>

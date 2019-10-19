@@ -8,11 +8,11 @@ import Dropdown from "../Dropdown/Dropdown"
 import dropdownStyles from "../Dropdown/Dropdown.module.scss"
 import styles from "./Header.module.scss"
 
-const Header = ({ isDesktop, isTablet }) => {
+const Header = ({ isDesktop, isTablet, className }) => {
   const toggle = useRef(null)
 
   return (
-    <header className={styles.wrapper}>
+    <header className={cx(styles.wrapper, className)}>
       <div className={cx(styles.header, 'container')}>
       <Link className={styles.logo} to='/'>
         <svg
