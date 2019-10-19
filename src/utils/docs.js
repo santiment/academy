@@ -15,21 +15,21 @@ export const CATEGORIES = [
 		description: 'Platform for in-depth coin analysis, low-latency signals, asset watchlists',
 		blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
 	},
-	{
-		title: 'Sansheets',
-		description: 'Google Spreadsheet plugin for Santiment data',
-		blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
-	},
-	{
-		title: 'Sangraphs',
-		description: 'Advanced on-chain, social and development metrics and charts for 700+ coins',
-		blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
-	},
-	{
-		title: 'Neuro API',
-		description: 'The most comprehensive crypto API on the market',
-		blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
-	}
+	// {
+	// 	title: 'Sansheets',
+	// 	description: 'Google Spreadsheet plugin for Santiment data',
+	// 	blocks: []
+	// },
+	// {
+	// 	title: 'Sangraphs',
+	// 	description: 'Advanced on-chain, social and development metrics and charts for 700+ coins',
+	// 	blocks: []
+	// },
+	// {
+	// 	title: 'Neuro API',
+	// 	description: 'The most comprehensive crypto API on the market',
+	// 	blocks: []
+	// }
 ]
 
 export const titleToSlug = title => title.toLowerCase().split(' ').join('-')

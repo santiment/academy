@@ -1,5 +1,4 @@
 ---
-path: /social-volume-metrics
 title: Social volume metrics
 author: Ivan Klimuk
 date: 2019-09-19

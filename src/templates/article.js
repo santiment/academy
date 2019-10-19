@@ -1,4 +1,5 @@
 import React from 'react'
+import  {graphql} from 'gatsby'
 import Layout from '../components/layout'
 import Markdown from '../components/Markdown/Markdown'
 
@@ -10,20 +11,30 @@ export default function Template({data}) {
     </Layout>
   )
 }
+//
+// export const articleQuery = graphql`
+//   query ArticleByTitle($path: String!) {
+//     markdownRemark(frontmatter: { path: { eq: $path} }) {
+//       frontmatter {
+//       date
+//       author
+//       title
+//     }
+//     headings(depth: h2) {
+//       value
+//       depth
+//     }
+//     }
+//   }
+// `
 
-export const articleQuery = graphql`
-  query ArticleByTitle($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path} }) {
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      rawMarkdownBody
       frontmatter {
-      date
-      author
-      title
-    }
-    headings(depth: h2) {
-      value
-      depth
-    }
-    rawMarkdownBody
+        title
+      }
     }
   }
 `

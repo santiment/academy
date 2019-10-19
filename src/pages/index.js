@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 // import Search from '../components/Search/Search'
-import Markdown from './../components/Markdown/Markdown'
 import Category from '../components/Category/Category'
 import {CATEGORIES} from '../utils/docs'
 import GettingStarted from "../components/GettingStarted/GettingStarted"

@@ -1,5 +1,4 @@
 import React from "react"
-import cx from "classnames"
 import Icon from "@santiment-network/ui/Icon"
 import {Link} from "gatsby"
 import {titleToSlug} from '../../utils/docs'

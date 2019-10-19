@@ -1,5 +1,4 @@
 import React from "react"
-import cx from "classnames"
 import Block from '../Block/Block'
 import styles from "./Category.module.scss"
 

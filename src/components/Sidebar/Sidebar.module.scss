@@ -3,8 +3,21 @@
 .wrapper {
 	height: 100%;
 	background-color: var(--athens);
+	position: fixed;
+	top: 70px;
+	left: 0;
+	bottom: 0;
+	width: 413px;
+	z-index:1;
 
 	@include responsive('phone', 'phone-xs', 'tablet') {
 		display: none;
 	}
+
+	overflow: hidden;
+
+  &:hover, &:focus {
+    overflow-y: auto;
+    overflow-y: overlay;
+  }
 }
