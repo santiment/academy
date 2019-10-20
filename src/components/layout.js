@@ -31,9 +31,9 @@ const Layout = ({ children, isShowSidebar, classes = {} }) => (
           <Header className={styles.header} />
           {isShowSidebar && <Sidebar className={styles.sidebar} />}
             <main className={cx(styles.main, classes.main)}>
-              {children}
-              <Footer className={isShowSidebar && styles.footer} />
+                {children}
             </main>
+              <Footer className={styles.footer} />
         </div>
       </Notifications>
       <CookiePopup />

@@ -2,12 +2,21 @@ import React from 'react'
 import  {graphql} from 'gatsby'
 import Layout from '../components/layout'
 import Markdown from '../components/Markdown/Markdown'
+import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 
-export default function Template({data}) {
+export default function Template({data, pageContext}) {
   const {markdownRemark: article} = data
+  const {breadcrumb: { crumbs }} = pageContext
+  console.log(crumbs)
   return (
     <Layout isShowSidebar={true}>
-      <Markdown markdown={article.rawMarkdownBody} />
+      <div>
+        <Breadcrumb
+          crumbs={crumbs}
+          crumbLabel={article.frontmatter.title}
+        />
+        <Markdown markdown={article.rawMarkdownBody} />
+      </div>
     </Layout>
   )
 }

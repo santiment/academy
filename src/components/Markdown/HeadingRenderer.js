@@ -7,7 +7,7 @@ import styles from './Markdown.module.scss'
 const HeadingRenderer = ({level, children}) => {
   const content = React.Children.toArray(children);
   const text = content.reduce(flatten, "");
-  const slug = text.replace(/\W/g, "");
+  const slug = text.replace(/\W/g, "-").toLowerCase();
 
   return React.createElement(`h${level}`, { id: slug }, [
     level < 3 ?

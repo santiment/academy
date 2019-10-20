@@ -41,7 +41,7 @@ around 10 minutes after the computation starts.
 and can go up to 2 hours, the value computed at 00:30 UTC might not be
 final. In that case the value computed at 6:30 UTC will be final.
 
-## [Latency](/metric-latency/)
+## Latency
 
 For most assets latency is around 40 minutes. For Bitcoin the latency
 for the final value is usually 6 hours and 40 minutes. At 00:40 UTC

@@ -7,7 +7,7 @@ const GettingStarted = ({ className }) => (
 	<section className={cx(styles.wrapper,className)}>
 		<h4 className={styles.title}>Getting started</h4>
 		<div className={styles.blocks}>
-			<Link to='/social-volume-metrics'>
+			<Link to='/for-traiders'>
 				<article className={cx(styles.block, styles.traiders)}>
 					<h3 className={styles.heading}>For traiders</h3>
 					<p className={styles.description}>Build models and backtest your strategies with the most comprehensive source of crypto data on the market. No data aggregation, no intermediaries.</p>

@@ -4,7 +4,7 @@ author: Tzanko Matev
 date: 2019-05-28
 ---
 
-## [Definition](#definition)
+## Definition
 
 Recall that a **coin-age model** allows us at each given point in time
 to split all coins into segments where each segment $x$ has an
@@ -21,7 +21,7 @@ Let us call the quantity in the numerator, the **total coin age** and
 let us denote it by $TCA(t)$. The quantity in the denominator is the
 *total supply* existing at time $t$. We will call it $TS(t)$
 
-## [Total supply](#totalsupply)
+## Total supply
 
 We can already compute the coin circulation. For each period $p$ we
 can compute the amount of coins that have been active in the last $p$
@@ -36,7 +36,7 @@ $$
 for $p$ sufficiently large. More precisely the equality holds if $p$
 is larger than the total life of the coin.
 
-## [Total age](#totalage)
+## Total age
 
 Let's focus on computing the total age of each coin. We have
 
@@ -55,7 +55,7 @@ $$
 In other words the mean coin age is equal to the current timestamp
 minus the mean creation timestamp.
 
-## [Total creation timestamp](#creationtimestamp)
+## Total creation timestamp
 
 According to the theory that we have already developed, we can
 efficiently compute the total creation timestamp. It is the metric
@@ -110,7 +110,7 @@ FROM {events}
 GROUP BY asset_id, daily_dt
 ```
 
-## [Mean age computation](#computation)
+## Mean age computation
 
 From the facts above we can easily derive the mean coin age. We first
 compute the daily or five-minute $\Delta TCT$. Then we use a
@@ -128,7 +128,7 @@ Finally we can compute the mean coin age as a composite metric with the SQL form
 dt - mean_creation_timestamp
 ```
 
-## [Relation to age consumed](#ageconsumed)
+## Relation to age consumed
 
 There is a relation between the total creation timestamp delta and age
 consumed. The age consumed (or coin-days destroyed) is computed by the

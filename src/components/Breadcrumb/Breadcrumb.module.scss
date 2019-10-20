@@ -1,0 +1,27 @@
+@import '~@santiment-network/ui/mixins';
+
+.wrapper {
+	margin: 7px 0 48px;
+}
+
+.list {
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+
+.title {
+	@include text('body-3');
+	color: $bali-hai;
+}
+
+.last {
+	@include text('body-3');
+	color: var(--rhino);
+}
+
+.icon {
+	margin: 0 14px;
+	transform: scale(1.2);
+	fill: $bali-hai;
+}

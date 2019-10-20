@@ -1,20 +1,33 @@
 export const BLOCKS = {
-	metrics: {
-		title: 'Metrics',
-		articles: ['Social volume metrics','Daily Active Addresses','Social data','Mean coin age', 'sentiment-metrics']
+	Financial: {
+		title: 'Financial',
+		articles: ['Mean coin age']
 	},
-	aboutSanbase: {
-		title: 'About Sanbase',
+	Development: {
+		title: 'Development',
 		articles: []
+	},
+	'On-chain': {
+		title: 'On-chain',
+		articles: ['Daily Active Addresses']
+	},
+	'Social': {
+		title: 'Social/Sentiment',
+		articles: ['sentiment-metrics', 'Social volume metrics', 'Social data']
 	}
 }
 
 export const CATEGORIES = [
 	{
-		title: 'Sanbase',
-		description: 'Platform for in-depth coin analysis, low-latency signals, asset watchlists',
-		blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
-	},
+		title: 'Metrics',
+		description: 'Santiment brings a comprehensive set of metrics together in one place',
+		blocks: [BLOCKS.Financial, BLOCKS['Social'], BLOCKS.Development, BLOCKS['On-chain']]
+	}
+	// {
+	// 	title: 'Sanbase',
+	// 	description: 'Platform for in-depth coin analysis, low-latency signals, asset watchlists',
+	// 	blocks: [BLOCKS.aboutSanbase, BLOCKS.metrics]
+	// },
 	// {
 	// 	title: 'Sansheets',
 	// 	description: 'Google Spreadsheet plugin for Santiment data',
@@ -32,4 +45,6 @@ export const CATEGORIES = [
 	// }
 ]
 
-export const titleToSlug = title => title.toLowerCase().split(' ').join('-')
+export const titleToSlug = title => title.toLowerCase().split(' ').join('-').split('/').join('-')
+
+export const customCrumbLabel = location => location.pathname.toLowerCase().replace('-', ' ')

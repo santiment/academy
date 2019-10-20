@@ -4,8 +4,8 @@ import {Link} from "gatsby"
 import {titleToSlug} from '../../utils/docs'
 import styles from "./Block.module.scss"
 
-const Block = ({title, articles}) => (
-	<Link to={`/${titleToSlug(title)}`} className={styles.block}>
+const Block = ({title, articles, category}) => (
+	<Link to={`/${titleToSlug(category)}/${titleToSlug(title)}`} className={styles.block}>
 		<div className={styles.icon}>
 		<Icon type='words-list' />
 		</div>

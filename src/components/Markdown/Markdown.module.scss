@@ -4,18 +4,16 @@
 .wrapper {
   scroll-behavior: smooth;
   width: 100%;
-  margin: 0 auto;
-  max-width: 700px;
-  padding: 40px;
+  max-width: 620px;
   font-family: Rubik;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  color: var(--mirage);
+  color: var(--rhino);
 
-  @include responsive('phone-xs', 'phone') {
-  	padding: 0px;
+  @include text('body-1');
+
+  @include responsive('phone', 'phone-xs', 'tablet') {
+    @include text('body-2');
   }
 
   h1 {

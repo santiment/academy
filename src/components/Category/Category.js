@@ -11,7 +11,7 @@ const Category = ({ title, description, blocks }) => (
   		</p>
   	</div>
   	<div className={styles.blocks}>
-  		{blocks.map(block => <Block key={block.title + title} {...block} />)}
+  		{blocks.map(block => <Block key={block.title + title} {...block} category={title} />)}
   	</div>
   </section>
 )
