@@ -67,3 +67,23 @@
 		text-align: left;
 	}
 }
+
+.disable {
+	background-color: var(--athens);
+
+		@include responsive('laptop', 'desktop') {
+		&:hover {
+			transform: translateY(0);
+			cursor: not-allowed;
+			box-shadow: 0px 10px 15px rgba(24, 27, 43, 0.03);
+		}
+	}
+
+	& .icon {
+		background: var(--porcelain);
+	}
+
+	& .title {
+		color: var(--mirage) !important;
+	}
+}
