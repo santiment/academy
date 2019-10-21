@@ -122,7 +122,7 @@ timestamps $t'$ between $t-d$ and $t$. If we use $\mu$ and $\sigma$ to
 denote mean and standard deviation, then we define **Sentiment Volume Consumed** as:
 
 $$
-SentimentVolumeConsumed(t,d) := \frac{X(t) - \mu(X(t,d))}{\sigma(X(t,d))}
+SentimentVolumeConsumed(t,d) = \frac{X(t) - \mu(X(t,d))}{\sigma(X(t,d))}
 $$
 
 Intuitively this score can be explained as a _social-volume-weighted sentiment balance_. I.e. this metric will spike when the social volume is really high and the vast majority of the messages in it are very positive at the same time. Dips will occur when the social volume again is high, but the overall sentiment is negative. In case the volume is high but the sentiment is mixed, or the sentiment has a strong positive (negative) polarity but with a low volume, the **Sentiment Volume Consumed** metric won't have significant changes and will stay around 0.

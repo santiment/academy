@@ -5,10 +5,21 @@ import {Link} from "gatsby"
 import {titleToSlug} from '../../utils/docs'
 import styles from "./Block.module.scss"
 
+const Wrapper = ({length, children, category, title}) => {
+	return length ? (
+		<Link to={`/${titleToSlug(category)}/${titleToSlug(title)}`} className={styles.block}>
+			{children}
+		</Link>
+		) :
+	<div className={cx(styles.block, !length && styles.disable)}>
+		{children}
+	</div>
+}
+
 const Block = ({title, articles, category}) => {
 	const {length} = articles
 	return (
-	<Link to={length ? `/${titleToSlug(category)}/${titleToSlug(title)}` : ''} className={cx(styles.block, !length && styles.disable)}>
+	<Wrapper category={category} title={title} length={length}>
 		<div className={styles.icon}>
 		<Icon type='words-list' />
 		</div>
