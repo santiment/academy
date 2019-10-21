@@ -11,7 +11,7 @@ const isArticleActive = (active = [], category, block, article) =>
   isBlockActive(active, category, block) && active[2] === titleToSlug(article)
 
 const Sidebar = ({ className }) => {
-  let active
+  let active = []
   if (typeof window !== 'undefined') {
     active = window.location.pathname.split("/").slice(1)
   }
