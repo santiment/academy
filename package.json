@@ -47,13 +47,13 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-transition-group": "^4.3.0",
     "slick-carousel": "^1.8.1",
-    "smooth-scroll": "^16.1.0"
-  },
-  "devDependencies": {
+    "smooth-scroll": "^16.1.0",
     "@matejmazur/react-katex": "^3.0.2",
-    "prettier": "^1.18.2",
     "react-dom": "^16.10.2",
     "remark-math": "^2.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
