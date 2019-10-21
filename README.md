@@ -1,8 +1,8 @@
 # Neuro landing page
 
-![](./src/images/neuro.png)
+![](./src/images/academy.png)
 
-This is the source for [`Neuro Landing Page`](https://neuro.santiment.net).
+This is the source for **Santiment Technical Documentation site**
 
 ## Running locally
 
