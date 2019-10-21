@@ -95,6 +95,7 @@ const Header = ({ isDesktop, isTablet, className }) => {
           />
         </svg>
       </Link>
+      {false && (<>
       <label htmlFor='hamburger'>
         <Icon type='hamburger' />
       </label>
@@ -116,6 +117,7 @@ const Header = ({ isDesktop, isTablet, className }) => {
           <Link to="/login">Log in</Link>
         )}
       </nav>
+    </>)}
     </div>
     </header>
   )

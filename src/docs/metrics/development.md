@@ -1,9 +1,8 @@
 ---
 title: Development metrics
 author: Max Bartel
+date: 2019-09-17
 ---
-
-# Development
 
 Custom Github metric we created to accurately measure a team’s development activity.
 

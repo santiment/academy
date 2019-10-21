@@ -4,7 +4,7 @@
   height: 100%;
   background-color: var(--athens);
   position: fixed;
-  top: 70px;
+  top: 64px;
   left: 0;
   bottom: 0;
   width: 413px;
@@ -12,6 +12,10 @@
 
   @include responsive("phone", "phone-xs", "tablet") {
     display: none;
+  }
+
+  @include responsive("laptop") {
+    width: 300px;
   }
 
   overflow: hidden;

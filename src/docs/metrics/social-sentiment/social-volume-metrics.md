@@ -8,8 +8,6 @@ date: 2019-09-19
 # REF metrics-hub/metricshub/social_dominance.py
 ---
 
-# Social Volume Metrics
-
 ## 1. Social Volume
 
 ### Definition

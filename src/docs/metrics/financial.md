@@ -1,9 +1,8 @@
 ---
 title: Financial metrics
 author: Max Bartel
+date: 2019-09-17
 ---
-
-# Financial metrics
 
 Traditional fundamentals including price, volume and market cap, plus crypto-related data like total supply, circulating supply, top transactions, ETH spent by the team and ROI since ICO (if applicable)
 

@@ -14,7 +14,7 @@ const ArticleInfo = ({title, author: name, date}) => {
 			</div>
 			<div>
 				<h4 className={styles.author}>{name}</h4>
-				<span className={styles.description}>{description}</span>
+				<span className={styles.description}>{date}</span>
 			</div>
 		</div>
 	</section>

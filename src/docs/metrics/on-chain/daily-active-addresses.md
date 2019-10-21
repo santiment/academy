@@ -1,9 +1,8 @@
 ---
 title: Daily Active Addresses Metric
-author: Jordan Pavlov
+author: Santiment team
+date: 2019-09-17
 ---
-
-# Daily Active Addresses
 
 ![Daily Active Addresses for
 Zilliqa](https://santiment-discourse-uploads.s3.dualstack.eu-central-1.amazonaws.com/original/1X/0ce7d2cf9b9322a25fcc13c3a5e2ccedd59b14d0.png)

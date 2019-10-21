@@ -3,7 +3,7 @@ import cx from "classnames"
 import styles from "./IntroBlocks.module.scss"
 
 const IntroBlocks = ({ userType, className }) => (
-  <section className={cx(styles.wrapper, className)}>
+  <section className={cx(styles.wrapper, 'container', className)}>
     <div className={cx(styles.block, styles.intro)}>
 	      <h3 className={styles.heading}>Welcome, {userType} 👋</h3>
 	      <p className={styles.description}>

@@ -37,7 +37,18 @@ body {
       align-items: center;
     }
 
-    @include responsive("laptop", "desktop") {
+    @include responsive("laptop") {
+      & .main {
+        margin-left: 300px;
+      }
+
+      & .footer {
+        width: 100%;
+        padding-left: 300px;
+      }
+    }
+
+    @include responsive("desktop") {
       & .main {
         margin-left: 413px;
       }

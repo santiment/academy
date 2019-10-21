@@ -1,9 +1,8 @@
 ---
 title: Social/Sentiment metrics
 author: Max Bartel
+date: 2019-09-17
 ---
-
-# Social/Sentiment metrics
 
 Metrics taken from measuring social activity on crypto-related forums and channels, plus custom sentiment measurements analyzing crowd behavior. Includes emerging trend words and projects, word clouds to display related words and the possibility to enter custom search terms.
 

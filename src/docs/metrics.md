@@ -1,9 +1,8 @@
 ---
 title: Metrics we offer
 author: Max Bartel
+date: 2019-09-17
 ---
-
-# Metrics we offer
 
 Santiment brings a comprehensive set of metrics together in one place so you can get a better picture of what’s happening with your favorite crypto assets and/or crypto markets in general.
 We emphasize plotting metrics against price over time, to more easily spot how trends and events correlate with price action.

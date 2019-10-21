@@ -1,16 +1,18 @@
 import React from 'react'
 import  {graphql} from 'gatsby'
+import cx from 'classnames'
 import Layout from '../components/layout'
 import Markdown from '../components/Markdown/Markdown'
 import ArticleInfo from '../components/ArticleInfo/ArticleInfo'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
+import styles from './article.module.scss'
 
 export default function Template({data, pageContext}) {
   const {markdownRemark: article} = data
   const {breadcrumb: { crumbs }} = pageContext
   return (
     <Layout isShowSidebar={true}>
-      <div>
+      <div className={cx(styles.wrapper, "container")}>
         <Breadcrumb
           crumbs={crumbs}
           crumbLabel={article.frontmatter.title}
@@ -44,7 +46,7 @@ export const query = graphql`
       rawMarkdownBody
       frontmatter {
         title
-        date
+        date(formatString: "MMM DD, YYYY")
         author
       }
     }
