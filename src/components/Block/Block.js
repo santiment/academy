@@ -27,7 +27,7 @@ const Block = ({title, articles, category}) => {
 		<h4 className={styles.title}>{title}</h4>
 		<p className={styles.length}>{length ? length > 1 ? `${length} guides` : '1 guide' : 'Guides in work'}</p>
 		</div>
-	</Link>
+	</Wrapper>
 )
 }
 

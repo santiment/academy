@@ -1,0 +1,51 @@
+@import "~@santiment-network/ui/mixins.scss";
+
+.imageWrapper {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	margin-right: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	&::after {
+		content: url('../../images/logo.svg');
+		display: inline-block;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		border: 0.5px solid var(--white);
+		background-color: $white;
+		bottom: -4px;
+		left: -1px;
+	}
+
+	& img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.info {
+	display: flex;
+	align-items: center;
+}
+
+.title {
+	@include text('h3', 'm');
+	margin-bottom: 22px;
+	color: var(--rhino);
+}
+
+.author {
+	color: var(--mirage);
+	@include text("body-3");
+}
+
+.description {
+	color: var(--waterloo);
+	@include text('caption');
+}

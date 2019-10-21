@@ -1,6 +1,6 @@
 ---
 title: Daily Active Addresses Metric
-author: Santiment Team
+author: Jordan Pavlov
 ---
 
 # Daily Active Addresses

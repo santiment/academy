@@ -2,6 +2,7 @@ import React from 'react'
 import  {graphql} from 'gatsby'
 import Layout from '../components/layout'
 import Markdown from '../components/Markdown/Markdown'
+import ArticleInfo from '../components/ArticleInfo/ArticleInfo'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 
 export default function Template({data, pageContext}) {
@@ -14,6 +15,7 @@ export default function Template({data, pageContext}) {
           crumbs={crumbs}
           crumbLabel={article.frontmatter.title}
         />
+        <ArticleInfo {...article.frontmatter} />
         <Markdown markdown={article.rawMarkdownBody} />
       </div>
     </Layout>
@@ -42,6 +44,8 @@ export const query = graphql`
       rawMarkdownBody
       frontmatter {
         title
+        date
+        author
       }
     }
   }
