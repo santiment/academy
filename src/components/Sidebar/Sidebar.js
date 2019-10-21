@@ -12,7 +12,7 @@ const isArticleActive = (active, category, block, article) =>
 
 const Sidebar = ({ className }) => {
   let active
-  if (window !== undefined && window.location !== undefined) {
+  if (typeof window !== 'undefined') {
     active = window.location.pathname.split("/").slice(1)
   }
 
