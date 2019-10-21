@@ -1,8 +1,8 @@
-# Neuro landing page
-
 ![](./src/images/academy.png)
 
 This is the source for **Santiment Technical Documentation site**
+
+README in WIP
 
 ## Running locally
 
