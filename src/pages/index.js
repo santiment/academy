@@ -3,12 +3,13 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 // import Search from '../components/Search/Search'
 import Category from '../components/Category/Category'
-import {CATEGORIES} from '../utils/docs'
+import {CATEGORIES} from '../docs/navigation'
 import GettingStarted from "../components/GettingStarted/GettingStarted"
 import styles from './index.module.scss'
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({pageContext}) => {
+  return (
+  <Layout pageContext={pageContext}>
     <SEO title="Academy - Santiment Technical Documentation" />
     <section className={styles.wrapper}>
     	{/* <Search /> */}
@@ -19,5 +20,6 @@ const IndexPage = () => (
     </section>
   </Layout>
 )
+}
 
 export default IndexPage

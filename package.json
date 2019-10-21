@@ -46,7 +46,8 @@
     "react-stripe-elements": "^5.0.1",
     "react-syntax-highlighter": "^11.0.2",
     "react-transition-group": "^4.3.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "smooth-scroll": "^16.1.0"
   },
   "devDependencies": {
     "@matejmazur/react-katex": "^3.0.2",

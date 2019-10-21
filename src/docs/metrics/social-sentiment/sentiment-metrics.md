@@ -12,11 +12,11 @@ date: 2019-09-30
 
 ### Definition
 
-**Sentiment Analysis** is the problem of computationally identifying and categorizing emotions, opinions and subjective information in a given piece of text. This problem can be solved using different techniques: rule-based or machine learning. The first one represents a set of predefined rules that are used to estimate the sentiment of the input text. This approach is often less accurate and requires a lot of manual work. The amount of documents in our [**Social Data**](/social-data) storage makes it barely impossible to analyze them manually. That's why we use machine learning to approach the sentiment analysis problem.
+**Sentiment Analysis** is the problem of computationally identifying and categorizing emotions, opinions and subjective information in a given piece of text. This problem can be solved using different techniques: rule-based or machine learning. The first one represents a set of predefined rules that are used to estimate the sentiment of the input text. This approach is often less accurate and requires a lot of manual work. The amount of documents in our [Social Data](/metrics/social-sentiment/social-data) storage makes it barely impossible to analyze them manually. That's why we use machine learning to approach the sentiment analysis problem.
 
 ### Sentiment Score
 
-We trained a machine learning model on a large Twitter dataset, that contains over 1.6 million tweets, each labelled as either _positive_ or _negative_. This model is then used to evaluate the sentiment of each single document in the [**Social Data**](/social-data) set, i.e. it assigns a positive and negative _sentiment score_ to each message/post/comment/etc. These scores are probabilities that the content of the text being analyzed is positive or negative respectively. Therefore both the _positive_ and _negative_ sentiment scores fall in a range between 0 (not positive/negative at all) and 1 (extremely positive/negative). Moreover, the sum of these two scores always equals 1.
+We trained a machine learning model on a large Twitter dataset, that contains over 1.6 million tweets, each labelled as either _positive_ or _negative_. This model is then used to evaluate the sentiment of each single document in the [Social Data](/metrics/social-sentiment/social-data) set, i.e. it assigns a positive and negative _sentiment score_ to each message/post/comment/etc. These scores are probabilities that the content of the text being analyzed is positive or negative respectively. Therefore both the _positive_ and _negative_ sentiment scores fall in a range between 0 (not positive/negative at all) and 1 (extremely positive/negative). Moreover, the sum of these two scores always equals 1.
 
 Example:
 ```

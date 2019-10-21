@@ -23,13 +23,22 @@ const envScript = process.env.NODE_ENV === 'production' && (
   </Helmet>
 )
 
-const Layout = ({ children, isShowSidebar, classes = {} }) => (
+if (typeof window !== "undefined") {
+    require("smooth-scroll")('a[href*="#"]',{
+        speed: 800,
+        speedAsDuration: true,
+        easing: 'easeInOutCubic',
+        offset: () => 95,
+    })
+}
+
+const Layout = ({ children, isShowSidebar, classes = {}, pageContext }) => (
     <Intercom>
       <Notifications>
         <div className={cx(styles.container, isShowSidebar && styles.withSidebar)}>
           {envScript}
           <Header className={styles.header} />
-          {isShowSidebar && <Sidebar className={styles.sidebar} />}
+          {isShowSidebar && <Sidebar className={styles.sidebar} pageContext={pageContext} />}
             <main className={cx(styles.main, classes.main)}>
                 {children}
             </main>

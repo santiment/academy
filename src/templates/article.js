@@ -7,7 +7,6 @@ import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 export default function Template({data, pageContext}) {
   const {markdownRemark: article} = data
   const {breadcrumb: { crumbs }} = pageContext
-  console.log(crumbs)
   return (
     <Layout isShowSidebar={true}>
       <div>
