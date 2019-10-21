@@ -11,8 +11,11 @@ const isArticleActive = (active, category, block, article) =>
   isBlockActive(active, category, block) && active[2] === titleToSlug(article)
 
 const Sidebar = ({ className }) => {
-  const active = window.location.pathname.split("/").slice(1)
-  console.log(active)
+  let active
+  if (window !== undefined && window.location !== undefined) {
+    active = window.location.pathname.split("/").slice(1)
+  }
+
   return (
     <section className={cx(styles.wrapper, className)}>
       <ul className={styles.list}>
