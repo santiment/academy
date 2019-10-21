@@ -5,7 +5,7 @@ import { CATEGORIES, GETTING_STARTED } from "../../docs/navigation"
 import { titleToSlug } from "../../utils/docs"
 import styles from "./Sidebar.module.scss"
 
-const isBlockActive = (active, category, block) =>
+const isBlockActive = (active = [], category, block) =>
   active[0] === titleToSlug(category) && active[1] === titleToSlug(block)
 const isArticleActive = (active, category, block, article) =>
   isBlockActive(active, category, block) && active[2] === titleToSlug(article)
