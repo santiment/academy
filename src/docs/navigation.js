@@ -122,7 +122,7 @@ export const GETTING_STARTED = {
   title: "Getting started",
   blocks: [
 	  {
-	  	title: "For traiders"
+	  	title: "For traders"
 	  },
 	  {
 	  	title: "For developers"
