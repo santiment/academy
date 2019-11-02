@@ -1,6 +1,7 @@
 import React from 'react'
 import  {graphql} from 'gatsby'
 import cx from 'classnames'
+import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Markdown from '../components/Markdown/Markdown'
 import ArticleInfo from '../components/ArticleInfo/ArticleInfo'
@@ -12,6 +13,7 @@ export default function Template({data, pageContext}) {
   const {breadcrumb: { crumbs }} = pageContext
   return (
     <Layout isShowSidebar={true}>
+      <SEO title={`Academy - ${article.frontmatter.title}`} />
       <div className={cx(styles.wrapper, "container")}>
         <Breadcrumb
           crumbs={crumbs}
