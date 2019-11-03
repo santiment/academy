@@ -27,7 +27,7 @@ Example: you want to add `Transaction Volume` article.
 You should choose: `METRICS` category and `onchain` block, add `"Transaction Volume"` to `articles` array. After that add markdown file `transaction-volume.md` to `src/docs/metrics/on-chain/`.
 
 If you can't find appropriate category and block for your article, pls, add them in the same way as existing.
-If your article is the first in a block - make sure, that `.md` file for category` and for block are existing. If not, please create them too with a summary and link to your article inside. See existing examples in `Metrics` category.
+If your article is the first in a block - make sure, that `.md` file for category and for block are existing. If not, please create them too with a summary and link to your article inside. See existing examples in `Metrics` category.
 
 
 ### Metadata
