@@ -27,7 +27,7 @@ Example: you want to add `Transaction Volume` article.
 You should choose: `METRICS` category and `onchain` block, add `"Transaction Volume"` to `articles` array. After that add markdown file `transaction-volume.md` to `src/docs/metrics/on-chain/`.
 
 If you can't find appropriate category and block for your article, pls, add them in the same way as existing.
-If your article is the first in a block - make sure, that `.md` file for category and for block are existing. If not, please create them too with a summary and link to your article inside. See existing examples in `Metrics` category.
+If your article is the first in a block - make sure, that `.md` file for category and for block exist. If not, please create them too with a summary and link to your article inside. See existing examples in `Metrics` category.
 
 
 ### Metadata
@@ -38,7 +38,7 @@ Please, update **date** field, when you refactor your article.
 Note, that we have `src/docs/people.js` file, that contain **author** name, image, his position (description). (In future - link to Sanbase profile).
 If you didn't find author name in that file, pls, add info about him/her.
 
-Here's an example of a metadata block inside markdown file:
+Example of a metadata block inside markdown file:
 
 ```yaml
 ---
