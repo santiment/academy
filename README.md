@@ -54,3 +54,4 @@ The number of distinct addresses that ...
 
 Note the three dashes before and after metadata. *Don't forget to put them there*.
 
+`h2` and `h3` for headings in article will be in the fast navigation through the article (soon).
