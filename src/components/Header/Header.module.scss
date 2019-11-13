@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  height: 70px;
 
   @include responsive("tablet") {
     max-width: 768px;
