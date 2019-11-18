@@ -17,7 +17,7 @@ const PRODUCTS = [
     to: 'https://app.santiment.net'
   },
   {
-    img: neuroLogoImg,
+    img: sheetsLogoImg,
     title: 'Sheets',
     description: 'Google Spreadsheets plugin for importing Santiment data',
     to: 'https://sheets.santiment.net'
@@ -64,6 +64,7 @@ const SantimentProductsTooltip = ({ className, children }) => {
   const [isOpen, setOpen] = useState(false)
 
   return (
+    <>
     <Tooltip
       passOpenStateAs='isActive'
       closeTimeout={150}
@@ -77,7 +78,6 @@ const SantimentProductsTooltip = ({ className, children }) => {
           <div className={cx(styles.arrow, isOpen && styles.opened)}>
             {isOpen ? <CloseTrigger /> : <OpenTrigger />}
           </div>
-          <div className={styles.graphs}>Academy</div>
         </div>
       }
       onOpen={() => {
@@ -99,6 +99,8 @@ const SantimentProductsTooltip = ({ className, children }) => {
         </div>
       </div>
     </Tooltip>
+    <div className={styles.graphs}>Academy</div>
+    </>
   )
 }
 
