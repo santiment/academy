@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Academy - Santiment Technical Documentation`,
-    description: `Collected wisdom about rhe Santiment products, tools, metrics.`,
+    description: `Collected wisdom about the Santiment products, tools, metrics.`,
     author: `Santiment Team`,
     siteUrl: 'https://academy.santiment.net',
   },
