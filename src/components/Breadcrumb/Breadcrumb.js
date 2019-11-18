@@ -1,13 +1,25 @@
 import React from "react"
+import withSizes from "react-sizes"
 import cx from "classnames"
 import {Link} from "gatsby"
+import { mapSizesToProps } from "../../utils/sizes"
 import Icon from "@santiment-network/ui/Icon"
 import styles from "./Breadcrumb.module.scss"
 
-const Breadcrumb = ({crumbs,crumbLabel, className}) => {
+const Breadcrumb = ({crumbs,crumbLabel, className, isPhone}) => {
 	const crumbsWithoutLast = crumbs.map(({pathname, crumbLabel}) => ({crumbLabel: crumbLabel.charAt(0).toUpperCase() + crumbLabel.slice(1), pathname}))
 	crumbsWithoutLast.pop()
-	return (
+	const previous = crumbsWithoutLast[crumbsWithoutLast.length - 1]
+	return isPhone ? (
+		<div className={styles.wrapper}>
+			<div className={styles.title}>
+				<Link to={previous.pathname}>
+					<Icon type='arrow-left' className={styles.icon} />
+					{previous.crumbLabel}
+				</Link>
+			</div>
+		</div>
+		) : (
 	<nav className={cx(styles.wrapper, className)}>
 		<ul className={styles.list}>
 			{crumbsWithoutLast.map(({pathname, crumbLabel}) => (
@@ -26,6 +38,6 @@ const Breadcrumb = ({crumbs,crumbLabel, className}) => {
 	)
 }
 
-export default Breadcrumb
+export default withSizes(mapSizesToProps)(Breadcrumb)
 
 

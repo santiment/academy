@@ -2,6 +2,10 @@
 
 .wrapper {
 	margin: 7px 0 48px;
+
+	@include responsive('phone', 'phone-xs') {
+		margin-bottom: 20px;
+	}
 }
 
 .list {
@@ -13,6 +17,11 @@
 .title {
 	@include text('body-3');
 	color: $bali-hai;
+
+	@include responsive('phone', 'phone-xs') {
+		color: var(--jungle-green);
+		text-decoration: underline;
+	}
 }
 
 .last {
@@ -24,4 +33,8 @@
 	margin: 0 14px;
 	transform: scale(1.2);
 	fill: $bali-hai;
+
+	@include responsive('phone', 'phone-xs') {
+		margin: 0 10px 0 0;
+	}
 }
