@@ -38,12 +38,12 @@
   color: var(--casper);
 
   &__wrapper {
-    margin: 32px 32px 32px 0;
+    margin: 32px 32px 12px 0;
 
-    &:first-child {
-      padding-bottom: 32px;
-      border-bottom: 1px solid var(--porcelain);
-    }
+    // &:first-child {
+    //   padding-bottom: 32px;
+    //   border-bottom: 1px solid var(--porcelain);
+    // }
   }
 }
 

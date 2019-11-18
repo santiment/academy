@@ -19,25 +19,25 @@ const Sidebar = ({ className }) => {
   return (
     <section className={cx(styles.wrapper, className)}>
       <ul className={styles.list}>
-        <li className={styles.category__wrapper}>
-          <span className={styles.category}>{GETTING_STARTED.title}</span>
-          <ul className={styles.blocks}>
-            {GETTING_STARTED.blocks.map(({ title }) => (
-              <li>
-                <Link
-                  to={`/${titleToSlug(title)}`}
-                  className={cx(
-                    styles.block,
-                    active[0] === titleToSlug(title) &&
-                      styles.block__active
-                  )}
-                >
-                  {title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </li>
+        {/* <li className={styles.category__wrapper}> */}
+        {/*   <span className={styles.category}>{GETTING_STARTED.title}</span> */}
+        {/*   <ul className={styles.blocks}> */}
+        {/*     {GETTING_STARTED.blocks.map(({ title }) => ( */}
+        {/*       <li> */}
+        {/*         <Link */}
+        {/*           to={`/${titleToSlug(title)}`} */}
+        {/*           className={cx( */}
+        {/*             styles.block, */}
+        {/*             active[0] === titleToSlug(title) && */}
+        {/*               styles.block__active */}
+        {/*           )} */}
+        {/*         > */}
+        {/*           {title} */}
+        {/*         </Link> */}
+        {/*       </li> */}
+        {/*     ))} */}
+        {/*   </ul> */}
+        {/* </li> */}
         {CATEGORIES.map(category => (
           <li className={styles.category__wrapper}>
             <span className={styles.category}>{category.title}</span>
