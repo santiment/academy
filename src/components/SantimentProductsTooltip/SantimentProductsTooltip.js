@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from "gatsby"
 import cx from 'classnames'
 import Tooltip from '@santiment-network/ui/Tooltip'
 import Icon from '@santiment-network/ui/Icon'
@@ -99,7 +100,7 @@ const SantimentProductsTooltip = ({ className, children }) => {
         </div>
       </div>
     </Tooltip>
-    <div className={styles.graphs}>Academy</div>
+    <Link to='/' className={styles.graphs}>Academy</Link>
     </>
   )
 }
