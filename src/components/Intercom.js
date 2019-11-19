@@ -13,7 +13,7 @@ const Intercom = ({ children }) => {
   return (
     <Query query={CURRENT_USER_QUERY}>
       {({ data, loading }) => {
-        if (!loading) {
+        if (!loading && typeof window !== undefined) {
           const { email, username: name } = data.currentUser || {}
           window.Intercom('boot', {
             app_id: 'cyjjko9u',
