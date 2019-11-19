@@ -4,7 +4,7 @@ import SEO from '../components/seo'
 // import Search from '../components/Search/Search'
 import Category from '../components/Category/Category'
 import {CATEGORIES} from '../docs/navigation'
-import GettingStarted from "../components/GettingStarted/GettingStarted"
+// import GettingStarted from "../components/GettingStarted/GettingStarted"
 import styles from './index.module.scss'
 
 const IndexPage = ({pageContext}) => {

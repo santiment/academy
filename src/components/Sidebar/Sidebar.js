@@ -1,7 +1,7 @@
 import React from "react"
 import cx from "classnames"
 import { Link } from "gatsby"
-import { CATEGORIES, GETTING_STARTED } from "../../docs/navigation"
+import { CATEGORIES } from "../../docs/navigation"
 import { titleToSlug } from "../../utils/docs"
 import styles from "./Sidebar.module.scss"
 

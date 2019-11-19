@@ -12,9 +12,9 @@ import styles from './layout.module.scss'
 import Helmet from 'react-helmet'
 
 if (process.env.NODE_ENV === 'production') {
-  GoogleAnalytics.initialize('UA-100571693-8')
+  GoogleAnalytics.initialize('UA-100571693-14')
 } else {
-  GoogleAnalytics.initialize('UA-100571693-8', { testMode: true })
+  GoogleAnalytics.initialize('UA-100571693-14', { testMode: true })
 }
 
 const envScript = process.env.NODE_ENV === 'production' && (
