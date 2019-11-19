@@ -25,8 +25,7 @@ const CookiePopup = () => {
     setShown(false)
   }
 
-  return (
-    shown && (
+  return shown ? (
       <Panel className={styles.wrapper} variant='modal'>
         <h2 className={styles.title}>We are using cookies</h2>
         <div className={styles.bottom}>
@@ -54,8 +53,7 @@ const CookiePopup = () => {
           </Button>
         </div>
       </Panel>
-    )
-  )
+    ) : null
 }
 
 export default CookiePopup
