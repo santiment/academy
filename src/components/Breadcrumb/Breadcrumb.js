@@ -6,21 +6,12 @@ import { mapSizesToProps } from "../../utils/sizes"
 import Icon from "@santiment-network/ui/Icon"
 import styles from "./Breadcrumb.module.scss"
 
-const Breadcrumb = ({crumbs,crumbLabel, className, isPhone}) => {
+const Breadcrumb = ({crumbs,crumbLabel, className, isPhone = false}) => {
 	const crumbsWithoutLast = crumbs.map(({pathname, crumbLabel}) => ({crumbLabel: crumbLabel.charAt(0).toUpperCase() + crumbLabel.slice(1), pathname}))
 	crumbsWithoutLast.pop()
 	const previous = crumbsWithoutLast[crumbsWithoutLast.length - 1]
-	return isPhone ? (
-		<div className={styles.wrapper}>
-			<div className={styles.title}>
-				<Link to={previous.pathname}>
-					<Icon type='arrow-left' className={styles.icon} />
-					{previous.crumbLabel}
-				</Link>
-			</div>
-		</div>
-		) : (
-	<nav className={cx(styles.wrapper, className)}>
+	return !isPhone ? (
+<nav className={cx(styles.wrapper, className)}>
 		<ul className={styles.list}>
 			{crumbsWithoutLast.map(({pathname, crumbLabel}) => (
 			<li key={pathname} className={styles.title}>
@@ -35,6 +26,15 @@ const Breadcrumb = ({crumbs,crumbLabel, className, isPhone}) => {
 			</li>
 		</ul>
 	</nav>
+		) : (
+				<div className={styles.wrapper}>
+			<div className={styles.title}>
+				<Link to={previous.pathname}>
+					<Icon type='arrow-left' className={styles.icon} />
+					{previous.crumbLabel}
+				</Link>
+			</div>
+		</div>
 	)
 }
 
