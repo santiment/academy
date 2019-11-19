@@ -21,12 +21,24 @@
 	@include responsive('phone', 'phone-xs') {
 		color: var(--jungle-green);
 		text-decoration: underline;
+		display: none;
+
+		&:nth-last-child(2) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-direction: row-reverse;
+		}
 	}
 }
 
 .last {
 	@include text('body-3');
 	color: var(--rhino);
+
+	@include responsive('phone', 'phone-xs') {
+		display: none;
+	}
 }
 
 .icon {
@@ -36,5 +48,6 @@
 
 	@include responsive('phone', 'phone-xs') {
 		margin: 0 10px 0 0;
+		transform: rotate(180deg);
 	}
 }
