@@ -6,7 +6,7 @@ import styles from './CookiePopup.module.scss'
 const COOKIE_POLICY_ACCEPTED = 'COOKIE_POLICY_ACCEPTED'
 
 const isNotAccepted = key => {
-  if (typeof window === 'undefined') {
+  if (typeof window === 'undefined' || typeof window.localStorage === 'undefined') {
     return
   }
   return !localStorage.getItem(key)
