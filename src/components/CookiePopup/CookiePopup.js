@@ -5,12 +5,11 @@ import styles from './CookiePopup.module.scss'
 
 const COOKIE_POLICY_ACCEPTED = 'COOKIE_POLICY_ACCEPTED'
 
-const getLSItem = key => {
+const isNotAccepted = key => {
   if (typeof window === 'undefined') {
     return
   }
-
-  return localStorage.getItem(key)
+  return !localStorage.getItem(key)
 }
 
 const acceptCookiePolicy = () => {
@@ -19,7 +18,7 @@ const acceptCookiePolicy = () => {
 }
 
 const CookiePopup = () => {
-  const [shown, setShown] = useState(!getLSItem(COOKIE_POLICY_ACCEPTED))
+  const [shown, setShown] = useState(isNotAccepted(COOKIE_POLICY_ACCEPTED))
 
   function accept() {
     acceptCookiePolicy()
@@ -34,7 +33,6 @@ const CookiePopup = () => {
           <p className={styles.text}>
             This website uses the following types of cookies; strictly
             necessary, functional, performance
-            <br />
             and marketing cookies. By using this website, you accept our{' '}
             <a
               href='https://santiment.net/terms-conditions/'
