@@ -18,6 +18,7 @@ const Sidebar = ({ className }) => {
 
   return (
     <section className={cx(styles.wrapper, className)}>
+      <div className={styles.content}>
       <ul className={styles.list}>
         {/* <li className={styles.category__wrapper}> */}
         {/*   <span className={styles.category}>{GETTING_STARTED.title}</span> */}
@@ -92,6 +93,8 @@ const Sidebar = ({ className }) => {
           </li>
         ))}
       </ul>
+      </div>
+      <div className={styles.empty} />
     </section>
   )
 }

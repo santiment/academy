@@ -38,11 +38,27 @@ const Layout = ({ children, isShowSidebar, classes = {}, pageContext }) => (
         <div className={cx(styles.container, isShowSidebar && styles.withSidebar)}>
           {envScript}
           <Header className={styles.header} />
-          {isShowSidebar && <Sidebar className={styles.sidebar} pageContext={pageContext} />}
-            <main className={cx(styles.main, classes.main)}>
-                {children}
-            </main>
+          {isShowSidebar ? (
+            <>
+            <Sidebar className={styles.sidebar} pageContext={pageContext} />
+                <div className={styles.wrapper}>
+                  <div className={styles.empty}/>
+                  <div className={styles.content}>
+                    <main className={cx(styles.main, classes.main)}>
+                      {children}
+                    </main>
+                    <Footer className={styles.footer} />
+                  </div>
+                </div>
+                </>
+              ) : (
+              <>
+              <main className={cx(styles.main, classes.main)}>
+                  {children}
+              </main>
               <Footer className={styles.footer} />
+              </>
+              )}
         </div>
       </Notifications>
       <CookiePopup />

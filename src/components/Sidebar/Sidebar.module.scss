@@ -2,21 +2,38 @@
 
 .wrapper {
   height: 100%;
-  background-color: var(--athens);
   position: fixed;
-  top: 64px;
+  top: 71px;
   left: 0;
   bottom: 0;
-  width: 413px;
-  z-index: 1;
+  right: 0;
+  width: 100%;
+  // z-index: 1;
+  display: flex;
 
   @include responsive("phone", "phone-xs", "tablet") {
     display: none;
   }
+}
 
-  @include responsive("laptop") {
-    width: 300px;
-  }
+.content {
+  background-color: var(--athens);
+  display: flex;
+  flex-grow: 1;
+}
+
+.empty {
+  display: flex;
+  width: 871px;
+  flex-grow: 1;
+  z-index: -1;
+}
+
+.list {
+  margin-left: auto;
+  margin-bottom: 20px;
+  width: 285px;
+  padding: 0 0 40px 20px;
 
   overflow: hidden;
 
@@ -27,18 +44,12 @@
   }
 }
 
-.list {
-  margin: 40px 0 40px auto;
-  width: 270px;
-  padding-bottom: 40px;
-}
-
 .category {
   @include text("caption", "m");
   color: var(--casper);
 
   &__wrapper {
-    margin: 32px 32px 12px 0;
+    margin: 17px 32px 32px 0;
 
     // &:first-child {
     //   padding-bottom: 32px;

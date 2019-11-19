@@ -26,6 +26,19 @@ body {
   }
 }
 
+.empty {
+  display: flex;
+  width: 285px;
+
+  @include responsive('desktop') {
+    flex-grow:1;
+  }
+
+  @include responsive("phone-xs", "phone", "tablet") {
+      display: none;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -37,27 +50,27 @@ body {
       align-items: center;
     }
 
-    @include responsive("laptop") {
-      & .main {
-        margin-left: 300px;
-      }
-
-      & .footer {
+    .wrapper {
+      @include responsive('laptop', 'desktop') {
+        display: flex;
         width: 100%;
-        padding-left: 300px;
       }
     }
 
-    @include responsive("desktop") {
-      & .main {
-        margin-left: 413px;
-      }
+    .content {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+        @include responsive('desktop') {
+          width: 885px;
+        }
 
-      & .footer {
-        width: 100%;
-        padding-left: 413px;
-      }
+        @include responsive('laptop', 'desktop') {
+          z-index: 1;
+        }
     }
+
+
   }
 }
 
