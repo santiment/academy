@@ -48,6 +48,10 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @include responsive('laptop', 'desktop', 'tablet') {
+        min-height: 86vh;
+      }
     }
 
     .wrapper {
