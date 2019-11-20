@@ -14,5 +14,7 @@
 
 	@include responsive('laptop', 'desktop') {
     margin-left: 0 !important;
+		max-width: 620px !important;
+		position: relative;
   }
 }

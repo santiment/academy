@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Markdown from '../components/Markdown/Markdown'
 import ArticleInfo from '../components/ArticleInfo/ArticleInfo'
+import ArticleHeadings from '../components/ArticleHeadings/ArticleHeadings'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 import styles from './article.module.scss'
 
@@ -20,27 +21,12 @@ export default function Template({data, pageContext}) {
           crumbLabel={article.frontmatter.title}
         />
         <ArticleInfo {...article.frontmatter} />
+        <ArticleHeadings list={article.headings} />
         <Markdown markdown={article.rawMarkdownBody} />
       </div>
     </Layout>
   )
 }
-//
-// export const articleQuery = graphql`
-//   query ArticleByTitle($path: String!) {
-//     markdownRemark(frontmatter: { path: { eq: $path} }) {
-//       frontmatter {
-//       date
-//       author
-//       title
-//     }
-//     headings(depth: h2) {
-//       value
-//       depth
-//     }
-//     }
-//   }
-// `
 
 export const query = graphql`
   query($slug: String!) {
@@ -50,6 +36,10 @@ export const query = graphql`
         title
         date(formatString: "MMM DD, YYYY")
         author
+      }
+      headings(depth: h2) {
+        value
+        depth
       }
     }
   }

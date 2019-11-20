@@ -1,0 +1,24 @@
+@import "~@santiment-network/ui/mixins.scss";
+
+.list {
+	position: fixed;
+	margin-left: 660px;
+	display: flex;
+	flex-direction: column;
+}
+
+.item {
+}
+
+.heading {
+	@include text('caption');
+	font-weight: normal;
+}
+
+.second {
+	color: var(--rhino);
+}
+
+.third {
+	color: var(--waterloo);
+}
