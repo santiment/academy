@@ -89,11 +89,11 @@ const categories = [
   },
 ]
 
-const Footer = ({ intl, className }) => {
+const Footer = ({ intl, className, isMinified }) => {
   const { link, label } = langProps[+isJapanese()]
   return (
     <footer className={cx(styles.footer, className)}>
-      <div className={cx(styles.top, 'container')}>
+      {!isMinified && (<div className={cx(styles.top, 'container')}>
         <ul className={styles.categories}>
           {categories.map(({ title, links }) => (
             <li key={title} className={styles.category}>
@@ -115,14 +115,14 @@ const Footer = ({ intl, className }) => {
             </li>
           ))}
         </ul>
-      </div>
-      <div className={styles.bottomWrapper}>
+      </div>)}
+      <div className={cx(styles.bottomWrapper, isMinified && styles.minified)}>
         <div className={cx(styles.bottom, 'container')}>
           <div>
-          <Link to={link} className={cx(styles.text, styles.link)}>
+          {false && (<Link to={link} className={cx(styles.text, styles.link)}>
             <img alt='planet' src={planetSvg} className={styles.planet} />
             {label}
-          </Link>
+          </Link>)}
           <a
             target='_blank'
             rel='noopener noreferrer'

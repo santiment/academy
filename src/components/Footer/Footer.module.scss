@@ -71,3 +71,22 @@
 .planet {
   margin: 0 6px -3px 0;
 }
+
+.minified {
+  max-width: 590px;
+  margin: 0 55px;
+
+  @include responsive('phone', 'phone-xs', 'tablet') {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  & .bottom {
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .rights {
+    margin-left: 32px;
+  }
+}

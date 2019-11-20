@@ -4,13 +4,13 @@
 	max-width: 620px;
 
 	@include responsive('phone', 'phone-xs', 'tablet') {
-    padding: 10px 0 15px;
-    margin: 0 auto;
+    padding: 10px 15px 15px;
   }
 
-	// @include responsive('phone', 'phone-xs') {
- //    max-width: 100%;
- //  }
+	@include responsive('phone', 'phone-xs') {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
 	@include responsive('laptop', 'desktop') {
     margin-left: 0 !important;

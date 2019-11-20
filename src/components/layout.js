@@ -47,7 +47,7 @@ const Layout = ({ children, isShowSidebar, classes = {}, pageContext }) => (
                     <main className={cx(styles.main, classes.main)}>
                       {children}
                     </main>
-                    <Footer className={styles.footer} />
+                    <Footer className={styles.footer} isMinified={true} />
                   </div>
                 </div>
                 </>

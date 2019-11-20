@@ -1,14 +1,22 @@
 import React from "react"
+import {flatten, sluggify} from '../Markdown/utils'
 import cx from 'classnames'
 import styles from "./ArticleHeadings.module.scss"
 
 const ArticleHeadings = ({list}) => (
 	<ul className={styles.list}>
-		{list.map(({value, depth}) =>
+		{list.map(({value, depth}) => {
+  		const slug = sluggify(value)
+			return (
 			<li className={styles.item}>
-				<h3 className={cx(styles.heading, depth === 2 && styles.second, depth === 3 && styles.third)}>{value}</h3>
+				<a
+					href={`#${slug}`}
+					className={cx(styles.heading, depth === 2 && styles.second, depth === 3 && styles.third)}
+					>
+					{value}
+				</a>
 			</li>
-		)}
+		)})}
 	</ul>
 )
 
