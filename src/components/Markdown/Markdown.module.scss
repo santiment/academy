@@ -14,7 +14,10 @@
 
   @include responsive('phone', 'phone-xs', 'tablet') {
     @include text('body-2');
+    font-weight: 300;
   }
+
+  font-weight: 300;
 
   h1 {
     color: var(--rhino);
@@ -99,6 +102,7 @@
     	overflow-y: hidden;
       padding: 10px;
       margin-bottom: -10px;
+      font-size: 16px;
       background: inherit;
     }
 
