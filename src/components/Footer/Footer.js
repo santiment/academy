@@ -72,7 +72,7 @@ const categories = [
   {
     title: 'social',
     links: [
-      { children: 'discord', href: 'https://discord.gg/6fMxk82' },
+      { children: 'discord', href: 'https://santiment.net/discord' },
       { children: 'telegram', href: 'https://t.me/santiment_network' },
       { children: 'twitter', href: 'https://twitter.com/santimentfeed' },
       {
