@@ -14,6 +14,11 @@ export const PEOPLE = {
 		imageUrl: 'https://santiment.net/wp-content/uploads/2018/11/teamIvanK.png',
 		link: ''
 	},
+	'Irina Pranovich': {
+		description: 'Data scientist at Santiment',
+		imageUrl: 'https://santiment.net/wp-content/uploads/2018/11/teamIrina.png',
+		link: ''
+	},
 	'Max Bartel': {
 		description: 'Tech support at Santiment',
 		imageUrl: 'https://santiment.net/wp-content/uploads/2019/04/teamMax.png',

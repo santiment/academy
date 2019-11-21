@@ -9,7 +9,7 @@ export const METRICS = {
   },
   onchain: {
     title: "On-chain",
-    articles: ["Daily Active Addresses"],
+    articles: ["Daily Active Addresses", "MVRV"],
   },
   social: {
     title: "Social/Sentiment",

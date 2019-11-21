@@ -40,7 +40,7 @@ Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and 
 
 ### Network value
 - Realized Cap
-- Market Value To Realized Value
+- [Market Value To Realized Value](/metrics/on-chain/mvrv)
 - NVT Ratio Circulation
 - NVT Ratio Transaction Volume
 
