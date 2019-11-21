@@ -53,3 +53,5 @@ Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and 
 - Token Velocity
 - Transaction Volume
 - Token Circulation
+
+[EOS on-chain metrics](/metrics/on-chain/eos)
