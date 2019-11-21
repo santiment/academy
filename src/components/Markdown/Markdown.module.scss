@@ -105,6 +105,9 @@
       font-size: 16px;
       background: inherit;
     }
+    span {
+      font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+    }
 
     code:first-child {
       position: absolute;

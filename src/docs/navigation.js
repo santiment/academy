@@ -89,33 +89,33 @@ export const CATEGORIES = [
       METRICS.onchain,
     ],
   },
-  {
-    title: "Sanbase",
-    description:
-      "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
-    blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.pricingBilling],
-  },
-  {
-    title: "Sansheets",
-    description: "Google Spreadsheet plugin for Santiment data",
-    blocks: [
-      SHEETS.about,
-      SHEETS.interface,
-      SHEETS.functions,
-      SHEETS.integrations,
-    ],
-  },
-  {
-    title: "Sangraphs",
-    description:
-      "Advanced on-chain, social and development metrics and charts for 700+ coins",
-    blocks: [GRAPHS.about, GRAPHS.howWorks],
-  },
-  {
-    title: "Neuro API",
-    description: "The most comprehensive crypto API on the market",
-    blocks: [NEURO.about, NEURO.install, NEURO.howWorks],
-  },
+  // {
+  //   title: "Sanbase",
+  //   description:
+  //     "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
+  //   blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.pricingBilling],
+  // },
+  // {
+  //   title: "Sansheets",
+  //   description: "Google Spreadsheet plugin for Santiment data",
+  //   blocks: [
+  //     SHEETS.about,
+  //     SHEETS.interface,
+  //     SHEETS.functions,
+  //     SHEETS.integrations,
+  //   ],
+  // },
+  // {
+  //   title: "Sangraphs",
+  //   description:
+  //     "Advanced on-chain, social and development metrics and charts for 700+ coins",
+  //   blocks: [GRAPHS.about, GRAPHS.howWorks],
+  // },
+  // {
+  //   title: "Neuro API",
+  //   description: "The most comprehensive crypto API on the market",
+  //   blocks: [NEURO.about, NEURO.install, NEURO.howWorks],
+  // },
 ]
 
 export const GETTING_STARTED = {

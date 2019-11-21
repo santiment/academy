@@ -12,7 +12,7 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/src/intl`,
         // supported language
-        languages: [`en`, `ja`],
+        languages: [`en`],
         // language file path
         defaultLanguage: `en`,
         // option to redirect to `/ko` when connecting `/`
@@ -66,7 +66,14 @@ module.exports = {
         icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
-    { resolve: `gatsby-transformer-remark`},
+    {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+          `gatsby-remark-copy-images`,
+        ]
+      }
+    },
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
