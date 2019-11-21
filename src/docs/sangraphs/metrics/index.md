@@ -1,9 +1,6 @@
 ---
 title: Sangraphs Metrics
-author: Santiment Team
-# References
-#
-
+author: Santiment team
 ---
 
 - [Average token age consumed in days](/sangraphs/metrics/daily-active-addresses)
