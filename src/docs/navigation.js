@@ -60,6 +60,37 @@ export const GRAPHS = {
     title: "How it works",
     articles: [],
   },
+  metrics: {
+    title: "Metrics",
+    articles: ["Average token age consumed in days",
+"Daily Active Addresses",
+"Daily Active Deposits",
+"Deposit Addresses",
+"Deposit Related Transactions",
+"Developer Activity",
+"Exchange Flow",
+"Exchange Flow Balance",
+"MVRV Ratio",
+"Network Growth",
+"NVT ratio",
+"Share of daily active deposits in total daily active addresses",
+"Share of deposit transactions in total transactions",
+"Social data feed",
+"Social dominance",
+"Social Volume",
+"Token Age Consumed",
+"Token Circulation",
+"Top 100 transactions",
+"Top holders",
+"Top holders balance",
+"Top holders changes",
+"Top holders details",
+"Top holders percent of total supply",
+"Topic search",
+"Transaction Volume",
+"Velocity Of Tokens",
+]
+  }
 }
 
 export const NEURO = {
@@ -81,7 +112,7 @@ export const CATEGORIES = [
     blocks: [
       METRICS.financial,
       METRICS.social,
-      METRICS.development,
+      // METRICS.development,
       METRICS.onchain,
     ],
   },
@@ -101,16 +132,16 @@ export const CATEGORIES = [
   //     SHEETS.integrations,
   //   ],
   // },
-  // {
-  //   title: "Sangraphs",
-  //   description:
-  //     "Advanced on-chain, social and development metrics and charts for 700+ coins",
-  //   blocks: [GRAPHS.about, GRAPHS.howWorks],
-  // },
   {
     title: "Neuro API",
     description: "The most comprehensive crypto API on the market",
     blocks: [NEURO.about, NEURO.metrics],
+  },
+  {
+    title: "Sangraphs",
+    description:
+      "Advanced on-chain, social and development metrics and charts for 700+ coins",
+    blocks: [GRAPHS.metrics],
   },
 ]
 
