@@ -138,6 +138,7 @@
       color: var(--casper);
       transform: scale(1.5);
       display: inline-block;
+      vertical-align: top;
       width: 1em;
       margin-left: -1em;
     }
@@ -152,6 +153,7 @@
         content: counter(li);
       	color: var(--casper);
         display: inline-block;
+        vertical-align: top;
         width: 1em;
         margin-left: -1.5em;
         margin-right: 0.5em;

@@ -13,7 +13,7 @@ export const METRICS = {
   },
   social: {
     title: "Social/Sentiment",
-    articles: ["Sentiment metrics", "Social volume metrics", "Social data"],
+    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends"],
   },
 }
 

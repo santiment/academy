@@ -28,11 +28,9 @@ Amount of documents (messages, posts, comments, etc).
 
 ### Frequency
 
-We store each of the [social data](social-data/) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval**. Currently the time intervals we use are the following:
+We store each of the [social data](social-data/) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](access-plans/). Currently the time intervals we use are the following:
 
 - In [San-Graphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
-
-- In [Metrics-hub](https://github.com/santiment/metrics-hub/): `1h`, `3h`, `6h`, `12h`, `1d`, `2d`, `3d`, `7d`.
 
 ### Latency
 
@@ -57,7 +55,7 @@ The metric is available on Sanbase:
 
 #### [SANGraphs](https://graphs.santiment.net/social)
 
-The metric is available for **for any selected asset**.
+The metric is available **for any selected asset**.
 
 #### [Neuro](https://neuro.santiment.net/)
 
@@ -102,7 +100,7 @@ Same as [**Social Volume**](#social-volume).
 
 #### [SANGraphs](https://graphs.santiment.net/social)
 
-The metric is available for **for any selected asset**.
+The metric is available **for any selected asset**.
 
 ### Availability
 
@@ -139,9 +137,7 @@ Same as [**Social Volume**](#social-volume).
 
 #### [SANGraphs](https://graphs.santiment.net/social)
 
-The metric is available for **for any selected asset**.
-
-## Availability
+The metric is available **for any selected asset**.
 
 ### Availability
 
@@ -185,7 +181,7 @@ The metric is available on Sanbase on our charts **for any selected asset**:
 
 #### [SANGraphs](https://graphs.santiment.net/social)
 
-The metric is available for **for any selected asset**.
+The metric is available **for any selected asset**.
 
 ### Availability
 
