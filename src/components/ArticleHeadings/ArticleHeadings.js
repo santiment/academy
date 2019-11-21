@@ -1,5 +1,5 @@
 import React from "react"
-import {flatten, sluggify} from '../Markdown/utils'
+import {sluggify} from '../Markdown/utils'
 import cx from 'classnames'
 import styles from "./ArticleHeadings.module.scss"
 

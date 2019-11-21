@@ -11,6 +11,7 @@
 .list {
 	display: flex;
 	list-style: none;
+	flex-wrap: wrap;
 	align-items: center;
 }
 

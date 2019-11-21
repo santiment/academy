@@ -64,16 +64,12 @@ export const GRAPHS = {
 
 export const NEURO = {
   about: {
-    title: "About Neuro API",
-    articles: [],
+    title: "API reference",
+    articles: ["Exploring", "Available queries", "Available metrics"],
   },
-  install: {
-    title: "Install guide",
-    articles: [],
-  },
-  howWorks: {
-    title: "How API works",
-    articles: [],
+  metrics: {
+    title: "Metrics",
+    articles: ["Daily Active Addresses", "Daily Active Deposits", "Developer Activity", "Exchange Funds Flow", "History Price", "MVRV Ratio", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Social Dominance", "Social Volume", "Token Age Consumed", "Token Age Consumed In Days", "Token Circulation", "Top Social Gainers Losers", "Topic search", "Transaction Volume", "Trending Words", "Velocity Of Tokens"],
   },
 }
 
@@ -111,11 +107,11 @@ export const CATEGORIES = [
   //     "Advanced on-chain, social and development metrics and charts for 700+ coins",
   //   blocks: [GRAPHS.about, GRAPHS.howWorks],
   // },
-  // {
-  //   title: "Neuro API",
-  //   description: "The most comprehensive crypto API on the market",
-  //   blocks: [NEURO.about, NEURO.install, NEURO.howWorks],
-  // },
+  {
+    title: "Neuro API",
+    description: "The most comprehensive crypto API on the market",
+    blocks: [NEURO.about, NEURO.metrics],
+  },
 ]
 
 export const GETTING_STARTED = {

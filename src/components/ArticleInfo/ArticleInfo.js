@@ -4,7 +4,7 @@ import logo from '../../images/logo.png'
 import styles from "./ArticleInfo.module.scss"
 
 const ArticleInfo = ({title, author: name, date}) => {
-	const { description, imageUrl = logo} = PEOPLE[name] || {}
+	const { imageUrl = logo} = PEOPLE[name] || {}
 	return (
 	<section className={styles.block}>
 		<h3 className={styles.title}>{title}</h3>
