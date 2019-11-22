@@ -28,7 +28,7 @@ export const SANBASE = {
   },
   faq: {
     title: "FAQ",
-    articles: ["Requesting-display-new-project"],
+    articles: ["Requesting display new project"],
   },
 }
 
@@ -49,11 +49,11 @@ export const GENERAL = {
 
 export const SHEETS = {
   about: {
-    title: "About",
+    title: "Getting started",
     articles: ["Setting up", "Adding an API key"],
   },
   functions: {
-    title: "API reference",
+    title: "API",
     articles: ["Functions"],
   }
 }
@@ -127,21 +127,26 @@ export const CATEGORIES = [
       METRICS.onchain,
     ],
   },
-  {
-    title: "General",
-    description: "Info about our products, plans, FAQ questions",
-    blocks: [
-      GENERAL.products,
-      GENERAL.tokens,
-      GENERAL.faq,
-    ]
-  },
-  {
-    title: "Sanbase",
-    description:
-      "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
-    blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.faq],
-  },
+  // {
+  //   title: "General",
+  //   description: "Info about our products, plans, FAQ questions",
+  //   blocks: [
+  //     GENERAL.products,
+  //     GENERAL.tokens,
+  //     GENERAL.faq,
+  //   ]
+  // },
+  // {
+  //   title: "Sanbase",
+  //   description:
+  //     "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
+  //   blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.faq],
+  // },
+  // {
+  //   title: "Neuro API",
+  //   description: "The most comprehensive crypto API on the market",
+  //   blocks: [NEURO.about, NEURO.metrics, NEURO.ga],
+  // },
   {
     title: "Sansheets",
     description: "Google Spreadsheet plugin for Santiment data",
@@ -150,17 +155,12 @@ export const CATEGORIES = [
       SHEETS.functions,
     ],
   },
-  {
-    title: "Neuro API",
-    description: "The most comprehensive crypto API on the market",
-    blocks: [NEURO.about, NEURO.metrics, NEURO.ga],
-  },
-  {
-    title: "Sangraphs",
-    description:
-      "Advanced on-chain, social and development metrics and charts for 700+ coins",
-    blocks: [GRAPHS.metrics, GRAPHS.about],
-  },
+  // {
+  //   title: "Sangraphs",
+  //   description:
+  //     "Advanced on-chain, social and development metrics and charts for 700+ coins",
+  //   blocks: [GRAPHS.metrics, GRAPHS.about],
+  // },
 ]
 
 export const GETTING_STARTED = {
