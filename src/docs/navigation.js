@@ -1,22 +1,3 @@
-export const METRICS = {
-  financial: {
-    title: "Financial",
-    articles: ["Mean coin age"],
-  },
-  development: {
-    title: "Development",
-    articles: [],
-  },
-  onchain: {
-    title: "On-chain",
-    articles: ["Daily Active Addresses", "MVRV", "EOS"],
-  },
-  social: {
-    title: "Social/Sentiment",
-    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends"],
-  },
-}
-
 export const SANBASE = {
   about: {
     title: "About",
@@ -35,15 +16,15 @@ export const SANBASE = {
 export const GENERAL = {
   products: {
     title: "Products and plans",
-    articles: ["Access plans", "Santiment products"],
+    articles: ["Access plans", "Santiment products", "Create an API key"],
   },
   tokens: {
     title: "SAN tokens",
-    articles: ["How to buy SAN", "How to stake SAN"],
+    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens", "About SAN tokens"],
   },
-  faq: {
-    title: "FAQ",
-    articles: ["Create an API key", "Buy SAN tokens", "About SAN tokens"],
+  metrics: {
+    title: "Metrics",
+    articles: ["Daily Active Addresses", "MVRV", "EOS", "Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Mean coin age"],
   }
 }
 
@@ -117,25 +98,14 @@ export const NEURO = {
 
 export const CATEGORIES = [
   {
-    title: "Metrics",
-    description:
-      "Santiment brings a comprehensive set of metrics together in one place",
+    title: "General",
+    description: "Info about our products, plans, metrics and SAN tokens",
     blocks: [
-      METRICS.financial,
-      METRICS.social,
-      // METRICS.development,
-      METRICS.onchain,
-    ],
+      GENERAL.products,
+      GENERAL.metrics,
+      GENERAL.tokens,
+    ]
   },
-  // {
-  //   title: "General",
-  //   description: "Info about our products, plans, FAQ questions",
-  //   blocks: [
-  //     GENERAL.products,
-  //     GENERAL.tokens,
-  //     GENERAL.faq,
-  //   ]
-  // },
   // {
   //   title: "Sanbase",
   //   description:
