@@ -34,21 +34,13 @@ export const SANBASE = {
 
 export const SHEETS = {
   about: {
-    title: "About Sheets",
-    articles: [],
-  },
-  interface: {
-    title: "Interface",
+    title: "About",
     articles: [],
   },
   functions: {
-    title: "Functions",
-    articles: [],
-  },
-  integrations: {
-    title: "Integrations",
-    articles: [],
-  },
+    title: "API reference",
+    articles: ["Functions"],
+  }
 }
 
 export const GRAPHS = {
@@ -122,16 +114,14 @@ export const CATEGORIES = [
   //     "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
   //   blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.pricingBilling],
   // },
-  // {
-  //   title: "Sansheets",
-  //   description: "Google Spreadsheet plugin for Santiment data",
-  //   blocks: [
-  //     SHEETS.about,
-  //     SHEETS.interface,
-  //     SHEETS.functions,
-  //     SHEETS.integrations,
-  //   ],
-  // },
+  {
+    title: "Sansheets",
+    description: "Google Spreadsheet plugin for Santiment data",
+    blocks: [
+      SHEETS.about,
+      SHEETS.functions,
+    ],
+  },
   {
     title: "Neuro API",
     description: "The most comprehensive crypto API on the market",
