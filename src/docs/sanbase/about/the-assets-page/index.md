@@ -1,17 +1,12 @@
 ---
-title: The 'Assets' page
+title: Sanbase - The 'Assets' page
 author: Santiment Team
-# References
-#
-
 ---
 
-The \'All Assets\' overview contains all tokens we track across
+The `All Assets` overview contains all tokens we track across
 different blockchains. These are first sorted by market cap.
 
-::: {.intercom-container .intercom-align-left}
 ![](01_all_assets.png)
-:::
 
 By sorting on other table columns, you might be able to spot high-level,
 general trends. For instance, by sorting on Daily Active Addresses, or
@@ -19,11 +14,9 @@ Dev Activity, a pattern could emerge that is worth investigating. Just
 click on a column\'s title to sort by this column. Click again to
 reverse the order.
 
-::: {.intercom-container .intercom-align-left}
 ![](03_asset_columns.png)
-:::
 
-#### Here\'s a description of each column: {#heres-a-description-of-each-column .intercom-align-left data-post-processed="true"}
+#### Here's a description of each column:
 
 ***\'PRICE\'*** - The current token price.\
 ***\'PRICE +/-\'*** - The relative price change over the last 24 hours\
@@ -49,8 +42,7 @@ has its [own
 article](/intercom-articles/metrics-explained/sangraphs/metric-daily-active-addresses)
 here.
 
-Use Cases {#use-cases .intercom-align-left data-post-processed="true"}
----------
+## Use Cases
 
 Here are the sorts of things you might learn just by looking at the
 Assets table and doing some basic sorting.
@@ -70,12 +62,12 @@ Assets table and doing some basic sorting.
 
 -   is there a weird ETH spent spike for a particular asset
 
-And so on. These are just a few ideas. With time and practice, you\'ll
+And so on. These are just a few ideas. With time and practice, you'll
 learn to see things in this table that will clue you in to interesting
-market movements.\
+market movements.
 
-More things you can do with Assets {#more-things-you-can-do-with-assets .intercom-align-left data-post-processed="true"}
-----------------------------------
+
+## More things you can do with Assets
 
 The Assets table is also a springboard to dive deeper into individual
 projects. You can click each asset to drill down.
@@ -85,9 +77,7 @@ interested in or see pre-made lists like Top 50 ERC20 tokens, US-Based
 projects, DEXs, etc by moving your mouse over \'Assets\' in the top
 navigation.
 
-::: {.intercom-container .intercom-align-left}
 ![](02_assets_menu.png)
-:::
 
 To find out more about Categories and Watchlists, please check out [this
 article](/intercom-articles/getting-started/categories-and-watchlists).

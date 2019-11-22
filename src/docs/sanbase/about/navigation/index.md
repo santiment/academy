@@ -1,40 +1,27 @@
 ---
 title: Navigation through Sanbase
 author: Santiment Team
-# References
-#
-
 ---
 
-\
-You will find several navigation options at the top of the SANbase page:
+You will find several navigation options at the top of the Sanbase page:
 
-::: {.intercom-container .intercom-align-left}
 ![](04_menu.png)
-:::
 
 In this article we will go through them one by one and supply you with
-links to more information.\
+links to more information.
 
-Sonar {#sonar .intercom-align-left data-post-processed="true"}
------
+## Sonar
 
-When you first open up SANbase, you will start on the \'Sonar\' overview
-page.
+When you first open up Sanbase, you will start on the `Sonar` overview page.
 
 *To find out more about this overview, please check* [*this
 article*](/intercom-articles/getting-started/sanbase/emerging-social-trends)*.*
 
-::: {.intercom-container .intercom-align-left}
 ![](01_sonar.png)
-:::
 
-Assets {#assets .intercom-align-left data-post-processed="true"}
-------
+## Assets
 
-::: {.intercom-container .intercom-align-left}
 ![](01_assets.png)
-:::
 
 ***\'All Assets\'*** - this links to the [All Assets
 overview](/intercom-articles/getting-started/sanbase/the-assets-page)\
@@ -50,32 +37,26 @@ exchanges and their utility tokens\
 ***\'Centralized Exchanges\'*** - a curated list of regular exchanges
 and their utility tokens
 
-Each list functions similar to the \'All Assets\' list mentioned above.
-To find out more about \'Watchlists\' mentioned on the right side,
+Each list functions similar to the `All Assets` list mentioned above.
+To find out more about `Watchlists` mentioned on the right side,
 please check out [this
-article](/intercom-articles/getting-started/sanbase/categories-and-watchlists).\
+article](/intercom-articles/getting-started/sanbase/categories-and-watchlists).
 
-Insights {#insights .intercom-align-left data-post-processed="true"}
---------
+## Insights
 
 Insights can be created straight from the Sonar page, as well as from
 the Assets-pages, when switching over from Marketcap in the upper left:
 
-::: {.intercom-container .intercom-align-left}
 ![](06_assets_insights.png)
-:::
 
 To find more about Insights in general, please [check out this
-article](/intercom-articles/getting-started/sanbase/insights).\
+article](/intercom-articles/getting-started/sanbase/insights).
 
-Labs {#labs .intercom-align-left data-post-processed="true"}
-----
+## Labs
 
 This holds our most recent findings and experiments:
 
-::: {.intercom-container .intercom-align-left}
 ![](03_labs.png)
-:::
 
 ***\'Social Trends\'*** - Lets you search for specific terms and see how
 widely they are used in different crypto-relevant communication
@@ -90,28 +71,22 @@ change of balance over time\
 the most related terms, find out more about it
 [here](/intercom-articles/getting-started/sanbase/word-context).\
 ***\'Dashboard\'*** - This section currently links to
-\'[SANgraphs](https://santiment.net/dashboards)\', formerly \"SANbase
+\'[Sangraphs](https://santiment.net/dashboards)\', formerly \"Sanbase
 Dashboards\", where we host new cutting-edge metrics that are not yet
-available on SANbase.
+available on Sanbase.
 
-Search {#search .intercom-align-left data-post-processed="true"}
-------
+## Search
 
 The search can be used to find any token that is known to our database,
 e.g. our SAN token:
 
-::: {.intercom-container .intercom-align-left}
 ![](05_search.png)
-:::
 
-You can search for the name or the ticker of a token.\
+You can search for the name or the ticker of a token.
 
-Help {#help .intercom-align-left data-post-processed="true"}
-----
+## Help
 
-::: {.intercom-container .intercom-align-left}
 ![](07_help_menu.png)
-:::
 
 ***\'Documentation\'*** - this link will lead you to the knowledge base
 you are using right now\
@@ -121,16 +96,11 @@ documentation\
 chat icon in the lower right corner of any of our pages, which you can
 use to quickly get in contact with our support team
 
-::: {.intercom-container .intercom-align-center}
 ![](08_intercom.png)
-:::
 
-Account and settings {#account-and-settings .intercom-align-left data-post-processed="true"}
---------------------
+## Account and settings
 
-::: {.intercom-container .intercom-align-left}
 ![](09_account_menu.png)
-:::
 
 ***\'tokens available\'*** - How many SAN tokens are associated with
 your account. Check [this

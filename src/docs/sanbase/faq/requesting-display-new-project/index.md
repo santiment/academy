@@ -1,9 +1,6 @@
 ---
 title: Requesting new projects and their tokens to be displayed on Sanbase
 author: Santiment Team
-# References
-#
-
 ---
 
 As we are working directly with Ethereum on-chain data, we have the

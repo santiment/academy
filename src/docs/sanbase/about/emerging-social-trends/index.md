@@ -1,20 +1,12 @@
 ---
-title: Emerging social trends
+title: Sanbase - Emerging social trends
 author: Santiment Team
-# References
-#
-
 ---
 
+When looking at our Sonar overview page on Sanbase you will see our
+`Emerging social trends` lists in the middle of the page:
 
-Santiment - Getting started
-Emerging social trends
-When looking at our Sonar overview page on SANbase you will see our
-\'Emerging social trends\' lists in the middle of the page:
-
-::: {.intercom-container .intercom-align-left}
 ![](01_sonar.png)
-:::
 
 These lists do not simply contain the most used terms across all our
 social data sources, but rather calculate how quickly a certain one is

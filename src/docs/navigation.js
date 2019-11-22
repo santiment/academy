@@ -106,12 +106,12 @@ export const CATEGORIES = [
       GENERAL.tokens,
     ]
   },
-  // {
-  //   title: "Sanbase",
-  //   description:
-  //     "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
-  //   blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.faq],
-  // },
+  {
+    title: "Sanbase",
+    description:
+      "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
+    blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.faq],
+  },
   // {
   //   title: "Neuro API",
   //   description: "The most comprehensive crypto API on the market",

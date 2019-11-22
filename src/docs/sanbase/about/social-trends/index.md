@@ -1,13 +1,10 @@
 ---
-title: Social Trends
+title: Sanbase - Social Trends
 author: Santiment Team
-# References
-#
-
 ---
 
-*This article is about the \'Social Trends\' search feature. For more
-information on our \'Emerging Social trends\' lists on our Sonar page,
+*This article is about the `Social Trends` search feature. For more
+information on our `Emerging Social trends` lists on our Sonar page,
 please have a look at* [*this
 article*](/intercom-articles/getting-started/sanbase/emerging-social-trends)*.*
 
@@ -16,18 +13,15 @@ search term is mentioned in a specific medium (e.g. Telegram). You will
 be supplied with a graph showing the amount of mentions at each data
 point, plotted agains the price of either BTC or ETH in USD:
 
-::: {.intercom-container .intercom-align-left}
 ![](11_social_trends.png)
-:::
 
 One graph will be displayed for the total mentions, as well as one for
-each data source. \'AND\', \'OR\' (as well as parentheses) can be used
+each data source. `AND`, `OR` (as well as parentheses) can be used
 to logically combine multiple search terms. Please refer to [this blog
 post](https://santiment.net/blog/introducing-social-trends/) for a more
 detailed description on how to use these terms.\
 
-Word Cloud {#word-cloud .intercom-align-left data-post-processed="true"}
-----------
+## Word Cloud
 
 In case you only searched for a single search term, you will find a word
 cloud above the graphs. This is created by displaying other words which
