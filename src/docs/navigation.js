@@ -105,6 +105,10 @@ export const NEURO = {
     title: "API reference",
     articles: ["Exploring", "Available queries", "Available metrics"],
   },
+  ga: {
+    title: "About",
+    articles: ["Getting started", "Using API explorer", "Using API from the command line"]
+  },
   metrics: {
     title: "Metrics",
     articles: ["Daily Active Addresses", "Daily Active Deposits", "Developer Activity", "Exchange Funds Flow", "History Price", "MVRV Ratio", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Social Dominance", "Social Volume", "Token Age Consumed", "Token Age Consumed In Days", "Token Circulation", "Top Social Gainers Losers", "Topic search", "Transaction Volume", "Trending Words", "Velocity Of Tokens"],
@@ -149,7 +153,7 @@ export const CATEGORIES = [
   {
     title: "Neuro API",
     description: "The most comprehensive crypto API on the market",
-    blocks: [NEURO.about, NEURO.metrics],
+    blocks: [NEURO.about, NEURO.metrics, NEURO.ga],
   },
   {
     title: "Sangraphs",

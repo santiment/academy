@@ -1,3 +1,11 @@
+---
+title: Using the Neuro API from the command line
+author: Santiment Team
+# References
+#
+
+---
+
 Our API can be also accessed from the command line. The endpoint is:
 `https://api.santiment.net`
 

@@ -1,3 +1,11 @@
+---
+title: Getting started using Neuro API
+author: Santiment Team
+# References
+#
+
+---
+
 Neuro by Santiment is a comprehensive cryptocurrency API which
 utilizes[GraphQL](https://graphql.org/) for flexibility and function. It
 can be accessed in several ways, including:
