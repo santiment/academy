@@ -1,9 +1,6 @@
 ---
-title: The ERC-20 overview page
+title: Sangraphs - The ERC-20 overview page
 author: Santiment Team
-# References
-#
-
 ---
 
 As many of our on-chain (and other) metrics are Ethereum-based, we are
@@ -15,20 +12,16 @@ the starting page of SANgraphs, you will be lead to the following list,
 which will allow you to pick the token you want for a certain set of
 metrics to be shown for:
 
-::: {.intercom-container .intercom-align-left}
 ![](04_sangraphs_erc20_overview.png)
-:::
 
 Please note that this is a pretty long list, so the search function of
 your browser is your best friend here:
 
-::: {.intercom-container .intercom-align-left}
 ![](05_sangraphs_erc20_overview_search.png)
-:::
 
 The first column shows the ticker of the asset, the second one shows the
 smart contract address. In case you are also utilizing our API, the
-project\'s \'slug\' might be interesting to you, which you can find in
+project's \'slug\' might be interesting to you, which you can find in
 the third column.
 
 The last four columns will lead to different sets of metrics about that

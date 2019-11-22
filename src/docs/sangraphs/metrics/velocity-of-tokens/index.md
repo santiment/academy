@@ -1,9 +1,6 @@
 ---
-title: Velocity of Tokens (beta)
+title: Sangraphs - Velocity of Tokens (beta)
 author: Santiment Team
-# References
-#
-
 ---
 
 *For a more in-depth explanation of \'Velocity of Tokens\', please
@@ -21,9 +18,7 @@ transactions more often within a set time frame.
 Token Velocity can be used to explain various noteworthy events in the
 life of a project. For example, here's Ethereum:
 
-::: {.intercom-container .intercom-align-left}
 ![](4.png)
-:::
 
 Notice the steep drop off?
 

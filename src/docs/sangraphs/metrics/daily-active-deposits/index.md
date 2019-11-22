@@ -1,9 +1,6 @@
 ---
-title: Daily Active Deposits
+title: Sangraphs - Daily Active Deposits
 author: Santiment Team
-# References
-#
-
 ---
 
 *This article mentions one of several metrics we offer regarding
@@ -19,9 +16,7 @@ As an example, let's look at the DAD metric for REP, Augur's native
 coin. REP's price is in green, while Daily Active Deposits are colored
 blue.
 
-::: {.intercom-container .intercom-align-left}
 [![](dad-augur-2-768x286.png)](https://santiment.net/wp-content/uploads/2019/02/dad-augur-2.png)
-:::
 
 The first thing we can see is a more-less stable DAD spread over the
 past 6 month. On average, 43 deposit addresses were active on the Augur

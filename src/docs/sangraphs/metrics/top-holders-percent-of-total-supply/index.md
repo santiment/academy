@@ -1,9 +1,6 @@
 ---
-title: Top Holders - Percent of Total Supply
+title: Sangraphs - Top Holders - Percent of Total Supply
 author: Santiment Team
-# References
-#
-
 ---
 
 Metrics explained
@@ -18,9 +15,7 @@ This graph shows the relative amount of tokens held by all the top
 holders compared to the total amount of tokens in existence, as well as
 the asset\'s price.
 
-::: {.intercom-container .intercom-align-left}
 ![](31_top_holders_percentof.png)
-:::
 
 As you can see, we also display the top holder\'s share of the total
 supply split by exchange- and non-exchange wallets.\

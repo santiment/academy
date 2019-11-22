@@ -1,9 +1,6 @@
 ---
-title: Token Age Consumed
+title: Sangraphs - Token Age Consumed
 author: Santiment Team
-# References
-#
-
 ---
 
 Metrics explained
@@ -26,9 +23,7 @@ idle for an extended period of time.
 One potential use case for this metric is identifying when big market
 players exit the project post ICO. Let's look at an example:
 
-::: {.intercom-container .intercom-align-left}
 ![](8.png)
-:::
 
 Here's the Token Age Consumed graph for [Golem](https://golem.network/),
 an ERC-20 project that lets you rent other people's computing power.
@@ -39,4 +34,4 @@ parallel price decline.
 
 For more details on the metric \'Average Token Age Consumed in Days\',
 please click
-[here](/intercom-articles/metrics-explained/sangraphs/metric-average-token-age-consumed-in-days).\
+[here](/intercom-articles/metrics-explained/sangraphs/metric-average-token-age-consumed-in-days).

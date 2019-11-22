@@ -1,13 +1,9 @@
 ---
-title: Deposit Addresses
+title: Sangraphs - Deposit Addresses
 author: Santiment Team
-# References
-#
-
 ---
 
-What are deposit addresses? {#what-are-deposit-addresses .intercom-align-left data-post-processed="true"}
----------------------------
+## What are deposit addresses?
 
 When somebody wants to make a deposit to an exchange, there are two
 transactions that occur:
@@ -16,9 +12,7 @@ transactions that occur:
     an exchange for each separate user.
 2.  Coins move from that temporary wallet to the main exchange wallet.
 
-::: {.intercom-container .intercom-align-left}
 [![](exchange-768x413.png)](https://santiment.net/wp-content/uploads/2019/02/exchange.png)
-:::
 
 We call these temporary wallets **deposit addresses**, or deposits, and
 they can supply us with invaluable information about a particular
@@ -42,8 +36,7 @@ Analyzing deposit addresses can prove useful in several ways:
 3.  Tracking the activity of deposit addresses may help us examine and
     foresee market movement with a **new level of awareness.**
 
-Our current metrics for deposit addresses {#our-current-metrics-for-deposit-addresses .intercom-align-left data-post-processed="true"}
------------------------------------------
+Our current metrics for deposit addresses
 
 1.  Daily Active Deposits (DAD) - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-daily-active-deposits)

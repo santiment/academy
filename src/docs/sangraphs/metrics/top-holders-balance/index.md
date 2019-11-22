@@ -1,9 +1,6 @@
 ---
-title: Top Holders - Balance
+title: Sangraphs - Top Holders - Balance
 author: Santiment Team
-# References
-#
-
 ---
 *This article mentions one of several metrics we offer regarding top
 holders addresses. Please check* [*this
@@ -14,9 +11,7 @@ offered.*
 This graph shows the sum of all the top holders balances plotted against
 the asset\'s price.
 
-::: {.intercom-container .intercom-align-left}
 ![](30_top_holders_balance.png)
-:::
 
 As you can see, we also display the total balance split by exchange- and
 non-exchange wallets.\

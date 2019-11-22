@@ -1,9 +1,6 @@
 ---
-title: Developer Activity
+title: Sangraphs - Developer Activity
 author: Santiment Team
-# References
-#
-
 ---
 
 A developer's time is a relatively expensive resource (especially in
@@ -17,16 +14,11 @@ Simply put, Developer Activity can be used to gauge a project's
 commitment to creating a working product, and continuously polishing and
 upgrading its features.\
 
-::: {.intercom-container .intercom-align-left}
 ![](1.png)
-:::
 
-*Dev Activity graph for Basic Attention Token\
-\
-*
+*Dev Activity graph for Basic Attention Token*
 
-How we measure Developer Activity {#how-we-measure-developer-activity .intercom-align-left data-post-processed="true"}
----------------------------------
+## How we measure Developer Activity
 
 We measure dev activity differently than most.
 
@@ -40,10 +32,10 @@ dramatically improves both accuracy and serviceability of Github data.
 If you want to learn more about the difference - and the benefits of our
 bespoke approach - I highly suggest [this
 piece](https://medium.com/santiment/tracking-github-activity-of-crypto-projects-introducing-a-better-approach-9fb1af3f1c32)
-by Valentin, our CTO.\
+by Valentin, our CTO.
 
-Dev Activity as a Trading Strategy {#dev-activity-as-a-trading-strategy .intercom-align-left data-post-processed="true"}
-----------------------------------
+
+## Dev Activity as a Trading Strategy
 
 While not common, Dev Activity can also be used as a novel trading
 strategy. A few months back, we tested a portfolio of only the top ERC20
@@ -53,9 +45,7 @@ We backtested the strategy from August 2017 to October 2018. [The
 portfolio 1](https://santiment.net/blog/github-activity-portfolio/)
 turned a profit, but didn't beat hodling BTC overall.
 
-::: {.intercom-container .intercom-align-left}
 ![](2.png)
-:::
 
 However, our portfolio was also more volatile than hodling over time,
 registering significantly larger tops in January and May of 2018. If you

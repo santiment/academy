@@ -1,9 +1,6 @@
 ---
-title: Token Circulation (beta)
+title: Sangraphs - Token Circulation (beta)
 author: Santiment Team
-# References
-#
-
 ---
 
 Token Circulation shows the spread of idle tokens over time. In other
@@ -30,9 +27,7 @@ For example, here's the Token Circulation graph for
 [Zilliqa](https://zilliqa.com/), starting from the project launch in
 January 2018, until January 2019:
 
-::: {.intercom-container .intercom-align-left}
 ![](Zil.png)
-:::
 
 Notice how all tokens, naturally, start off in **dark red (\<1d)**, and
 eventually move to other 'time buckets'.
@@ -41,8 +36,7 @@ You can see the biggest share of Ziliqa tokens are currently colored
 **light purple (6-12m)**, meaning they haven't moved between 6-12 months
 (many of them likely from the project launch.)\
 
-How can you use Token Circulation? {#how-can-you-use-token-circulation .intercom-align-left data-post-processed="true"}
-----------------------------------
+How can you use Token Circulation?
 
 Token circulation can be used to track large amounts of tokens moving
 after being idle for some time. One potential use case can be
@@ -51,9 +45,7 @@ identifying when big market players exit the project post ICO.
 For example, here's a Token Circulation graph for Golem (GNT), from June
 2018 till now:
 
-::: {.intercom-container .intercom-align-left}
 ![](line.png)
-:::
 
 We can spot a curious event on July 17th, 2018, which correlated with a
 huge price dip from which Golem never really recovered.
@@ -66,9 +58,7 @@ indicating those are the tokens that moved.
 We can confirm this by analyzing the differences in time buckets on July
 16th and July 17th:
 
-::: {.intercom-container .intercom-align-left}
 ![](new.png)
-:::
 
 As we can see, around 120 million GNT that were idle between 18 and 24
 months (many since the project launch) have moved on June 17th (and have

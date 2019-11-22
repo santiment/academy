@@ -1,9 +1,6 @@
 ---
-title: Top 100 Transactions
+title: Sangraphs - Top 100 Transactions
 author: Santiment Team
-# References
-#
-
 ---
 
 This dashboard catalogues the top 100 transactions in a desired time
@@ -15,9 +12,7 @@ frame, including their:
 4.  Recipient address
 5.  Transaction Hash
 
-::: {.intercom-container .intercom-align-left}
 ![](3.png)
-:::
 
 You can adjust the time frame in the upper right corner, or simply by
 selecting a relevant portion of a(ny) graph, by dragging your mouse

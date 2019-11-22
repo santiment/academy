@@ -1,9 +1,6 @@
 ---
-title: MVRV Ratio
+title: Sangraphs - MVRV Ratio
 author: Santiment Team
-# References
-#
-
 ---
 
 *This metric can be found on the* [*\'Ethereum & ERC20 MVRV\'
@@ -16,8 +13,7 @@ in \'market value\' simply describes the market cap, which is well known
 when looking at crypto assets. The second part is the \'RV\' or
 \'realized value\':
 
-Realized Value {#realized-value .intercom-align-left data-post-processed="true"}
---------------
+Realized Value
 
 The **realized value** metric is calculating the acquisition cost of the
 assets located in a wallet. Imagine that there is a wallet which has 30
@@ -45,20 +41,15 @@ tokens at the moment. This number gives an estimate of the amount of
 money the users of the network spend to acquire their assets. The
 definition will be:
 
-::: {.intercom-container .intercom-align-left}
 ![](27_rv_formel.png)
-:::
 
-MVRV Ratio {#mvrv-ratio .intercom-align-left data-post-processed="true"}
-----------
+MVRV Ratio
 
 If we compare the current **market capitalization (market value or MV)**
 to the current realized value, we can get an estimate how overvalued or
 undervalued the current market cap is. The definition will be:
 
-::: {.intercom-container .intercom-align-left}
 ![](28_mvrv_formel.png)
-:::
 
 For example if the current realized value is \$4b and the market value
 is \$8b, that means that on average each participant will take 2x

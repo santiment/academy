@@ -1,9 +1,6 @@
 ---
-title: Share of Daily Active Deposits in Total Daily Active Addresses
+title: Sangraphs - Share of Daily Active Deposits in Total Daily Active Addresses
 author: Santiment Team
-# References
-#
-
 ---
 
 *This article mentions one of several metrics we offer regarding
@@ -16,9 +13,7 @@ Built on top of DAD, SDD calculates the share of daily active deposits
 (DAD) in the total number of daily active addresses (DAA), by dividing
 the two (DAD/DAA). The results are shown in percentages for simplicity.
 
-::: {.intercom-container .intercom-align-left}
 [![](augur-768x291.png)](https://santiment.net/wp-content/uploads/2019/02/augur.png)
-:::
 
 The idea behind this metric is to serve as a quick-glance **indicator of
 the speculative interest** in a particular coin. The bigger the SDD, the
@@ -62,22 +57,17 @@ market events, Share of Daily Active Deposits is designed as more of a
 long-term indicator. So far, we found it to be much more useful for a
 wall-to-wall retrospective or comparative analysis.\
 
-Examples {#examples .intercom-align-left data-post-processed="true"}
---------
+## Examples
 
 Let's compare the SDD for a couple of different projects:
 
-1.  0x (ZRX)
+1. 0x (ZRX)
 
-::: {.intercom-container .intercom-align-left}
 [![](zrx-768x295.png)](https://santiment.net/wp-content/uploads/2019/02/zrx.png)
-:::
 
-2\. Bancor (BNT)
+2. Bancor (BNT)
 
-::: {.intercom-container .intercom-align-left}
 [![](bancor-1-768x293.png)](https://santiment.net/wp-content/uploads/2019/02/bancor-1.png)
-:::
 
 Save for a few notable spikes, 0x has exhibited a relatively stable
 share of Daily Active Deposits in DAA for the last 18 months. On

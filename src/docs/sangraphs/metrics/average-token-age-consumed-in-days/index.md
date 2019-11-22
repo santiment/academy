@@ -1,9 +1,6 @@
 ---
-title: Average Token Age Consumed in Days
+title: Sangraphs - Average Token Age Consumed in Days
 author: Santiment Team
-# References
-#
-
 ---
 
 *For a more in-depth explanation of \'Average Token Age Consumed in

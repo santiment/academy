@@ -1,9 +1,6 @@
 ---
-title: Top Holders - Details
+title: Sangraphs - Top Holders - Details
 author: Santiment Team
-# References
-#
-
 ---
 *This article mentions one of several metrics we offer regarding top
 holders addresses. Please check* [*this
@@ -15,9 +12,7 @@ The last part of our Top Holders metrics is the Details table. It shows
 detailed data for the top holders for the selected period, sorted by
 date (the current day compared to the previous day).
 
-::: {.intercom-container .intercom-align-left}
 ![](33_top_holders_details.png)
-:::
 
 The **status** column specifies whether the address either (was)
 

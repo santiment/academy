@@ -1,9 +1,5 @@
 ---
-title: Deposit-related Transactions
-author: Santiment Team
-# References
-#
-
+title: Sangraphs - Deposit-related Transactions
 ---
 
 *This article mentions one of several metrics we offer regarding
@@ -37,9 +33,7 @@ As another use-case of this metric, let's take a look what
 Deposit-related Transactions can tell us about MKR's popularity over
 time:
 
-::: {.intercom-container .intercom-align-left}
 [![](maker-768x294.png)](https://santiment.net/wp-content/uploads/2019/02/maker.png)
-:::
 
 The Transaction graph clearly shows a steady increase in the total
 number of deposit-related transactions -- **especially** in the past few

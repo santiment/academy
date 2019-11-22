@@ -1,9 +1,6 @@
 ---
-title: Top Holders - Changes
+title: Sangraphs - Top Holders - Changes
 author: Santiment Team
-# References
-#
-
 ---
 
 *This article mentions one of several metrics we offer regarding top
@@ -15,9 +12,7 @@ offered.*
 This graph shows the total number of new addresses entering the top
 holders list.
 
-::: {.intercom-container .intercom-align-left}
 ![](32_top_holders_changes.png)
-:::
 
 The amount of top holders addresses included in the calculation can be
 chosen at the top by selecting \'HoldersCount\'. The HoldersCount in the

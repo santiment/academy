@@ -1,9 +1,6 @@
 ---
-title: Daily Active Addresses
+title: Sangraphs - Daily Active Addresses
 author: Santiment Team
-# References
-#
-
 ---
 
 Simply put, DAA indicates the daily level of crowd interaction (or
@@ -13,9 +10,7 @@ speculation) with a certain token. We currently offer DAA for BTC, ETH
 One potential use case for DAA is identifying the tops. Let's look at an
 example:
 
-::: {.intercom-container .intercom-align-left}
 ![](0ce7d2cf9b9322a25fcc13c3a5e2ccedd59b14d0.png)
-:::
 
 This is a DAA graph for [Zilliqa](https://zilliqa.com/), an ERC-20
 project that aims to make blockchains faster and more scalable.

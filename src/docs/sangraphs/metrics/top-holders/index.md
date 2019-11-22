@@ -1,9 +1,6 @@
 ---
-title: Top Holders
+title: Sangraphs - Top Holders
 author: Santiment Team
-# References
-#
-
 ---
 
 \'Top Holders\' describes a set of up to 100 Ethereum addresses which
@@ -24,9 +21,7 @@ very last column, which should be named \'Top Holders\'.\
 As all top holder metrics are shown in the same overview, they share a
 set of options:
 
-::: {.intercom-container .intercom-align-left}
 ![](29_top_holders_options.png)
-:::
 
 ***\'Currency\'*** - lets you switch the price from being displayed in
 USD to BTC\
@@ -38,8 +33,7 @@ more information\
 ***\'Balance in USD\'*** - display the top holders balances in amount of
 tokens or converted to USD\
 
-Our current metrics for top holders: {#our-current-metrics-for-top-holders .intercom-align-left data-post-processed="true"}
-------------------------------------
+## Our current metrics for top holders:
 
 1.  Top Holders - Balance - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-top-holders-balance)

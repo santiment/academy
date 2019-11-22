@@ -1,9 +1,6 @@
 ---
-title: NVT Ratio
+title: Sangraphs - NVT Ratio
 author: Santiment Team
-# References
-#
-
 ---
 
 *This metric can be found on the* [*\'Ethereum & ERC20 MVRV\'

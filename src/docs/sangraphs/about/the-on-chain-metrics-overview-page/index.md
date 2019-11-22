@@ -1,9 +1,6 @@
 ---
-title: The 'On-chain metrics' overview page
+title: Sangraphs - The 'On-chain metrics' overview page
 author: Santiment Team
-# References
-#
-
 ---
 
 *This article is about the On-chain metrics overview for specific ERC-20
@@ -15,34 +12,31 @@ Please note that \'Top Holders\' metrics, albeit being on-chain in
 nature, are not part of this overview and have their own one, which can
 be found through the ERC-20 overview page mentioned above.*
 
-ERC-20 on-chain metrics in this overview {#erc-20-on-chain-metrics-in-this-overview .intercom-align-left data-post-processed="true"}
-----------------------------------------
+## ERC-20 on-chain metrics in this overview
 
 The metrics are split into several categories as shown in the
 screenshot:
 
-::: {.intercom-container .intercom-align-left}
 ![](14_sangraphs_onchain_metrics_overview.png)
-:::
 
 Clicking one of these categories will expand it to show the included
 metrics. Clicking it again will collapse it into the shown state.\
 
-#### Address Activity {#address-activity .intercom-align-left data-post-processed="true"}
+#### Address Activity
 
 -   Daily Active Addresses (DAA) - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-daily-active-addresses)
 -   Network Growth - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-network-growth)
 
-#### Token Consumption {#token-consumption .intercom-align-left data-post-processed="true"}
+#### Token Consumption
 
 -   Average Token Age Consumed in Days - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-average-token-age-consumed-in-days)
 -   Token Age Consumed - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-token-age-consumed)
 
-#### Transactions {#transactions .intercom-align-left data-post-processed="true"}
+#### Transactions
 
 -   Transaction Volume - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-transaction-volume)
@@ -51,7 +45,7 @@ metrics. Clicking it again will collapse it into the shown state.\
 -   Velocity of Tokens (Beta) - [article
     link](/intercom-articles/metrics-explained/sangraphs/beta-metric-velocity-of-tokens)
 
-#### Exchange Flow {#exchange-flow .intercom-align-left data-post-processed="true"}
+#### Exchange Flow
 
 -   Exchange Flow Balance - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-exchange-flow-balance)
@@ -59,7 +53,7 @@ metrics. Clicking it again will collapse it into the shown state.\
     link](/intercom-articles/metrics-explained/sangraphs/metric-exchange-flow)
 -   Percent of Token Supply on Exchanges
 
-#### Deposits - [article link](/intercom-articles/metrics-explained/sangraphs/metrics-about-deposit-addresses) {#deposits---article-link .intercom-align-left data-post-processed="true"}
+#### Deposits
 
 -   Daily Active Deposits - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-daily-active-deposits)
@@ -71,7 +65,7 @@ metrics. Clicking it again will collapse it into the shown state.\
 -   Share of Deposits\' Transactions in Total Transactions - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-share-of-deposit-transactions-in-total-transactions)
 
-#### Withdrawals {#withdrawals .intercom-align-left data-post-processed="true"}
+#### Withdrawals
 
 -   Daily Active Withdrawals
 -   Share of Daily Active Withdrawals in DAA
@@ -79,7 +73,7 @@ metrics. Clicking it again will collapse it into the shown state.\
 -   Withdrawals\' Transactions
 -   Share of Withdrawals\' Transactions in Total Transactions
 
-#### Top Transactions {#top-transactions .intercom-align-left data-post-processed="true"}
+#### Top Transactions
 
 -   Top 100 Transactions - [article
     link](/intercom-articles/metrics-explained/sangraphs/metric-top-100-transactions)

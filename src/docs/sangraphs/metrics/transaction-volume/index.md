@@ -1,9 +1,6 @@
 ---
-title: Transaction Volume
+title: Sangraphs - Transaction Volume
 author: Santiment Team
-# References
-#
-
 ---
 
 *For a video breakdown of Transaction Volume and Token Velocity, click*
@@ -26,16 +23,12 @@ Here's the trx volume graph for [Basic Attention
 Token](https://basicattentiontoken.org/) (BAT), a decentralized ad
 network:
 
-::: {.intercom-container .intercom-align-left}
 ![](1.png)
-:::
 
 The per-day graph is still a bit noisy, so let's smooth it out with a
 7-day moving average (done with 1 click in SANgraphs):
 
-::: {.intercom-container .intercom-align-left}
 ![](2.png)
-:::
 
 As you can see, the correlation between price and trx volume can both be
 evident and strenuous at different times.

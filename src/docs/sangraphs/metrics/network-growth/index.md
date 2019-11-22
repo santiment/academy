@@ -1,9 +1,6 @@
 ---
-title: Network Growth
+title: Sangraphs - Network Growth
 author: Santiment Team
-# References
-#
-
 ---
 
 *For a video breakdown of this metric, click*
@@ -12,9 +9,7 @@ author: Santiment Team
 Essentially, this chart illustrates user adoption over time, and can be
 used to identify when the project is gaining - or losing - traction.
 
-::: {.intercom-container .intercom-align-left}
 ![](e0553cbe07ebc5fae995bb3ad585f3a10ed91e2b.png)
-:::
 
 Here's a Network Growth graph for [Aragon](https://aragon.org/), which
 lets anyone create and manage a decentralized organization on Ethereum.

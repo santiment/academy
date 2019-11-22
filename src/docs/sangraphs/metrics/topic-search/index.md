@@ -1,9 +1,6 @@
 ---
-title: Topic Search
+title: Sangraphs - Topic Search
 author: Santiment Team
-# References
-#
-
 ---
 
 Our custom tool lets you search for any term or phrase, and see how
@@ -26,9 +23,7 @@ Here's what happens when you search for 'xrp OR ripple' in Topic Search
 (OR is a search modifier - in this case, it lets you search for all
 messages mentioning either xrp or ripple):
 
-::: {.intercom-container .intercom-align-left}
 ![](9.png)
-:::
 
 We can clearly spot a large spike in social chatter surrounding Ripple
 in late September, which coincides thoroughly with XRP's price rally.

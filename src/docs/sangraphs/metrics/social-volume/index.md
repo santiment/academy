@@ -1,18 +1,13 @@
 ---
-title: Social Volume
+title: Sangraphs - Social Volume
 author: Santiment Team
-# References
-#
-
 ---
 
 The Social Volume metric lets you select a certain project out of a
 curated list of crypto projects, which can be found at the top of the
 page:
 
-::: {.intercom-container .intercom-align-left}
 ![](15_sangraphs_social_volume.png)
-:::
 
 The graphs will show you how often that project has been mentioned
 within a certain interval and time frame across all channels of the
@@ -26,4 +21,4 @@ projects to this list. Thank you for your understanding.
 
 In case you still think we might be missing an important project, please
 feel invited to join [our Discord
-server](https://santiment.net/discord).\
+server](https://santiment.net/discord).

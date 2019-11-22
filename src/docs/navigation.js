@@ -125,12 +125,12 @@ export const CATEGORIES = [
       SHEETS.functions,
     ],
   },
-  // {
-  //   title: "Sangraphs",
-  //   description:
-  //     "Advanced on-chain, social and development metrics and charts for 700+ coins",
-  //   blocks: [GRAPHS.metrics, GRAPHS.about],
-  // },
+  {
+    title: "Sangraphs",
+    description:
+      "Advanced on-chain, social and development metrics and charts for 700+ coins",
+    blocks: [GRAPHS.metrics, GRAPHS.about],
+  },
 ]
 
 export const GETTING_STARTED = {
