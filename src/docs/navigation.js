@@ -50,7 +50,7 @@ export const GENERAL = {
 export const SHEETS = {
   about: {
     title: "About",
-    articles: [],
+    articles: ["Setting up", "Adding an API key"],
   },
   functions: {
     title: "API reference",
@@ -60,8 +60,8 @@ export const SHEETS = {
 
 export const GRAPHS = {
   about: {
-    title: "About Graphs",
-    articles: [],
+    title: "About",
+    articles: ["Navigation", "The erc 20 overview page", "The on-chain metrics overview page"],
   },
   howWorks: {
     title: "How it works",
@@ -70,32 +70,32 @@ export const GRAPHS = {
   metrics: {
     title: "Metrics",
     articles: ["Average token age consumed in days",
-"Daily Active Addresses",
-"Daily Active Deposits",
-"Deposit Addresses",
-"Deposit Related Transactions",
-"Developer Activity",
-"Exchange Flow",
-"Exchange Flow Balance",
-"MVRV Ratio",
-"Network Growth",
-"NVT ratio",
-"Share of daily active deposits in total daily active addresses",
-"Share of deposit transactions in total transactions",
-"Social data feed",
-"Social dominance",
-"Social Volume",
-"Token Age Consumed",
-"Token Circulation",
-"Top 100 transactions",
-"Top holders",
-"Top holders balance",
-"Top holders changes",
-"Top holders details",
-"Top holders percent of total supply",
-"Topic search",
-"Transaction Volume",
-"Velocity Of Tokens",
+    "Daily Active Addresses",
+    "Daily Active Deposits",
+    "Deposit Addresses",
+    "Deposit Related Transactions",
+    "Developer Activity",
+    "Exchange Flow",
+    "Exchange Flow Balance",
+    "MVRV Ratio",
+    "Network Growth",
+    "NVT ratio",
+    "Share of daily active deposits in total daily active addresses",
+    "Share of deposit transactions in total transactions",
+    "Social data feed",
+    "Social dominance",
+    "Social Volume",
+    "Token Age Consumed",
+    "Token Circulation",
+    "Top 100 transactions",
+    "Top holders",
+    "Top holders balance",
+    "Top holders changes",
+    "Top holders details",
+    "Top holders percent of total supply",
+    "Topic search",
+    "Transaction Volume",
+    "Velocity Of Tokens",
 ]
   }
 }
@@ -159,7 +159,7 @@ export const CATEGORIES = [
     title: "Sangraphs",
     description:
       "Advanced on-chain, social and development metrics and charts for 700+ coins",
-    blocks: [GRAPHS.metrics],
+    blocks: [GRAPHS.metrics, GRAPHS.about],
   },
 ]
 

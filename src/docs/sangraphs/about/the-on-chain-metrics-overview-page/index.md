@@ -1,3 +1,11 @@
+---
+title: The 'On-chain metrics' overview page
+author: Santiment Team
+# References
+#
+
+---
+
 *This article is about the On-chain metrics overview for specific ERC-20
 tokens, which can be found through* [*\'The ERC-20 overview
 page\'*](/intercom-articles/getting-started/sangraphs/the-erc-20-overview-page)*.

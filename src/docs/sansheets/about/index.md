@@ -1,5 +1,5 @@
 ---
-title: Sansheets functions
+title: About Sansheets
 author: Santiment team
 date: 2019-11-20
 ---

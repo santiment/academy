@@ -1,3 +1,11 @@
+---
+title: Navigating through Sangraphs
+author: Santiment Team
+# References
+#
+
+---
+
 After successfully logging into SANgraphs (in case you need help with
 that, check [this
 article](/intercom-articles/getting-started/sangraphs/logging-into-sangraphs))

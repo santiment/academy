@@ -1,3 +1,11 @@
+---
+title: Setting up Sansheets
+author: Santiment Team
+# References
+#
+
+---
+
 Install SANsheets {#install-sansheets .intercom-align-left data-post-processed="true"}
 -----------------
 

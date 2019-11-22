@@ -1,3 +1,12 @@
+---
+title: Adding an API key to Sansheets
+author: Santiment Team
+# References
+#
+
+---
+
+
 Adding an API key to SANsheets is very simple. But there is two things
 you need to do first: [Getting SANsheets
 ready](/intercom-articles/getting-started/sansheets/setting-up-sansheets)
