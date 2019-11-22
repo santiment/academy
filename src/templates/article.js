@@ -12,9 +12,13 @@ import styles from './article.module.scss'
 export default function Template({data, pageContext}) {
   const {markdownRemark: article} = data
   const {breadcrumb: { crumbs }} = pageContext
+  const meta = {
+    title: `${article.frontmatter.title} | Santiment Academy`,
+    description: `${article.frontmatter.description || ''}`,
+  }
   return (
     <Layout isShowSidebar={true}>
-      <SEO title={`Academy - ${article.frontmatter.title}`} />
+      <SEO {...meta} />
       <div className={cx(styles.wrapper, "container")}>
         <Breadcrumb
           crumbs={crumbs}
@@ -36,6 +40,7 @@ export const query = graphql`
         title
         date(formatString: "MMM DD, YYYY")
         author
+        description
       }
       headings(depth: h2) {
         value

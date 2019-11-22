@@ -49,7 +49,7 @@ const Sidebar = ({ className }) => {
                     <Link
                       to={`/${titleToSlug(category.title)}/${titleToSlug(
                         title
-                      )}`}
+                      )}/`}
                       className={cx(
                         styles.block,
                         isBlockActive(active, category.title, title) &&
@@ -70,7 +70,7 @@ const Sidebar = ({ className }) => {
                           <Link
                             to={`/${titleToSlug(category.title)}/${titleToSlug(
                               title
-                            )}/${titleToSlug(article)}`}
+                            )}/${titleToSlug(article)}/`}
                             className={cx(
                               styles.article,
                               isArticleActive(

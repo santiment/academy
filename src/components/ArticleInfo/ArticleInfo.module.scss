@@ -11,7 +11,7 @@
 	position: relative;
 
 	&::after {
-		content: url('../../images/logo.svg');
+		content: url('../../images/logos/logo-sanbase.svg');
 		display: inline-block;
 		position: absolute;
 		width: 20px;
@@ -26,6 +26,12 @@
 	& img {
 		width: 100%;
 		height: auto;
+	}
+}
+
+.onlyPhoto {
+	&::after {
+		display: none;
 	}
 }
 
