@@ -15,17 +15,17 @@ Traditional fundamentals including price, volume and market cap, plus crypto-rel
 - Price
 - Volume
 - Marketcap
-- [Mean Coin Age](/metrics/financial/mean-coin-age). For each coin we see how long it has stayed at its current address and we compute the average of all those ages. The difference between "coin age" and "dollar age" comes from the different way that we compute the averages.
+- [Mean Coin Age](/general/metrics/mean-coin-age). For each coin we see how long it has stayed at its current address and we compute the average of all those ages. The difference between "coin age" and "dollar age" comes from the different way that we compute the averages.
 - Mean dollar invested age
 
 ## Social/Sentiment
 
 Metrics taken from measuring social activity on crypto-related forums and channels, plus custom sentiment measurements analyzing crowd behavior. Includes emerging trend words and projects, word clouds to display related words and the possibility to enter custom search terms.
 
-- [Social data](/metrics/social-sentiment/social-data)
-- [Social volume metrics](/metrics/social-sentiment/social-volume-metrics)
-- [Sentiment metrics](/metrics/social-sentiment/sentiment-metrics)
-- [Emerging trends](/metrics/social-sentiment/emerging-trends)
+- [Social data](/general//metrics/social-data)
+- [Social volume metrics](/general//metrics/social-volume-metrics)
+- [Sentiment metrics](/general//metrics/sentiment-metrics)
+- [Emerging trends](/general//metrics/emerging-trends)
 
 
 ## Development
@@ -40,13 +40,13 @@ Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and 
 
 ### Network value
 - Realized Cap
-- [Market Value To Realized Value](/metrics/on-chain/mvrv)
+- [Market Value To Realized Value](/general/metrics/mvrv)
 - NVT Ratio Circulation
 - NVT Ratio Transaction Volume
 
 ### Network Activity
 - Network Growth
-- [Daily Active Addresses](/metrics/on-chain/daily-active-addresses)
+- [Daily Active Addresses](/general/metrics/daily-active-addresses)
 
 ### Token Flows/Movement/Activity
 - Token Age Consumed
@@ -54,4 +54,4 @@ Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and 
 - Transaction Volume
 - Token Circulation
 
-[EOS on-chain metrics](/metrics/on-chain/eos)
+[EOS on-chain metrics](/general//metrics/eos)
