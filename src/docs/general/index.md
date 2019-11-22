@@ -1,5 +1,5 @@
 ---
-title: SAN tokens
+title: General block
 author: Santiment team
 ---
 

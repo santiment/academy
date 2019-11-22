@@ -1,5 +1,5 @@
 ---
-title: SAN tokens
+title: FAQ
 author: Santiment team
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: SAN tokens
+title: Products and plans
 author: Santiment team
 ---
 

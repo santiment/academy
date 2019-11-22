@@ -32,6 +32,21 @@ export const SANBASE = {
   },
 }
 
+export const GENERAL = {
+  products: {
+    title: "Products and plans",
+    articles: ["Access plans", "Santiment products"],
+  },
+  tokens: {
+    title: "SAN tokens",
+    articles: ["How to buy SAN", "How to stake SAN"],
+  },
+  faq: {
+    title: "FAQ",
+    articles: ["Create an API key", "Buy SAN tokens", "About SAN tokens"],
+  }
+}
+
 export const SHEETS = {
   about: {
     title: "About",
@@ -107,6 +122,15 @@ export const CATEGORIES = [
       // METRICS.development,
       METRICS.onchain,
     ],
+  },
+  {
+    title: "General",
+    description: "Info about our products, plans, FAQ questions",
+    blocks: [
+      GENERAL.products,
+      GENERAL.tokens,
+      GENERAL.faq,
+    ]
   },
   // {
   //   title: "Sanbase",
