@@ -1,9 +1,6 @@
 ---
 title: Using the Neuro API from the command line
 author: Santiment Team
-# References
-#
-
 ---
 
 Our API can be also accessed from the command line. The endpoint is:
@@ -27,8 +24,7 @@ For clarification, here is an example for Transaction Volume:
       --data '{ "query": "query{transactionVolume(from:\"2018-12-09T11:25:04.894Z\",interval:\"1d\",slug:\"dragonchain\",to:\"2018-12-23T11:25:04.894Z\"){datetime,transactionVolume}}" }' \
       https://api.santiment.net/graphql
 
-Adding an API key {#adding-an-api-key .intercom-align-left data-post-processed="true"}
------------------
+## Adding an API key
 
 You can add an API key to your query by adding the following line after
 the third line:

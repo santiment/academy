@@ -1,9 +1,6 @@
 ---
-title: Transaction Volume
+title: Neuro API - Transaction Volume
 author: Santiment Team
-# References
-#
-
 ---
 
 Fetch total amount of tokens for a project that were transacted on the

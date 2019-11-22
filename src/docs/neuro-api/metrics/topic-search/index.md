@@ -1,9 +1,6 @@
 ---
-title: Topic Search
+title: Neuro API - Topic Search
 author: Santiment Team
-# References
-#
-
 ---
 
 Returns lists with the mentions of the search phrase from the selected

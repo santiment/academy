@@ -1,9 +1,6 @@
 ---
-title: Percentage of Token Supply on Exchanges
+title: Neuro API - Percentage of Token Supply on Exchanges
 author: Santiment Team
-# References
-#
-
 ---
 
 Returns what percent of the total token supply is on exchanges. Projects

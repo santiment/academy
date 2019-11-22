@@ -1,9 +1,6 @@
 ---
 title: Getting started using Neuro API
 author: Santiment Team
-# References
-#
-
 ---
 
 Neuro by Santiment is a comprehensive cryptocurrency API which

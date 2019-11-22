@@ -1,9 +1,6 @@
 ---
-title: History Price
+title: Neuro API - History Price
 author: Santiment Team
-# References
-#
-
 ---
 Gets the historical price of an asset in BTC or USD for a given time
 period, as well as market cap and volume. Projects are referred to by a

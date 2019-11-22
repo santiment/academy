@@ -112,11 +112,11 @@ export const CATEGORIES = [
       "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
     blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.faq],
   },
-  // {
-  //   title: "Neuro API",
-  //   description: "The most comprehensive crypto API on the market",
-  //   blocks: [NEURO.about, NEURO.metrics, NEURO.ga],
-  // },
+  {
+    title: "Neuro API",
+    description: "The most comprehensive crypto API on the market",
+    blocks: [NEURO.about, NEURO.metrics, NEURO.ga],
+  },
   {
     title: "Sansheets",
     description: "Google Spreadsheet plugin for Santiment data",

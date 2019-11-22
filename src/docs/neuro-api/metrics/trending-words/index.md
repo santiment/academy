@@ -1,9 +1,6 @@
 ---
-title: Trending Words
+title: Neuro API - Trending Words
 author: Santiment Team
-# References
-#
-
 ---
 
 This query returns a list of Trending Words and their corresponding

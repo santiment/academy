@@ -1,9 +1,6 @@
 ---
-title: Token Circulation
+title: Neuro API - Token Circulation
 author: Santiment Team
-# References
-#
-
 ---
 
 Gets the total amount of tokens that have been sent at least once during

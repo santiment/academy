@@ -1,9 +1,6 @@
 ---
-title: Network Growth
+title: Neuro API - Network Growth
 author: Santiment Team
-# References
-#
-
 ---
 
 Fetch the number of newly created addresses for a project within a given

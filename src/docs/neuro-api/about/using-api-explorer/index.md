@@ -1,9 +1,6 @@
 ---
 title: Using the Neuro API explorer
 author: Santiment Team
-# References
-#
-
 ---
 
 Our [GraphQL Explorer](https://api.santiment.net/graphiql) allows you to

@@ -1,9 +1,6 @@
 ---
-title: Top Social Gainers / Losers
+title: Neuro API - Top Social Gainers / Losers
 author: Santiment Team
-# References
-#
-
 ---
 
 This returns the projects that have gained or lost the most Social

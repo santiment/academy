@@ -1,9 +1,6 @@
 ---
-title: Realized Value
+title: Neuro API - Realized Value
 author: Santiment Team
-# References
-#
-
 ---
 
 Returns Realized Value of all tokens. Realized Value is based on the

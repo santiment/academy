@@ -1,9 +1,6 @@
 ---
-title: Token Age Consumed
+title: Neuro API - Token Age Consumed
 author: Santiment Team
-# References
-#
-
 ---
 
 Fetch Token Age Consumed for a project within a given time period,

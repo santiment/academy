@@ -1,9 +1,6 @@
 ---
-title: Social Dominance
+title: Neuro API - Social Dominance
 author: Santiment Team
-# References
-#
-
 ---
 
 Returns the share of the social dominance a given project has over time

@@ -1,9 +1,6 @@
 ---
-title: NVT Ratio
+title: Neuro API - NVT Ratio
 author: Santiment Team
-# References
-#
-
 ---
 
 Returns the NVT (Network-Value-to-Transactions) Ratio at each interval

@@ -1,9 +1,6 @@
 ---
-title: Social Volume
+title: Neuro API - Social Volume
 author: Santiment Team
-# References
-#
-
 ---
 
 Returns a list of mentions count for a given project and time interval.

@@ -1,9 +1,6 @@
 ---
-title: Daily Active Addresses
+title: Neuro API - Daily Active Addresses
 author: Santiment Team
-# References
-#
-
 ---
 
 Fetch daily active addresses for a project within a given time period.

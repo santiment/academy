@@ -1,9 +1,6 @@
 ---
-title: MVRV Ratio
+title: Neuro API - MVRV Ratio
 author: Santiment Team
-# References
-#
-
 ---
 
 Fetch the MVRV ratio for a project, grouped by interval. Projects are

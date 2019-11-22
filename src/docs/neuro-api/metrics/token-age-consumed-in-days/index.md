@@ -1,9 +1,6 @@
 ---
-title: Average Token Age Consumed in Days
+title: Neuro API - Average Token Age Consumed in Days
 author: Santiment Team
-# References
-#
-
 ---
 
 Fetch the average number of days that tokens were idle before being

@@ -1,9 +1,6 @@
 ---
-title: Daily Active Deposits
+title: Neuro API - Daily Active Deposits
 author: Santiment Team
-# References
-#
-
 ---
 
 Fetch Daily Active Deposits for a project, grouped by interval. Projects

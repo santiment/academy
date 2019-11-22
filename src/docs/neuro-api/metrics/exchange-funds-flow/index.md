@@ -1,9 +1,6 @@
 ---
-title: Exchange Funds Flow
+title: Neuro API - Exchange Funds Flow
 author: Santiment Team
-# References
-#
-
 ---
 
 Fetch the flow of funds into and out of known exchange wallets. This

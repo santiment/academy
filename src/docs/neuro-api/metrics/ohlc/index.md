@@ -1,9 +1,6 @@
 ---
-title: OHLC
+title: Neuro API - OHLC
 author: Santiment Team
-# References
-#
-
 ---
 
 Fetch open, high, low close price values for a given slug and time

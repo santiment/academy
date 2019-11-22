@@ -1,9 +1,6 @@
 ---
-title: Velocity of Tokens
+title: Neuro API - Velocity of Tokens
 author: Santiment Team
-# References
-#
-
 ---
 
 *For a more in-depth explanation of \'Velocity of Tokens\' on SANgraphs,

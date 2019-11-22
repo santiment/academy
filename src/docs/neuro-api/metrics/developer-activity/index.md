@@ -1,9 +1,6 @@
 ---
-title: Developer Activity
+title: Neuro API - Developer Activity
 author: Santiment Team
-# References
-#
-
 ---
 
 Returns a list of developer activity for a given slug and time interval.
