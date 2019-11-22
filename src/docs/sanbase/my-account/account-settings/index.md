@@ -1,3 +1,11 @@
+---
+title: Account settings
+author: Santiment Team
+# References
+#
+
+---
+
 Depending on your way of logging into SANbase, there will already be
 information displayed in Account Settings when you open them for the
 first time.\

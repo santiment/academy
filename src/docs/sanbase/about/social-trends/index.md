@@ -1,3 +1,11 @@
+---
+title: Social Trends
+author: Santiment Team
+# References
+#
+
+---
+
 *This article is about the \'Social Trends\' search feature. For more
 information on our \'Emerging Social trends\' lists on our Sonar page,
 please have a look at* [*this

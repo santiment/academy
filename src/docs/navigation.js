@@ -19,16 +19,16 @@ export const METRICS = {
 
 export const SANBASE = {
   about: {
-    title: "About Sanbase",
-    articles: [],
+    title: "About",
+    articles: ["Navigation", "The assets page", "Social trends", "Insights", "Emerging social trends", "Categories and watchlists", "Word context"],
   },
   myAccount: {
     title: "My account",
-    articles: [],
+    articles: ["Account settings", "Logging into Sanbase"],
   },
-  pricingBilling: {
-    title: "Pricing & Billing",
-    articles: [],
+  faq: {
+    title: "FAQ",
+    articles: ["Requesting-display-new-project"],
   },
 }
 
@@ -136,12 +136,12 @@ export const CATEGORIES = [
       GENERAL.faq,
     ]
   },
-  // {
-  //   title: "Sanbase",
-  //   description:
-  //     "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
-  //   blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.pricingBilling],
-  // },
+  {
+    title: "Sanbase",
+    description:
+      "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
+    blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.faq],
+  },
   {
     title: "Sansheets",
     description: "Google Spreadsheet plugin for Santiment data",

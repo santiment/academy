@@ -1,3 +1,12 @@
+---
+title: Emerging social trends
+author: Santiment Team
+# References
+#
+
+---
+
+
 Santiment - Getting started
 Emerging social trends
 When looking at our Sonar overview page on SANbase you will see our

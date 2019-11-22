@@ -1,3 +1,12 @@
+---
+title: Categories and Watchlists
+author: Santiment Team
+# References
+#
+
+---
+
+
 Looking at the [assets
 list](/intercom-articles/getting-started/sanbase/the-assets-page)
 on [SANbase](https://app.santiment.net/assets/all), you will find a

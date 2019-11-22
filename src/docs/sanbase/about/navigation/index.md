@@ -1,3 +1,11 @@
+---
+title: Navigation through Sanbase
+author: Santiment Team
+# References
+#
+
+---
+
 \
 You will find several navigation options at the top of the SANbase page:
 

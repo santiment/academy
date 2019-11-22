@@ -1,3 +1,12 @@
+---
+title: Insights
+author: Santiment Team
+# References
+#
+
+---
+
+
 You can use our Insights feature to create your own note-like posts,
 share them with the community or browse already existing Insights.
 

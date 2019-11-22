@@ -1,5 +1,5 @@
 ---
-title: About Sanbase
+title: FAQ about Sanbase
 author: Santiment team
 ---
 

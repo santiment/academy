@@ -1,5 +1,5 @@
 ---
-title: About Sanbase
+title: Account on Sanbase
 author: Santiment team
 ---
 

@@ -1,3 +1,11 @@
+---
+title: The 'Assets' page
+author: Santiment Team
+# References
+#
+
+---
+
 The \'All Assets\' overview contains all tokens we track across
 different blockchains. These are first sorted by market cap.
 
