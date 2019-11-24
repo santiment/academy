@@ -34,4 +34,4 @@ parallel price decline.
 
 For more details on the metric `Average Token Age Consumed in Days`,
 please click
-[here](/intercom-articles/metrics-explained/sangraphs/metric-average-token-age-consumed-in-days).
+[here](/sangraphs/metrics/average-token-age-consumed-in-days).

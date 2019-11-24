@@ -5,7 +5,7 @@ author: Santiment Team
 
 *This article describes how to stake SAN tokens that are already in your
 posession. Please refer to* [*this
-article*](/intercom-articles/getting-started/san-tokens-and-metamask/how-to-buy-san)
+article*](/general/san-tokens/how-to-buy-san)
 *to learn how to buy SAN in the first place.*
 
 There are two ways to connect an Ethereum address to a Sanbase account.
@@ -15,7 +15,7 @@ or add it to an existing account.
 ## Logging into Sanbase using MetaMask
 
 This procedure is described in the article [Logging into
-Sanbase](/intercom-articles/getting-started/sanbase/logging-into-sanbase),
+Sanbase](/sanbase/my-account/logging-into-sanbase),
 please check there.
 
 ## Connecting a wallet to an already existing account

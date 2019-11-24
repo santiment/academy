@@ -24,7 +24,7 @@ article*](/sanbase/about/emerging-social-trends)*.*
 ![](01_assets.png)
 
 - ***`All Assets`*** - this links to the [All Assets
-overview](/intercom-articles/getting-started/sanbase/the-assets-page)
+overview](/sanbase/about/the-assets-page)
 - ***`ERC 20`*** - this shows Ethereum-based ERC20 tokens only
 - ***`Top 50 ERC20`*** - this shows the 50 most prominent ERC20 projects
 we track
