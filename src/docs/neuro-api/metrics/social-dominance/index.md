@@ -16,7 +16,7 @@ Arguments description:
     own community chat (if there is one)
     - *TELEGRAM\_DISCUSSION\_OVERVIEW* - the general volume of messages in
     the project`s community chat (if there is one)
-    -*DISCORD\_DISCUSSION\_OVERVIEW*\"- shows how many times the given
+    -*DISCORD\_DISCUSSION\_OVERVIEW*"- shows how many times the given
     project has been mentioned in the discord channels
 -   *`slug`* - unique project identifier
 -   *`interval`* - an integer followed by one of: `m`, `h`, `d`, `w`
