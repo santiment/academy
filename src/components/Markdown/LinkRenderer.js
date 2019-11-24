@@ -2,11 +2,20 @@ import React from 'react'
 import {Link} from 'gatsby'
 
 const LinkRenderer = ({href, children}) => {
-  // const isInternal = !href.includes('http')
-  const isInternal = false
-  return isInternal ?
-  <Link to={href}>{children}</Link> :
-  <a href={href}>{children}</a>
+  let link = href.toString().toLowerCase()
+  const isLinkComponent = (!href.includes('http') || href.includes('academy.santiment.net')) && !href.startsWith('#')
+  if (isLinkComponent) {
+  	link = href.replace(/https:\/\/academy.santiment.net/g, '')
+  	if (!link.includes('#') && !link.endsWith('/')) {
+  		link+= '/'
+  	}
+
+  	if (!link.startsWith('/')) {
+  		link = '/' + link
+  	}
+  }
+
+  return isLinkComponent ? <Link to={link}>{children}</Link> : <a href={link}>{children}</a>
 }
 
 export default LinkRenderer

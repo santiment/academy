@@ -24,7 +24,7 @@ Bitcoin](./daa-bitcoin.png)
 ## Definition
 
 The number of distinct addresses that participated in a transfer for
-the given [asset](/asset/) in any given day. Each
+the given asset in any given day. Each
 address is counted only once for the day. Both the senders and the
 receivers of the asset are counted.
 

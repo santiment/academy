@@ -12,7 +12,7 @@ date: 2019-11-04
 
 ## Definition
 
-If we compare the current **market capitalization (market value or MV)** to the current [Realized Value](#Realized-Value), we can get an estimate how overvalued or undervalued the current market cap is. The definition will be:
+If we compare the current **market capitalization (market value or MV)** to the current [Realized Value](#realized-value), we can get an estimate how overvalued or undervalued the current market cap is. The definition will be:
 
 $$
 MVRV = \frac{MV}{RV_{network}}
@@ -244,5 +244,5 @@ MVRV Difference
 |Neuro|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
-The metric can have additional restrictions. Check the restrictions in [access plans article](../access-plans)
+The metric can have additional restrictions. Check the restrictions in [access plans article](/general/products-and-plans/access-plans)
 

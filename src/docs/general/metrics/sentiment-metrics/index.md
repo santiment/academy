@@ -32,7 +32,7 @@ We use this approach for messages and comments from social networks conversation
 
 #### Definition
 
-The total sum of _positive_ (_negative_) [sentiment scores](#sentiment-score) of a given set of documents over time. Only scores that are equal or higher than 0.7 are taken into account. Can be calculated for a certain asset or for any given search term, similar to the [social volume](/social-volume-metrics/##social-volume).
+The total sum of _positive_ (_negative_) [sentiment scores](#sentiment-score) of a given set of documents over time. Only scores that are equal or higher than 0.7 are taken into account. Can be calculated for a certain asset or for any given search term, similar to the [social volume](/social-volume-metrics/#social-volume).
 
 #### Measuring Unit
 
@@ -40,13 +40,13 @@ Relative number, less or equal than the corresponding social volume.
 
 #### Frequency
 
-We store each of the [social data](/general/metrics/social-data) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](general/products-and-plans/access-plans/). Currently the time intervals we use are the following:
+We store each of the [social data](https://acadey.santiment.net/general/metrics/social-data) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](general/products-and-plans/access-plans/). Currently the time intervals we use are the following:
 
 - In [Sangraphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
 
 #### Latency
 
-The [sentiment scores](#sentiment-score) are calculated every 5 minutes. Taking into account that the [social data](/social-data) itself is quasi-realtime, the maximal latency is 5 minutes.
+The [sentiment scores](#sentiment-score) are calculated every 5 minutes. Taking into account that the [social data](/general/metrics/social-data) itself is quasi-realtime, the maximal latency is 5 minutes.
 
 #### Available Assets
 
@@ -71,7 +71,7 @@ The metric is available **for any selected asset**.
 
 #### Definition
 
-The difference between the **Positive** and **Negative Sentiment** [metrics](#1-positive-negative-sentiment).
+The difference between the **Positive** and **Negative Sentiment** [metrics](#positive-negative-sentiment).
 
 #### Measuring Unit
 
@@ -79,15 +79,15 @@ Relative number. This metric falls in the range `[-social_volume, +social_volume
 
 #### Frequency
 
-Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### Latency
 
-Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### Available Assets
 
-Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### How to Access
 
@@ -133,15 +133,15 @@ Relative number. Theoretically this metric has no lower or upper limit, but norm
 
 #### Frequency
 
-Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### Latency
 
-Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### Available Assets
 
-Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### How to Access
 

@@ -1,5 +1,5 @@
 ---
-title: Santiment Products and plans
+title: Santiment products and plans
 author: Santiment team
 ---
 
