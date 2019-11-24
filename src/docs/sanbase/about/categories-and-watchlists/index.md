@@ -4,7 +4,7 @@ author: Santiment Team
 ---
 
 Looking at the [assets
-list](/intercom-articles/getting-started/sanbase/the-assets-page)
+list](/sanbase/about/the-assets-page)
 on [Sanbase](https://app.santiment.net/assets/all), you will find a
 navigation bar in the upper left corner of the screen. Hovering over
 Assets, you will be shown the following:
@@ -21,7 +21,7 @@ might be missing tokens in one of them, please consider getting in
 touch.
 
 A current list of categories and their explanation can be found in [this
-article](/intercom-articles/getting-started/sanbase/navigating-through-sanbase).
+article](/sanbase/about/navigation).
 
 
 ## Watchlists

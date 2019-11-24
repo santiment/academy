@@ -3,4 +3,4 @@ title: FAQ about Sanbase
 author: Santiment team
 ---
 
-Need to write summary
+- [Requesting display new project](/sanbase/faq/requesting-display-new-project)

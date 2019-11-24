@@ -7,24 +7,24 @@ Returns a list of mentions count for a given project and time interval.
 
 Arguments description:
 
--   *slug* - a string uniquely identifying a project; to find a list of
+-   *`slug`* - a string uniquely identifying a project; to find a list of
     all slugs, please check the end of this article
--   *interval* - an integer followed by one of: m, h, d, w
--   *from* - a string representation of datetime value according to the
-    iso8601 standard, e.g. \"2018-04-16T10:02:19Z\"
--   *to* - a string representation of datetime value according to the
-    iso8601 standard, e.g. \"2018-04-16T10:02:19Z\"
--   *socialVolumeType* - the source of mention counts, one of the
-    following:\
-    - \"*PROFESSIONAL\_TRADERS\_CHAT\_OVERVIEW*\" - shows how many times
+-   *interval* - an integer followed by one of: `m`, `h`, `d`, `w`
+-   *`from`* - a string representation of datetime value according to the
+    iso8601 standard, e.g. `"2018-04-16T10:02:19Z"`
+-   *`to`* - a string representation of datetime value according to the
+    iso8601 standard, e.g. `"2018-04-16T10:02:19Z"`
+-   *`socialVolumeType`* - the source of mention counts, one of the
+    following:
+    - `"PROFESSIONAL\_TRADERS\_CHAT\_OVERVIEW"` - shows how many times
     the given project has been mentioned in the professional traders
-    chat\
-    - \"*TELEGRAM\_CHATS\_OVERVIEW*\" - shows how many times the given
+    chat
+    - `"TELEGRAM\_CHATS\_OVERVIEW"` - shows how many times the given
     project has been mentioned across all telegram chats, except the
-    project\'s own community chat (if there is one)\
-    - \"*TELEGRAM\_DISCUSSION\_OVERVIEW*\" - the general volume of
-    messages in the project\'s community chat (if there is one)\
-    - \"*DISCORD\_DISCUSSION\_OVERVIEW*\" - shows how many times the
+    project`s own community chat (if there is one)
+    - `"TELEGRAM\_DISCUSSION\_OVERVIEW"` - the general volume of
+    messages in the project`s community chat (if there is one)
+    - `"DISCORD\_DISCUSSION\_OVERVIEW"` - shows how many times the
     given project has been mentioned in the discord channels
 
 [**Run in
@@ -52,7 +52,7 @@ curl \
 *To find all currently available slugs for Social Volume, you can use
 the following command:*
 
-#### Social Volume Projects {#social-volume-projects .intercom-align-left data-post-processed="true"}
+#### Social Volume Projects
 
 Returns a list of slugs for which there is social volume data.
 

@@ -3,4 +3,5 @@ title: Account on Sanbase
 author: Santiment team
 ---
 
-Need to write summary
+- [Account settings](/sanbase/my-account/account-settings)
+- [Logging into Sanbase](/sanbase/my-account/logging-into-sanbase)

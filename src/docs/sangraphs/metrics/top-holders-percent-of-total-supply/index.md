@@ -7,7 +7,7 @@ Metrics explained
 Metric `Top Holders - Percent of Total Supply`
 *This article mentions one of several metrics we offer regarding top
 holders addresses. Please check* [*this
-article*](/intercom-articles/metrics-explained/sangraphs/metrics-about-top-holders)
+article*](/sangraphs/metrics/top-holders)
 *for an introduction on `Top Holders` and the complete list of metrics
 offered.*
 
@@ -22,7 +22,7 @@ supply split by exchange- and non-exchange wallets.
 
 The amount of top holders addresses included in the calculation can be
 chosen at the top by selecting `HoldersCount`. The HoldersCount in the
-above screenshot of BAT`s top holders percentage of total supply is set
+above screenshot of BAT\`s top holders percentage of total supply is set
 to 50.
-The assets`s price can be displayed in USD or BTC, which can be
+The assets\`s price can be displayed in USD or BTC, which can be
 selected through the `Currency` field at the top.

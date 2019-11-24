@@ -20,5 +20,5 @@ above screenshot of BAT`s changes to the top holders list is set to 50.
 So at the day shown in the screenshot, three out of 50 addresses where
 not in the 50 top holders list the day before.
 
-The assets`s price can be displayed in USD or BTC, which can be
+The assets\`s price can be displayed in USD or BTC, which can be
 selected through the `Currency` field at the top.

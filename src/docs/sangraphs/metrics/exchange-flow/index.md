@@ -16,4 +16,4 @@ Red spikes show tokens exiting exchange wallets; blue spikes show them
 moving in.
 
 For more details on the metric `Exchange Flow Balance`, please click
-[here](/intercom-articles/metrics-explained/sangraphs/metric-exchange-flow-balance).
+[here](/sangraphs/metrics/exchange-flow-balance).

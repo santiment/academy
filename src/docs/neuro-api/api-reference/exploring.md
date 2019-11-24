@@ -1,10 +1,9 @@
 ---
-title: "API Reference"
+title: Exploring the API
 author: "Santiment team"
 date: "2019-09-20"
 ---
 
-# Exploring the API
 
 Santiment's API is used for one thing: fetching data. This leads to two main questions:
 

@@ -2,9 +2,8 @@
 title: "API Reference"
 author: "Santiment team"
 date: "2019-09-20"
+description: This page contains a reference of all the APIs provided by Santiment.
 ---
-
-# API Reference
 
 This page contains a reference of all the APIs provided by Santiment.
 
@@ -85,11 +84,11 @@ $ curl \
 }
 ```
 
-If the query does not return status code 200, then something else is happening. Here are some of the options:
+If the query does not return status code `200`, then something else is happening. Here are some of the options:
 
-- 429 - you are being rate limited. Reduce the amount of requests you are doing
-- 502 - an internal server error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
-  or at the #support channel
+- `429` - you are being rate limited. Reduce the amount of requests you are doing
+- `502` - an internal server error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
+  or at the `#support channel`
 
 ## Live API Explorer
 
@@ -141,7 +140,7 @@ There are some terms used in this document. Here is a list and discription of th
 
   An interval is used when fetching timeseries data. If the raw data is
   available at 5 minute intervals but you want to fetch it daily, `interval: "1d"`
-  should be provided as parameter..
+  should be provided as parameter.
 
 - `ISO 8601 format` - The date time format used in the API. The format is `<year>-<month>-<day>T<hour>:<minute>:<second>Z`.
   For example Jan 10th 2019 12:34:56 is `2019-01-10T12:34:56Z`
@@ -149,4 +148,4 @@ There are some terms used in this document. Here is a list and discription of th
 
 ## Start exploring the API
 
-[Start exploring the API here](./exploring.md)
+[Start exploring the API here](/neuro-api/ape-reference/exploring/)

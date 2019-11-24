@@ -10,8 +10,8 @@ first time.
 
 
 If you logged in by email first, this section will show your email
-address, as displayed in the screenshot below. You can use \'Connect
-with metamask\' to now associate an Ethereum address with the active
+address, as displayed in the screenshot below. You can use `Connect
+with metamask` to now associate an Ethereum address with the active
 account.
 
 If you logged in using MetaMask, it will display your ETH address and
@@ -26,7 +26,7 @@ In case you want to buy SAN tokens, you can find some links to exchanges
 offering trading pairs with SAN - or you can use the `Convert` button
 to make us of our Bancor integration for this, which you can learn more
 about in [this
-article](/intercom-articles/faq/general/how-to-buy-san-tokens-using-our-bancor-integration).
+article](/general/san-tokens/buy-san-tokens-using-bancor/).
 
 ![](12_account_settings.png)
 

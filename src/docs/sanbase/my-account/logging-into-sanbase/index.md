@@ -21,7 +21,7 @@ MetaMask or email for your login. Select the MetaMask option for now.
 ![](25_login_choice.png)
 
 The MetaMask plugin will now ask you for permission to display your
-currently selected account\'s public data to the Sanbase website. Click
+currently selected account`s public data to the Sanbase website. Click
 `Connect` to let the plugin and the website talk to each other.
 
 ![](26_metamask_seperate.png)
@@ -59,7 +59,7 @@ your email address there.
 From now on you can log in by either MetaMask or email, you will end up
 in the same account. You can find out more about the Account settings
 page by reading [this
-article](/intercom-articles/getting-started/sanbase/account-settings).
+article](/sanbase/my-account/account-settings).
 
 ## Login by email
 
@@ -75,7 +75,7 @@ You are now ready to stake SAN to get access to more data, including
 real time data and historical data for many metrics - as well as access
 to Sangraphs (<https://data.santiment.net>). You can learn how to stake
 SAN tokens by reading [this
-article](/intercom-articles/getting-started/san-tokens-and-metamask/how-to-stake-san).
+article](/general/san-tokens/how-to-stake-san).
 For guidance on how to buy SAN tokens in the first place, please check
 [this
-article](/intercom-articles/getting-started/san-tokens-and-metamask/how-to-buy-san).
+article](/general/san-tokens/how-to-buy-san).

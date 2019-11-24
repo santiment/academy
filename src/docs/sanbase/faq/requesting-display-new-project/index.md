@@ -12,5 +12,5 @@ Sanbase.
 To request a new token to be added to said list, please use [this
 form](https://docs.google.com/forms/d/e/1FAIpQLSeFuCxjJjId98u1Bp3qpXCq2A9YAQ02OEdhOgiM9Hr-rMDxhQ/viewform).
 We appreciate token holders requesting their favorite tokens, but we
-will favor direct requests from a project\'s team, especially the ones
+will favor direct requests from a project`s team, especially the ones
 supplying information about their funding.

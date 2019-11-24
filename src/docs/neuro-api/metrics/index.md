@@ -1,29 +1,26 @@
 ---
-title: Neuro Metrics
+title: Neuro API - Metrics
 author: Santiment Team
-# References
-#
-
 ---
 
 - [Daily Active Addresses](/neuro-api/metrics/daily-active-addresses)
-- [Daily Active Deposits](/neuro-api/metrics/daily-active-addresses)
-- [Developer Activity](/neuro-api/metrics/daily-active-addresses)
-- [Exchange Funds Flow](/neuro-api/metrics/daily-active-addresses)
-- [History Price](/neuro-api/metrics/daily-active-addresses)
-- [MVRV Ratio](/neuro-api/metrics/daily-active-addresses)
-- [Network Growth](/neuro-api/metrics/daily-active-addresses)
-- [NVT ratio](/neuro-api/metrics/daily-active-addresses)
-- [OHLC](/neuro-api/metrics/daily-active-addresses)
-- [Percentage of token supply on exchanges](/neuro-api/metrics/daily-active-addresses)
-- [Realized value](/neuro-api/metrics/daily-active-addresses)
-- [Social Dominance](/neuro-api/metrics/daily-active-addresses)
-- [Social Volume](/neuro-api/metrics/daily-active-addresses)
-- [Token Age Consumed](/neuro-api/metrics/daily-active-addresses)
-- [Token Age Consumed In Days](/neuro-api/metrics/daily-active-addresses)
-- [Token Circulation](/neuro-api/metrics/daily-active-addresses)
-- [Top Social Gainers Losers](/neuro-api/metrics/daily-active-addresses)
-- [Topic search](/neuro-api/metrics/daily-active-addresses)
-- [Transaction Volume](/neuro-api/metrics/daily-active-addresses)
-- [Trending Words](/neuro-api/metrics/daily-active-addresses)
-- [Velocity Of Tokens](/neuro-api/metrics/daily-active-addresses)
+- [Daily Active Deposits](/neuro-api/metrics/daily-active-deposits)
+- [Developer Activity](/neuro-api/metrics/developer-activity)
+- [Exchange Funds Flow](/neuro-api/metrics/exchange-funds-flow)
+- [History Price](/neuro-api/metrics/history-price)
+- [MVRV Ratio](/neuro-api/metrics/mvrv-ratio)
+- [Network Growth](/neuro-api/metrics/network-growth)
+- [NVT ratio](/neuro-api/metrics/nvt-ratio)
+- [OHLC](/neuro-api/metrics/ohlc)
+- [Percentage of token supply on exchanges](/neuro-api/metrics/percentage-of-token-supply-on-exchanges)
+- [Realized value](/neuro-api/metrics/realized-value)
+- [Social Dominance](/neuro-api/metrics/social-dominance)
+- [Social Volume](/neuro-api/metrics/social-volume)
+- [Token Age Consumed](/neuro-api/metrics/token-age-consumed)
+- [Token Age Consumed In Days](/neuro-api/metrics/token-age-consumed-in-days)
+- [Token Circulation](/neuro-api/metrics/token-circulation)
+- [Top Social Gainers Losers](/neuro-api/metrics/top-social-gainers-losers)
+- [Topic search](/neuro-api/metrics/topic-search)
+- [Transaction Volume](/neuro-api/metrics/transaction-volume)
+- [Trending Words](/neuro-api/metrics/trending-words)
+- [Velocity Of Tokens](/neuro-api/metrics/velocity-of-tokens)

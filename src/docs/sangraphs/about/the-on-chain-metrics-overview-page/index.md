@@ -4,11 +4,12 @@ author: Santiment Team
 ---
 
 *This article is about the On-chain metrics overview for specific ERC-20
-tokens, which can be found through* [*\'The ERC-20 overview
-page\'*](/intercom-articles/getting-started/sangraphs/the-erc-20-overview-page)*.
+tokens, which can be found through* [*`The ERC-20 overview
+page`*](/sangraphs/about/the-erc-20-overview-page)*.
 It will list the current metrics that are part of this overview and link
-to their respective knowledge base article, where available.\
-Please note that \'Top Holders\' metrics, albeit being on-chain in
+to their respective knowledge base article, where available.
+
+Please note that `Top Holders` metrics, albeit being on-chain in
 nature, are not part of this overview and have their own one, which can
 be found through the ERC-20 overview page mentioned above.*
 
@@ -20,60 +21,46 @@ screenshot:
 ![](14_sangraphs_onchain_metrics_overview.png)
 
 Clicking one of these categories will expand it to show the included
-metrics. Clicking it again will collapse it into the shown state.\
+metrics. Clicking it again will collapse it into the shown state.
 
 #### Address Activity
 
--   Daily Active Addresses (DAA) - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-daily-active-addresses)
--   Network Growth - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-network-growth)
+-   [Daily Active Addresses (DAA)](/sangraphs/metrics/daily-active-addresses)
+-   [Network Growth](/sangraphs/metrics/network-growth)
 
 #### Token Consumption
 
--   Average Token Age Consumed in Days - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-average-token-age-consumed-in-days)
--   Token Age Consumed - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-token-age-consumed)
+-   [Average Token Age Consumed in Days](/sangraphs/metrics/average-token-age-consumed-in-days)
+-   [Token Age Consumed](/sangraphs/metrics/token-age-consumed)
 
 #### Transactions
 
--   Transaction Volume - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-transaction-volume)
--   Token Circulation (Beta) - [article
-    link](/intercom-articles/metrics-explained/sangraphs/beta-metric-token-circulation)
--   Velocity of Tokens (Beta) - [article
-    link](/intercom-articles/metrics-explained/sangraphs/beta-metric-velocity-of-tokens)
+-   [Transaction Volume](/sangraphs/metrics/transaction-volume)
+-   [Token Circulation (Beta)](/sangraphs/metrics/token-circulation)
+-   [Velocity of Tokens (Beta)](/sangraphs/metrics/velocity-of-tokens)
 
 #### Exchange Flow
 
--   Exchange Flow Balance - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-exchange-flow-balance)
--   Exchange Flow - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-exchange-flow)
+-   [Exchange Flow Balance](/sangraphs/metrics/exchange-flow-balance)
+-   [Exchange Flow](/sangraphs/metrics/exchange-flow)
 -   Percent of Token Supply on Exchanges
 
 #### Deposits
 
--   Daily Active Deposits - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-daily-active-deposits)
--   Share of Daily Active Deposits in DAA - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-share-of-daily-active-deposits-in-total-daily-active-addresses)
--   Deposits\' Volume
--   Deposits\' Transactions - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-deposit-related-transactions)
--   Share of Deposits\' Transactions in Total Transactions - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-share-of-deposit-transactions-in-total-transactions)
+-   [Daily Active Deposits](/sangraphs/metrics/daily-active-deposits)
+-   [Share of Daily Active Deposits in DAA](/sangraphs/metrics/share-of-daily-active-deposits-in-total-daily-active-addresses)
+-   Deposits` Volume
+-   [Deposits` Transactions](/sangraphs/metrics/deposit-related-transactions)
+-   [Share of Deposits` Transactions in Total Transactions](/sangraphs/metrics/share-of-deposit-transactions-in-total-transactions)
 
 #### Withdrawals
 
 -   Daily Active Withdrawals
 -   Share of Daily Active Withdrawals in DAA
--   Withdrawals\' Volume
--   Withdrawals\' Transactions
--   Share of Withdrawals\' Transactions in Total Transactions
+-   Withdrawals` Volume
+-   Withdrawals` Transactions
+-   Share of Withdrawals` Transactions in Total Transactions
 
 #### Top Transactions
 
--   Top 100 Transactions - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-top-100-transactions)
+-   [Top 100 Transactions](/sangraphs/metrics/top-100-transactions)

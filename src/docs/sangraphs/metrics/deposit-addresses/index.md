@@ -38,13 +38,8 @@ Analyzing deposit addresses can prove useful in several ways:
 
 Our current metrics for deposit addresses
 
-1.  Daily Active Deposits (DAD) - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-daily-active-deposits)
-2.  Share of Daily Active Deposits in Total Daily Active Addresses
-    (SDD) - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-share-of-daily-active-deposits-in-total-daily-active-addresses)
-3.  Deposit-related Transactions - [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-deposit-related-transactions)
-4.  Share of Deposit-related Transactions on Total Transactions (SDT) -
-    [article
-    link](/intercom-articles/metrics-explained/sangraphs/metric-share-of-deposit-transactions-in-total-transactions)
+1.  [Daily Active Deposits (DAD)](/sangraphs/metrics/daily-active-deposits)
+2.  [Share of Daily Active Deposits in Total Daily Active Addresses
+    (SDD)](/sangraphs/metrics/share-of-daily-active-deposits-in-total-daily-active-addresses)
+3.  [Deposit-related Transactions](/sangraphs/metrics/deposit-related-transactions)
+4.  [Share of Deposit-related Transactions on Total Transactions (SDT)](/sangraphs/metrics/share-of-deposit-transactions-in-total-transactions)

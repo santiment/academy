@@ -19,8 +19,8 @@ word cloud at the top right of the page, possibly giving you insight
 about the context that term was used in.
 
 Click
-[here](/intercom-articles/getting-started/sanbase/word-context)for
+[here](/sanbase/about/word-context) for
 more information on the word cloud or
-[here](/intercom-articles/getting-started/sanbase/insights)for
+[here](/sanbase/about/insights) for
 more information about the Insights feature shown at the bottom of the
 Sonar page.

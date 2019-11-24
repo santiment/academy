@@ -19,4 +19,4 @@ graph does it in days passed since the last time said token moved.
 
 
 For more details on the metric `Token Age Consumed`, please click
-[here](/../metric-token-age-consumed).
+[here](/sangraphs/metrics/token-age-consumed).

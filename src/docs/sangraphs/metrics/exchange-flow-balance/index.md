@@ -25,11 +25,11 @@ scalable smart contracts:
 When a large amount of tokens flow out of the exchange, on the other
 hand, the price is likely to fall soon thereafter.
 
-The below graph shows lots of [DICE](https://etheroll.com/)tokens moving
+The below graph shows lots of [DICE](https://etheroll.com/) tokens moving
 out of exchange wallets during a price rally; the price plunged
 following the event.
 
 ![](6.png)
 
 For more details on the metric `Exchange Flow`, please click
-[here](/intercom-articles/metrics-explained/sangraphs/metric-exchange-flow).
+[here](/sangraphs/metrics/exchange-flow).

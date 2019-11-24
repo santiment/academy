@@ -6,8 +6,8 @@ author: Santiment Team
 Our API can be also accessed from the command line. The endpoint is:
 `https://api.santiment.net`
 
-You can use the following \'curl\' command after replacing the
-placeholder \'**\<YOUR\_OWN\_QUERY\>**\' with your query:
+You can use the following `curl` command after replacing the
+placeholder **`<YOUR_OWN_QUERY>`** with your query:
 
     curl \
       -X POST \
@@ -15,7 +15,7 @@ placeholder \'**\<YOUR\_OWN\_QUERY\>**\' with your query:
       --data '{ "query": "query{<YOUR_OWN_QUERY>}" }' \
       https://api.santiment.net/graphql
 
-\
+
 For clarification, here is an example for Transaction Volume:
 
     curl \
@@ -32,7 +32,7 @@ the third line:
     -H "Authorization: Apikey <YOUR_OWN_API_KEY>"\
 
 Again, you need to replace the placeholder
-\'**\<YOUR\_OWN\_API\_KEY\>**\' with your actual key.
+**`<YOUR_OWN_API_KEY>`** with your actual key.
 
 The full query would look like this:
 
