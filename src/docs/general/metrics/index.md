@@ -22,10 +22,10 @@ Traditional fundamentals including price, volume and market cap, plus crypto-rel
 
 Metrics taken from measuring social activity on crypto-related forums and channels, plus custom sentiment measurements analyzing crowd behavior. Includes emerging trend words and projects, word clouds to display related words and the possibility to enter custom search terms.
 
-- [Social data](/general//metrics/social-data)
-- [Social volume metrics](/general//metrics/social-volume-metrics)
-- [Sentiment metrics](/general//metrics/sentiment-metrics)
-- [Emerging trends](/general//metrics/emerging-trends)
+- [Social data](/general/metrics/social-data)
+- [Social volume metrics](/general/metrics/social-volume-metrics)
+- [Sentiment metrics](/general/metrics/sentiment-metrics)
+- [Emerging trends](/general/metrics/emerging-trends)
 
 
 ## Development
@@ -54,4 +54,4 @@ Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and 
 - Transaction Volume
 - Token Circulation
 
-[EOS on-chain metrics](/general//metrics/eos)
+[EOS on-chain metrics](/general/metrics/eos)

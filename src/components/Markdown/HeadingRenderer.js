@@ -10,10 +10,9 @@ const HeadingRenderer = ({level, children}) => {
   const slug = sluggify(text)
 
   return React.createElement(`h${level}`, { id: slug }, [
-    level <= 3 ?
-    (<a href={`#${slug}`} key={slug} className={styles.anchor}>
+    <a href={`#${slug}`} key={slug} className={styles.anchor}>
       <Icon type="link" />
-    </a>) : '',
+    </a>,
     children
   ]);
 };

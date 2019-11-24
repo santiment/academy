@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown"
 import HeadingRenderer from './HeadingRenderer'
 import CodeBlockRenderer from './CodeBlockRenderer'
 import TextRenderer from './TextRenderer'
+import LinkRenderer from './LinkRenderer'
 import {MathRenderer, MathBlockRenderer} from './MathRenderer'
 import styles from './Markdown.module.scss'
 const RemarkMathPlugin = require("remark-math");
@@ -17,6 +18,7 @@ const Markdown = ({markdown, ...rest}) => (
     plugins={[RemarkMathPlugin]}
     renderers={{
     	text: TextRenderer,
+      link: LinkRenderer,
     	heading: HeadingRenderer,
     	code: CodeBlockRenderer,
     	math: MathBlockRenderer,

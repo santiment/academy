@@ -12,11 +12,11 @@ date: 2019-09-30
 
 ### Definition
 
-**Sentiment Analysis** is the problem of computationally identifying and categorizing emotions, opinions and subjective information in a given piece of text. This problem can be solved using different techniques: rule-based or machine learning. The first one represents a set of predefined rules that are used to estimate the sentiment of the input text. This approach is often less accurate and requires a lot of manual work. The amount of documents in our [Social Data](/metrics/social-sentiment/social-data) storage makes it barely impossible to analyze them manually. That's why we use machine learning to approach the sentiment analysis problem.
+**Sentiment Analysis** is the problem of computationally identifying and categorizing emotions, opinions and subjective information in a given piece of text. This problem can be solved using different techniques: rule-based or machine learning. The first one represents a set of predefined rules that are used to estimate the sentiment of the input text. This approach is often less accurate and requires a lot of manual work. The amount of documents in our [Social Data](/general/metrics/social-data) storage makes it barely impossible to analyze them manually. That's why we use machine learning to approach the sentiment analysis problem.
 
 ### Sentiment Score
 
-We trained a machine learning model on a large Twitter dataset, that contains over 1.6 million tweets, each labelled as either _positive_ or _negative_. This model is then used to evaluate the sentiment of each single document in the [Social Data](/metrics/social-sentiment/social-data) set, i.e. it assigns a positive and negative _sentiment score_ to each message/post/comment/etc. These scores are probabilities that the content of the text being analyzed is positive or negative respectively. Therefore both the _positive_ and _negative_ sentiment scores fall in a range between 0 (not positive/negative at all) and 1 (extremely positive/negative). Moreover, the sum of these two scores always equals 1.
+We trained a machine learning model on a large Twitter dataset, that contains over 1.6 million tweets, each labelled as either _positive_ or _negative_. This model is then used to evaluate the sentiment of each single document in the [Social Data](/general/metrics/social-data) set, i.e. it assigns a positive and negative _sentiment score_ to each message/post/comment/etc. These scores are probabilities that the content of the text being analyzed is positive or negative respectively. Therefore both the _positive_ and _negative_ sentiment scores fall in a range between 0 (not positive/negative at all) and 1 (extremely positive/negative). Moreover, the sum of these two scores always equals 1.
 
 Example:
 ```
@@ -40,7 +40,7 @@ Relative number, less or equal than the corresponding social volume.
 
 #### Frequency
 
-We store each of the [social data](social-data/) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](access-plans/). Currently the time intervals we use are the following:
+We store each of the [social data](/general/metrics/social-data) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](general/products-and-plans/access-plans/). Currently the time intervals we use are the following:
 
 - In [San-Graphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
 
@@ -50,7 +50,7 @@ The [sentiment scores](#sentiment-score) are calculated every 5 minutes. Taking 
 
 #### Available Assets
 
-We do not separate or filter the [social data](social-data/) being collected by assets. I.e. we can calculate this metric for any asset. More on this can be found [here](/social-volume-metrics/#available-assets).
+We do not separate or filter the [social data](/general/metrics/social-data/) being collected by assets. I.e. we can calculate this metric for any asset. More on this can be found [here](/general/metrics/social-volume-metrics/#available-assets).
 
 #### How to Access
 
@@ -71,7 +71,7 @@ The metric is available **for any selected asset**.
 
 #### Definition
 
-The difference between the **Positive** and **Negative Sentiment** [metrics](#positive-negative-sentiment).
+The difference between the **Positive** and **Negative Sentiment** [metrics](#1-positive-negative-sentiment).
 
 #### Measuring Unit
 
@@ -79,15 +79,15 @@ Relative number. This metric falls in the range `[-social_volume, +social_volume
 
 #### Frequency
 
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
 
 #### Latency
 
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
 
 #### Available Assets
 
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
 
 #### How to Access
 
@@ -108,7 +108,7 @@ The metric is available **for any selected asset**.
 
 #### Definition
 
-The **Sentiment Volume Consumed** is an improved version of the [Sentiment Balance](#sentiment-balance) that also takes into account the [Unique Social Volume](/social-volume-metrics/#unique-social-volume).
+The **Sentiment Volume Consumed** is an improved version of the [Sentiment Balance](#sentiment-balance) that also takes into account the [Unique Social Volume](/general/metrics/social-volume-metrics/#unique-social-volume).
 
 **Sentiment Volume Consumed** is defined as a rolling Z-score of
 $X = \mathrm{Unique Social Volume} \times \mathrm{Sentiment
@@ -133,15 +133,15 @@ Relative number. Theoretically this metric has no lower or upper limit, but norm
 
 #### Frequency
 
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
 
 #### Latency
 
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
 
 #### Available Assets
 
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
+Same as [**Positive (Negative) Sentiment**](#1-positive-negative-sentiment).
 
 #### How to Access
 
