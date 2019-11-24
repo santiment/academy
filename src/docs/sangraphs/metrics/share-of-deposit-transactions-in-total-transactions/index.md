@@ -37,7 +37,7 @@ responsible for **50% of all network transactions:**
 
 [![](sdt-768x292.png)](https://santiment.net/wp-content/uploads/2019/02/sdt.png)
 
-*Share of Deposit-related transactions over the last 6 months = 50%*\
+*Share of Deposit-related transactions over the last 6 months = 50%*
 
 We see another peculiar case in the case of OmiseGo, where the number of
 daily active deposits over the last 6 months stayed the same, but the

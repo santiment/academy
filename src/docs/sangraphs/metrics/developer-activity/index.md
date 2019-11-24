@@ -12,7 +12,7 @@ crypto), so high dev activity implies that:
 
 Simply put, Developer Activity can be used to gauge a project's
 commitment to creating a working product, and continuously polishing and
-upgrading its features.\
+upgrading its features.
 
 ![](1.png)
 

@@ -8,7 +8,7 @@ author: Santiment Team
 
 This graph shows the aggregate amount of tokens across all transactions
 that happened on the network on a certain date. We currently offer
-Transaction Volume for BTC, ETH (including all ERC20 tokens) and EOS.\
+Transaction Volume for BTC, ETH (including all ERC20 tokens) and EOS.
 
 A spike in transaction volume either signals:
 

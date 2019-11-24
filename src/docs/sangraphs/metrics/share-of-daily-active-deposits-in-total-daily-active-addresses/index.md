@@ -55,7 +55,7 @@ coin for trading and turn to its (other) purported benefits.
 Compared to DAD, which can be used to examine and explain momentary
 market events, Share of Daily Active Deposits is designed as more of a
 long-term indicator. So far, we found it to be much more useful for a
-wall-to-wall retrospective or comparative analysis.\
+wall-to-wall retrospective or comparative analysis.
 
 ## Examples
 
@@ -74,7 +74,7 @@ share of Daily Active Deposits in DAA for the last 18 months. On
 average, the network's SDD stands at 15.5% for the observed time frame.
 
 Bancor's SDD, on the other hand, is a fair bit more volatile, ranging
-from an average of 20% at the end of 2017 to just \~5% for the last 30
+from an average of 20% at the end of 2017 to just ~5% for the last 30
 days. This tells us that the coin's being traded less than it used to
 be, at least **relative** to the number of total daily active addresses
 on the network.

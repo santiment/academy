@@ -3,8 +3,8 @@ title: Sangraphs - Exchange Flow Balance
 author: Santiment Team
 ---
 
-*For a video breakdown of \'Exchange Flow Balance\' and \'Exchange
-Flow\', click*
+*For a video breakdown of `Exchange Flow Balance` and `Exchange
+Flow`, click*
 [*here*](https://drive.google.com/file/d/1g159s6NZ5xgBEPhS8QtrajWRuvKjpmzr/view?usp=sharing)*.*
 
 Exchange Flow Balance shows the combined values of tokens moving in and
@@ -31,5 +31,5 @@ following the event.
 
 ![](6.png)
 
-For more details on the metric \'Exchange Flow\', please click
+For more details on the metric `Exchange Flow`, please click
 [here](/intercom-articles/metrics-explained/sangraphs/metric-exchange-flow).

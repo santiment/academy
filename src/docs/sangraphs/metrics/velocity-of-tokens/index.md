@@ -3,7 +3,7 @@ title: Sangraphs - Velocity of Tokens (beta)
 author: Santiment Team
 ---
 
-*For a more in-depth explanation of \'Velocity of Tokens\', please
+*For a more in-depth explanation of `Velocity of Tokens`, please
 click*
 [*here*](https://community.santiment.net/t/token-velocity-metric/412/2)*.
 For a video breakdown of Transaction Volume and Token Velocity, click*

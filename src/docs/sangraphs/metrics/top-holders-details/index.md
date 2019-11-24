@@ -5,7 +5,7 @@ author: Santiment Team
 *This article mentions one of several metrics we offer regarding top
 holders addresses. Please check* [*this
 article*](/intercom-articles/metrics-explained/sangraphs/metrics-about-top-holders)
-*for an introduction on \'Top Holders\' and the complete list of metrics
+*for an introduction on `Top Holders` and the complete list of metrics
 offered.*
 
 The last part of our Top Holders metrics is the Details table. It shows

@@ -3,16 +3,16 @@ title: Sangraphs - NVT Ratio
 author: Santiment Team
 ---
 
-*This metric can be found on the* [*\'Ethereum & ERC20 MVRV\'
+*This metric can be found on the* [*`Ethereum & ERC20 MVRV`
 page*](https://data.santiment.net/d/4BpXRALik/05-ethereum-and-erc20-mvrv?orgId=1)
 *in Sangraphs, along with the MVRV metric which is described in* [*this
 article*](/intercom-articles/metrics-explained/sangraphs/metric-mvrv-ratio)*.*
 
-The \'Network Value-to-Transaction\' (NVT) ratio is an asset valuation
+The `Network Value-to-Transaction` (NVT) ratio is an asset valuation
 metric similar to the P/E ratio traditionally used in equity markets to
 gauge a stock's growth potential.
 
-The P/E or \'Price-to-Earnings\' ratio is calculated by dividing the
+The P/E or `Price-to-Earnings` ratio is calculated by dividing the
 company's current price per share with its earnings per share. A high
 P/E could mean a stock's price is high relative to its earnings and
 therefore possibly overvalued. Conversely, a low P/E might indicate that
