@@ -115,11 +115,11 @@ This metric is computed for Bitcoin, Ethereum, Ripple, all ERC20 tokens and the 
 You can access the metric on the [On-chain metrics
 V2](https://data.santiment.net/d/iYmn0EGZk/00-on-chain-metrics-v2?)
 
-### [SANgraphs](https://graphs.santiment.net)
+### [Sangraphs](https://graphs.santiment.net)
 
-Dashboard is available with [Pro plan]((../access-plans)) in  [SANgraphs](https://graphs.santiment.net/mvrv) \*
+Dashboard is available with [Pro plan]((../access-plans)) in  [Sangraphs](https://graphs.santiment.net/mvrv) \*
 
-![Dashboard in SANgraphs](SANgraphs.png)
+![Dashboard in Sangraphs](Sangraphs.png)
 
 \* *curently available only for Bitcoin*
 
@@ -127,7 +127,7 @@ Dashboard is available with [Pro plan]((../access-plans)) in  [SANgraphs](https:
 
 The metric is available on our charts:
 
-![Dashboard in SANbase](SANbase.png)
+![Dashboard in Sanbase](Sanbase.png)
 
 ### [Neuro](https://neuro.santiment.net/)
 
@@ -200,7 +200,7 @@ Example of query for **mvrv long-short difference**:
 
 
 
-### [SANSheets](https://santiment.net/sansheets/)
+### [Sansheets](https://santiment.net/sansheets/)
 
 Currently available only for MVRV ratio.
 You can use `SAN_MVRV_RATIO` function to get the data. Example:
@@ -216,10 +216,10 @@ MVRV
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SANGraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Neuro|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SANSheets|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sansheets|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
 
 
@@ -228,10 +228,10 @@ Time Bound MVRV
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SANGraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:x:|:x:|:x:|:x:|
 |Neuro|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SANSheets|:x:|:x:|:x:|:x:|:x:|
+|Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 
 MVRV Difference
@@ -239,10 +239,10 @@ MVRV Difference
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|SANGraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Neuro|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SANSheets|:x:|:x:|:x:|:x:|:x:|
+|Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 The metric can have additional restrictions. Check the restrictions in [access plans article](../access-plans)
 

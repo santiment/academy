@@ -20,7 +20,7 @@ A popup will open asking you for your API key:
 
 ![](12_add_api_key2.png)
 
-Copy it from the SANbase account settings and paste it here, then click
+Copy it from the Sanbase account settings and paste it here, then click
 `Ok`.
 
 Sansheets will now confirm that you entered a valid API key:

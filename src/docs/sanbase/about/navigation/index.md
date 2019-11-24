@@ -111,9 +111,9 @@ on what to use them for.***\
 \'Night Mode\'*** - Switch the color scheme of the page to a darker
 one***\
 \'Beta Mode\'*** - This switch enables new (but possibly not fully
-tested) functionality on SANbase. Feel free to look but be aware its
+tested) functionality on Sanbase. Feel free to look but be aware its
 beta!***\
 \'Account settings\'*** - This section includes your account settings
 such as email address, account name, etc. You can find more information
 [here](/intercom-articles/getting-started/sanbase/account-settings).\
-***\'Log out\'*** - Logs you out of SANbase
+***\'Log out\'*** - Logs you out of Sanbase

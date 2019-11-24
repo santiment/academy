@@ -54,6 +54,6 @@ After confirmation, you will see your address and SAN token balance in
 the account settings.
 
 *Please note: **Staking** currently means holding a certain number of tokens at an
-ETH address that SANbase can check each time you visit (it's a lot like
+ETH address that Sanbase can check each time you visit (it's a lot like
 maintaining a minimum balance in a bank account). In the future, we plan
 to implement a more advanced staking mechanism.*

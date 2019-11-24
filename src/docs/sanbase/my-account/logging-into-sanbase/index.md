@@ -3,7 +3,7 @@ title: Logging into Sanbase
 author: Santiment Team
 ---
 
-*Please note: There are two ways to log into SANbase, by*
+*Please note: There are two ways to log into Sanbase, by*
 [*MetaMask*](https://metamask.io/) *and by email, but both can (and
 should be) connected to the same account for ease of use.*
 
@@ -21,7 +21,7 @@ MetaMask or email for your login. Select the MetaMask option for now.
 ![](25_login_choice.png)
 
 The MetaMask plugin will now ask you for permission to display your
-currently selected account\'s public data to the SANbase website. Click
+currently selected account\'s public data to the Sanbase website. Click
 `Connect` to let the plugin and the website talk to each other.
 
 ![](26_metamask_seperate.png)

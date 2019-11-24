@@ -5,7 +5,7 @@ author: Santiment Team
 
 *This metric can be found on the* [*\'Ethereum & ERC20 MVRV\'
 page*](https://data.santiment.net/d/4BpXRALik/05-ethereum-and-erc20-mvrv?orgId=1)
-*in SANgraphs, along with the NVT metric which is described in* [*this
+*in Sangraphs, along with the NVT metric which is described in* [*this
 article*](/intercom-articles/metrics-explained/sangraphs/metric-nvt-ratio)*.*
 
 To understand the MVRV metrics, we have to establish two term. \'MV\' as

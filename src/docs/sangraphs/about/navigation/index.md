@@ -7,7 +7,7 @@ After successfully logging into Sangraphs (in case you need help with
 that, check [this
 article](/intercom-articles/getting-started/sangraphs/logging-into-sangraphs))
 you will see a general overview page. This page already shows most of
-SANgraphs navigational elements:
+Sangraphs navigational elements:
 
 ![](02_sangraphs_navigation.png)
 
@@ -59,7 +59,7 @@ graph.
 Get help - lower right corner
 
 This is something you might be familiar with from our homepage or
-SANbase: The option to get help from the Santiment support team anytime:
+Sanbase: The option to get help from the Santiment support team anytime:
 
 ![](08_intercom.png)
 

@@ -33,11 +33,11 @@ ICO projects)\
 project\'s team is on Github; we\'ve custom-developed our own metric and
 share our approach in [this Medium
 article](https://medium.com/santiment/tracking-github-activity-of-crypto-projects-introducing-a-better-approach-9fb1af3f1c32).
-This metric is also available on SANgraphs and has its [own
+This metric is also available on Sangraphs and has its [own
 article](/intercom-articles/metrics-explained/sangraphs/metric-developer-activity)
 here.\
 ***\'DAILY ACTIVE ADDRESSES (30D)\'*** - The amount of active addresses
-within the last 24 hours. This metric is also available on SANgraphs and
+within the last 24 hours. This metric is also available on Sangraphs and
 has its [own
 article](/intercom-articles/metrics-explained/sangraphs/metric-daily-active-addresses)
 here.

@@ -53,7 +53,7 @@ The metric is available on Sanbase:
 
 - in the [Labs](https://app.santiment.net/labs/trends) section for **any desired search query**.
 
-#### [SANGraphs](https://graphs.santiment.net/social)
+#### [Sangraphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -61,18 +61,18 @@ The metric is available **for any selected asset**.
 
 The metric is available on Neuro.
 
-#### [SANSheets](https://sheets.santiment.net/)
+#### [Sansheets](https://sheets.santiment.net/)
 
-The metric is available on SANSheets.
+The metric is available on Sansheets.
 
 ### Availability
 
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SANGraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Neuro|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SANSheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
 ## 2. Unique Social Volume
 
@@ -98,7 +98,7 @@ Same as [**Social Volume**](#social-volume).
 
 ### How to Access
 
-#### [SANGraphs](https://graphs.santiment.net/social)
+#### [Sangraphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -107,9 +107,9 @@ The metric is available **for any selected asset**.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|SANGraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Neuro|:x:|:x:|:x:|:x:|:x:|
-|SANSheets|:x:|:x:|:x:|:x:|:x:|
+|Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 ## 3. Spam Index
 
@@ -135,7 +135,7 @@ Same as [**Social Volume**](#social-volume).
 
 ### How to Access
 
-#### [SANGraphs](https://graphs.santiment.net/social)
+#### [Sangraphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -144,9 +144,9 @@ The metric is available **for any selected asset**.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|SANGraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Neuro|:x:|:x:|:x:|:x:|:x:|
-|SANSheets|:x:|:x:|:x:|:x:|:x:|
+|Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 ## 4. Relative Social Dominance
 
@@ -179,7 +179,7 @@ By default the **Social Dominance** for a given asset is calculated against the 
 The metric is available on Sanbase on our charts **for any selected asset**:
 <iframe frameborder="0" height="340" src="https://app.santiment.net/chart?enabledViewOnlySharing=true&from=2019-03-18T21%3A00%3A00.000Z&interval=1d&isShowAnomalies=true&metrics=historyPrice,socialDominance&projectId=1538&slug=bitcoin&timeRange=6m&title=Bitcoin%20%28BTC%29&to=2019-09-19T21%3A00%3A00.000Z"></iframe>
 
-#### [SANGraphs](https://graphs.santiment.net/social)
+#### [Sangraphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -188,6 +188,6 @@ The metric is available **for any selected asset**.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SANGraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Neuro|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SANSheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|

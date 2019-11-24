@@ -33,7 +33,7 @@ tags, which should correspond to the tickers of the crypto assets your
 Insight is talking about.
 
 
-As soon as all fields are filled, SANbase will start saving your
+As soon as all fields are filled, Sanbase will start saving your
 progress as a draft:
 
 ![](37_new_insights_draft_saved.png)

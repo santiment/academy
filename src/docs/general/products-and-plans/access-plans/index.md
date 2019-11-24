@@ -38,7 +38,7 @@ Here are the access plans for the different Santiment products.
 * 500,000 API calls per month
 * No restriction on historical data
 
-# SANbase
+# Sanbase
 
 ## Free plan
 
@@ -46,7 +46,7 @@ Here are the access plans for the different Santiment products.
 * Last 30 days of data not available
 * Up to 10 signals
 * No data from external providers
-* No access to (new) SANGraphs
+* No access to (new) Sangraphs
 
 ## Pro plan
 

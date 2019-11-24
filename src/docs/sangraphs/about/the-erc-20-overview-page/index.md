@@ -8,7 +8,7 @@ not only able to look at Ether itself, but can apply many of the metrics
 to any ERC-20 token that we might be interested in.
 
 When selecting \"01. Overview. All ERC-20 tokens (more than 600)\" from
-the starting page of SANgraphs, you will be lead to the following list,
+the starting page of Sangraphs, you will be lead to the following list,
 which will allow you to pick the token you want for a certain set of
 metrics to be shown for:
 
