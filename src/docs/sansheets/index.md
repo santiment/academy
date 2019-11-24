@@ -1,6 +1,7 @@
 ---
 title: Sansheets - Crypto asset data for Google Sheets
 author: Santiment team
+description: Get relevant access for on-chain, social development activity, prices and volume data with Sansheets!
 ---
 
 Get relevant access for on-chain, social development activity, prices and volume data with Sansheets!
