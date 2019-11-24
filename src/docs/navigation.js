@@ -20,7 +20,7 @@ export const GENERAL = {
   },
   tokens: {
     title: "SAN tokens",
-    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens", "About SAN tokens"],
+    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
   },
   metrics: {
     title: "Metrics",

@@ -11,7 +11,7 @@ where an API key comes in.
 
 When you have SAN tokens staked in your Sanbase account (find out how to
 do this
-[here](/intercom-articles/getting-started/san-tokens-and-metamask/how-to-stake-san))
+[here](/general/san-tokens/how-to-stake-san))
 you are able to create an API key that carries the same access rights,
 to use with these other products. You can create an API key without any
 stake, but it will not do its job yet.

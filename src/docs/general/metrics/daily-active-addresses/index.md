@@ -81,9 +81,9 @@ The metric is available on [Sanbase](https://app.santiment.net/?enabledViewOnlyS
 
 ![How to access Daily Active Addresses on Sanbase](daa-sanbase.gif)
 
-### [Neuro](https://neuro.santiment.net/)
+### [Neuro API](https://neuro.santiment.net/)
 
-The metric is available on Neuro:
+The metric is available on Neuro API:
 
 ```js
 {
@@ -114,5 +114,5 @@ You can use `SAN_ACTIVE_ADDRESSES` function to get the data. Example:
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Neuro API|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|

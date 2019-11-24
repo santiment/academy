@@ -57,9 +57,9 @@ The metric is available on Sanbase:
 
 The metric is available **for any selected asset**.
 
-#### [Neuro](https://neuro.santiment.net/)
+#### [Neuro API](https://neuro.santiment.net/)
 
-The metric is available on Neuro.
+The metric is available on Neuro API.
 
 #### [Sansheets](https://sheets.santiment.net/)
 
@@ -71,7 +71,7 @@ The metric is available on Sansheets.
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Neuro API|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
 ## 2. Unique Social Volume
@@ -108,7 +108,7 @@ The metric is available **for any selected asset**.
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
 |Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro|:x:|:x:|:x:|:x:|:x:|
+|Neuro API|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 ## 3. Spam Index
@@ -145,7 +145,7 @@ The metric is available **for any selected asset**.
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
 |Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro|:x:|:x:|:x:|:x:|:x:|
+|Neuro API|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 ## 4. Relative Social Dominance
@@ -189,5 +189,5 @@ The metric is available **for any selected asset**.
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Neuro API|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|

@@ -21,7 +21,7 @@ author: Santiment Team
 
 To find out how to use your Bancor integration to easily trade ETH for
 SAN in a single transaction, please check out [this
-article](/intercom-articles/faq/general/how-to-buy-san-tokens-using-our-bancor-integration).
+article](/general/san-tokens/how-to-buy-san-tokens-using-bancor).
 
 #### Using an exchange of your choice
 
