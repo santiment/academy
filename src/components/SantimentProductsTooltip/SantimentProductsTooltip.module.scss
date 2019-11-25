@@ -134,7 +134,7 @@
   align-items: center;
   justify-content: center;
   color: var(--waterloo);
-  margin-left: 8px;
+  margin-left: 4px;
   fill: var(--waterloo);
 }
 
@@ -160,4 +160,9 @@
   height: 32px;
   display: flex;
   align-items: center;
+}
+
+.arrowIcon {
+  width: 8px;
+  height: 5px;
 }

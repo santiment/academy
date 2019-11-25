@@ -58,8 +58,8 @@ const MakeLink = ({ to, title, className, as: El = 'a' }) => (
   </El>
 )
 
-const OpenTrigger = () => <Icon type='arrow-down' />
-const CloseTrigger = () => <Icon type='arrow-up' />
+const OpenTrigger = () => <Icon type='arrow-down' className={styles.arrowIcon} />
+const CloseTrigger = () => <Icon type='arrow-up' className={styles.arrowIcon}/>
 
 const SantimentProductsTooltip = ({ className, children }) => {
   const [isOpen, setOpen] = useState(false)
