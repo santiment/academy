@@ -43,4 +43,6 @@ Refer to [this](/general/metrics/social-volume-metrics/) and [this article](/gen
 
 ## Social context
 
-You could find a `word cloud` above the graphs. It's show which words are most often used alongside your main keyword on crypto social media. Larger words are found more frequently in comments that also include your main keyword.
+![](word-cloud.png)
+
+You could find a `word cloud` above the charts. It's show which words are most often used alongside your main keyword on crypto social media. Larger words are found more frequently in comments that also include your main keyword.
