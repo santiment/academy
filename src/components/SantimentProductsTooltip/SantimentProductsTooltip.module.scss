@@ -150,6 +150,10 @@
   cursor: pointer;
 }
 
+.sanbaseLink {
+  display: flex;
+}
+
 .graphs {
   @include text('body-2');
 
