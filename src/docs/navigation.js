@@ -1,7 +1,7 @@
 export const SANBASE = {
   about: {
     title: "About",
-    articles: ["Navigation", "The assets page", "Social trends search", "Insights", "Emerging trends page", "Categories and watchlists"],
+    articles: ["Assets page", "Insights", "Sonar page", "Emerging trends page", "Social trends search"],
   },
   myAccount: {
     title: "My account",
