@@ -10,5 +10,4 @@ The most comprehensive crypto API on the market
 
 - [API reference](/neuro-api/api-reference/)
 - [Metrics](/neuro-api/metrics/)
-- [About](/neuro-api/about/)
 
