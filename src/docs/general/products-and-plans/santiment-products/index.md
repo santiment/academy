@@ -15,35 +15,39 @@ features with a simple email login.
 
 <https://app.santiment.net>
 
-![](4.png)
+![](sanbase.png)
 
-## Sangraphs
 
-Sangraphs (formerly "Sanbase Dashboards") is our beta test area, where
+## Sandata
+
+Sandata (formerly "Sangraphs") is our beta test area, where
 we have experimental features and work out new datafeeds before
-introducing them to Sanbase. This area is accessible via SAN staking and
-is for more advanced users.
+introducing them to Sanbase. This product is for more advanced users.
 
 <https://data.santiment.net>
 
-![](3.png)
+![](sandata.png)
+
+## SanAPI
+
+SanAPI is the GraphQL API which powers Sanbase. Together with the API
+we offer a Python library [Sanpy](https://github.com/santiment/sanpy)
+which offers easy access to the data for data scientists knowledgable
+in Python.
+
+<https://neuro.santiment.net>
 
 
-## Neuro API
-
-Use it free for 3 months of data, or stake SAN for full historical data
-plus real time data feed.
-
-<https://docs.santiment.net>
-
-![](1.png)
-
+![](neuro.png)
 
 ## Sansheets
 
-Sansheets is a plugin for Google or Excel spreadsheets. Transform
-your sheets with select crypto metrics for the past 3 months. You can
-find the plugin under the Add-Ons menu (Get Add-Ons > Search for
-Santiment).
+Sansheets is a Google Sheets plugin that gives access to our data using
+simple functions directly from your spreadsheet.
 
-![](2.png)
+<https://sheets.santiment.net/>
+
+
+![](sheets.png)
+
+![](sheets2.png)

@@ -42,7 +42,7 @@ Relative number, less or equal than the corresponding social volume.
 
 We store each of the [social data](https://acadey.santiment.net/general/metrics/social-data) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](general/products-and-plans/access-plans/). Currently the time intervals we use are the following:
 
-- In [Sangraphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
+- In [Sanbase Graphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
 
 #### Latency
 
@@ -54,7 +54,7 @@ We do not separate or filter the [social data](/general/metrics/social-data/) be
 
 #### How to Access
 
-##### [Sangraphs](https://graphs.santiment.net/social)
+##### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -63,8 +63,8 @@ The metric is available **for any selected asset**.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:x:|:x:|:x:|
+|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 ### 2. Sentiment Balance
@@ -91,7 +91,7 @@ Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### How to Access
 
-##### [Sangraphs](https://graphs.santiment.net/social)
+##### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -100,8 +100,8 @@ The metric is available **for any selected asset**.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:x:|:x:|:x:|
+|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 ### 3. Sentiment Volume Consumed
@@ -145,7 +145,7 @@ Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### How to Access
 
-##### [Sangraphs](https://graphs.santiment.net/social)
+##### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -154,6 +154,6 @@ The metric is available **for any selected asset**.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:x:|:x:|:x:|
+|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|

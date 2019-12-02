@@ -43,9 +43,7 @@ The realized value metric is calculating the acquisition cost of the assets loca
 15 tokens came when the price was $10
 The realized value of the address is
 
-$$
-10 ∗ 5 + 5 ∗ 15 + 15 ∗ 10 = 50 + 75 + 150 = $275
-$$
+$$10 × 5 + 5 × 15 + 15 × 10 = 50 + 75 + 150 = \$275$$
 
 This number gives the value of the tokens for this particular token holder and can be compared to the current market value. If the current price of the token is below $9.1, then the money this holder paid for acquiring these assets are more than their current value, while if the price is over $9.1, the value is greater. That means that if the current price is $10, these tokens are worth $300 and if the holder sells everything, he will get $25 profit.
 
@@ -68,7 +66,7 @@ $$MVRV_{7 days} = \frac{daily\;closing\;price}{mean\; realized\; price\;_{7days}
 
 when
 
-$$ mean\; realized\; price_{7 days} = \frac{stack\;realized\;cap\;_{7days}}{stack\;circulation\;_{7days}}$$
+$$mean\; realized\; price_{7 days} = \frac{stack\;realized\;cap\;_{7days}}{stack\;circulation\;_{7days}}$$
 
 The metric is available for next time bounds:
 1d | 7d | 30d | 60d | 90d | 180d | 365d | 2y | 3y | 5y | 10y | 20y
@@ -115,11 +113,11 @@ This metric is computed for Bitcoin, Ethereum, Ripple, all ERC20 tokens and the 
 You can access the metric on the [On-chain metrics
 V2](https://data.santiment.net/d/iYmn0EGZk/00-on-chain-metrics-v2?)
 
-### [Sangraphs](https://graphs.santiment.net)
+### [Sanbase Graphs](https://graphs.santiment.net)
 
-Dashboard is available with [Pro plan]((../access-plans)) in  [Sangraphs](https://graphs.santiment.net/mvrv) \*
+Dashboard is available with [Pro plan]((../access-plans)) in  [Sanbase Graphs](https://graphs.santiment.net/mvrv) \*
 
-![Dashboard in Sangraphs](Sangraphs.png)
+![Dashboard in Sanbase Graphs](Sangraphs.png)
 
 \* *curently available only for Bitcoin*
 
@@ -129,9 +127,9 @@ The metric is available on our charts:
 
 ![Dashboard in Sanbase](Sanbase.png)
 
-### [Neuro API](https://neuro.santiment.net/)
+### [SanAPI](https://neuro.santiment.net/)
 
-The metric is available on Neuro API. It's available for all time bounds represented in **Time Bound MVRV** section, i.e. 1d, 7d, 30d, etc.
+The metric is available on SanAPI. It's available for all time bounds represented in **Time Bound MVRV** section, i.e. 1d, 7d, 30d, etc.
 
 
 
@@ -216,9 +214,9 @@ MVRV
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
 
@@ -228,9 +226,9 @@ Time Bound MVRV
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:x:|:x:|:x:|:x:|
-|Neuro API|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 
@@ -239,9 +237,9 @@ MVRV Difference
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 The metric can have additional restrictions. Check the restrictions in [access plans article](/general/products-and-plans/access-plans)

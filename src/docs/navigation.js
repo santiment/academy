@@ -109,7 +109,7 @@ export const CATEGORIES = [
     blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.faq],
   },
   {
-    title: "Neuro API",
+    title: "SanAPI",
     description: "The most comprehensive crypto API on the market",
     blocks: [NEURO.about, NEURO.metrics],
   },
@@ -122,7 +122,7 @@ export const CATEGORIES = [
     ],
   },
   {
-    title: "Sangraphs",
+    title: "Sandata",
     description:
       "Advanced on-chain, social and development metrics and charts for 700+ coins",
     blocks: [GRAPHS.metrics, GRAPHS.about],

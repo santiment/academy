@@ -10,7 +10,7 @@ date: 2019-09-17
 # Sansheets reference
 # REF google-spreadsheets-addon/
 #
-# Neuro reference
+# SanAPI reference
 #
 # REF sanbase2/lib/sanbase/clickhouse/metric
 ---
@@ -81,9 +81,9 @@ The metric is available on [Sanbase](https://app.santiment.net/?enabledViewOnlyS
 
 ![How to access Daily Active Addresses on Sanbase](daa-sanbase.gif)
 
-### [Neuro API](https://neuro.santiment.net/)
+### [SanAPI](https://neuro.santiment.net/)
 
-The metric is available on Neuro API:
+The metric is available on SanAPI:
 
 ```js
 {
@@ -114,5 +114,5 @@ You can use `SAN_ACTIVE_ADDRESSES` function to get the data. Example:
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
