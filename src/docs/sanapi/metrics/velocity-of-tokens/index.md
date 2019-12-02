@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Velocity of Tokens
+title: SanAPI - Velocity of Tokens
 author: Santiment Team
 ---
 

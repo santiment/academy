@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Exchange Funds Flow
+title: SanAPI - Exchange Funds Flow
 author: Santiment Team
 ---
 

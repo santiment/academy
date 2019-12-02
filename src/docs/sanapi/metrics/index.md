@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Metrics
+title: SanAPI - Metrics
 author: Santiment Team
 ---
 

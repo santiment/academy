@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Trending Words
+title: SanAPI - Trending Words
 author: Santiment Team
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Network Growth
+title: SanAPI - Network Growth
 author: Santiment Team
 ---
 

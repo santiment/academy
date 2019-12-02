@@ -75,7 +75,7 @@ The emerging trends are available in the *`Labs`* section.
 If any of the assets occurs in the emerging trends, this can be also spotted on the detailed charts of the assets:
 <iframe frameborder="0" height="340" src="https://app.santiment.net/projects/ripple?enabledViewOnlySharing=true&events=trendPositionHistory&from=2019-05-05T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialVolume&projectId=1540&scale=auto&slug=ripple&timeRange=6m&title=Ripple%20%28XRP%29&to=2019-11-06T21%3A00%3A00.000Z"></iframe>
 
-### [Neuro API](https://neuro.santiment.net)
+### [SanAPI](https://neuro.santiment.net)
 
 The emerging trends are available as part of the API, the metric is called `trendingWords`.
 
@@ -85,5 +85,5 @@ The emerging trends are available as part of the API, the metric is called `tren
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sangraphs|:x:|:x:|:x:|:x:|:x:|
-|Neuro API|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|

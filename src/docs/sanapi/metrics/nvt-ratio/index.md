@@ -1,5 +1,5 @@
 ---
-title: Neuro API - NVT Ratio
+title: SanAPI - NVT Ratio
 author: Santiment Team
 ---
 

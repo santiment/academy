@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Average Token Age Consumed in Days
+title: SanAPI - Average Token Age Consumed in Days
 author: Santiment Team
 ---
 

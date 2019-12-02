@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Social Volume
+title: SanAPI - Social Volume
 author: Santiment Team
 ---
 

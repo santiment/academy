@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Token Age Consumed
+title: SanAPI - Token Age Consumed
 author: Santiment Team
 ---
 

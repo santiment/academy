@@ -64,7 +64,7 @@ The metric is available **for any selected asset**.
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
 |Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:x:|:x:|:x:|
+|SanAPI|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 ### 2. Sentiment Balance
@@ -101,7 +101,7 @@ The metric is available **for any selected asset**.
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
 |Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:x:|:x:|:x:|
+|SanAPI|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 ### 3. Sentiment Volume Consumed
@@ -155,5 +155,5 @@ The metric is available **for any selected asset**.
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
 |Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:x:|:x:|:x:|
+|SanAPI|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|

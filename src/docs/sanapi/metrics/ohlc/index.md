@@ -1,5 +1,5 @@
 ---
-title: Neuro API - OHLC
+title: SanAPI - OHLC
 author: Santiment Team
 ---
 

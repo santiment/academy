@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Topic Search
+title: SanAPI - Topic Search
 author: Santiment Team
 ---
 

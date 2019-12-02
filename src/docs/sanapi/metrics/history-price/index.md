@@ -1,5 +1,5 @@
 ---
-title: Neuro API - History Price
+title: SanAPI - History Price
 author: Santiment Team
 ---
 Gets the historical price of an asset in BTC or USD for a given time

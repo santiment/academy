@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Daily Active Deposits
+title: SanAPI - Daily Active Deposits
 author: Santiment Team
 ---
 

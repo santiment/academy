@@ -129,9 +129,9 @@ The metric is available on our charts:
 
 ![Dashboard in Sanbase](Sanbase.png)
 
-### [Neuro API](https://neuro.santiment.net/)
+### [SanAPI](https://neuro.santiment.net/)
 
-The metric is available on Neuro API. It's available for all time bounds represented in **Time Bound MVRV** section, i.e. 1d, 7d, 30d, etc.
+The metric is available on SanAPI. It's available for all time bounds represented in **Time Bound MVRV** section, i.e. 1d, 7d, 30d, etc.
 
 
 
@@ -218,7 +218,7 @@ MVRV
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
 
@@ -230,7 +230,7 @@ Time Bound MVRV
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:x:|:x:|:x:|:x:|
-|Neuro API|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 
@@ -241,7 +241,7 @@ MVRV Difference
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
 |Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Neuro API|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
 The metric can have additional restrictions. Check the restrictions in [access plans article](/general/products-and-plans/access-plans)

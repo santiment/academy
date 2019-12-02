@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Developer Activity
+title: SanAPI - Developer Activity
 author: Santiment Team
 ---
 

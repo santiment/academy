@@ -1,5 +1,5 @@
 ---
-title: Neuro API - MVRV Ratio
+title: SanAPI - MVRV Ratio
 author: Santiment Team
 ---
 

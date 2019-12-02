@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Percentage of Token Supply on Exchanges
+title: SanAPI - Percentage of Token Supply on Exchanges
 author: Santiment Team
 ---
 

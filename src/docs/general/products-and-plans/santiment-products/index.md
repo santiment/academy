@@ -29,7 +29,7 @@ is for more advanced users.
 ![](3.png)
 
 
-## Neuro API
+## SanAPI
 
 Use it free for 3 months of data, or stake SAN for full historical data
 plus real time data feed.

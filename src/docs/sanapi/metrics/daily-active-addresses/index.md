@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Daily Active Addresses
+title: SanAPI - Daily Active Addresses
 author: Santiment Team
 ---
 

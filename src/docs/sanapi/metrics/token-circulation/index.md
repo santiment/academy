@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Token Circulation
+title: SanAPI - Token Circulation
 author: Santiment Team
 ---
 

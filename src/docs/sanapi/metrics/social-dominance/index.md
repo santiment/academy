@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Social Dominance
+title: SanAPI - Social Dominance
 author: Santiment Team
 ---
 

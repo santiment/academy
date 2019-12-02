@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Top Social Gainers / Losers
+title: SanAPI - Top Social Gainers / Losers
 author: Santiment Team
 ---
 

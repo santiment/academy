@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Transaction Volume
+title: SanAPI - Transaction Volume
 author: Santiment Team
 ---
 

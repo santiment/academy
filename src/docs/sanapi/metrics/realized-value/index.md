@@ -1,5 +1,5 @@
 ---
-title: Neuro API - Realized Value
+title: SanAPI - Realized Value
 author: Santiment Team
 ---
 
