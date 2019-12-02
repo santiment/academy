@@ -122,7 +122,7 @@ export const CATEGORIES = [
     ],
   },
   {
-    title: "Sangraphs",
+    title: "Sandata",
     description:
       "Advanced on-chain, social and development metrics and charts for 700+ coins",
     blocks: [GRAPHS.metrics, GRAPHS.about],
