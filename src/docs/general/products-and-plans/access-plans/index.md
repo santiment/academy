@@ -45,7 +45,7 @@ Here are the access plans for the different Santiment products.
 - Last 30 days of metric data is cut-off
 - Up to 10 signals definitions allowed
 - No data from external providers
-- No access to Sanbase / Graphs
+- No access to Sanbase Graphs
 
 ### Pro plan
 
@@ -53,7 +53,7 @@ Here are the access plans for the different Santiment products.
 - Real-time data available
 - No limit to Signals
 - Access to external data providers
-- Access to Sanbase / Graphs
+- Access to Sanbase Graphs
 - Access to Sansheets spreadsheets add-on
 
 ## Special restrictions

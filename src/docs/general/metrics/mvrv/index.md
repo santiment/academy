@@ -115,11 +115,11 @@ This metric is computed for Bitcoin, Ethereum, Ripple, all ERC20 tokens and the 
 You can access the metric on the [On-chain metrics
 V2](https://data.santiment.net/d/iYmn0EGZk/00-on-chain-metrics-v2?)
 
-### [Sangraphs](https://graphs.santiment.net)
+### [Sanbase Graphs](https://graphs.santiment.net)
 
-Dashboard is available with [Pro plan]((../access-plans)) in  [Sangraphs](https://graphs.santiment.net/mvrv) \*
+Dashboard is available with [Pro plan]((../access-plans)) in  [Sanbase Graphs](https://graphs.santiment.net/mvrv) \*
 
-![Dashboard in Sanbase / Graphs](Sangraphs.png)
+![Dashboard in Sanbase Graphs](Sangraphs.png)
 
 \* *curently available only for Bitcoin*
 
@@ -216,7 +216,7 @@ MVRV
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
@@ -228,7 +228,7 @@ Time Bound MVRV
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:x:|:x:|:x:|:x:|
 |SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
@@ -239,7 +239,7 @@ MVRV Difference
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|Sangraphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sandata|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|

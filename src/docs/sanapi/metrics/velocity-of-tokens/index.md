@@ -3,11 +3,11 @@ title: SanAPI - Velocity of Tokens
 author: Santiment Team
 ---
 
-*For a more in-depth explanation of `Velocity of Tokens` on Sangraphs,
+*For a more in-depth explanation of `Velocity of Tokens` on Sandata,
 please click*
 [*here*](https://community.santiment.net/t/token-velocity-metric/412/2)*.
 For a video breakdown of Transaction Volume and Token Velocity on
-Sangraphs, click*
+Sandata, click*
 [*here*](https://drive.google.com/open?id=1fAgF96dCsl0RLosL8Fj1p-W0NXBR5onh)*.*
 
 Fetch token velocity for a project, grouped by interval. Projects are

@@ -84,6 +84,6 @@ The emerging trends are available as part of the API, the metric is called `tren
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sangraphs|:x:|:x:|:x:|:x:|:x:|
+|Sanbase Graphs|:x:|:x:|:x:|:x:|:x:|
 |SanAPI|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|

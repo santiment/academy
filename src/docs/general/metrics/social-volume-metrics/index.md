@@ -30,7 +30,7 @@ Amount of documents (messages, posts, comments, etc).
 
 We store each of the [social data](/general/metrics/social-data/) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](/general/products-and-plans/access-plans/). Currently the time intervals we use are the following:
 
-- In [Sangraphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
+- In [Sanbase Graphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
 
 ### Latency
 
@@ -53,7 +53,7 @@ The metric is available on Sanbase:
 
 - in the [Labs](https://app.santiment.net/labs/trends) section for **any desired search query**.
 
-#### [Sangraphs](https://graphs.santiment.net/social)
+#### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -70,7 +70,7 @@ The metric is available on Sansheets.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |SanAPI|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 
@@ -98,7 +98,7 @@ Same as [**Social Volume**](#social-volume).
 
 ### How to Access
 
-#### [Sangraphs](https://graphs.santiment.net/social)
+#### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -107,7 +107,7 @@ The metric is available **for any selected asset**.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |SanAPI|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
@@ -135,7 +135,7 @@ Same as [**Social Volume**](#social-volume).
 
 ### How to Access
 
-#### [Sangraphs](https://graphs.santiment.net/social)
+#### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -144,7 +144,7 @@ The metric is available **for any selected asset**.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:x:|:x:|:x:|:x:|:x:|
-|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |SanAPI|:x:|:x:|:x:|:x:|:x:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
@@ -179,7 +179,7 @@ By default the **Social Dominance** for a given asset is calculated against the 
 The metric is available on Sanbase on our charts **for any selected asset**:
 <iframe frameborder="0" height="340" src="https://app.santiment.net/chart?enabledViewOnlySharing=true&from=2019-03-18T21%3A00%3A00.000Z&interval=1d&isShowAnomalies=true&metrics=historyPrice,socialDominance&projectId=1538&slug=bitcoin&timeRange=6m&title=Bitcoin%20%28BTC%29&to=2019-09-19T21%3A00%3A00.000Z"></iframe>
 
-#### [Sangraphs](https://graphs.santiment.net/social)
+#### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -188,6 +188,6 @@ The metric is available **for any selected asset**.
 ||Free|Basic|Pro|Premium|Enterprise|
 |---|---|---|---|---|---|
 |Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sangraphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |SanAPI|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|

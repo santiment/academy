@@ -17,9 +17,9 @@ features with a simple email login.
 
 ![](4.png)
 
-## Sangraphs
+## Sandata
 
-Sangraphs (formerly "Sanbase Dashboards") is our beta test area, where
+Sandata is our beta test area, where
 we have experimental features and work out new datafeeds before
 introducing them to Sanbase. This area is accessible via SAN staking and
 is for more advanced users.

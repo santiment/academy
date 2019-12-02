@@ -71,9 +71,7 @@ out more in the article on how to stake SAN tokens linked to below.
 
 ### Buying and staking SAN
 
-You are now ready to stake SAN to get access to more data, including
-real time data and historical data for many metrics - as well as access
-to Sangraphs (<https://data.santiment.net>). You can learn how to stake
+You are now ready to stake SAN to get access to discounts for your access plan. You can learn how to stake
 SAN tokens by reading [this
 article](/general/san-tokens/how-to-stake-san).
 For guidance on how to buy SAN tokens in the first place, please check
