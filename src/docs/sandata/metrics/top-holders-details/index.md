@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Top Holders - Details
+title: Sandata - Top Holders - Details
 author: Santiment Team
 ---
 *This article mentions one of several metrics we offer regarding top

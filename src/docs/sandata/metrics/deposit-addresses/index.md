@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Deposit Addresses
+title: Sandata - Deposit Addresses
 author: Santiment Team
 ---
 

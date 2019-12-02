@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Top Holders - Percent of Total Supply
+title: Sandata - Top Holders - Percent of Total Supply
 author: Santiment Team
 ---
 

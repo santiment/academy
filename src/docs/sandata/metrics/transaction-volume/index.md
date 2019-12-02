@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Transaction Volume
+title: Sandata - Transaction Volume
 author: Santiment Team
 ---
 
@@ -26,7 +26,7 @@ network:
 ![](1.png)
 
 The per-day graph is still a bit noisy, so let's smooth it out with a
-7-day moving average (done with 1 click in Sangraphs):
+7-day moving average (done with 1 click in Sandata):
 
 ![](2.png)
 

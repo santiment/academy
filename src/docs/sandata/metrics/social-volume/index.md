@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Social Volume
+title: Sandata - Social Volume
 author: Santiment Team
 ---
 

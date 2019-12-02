@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Deposit-related Transactions
+title: Sandata - Deposit-related Transactions
 ---
 
 *This article mentions one of several metrics we offer regarding

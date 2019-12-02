@@ -1,5 +1,5 @@
 ---
-title: Sangraphs Metrics
+title: Sandata Metrics
 author: Santiment team
 ---
 

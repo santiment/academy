@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - The 'On-chain metrics' overview page
+title: Sandata - The 'On-chain metrics' overview page
 author: Santiment Team
 ---
 

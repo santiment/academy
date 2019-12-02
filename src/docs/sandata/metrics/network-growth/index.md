@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Network Growth
+title: Sandata - Network Growth
 author: Santiment Team
 ---
 

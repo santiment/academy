@@ -1,5 +1,5 @@
 ---
-title: About Sangraphs
+title: About Sandata
 author: Santiment team
 ---
 

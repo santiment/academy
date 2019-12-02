@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Top 100 Transactions
+title: Sandata - Top 100 Transactions
 author: Santiment Team
 ---
 

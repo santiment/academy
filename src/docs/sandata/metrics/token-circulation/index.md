@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Token Circulation (beta)
+title: Sandata - Token Circulation (beta)
 author: Santiment Team
 ---
 

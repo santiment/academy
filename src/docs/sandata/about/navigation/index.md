@@ -1,10 +1,10 @@
 ---
-title: Navigating through Sangraphs
+title: Navigating through Sandata
 author: Santiment Team
 ---
 
-After successfully logging into Sangraphs, you will see a general overview page. This page already shows most of
-Sangraphs navigational elements:
+After successfully logging into Sandata, you will see a general overview page. This page already shows most of
+Sandata navigational elements:
 
 ![](02_sangraphs_navigation.png)
 
@@ -32,7 +32,7 @@ Let us have a look at the row of buttons in the upper right corner:
 
 #### Time frame
 
-The next one is very important within Sangraphs, as it shows (and helps
+The next one is very important within Sandata, as it shows (and helps
 you select) the time frame for whatever data you are currently looking
 at. There is two ways to adjust the time frame, one of which is to click
 here, which will open the following panel:

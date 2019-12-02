@@ -119,7 +119,7 @@ V2](https://data.santiment.net/d/iYmn0EGZk/00-on-chain-metrics-v2?)
 
 Dashboard is available with [Pro plan]((../access-plans)) in  [Sangraphs](https://graphs.santiment.net/mvrv) \*
 
-![Dashboard in Sangraphs](Sangraphs.png)
+![Dashboard in Sanbase / Graphs](Sangraphs.png)
 
 \* *curently available only for Bitcoin*
 

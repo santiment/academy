@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Topic Search
+title: Sandata - Topic Search
 author: Santiment Team
 ---
 

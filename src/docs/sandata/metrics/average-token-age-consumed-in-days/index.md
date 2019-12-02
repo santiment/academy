@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Average Token Age Consumed in Days
+title: Sandata - Average Token Age Consumed in Days
 author: Santiment Team
 ---
 

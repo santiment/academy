@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Share of Daily Active Deposits in Total Daily Active Addresses
+title: Sandata - Share of Daily Active Deposits in Total Daily Active Addresses
 author: Santiment Team
 ---
 

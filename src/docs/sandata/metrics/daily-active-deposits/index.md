@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Daily Active Deposits
+title: Sandata - Daily Active Deposits
 author: Santiment Team
 ---
 

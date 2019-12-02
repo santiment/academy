@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Daily Active Addresses
+title: Sandata - Daily Active Addresses
 author: Santiment Team
 ---
 

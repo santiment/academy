@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Token Age Consumed
+title: Sandata - Token Age Consumed
 author: Santiment Team
 ---
 

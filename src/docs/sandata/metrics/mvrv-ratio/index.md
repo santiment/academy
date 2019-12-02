@@ -1,11 +1,11 @@
 ---
-title: Sangraphs - MVRV Ratio
+title: Sandata - MVRV Ratio
 author: Santiment Team
 ---
 
 *This metric can be found on the* [*`Ethereum & ERC20 MVRV`
 page*](https://data.santiment.net/d/4BpXRALik/05-ethereum-and-erc20-mvrv?orgId=1)
-*in Sangraphs, along with the NVT metric which is described in* [*this
+*in Sandata, along with the NVT metric which is described in* [*this
 article*](/sandata/metrics/nvt-ratio)*.*
 
 To understand the MVRV metrics, we have to establish two term. `MV` as

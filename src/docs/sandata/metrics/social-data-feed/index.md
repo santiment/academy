@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Social Data Feed
+title: Sandata - Social Data Feed
 author: Santiment Team
 ---
 

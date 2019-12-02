@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Velocity of Tokens (beta)
+title: Sandata - Velocity of Tokens (beta)
 author: Santiment Team
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Relative Social Dominance
+title: Sandata - Relative Social Dominance
 author: Santiment Team
 ---
 

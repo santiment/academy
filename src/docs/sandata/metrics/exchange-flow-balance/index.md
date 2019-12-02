@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Exchange Flow Balance
+title: Sandata - Exchange Flow Balance
 author: Santiment Team
 ---
 

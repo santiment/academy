@@ -1,5 +1,5 @@
 ---
-title: Sangraphs - Developer Activity
+title: Sandata - Developer Activity
 author: Santiment Team
 ---
 
