@@ -148,4 +148,4 @@ There are some terms used in this document. Here is a list and discription of th
 
 ## Start exploring the API
 
-[Start exploring the API here](/neuro-api/ape-reference/exploring/)
+[Start exploring the API here](/sanapi/ape-reference/exploring/)

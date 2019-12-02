@@ -43,4 +43,4 @@ Near the bottom of the page you will find the options to create new and
 look at existing API keys. Any created key can also be revoked here. To
 find out more about API usage, you can start off by having a look at
 [this
-article](/neuro-api/about/getting-started/).
+article](/sanapi/about/getting-started/).
