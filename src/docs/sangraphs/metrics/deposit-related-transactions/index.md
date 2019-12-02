@@ -4,7 +4,7 @@ title: Sangraphs - Deposit-related Transactions
 
 *This article mentions one of several metrics we offer regarding
 exchange deposit addresses. Please check* [*this
-article*](/sangraphs/metrics/deposit-addresses)
+article*](/sandata/metrics/deposit-addresses)
 *for an introduction on deposit addresses and the complete list of
 metrics offered.*
 
@@ -19,7 +19,7 @@ As such, this metric accounts for both user-to-exchange transactions:
 
 Deposit-related Transactions is often valuable when used in conjunction
 with **Exchange Inflow** -- [another one of our
-metrics](/sangraphs/metrics/exchange-flow)
+metrics](/sandata/metrics/exchange-flow)
 -- which shows the total amount of coins moving to exchange wallets on a
 particular day.
 

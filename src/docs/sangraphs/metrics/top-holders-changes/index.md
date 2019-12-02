@@ -5,7 +5,7 @@ author: Santiment Team
 
 *This article mentions one of several metrics we offer regarding top
 holders addresses. Please check* [*this
-article*](/sangraphs/metrics/top-holders)
+article*](/sandata/metrics/top-holders)
 *for an introduction on `Top Holders` and the complete list of metrics
 offered.*
 

@@ -10,7 +10,7 @@ date: 2019-09-17
 # Sansheets reference
 # REF google-spreadsheets-addon/
 #
-# Neuro reference
+# SanAPI reference
 #
 # REF sanbase2/lib/sanbase/clickhouse/metric
 ---

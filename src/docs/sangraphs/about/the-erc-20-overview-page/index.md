@@ -30,13 +30,13 @@ particular token:
 -   ***`Blockchain Analytics`*** - a huge list of on-chain metrics,
     have a look! For a full list of all metrics listed here, check out
     [this
-    article](/sangraphs/about/the-on-chain-metrics-overview-page).
+    article](/sandata/about/the-on-chain-metrics-overview-page).
     It will lead you to articles about the listed metrics in detail,
     too.
 -   ***`Github Activity`*** - shows how active the development team of
     the project seems to be on Github. We use a certain way to calculate
     this, find out more
-    [here](/sangraphs/metrics/developer-activity).
+    [here](/sandata/metrics/developer-activity).
 -   ***`Price-volume Difference Indicator`*** - a metric that shows
     when our experimental signal has fired in the past. You can find our
     experimental signals on [our
@@ -44,7 +44,7 @@ particular token:
 -   ***`Top Holders`***  - Find out about the (up to) 100 hundred
     accounts which rank highest in amount of tokens held - and how that
     list changes. Check out [this article
-    set](/sangraphs/metrics/top-holders)
+    set](/sandata/metrics/top-holders)
     to learn more.
 
 To find some of these metrics for Ether or Bitcoin, you can use the same

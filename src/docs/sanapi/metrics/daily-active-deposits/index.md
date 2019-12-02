@@ -8,10 +8,10 @@ are referred to by a unique identifier (slug).
 
 To find a more in-depth explanation about Daily Active Deposits, please
 check [this
-article](/sangraphs/metrics/daily-active-deposits).
+article](/sandata/metrics/daily-active-deposits).
 It is part of an article set on metrics related to deposit addresses,
 which you can find
-[here](/sangraphs/metrics/deposit-addresses).
+[here](/sandata/metrics/deposit-addresses).
 
 This metric is calculated daily, so the interval should represent whole
 days.

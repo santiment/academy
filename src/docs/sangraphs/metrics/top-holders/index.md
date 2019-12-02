@@ -35,7 +35,7 @@ tokens or converted to USD
 
 ## Our current metrics for top holders:
 
-1.  [Top Holders - Balance](/sangraphs/metrics/top-holders-balance)
-2.  [Top Holders - Percent of Total Supply](/sangraphs/metrics/top-holders-percent-of-total-supply)
-3.  [Top Holders - Changes](/sangraphs/metrics/top-holders-changes)
-4.  [Top Holders - Details](/sangraphs/metrics/top-holders-details)
+1.  [Top Holders - Balance](/sandata/metrics/top-holders-balance)
+2.  [Top Holders - Percent of Total Supply](/sandata/metrics/top-holders-percent-of-total-supply)
+3.  [Top Holders - Changes](/sandata/metrics/top-holders-changes)
+4.  [Top Holders - Details](/sandata/metrics/top-holders-details)

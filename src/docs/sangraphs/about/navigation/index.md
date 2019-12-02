@@ -3,10 +3,7 @@ title: Navigating through Sangraphs
 author: Santiment Team
 ---
 
-After successfully logging into Sangraphs (in case you need help with
-that, check [this
-article](/intercom-articles/getting-started/sangraphs/logging-into-sangraphs))
-you will see a general overview page. This page already shows most of
+After successfully logging into Sangraphs, you will see a general overview page. This page already shows most of
 Sangraphs navigational elements:
 
 ![](02_sangraphs_navigation.png)

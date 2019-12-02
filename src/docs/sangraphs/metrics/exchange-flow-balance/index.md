@@ -32,4 +32,4 @@ following the event.
 ![](6.png)
 
 For more details on the metric `Exchange Flow`, please click
-[here](/sangraphs/metrics/exchange-flow).
+[here](/sandata/metrics/exchange-flow).

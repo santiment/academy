@@ -5,7 +5,7 @@ author: Santiment Team
 
 *This article mentions one of several metrics we offer regarding
 exchange deposit addresses. Please check* [*this
-article*](/sangraphs/metrics/deposit-addresses)
+article*](/sandata/metrics/deposit-addresses)
 *for an introduction on deposit addresses and the complete list of
 metrics offered.*
 

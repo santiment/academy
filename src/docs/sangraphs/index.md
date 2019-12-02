@@ -7,5 +7,5 @@ description: Advanced on-chain, social and development metrics and charts for 70
 
 Advanced on-chain, social and development metrics and charts for 700+ coins
 
-- [About](/sangraphs/about/)
-- [Metrics](/sangraphs/metrics/)
+- [About](/sandata/about/)
+- [Metrics](/sandata/metrics/)

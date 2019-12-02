@@ -8,7 +8,7 @@ referred to by a unique identifier (slug).
 
 To find a more in-depth explanation about Realized Value and the MVRV
 ratio metric in general, please check [this
-article](/sangraphs/metrics/mvrv-ratio).
+article](/sandata/metrics/mvrv-ratio).
 
 This metric is calculated daily, so the interval should represent whole
 days.
