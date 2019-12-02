@@ -105,7 +105,7 @@ export const CATEGORIES = [
   {
     title: "Sanbase",
     description:
-      "Platform for in-depth coin analysis, low-latency signals, asset watchlists",
+      "Platform for in-depth coin analysis, signals and watchlists",
     blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.faq],
   },
   {
@@ -124,7 +124,7 @@ export const CATEGORIES = [
   {
     title: "Sandata",
     description:
-      "Advanced on-chain, social and development metrics and charts for 700+ coins",
+      "Advanced metrics and charts for 700+ coins",
     blocks: [GRAPHS.metrics, GRAPHS.about],
   },
 ]

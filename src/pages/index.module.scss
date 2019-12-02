@@ -24,3 +24,12 @@
 		margin: 24px auto 30px;
 	}
 }
+
+.blocks {
+	@include grid-wrap(4);
+	grid-gap: 18px;
+
+  @include responsive('phone') {
+    grid-template-columns: 1fr 1fr;
+  }
+}

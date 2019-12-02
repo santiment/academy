@@ -15,7 +15,9 @@ const IndexPage = ({pageContext}) => {
     	{/* <Search /> */}
       <div className='container'>
       {/* <GettingStarted className={styles.startBlock}/> */}
-      {CATEGORIES.map(({title, ...rest}) => <Category key={title} title={title} {...rest} />)}
+      <div className={styles.blocks}>
+        {CATEGORIES.map(({title, ...rest}) => <Category key={title} title={title} {...rest} />)}
+      </div>
       </div>
     </section>
   </Layout>
