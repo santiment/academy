@@ -41,7 +41,7 @@ like the Ledger Nano S. Make sure your tokens are safe!*
 **Please confirm the following step to let Sanbase connect to MetaMask
 (and the selected wallet):**
 
-![](45_connect_wallet_with_mm2.png)
+![](45.png)
 
 You will now be asked to sign a message with your private key. Please
 note that this is not a transaction, no tokens are sent, no changes are
