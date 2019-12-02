@@ -73,7 +73,7 @@ The algorithm takes into account all the [social data](/general/metrics/social-d
 The emerging trends are available in the *`Labs`* section.
 
 If any of the assets occurs in the emerging trends, this can be also spotted on the detailed charts of the assets:
-<iframe frameborder="0" height="340" src="https://app.santiment.net/projects/ripple?enabledViewOnlySharing=true&events=trendPositionHistory&from=2019-05-05T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialVolume&projectId=1540&scale=auto&slug=ripple&timeRange=6m&title=Ripple%20%28XRP%29&to=2019-11-06T21%3A00%3A00.000Z"></iframe>
+<iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-06-02T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialVolume&scale=auto&slug=santiment&title=Santiment%20%28SAN%29&to=2019-12-03T21%3A00%3A00.000Z&viewOnly=true"></iframe>
 
 ### [SanAPI](https://neuro.santiment.net)
 

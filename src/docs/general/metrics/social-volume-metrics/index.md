@@ -49,7 +49,7 @@ By default we use an auto-generated search query to track the volume of mentions
 The metric is available on Sanbase:
 
 - on our charts **for any selected asset**:
-<iframe frameborder="0" height="340" src="https://app.santiment.net/chart?metrics=historyPrice,socialVolume&projectId=57&slug=ethereum&timeRange=6m&title=Ethereum%20%28ETH%29&to=2019-09-19T21%3A00%3A00.000Z"></iframe>
+<iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-06-02T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialVolume&scale=auto&slug=santiment&title=Santiment%20%28SAN%29&to=2019-12-03T21%3A00%3A00.000Z&viewOnly=true"></iframe>
 
 - in the [Labs](https://app.santiment.net/labs/trends) section for **any desired search query**.
 
@@ -177,7 +177,7 @@ By default the **Social Dominance** for a given asset is calculated against the 
 #### [Sanbase](https://app.santiment.net)
 
 The metric is available on Sanbase on our charts **for any selected asset**:
-<iframe frameborder="0" height="340" src="https://app.santiment.net/chart?enabledViewOnlySharing=true&from=2019-03-18T21%3A00%3A00.000Z&interval=1d&isShowAnomalies=true&metrics=historyPrice,socialDominance&projectId=1538&slug=bitcoin&timeRange=6m&title=Bitcoin%20%28BTC%29&to=2019-09-19T21%3A00%3A00.000Z"></iframe>
+<iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-06-02T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialDominance&scale=auto&slug=santiment&title=Santiment%20%28SAN%29&to=2019-12-03T21%3A00%3A00.000Z&viewOnly=true"></iframe>
 
 #### [Sanbase Graphs](https://graphs.santiment.net/social)
 

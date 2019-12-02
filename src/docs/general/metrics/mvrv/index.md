@@ -43,9 +43,7 @@ The realized value metric is calculating the acquisition cost of the assets loca
 15 tokens came when the price was $10
 The realized value of the address is
 
-$$
-10 ∗ 5 + 5 ∗ 15 + 15 ∗ 10 = 50 + 75 + 150 = $275
-$$
+$$10 × 5 + 5 × 15 + 15 × 10 = 50 + 75 + 150 = \$275$$
 
 This number gives the value of the tokens for this particular token holder and can be compared to the current market value. If the current price of the token is below $9.1, then the money this holder paid for acquiring these assets are more than their current value, while if the price is over $9.1, the value is greater. That means that if the current price is $10, these tokens are worth $300 and if the holder sells everything, he will get $25 profit.
 
@@ -68,7 +66,7 @@ $$MVRV_{7 days} = \frac{daily\;closing\;price}{mean\; realized\; price\;_{7days}
 
 when
 
-$$ mean\; realized\; price_{7 days} = \frac{stack\;realized\;cap\;_{7days}}{stack\;circulation\;_{7days}}$$
+$$mean\; realized\; price_{7 days} = \frac{stack\;realized\;cap\;_{7days}}{stack\;circulation\;_{7days}}$$
 
 The metric is available for next time bounds:
 1d | 7d | 30d | 60d | 90d | 180d | 365d | 2y | 3y | 5y | 10y | 20y
