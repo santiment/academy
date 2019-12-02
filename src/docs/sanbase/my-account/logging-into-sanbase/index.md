@@ -66,8 +66,7 @@ article](/sanbase/my-account/account-settings).
 Logging into Sanbase by email is pretty straight forward. You enter your
 email address and get sent a link to a logged in Sanbase session. In
 case you logged in by email the first time, you can add an ETH address
-using MetaMask through the Account settings page mentioned above. Find
-out more in the article on how to stake SAN tokens linked to below.
+using MetaMask through the Account settings page mentioned above.
 
 ### Buying and staking SAN
 
