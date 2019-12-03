@@ -10,7 +10,7 @@
 }
 
 .img {
-	margin-right: 10px;
+	margin: 0 24px 0 16px;
 	fill: var(--casper);
 }
 
@@ -34,7 +34,7 @@
 	}
 
 	&:first-child {
-		margin-right: 32px;
+		margin-right: 31px;
 		position: relative;
 
 		&:after {
