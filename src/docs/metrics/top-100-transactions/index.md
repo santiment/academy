@@ -1,7 +1,9 @@
 ---
-title: Sandata - Top 100 Transactions
+title: Top 100 Transactions
 author: Santiment Team
 ---
+
+### Sandata
 
 This dashboard catalogues the top 100 transactions in a desired time
 frame, including their:

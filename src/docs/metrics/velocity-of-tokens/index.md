@@ -1,17 +1,32 @@
 ---
-title: SanAPI - Velocity of Tokens
+title: Velocity of Tokens metric
 author: Santiment Team
 ---
 
-*For a more in-depth explanation of `Velocity of Tokens` on Sandata,
-please click*
-[*here*](https://community.santiment.net/t/token-velocity-metric/412/2)*.
-For a video breakdown of Transaction Volume and Token Velocity on
-Sandata, click*
-[*here*](https://drive.google.com/open?id=1fAgF96dCsl0RLosL8Fj1p-W0NXBR5onh)*.*
+*For a more in-depth explanation of `Velocity of Tokens`, please
+click* [*here*](https://community.santiment.net/t/token-velocity-metric/412/2).
 
-Fetch token velocity for a project, grouped by interval. Projects are
-referred to by a unique identifier (slug).
+This graph shows the average number of times that a token changes
+wallets each day.
+
+Simply put, a higher token velocity means that a token is used in
+transactions more often within a set time frame.
+
+Token Velocity can be used to explain various noteworthy events in the
+life of a project. For example, here's Ethereum:
+
+![](4.png)
+
+Notice the steep drop off?
+
+The increased activity (and subsequent dip) correlates squarely to a
+huge ETH mixer that operated between March 2017 and March 2018.
+
+Once the mixer was liquidated, token velocity toppled back to 'normal'
+levels, where it's remained ever since.
+
+
+### SanAPI
 
 Similar to velocity of money, Token Velocity is the frequency at which
 tokens change wallets in a given interval of time. This metric is
@@ -46,3 +61,4 @@ curl \
   --data '{ "query": "query{tokenVelocity(from:\"2019-05-09T11:25:04.894Z\",interval:\"1d\",slug:\"ethereum\",to:\"2019-06-23T11:25:04.894Z\"){tokenVelocity,datetime}}" }' \
   https://api.santiment.net/graphql
 ```
+

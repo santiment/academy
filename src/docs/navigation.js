@@ -3,23 +3,6 @@ export const GRAPHS = {
     title: "About",
     articles: ["Navigation", "The erc 20 overview page", "The on-chain metrics overview page"],
   },
-  howWorks: {
-    title: "How it works",
-    articles: [],
-  },
-  metrics: {
-    title: "Metrics",
-    articles: [
-    "Exchange Flow",
-    "Exchange Flow Balance",
-    "Network Growth",
-    "NVT ratio",
-    "Token Circulation",
-    "Top 100 transactions",
-    "Transaction Volume",
-    "Velocity Of Tokens",
-]
-  }
 }
 
 export const NEURO = {
@@ -27,16 +10,12 @@ export const NEURO = {
     title: "API reference",
     articles: ["Exploring", "Available queries", "Available metrics"],
   },
-  metrics: {
-    title: "Metrics",
-    articles: ["Exchange Funds Flow", "History Price", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Token Circulation", "Top Social Gainers Losers", "Transaction Volume", "Velocity Of Tokens"],
-  },
 }
 
 export const CATEGORIES = [
   {
     title: "Metrics",
-    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders", "Token Age Consumed", "Deposit Addresses", "Metrics for deposit Addresses"],
+    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders", "Token Age Consumed", "Deposit Addresses", "Metrics for Deposit Addresses", "Exchange Flow metrics", "Network Growth", "Token Circulation", "Transaction Volume", "Velocity of Tokens", "NVT Ratio", "Top 100 transactions", "History Price", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Top Social Gainers Losers"],
   },
   {
     title: "Sanbase",
@@ -47,7 +26,7 @@ export const CATEGORIES = [
   {
     title: "SanAPI",
     description: "The most comprehensive crypto API on the market",
-    blocks: [NEURO.about, NEURO.metrics],
+    blocks: [NEURO.about],
   },
   {
     title: "Sansheets",
@@ -57,7 +36,7 @@ export const CATEGORIES = [
   {
     title: "Sandata",
     description: "Advanced metrics and charts for 700+ coins",
-    blocks: [GRAPHS.metrics, GRAPHS.about],
+    blocks: [GRAPHS.about],
   },
   {
     title: "Products and plans",

@@ -1,11 +1,8 @@
 ---
-title: Sandata
+title: About Sandata
 author: Santiment team
-date: 2019-09-17
-description: Advanced on-chain, social and development metrics and charts for 700+ coins
 ---
 
-Advanced on-chain, social and development metrics and charts for 700+ coins
-
-- [About](/sandata/about/)
-- [Metrics](/sandata/metrics/)
+- [Navigation](/sandata/about/navigation)
+- [The ERC20 overview page](/sandata/about/the-erc-20-overview-page)
+- [The on-chain metrics overview page](/sandata/about/the-on-chain-metrics-overview-page)
