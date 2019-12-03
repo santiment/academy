@@ -11,7 +11,6 @@ author: Santiment team
 - [Developer Activity](/sandata/metrics/developer-activity)
 - [Exchange Flow](/sandata/metrics/exchange-flow)
 - [Exchange Flow Balance](/sandata/metrics/exchange-flow-balance)
-- [MVRV Ratio](/sandata/metrics/mvrv-ratio)
 - [Network Growth](/sandata/metrics/network-growth)
 - [NVT ratio](/sandata/metrics/nvt-ratio)
 - [Share of daily active deposits in total daily active addresses](/sandata/metrics/share-of-daily-active-deposits-in-total-daily-active-addresses)
@@ -22,7 +21,6 @@ author: Santiment team
 - [Token Age Consumed](/sandata/metrics/token-age-consumed)
 - [Token Circulation](/sandata/metrics/token-circulation)
 - [Top 100 transactions](/sandata/metrics/top-100-transactions)
-
 - [Topic search](/sandata/metrics/topic-search)
 - [Transaction Volume](/sandata/metrics/transaction-volume)
 - [Velocity Of Tokens](/sandata/metrics/velocity-of-tokens)

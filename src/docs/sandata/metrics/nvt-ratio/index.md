@@ -6,7 +6,7 @@ author: Santiment Team
 *This metric can be found on the* [*`Ethereum & ERC20 MVRV`
 page*](https://data.santiment.net/d/4BpXRALik/05-ethereum-and-erc20-mvrv?orgId=1)
 *in Sandata, along with the MVRV metric which is described in* [*this
-article*](/sandata/metrics/mvrv-ratio)*.*
+article*](/metrics/mvrv)*.*
 
 The `Network Value-to-Transaction` (NVT) ratio is an asset valuation
 metric similar to the P/E ratio traditionally used in equity markets to

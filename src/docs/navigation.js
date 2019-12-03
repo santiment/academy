@@ -17,7 +17,6 @@ export const GRAPHS = {
     "Developer Activity",
     "Exchange Flow",
     "Exchange Flow Balance",
-    "MVRV Ratio",
     "Network Growth",
     "NVT ratio",
     "Share of daily active deposits in total daily active addresses",
@@ -42,7 +41,7 @@ export const NEURO = {
   },
   metrics: {
     title: "Metrics",
-    articles: ["Daily Active Addresses", "Daily Active Deposits", "Developer Activity", "Exchange Funds Flow", "History Price", "MVRV Ratio", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Social Dominance", "Social Volume", "Token Age Consumed", "Token Age Consumed In Days", "Token Circulation", "Top Social Gainers Losers", "Topic search", "Transaction Volume", "Trending Words", "Velocity Of Tokens"],
+    articles: ["Daily Active Addresses", "Daily Active Deposits", "Developer Activity", "Exchange Funds Flow", "History Price", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Social Dominance", "Social Volume", "Token Age Consumed", "Token Age Consumed In Days", "Token Circulation", "Top Social Gainers Losers", "Topic search", "Transaction Volume", "Trending Words", "Velocity Of Tokens"],
   },
 }
 

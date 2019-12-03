@@ -8,7 +8,6 @@ author: Santiment Team
 - [Developer Activity](/sanapi/metrics/developer-activity)
 - [Exchange Funds Flow](/sanapi/metrics/exchange-funds-flow)
 - [History Price](/sanapi/metrics/history-price)
-- [MVRV Ratio](/sanapi/metrics/mvrv-ratio)
 - [Network Growth](/sanapi/metrics/network-growth)
 - [NVT ratio](/sanapi/metrics/nvt-ratio)
 - [OHLC](/sanapi/metrics/ohlc)
