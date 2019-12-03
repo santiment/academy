@@ -55,7 +55,7 @@ If the coin is already in an uptrend, its presence on our Top 10 list might sign
 
 Other than the actual words, our list has 5 columns that help bring more context to the results:
 
-- **`Hype Score`** - this is the main criteria for ranking the words on our list. It based on a [sophisticated formula](/general/metrics/emerging-trends/#hype-score) (developed by Santiment) that analyzes all social media messages, and then - using a dozen parameters - ranks the words by the likelihood of sustained chatter.
+- **`Hype Score`** - this is the main criteria for ranking the words on our list. It based on a [sophisticated formula](/metrics/emerging-trends/#hype-score) (developed by Santiment) that analyzes all social media messages, and then - using a dozen parameters - ranks the words by the likelihood of sustained chatter.
 
 The bigger the **Hype Score**, the more likely it is that a particular word/topic will continue to be discussed in the near future, whereas a lower **Hype Score** means that although a word/topic is very popular in crypto at the moment, it’s already slowly losing the crowd’s attention.
 

@@ -72,7 +72,7 @@ using MetaMask through the Account settings page mentioned above.
 
 You are now ready to stake SAN to get access to discounts for your access plan. You can learn how to stake
 SAN tokens by reading [this
-article](/general/san-tokens/how-to-stake-san).
+article](/san-tokens/how-to-stake-san).
 For guidance on how to buy SAN tokens in the first place, please check
 [this
-article](/general/san-tokens/how-to-buy-san).
+article](/san-tokens/how-to-buy-san).

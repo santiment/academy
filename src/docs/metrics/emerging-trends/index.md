@@ -10,7 +10,7 @@ date: 2019-11-04
 
 The **Emerging trends** (or **Trending words**) is a list of words that describe the topics which *emerged* faster than any others over the last 24 hours. By "emerging" we mean getting more social attraction from the crowd, being discussed much more than any other topic.
 
-We detect these words by computing the so called *hype score* for each single word that is present in the [social data](/general/metrics/social-data/) after filtering and cleaning the data. Once this number is calculated, the words are ranked according to the corresponding scores in a descending order. The top 10 words in the resulting list are the top emerging trends.
+We detect these words by computing the so called *hype score* for each single word that is present in the [social data](/metrics/social-data/) after filtering and cleaning the data. Once this number is calculated, the words are ranked according to the corresponding scores in a descending order. The top 10 words in the resulting list are the top emerging trends.
 
 ### Filtering and Cleaning
 
@@ -34,7 +34,7 @@ $$
 
 where:
 
-- $v_i^n$ is the *normalized* social volume of the word at the moment $i$ (i.e. the usual [social volume](/general/metrics/social-volume-metrics/#social-volume) divided by the total amount of messages in that particular [data source](/general/metrics/social-data/)),
+- $v_i^n$ is the *normalized* social volume of the word at the moment $i$ (i.e. the usual [social volume](/metrics/social-volume-metrics/#social-volume) divided by the total amount of messages in that particular [data source](/metrics/social-data/)),
 
 - $u_t$ is the total amount of unique users that have used the word under consideration at least once.
 
@@ -64,7 +64,7 @@ Each data source is being processed separately and usually doesn't take longer t
 
 ## Available Assets
 
-The algorithm takes into account all the [social data](/general/metrics/social-data/), so the list may or may not contain asset names and tickers. We do track the emerging projects separately for the assets only, but currently it is not available through any of the products.
+The algorithm takes into account all the [social data](/metrics/social-data/), so the list may or may not contain asset names and tickers. We do track the emerging projects separately for the assets only, but currently it is not available through any of the products.
 
 ## How to Access
 

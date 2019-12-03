@@ -1,18 +1,3 @@
-export const GENERAL = {
-  products: {
-    title: "Products and plans",
-    articles: ["Access plans", "Santiment products", "Create an API key"],
-  },
-  tokens: {
-    title: "SAN tokens",
-    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
-  },
-  metrics: {
-    title: "Metrics",
-    articles: ["Daily Active Addresses", "MVRV", "EOS", "Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Mean coin age"],
-  }
-}
-
 export const GRAPHS = {
   about: {
     title: "About",
@@ -68,13 +53,16 @@ export const NEURO = {
 
 export const CATEGORIES = [
   {
-    title: "General",
-    description: "Info about our products, plans, metrics and SAN tokens",
-    blocks: [
-      GENERAL.products,
-      GENERAL.metrics,
-      GENERAL.tokens,
-    ]
+    title: "Products and plans",
+    articles: ["Access plans", "Santiment products", "Create an API key"],
+  },
+  {
+    title: "SAN tokens",
+    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
+  },
+  {
+    title: "Metrics",
+    articles: ["Daily Active Addresses", "MVRV", "EOS", "Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Mean coin age"],
   },
   {
     title: "Sanbase",
@@ -94,8 +82,7 @@ export const CATEGORIES = [
   },
   {
     title: "Sandata",
-    description:
-      "Advanced metrics and charts for 700+ coins",
+    description: "Advanced metrics and charts for 700+ coins",
     blocks: [GRAPHS.metrics, GRAPHS.about],
   },
 ]
@@ -103,11 +90,7 @@ export const CATEGORIES = [
 export const GETTING_STARTED = {
   title: "Getting started",
   blocks: [
-	  {
-	  	title: "For traders"
-	  },
-	  {
-	  	title: "For developers"
-	  }
+	  {title: "For traders"},
+	  {title: "For developers"}
   ],
 }

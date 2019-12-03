@@ -242,5 +242,5 @@ MVRV Difference
 |SanAPI|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
 |Sansheets|:x:|:x:|:x:|:x:|:x:|
 
-The metric can have additional restrictions. Check the restrictions in [access plans article](/general/products-and-plans/access-plans)
+The metric can have additional restrictions. Check the restrictions in [access plans article](/products-and-plans/access-plans)
 

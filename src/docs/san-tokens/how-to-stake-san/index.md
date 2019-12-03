@@ -5,7 +5,7 @@ author: Santiment Team
 
 *This article describes how to stake SAN tokens that are already in your
 posession. Please refer to* [*this
-article*](/general/san-tokens/how-to-buy-san)
+article*](/san-tokens/how-to-buy-san)
 *to learn how to buy SAN in the first place.*
 
 There are two ways to connect an Ethereum address to a Sanbase account.
