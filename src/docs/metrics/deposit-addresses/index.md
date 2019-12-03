@@ -1,5 +1,6 @@
+
 ---
-title: Sandata - Deposit Addresses
+title: Deposit Addresses
 author: Santiment Team
 ---
 
@@ -38,8 +39,8 @@ Analyzing deposit addresses can prove useful in several ways:
 
 Our current metrics for deposit addresses
 
-1.  [Daily Active Deposits (DAD)](/sandata/metrics/daily-active-deposits)
+1.  [Daily Active Deposits (DAD)](/metrics/metrics-for-deposit-addresses/#daily-active-deposits)
 2.  [Share of Daily Active Deposits in Total Daily Active Addresses
-    (SDD)](/sandata/metrics/share-of-daily-active-deposits-in-total-daily-active-addresses)
-3.  [Deposit-related Transactions](/sandata/metrics/deposit-related-transactions)
-4.  [Share of Deposit-related Transactions on Total Transactions (SDT)](/sandata/metrics/share-of-deposit-transactions-in-total-transactions)
+    (SDD)](/metrics//metrics-for-deposit-addresses/#share-of-daily-active-deposits-in-total-daily-active-addresses)
+3.  [Deposit-related Transactions](/metrics//metrics-for-deposit-addresses/#deposit-related-transactions)
+4.  [Share of Deposit-related Transactions on Total Transactions (SDT)](/metrics//metrics-for-deposit-addresses/#share-of-deposit-transactions-in-total-transactions)

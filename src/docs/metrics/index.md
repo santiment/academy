@@ -58,3 +58,5 @@ Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and 
 
 
 - [Top holders](/metrics/top-holders)
+- [Deposit Addresses](/metrics/deposit-addresses)
+- [Metrics for Deposit Addresses](/metrics/metrics-for-deposit-addresses)

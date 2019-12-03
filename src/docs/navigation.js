@@ -10,16 +10,10 @@ export const GRAPHS = {
   metrics: {
     title: "Metrics",
     articles: [
-    "Daily Active Deposits",
-    "Deposit Addresses",
-    "Deposit Related Transactions",
-    "Developer Activity",
     "Exchange Flow",
     "Exchange Flow Balance",
     "Network Growth",
     "NVT ratio",
-    "Share of daily active deposits in total daily active addresses",
-    "Share of deposit transactions in total transactions",
     "Token Circulation",
     "Top 100 transactions",
     "Transaction Volume",
@@ -35,14 +29,14 @@ export const NEURO = {
   },
   metrics: {
     title: "Metrics",
-    articles: ["Daily Active Deposits", "Developer Activity", "Exchange Funds Flow", "History Price", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Token Circulation", "Top Social Gainers Losers", "Transaction Volume", "Velocity Of Tokens"],
+    articles: ["Exchange Funds Flow", "History Price", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Token Circulation", "Top Social Gainers Losers", "Transaction Volume", "Velocity Of Tokens"],
   },
 }
 
 export const CATEGORIES = [
   {
     title: "Metrics",
-    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders", "Token Age Consumed"],
+    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders", "Token Age Consumed", "Deposit Addresses", "Metrics for deposit Addresses"],
   },
   {
     title: "Sanbase",

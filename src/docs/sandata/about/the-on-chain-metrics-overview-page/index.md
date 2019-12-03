@@ -47,11 +47,11 @@ metrics. Clicking it again will collapse it into the shown state.
 
 #### Deposits
 
--   [Daily Active Deposits](/sandata/metrics/daily-active-deposits)
--   [Share of Daily Active Deposits in DAA](/sandata/metrics/share-of-daily-active-deposits-in-total-daily-active-addresses)
+-   [Daily Active Deposits](/metrics/metrics-for-deposit-addresses/#daily-active-deposits)
+-   [Share of Daily Active Deposits in DAA](/metrics/metrics-for-deposit-addresses/#share-of-daily-active-deposits-in-total-daily-active-addresses)
 -   Deposits` Volume
--   [Deposits` Transactions](/sandata/metrics/deposit-related-transactions)
--   [Share of Deposits` Transactions in Total Transactions](/sandata/metrics/share-of-deposit-transactions-in-total-transactions)
+-   [Deposits` Transactions](/metrics/metrics-for-deposit-addresses/#deposit-related-transactions)
+-   [Share of Deposits` Transactions in Total Transactions](/metrics/metrics-for-deposit-addresses/#share-of-deposit-transactions-in-total-transactions)
 
 #### Withdrawals
 
