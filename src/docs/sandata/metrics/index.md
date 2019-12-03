@@ -4,7 +4,6 @@ author: Santiment team
 ---
 
 - [Average token age consumed in days](/sandata/metrics/average-token-age-consumed-in-days)
-- [Daily Active Addresses](/sandata/metrics/daily-active-addresses)
 - [Daily Active Deposits](/sandata/metrics/daily-active-deposits)
 - [Deposit Addresses](/sandata/metrics/deposit-addresses)
 - [Deposit Related Transactions](/sandata/metrics/deposit-related-transactions)

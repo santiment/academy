@@ -25,7 +25,7 @@ metrics. Clicking it again will collapse it into the shown state.
 
 #### Address Activity
 
--   [Daily Active Addresses (DAA)](/sandata/metrics/daily-active-addresses)
+-   [Daily Active Addresses (DAA)](/metrics/daily-active-addresses)
 -   [Network Growth](/sandata/metrics/network-growth)
 
 #### Token Consumption

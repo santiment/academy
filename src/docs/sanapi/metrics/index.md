@@ -3,7 +3,6 @@ title: SanAPI - Metrics
 author: Santiment Team
 ---
 
-- [Daily Active Addresses](/sanapi/metrics/daily-active-addresses)
 - [Daily Active Deposits](/sanapi/metrics/daily-active-deposits)
 - [Developer Activity](/sanapi/metrics/developer-activity)
 - [Exchange Funds Flow](/sanapi/metrics/exchange-funds-flow)
