@@ -10,8 +10,8 @@ const SocialBanner = () => (
         </svg>
       </div>
       <div>
-        <h3 className={styles.heading}>Join Community</h3>
-        <p className={styles.description}>Get help from our fast-growing community</p>
+        <h3 className={styles.heading}>Join our discord!</h3>
+        <p className={styles.description}>Talk directly with the Santiment team</p>
       </div>
     </a>
     <a href="https://app.santiment.net/support" target="_blank" rel="noopener noreferrer" className={styles.card}>
