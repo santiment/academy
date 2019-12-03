@@ -11,8 +11,6 @@ author: Santiment Team
 - [OHLC](/sanapi/metrics/ohlc)
 - [Percentage of token supply on exchanges](/sanapi/metrics/percentage-of-token-supply-on-exchanges)
 - [Realized value](/sanapi/metrics/realized-value)
-- [Token Age Consumed](/sanapi/metrics/token-age-consumed)
-- [Token Age Consumed In Days](/sanapi/metrics/token-age-consumed-in-days)
 - [Token Circulation](/sanapi/metrics/token-circulation)
 - [Top Social Gainers Losers](/sanapi/metrics/top-social-gainers-losers)
 - [Transaction Volume](/sanapi/metrics/transaction-volume)

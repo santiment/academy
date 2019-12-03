@@ -10,7 +10,6 @@ export const GRAPHS = {
   metrics: {
     title: "Metrics",
     articles: [
-    "Average token age consumed in days",
     "Daily Active Deposits",
     "Deposit Addresses",
     "Deposit Related Transactions",
@@ -21,7 +20,6 @@ export const GRAPHS = {
     "NVT ratio",
     "Share of daily active deposits in total daily active addresses",
     "Share of deposit transactions in total transactions",
-    "Token Age Consumed",
     "Token Circulation",
     "Top 100 transactions",
     "Transaction Volume",
@@ -37,14 +35,14 @@ export const NEURO = {
   },
   metrics: {
     title: "Metrics",
-    articles: ["Daily Active Deposits", "Developer Activity", "Exchange Funds Flow", "History Price", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Token Age Consumed", "Token Age Consumed In Days", "Token Circulation", "Top Social Gainers Losers", "Transaction Volume", "Velocity Of Tokens"],
+    articles: ["Daily Active Deposits", "Developer Activity", "Exchange Funds Flow", "History Price", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Token Circulation", "Top Social Gainers Losers", "Transaction Volume", "Velocity Of Tokens"],
   },
 }
 
 export const CATEGORIES = [
   {
     title: "Metrics",
-    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders"],
+    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders", "Token Age Consumed"],
   },
   {
     title: "Sanbase",

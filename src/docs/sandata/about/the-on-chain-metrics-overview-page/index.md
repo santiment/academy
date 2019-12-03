@@ -30,8 +30,8 @@ metrics. Clicking it again will collapse it into the shown state.
 
 #### Token Consumption
 
--   [Average Token Age Consumed in Days](/sandata/metrics/average-token-age-consumed-in-days)
--   [Token Age Consumed](/sandata/metrics/token-age-consumed)
+-   [Token Age Consumed](/metrics/token-age-consumed/)
+-   [Average Token Age Consumed in Days](/metrics/token-age-consumed/#average-token-age-consumed-in-days)
 
 #### Transactions
 

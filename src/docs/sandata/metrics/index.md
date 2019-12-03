@@ -3,7 +3,6 @@ title: Sandata Metrics
 author: Santiment team
 ---
 
-- [Average token age consumed in days](/sandata/metrics/average-token-age-consumed-in-days)
 - [Daily Active Deposits](/sandata/metrics/daily-active-deposits)
 - [Deposit Addresses](/sandata/metrics/deposit-addresses)
 - [Deposit Related Transactions](/sandata/metrics/deposit-related-transactions)
@@ -13,7 +12,6 @@ author: Santiment team
 - [NVT ratio](/sandata/metrics/nvt-ratio)
 - [Share of daily active deposits in total daily active addresses](/sandata/metrics/share-of-daily-active-deposits-in-total-daily-active-addresses)
 - [Share of deposit transactions in total transactions](/sandata/metrics/share-of-deposit-transactions-in-total-transactions)
-- [Token Age Consumed](/sandata/metrics/token-age-consumed)
 - [Token Circulation](/sandata/metrics/token-circulation)
 - [Top 100 transactions](/sandata/metrics/top-100-transactions)
 - [Transaction Volume](/sandata/metrics/transaction-volume)

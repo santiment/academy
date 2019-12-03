@@ -49,7 +49,7 @@ Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and 
 - [Daily Active Addresses](/metrics/daily-active-addresses)
 
 ### Token Flows/Movement/Activity
-- Token Age Consumed
+- [Token Age Consumed](/metrics/token-age-consumed)
 - Token Velocity
 - Transaction Volume
 - Token Circulation
