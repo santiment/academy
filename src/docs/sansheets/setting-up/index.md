@@ -45,4 +45,4 @@ Sansheets will take a second to activate and let you know as soon as it's ready:
 
 ## Getting access to more data
 
-To make full use of Sansheets, you will want to use an API key eventually. Find out [here](/general/products-and-plans/create-an-api-key) how to create one and [here](/sansheets/getting-started/adding-an-api-key) how to add it to Sansheets.
+To make full use of Sansheets, you will want to use an API key eventually. Find out [here](/general/products-and-plans/create-an-api-key) how to create one and [here](/sansheets/adding-an-api-key) how to add it to Sansheets.

@@ -13,17 +13,6 @@ export const GENERAL = {
   }
 }
 
-export const SHEETS = {
-  about: {
-    title: "Getting started",
-    articles: ["Setting up", "Adding an API key"],
-  },
-  functions: {
-    title: "API",
-    articles: ["Functions"],
-  }
-}
-
 export const GRAPHS = {
   about: {
     title: "About",
@@ -101,10 +90,7 @@ export const CATEGORIES = [
   {
     title: "Sansheets",
     description: "Google Spreadsheet plugin for Santiment data",
-    blocks: [
-      SHEETS.about,
-      SHEETS.functions,
-    ],
+    articles: ["Setting up", "Adding an API key", "Functions"]
   },
   {
     title: "Sandata",

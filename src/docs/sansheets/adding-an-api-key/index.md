@@ -5,7 +5,7 @@ author: Max Bartel
 
 Adding an API key to Sansheets is very simple. But there is two things
 you need to do first:
-- [Getting Sansheets ready](/sansheets/getting-started/setting-up/)
+- [Getting Sansheets ready](/sansheets/setting-up/)
 
 and
 - [creating an API key](https://sheets.santiment.net/account#api-keys).
