@@ -17,7 +17,7 @@ const Category = ({ title, description }) => {
       </div>
       <div>
         <h4 className={styles.title}>{title}</h4>
-        {description && <p className={styles.length}>{description}</p>}
+        <p className={styles.length}>{description || 'Duis aute irure dolor in reprehenderit'}</p>
       </div>
     </Link>
   )

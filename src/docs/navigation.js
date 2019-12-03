@@ -53,14 +53,6 @@ export const NEURO = {
 
 export const CATEGORIES = [
   {
-    title: "Products and plans",
-    articles: ["Access plans", "Santiment products", "Create an API key"],
-  },
-  {
-    title: "SAN tokens",
-    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
-  },
-  {
     title: "Metrics",
     articles: ["Daily Active Addresses", "MVRV", "EOS", "Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Mean coin age"],
   },
@@ -85,6 +77,14 @@ export const CATEGORIES = [
     description: "Advanced metrics and charts for 700+ coins",
     blocks: [GRAPHS.metrics, GRAPHS.about],
   },
+  {
+    title: "Products and plans",
+    articles: ["Access plans", "Santiment products", "Create an API key"],
+  },
+  {
+    title: "SAN tokens",
+    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
+  }
 ]
 
 export const GETTING_STARTED = {
