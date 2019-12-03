@@ -9,7 +9,8 @@ export const GRAPHS = {
   },
   metrics: {
     title: "Metrics",
-    articles: ["Average token age consumed in days",
+    articles: [
+    "Average token age consumed in days",
     "Daily Active Addresses",
     "Daily Active Deposits",
     "Deposit Addresses",
@@ -21,13 +22,9 @@ export const GRAPHS = {
     "NVT ratio",
     "Share of daily active deposits in total daily active addresses",
     "Share of deposit transactions in total transactions",
-    "Social data feed",
-    "Social dominance",
-    "Social Volume",
     "Token Age Consumed",
     "Token Circulation",
     "Top 100 transactions",
-    "Topic search",
     "Transaction Volume",
     "Velocity Of Tokens",
 ]
@@ -41,7 +38,7 @@ export const NEURO = {
   },
   metrics: {
     title: "Metrics",
-    articles: ["Daily Active Addresses", "Daily Active Deposits", "Developer Activity", "Exchange Funds Flow", "History Price", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Social Dominance", "Social Volume", "Token Age Consumed", "Token Age Consumed In Days", "Token Circulation", "Top Social Gainers Losers", "Topic search", "Transaction Volume", "Trending Words", "Velocity Of Tokens"],
+    articles: ["Daily Active Addresses", "Daily Active Deposits", "Developer Activity", "Exchange Funds Flow", "History Price", "Network Growth", "NVT ratio", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Token Age Consumed", "Token Age Consumed In Days", "Token Circulation", "Top Social Gainers Losers", "Transaction Volume", "Velocity Of Tokens"],
   },
 }
 
