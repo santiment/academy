@@ -1,17 +1,3 @@
-export const GRAPHS = {
-  about: {
-    title: "About",
-    articles: ["Navigation", "The erc 20 overview page", "The on-chain metrics overview page"],
-  },
-}
-
-export const NEURO = {
-  about: {
-    title: "API reference",
-    articles: ["Exploring", "Available queries", "Available metrics"],
-  },
-}
-
 export const CATEGORIES = [
   {
     title: "Metrics",
@@ -26,7 +12,7 @@ export const CATEGORIES = [
   {
     title: "SanAPI",
     description: "The most comprehensive crypto API on the market",
-    blocks: [NEURO.about],
+    articles: ["Exploring", "Available queries", "Available metrics"],
   },
   {
     title: "Sansheets",
@@ -36,7 +22,7 @@ export const CATEGORIES = [
   {
     title: "Sandata",
     description: "Advanced metrics and charts for 700+ coins",
-    blocks: [GRAPHS.about],
+    articles: ["Navigation", "The erc 20 overview page", "The on-chain metrics overview page"],
   },
   {
     title: "Products and plans",

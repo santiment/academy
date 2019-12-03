@@ -5,7 +5,7 @@ author: Santiment Team
 
 *This article is about the On-chain metrics overview for specific ERC-20
 tokens, which can be found through* [*`The ERC-20 overview
-page`*](/sandata/about/the-erc-20-overview-page)*.
+page`*](/sandata/the-erc-20-overview-page)*.
 It will list the current metrics that are part of this overview and link
 to their respective knowledge base article, where available.
 
@@ -26,7 +26,7 @@ metrics. Clicking it again will collapse it into the shown state.
 #### Address Activity
 
 -   [Daily Active Addresses (DAA)](/metrics/daily-active-addresses)
--   [Network Growth](/sandata/metrics/network-growth)
+-   [Network Growth](/metrics/network-growth)
 
 #### Token Consumption
 
@@ -35,15 +35,15 @@ metrics. Clicking it again will collapse it into the shown state.
 
 #### Transactions
 
--   [Transaction Volume](/sandata/metrics/transaction-volume)
--   [Token Circulation (Beta)](/sandata/metrics/token-circulation)
--   [Velocity of Tokens (Beta)](/sandata/metrics/velocity-of-tokens)
+-   [Transaction Volume](/metrics/transaction-volume)
+-   [Token Circulation](/metrics/token-circulation)
+-   [Velocity of Tokens](/metrics/velocity-of-tokens)
 
 #### Exchange Flow
 
--   [Exchange Flow Balance](/sandata/metrics/exchange-flow-balance)
--   [Exchange Flow](/sandata/metrics/exchange-flow)
--   Percent of Token Supply on Exchanges
+-   [Exchange Flow Balance](/metrics/exchange-flow-balance)
+-   [Exchange Flow](/metrics/exchange-flow)
+-   [Percent of Token Supply on Exchanges](/metrics/percentage-of-token-supply-on-exchanges)
 
 #### Deposits
 
@@ -63,4 +63,4 @@ metrics. Clicking it again will collapse it into the shown state.
 
 #### Top Transactions
 
--   [Top 100 Transactions](/sandata/metrics/top-100-transactions)
+-   [Top 100 Transactions](/metrics/top-100-transactions)
