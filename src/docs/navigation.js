@@ -44,7 +44,7 @@ export const NEURO = {
 export const CATEGORIES = [
   {
     title: "Metrics",
-    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Top holders"],
+    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders"],
   },
   {
     title: "Sanbase",

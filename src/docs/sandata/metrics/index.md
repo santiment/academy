@@ -7,7 +7,6 @@ author: Santiment team
 - [Daily Active Deposits](/sandata/metrics/daily-active-deposits)
 - [Deposit Addresses](/sandata/metrics/deposit-addresses)
 - [Deposit Related Transactions](/sandata/metrics/deposit-related-transactions)
-- [Developer Activity](/sandata/metrics/developer-activity)
 - [Exchange Flow](/sandata/metrics/exchange-flow)
 - [Exchange Flow Balance](/sandata/metrics/exchange-flow-balance)
 - [Network Growth](/sandata/metrics/network-growth)

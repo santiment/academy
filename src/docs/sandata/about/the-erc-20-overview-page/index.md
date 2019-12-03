@@ -36,7 +36,7 @@ particular token:
 -   ***`Github Activity`*** - shows how active the development team of
     the project seems to be on Github. We use a certain way to calculate
     this, find out more
-    [here](/sandata/metrics/developer-activity).
+    [here](/metrics/developer-activity).
 -   ***`Price-volume Difference Indicator`*** - a metric that shows
     when our experimental signal has fired in the past. You can find our
     experimental signals on [our
