@@ -1,18 +1,3 @@
-export const SANBASE = {
-  about: {
-    title: "About",
-    articles: ["Assets page", "Insights", "Sonar page", "Emerging trends page", "Social trends search"],
-  },
-  myAccount: {
-    title: "My account",
-    articles: ["Account settings", "Logging into Sanbase"],
-  },
-  faq: {
-    title: "FAQ",
-    articles: ["Requesting display new project"],
-  },
-}
-
 export const GENERAL = {
   products: {
     title: "Products and plans",
@@ -104,9 +89,9 @@ export const CATEGORIES = [
   },
   {
     title: "Sanbase",
-    description:
-      "Platform for in-depth coin analysis, signals and watchlists",
-    blocks: [SANBASE.about, SANBASE.myAccount, SANBASE.faq],
+    description: "Platform for in-depth coin analysis, signals and watchlists",
+    articles: ["Assets page", "Insights", "Sonar page", "Emerging trends page", "Social trends search", "Account settings", "Logging into Sanbase","Requesting display new project"],
+
   },
   {
     title: "SanAPI",

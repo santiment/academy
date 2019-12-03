@@ -15,7 +15,7 @@ or add it to an existing account.
 ## Logging into Sanbase using MetaMask
 
 This procedure is described in the article [Logging into
-Sanbase](/sanbase/my-account/logging-into-sanbase),
+Sanbase](/sanbase/logging-into-sanbase),
 please check there.
 
 ## Connecting a wallet to an already existing account

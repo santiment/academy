@@ -54,7 +54,7 @@ your SAN tokens.
 
 Now just be logged in to Metamask with that account selected when you
 visit Sanbase and [log in by
-MetaMask](/sanbase/my-account/logging-into-sanbase).
+MetaMask](/sanbase/logging-into-sanbase).
 We'll detect the SAN you're holding and grant you access to more data,
 based on the amount of tokens you hold.
 

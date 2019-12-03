@@ -8,7 +8,7 @@ import styles from "./Sidebar.module.scss"
 const isBlockActive = (active = [], category, block) =>
   active[0] === titleToSlug(category) && active[1] === titleToSlug(block)
 const isArticleActive = (active = [], category, block, article) =>
-  isBlockActive(active, category, block) && active[2] === titleToSlug(article)
+  (block === null || isBlockActive(active, category, block)) && active[2] === titleToSlug(article)
 
 const Sidebar = ({ className }) => {
   let active = []
@@ -43,7 +43,27 @@ const Sidebar = ({ className }) => {
           <li className={styles.category__wrapper}>
             <span className={styles.category}>{category.title}</span>
             <ul className={styles.blocks}>
-              {category.blocks.map(({ title, articles }) => (
+              <ul className={styles.articles}>
+                      {(category.articles || []).map(article => (
+                        <li>
+                          <Link
+                            to={`/${titleToSlug(category.title)}/${titleToSlug(article)}/`}
+                            className={cx(
+                              styles.article,
+                              isArticleActive(
+                                active,
+                                category.title,
+                                null,
+                                article
+                              ) && styles.article__active
+                            )}
+                          >
+                            {article}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+              {(category.blocks || []).map(({ title, articles }) => (
                 <li>
                   {articles.length ? (
                     <Link
