@@ -55,3 +55,6 @@ Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and 
 - Token Circulation
 
 [EOS on-chain metrics](/metrics/eos)
+
+
+- [Top holders](/metrics/top-holders)

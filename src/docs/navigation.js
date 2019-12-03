@@ -28,11 +28,6 @@ export const GRAPHS = {
     "Token Age Consumed",
     "Token Circulation",
     "Top 100 transactions",
-    "Top holders",
-    "Top holders balance",
-    "Top holders changes",
-    "Top holders details",
-    "Top holders percent of total supply",
     "Topic search",
     "Transaction Volume",
     "Velocity Of Tokens",
@@ -54,7 +49,7 @@ export const NEURO = {
 export const CATEGORIES = [
   {
     title: "Metrics",
-    articles: ["Daily Active Addresses", "MVRV", "EOS", "Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Mean coin age"],
+    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Top holders"],
   },
   {
     title: "Sanbase",

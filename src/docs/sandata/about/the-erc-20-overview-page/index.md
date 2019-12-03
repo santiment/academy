@@ -44,7 +44,7 @@ particular token:
 -   ***`Top Holders`***  - Find out about the (up to) 100 hundred
     accounts which rank highest in amount of tokens held - and how that
     list changes. Check out [this article
-    set](/sandata/metrics/top-holders)
+    set](/metrics/top-holders)
     to learn more.
 
 To find some of these metrics for Ether or Bitcoin, you can use the same

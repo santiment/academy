@@ -22,11 +22,7 @@ author: Santiment team
 - [Token Age Consumed](/sandata/metrics/token-age-consumed)
 - [Token Circulation](/sandata/metrics/token-circulation)
 - [Top 100 transactions](/sandata/metrics/top-100-transactions)
-- [Top holders](/sandata/metrics/top-holders)
-- [Top holders balance](/sandata/metrics/top-holders-balance)
-- [Top holders changes](/sandata/metrics/top-holders-changes)
-- [Top holders details](/sandata/metrics/top-holders-details)
-- [Top holders percent of total supply](/sandata/metrics/top-holders-percent-of-total-supply)
+
 - [Topic search](/sandata/metrics/topic-search)
 - [Transaction Volume](/sandata/metrics/transaction-volume)
 - [Velocity Of Tokens](/sandata/metrics/velocity-of-tokens)
