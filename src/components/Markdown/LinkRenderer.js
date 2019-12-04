@@ -15,7 +15,7 @@ const LinkRenderer = ({href, children}) => {
   	}
   }
 
-  return isLinkComponent ? <Link to={link}>{children}</Link> : <a href={link}>{children}</a>
+  return isLinkComponent ? <Link to={link}>{children}</Link> : <a href={href}>{children}</a>
 }
 
 export default LinkRenderer
