@@ -4,6 +4,7 @@ import SEO from '../components/seo'
 // import Search from '../components/Search/Search'
 import Category from '../components/Category/Category'
 import SocialBanner from '../components/Banner/SocialBanner'
+import Changelog from '../components/Banner/ChangelogBanner'
 import {CATEGORIES} from '../docs/navigation'
 // import GettingStarted from "../components/GettingStarted/GettingStarted"
 import styles from './index.module.scss'
@@ -19,6 +20,7 @@ const IndexPage = ({pageContext}) => {
       <div className={styles.blocks}>
         {CATEGORIES.map(({title, ...rest}) => <Category key={title} title={title} {...rest} />)}
       </div>
+      <Changelog />
       <SocialBanner />
       </div>
     </section>
