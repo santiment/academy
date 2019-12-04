@@ -1,11 +1,11 @@
-import Metrics from "../images/docs/glossary.svg"
+import Metrics from "../images/docs/metrics.svg"
 import ProductsAndPlans from "../images/docs/products-and-plans.svg"
 import SANtokens from "../images/docs/san-tokens.svg"
 import SanAPI from "../images/docs/sanapi.svg"
 import Sandata from "../images/docs/sandata.svg"
 import Sansheets from "../images/docs/sansheets.svg"
 import Sanbase from "../images/docs/sanbase.svg"
-// import Glossary from "./images/docs/glossary.svg"
+import Glossary from "../images/docs/glossary.svg"
 
 export const GRAPHS = {
   about: {
@@ -100,6 +100,11 @@ export const CATEGORIES = [
     title: "SAN tokens",
     icon: SANtokens,
     articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
+  },
+  {
+    title: "Glossary",
+    icon: Glossary,
+    articles: ["Asset"]
   }
 ]
 
