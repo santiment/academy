@@ -21,7 +21,7 @@
 
 
 	@include responsive('phone', 'phone-xs') {
-
+		padding: 30px;
 	}
 }
 
@@ -35,5 +35,5 @@
 	color: var(--waterloo);
 	margin: 0;
 	@include text("body-2");
-	max-width: 600px;
+	max-width: 550px;
 }

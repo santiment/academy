@@ -5,7 +5,7 @@ import styles from "./ChangelogBanner.module.scss"
 const ChangelogBanner = () => (
     <Link to="/changelog" className={styles.card}>
         <h3 className={styles.heading}>Development changelog</h3>
-        <p className={styles.description}>Keep track of changes and upgrades. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when</p>
+        <p className={styles.description}>Keep track of development updates, new product features and other items from our changelog</p>
     </Link>
 )
 
