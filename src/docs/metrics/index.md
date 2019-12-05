@@ -12,11 +12,8 @@ We emphasize plotting metrics against price over time, to more easily spot how t
 
 Traditional fundamentals including price, volume and market cap, plus crypto-related data like total supply, circulating supply, top transactions, ETH spent by the team and ROI since ICO (if applicable)
 
-- Price
-- Volume
-- Marketcap
-- [Mean Coin Age](/metrics/mean-coin-age). For each coin we see how long it has stayed at its current address and we compute the average of all those ages. The difference between "coin age" and "dollar age" comes from the different way that we compute the averages.
-- Mean dollar invested age
+- [History Price](/metrics/history-price)
+- [Mean Coin Age](/metrics/mean-coin-age)
 
 ## Social/Sentiment
 
@@ -32,7 +29,7 @@ Metrics taken from measuring social activity on crypto-related forums and channe
 
 Custom Github metric we created to accurately measure a team’s development activity.
 
-- Development activity based on number of Github 'events' including PRs, comments, and wiki edits, plus the number of public repositories a project is maintaining
+- [Development activity](/metrics/developer-activity) based on number of Github 'events' including PRs, comments, and wiki edits, plus the number of public repositories a project is maintaining
 
 ## On-chain
 
@@ -41,17 +38,31 @@ Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and 
 ### Network value
 - Realized Cap
 - [Market Value To Realized Value](/metrics/mvrv)
-- NVT Ratio Circulation
-- NVT Ratio Transaction Volume
+- [NVT Ratio](/metrics/nvt-ratio)
 
 ### Network Activity
-- Network Growth
+- [Network Growth](/metrics/network-growth)
 - [Daily Active Addresses](/metrics/daily-active-addresses)
 
 ### Token Flows/Movement/Activity
-- Token Age Consumed
-- Token Velocity
-- Transaction Volume
-- Token Circulation
+- [Token Age Consumed](/metrics/token-age-consumed)
+- [Velocity of tokens](/metrics/token-velocity)
+- [Transaction Volume](/metrics/transaction-volume)
+- [Token Circulation](/metrics/token-circulation)
 
-[EOS on-chain metrics](/metrics/eos)
+
+---
+
+- [EOS on-chain metrics](/metrics/eos)
+- [Top holders](/metrics/top-holders)
+- [Deposit Addresses](/metrics/deposit-addresses)
+- [Metrics for Deposit Addresses](/metrics/metrics-for-deposit-addresses)
+- [Exchange Flow metrics](/metrics/exchange-flow-metrics)
+- [Top 100 Transactions](/metrics/top-100-transactions)
+
+---
+
+- [OHLC](/metrics/ohlc)
+- [Percentage of token supply on exchanges](/metrics/percentage-of-token-supply-on-exchanges)
+- [Realized value](/metrics/realized-value)
+- [Top Social Gainers and Losers](/metrics/top-social-gainers-losers)
