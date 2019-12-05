@@ -1,4 +1,3 @@
-
 ---
 title: Deposit Addresses
 author: Santiment Team

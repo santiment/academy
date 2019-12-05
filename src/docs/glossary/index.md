@@ -3,4 +3,4 @@ title: Glossary
 author: Santiment Team
 ---
 
-- [Assets](/glossary/assets/)
+- [Asset](/glossary/asset/)
