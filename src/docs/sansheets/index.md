@@ -7,8 +7,8 @@ description: Get relevant access for on-chain, social development activity, pric
 Get relevant access for on-chain, social development activity, prices and volume data with Sansheets!
 
 ## Getting Started
-- [Getting up Sansheets](/sansheets/getting-started/setting-up/)
-- [Adding an API key to Sansheets](/sansheets/getting-started/adding-an-api-key/)
+- [Getting up Sansheets](/sansheets/setting-up/)
+- [Adding an API key to Sansheets](/sansheets/adding-an-api-key/)
 
 ## API
-- [List of all functions](/sansheets/api/functions/)
+- [List of all functions](/sansheets/functions/)

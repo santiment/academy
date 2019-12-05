@@ -88,7 +88,7 @@ const SantimentProductsTooltip = ({ className, children }) => {
       trigger={
         <div className={cx(className, styles.trigger)}>
           <a href='https://app.santiment.net' className={styles.sanbaseLink}>
-            <img src={mainLogo} />
+            <img src={mainLogo} alt="Sanbase" />
           </a>
           {children}
           <div className={cx(styles.arrow, isOpen && styles.opened)}>
