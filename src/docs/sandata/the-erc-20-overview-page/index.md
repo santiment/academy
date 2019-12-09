@@ -46,6 +46,7 @@ particular token:
     list changes. Check out [this article
     set](/metrics/top-holders)
     to learn more.
+-   ***\'Holders Distribution\'***  - shows a breakdown of how distributed the tokens of a network are. In other words, how many token holders hold how many tokens.
 
 To find some of these metrics for Ether or Bitcoin, you can use the same
 terms and find them via the full metrics list in the upper left corner.
