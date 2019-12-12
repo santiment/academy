@@ -3,6 +3,6 @@ title: Glossary
 author: Santiment Team
 ---
 
+you can earn money with us
+
 - [Asset](/glossary/asset/)
-- [Metric](/glossary/metric/)
-- [For traders](/glossary/fortraders/)
