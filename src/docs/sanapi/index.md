@@ -5,19 +5,71 @@ date: "2019-09-20"
 description: This page contains a reference of all the APIs provided by Santiment.
 ---
 
-This page contains a reference of all the APIs provided by Santiment.
-
 ## Overview
 
 Santiment API uses [GraphQL](https://graphql.org). From the beginning we decided
 to use GraphQL instead of REST for a number of reasons:
 
 - You can request exactly the data you need and also easily batch requests together.
-  This is effectevly handling the issues with underfetching and overfetching data. Why
+  This is effectively handling the issues with underfetching and overfetching data. Why
   fetching all 20+ fields of a project when you only need its name?
 - The request describes the format of the response. You no longer need
   to wonder what data the result contains and how to parse it.
 - Easy out-of-the-box way to explore our API via our Live Explorer
+
+## Let's start
+For example we want to get development activity of Ethereum team.
+Copy and paste this curl request to your console:
+
+```bash
+curl -X POST -H "Content-Type: application/graphql" --data '{devActivity(from: "2019-01-01T00:00:00Z", interval: "1d", slug: "ethereum", to: "2019-01-07T00:00:00Z") { activity datetime }}' https://api.santiment.net/graphql
+```
+
+You will see this response:
+
+```bash
+{"data":{"devActivity":[{"activity":0,"datetime":"2019-01-01T00:00:00Z"},{"activity":6,"datetime":"2019-01-02T00:00:00Z"},{"activity":0,"datetime":"2019-01-03T00:00:00Z"},{"activity":4,"datetime":"2019-01-04T00:00:00Z"},{"activity":0,"datetime":"2019-01-05T00:00:00Z"},{"activity":0,"datetime":"2019-01-06T00:00:00Z"}]}}
+```
+
+To get the full list of available metrics you can visit [metrics](https://academy.santiment.net/metrics/)
+For example, for dev activity you can open [this
+page](https://academy.santiment.net/metrics/developer-activity/) to get the full instructions
+
+Also we have a python wrapper for our graphql API, usage of this library is even
+easier.
+
+[Sanpy library](https://github.com/santiment/sanpy)
+
+```
+pip install sanpy
+```
+
+And you can try to get the same ethereum team dev activity data with this python library
+
+```python
+report = san.get(
+    "dev_activity/ethereum",
+    from_date="2019-01-01",
+    to_date="2019-01-07",
+    interval="1d"
+)
+
+print(report)
+```
+
+Example result:
+
+```
+                           activity
+datetime                           
+2019-01-01 00:00:00+00:00        44
+2019-01-02 00:00:00+00:00        89
+2019-01-03 00:00:00+00:00       140
+2019-01-04 00:00:00+00:00       177
+2019-01-05 00:00:00+00:00        46
+2019-01-06 00:00:00+00:00        22
+2019-01-07 00:00:00+00:00       552
+```
 
 ## Authentication
 
