@@ -18,6 +18,7 @@ list:
 
 `small code block`
 
+![](./ink.png)
 
 
 ### small heading
