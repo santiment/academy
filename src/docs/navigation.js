@@ -61,8 +61,5 @@ export const CATEGORIES = [
 
 export const GETTING_STARTED = {
   title: "Getting started",
-  blocks: [
-	  {title: "For traders"},
-	  {title: "For developers"}
-  ],
+  articles: ["For traders","For developers"]
 }
