@@ -50,17 +50,32 @@
   color: var(--casper);
 }
 
+.arrow {
+  padding: 10px;
+  box-sizing: content-box;
+  transition: all .05s ease-in-out;
+  visibility: hidden;
+
+  &:hover {
+    transform: scale(1.8);
+  }
+}
+
 .category {
-  @include text("body-2");
-  color: var(--rhino);
-  padding: 2px 10px;
-  margin-left: 10px;
   border-radius: 4px;
+  padding: 2px 10px;
+  margin-left: -10px;
   width: 100%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+
+  }
 
   &__wrapper {
-    margin: 17px 32px 10px 0;
+    margin: 17px 9px 10px 0;
 
     // &:first-child {
     //   padding-bottom: 32px;
@@ -71,11 +86,25 @@
   &__active {
     background-color: var(--jungle-green-light);
     color: var(--jungle-green-hover);
+    fill: var(--jungle-green-hover);
+
+    & .arrow {
+      visibility: visible;
+    }
   }
 
   &:hover {
     background-color: var(--jungle-green-light);
     color: var(--jungle-green);
+    fill: var(--jungle-green);
+
+    & .arrow {
+      visibility: visible;
+    }
+  }
+
+  .arrow {
+
   }
 }
 

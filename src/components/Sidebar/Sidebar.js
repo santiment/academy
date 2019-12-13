@@ -1,6 +1,7 @@
 import React from "react"
 import cx from "classnames"
 import { Link } from "gatsby"
+import Icon from '@santiment-network/ui/Icon'
 import { CATEGORIES, GETTING_STARTED } from "../../docs/navigation"
 import { titleToSlug } from "../../utils/docs"
 import styles from "./Sidebar.module.scss"
@@ -37,15 +38,15 @@ const Sidebar = ({ className }) => {
             <h3 className={styles.heading}>Resources</h3>
           {CATEGORIES.map(({ title, articles }) => (
             <li className={styles.category__wrapper}>
-              <Link
-                to={`/${titleToSlug(title)}/`}
-                className={cx(
-                  styles.category,
-                  isCategoryActive(active, title) && styles.category__active
-                )}
-              >
-                {title}
-              </Link>
+              <div className={cx(styles.category, isCategoryActive(active, title) && styles.category__active)}>
+                <Link
+                  to={`/${titleToSlug(title)}/`}
+                  className={cx(styles.category__title)}
+                >
+                  {title}
+                </Link>
+                <Icon type='arrow-right' className={styles.arrow}/>
+              </div>
               {isCategoryActive(active, title) && (
                 <ul className={styles.articles}>
                   {(articles || []).map(article => (
