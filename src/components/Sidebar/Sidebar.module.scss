@@ -44,9 +44,20 @@
   }
 }
 
-.category {
+.heading {
+  margin: 32px 0 12px 0;
   @include text("caption", "m");
   color: var(--casper);
+}
+
+.category {
+  @include text("body-2");
+  color: var(--rhino);
+  padding: 2px 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+  width: 100%;
+  display: block;
 
   &__wrapper {
     margin: 17px 32px 10px 0;
@@ -58,43 +69,13 @@
   }
 
   &__active {
-    color: var(--jungle-green);
+    background-color: var(--jungle-green-light);
+    color: var(--jungle-green-hover);
   }
-}
-
-.block {
-  display: inline-block;
-  @include text("body-2");
-  color: var(--rhino);
-  position: relative;
-  padding: 8px 0 0;
 
   &:hover {
+    background-color: var(--jungle-green-light);
     color: var(--jungle-green);
-  }
-
-  &__active {
-  	color: var(--jungle-green);
-  }
-
-  &__disabled {
-    color: $bali-hai;
-
-    &:hover {
-      color: $bali-hai;
-    }
-
-    &:before {
-      position: absolute;
-      display: block;
-      background: var(--porcelain);
-      content: "soon";
-      left: 100%;
-      @include text("caption");
-      padding: 0 4px;
-      margin: 4px 0 0 10px;
-      border-radius: 4px;
-    }
   }
 }
 

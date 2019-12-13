@@ -1,7 +1,7 @@
 import React from "react"
 import cx from "classnames"
 import { Link } from "gatsby"
-import { CATEGORIES } from "../../docs/navigation"
+import { CATEGORIES, GETTING_STARTED } from "../../docs/navigation"
 import { titleToSlug } from "../../utils/docs"
 import styles from "./Sidebar.module.scss"
 
@@ -20,6 +20,21 @@ const Sidebar = ({ className }) => {
     <section className={cx(styles.wrapper, className)}>
       <div className={styles.content}>
         <ul className={styles.list}>
+            <h3 className={styles.heading}>{GETTING_STARTED.title}</h3>
+          <li>
+            <ul className={styles.articles}>
+              {(GETTING_STARTED.articles || []).map(article => (
+                <li>
+                  <Link
+                    to={`${titleToSlug(article)}/`}
+                    className={cx(styles.article, isArticleActive(active, GETTING_STARTED.title, article) && styles.article__active)}>
+                    {article}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+            <h3 className={styles.heading}>Resources</h3>
           {CATEGORIES.map(({ title, articles }) => (
             <li className={styles.category__wrapper}>
               <Link
