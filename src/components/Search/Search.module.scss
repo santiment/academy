@@ -2,7 +2,51 @@
 
 .wrapper {
 	height: 288px;
-	width: 100%;
+	width: 100vw;
 	margin: -44px -40px 44px -40px;
 	background: var(--athens);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.heading {
+	color: var(--mirage);
+	margin: 64px 0 32px;
+
+	@include text('h3');
+}
+
+.input {
+	width: 500px;
+	height: 48px;
+	padding-left: 44px !important;
+}
+
+.icon {
+	transform: scale(1.33);
+  margin-left: 8px;
+}
+
+.suggestions {
+	display: flex;
+	align-items: center;
+	margin-top: 16px;
+}
+
+.group {
+	@include text('caption');
+	color: var(--casper);
+	margin-right: 15px;
+}
+
+.word {
+	display: inline-block;
+	border: 1px solid var(--porcelain);
+	border-radius: 4px;
+	padding: 3px 6px;
+	color: var(--waterloo);
+	margin-right: 8px;
+
+	@include text('caption');
 }

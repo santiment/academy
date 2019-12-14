@@ -67,7 +67,7 @@ export default function HTML(props) {
           async
           src='https://www.googletagmanager.com/gtag/js?id=UA-100571693-8'
         />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+        {/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" /> */}
         {gtagScript}
       </head>
       <body {...props.bodyAttributes}>
@@ -81,15 +81,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-        <script type="text/javascript">
-          docsearch({
-            apiKey: '93cdd643257923145fa8093e68b5c453',
-            indexName: 'santiment_academy',
-            inputSelector: '#search',
-            debug: false // Set debug to true if you want to inspect the dropdown
-          });
-        </script>
+        {/* <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> */}
       </body>
     </html>
   )

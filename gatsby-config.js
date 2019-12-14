@@ -75,6 +75,15 @@ module.exports = {
         useClassNames: true,
       }
      },
+     {
+    resolve: `gatsby-plugin-algolia-docsearch`,
+    options: {
+        apiKey: "93cdd643257923145fa8093e68b5c453", // required
+        indexName: "santiment_academy", // required
+        inputSelector: "#search", // required
+        debug: false // (bool) Optional. Default `false`
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
