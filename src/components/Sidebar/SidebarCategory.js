@@ -7,13 +7,13 @@ import { titleToSlug } from "../../utils/docs"
 import styles from "./Sidebar.module.scss"
 
 const setCategoryState = ({ title, isOpen }) => {
-  if (isLocalStorage) {
+  if (isLocalStorage()) {
     isOpen ? localStorage.setItem(`category_${title}`, '+') : localStorage.removeItem(`category_${title}`)
   }
 }
 
 const getCategoryState = ({ title, isActive }) => {
-  if (isLocalStorage) {
+  if (isLocalStorage()) {
     let state = localStorage.getItem(`category_${title}`)
     setCategoryState({ title, isOpen: !!state })
     return !!state
