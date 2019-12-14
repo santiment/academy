@@ -28,7 +28,7 @@ curl -X POST -H "Content-Type: application/graphql" --data '{devActivity(from: "
 You will see this response:
 
 ```bash
-{"data":{"devActivity":[{"activity":0,"datetime":"2019-01-01T00:00:00Z"},{"activity":6,"datetime":"2019-01-02T00:00:00Z"},{"activity":0,"datetime":"2019-01-03T00:00:00Z"},{"activity":4,"datetime":"2019-01-04T00:00:00Z"},{"activity":0,"datetime":"2019-01-05T00:00:00Z"},{"activity":0,"datetime":"2019-01-06T00:00:00Z"}]}}
+{"data":{"devActivity":[{"activity":44,"datetime":"2019-01-01T00:00:00Z"},{"activity":89,"datetime":"2019-01-02T00:00:00Z"},{"activity":140,"datetime":"2019-01-03T00:00:00Z"},{"activity":177,"datetime":"2019-01-04T00:00:00Z"},{"activity":46,"datetime":"2019-01-05T00:00:00Z"},{"activity":22,"datetime":"2019-01-06T00:00:00Z"}]}}
 ```
 
 To get the full list of available metrics you can visit [metrics](https://academy.santiment.net/metrics/)
