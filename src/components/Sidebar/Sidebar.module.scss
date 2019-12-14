@@ -53,8 +53,9 @@
 .arrow {
   padding: 10px;
   box-sizing: content-box;
-  transition: all .05s ease-in-out;
+  transition: all 0.05s ease-in-out;
   visibility: hidden;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.8);
@@ -63,7 +64,7 @@
 
 .category {
   border-radius: 4px;
-  padding: 2px 10px;
+  padding: 2px 4px 2px 10px;
   margin-left: -10px;
   width: 100%;
   display: flex;
@@ -71,7 +72,7 @@
   justify-content: space-between;
 
   &__title {
-
+    width: 100%;
   }
 
   &__wrapper {
@@ -93,6 +94,33 @@
     }
   }
 
+  &__opened .articles {
+    height: auto;
+    margin: 16px 0;
+    overflow: visible;
+  }
+
+  &__opened .arrow {
+    visibility: visible;
+    transform: rotate(90deg);
+
+    &:hover {
+      transform: rotate(90deg) scale(1.8);
+    }
+  }
+
+  &__opened .category {
+    background-color: var(--jungle-green-light);
+    color: var(--rhino);
+    fill: var(--jungle-green-hover);
+  }
+
+  &__opened .category__active {
+    background-color: var(--jungle-green-light);
+    color: var(--jungle-green-hover);
+    fill: var(--jungle-green-hover);
+  }
+
   &:hover {
     background-color: var(--jungle-green-light);
     color: var(--jungle-green);
@@ -102,15 +130,16 @@
       visibility: visible;
     }
   }
-
-  .arrow {
-
-  }
 }
 
 .articles {
   margin: 16px 0;
   position: relative;
+  transition: all 0.2s ease-in-out;
+
+  height: 0;
+  margin: 0;
+  overflow: hidden;
 
   &:before {
     position: absolute;
@@ -127,7 +156,6 @@
 
 .article {
   display: block;
-  // margin: 4px 0;
   padding: 4px 0 4px 16px;
   color: var(--waterloo);
   position: relative;
@@ -139,18 +167,18 @@
   @include text("body-3");
 
   &__active {
-  	color: var(--jungle-green);
+    color: var(--jungle-green);
 
-  	&:before {
-			position: absolute;
-			display: block;
-			background: var(--jungle-green);
-			top: 0;
-			left: 0;
-			content: '';
-			width: 2px;
-			height: 100%;
-			border-radius: 8px;
-		}
+    &:before {
+      position: absolute;
+      display: block;
+      background: var(--jungle-green);
+      top: 0;
+      left: 0;
+      content: "";
+      width: 2px;
+      height: 100%;
+      border-radius: 8px;
+    }
   }
 }
