@@ -81,7 +81,7 @@ module.exports = {
         apiKey: "93cdd643257923145fa8093e68b5c453", // required
         indexName: "santiment_academy", // required
         inputSelector: "#search", // required
-        debug: false // (bool) Optional. Default `false`
+        debug: true
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
