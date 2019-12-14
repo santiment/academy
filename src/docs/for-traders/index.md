@@ -19,7 +19,8 @@ As a general overview, Santiment tools can enhance and complement your trading i
 
 A number of our metrics have proven highly effective in signalling forming tops and impending corrections. Here’s just a few examples:
 
--> Using our social data, we found that extreme spikes in a coin’s social volume during a rally are often a reliable indicator of local tops. This is especially the case with mid and low-cap coins, who mostly ever attract ‘mainstream’ crypto attention during breakouts, so the increased social chatter is almost always pump-related.
+-> Using our social data, we found that extreme spikes in a coin’s social volume during a rally are often a reliable indicator of local tops. This is especially the case with mid and low-cap coins, who mostly ever attract ‘mainstream’ crypto attention during breakouts, so the increased social chatter is almost always pump-related. This period of ‘peak hype’ for a coin is an exceedingly risky time to enter into position - or not exit the one you’re already in.
+
 
 On Sanbase, you can subscribe to alerts whenever a coin you’re interested in experiences a surge in social volume, signaling a correction.
 
@@ -27,16 +28,16 @@ Our [Social Trends tool](https://app.santiment.net/labs/trends) lets you view an
 
 Example: MATIC
 
-![](image1.png)
+![](image7.png)
 
 
 Example: NEO
 
-![](image2.png)
+![](image6.png)
 
 Example: Tezos
 
-![](image3.png)
+![](image8.png)
 
 
 -> Another custom Santiment metric - **Mean Dollar Invested Age** - has been a reliable top indicator for Bitcoin over its entire lifespan.
@@ -45,7 +46,7 @@ Mean dollar invested age calculates how long each Bitcoin has stayed in its curr
 
 Every major Bitcoin top so far was accompanied by a significant drop in mean dollar age:
 
-![](image4.png)
+![](image2.png)
 
 There are dozens of examples of different Santiment metrics being able to predict tops. Check out the ‘Metrics’ tab on the Academy’s homepage for more use cases and metric tutorials.
 
@@ -70,13 +71,13 @@ In short, the MVRV Long/Short Divergence calculates the difference in the MVRV r
 Historically, whenever the Long/Short Divergence line crossed 0, it indicated an end of a bear cycle for Bitcoin and jumpstarted the next bull cycle. The last time this indicator crossed 0 was on May 7th 2019 when Bitcoin was around $5830. Within a week, it broke $8000:
 
 
-![](image5.png)
+![](image4.png)
 
 -> We have recently developed another novel bottom indicator while examining the divergences in price and on-chain activity, namely daily active addresses (DAA for short)
 
 You can read the full methodology [in our insight](https://insights.santiment.net/read/price---daily-addresses-divergence%3A-%0Aa-primer-on-on-chain-trading-strategies-2222). In short, at times when the asset’s price trended downwards while the amount of DAA shifted in the opposite direction (above a certain angle/threshold), this divergence has often presented very effective entry points for Bitcoin, Ethereum and other crypto assets in the past. The opposite trend also proved a potent top indicator on many occasions:
 
-![](image6.png)
+![](image9.png)
 
 This strategy is currently being integrated into Sanbase - in the meantime, if you’d like access to future Price-DAA Divergence signals, you can email us at team@santiment.net for more information.
 
@@ -92,13 +93,13 @@ For example, our Token Age Consumed metric tracks the activity of coins based on
 
 
 
-Depending on general market conditions, this holder behavior can mean different things, but it’s  almost always an omen of growing instability.
+Depending on general market conditions and recent PA, this kind of holder behavior can mean different things, but it’s  almost always an omen of growing instability. The spikes in TAC can precede explosive growth or extreme downward pressure, making it a great starting point for further analysis to decide which is more likely. 
 
 
 
 For instance, we recently wrote about elevated activity on Bitcoin’s Token Age Consumed graph, suggesting that longtime HODLers are starting to move their coins and warning of volatility ahead:
 
-![](image7.png)
+![](image10.png)
 
 
 At the time of writing, Bitcoin was in a week-long consolidation mode and trading in the $8300-$8500 range. Within days of the article, Bitcoin first dropped more than % down to $7475, only to then grow by 28.6% in 24 hours, finally slowing down at $9650.
@@ -118,11 +119,11 @@ For example, if you looked at pure on-chain transaction volumes for Ethereum ove
 
 
 
-![](image8.png)
+![](image11.png)
 
 This is why deep network analysis is so important for successful traders. Compare the above graph with our Token Velocity chart for Ethereum, which measures how often each token is used in daily transactions:
 
-![](image9.png)
+![](image1.png)
 
 Higher token velocity means that the same token is used in transactions more often. You can notice the same steep drop-off in ETH’s velocity around the start of 2018. This heightened activity (and subsequent dip) correlates strongly with the huge [ETH mixer](https://nulltx.com/over-68-of-all-ethereum-transaction-value-is-mixed-by-one-entity/) that operated between March 2017-2018, artificially inflation on-chain trx volumes by moving the same coins many times over.
 
@@ -135,10 +136,10 @@ Speaking of valuation metrics, Santiment offers a number of highly effective lon
 
 For example, network growth (number of new addresses created on the network daily) is a strong on-chain proxy for project adoption over time. Compare the network growth of a project with strong community backing like BAT, which continues to add hundreds of new addresses to its network each day:
 
-![](image10.png)
+![](image3.png)
 
 To a wasteland that is hundreds of failed altcoins, whose only real on-chain activity occurred around the ICO days, and has since fallen to oblivion:
 
-![](image11.png)
+![](image5.png)
 
 Which project are you more likely to invest in?
