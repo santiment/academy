@@ -14,6 +14,7 @@
     "copy-to-clipboard": "^3.2.0",
     "gatsby": "^2.16.4",
     "gatsby-image": "^2.2.29",
+    "gatsby-plugin-algolia-docsearch": "^1.0.5",
     "gatsby-plugin-breadcrumb": "^6.1.0",
     "gatsby-plugin-env-variables": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.23",
