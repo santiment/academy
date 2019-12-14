@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-// import Search from '../components/Search/Search'
+import Search from '../components/Search/Search'
 import Category from '../components/Category/Category'
 import SocialBanner from '../components/Banner/SocialBanner'
 import Changelog from '../components/Banner/ChangelogBanner'
@@ -14,7 +14,7 @@ const IndexPage = ({pageContext}) => {
   <Layout pageContext={pageContext}>
     <SEO title="Academy - Santiment Technical Documentation" />
     <section className={styles.wrapper}>
-    	{/* <Search /> */}
+    	<Search />
       <div className='container'>
       <GettingStarted className={styles.startBlock}/>
       <h4 className={styles.title}>Resources</h4>
