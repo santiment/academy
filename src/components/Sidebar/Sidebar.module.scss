@@ -182,3 +182,12 @@
     }
   }
 }
+
+.block {
+  color: var(--rhino);
+  margin-top: 8px;
+}
+
+.block__active {
+  color: var(--jungle-green-hover);
+}

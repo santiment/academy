@@ -9,7 +9,7 @@ import styles from "./Sidebar.module.scss"
 const isCategoryActive = (active = [], category) =>
   active[0] === titleToSlug(category)
 const isArticleActive = (active = [], category, article) =>
-  isCategoryActive(active, category) && active[1] === titleToSlug(article)
+  (category ? isCategoryActive(active, category) : true) && active[category ? 1 : 0] === titleToSlug(article)
 
 const Sidebar = ({ className }) => {
   let active = []
@@ -23,13 +23,10 @@ const Sidebar = ({ className }) => {
         <ul className={styles.list}>
           <h3 className={styles.heading}>{GETTING_STARTED.title}</h3>
           <li>
-            <ul className={styles.articles}>
+            <ul className={styles.blocks}>
               {(GETTING_STARTED.articles || []).map(article => (
-                <li>
-                  <Link
-                    to={`${titleToSlug(article)}/`}
-                    className={cx(styles.article,isArticleActive(active,GETTING_STARTED.title,article) && styles.article__active)}
-                  >
+                <li className={cx(styles.block,isArticleActive(active, null ,article) && styles.block__active)}>
+                  <Link to={`${titleToSlug(article)}/`}>
                     {article}
                   </Link>
                 </li>
