@@ -7,16 +7,16 @@ const GettingStarted = ({ className }) => (
 	<section className={cx(styles.wrapper,className)}>
 		<h4 className={styles.title}>Getting started</h4>
 		<div className={styles.blocks}>
-			<Link to='/for-traders'>
+			<Link to='/for-traders/'>
 				<article className={cx(styles.block, styles.traders)}>
 					<h3 className={styles.heading}>For traders</h3>
-					<p className={styles.description}>Build models and backtest your strategies with the most comprehensive source of crypto data on the market. No data aggregation, no intermediaries.</p>
+					<p className={styles.description}>Explanations, tutorials and use cases for Santiment metrics and tools. Learn how to use our platform to better understand market behavior, network activity and stakeholder trends.</p>
 				</article>
 			</Link>
-			<Link to='/for-developers'>
+			<Link to='/for-developers/'>
 				<article className={cx(styles.block, styles.developers)}>
 					<h3 className={styles.heading}>For developers</h3>
-					<p className={styles.description}>Investigate network activity, discover market patterns, and analyze stakeholder behavior with our clean, reliable data streams for 100s of digital assets.</p>
+					<p className={styles.description}>Technical documentation on Santiment metrics and indicators. Understand the calculations, logic and algorithms behind our metrics - many of them custom-built by the Santiment team.</p>
 				</article>
 			</Link>
 		</div>
