@@ -4,4 +4,4 @@ author: Santiment Team
 ---
 
 - [Asset](/glossary/asset/)
-- [slug](/glossary/slug/)
+- [Slug](/glossary/slug/)

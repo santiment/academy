@@ -1,8 +1,8 @@
 ---
-title: Glossary - slug
+title: Glossary - Slug
 author: Santiment Team
 ---
 
-# slug
+# Slug
 
-An **slug** is a unique identifier for an [Asset](/glossary/asset/), used by our API and Sansheets.
+A **Slug** is a unique identifier for an [Asset](/glossary/asset/), used by our API and Sansheets.
