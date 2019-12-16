@@ -148,7 +148,7 @@ explorer is accessible here: [https://api.santiment.net/graphiql](https://api.sa
 
 Here is an example of running a query and seeing the results directly in the browser:
 
-[https://api.santiment.net/graphiql?query=%7B%0A%20%20transactionVolume(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-03-01T00%3A00%3A00Z%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20transactionVolume%0A%20%20%7D%0A%7D](<https://api.santiment.net/graphiql?query=%7B%0A%20%20transactionVolume(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-03-01T00%3A00%3A00Z%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20transactionVolume%0A%20%20%7D%0A%7D>)
+[GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20transactionVolume(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-03-01T00%3A00%3A00Z%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20transactionVolume%0A%20%20%7D%0A%7D>)
 
 ## Running requests with `curl`
 
