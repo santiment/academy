@@ -73,7 +73,7 @@ datetime
 ## Authentication
 
 Some of the APIs require a valid API key, belonging to an account with a
-paid subscription to access all the data. The API key can be generated on your
+paid subscription to access more data. The API key can be generated on your
 [Account Settings](https://app.santiment.net/account#api-keys) page.
 
 After that you need to pass the API key as an additional HTTP header
