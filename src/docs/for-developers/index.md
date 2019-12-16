@@ -138,7 +138,7 @@ $ curl \
 If the query does not return status code `200`, then something else is happening. Here are some of the options:
 
 - `429` - you are being rate limited. Reduce the amount of requests you are doing
-- `502` - an internal server error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
+- `5xx` - an internal server error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
   or at the `#support channel`
 
 ## Live API Explorer
