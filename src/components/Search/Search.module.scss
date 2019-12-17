@@ -1,9 +1,7 @@
 @import '~@santiment-network/ui/mixins.scss';
 
 .wrapper {
-	height: 288px;
-	width: 100vw;
-	margin: -44px -40px 44px -40px;
+	width: 100%;
 	background: var(--athens);
 	display: flex;
 	flex-direction: column;
@@ -31,7 +29,9 @@
 .suggestions {
 	display: flex;
 	align-items: center;
-	margin-top: 16px;
+	margin: 16px 0 64px;
+	width: 500px;
+
 }
 
 .group {
@@ -49,4 +49,9 @@
 	margin-right: 8px;
 
 	@include text('caption');
+
+	&:hover {
+		background: var(--white);
+		cursor: pointer;
+	}
 }
