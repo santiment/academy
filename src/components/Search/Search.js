@@ -1,5 +1,6 @@
-import React, { useRef } from "react"
+import React, { useRef, useEffect } from "react"
 import { InputWithIcon as Input } from "@santiment-network/ui/Input"
+import { isSSR } from '../../utils/utils'
 import styles from "./Search.module.scss"
 
 const SUGGESTIONS = [
@@ -11,12 +12,21 @@ const SUGGESTIONS = [
 ]
 
 const Search = () => {
+  useEffect(() => {
+        if (isSSR) return;
+
+        window.docsearch({
+          apiKey: "93cdd643257923145fa8093e68b5c453", // required
+          indexName: "santiment_academy", // required
+          inputSelector: "#search", // required
+        });
+    }, []);
+
   const inputEl = useRef(null)
 
   const onSuggestionClick = value => {
     if (inputEl) {
     	inputEl.current.value = value
-    	// inputEl.current.focus()
     }
   }
 

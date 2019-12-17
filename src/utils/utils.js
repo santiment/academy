@@ -4,3 +4,5 @@ export const isLocalStorage = () => {
   }
   return true
 }
+
+export const isSSR = typeof window === 'undefined';
