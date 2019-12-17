@@ -4,7 +4,6 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
 }
 
 :global(.container) {
@@ -17,12 +16,7 @@
 }
 
 .startBlock {
-	// margin: 64px auto 80px;
-	margin: 0 auto 80px;
-
-	@include responsive('phone', 'phone-xs') {
-		margin: 24px auto 30px;
-	}
+	margin: 64px auto 80px;
 }
 
 .blocks {

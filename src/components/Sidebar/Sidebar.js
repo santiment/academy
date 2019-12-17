@@ -26,7 +26,7 @@ const Sidebar = ({ className }) => {
             <ul className={styles.blocks}>
               {(GETTING_STARTED.articles || []).map(article => (
                 <li className={cx(styles.block,isArticleActive(active, null ,article) && styles.block__active)}>
-                  <Link to={`${titleToSlug(article)}/`}>
+                  <Link to={`/${titleToSlug(article)}/`}>
                     {article}
                   </Link>
                 </li>

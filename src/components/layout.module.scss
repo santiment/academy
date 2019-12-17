@@ -19,10 +19,10 @@ body {
 }
 
 .main {
-  padding: 85px 40px 15px;
+  padding: 70px 0 50px;
 
   @include responsive('phone', 'phone-xs', 'tablet') {
-    padding: 85px 0 15px;
+    padding: 70px 0 15px;
   }
 }
 
@@ -48,9 +48,14 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 85px 40px 50px;
 
       @include responsive('laptop', 'desktop', 'tablet') {
         min-height: 86vh;
+      }
+
+      @include responsive('phone', 'phone-xs', 'tablet') {
+        padding: 85px 0 15px;
       }
     }
 
