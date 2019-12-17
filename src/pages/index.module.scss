@@ -17,10 +17,6 @@
 
 .startBlock {
 	margin: 64px auto 80px;
-
-	@include responsive('phone', 'phone-xs') {
-		margin: 24px auto 30px;
-	}
 }
 
 .blocks {

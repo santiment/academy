@@ -22,7 +22,7 @@ body {
   padding: 70px 0 50px;
 
   @include responsive('phone', 'phone-xs', 'tablet') {
-    padding: 85px 0 15px;
+    padding: 70px 0 15px;
   }
 }
 
