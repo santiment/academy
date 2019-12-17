@@ -79,12 +79,7 @@
   }
 
   &__wrapper {
-    margin: 17px 9px 10px 0;
-
-    // &:first-child {
-    //   padding-bottom: 32px;
-    //   border-bottom: 1px solid var(--porcelain);
-    // }
+    margin: 17px 9px 30px 0;
   }
 
   &__active {
@@ -184,6 +179,12 @@
       border-radius: 8px;
     }
   }
+}
+
+.blocks {
+  padding-bottom: 32px;
+  margin-right: 32px;
+  border-bottom: 1px solid var(--porcelain);
 }
 
 .block {
