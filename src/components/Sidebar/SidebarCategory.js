@@ -30,7 +30,7 @@ const SidebarCategory = ({ className, active, title, articles }) => {
       </div>
         <ul className={styles.articles}>
           {(articles || []).map(article => (
-            <li>
+            <li key={article}>
               <Link
                 to={`/${titleToSlug(title)}/${titleToSlug(article)}/`}
                 className={cx(
