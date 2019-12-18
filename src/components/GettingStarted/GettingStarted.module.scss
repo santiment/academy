@@ -37,6 +37,9 @@
 	background-color: var(--jungle-green);
 	background-image: url(./lines.svg);
 
+	& .description {
+		color: var(--athens);
+	}
 }
 
 .developers {
