@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import cx from "classnames"
 import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
@@ -9,8 +9,9 @@ import styles from "./Sidebar.module.scss"
 const SidebarCategory = ({ className, active, title, articles }) => {
   const isActive = isCategoryActive(active, title)
   const [isOpen, setIsOpen] = useState(isActive)
-  console.log(`category__opened: ${styles.category__opened}`)
-  return (
+  const [render, setRender] = useState(false)
+  useEffect(() => setRender(true), [])
+  return render && (
     <li className={cx(styles.category__wrapper, isOpen && styles.category__opened)}>
       <div className={cx(styles.category, isActive && styles.category__active)}>
         <Link
