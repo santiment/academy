@@ -26,7 +26,7 @@ const Sidebar = ({ className }) => {
           <li>
             <ul className={styles.blocks}>
               {(GETTING_STARTED.articles || []).map(article => (
-                <li className={cx(styles.block,isArticleActive(active, null ,article) && styles.block__active)}>
+                <li className={cx(styles.block,isArticleActive(active, null ,article) && styles.block__active)} key={article}>
                   <Link to={`/${titleToSlug(article)}/`}>
                     {article}
                   </Link>
@@ -35,7 +35,7 @@ const Sidebar = ({ className }) => {
             </ul>
           </li>
           <h3 className={styles.heading}>Resources</h3>
-          {CATEGORIES.map(category => <SidebarCategory {...category} active={active} />)}
+          {CATEGORIES.map((category, idx) => <SidebarCategory {...category} active={active} key={idx} />)}
         </ul>
       </div>
       <div className={styles.empty} />
