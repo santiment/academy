@@ -3,19 +3,15 @@ import cx from "classnames"
 import { Link } from "gatsby"
 import Icon from "@santiment-network/ui/Icon"
 import { titleToSlug } from "../../utils/docs"
+import { isCategoryActive, isArticleActive} from './utils'
 import styles from "./Sidebar.module.scss"
-
-const isCategoryActive = (active = [], category) =>
-  active[0] === titleToSlug(category)
-const isArticleActive = (active = [], category, article) =>
-  isCategoryActive(active, category) && active[1] === titleToSlug(article)
 
 const SidebarCategory = ({ className, active, title, articles }) => {
   const isActive = isCategoryActive(active, title)
   const [isOpen, setIsOpen] = useState(isActive)
   return (
     <li className={cx(styles.category__wrapper, isOpen && styles.category__opened)}>
-      <div className={cx(styles.category,isActive && styles.category__active)}>
+      <div className={cx(styles.category, isActive && styles.category__active)}>
         <Link
           to={`/${titleToSlug(title)}/`}
           className={cx(styles.category__title)}

@@ -4,12 +4,9 @@ import { Link } from "gatsby"
 import SidebarCategory from './SidebarCategory'
 import { CATEGORIES, GETTING_STARTED } from "../../docs/navigation"
 import { titleToSlug } from "../../utils/docs"
+import { isArticleActive } from './utils'
 import styles from "./Sidebar.module.scss"
 
-const isCategoryActive = (active = [], category) =>
-  active[0] === titleToSlug(category)
-const isArticleActive = (active = [], category, article) =>
-  (category ? isCategoryActive(active, category) : true) && active[category ? 1 : 0] === titleToSlug(article)
 
 const Sidebar = ({ className }) => {
   let active = []
