@@ -55,7 +55,7 @@ export const CATEGORIES = [
     title: "Glossary",
     icon: Glossary,
     description: "Introduction to all relevant terms and concepts",
-    articles: ["Asset"]
+    articles: ["Asset", "Slug"]
   }
 ]
 
