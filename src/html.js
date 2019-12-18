@@ -44,7 +44,7 @@ const gtagScript = (
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'UA-100571693-8');`,
+gtag('config', 'UA-100571693-14');`,
     }}
   />
 )
