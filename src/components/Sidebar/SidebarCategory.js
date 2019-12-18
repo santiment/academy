@@ -9,6 +9,7 @@ import styles from "./Sidebar.module.scss"
 const SidebarCategory = ({ className, active, title, articles }) => {
   const isActive = isCategoryActive(active, title)
   const [isOpen, setIsOpen] = useState(isActive)
+  console.log(`category__opened: ${styles.category__opened}`)
   return (
     <li className={cx(styles.category__wrapper, isOpen && styles.category__opened)}>
       <div className={cx(styles.category, isActive && styles.category__active)}>
