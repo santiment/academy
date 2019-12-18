@@ -61,13 +61,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
         {intercomScript}
-        {/* {hotjarScript} */}
-        {/* {twitterScript} */}
-        <script
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=UA-100571693-8'
-        />
-        {/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" /> */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100571693-14"></script>
         {gtagScript}
       </head>
       <body {...props.bodyAttributes}>
@@ -81,7 +75,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        {/* <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script> */}
       </body>
     </html>
   )
