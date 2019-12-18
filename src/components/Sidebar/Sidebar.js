@@ -16,6 +16,7 @@ const Sidebar = ({ className }) => {
   if (typeof window !== "undefined") {
     active = window.location.pathname.split("/").slice(1)
   }
+    console.log(active)
 
   return (
     <section className={cx(styles.wrapper, className)}>

@@ -3,13 +3,7 @@ import { InputWithIcon as Input } from "@santiment-network/ui/Input"
 import { isSSR } from '../../utils/utils'
 import styles from "./Search.module.scss"
 
-const SUGGESTIONS = [
-  "Tokens",
-  "Sansheets",
-  "Metrics",
-  "API key",
-  " Social data",
-]
+const SUGGESTIONS = ["Trending words", "Social volume", "MVRV", "Metrics"]
 
 const Search = () => {
   useEffect(() => {
