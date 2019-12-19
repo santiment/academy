@@ -137,8 +137,13 @@
 
   a {
     color: var(--jungle-green);
-    text-decoration: underline;
     word-break: break-word;
+
+    &:hover {
+      color: var(--jungle-green-hover);
+      text-decoration: underline var(--jungle-green-light-3);
+      text-underline-offset: 4px;
+    }
   }
 
   ul {
