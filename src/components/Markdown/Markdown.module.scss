@@ -82,7 +82,8 @@
   }
 
   hr {
-    color: var(--porcelain);
+    border: none;
+    border-top: 1px solid var(--porcelain);
     margin: 18px 0;
   }
 

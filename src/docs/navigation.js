@@ -43,7 +43,7 @@ export const CATEGORIES = [
     title: "Products and plans",
     icon: ProductsAndPlans,
     description: "On the Santiment suite and available plans",
-    articles: ["Access plans", "Santiment products", "Create an API key"],
+    articles: ["Access plans", "Santiment products", "Create an API key", "Sanbase PRO features"],
   },
   {
     title: "SAN tokens",
