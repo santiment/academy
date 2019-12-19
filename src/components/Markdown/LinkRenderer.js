@@ -15,7 +15,7 @@ const LinkRenderer = ({href, children}) => {
   	}
   }
 
-  return isLinkComponent ? <Link to={link}>{children}</Link> : <a href={href}>{children}</a>
+  return isLinkComponent ? <Link to={link}>{children}</Link> : <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
 }
 
 export default LinkRenderer
