@@ -56,6 +56,8 @@ Here are the access plans for the different Santiment products.
 - Access to Sanbase Graphs
 - Bonus: Full access to Sansheets
 
+[More detailed article](/products-and-plans/sanbase-pro-features/) with PRO benefits
+
 ## Special restrictions
 
 Some metrics have **special** restrictions.
