@@ -17,6 +17,7 @@
 
 .reactions {
   display: flex;
+  transition: all 1s ease-in-out;
 }
 
 .reaction {
@@ -28,5 +29,26 @@
 
   &:hover {
     transform: scale(1.2);
+  }
+}
+
+.animated {
+  animation: pulse 0.3s;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@keyframes pulse {
+  0% {
+  }
+
+  25% {
+      transform: scale(0.6);
+  }
+
+  100% {
   }
 }
