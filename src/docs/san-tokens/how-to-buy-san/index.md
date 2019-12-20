@@ -13,7 +13,7 @@ Ledger). We'll describe the steps necessary to achieve that.
 For instructions on how to install and set up MetaMask, see
 <https://metamask.io>. You will need an Ethereum address that will be
 used to hold SAN tokens and to interact with the Santiment
-platform. You can either create e new wallet in MetaMask, import an
+platform. You can either create a new wallet in MetaMask, import an
 already existing wallet or connect MetaMask to a hardware wallet like
 Ledger or Trezor.
 
