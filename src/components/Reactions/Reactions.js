@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import cx from "classnames"
 import GA from "react-ga"
 import styles from "./Reactions.module.scss"
@@ -143,28 +143,38 @@ const REACTIONS = [
   },
 ]
 
-const sendGA = ({ type, article }) => {
-  GA.event({
-    category: "Reaction",
-    action: `${type} reaction for '${article}' article"`,
-  })
-}
+const Reactions = ({ article }) => {
+  const [isClicked, setIsClicked] = useState(false)
 
-const Reactions = ({ article }) => (
-  <div className={styles.wrapper}>
-    <h4 className={styles.text}>Was this article helpful?</h4>
-    <div className={styles.reactions}>
-      {REACTIONS.map(({ icon, type }) => (
-        <div
-          key={type}
-          className={cx(styles.reaction)}
-          onClick={() => sendGA({ type, article })}
-        >
-          {icon}
-        </div>
-      ))}
+  const onClick = ({ type, article }) => {
+    GA.event({
+      category: "Reaction",
+      action: `${type} reaction for '${article}' article"`,
+    })
+
+    setIsClicked(true)
+  }
+
+  return (
+    <div className={styles.wrapper}>
+      <h4 className={styles.text}>
+        {isClicked
+          ? "Thank you for your feedback!"
+          : "Was this article helpful?"}
+      </h4>
+      <div className={cx(styles.reactions, isClicked && styles.hide)}>
+        {REACTIONS.map(({ icon, type }) => (
+          <div
+            key={type}
+            className={cx(styles.reaction, isClicked && styles.animated)}
+            onClick={() => onClick({ type, article })}
+          >
+            {icon}
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Reactions
