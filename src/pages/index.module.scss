@@ -4,7 +4,6 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 30px;
 }
 
 :global(.container) {
@@ -17,12 +16,7 @@
 }
 
 .startBlock {
-	// margin: 64px auto 80px;
-	margin: 34px auto 80px;
-
-	@include responsive('phone', 'phone-xs') {
-		margin: 24px auto 30px;
-	}
+	margin: 80px auto 80px;
 }
 
 .blocks {
@@ -32,4 +26,10 @@
   @include responsive('phone') {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.title {
+	margin: 80px 0 32px;
+	@include text('h4');
+	color: var(--mirage);
 }

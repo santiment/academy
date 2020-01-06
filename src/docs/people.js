@@ -30,4 +30,9 @@ export const PEOPLE = {
 		imageUrl: 'https://santiment.net/wp-content/uploads/2019/04/teamYordan.png',
 		link: ''
 	},
+	'dino ibisbegovic': {
+		description: 'Content & SEO',
+		imageUrl: 'https://santiment.net/wp-content/uploads/2019/04/teamDino.png',
+		link: ''
+	},
 }

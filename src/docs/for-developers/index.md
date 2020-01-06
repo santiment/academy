@@ -1,8 +1,7 @@
 ---
-title: "API Reference"
+title: Getting started for developers
 author: "Santiment team"
-date: "2019-09-20"
-description: This page contains a reference of all the APIs provided by Santiment.
+description: Technical documentation on Santiment metrics and indicators. Understand the calculations, logic and algorithms behind our metrics - many of them custom-built by the Santiment team.
 ---
 
 ## Overview
@@ -28,7 +27,7 @@ curl -X POST -H "Content-Type: application/graphql" --data '{devActivity(from: "
 You will see this response:
 
 ```bash
-{"data":{"devActivity":[{"activity":44,"datetime":"2019-01-01T00:00:00Z"},{"activity":89,"datetime":"2019-01-02T00:00:00Z"},{"activity":140,"datetime":"2019-01-03T00:00:00Z"},{"activity":177,"datetime":"2019-01-04T00:00:00Z"},{"activity":46,"datetime":"2019-01-05T00:00:00Z"},{"activity":22,"datetime":"2019-01-06T00:00:00Z"}]}}
+{"data":{"devActivity":[{"activity":0,"datetime":"2019-01-01T00:00:00Z"},{"activity":6,"datetime":"2019-01-02T00:00:00Z"},{"activity":0,"datetime":"2019-01-03T00:00:00Z"},{"activity":4,"datetime":"2019-01-04T00:00:00Z"},{"activity":0,"datetime":"2019-01-05T00:00:00Z"},{"activity":0,"datetime":"2019-01-06T00:00:00Z"}]}}
 ```
 
 To get the full list of available metrics you can visit [metrics](https://academy.santiment.net/metrics/)
@@ -61,7 +60,7 @@ Example result:
 
 ```
                            activity
-datetime                           
+datetime
 2019-01-01 00:00:00+00:00        44
 2019-01-02 00:00:00+00:00        89
 2019-01-03 00:00:00+00:00       140
@@ -73,8 +72,8 @@ datetime
 
 ## Authentication
 
-Some of the APIs require to have a valid API key, belonging to an account with a
-paid subscription to access all the data. The API key can be generated on your
+Some of the APIs require a valid API key, belonging to an account with a
+paid subscription to access more data. The API key can be generated on your
 [Account Settings](https://app.santiment.net/account#api-keys) page.
 
 After that you need to pass the API key as an additional HTTP header
@@ -139,7 +138,7 @@ $ curl \
 If the query does not return status code `200`, then something else is happening. Here are some of the options:
 
 - `429` - you are being rate limited. Reduce the amount of requests you are doing
-- `502` - an internal server error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
+- `5xx` - an internal server error has occured. Let us know at [https://santiment.net/discord](https://santiment.net/discord)
   or at the `#support channel`
 
 ## Live API Explorer
@@ -149,7 +148,7 @@ explorer is accessible here: [https://api.santiment.net/graphiql](https://api.sa
 
 Here is an example of running a query and seeing the results directly in the browser:
 
-[https://api.santiment.net/graphiql?query=%7B%0A%20%20transactionVolume(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-03-01T00%3A00%3A00Z%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20transactionVolume%0A%20%20%7D%0A%7D](<https://api.santiment.net/graphiql?query=%7B%0A%20%20transactionVolume(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-03-01T00%3A00%3A00Z%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20transactionVolume%0A%20%20%7D%0A%7D>)
+[GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20transactionVolume(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-03-01T00%3A00%3A00Z%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20transactionVolume%0A%20%20%7D%0A%7D>)
 
 ## Running requests with `curl`
 

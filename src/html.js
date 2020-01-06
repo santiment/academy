@@ -44,7 +44,7 @@ const gtagScript = (
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'UA-100571693-8');`,
+gtag('config', 'UA-100571693-14');`,
     }}
   />
 )
@@ -61,12 +61,7 @@ export default function HTML(props) {
         />
         {props.headComponents}
         {intercomScript}
-        {/* {hotjarScript} */}
-        {/* {twitterScript} */}
-        <script
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=UA-100571693-8'
-        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100571693-14"></script>
         {gtagScript}
       </head>
       <body {...props.bodyAttributes}>

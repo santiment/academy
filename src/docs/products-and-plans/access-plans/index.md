@@ -54,7 +54,9 @@ Here are the access plans for the different Santiment products.
 - No limit to Signals
 - Access to external data providers
 - Access to Sanbase Graphs
-- Access to Sansheets spreadsheets add-on
+- Bonus: Full access to Sansheets
+
+[More detailed article](/products-and-plans/sanbase-pro-features/) with PRO benefits
 
 ## Special restrictions
 

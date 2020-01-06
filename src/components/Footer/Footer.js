@@ -39,21 +39,13 @@ const categories = [
   {
     title: 'Resources',
     links: [
-      {
-        children: 'Getting started',
-        href: 'https://help.santiment.net/santiment-getting-started',
-      },
-      {
-        children: 'Docs',
-        href: 'https://help.santiment.net/metrics-explained#api',
-      },
       { children: 'API', href: 'https://api.santiment.net/graphiql' },
       { children: 'Blog', href: 'https://santiment.net/blog/' },
       { children: 'Source code', href: 'https://github.com/santiment/' },
       {
         children: 'Buy SAN',
         href:
-          'https://help.santiment.net/faq/general/how-to-buy-san-tokens-using-our-bancor-integration',
+          'https://academy.santiment.net/san-tokens/buy-san-tokens-using-bancor/',
       },
     ],
   },

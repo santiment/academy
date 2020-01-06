@@ -1,14 +1,12 @@
 import React from "react"
 import cx from "classnames"
 import { Link } from "gatsby"
-import { CATEGORIES } from "../../docs/navigation"
+import SidebarCategory from './SidebarCategory'
+import { CATEGORIES, GETTING_STARTED } from "../../docs/navigation"
 import { titleToSlug } from "../../utils/docs"
+import { isArticleActive } from './utils'
 import styles from "./Sidebar.module.scss"
 
-const isCategoryActive = (active = [], category) =>
-  active[0] === titleToSlug(category)
-const isArticleActive = (active = [], category, article) =>
-  isCategoryActive(active, category) && active[1] === titleToSlug(article)
 
 const Sidebar = ({ className }) => {
   let active = []
@@ -20,37 +18,20 @@ const Sidebar = ({ className }) => {
     <section className={cx(styles.wrapper, className)}>
       <div className={styles.content}>
         <ul className={styles.list}>
-          {CATEGORIES.map(({ title, articles }) => (
-            <li className={styles.category__wrapper}>
-              <Link
-                to={`/${titleToSlug(title)}/`}
-                className={cx(
-                  styles.category,
-                  isCategoryActive(active, title) && styles.category__active
-                )}
-              >
-                {title}
-              </Link>
-              {isCategoryActive(active, title) && (
-                <ul className={styles.articles}>
-                  {(articles || []).map(article => (
-                    <li>
-                      <Link
-                        to={`/${titleToSlug(title)}/${titleToSlug(article)}/`}
-                        className={cx(
-                          styles.article,
-                          isArticleActive(active, title, article) &&
-                            styles.article__active
-                        )}
-                      >
-                        {article}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
+          <h3 className={styles.heading}>{GETTING_STARTED.title}</h3>
+          <li>
+            <ul className={styles.blocks}>
+              {(GETTING_STARTED.articles || []).map(article => (
+                <li className={cx(styles.block,isArticleActive(active, null ,article) && styles.block__active)} key={article}>
+                  <Link to={`/${titleToSlug(article)}/`}>
+                    {article}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <h3 className={styles.heading}>Resources</h3>
+          {CATEGORIES.map((category, idx) => <SidebarCategory {...category} active={active} key={idx} />)}
         </ul>
       </div>
       <div className={styles.empty} />

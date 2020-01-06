@@ -7,6 +7,7 @@ import Markdown from '../components/Markdown/Markdown'
 import ArticleInfo from '../components/ArticleInfo/ArticleInfo'
 import ArticleHeadings from '../components/ArticleHeadings/ArticleHeadings'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
+import Reactions from '../components/Reactions/Reactions'
 import styles from './article.module.scss'
 
 export default function Template({data, pageContext}) {
@@ -27,6 +28,7 @@ export default function Template({data, pageContext}) {
         <ArticleInfo {...article.frontmatter} />
         <ArticleHeadings list={article.headings} />
         <Markdown markdown={article.rawMarkdownBody} />
+        <Reactions article={article.frontmatter.title} />
       </div>
     </Layout>
   )
