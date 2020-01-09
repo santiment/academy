@@ -37,7 +37,7 @@ export const CATEGORIES = [
     title: "Sandata",
     icon: Sandata,
     description: "Our advanced crypto dashboards",
-    articles: ["Navigation", "The erc 20 overview page", "The on-chain metrics overview page"],
+    articles: ["Logging into Sandata", "Navigation", "The erc 20 overview page"],
   },
   {
     title: "Products and plans",
