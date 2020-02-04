@@ -1,4 +1,5 @@
 import Metrics from "../images/docs/metrics.svg"
+import Education from "../images/docs/education-and-use-cases.svg"
 import ProductsAndPlans from "../images/docs/products-and-plans.svg"
 import SANtokens from "../images/docs/san-tokens.svg"
 import SanAPI from "../images/docs/sanapi.svg"
@@ -7,12 +8,12 @@ import Sansheets from "../images/docs/sansheets.svg"
 import Sanbase from "../images/docs/sanbase.svg"
 import Glossary from "../images/docs/glossary.svg"
 
-export const CATEGORIES = [
+export const GUIDES = [
   {
-    title: "Metrics",
-    description: "Documentation & API for Santiment indicators",
-    icon: Metrics,
-    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders", "Token Age Consumed", "Deposit Addresses", "Metrics for Deposit Addresses", "Exchange Flow metrics", "Network Growth", "Token Circulation", "Transaction Volume", "Velocity of Tokens", "NVT Ratio", "Top 100 transactions", "History Price", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Top Social Gainers Losers"],
+    title: "Education and Use cases",
+    description: "Examples and use cases for Santiment metrics",
+    icon: Education,
+    articles: ["Token Age Consumed","Exchange", "Network Activity divergences"]
   },
   {
     title: "Sanbase",
@@ -46,7 +47,7 @@ export const CATEGORIES = [
     articles: ["Access plans", "Santiment products", "Create an API key", "Sanbase PRO features"],
   },
   {
-    title: "SAN tokens",
+    title: "SAN token",
     icon: SANtokens,
     description: "Use cases, roadmap and where to buy",
     articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
@@ -56,6 +57,21 @@ export const CATEGORIES = [
     icon: Glossary,
     description: "Introduction to all relevant terms and concepts",
     articles: ["Asset", "Slug"]
+  }
+]
+
+export const REFERENCES = [
+  {
+    title: "Metrics",
+    description: "Documentation & API for Santiment indicators",
+    icon: Metrics,
+    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders", "Token Age Consumed", "Deposit Addresses", "Metrics for Deposit Addresses", "Exchange Flow metrics", "Network Growth", "Token Circulation", "Transaction Volume", "Velocity of Tokens", "NVT Ratio", "Top 100 transactions", "History Price", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Top Social Gainers Losers"],
+  },
+  {
+    title: "Changelog",
+    description: "Documentation & API for Santiment indicators",
+    icon: Metrics,
+    articles: []
   }
 ]
 

@@ -26,7 +26,7 @@ In case you want to buy SAN tokens, you can find some links to exchanges
 offering trading pairs with SAN - or you can use the `Convert` button
 to make us of our Bancor integration for this, which you can learn more
 about in [this
-article](/san-tokens/buy-san-tokens-using-bancor/).
+article](/san-token/buy-san-token-using-bancor/).
 
 ![](12_account_settings.png)
 

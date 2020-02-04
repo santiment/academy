@@ -1,5 +1,5 @@
 ---
-title: How to buy SAN tokens using our Bancor integration
+title: How to buy SAN token using our Bancor integration
 author: Santiment Team
 ---
 

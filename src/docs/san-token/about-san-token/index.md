@@ -1,5 +1,5 @@
 ---
-title: What you can currently do with your SAN tokens
+title: What you can currently do with your SAN token
 author: Santiment Team
 ---
 

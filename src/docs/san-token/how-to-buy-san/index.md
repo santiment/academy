@@ -2,7 +2,7 @@
 title: How to Buy SAN
 author: Santiment Team
 date: 2019-12-18
-description: Instructions on how to acquire SAN tokens
+description: Instructions on how to acquire SAN token
 ---
 In order to use the SAN token with our platform, you need to have it in
 a MetaMask wallet or a wallet supported by MetaMask (like Trezor or
@@ -44,7 +44,7 @@ following exchanges:
 Santiment has an integration with Bancor which allows you to swap SAN
 for ETH or for any other Bancor-supported asset with a _single
 transaction_. To see how to use it please check out [this
-article](/san-tokens/buy-san-tokens-using-bancor).
+article](/san-token/buy-san-token-using-bancor).
 
 You can also purchase tokens on the [main Bancor site](https://www.bancor.network).
 

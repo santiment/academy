@@ -45,9 +45,15 @@
 }
 
 .heading {
-  margin: 32px 0 12px 0;
+  margin: 28px 20px 14px 0;
+  padding-top: 32px;
+  border-top: 1px solid var(--porcelain);
   @include text("caption", "m");
   color: var(--casper);
+
+  &:first-child {
+    border-top: none;
+  }
 }
 
 .arrow {
@@ -79,7 +85,7 @@
   }
 
   &__wrapper {
-    margin: 16px 9px 16px 0;
+    margin: 11px 9px 11px 0;
   }
 
   &__active {
@@ -94,7 +100,7 @@
 
   &__opened .articles {
     height: auto;
-    margin: 16px 0;
+    margin: 12px 0 16px;
     overflow: visible;
   }
 
@@ -179,12 +185,6 @@
       border-radius: 8px;
     }
   }
-}
-
-.blocks {
-  padding-bottom: 32px;
-  margin-right: 24px;
-  border-bottom: 1px solid var(--porcelain);
 }
 
 .block {

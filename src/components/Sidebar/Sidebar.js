@@ -1,8 +1,9 @@
+
 import React from "react"
 import cx from "classnames"
 import { Link } from "gatsby"
 import SidebarCategory from './SidebarCategory'
-import { CATEGORIES, GETTING_STARTED } from "../../docs/navigation"
+import { GUIDES, REFERENCES, GETTING_STARTED } from "../../docs/navigation"
 import { titleToSlug } from "../../utils/docs"
 import { isArticleActive } from './utils'
 import styles from "./Sidebar.module.scss"
@@ -30,8 +31,10 @@ const Sidebar = ({ className }) => {
               ))}
             </ul>
           </li>
+          <h3 className={styles.heading}>Guides</h3>
+          {GUIDES.map((category, idx) => <SidebarCategory {...category} active={active} key={idx} />)}
           <h3 className={styles.heading}>Resources</h3>
-          {CATEGORIES.map((category, idx) => <SidebarCategory {...category} active={active} key={idx} />)}
+          {REFERENCES.map((category, idx) => <SidebarCategory {...category} active={active} key={idx} />)}
         </ul>
       </div>
       <div className={styles.empty} />

@@ -46,7 +46,7 @@ const categories = [
       {
         children: 'Buy SAN',
         href:
-          'https://academy.santiment.net/san-tokens/buy-san-tokens-using-bancor/',
+          'https://academy.santiment.net/san-token/buy-san-token-using-bancor/',
       },
     ],
   },
