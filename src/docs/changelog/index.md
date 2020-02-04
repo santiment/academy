@@ -9,6 +9,8 @@ We update this page every two weeks.
 
 ## January 2020
 
+- **`Sanbase`**: We make fresh new chart's engine for our services. Now our charts become much faster. You can try it on our desktop web app - https://app.santiment.net/
+
 - **`Sanbase`**: Better mobile experience is here. Also you can open our chart in `fullscreen` mode.
 ![](mdp.png)
 
@@ -28,6 +30,8 @@ We update this page every two weeks.
 
 
 ## December 2019
+
+- **`Sanbase`**: Our profile page is live - https://app.santiment.net/profile/120
 
 - **`Sanbase/Insights`**: Let's talk about crypto in our new comments
 ![](comments.png)
