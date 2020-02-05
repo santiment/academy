@@ -8,7 +8,7 @@ const Category = ({ wide, title, description, icon }) => {
   const slug = titleToSlug(title)
   return (
     <Link to={`/${slug}/`} className={cx(styles.block, wide && styles.wide)}>
-      <div className={styles.icon}>
+      <div className={cx(styles.icon)}>
         <img src={icon} alt={title} />
       </div>
       <div>

@@ -23,7 +23,7 @@ const IndexPage = ({pageContext}) => {
       </div>
       <h4 className={styles.title}>References</h4>
       <div className={cx(styles.blocks, styles.wide)}>
-        {REFERENCES.map(({title, ...rest}) => <Category key={title} title={title} {...rest} />)}
+        {REFERENCES.map(({title, ...rest}) => <Category wide key={title} title={title} {...rest} />)}
       </div>
       <SocialBanner />
       </div>
