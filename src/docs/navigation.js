@@ -48,7 +48,7 @@ export const GUIDES = [
     articles: ["Access plans", "Santiment products", "Create an API key", "Sanbase PRO features"],
   },
   {
-    title: "SAN token",
+    title: "SAN tokens",
     icon: SANtokens,
     description: "Use cases, roadmap and where to buy",
     articles: ["How to buy SAN", "How to stake SAN", "How to pay with crypto", "Buy SAN tokens using Bancor", "About SAN tokens"],
