@@ -6,7 +6,6 @@ author: Santiment Team
 
 **Note: In order to enable your computer and Google Sheets documents to use Sansheets, you must be a Sanbase Pro subscriber. If you are a free user, you may still view templates made by our staff and community members. But you will need to become a Pro member for our powerful Sansheets add-on to be a tool you can use yourself.**
 
-
 Whether you are a data scientist, crypto hobbyist, or simply a trader and investor with very little data background, Sansheets offers a way to create and view interactive market models using Santiment's on-chain, social and project data. With our all-in-one Spreadsheets plugin, you can run trade simulations, backtest new strategies and add context to the behavior and volatility of the crypto market. There is no need to make your own data aggregations. We've prepared the groundwork for you.
 
 Through existing custom templates that our team and Sanfam have already created, or through your own creations, you can investigate network activity, discover market patterns, and analyze stakeholder behavior with our clean, reliable data streams for hundreds of digital assets.
@@ -43,7 +42,7 @@ With the explanation out of the way, let's get into how to get you setup with Sa
 
 8. With Sansheets now enabled, you simply need to provide your API key. This key is found by going to https://sheets.santiment.net and clicking on the **account icon** at the top right of your page.
 	![](10_account-icon.png)
-9. If you already have an API key active, you will see your key with a **copy button** to allow you to easily copy it. If one doesn’t yet exist yet, simply click on the **Generate** button and then use the **copy button** to save it to your clipboard.
+9. If you already have an API key active, you will see your key with a **copy button** to allow you to easily copy it. If one doesn't yet exist yet, simply click on the **Generate** button and then use the **copy button** to save it to your clipboard.
 	![](11_apikey.png)
 10. Head back to your Google Sheets page and go to Add-ons -> Santiment Data, and click on Add API Key. Paste your copied API key and click **Confirm**.
 	![](12_addapikey.png)
@@ -65,7 +64,6 @@ A nice feature with Sansheets that you won't see in traditional data models is t
 You have the option to make your insights public and provide access to any of your self-made templates with other members of the Santiment team and Sanfam to collaborate and put great minds together to create a special profitable strategy for cryptocurrency investing.
 
 Congratulations on beginning your Sansheets adventures, and contact us at any time should you have questions or troubleshooting needs!
-
 
 ## Using existing Sansheets templates
 
@@ -105,7 +103,6 @@ Explore and use filters to find what kinds of trends may be beneficial to your t
 Currently available for Bitcoin and Ethereum, the Thresholds Crossed model indicates just how many times (from a daily perspective) projects have crossed above or below different round levels historically. Getting a glance at which thresholds have been crossed most often will give you a great perspective of where support and resistance of a given project lies.
 ![](19_thresholdscrossed.png)
 
-
 ### Daily Active Address Divergence
 
 Daily active addresses are a great way to measure network health and to get an idea of where prices may be headed based on how many daily active addresses are being created at a given time. We have a model that measures when there is a divergence between these active addresses and the movement of price.
@@ -135,7 +132,5 @@ Projects that have consistently high development activity tend to reflect a high
 ![](24_devactivity.png)
 
 This model highlights considerably high fluctuations in development activity for some notable projects. Spotting a big spike in development activity over a particular or series of days can be a great way to find entry points.
-
-
 
 Whatever types of metrics you are into, Sansheets is likely capable of creating the models for your area of study. You can also contact our staff, and we can see about collaborating on a project with you, as we are always interested in learning more about the markets in unique and interesting ways. Let us know if you'd like to try out Sansheets for two weeks free of charge, and we look forward to hearing your feedback!
