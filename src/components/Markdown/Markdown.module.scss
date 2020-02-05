@@ -165,7 +165,7 @@
     li {
       counter-increment: li;
       &::before {
-        content: counter(li);
+        content: "."counter(li);
       	color: var(--casper);
         display: inline-block;
         vertical-align: top;
