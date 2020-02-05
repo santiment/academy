@@ -23,7 +23,7 @@
 .input {
   width: 100%;
   height: 48px;
-  min-width: 300px;
+  min-width: 326px;
   padding-left: 44px !important;
 
   @include responsive("laptop", "desktop", "tablet") {
@@ -35,7 +35,8 @@
   }
 
   @include responsive("phone-xs") {
-    width: 300px;
+    width: 326px;
+    font-size: 15px;
   }
 
   &:focus .ds-dropdown-menu {
@@ -56,7 +57,7 @@
   max-width: 500px;
 
   @include responsive("phone-xs", "phone") {
-    width: 300px;
+    width: 326px;
     margin: 16px 0 30px;
     display: flex;
     flex-wrap: wrap;
@@ -71,6 +72,11 @@
   @include text("caption");
   color: var(--casper);
   margin-right: 15px;
+
+  @include responsive("phone-xs") {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .word {

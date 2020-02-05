@@ -17,6 +17,10 @@
 
 .startBlock {
 	margin: 80px auto 80px;
+
+	@include responsive('phone-xs') {
+		margin: 30px auto 0;
+	}
 }
 
 .blocks {
@@ -32,4 +36,8 @@
 	margin: 80px 0 32px;
 	@include text('h4');
 	color: var(--rhino);
+
+	@include responsive('phone-xs') {
+		margin: 50px 0 22px;
+	}
 }
