@@ -1,5 +1,5 @@
 ---
-title: Edication and Use cases
+title: Education and Use cases
 author: dino ibisbegovic
 ---
 
