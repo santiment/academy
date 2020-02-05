@@ -13,7 +13,7 @@ export const GUIDES = [
     title: "Education and Use cases",
     description: "Examples and use cases for Santiment metrics",
     icon: Education,
-    articles: ["Token Age Consumed","Exchange", "Network Activity divergences"]
+    articles: ["Timing market volatility with Token Age Consumed","Investigate Speculative Activity with Santiment’s Exchange Metrics", "How To Spot tops with Price - Network Activity divergences"]
   },
   {
     title: "Sanbase",
