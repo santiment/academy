@@ -31,6 +31,9 @@
 	margin: 0;
 	color: var(--porcelain);
 
+	@include responsive('phone-xs') {
+		@include text('body-3');
+	}
 }
 
 .traders {
