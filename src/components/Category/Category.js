@@ -1,17 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
+import cx from 'classnames'
 import { titleToSlug } from "../../utils/docs"
 import styles from "./Category.module.scss"
 
 const Category = ({ wide, title, description, icon }) => {
   const slug = titleToSlug(title)
-  return wide ? (
-    <Link to={`/${slug}/`} className={styles.block}>
-        <h4 className={styles.title}>{title}</h4>
-        <p className={styles.length}>{description}</p>
-    </Link>
-  ) : (
-    <Link to={`/${slug}/`} className={styles.block}>
+  return (
+    <Link to={`/${slug}/`} className={cx(styles.block, wide && styles.wide)}>
       <div className={styles.icon}>
         <img src={icon} alt={title} />
       </div>

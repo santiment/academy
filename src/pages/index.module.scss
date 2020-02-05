@@ -32,6 +32,15 @@
   }
 }
 
+.wide {
+	@include grid-wrap(2);
+	grid-gap: 18px;
+
+  @include responsive('phone') {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .title {
 	margin: 80px 0 32px;
 	@include text('h4');
