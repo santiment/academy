@@ -1,6 +1,7 @@
 ---
 title: Analyze Speculative Activity with Santiment’s Exchange Metrics
 author: dino ibisbegovic
+date: 2020-02-05
 ---
 
 You can analyze the amount of speculative activity on the blockchain with a number Santiment metrics. Here, we’ll cover two popular exchange-based indicators:

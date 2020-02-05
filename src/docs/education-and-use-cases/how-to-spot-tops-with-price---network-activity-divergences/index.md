@@ -1,6 +1,7 @@
 ---
 title: Spot tops with Price - Network Activity divergences
 author: dino ibisbegovic
+date: 2020-02-05
 ---
 
 Two of our metrics that are great at highlighting network activity trends are:
