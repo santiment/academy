@@ -1,5 +1,5 @@
 ---
-title: Analyze Speculative Activity with Santiment’s Exchange Metrics
+title: Timing market volatility with Token Age Consumed
 author: dino ibisbegovic
 ---
 
