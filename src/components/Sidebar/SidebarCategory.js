@@ -6,7 +6,7 @@ import { titleToSlug } from "../../utils/docs"
 import { isCategoryActive, isArticleActive} from './utils'
 import styles from "./Sidebar.module.scss"
 
-const SidebarCategory = ({ className, active, title, articles }) => {
+const SidebarCategory = ({ className, active, title, articles = [] }) => {
   const isActive = isCategoryActive(active, title)
   const [isOpen, setIsOpen] = useState(isActive)
   const [render, setRender] = useState(false)
@@ -20,14 +20,14 @@ const SidebarCategory = ({ className, active, title, articles }) => {
         >
           {title}
         </Link>
-        <Icon
+        {articles.length > 0 && <Icon
           type='arrow-right'
           className={styles.arrow}
           onClick={() => setIsOpen(!isOpen)}
-        />
+        />}
       </div>
         <ul className={styles.articles}>
-          {(articles || []).map(article => (
+          {articles.map(article => (
             <li key={article}>
               <Link
                 to={`/${titleToSlug(title)}/${titleToSlug(article)}/`}

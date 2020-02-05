@@ -8,6 +8,10 @@
   background-color: var(--athens);
   border-radius: 4px;
   margin-top: 80px;
+
+  @include responsive("phone-xs", "phone") {
+    flex-direction: column;
+  }
 }
 
 .text {
@@ -23,12 +27,21 @@
 .reaction {
   margin-left: 32px;
   cursor: pointer;
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   @include text("h3");
 
   &:hover {
     transform: scale(1.2);
+  }
+
+  line-height: 0;
+
+  @include responsive("phone-xs", "phone") {
+    &:first-child {
+      margin-left: 0;
+    }
+    margin-top: 10px;
   }
 }
 
@@ -46,7 +59,7 @@
   }
 
   25% {
-      transform: scale(0.6);
+    transform: scale(0.6);
   }
 
   100% {

@@ -33,7 +33,17 @@ Custom Github metric we created to accurately measure a team’s development act
 
 ## On-chain
 
-Metrics taken directly from various blockchains (mostly ETH/ERC-20, als BTC and EOS, more chains to be added), including transaction volume, daily active addresses, metrics about the flow of funds of exchanges, top holder lists, metrics about exchange deposit addresses, MVRV ratio and much more.
+Metrics taken directly from various blockchains:
+
+1. Ethereum and ERC-20 tokens
+2. EOS
+3. Binance Chain (BNB only currently)
+4. BTC
+5. BCH
+6. LTC
+7. XRP
+
+Includes transaction volume, daily active addresses, metrics about the flow of funds of exchanges, top holder lists, metrics about exchange deposit addresses, MVRV ratio and much more.
 
 ### Network value
 - Realized Cap

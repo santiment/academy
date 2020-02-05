@@ -1261,10 +1261,10 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@santiment-network/ui@^0.5.142":
-  version "0.5.142"
-  resolved "https://registry.yarnpkg.com/@santiment-network/ui/-/ui-0.5.142.tgz#87d5b0e781cd9e3b75da09d5790a69f165b08735"
-  integrity sha512-yJtTSVFtpT7sXr5WctayM/psXFG6lU0wbKp9l5zsldW7hBZEwLwOJqyDTYbil09qkhVZKBn+6czCE22gfuwr1g==
+"@santiment-network/ui@^0.5.146":
+  version "0.5.146"
+  resolved "https://registry.yarnpkg.com/@santiment-network/ui/-/ui-0.5.146.tgz#8fc0193409c44259f5f5a40f03736c88ec3d73bb"
+  integrity sha512-S4wK1ydnQpdedwlUDP3GCPg1iscC/83vQMoYq5AxDwOMa2Q/D13DhrJPTwGytuWbCjXvvr8cpCi2VwVsZN3HYg==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"

@@ -15,7 +15,7 @@
 
 
 	@include responsive('phone-xs') {
-		padding: 20px 28px 24px;
+		padding: 22px 20px 22px 20px;
 	}
 }
 
@@ -31,6 +31,9 @@
 	margin: 0;
 	color: var(--porcelain);
 
+	@include responsive('phone-xs') {
+		@include text('body-3');
+	}
 }
 
 .traders {

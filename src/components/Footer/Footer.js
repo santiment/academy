@@ -1,5 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
+import { getDateFormats } from '../../utils/dates'
 import styles from './Footer.module.scss'
 
 
@@ -70,6 +71,8 @@ const categories = [
 ]
 
 const Footer = ({ className, isMinified }) => {
+  const {YYYY: currentYear} = getDateFormats(new Date())
+
   return (
     <footer className={cx(styles.footer, className)}>
       {!isMinified && (<div className={cx(styles.top, 'container')}>
@@ -114,7 +117,7 @@ const Footer = ({ className, isMinified }) => {
           </a>
         </div>
         <div className={cx(styles.text, styles.rights)}>
-          © 2019 Santiment Inc. All rights reserved
+          © {currentYear} Santiment Inc. All rights reserved
         </div>
         </div>
         </div>

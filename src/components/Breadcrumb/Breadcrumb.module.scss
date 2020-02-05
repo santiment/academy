@@ -9,15 +9,14 @@
 }
 
 .list {
-	display: flex;
 	list-style: none;
-	flex-wrap: wrap;
-	align-items: center;
+	display: inline-block;
 }
 
 .title {
 	@include text('body-3');
 	color: $bali-hai;
+	display: inline-block;
 
 	@include responsive('phone', 'phone-xs') {
 		color: var(--jungle-green);
@@ -36,6 +35,8 @@
 .last {
 	@include text('body-3');
 	color: var(--rhino);
+	display: inline;
+	word-break: break-word;
 
 	@include responsive('phone', 'phone-xs') {
 		display: none;
