@@ -49,7 +49,7 @@ export const CATEGORIES = [
     title: "SAN tokens",
     icon: SANtokens,
     description: "Use cases, roadmap and where to buy",
-    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
+    articles: ["How to buy SAN", "How to stake SAN", "How to pay with crypto", "Buy SAN tokens using Bancor", "About SAN tokens"],
   },
   {
     title: "Glossary",
