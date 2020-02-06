@@ -1,6 +1,6 @@
 ---
 title: Education and Use cases
-author: dino ibisbegovic
+author: Dino Ibisbegovic
 ---
 
 

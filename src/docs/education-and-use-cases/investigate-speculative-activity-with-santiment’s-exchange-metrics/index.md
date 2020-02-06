@@ -1,6 +1,6 @@
 ---
 title: Analyze Speculative Activity with Santiment’s Exchange Metrics
-author: dino ibisbegovic
+author: Dino Ibisbegovic
 date: 2020-02-05
 ---
 

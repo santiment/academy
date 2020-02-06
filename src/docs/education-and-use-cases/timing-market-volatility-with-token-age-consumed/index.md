@@ -1,6 +1,6 @@
 ---
 title: Timing market volatility with Token Age Consumed
-author: dino ibisbegovic
+author: Dino Ibisbegovic
 date: 2020-02-05
 ---
 

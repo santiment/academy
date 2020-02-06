@@ -1,6 +1,6 @@
 ---
 title: Spot tops with Price - Network Activity divergences
-author: dino ibisbegovic
+author: Dino Ibisbegovic
 date: 2020-02-05
 ---
 
