@@ -45,13 +45,13 @@ export const GUIDES = [
     title: "Products and plans",
     icon: ProductsAndPlans,
     description: "On the Santiment suite and available plans",
-    articles: ["Access plans", "Santiment products", "Create an API key", "Sanbase PRO features"],
+    articles: ["Access plans", "Santiment products", "How to pay with crypto", "Create an API key", "Sanbase PRO features"],
   },
   {
     title: "SAN tokens",
     icon: SANtokens,
     description: "Use cases, roadmap and where to buy",
-    articles: ["How to buy SAN", "How to stake SAN", "How to pay with crypto", "Buy SAN tokens using Bancor", "About SAN tokens"],
+    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
   },
   {
     title: "Glossary",
