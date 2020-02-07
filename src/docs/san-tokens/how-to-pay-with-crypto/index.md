@@ -53,4 +53,4 @@ as an alias. which points to this respective send address. Once this has been do
 
 *Note: Paying with SAN is limited to purchasing subscriptions of Sanbase and Sandata, so it's not available for subscribing to SanAPI.*
 
-If any help is needed on this kind of payment method, please let us know at support@santiment.net and we will be happy to walk you through the process.
+If any help is needed on this kind of payment method, please let us know at [support@santiment.net] and we will be happy to walk you through the process.
