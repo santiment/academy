@@ -26,26 +26,8 @@ Supported assets:
 | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-## Available projects per metric
 
-The `getMetric` API supports a large list of assets identified by their slug. For a given metrics
-you can fetch the list of available slugs with this query:
-
-```js
-{
-  getMetric(metric: "mvrv_usd"){
-    metadata{
-      availableSlugs
-    }
-  }
-}
-```
-
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
-
-There are 2 fields that can be queried on `getMetric` and each of them has additional subfields: `metadata` and `timeseriesData`
-
-### timeseriesData
+## timeseriesData
 
 To fetch the values for a given metric, slug and time interval you can use the `timeseriesData` subquery of the `getMetric` API.
 
@@ -83,7 +65,26 @@ Example:
 
 If you change the `aggregation` parameter to `AVG` it will return the average transaction volume over each 7 day interval. You can see how this API can be quite powerful and flexible.
 
-#### Available metrics per project
+## Available projects per metric
+
+The `getMetric` API supports a large list of assets identified by their slug. For a given metrics
+you can fetch the list of available slugs with this query:
+
+```js
+{
+  getMetric(metric: "mvrv_usd"){
+    metadata{
+      availableSlugs
+    }
+  }
+}
+```
+
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
+
+There are 2 fields that can be queried on `getMetric` and each of them has additional subfields: `metadata` and `timeseriesData`
+
+## Available metrics per project
 
 The set of available metrics is not the same for each asset. We are trying to have all metrics for all assets, but this is not always possible. In order to find which are the available metrics for a given asset you can use the `projectBySlug` query, like this:
 
@@ -97,7 +98,7 @@ The set of available metrics is not the same for each asset. We are trying to ha
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20projectBySlug(slug%3A%22santiment%22)%20%7B%0A%20%20%20%20availableMetrics%0A%20%20%7D%0A%7D>)**
 
-#### availableSince
+## availableSince
 
 To fetch the date from which a given metric is available for a project:
 
@@ -116,7 +117,7 @@ exchanges and markets for over an year, the pricing data starts from July 2010. 
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22transaction_volume%22)%20%7B%0A%20%20%20%20availableSince(slug%3A%22santiment%22)%0A%20%20%7D%0A%7D%0A>)**
 
-#### metadata
+## metadata
 
 Each metric has metadata describing:
 
@@ -125,7 +126,7 @@ Each metric has metadata describing:
 - What are the supported aggregations for the metric
 - Which are the projects the metric is available for
 
-##### Minimal Resolution
+### Minimal Resolution
 
 Different queries are available with different granularities. The minimal interval you can get data for can be fetched by
 executing:
@@ -142,7 +143,7 @@ executing:
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
-##### Aggregation
+### Aggregation
 
 When an `interval` bigger than `minInterval` is provided for a given metric more than 1 data point values will be aggregated
 into a single data point.

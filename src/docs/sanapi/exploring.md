@@ -34,3 +34,14 @@ But before start exploring the API we need to define the following terms:
 ```
 
 - **metric**: A term with a specific meaning in the context of Santiment's API. A metric is a set of data points with a specific meaning. For example the `daily_active_addresses` metric is represented by pairss of date `D` and a number `N` with the following meaning: The count of the unique addresses `N` that participated in at least one transaction during the day `D`.
+
+- **slug**: The term refers to an asset's unique identifier. E.g. the slug for Bitcoin is `bitcoin`, while the slug for Basic Attention token is `basic-attention-token`. Not all queries and metrics are available for all slugs.
+To find all available slugs, the following query can be used:
+
+```js
+{
+  all_slugs_available: allProjects {
+    slug
+  }
+}
+```

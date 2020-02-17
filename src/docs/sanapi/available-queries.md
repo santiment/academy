@@ -1,10 +1,41 @@
----
+﻿---
 title: "API Reference"
 author: "Santiment team"
 date: "2019-09-20"
 ---
 
 # Available Queries
+
+## Available projects per query
+
+Not all queries are available for all slugs. For a given query
+you can fetch the list of available slugs with this query:
+
+```js
+{
+  all_metrics_for_a_slug: projectBySlug(slug: "santiment") {
+    availableTimeseriesMetrics
+    availableHistogramMetrics
+  }
+}
+
+```
+
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20all_metrics_for_a_slug%3A%20projectBySlug(slug%3A%20%22santiment%22)%20%7B%0A%20%20%20%20availableTimeseriesMetrics%0A%20%20%20%20availableHistogramMetrics%0A%20%20%7D%0A%7D%0A>)**
+
+## Available queries per project
+
+The set of available queries is not the same for each asset. In order to find which are the available queries for a given asset you can use the `projectBySlug` query, like this:
+
+```js
+{
+  projectBySlug(slug: "santiment") {
+    availableQueries
+  }
+}
+```
+
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20projectBySlug(slug%3A%20%22santiment%22)%20%7B%0A%20%20%20%20availableQueries%0A%20%20%7D%0A%7D%0A>)**
 
 ## Github Activity
 
