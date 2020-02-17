@@ -77,3 +77,15 @@ curl \
   --data '{ "query": "query{devActivity(from:\"2019-05-12T09:45:27.283Z\",interval:\"1d\",slug:\"santiment\",to:\"2019-06-11T09:45:30.487053Z\"){activity,datetime}}" }' \
   https://api.santiment.net/graphql
 ```
+
+## Additional parameters
+
+### The 'transform' parameter
+
+This parameter has currently only two options:
+- `None`: This is the default; no transformation is applied to the data
+- `movingAverage`: Transforms the data by applying a moving average; a 7 day moving average is the default, in case the `movingAverageIntervalBase` parameter is not used (see below)
+
+### The 'movingAverageIntervalBase' parameter
+
+This parameter only applies when `transform` is set to `movingAverage`. It takes an integer, which determines how many days of data is taken into account to calculate the moving average.
