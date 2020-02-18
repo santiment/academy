@@ -12,29 +12,20 @@ Here are the access plans for the different Santiment products.
 
 ### Free plan
 
-- 10 API calls per minute
 - 1000 API calls per month
 - Historical data access for last 90 days
-- Last 1 day of metric data is cut-off
+- Last 2 days of metric data is cut-off
   (exception - Realized Value, Age Destroyed and MVRV metrics)
 
 ### Basic plan
 
-- 60 API calls per minute
-- 10,000 API calls per month
-- Historical data access for last 3 years
+- 100,000 API calls per month
+- Historical data access for last 2 years
   (exception - Realized Value and MVRV metrics)
 
 ### Pro plan
 
-- 120 API calls per minute
-- 150,000 API calls per month
-- Historical data access for last 7 years
-
-### Premium plan
-
-- 180 API calls per minute
-- 500,000 API calls per month
+- 300,000 API calls per month
 - No restriction on historical data
 
 ## Sanbase
