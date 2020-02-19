@@ -32,7 +32,7 @@ Supported assets:
 
 ## timeseriesData
 
-Timeseries data is is a sequence taken at successive equally spaced points in time. For every point the API provides a `datetime` and a `value` fields.
+Timeseries data is a sequence taken at successive equally spaced points in time. For every point the API provides a `datetime` and a `value` field.
 
 To fetch the values for a given metric, slug and time interval you can use the `timeseriesData` subquery of the `getMetric` API.
 
@@ -74,7 +74,7 @@ If you change the `aggregation` parameter to `AVG` it will return the average tr
 
 A histogram is an approximate representation of the distribution of numerical or categorical data.
 
-This is better understood with an example: For the period of January 2018 - January 2019, fetch the amount of ether that was bought in every 100-dollar price range: $0-$100, $100-$200, ... , $1300-$1400.
+This is better understood with an example: For the period of January 2018 - January 2019, fetch the amount of Ether that was bought in every 100-dollar price range: $0-$100, $100-$200, ... , $1300-$1400.
 
 To fetch the values for a given histogram metric, slug and time interval you can use the `histogramData` subquery of the `getMetric` API.
 
@@ -109,7 +109,7 @@ Example:
 }
 ```
 
-Explanation: For all santiment tokens moved between January 6tha, 2020 and January 7th, 2020, fetch when these tokens last moved. The result is two lists - of labels and of values. For every label there is a corresponding value. The following label `The amount of tokens last moved between 2018-11-30 00:00 Etc/UTC and 2018-12-01 00:00 Etc/UTC` has a corresponding value of `18645`, meaning that 18.6k of the tokens moved in the specified 1 day interval moved for the last time between November 30th, 2018 and December 1st, 2018.
+Explanation: For all Santiment tokens moved between January 6th, 2020 and January 7th, 2020, fetch when these tokens last moved. The result is two lists - of labels and of values. For every label there is a corresponding value. The following label `The amount of tokens last moved between 2018-11-30 00:00 Etc/UTC and 2018-12-01 00:00 Etc/UTC` has a corresponding value of `18645`, meaning that 18.6k of the tokens moved in the specified 1 day interval moved for the last time between November 30th, 2018 and December 1st, 2018.
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22age_distribution%22)%20%7B%0A%20%20%20%20histogramData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-06T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20limit%3A%2020)%7B%0A%20%20%20%20%20%20%20%20labels%0A%20%20%20%20%20%20%20%20values%7B%0A%20%20%20%20%20%20%20%20%20%20...%20on%20FloatList%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20data%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
@@ -131,7 +131,7 @@ you can fetch the list of available slugs with this query:
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 There are 5 fields that can be queried on `getMetric`: `metadata`, `timeseriesData`, `histogramData`, `availableSince` and `lastDatetimeComputedAt`.
-Some of them has additional subfields: `metadata`, `timeseriesData` and `histogramData`
+Some of them have additional subfields: `metadata`, `timeseriesData` and `histogramData`
 
 ## Available metrics per project
 
