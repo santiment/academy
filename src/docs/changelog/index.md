@@ -7,6 +7,21 @@ author: Santiment team
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks.
 
+## February 2020
+
+- **`Sanbase`**: New look of Santiment Studio. Our chart tool is much ease to use now.
+![](charts.png)
+
+- **`Sanbase`**: First time to see our new feed. Where you can find latest hot events, insights and anomalies in the crypto world.
+And now Santiment has own Indices.
+![](feed.png)
+
+- **`Sanbase`**: It's time to pay with crypto for our tools. https://app.santiment.net/pricing
+
+- **`Sanbase`**: We've updated Sanbase's user profile. And you can track followers.
+![](profile.png)
+
+
 ## January 2020
 
 - **`Sanbase`**: We make fresh new chart's engine for our services. Now our charts become much faster. You can try it on our desktop web app - https://app.santiment.net/

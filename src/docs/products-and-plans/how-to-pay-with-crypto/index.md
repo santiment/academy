@@ -13,7 +13,7 @@ To make a payment with crypto, you can choose to use `Ethereum (ETH)`, `Dai (DAI
 
 To make a payment with ETH or DAI, simply send either form of crypto to this address:
 
-`0x1F3dF0b8390BB8e9e322972C5e75583E87608Ec2`.
+**0x1F3dF0b8390BB8e9e322972C5e75583E87608Ec2**.
 
 You can input:
 
@@ -44,9 +44,9 @@ Santiment members use a token burning method to stake their SAN subscriptions in
 
 Payments must be sent from your address connected to your Sanbase account, as this is required for our team to validate that the respective SAN tokens were burned. From this address, send your SAN tokens to address
 
-`0x000000000000000000000000000000000000dEaD`.
+**0x000000000000000000000000000000000000dEaD**.
 
-You can input
+You can input:
 
 `burn.santiment.eth`
 
