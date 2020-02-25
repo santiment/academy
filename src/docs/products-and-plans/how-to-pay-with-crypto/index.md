@@ -40,9 +40,9 @@ To us, loyal users who believe in and utilize our platform and token deserve to 
 - [Bancor](https://www.bancor.network/token/SAN)
 - [UniSwap](https://uniswap.exchange/swap) (select SAN in the dropdown)
 
-Santiment members use a token burning method to stake their SAN subscriptions instead of transferring tokens directly to us. If you're unfamiliar with what burning entails, it's simply the act of intentionally sending tokens to an invalid address to permanently remove them from the available circulating supply. By burning SAN tokens to make a subscription payment, you must require proof that you have done so. And the process is very straightforward:
+Santiment members use a token burning method to make use of their SAN subscriptions instead of transferring tokens directly to us. If you're unfamiliar with what burning entails, it's simply the act of intentionally sending tokens to an invalid address to permanently remove them from the available circulating supply. By burning SAN tokens to make a subscription payment, you must require proof that you have done so. And the process is very straightforward:
 
-Payments must be sent from your address connected to your Sanbase account, as this is required for our team to validate that the respective SAN tokens were burned. From this address, send your SAN tokens to address
+Payments must be sent **from your address connected to your Sanbase account**, as this is required for our team to validate that the respective SAN tokens were burned. From this address, send your SAN tokens to address
 
 **0x000000000000000000000000000000000000dEaD**.
 
@@ -52,6 +52,10 @@ You can input:
 
 as an alias. which points to this respective send address. Once this has been done, as mentioned earlier, just contact us at via [support@santiment.net](mailto:support@santiment.net), which will open an Intercom chat with our team. There, you can provide the transaction hash of the burning transaction and let us know how you would like to spend the amount of credit equivalent to $1 for each SAN burned.
 
-*Note: Paying with SAN is limited to purchasing subscriptions of Sanbase and Sandata, so it's not available for subscribing to SanAPI.*
+*Note:*
+- *Paying with SAN is limited to purchasing subscriptions of Sanbase and Sandata, so it's not available for subscribing to SanAPI.*
+- *SAN burn is not available for residents of the Swiss Confederation due to tax reasons.*
+
+*Thank you for your understanding.*
 
 If any help is needed on this kind of payment method, please let us know at [support@santiment.net](mailto:support@santiment.net) and we will be happy to walk you through the process.
