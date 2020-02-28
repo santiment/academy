@@ -17,6 +17,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   color: var(--mirage);
   font-size: 16px;
@@ -29,6 +43,7 @@ body {
   padding: 0;
   text-decoration: none;
   font-family: Rubik,  sans-serif !important;
+  font-family: "Inter",  sans-serif !important;
   font-family: "Proxima",  sans-serif !important;
   list-style: none;
   color: inherit;
