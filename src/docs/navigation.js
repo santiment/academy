@@ -14,7 +14,7 @@ export const GUIDES = [
     title: "Education and Use cases",
     description: "Examples and use cases for Santiment metrics",
     icon: Education,
-    articles: ["Timing market volatility with Token Age Consumed","Investigate Speculative Activity with Santiment’s Exchange Metrics", "How To Spot tops with Price - Network Activity divergences"]
+    articles: ["Timing market volatility with Token Age Consumed","Investigate Speculative Activity with Santiment’s Exchange Metrics", "How To Spot tops with Price - Network Activity divergences","Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies"]
   },
   {
     title: "Sanbase",
