@@ -5,7 +5,6 @@
   scroll-behavior: smooth;
   width: 100%;
   max-width: 620px;
-  font-family: Rubik;
   font-style: normal;
   font-weight: normal;
   color: var(--rhino);
@@ -14,10 +13,7 @@
 
   @include responsive('phone', 'phone-xs', 'tablet') {
     @include text('body-2');
-    font-weight: 300;
   }
-
-  font-weight: 300;
 
   h1 {
     color: var(--rhino);
@@ -50,6 +46,7 @@
       opacity: 1;
     }
   }
+
 
   .anchor {
     opacity: 0;

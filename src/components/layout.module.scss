@@ -1,33 +1,24 @@
 @import "~@santiment-network/ui/main.scss";
 @import "~@santiment-network/ui/mixins.scss";
-@import url("https://fonts.googleapis.com/css?family=Rubik:300,400&display=swap");
-
 
 @font-face {
-    font-family: 'Proxima';
-    src: url('../fonts/ProximaNova-Semibold.woff2');
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Proxima';
-    src: url('../fonts/ProximaNova-Regular.woff2');
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter-Bold.otf');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('../fonts/Inter-Regular.otf');
-    font-weight: normal;
+    font-family: 'Proxima Nova';
+    src: url('../fonts/ProximaNova-Medium.woff2') format('woff2');
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -42,9 +33,7 @@ body {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: Rubik,  sans-serif !important;
-  font-family: "Inter",  sans-serif !important;
-  font-family: "Proxima",  sans-serif !important;
+  font-family: 'Proxima Nova',  sans-serif !important;
   list-style: none;
   color: inherit;
 }
