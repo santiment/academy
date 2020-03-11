@@ -33,7 +33,7 @@ export const GUIDES = [
     title: "Sansheets",
     icon: Sansheets,
     description: "Our Spreadsheets plugin for Santiment data",
-    articles: ["Setting up", "Adding an API key", "Functions"]
+    articles: ["Setting up", "Adding an API key", "Functions", "Pro Templates"]
   },
   {
     title: "Sandata",
