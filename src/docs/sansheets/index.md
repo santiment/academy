@@ -12,3 +12,6 @@ Get relevant access for on-chain, social development activity, prices and volume
 
 ## API
 - [List of all functions](/sansheets/functions/)
+
+## Pro Templates
+- [Descriptions for all Pro Templates](/sansheets/pro-templates/)
