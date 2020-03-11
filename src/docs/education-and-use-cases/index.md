@@ -1,4 +1,4 @@
----
+﻿---
 title: Education and Use cases
 author: Dino Ibisbegovic
 ---
@@ -7,4 +7,4 @@ author: Dino Ibisbegovic
 - [How To Spot tops with Price - Network Activity divergences](/education-and-use-cases/how-to-spot-tops-with-price---network-activity-divergences/)
 - [Timing market volatility with Token Age Consumed](/education-and-use-cases/timing-market-volatility-with-token-age-consumed/)
 - [Investigate Speculative Activity with Santiment’s Exchange Metrics](/education-and-use-cases/investigate-speculative-activity-with-santiment’s-exchange-metrics/)
-
+- [Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies](/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/)
