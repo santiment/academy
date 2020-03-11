@@ -26,6 +26,8 @@ For each of the data sources we have a curated list of accounts/sub-sources from
 
   **History**: The historical data starts at `2018-02-09`.
 
+  **Availability**: Used in all of our social metrics.
+
 2. **Telegram**
 
   We track a curated list with over 300 crypto related Telegram chats. For each of them we have the full history of the chat.
@@ -33,6 +35,8 @@ For each of the data sources we have a curated list of accounts/sub-sources from
   **Latency**. All the messages are collected in real-time (1-2s delay max.)
 
   **History**. Each chat has it's full historical data; the oldest chat starts at `2016-03-29`.
+
+  **Availability**: Used in all of our social metrics.
 
 3. **Twitter**
 
@@ -42,6 +46,8 @@ For each of the data sources we have a curated list of accounts/sub-sources from
 
   **History**: The historical data starts at `2018-02-13`.
 
+  **Availability**: Currently only available through our experimental platform [https://graphs.santiment.net/social](https://graphs.santiment.net/social).
+
 4. **Reddit**
 
   We track a curated list with over 350 crypto related subreddits. For each of them we collect the posts themselves, as well as all the comments to these posts.
@@ -49,6 +55,8 @@ For each of the data sources we have a curated list of accounts/sub-sources from
   **Latency**: All the posts and comments are collected in real-time (1-2s delay max.)
 
   **History**: The historical data starts at `2016-01-01`.
+
+  **Availability**: Data is currently only included in parts of Sanbase ([https://app.santiment.net/labs/trends/explore/bullrun](https://app.santiment.net/labs/trends/explore/bullrun)) and Sandata, as well as our experimental platform [https://graphs.santiment.net/social](https://graphs.santiment.net/social).
 
 5. **Discord**
 
@@ -58,6 +66,8 @@ For each of the data sources we have a curated list of accounts/sub-sources from
 
   **History**: The historical data starts at `2016-05-21`.
 
+  **Availability**: Used in all of our social metrics.
+
 6. **Bitcointalk**
 
   We collect all the new public posts from [bitcointalk.org](https://bitcointalk.org). We also have the full historical data for the whole forum.
@@ -65,3 +75,5 @@ For each of the data sources we have a curated list of accounts/sub-sources from
   **Latency**: The scraper goes through all the new messages once per 10 seconds.
 
   **History**: we have collected the full forum history, starting from `2009-11-22`.
+
+  **Availability**: Currently only available through our experimental platform [https://graphs.santiment.net/](https://graphs.santiment.net/).
