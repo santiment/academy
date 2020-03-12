@@ -9,7 +9,9 @@ description: Instructions on how to pay with crypto
 
 When it comes to cryptocurrency tools and services, having convenient and alternative methods to exchange them outside of traditional Fiat options is very much needed to help work toward mass adoption. This is why we offer our users the ability to pay with different crypto to conveniently exchange quickly and easily for access to our services.
 
-To make a payment with crypto, you can choose to use `Ethereum (ETH)`, `Dai (DAI)`, or `Santiment (SAN)` for any of our services. SAN will provide the best discount value to purchase a subscription, as the token is equivalent to $1 on our site no matter what the actual market value is at any given time. More explanation on SAN specifically can be found in the ‘Burning SAN' section later in this article.
+To make a payment with crypto, you can choose to use `Ethereum (ETH)`, `Dai (DAI)` or other Ethereum-based stablecoins for any of our services.
+
+*To make use of your SAN tokens while also getting a hefty discount, please check [further below](/products-and-plans/how-to-pay-with-crypto/#burning-san-tokens-to-make-payments).*
 
 To make a payment with ETH or DAI, simply send either form of crypto to this address:
 
@@ -31,7 +33,7 @@ For any assistance on making a payment, you can contact our team at [support@san
 
 Paying with SAN token provides a substantial discount incentivization for our users who choose to take advantage of the opportunity.
 
-`1 SAN = $1` in terms of value on our platform. At the time of this writing, this would be equivalent to a roughly **71% discount vs. Fiat** (at SAN's current price of $0.285) for any percentage of your subscription that you would like to stake with SAN.
+`1 SAN = $1` in terms of value on our platform. At the time of this writing, this would be equivalent to a roughly **87% discount vs. Fiat** (at SAN's current price of $0.13) for any Sanbase or Sandata subscription that you would like to aquire with SAN.
 
 To us, loyal users who believe in and utilize our platform and token deserve to be rewarded. As early adopters, this discount lasts until the market price of SAN exceeds $1. When it does advance past this $1 threshold, the discount is simply removed so users are protected from ever getting an inferior value to USD by paying via SAN. For the simplest ways to purchase SAN, we recommend visiting one of the following options:
 
@@ -55,6 +57,7 @@ as an alias. which points to this respective send address. Once this has been do
 *Note:*
 - *Paying with SAN is limited to purchasing subscriptions of Sanbase and Sandata, so it's not available for subscribing to SanAPI.*
 - *SAN burn is not available for residents of the Swiss Confederation due to tax reasons.*
+- *SAN burn can only be applied to monthly or yearly base subscription prices. No other discounts are applicable when using SAN burn.*
 
 *Thank you for your understanding.*
 
