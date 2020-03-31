@@ -9,9 +9,12 @@ We emphasize plotting metrics against price over time, to more easily spot how t
 
 ## Financial
 
-Traditional fundamentals including price, volume and market cap, plus crypto-related data like total supply, circulating supply, top transactions, ETH spent by the team and ROI since ICO (if applicable)
+Traditional fundamentals including price, volume and market cap, mean coin age
 
-- [History Price](/metrics/history-price)
+- [Price in USD](/metrics/price/#price-usd)
+- [Price in BTC](/metrics/price/#price-btc)
+- [Trading Volume in USD](/metrics/price/#volume-usd)
+- [Marketcap in USD](/metrics/price/#marketcap-usd)
 - [Mean Coin Age](/metrics/mean-coin-age)
 
 ## Social/Sentiment
@@ -27,7 +30,10 @@ Metrics taken from measuring social activity on crypto-related forums and channe
 
 Custom Github metric we created to accurately measure a team’s development activity.
 
-- [Development activity](/metrics/developer-activity) based on number of Github 'events' including PRs, comments, and wiki edits, plus the number of public repositories a project is maintaining
+- [Development activity](/metrics/development-activity)
+  - Pure development activity based on number of Github events excluding 'talking' and other users intercations - issues, issue comments, forks, watches, stars, etc.
+- [Github activity](/metrics/development-activity)
+  - The count of all github events.
 
 ## On-chain
 
