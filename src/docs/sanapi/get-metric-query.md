@@ -1,24 +1,21 @@
 ---
-title: "Available Metrics"
-author: "Santiment team"
-date: "2019-09-20"
+title: "getMetric Query"
+author: "Ivan"
+date: "2020-03-31"
 ---
 
-## The `getMetric` Query
+- [Overview](#overview)
+- [Queryable fields](#queryable-fields)
+  - [timeseriesData](#timeseriesdata)
+  - [histogramData](#histogramdata)
 
-- **Tier**: depends on the metric requested
-- **Max lag**: 6 hours
-- **Max resolution**: depends on the metric. Most of the metrics are daily
+## Overview
 
 The `getMetric` API gives a unified API for many different metrics across the whole universe of supported assets.
 The query allows to get metadata about a given metric and asset, as well as fetch the values of the metric in a
 unified way.
 
-> Note:
->
-> The metrics are updated 4 times a day at 6 hour intervals. We are working on reducing this interval.
-
-Supported assets:
+Supported blockchains:
 
 | Bitcoin            | Ethereum           | ERC-20             | Ripple             | Binance Chain      |
 | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
@@ -28,45 +25,54 @@ Supported assets:
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-## timeseriesData
+## Queryable fields
+
+### timeseriesData
 
 Timeseries data is a sequence taken at successive equally spaced points in time. For every point the API provides a `datetime` and a `value` field.
 
-To fetch the values for a given metric, slug and time interval you can use the `timeseriesData` subquery of the `getMetric` API.
+To fetch the values for a given metric, slug and time range you can use the `timeseriesData` subquery of the `getMetric` API.
 
 Parameters:
 
-| Parameter   | Description                                                                  |
-| ----------- | ---------------------------------------------------------------------------- |
-| slug        | The slug of the project                                                      |
-| from        | From which date to return the values in ISO 8601 format                      |
-| to          | Till which date to return the values in ISO 8601 format                      |
-| interval    | The intervals that should be returned. Default is `1d`, which is daily       |
-| aggregation | The aggregation to be used when fetching data for longer intervals. Optional |
+| Parameter             | Description                                                                                         |
+| --------------------- | --------------------------------------------------------------------------------------------------- |
+| slug                  | The slug of the project                                                                             |
+| from                  | From which date to return the values in ISO8601 format                                              |
+| to                    | Until which date to return the values in ISO8601 format                                             |
+| interval              | The intervals that should be returned. Default is `1d`. Optional                                    |
+| aggregation           | The aggregation to be used when fetching data for longer intervals. Optional                        |
+| includeIncompleteData | Exclude the last incomplete day (today) if it lead to misleading data. Default is `false`. Optional |
+| transform             | Apply a transformation on the the result. Default is `none`. Optional                               |
 
-The `aggregation` parameter is optional and if not provided - every metric has a default one that fits best. You can see the default aggregation function using the [metadata](#metadata) query.
+- aggregation - This parameter is optional and if it is not provided - every metric has a default one that fits best. You can see the default aggregation function using the [metadata](#metadata) query.
+- includeIncompleteData - In some cases if the day is not finished the current value can be misleading. For example fetching daily active addresses at 12pm would include only half a day of data and because of the that the data for that day could seem too low.
+- transform - Apply a transformation to the timeseries data result.
+  Available transformations:
+  - `{type: "none"}` - Do not apply any transformation
+  - `{type: "moving_average", moving_average_base: base}` - Apply a simple moving average. For every data point the value is calculated as the average of the last `base` intervals. In order to compute this internally it fetches enough data before `from` so it can be computed.
+  - `{type: "changes"}` - For every data point change the value to the difference between the value and the previous value.
 
-Example:
-
-```js
+```graphql
 {
-  getMetric(metric: "transaction_volume") {
+  getMetric(metric: "dev_activity") {
     timeseriesData(
       slug: "santiment"
       from: "2019-01-01T00:00:00Z"
       to: "2019-09-01T00:00:00Z"
+      includeIncompleteData: true
       interval: "7d"
-      aggregation: SUM) {
-        datetime
-        value
+      aggregation: SUM
+      transform: { type: "moving_average", moving_average_base: 3 }
+    ) {
+      datetime
+      value
     }
   }
 }
 ```
 
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22transaction_volume%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22%2C%20aggregation%3ASUM)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
-
-If you change the `aggregation` parameter to `AVG` it will return the average transaction volume over each 7 day interval. You can see how this API can be quite powerful and flexible.
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20%20%20aggregation%3A%20SUM%0A%20%20%20%20%20%20transform%3A%20%7Btype%3A%20%22moving_average%22%2C%20moving_average_base%3A%203%7D)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 ## histogramData
 
@@ -78,36 +84,77 @@ To fetch the values for a given histogram metric, slug and time interval you can
 
 Parameters:
 
-| Parameter | Description                                                            |
-| --------- | ---------------------------------------------------------------------- |
-| slug      | The slug of the project                                                |
-| from      | From which date to return the values in ISO 8601 format                |
-| to        | Till which date to return the values in ISO 8601 format                |
-| interval  | The intervals that should be returned. Default is `1d`, which is daily |
-| limit     | The number of results returned. Optional                               |
+| Parameter | Description                                             |
+| --------- | ------------------------------------------------------- |
+| slug      | The slug of the project                                 |
+| from      | From which date to return the values in ISO 8601 format |
+| to        | Till which date to return the values in ISO 8601 format |
+| interval  | The intervals that should be returned. Default is `1d`  |
+| limit     | The number of results returned. Optional                |
 
-Example:
+Different histogram metrics could have different response types/formats.
 
-```js
+### Example 1
+
+```graphql
 {
   getMetric(metric: "age_distribution") {
     histogramData(
       slug: "santiment"
-      from: "2020-01-06T00:00:00Z"
-      to: "2020-01-07T00:00:00Z"
-      limit: 20){
-        labels
-        values{
-          ... on FloatList{
-            data
+      from: "2020-02-10T07:00:00Z"
+      to: "2020-03-30T07:00:00Z"
+      interval: "1d"
+    ) {
+      values {
+        ... on DatetimeRangeFloatValueList {
+          data {
+            range
+            value
           }
         }
+      }
     }
   }
 }
 ```
 
-Explanation: For all Santiment tokens moved between January 6th, 2020 and January 7th, 2020, fetch when these tokens last moved. The result is two lists - of labels and of values. For every label there is a corresponding value. The following label `The amount of tokens last moved between 2018-11-30 00:00 Etc/UTC and 2018-12-01 00:00 Etc/UTC` has a corresponding value of `18645`, meaning that 18.6k of the tokens moved in the specified 1 day interval moved for the last time between November 30th, 2018 and December 1st, 2018.
+**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22age_distribution%22)%20%7B%0A%20%20%20%20histogramData(slug%3A%20%22santiment%22%2C%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%2C%20to%3A%20%222020-03-30T07%3A00%3A00Z%22%2C%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20values%20%7B%0A%20%20%20%20%20%20%20%20...%20on%20DatetimeRangeFloatValueList%20%7B%0A%20%20%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20range%0A%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)**
+
+The response result is a list that contains a 2-element range of datetimes and a float value.
+
+Explanation:
+
+For all Santiment tokens moved between January 6th, 2020 and January 7th, 2020, fetch when these tokens last moved. The result is two lists - of labels and of values. For every label there is a corresponding value. The following label `The amount of tokens last moved between 2018-11-30 00:00 Etc/UTC and 2018-12-01 00:00 Etc/UTC` has a corresponding value of `18645`, meaning that 18.6k of the tokens moved in the specified 1 day interval moved for the last time between November 30th, 2018 and December 1st, 2018.
+
+### Example 2
+
+```graphql
+{
+  getMetric(metric: "price_histogram") {
+    histogramData(
+      slug: "santiment"
+      from: "2020-02-10T07:00:00Z"
+      to: "2020-03-30T07:00:00Z"
+      interval: "1d"
+    ) {
+      values {
+        ... on FloatRangeFloatValueList {
+          data {
+            range
+            value
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_histogram%22)%20%7B%0A%20%20%20%20histogramData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-30T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20values%20%7B%0A%20%20%20%20%20%20%20%20...%20on%20FloatRangeFloatValueList%20%7B%0A%20%20%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20range%0A%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)**
+
+The response result is a list that contains a 2-element range of float (prices) and a float value.
+
+---
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22age_distribution%22)%20%7B%0A%20%20%20%20histogramData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-06T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20limit%3A%2020)%7B%0A%20%20%20%20%20%20%20%20labels%0A%20%20%20%20%20%20%20%20values%7B%0A%20%20%20%20%20%20%20%20%20%20...%20on%20FloatList%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20data%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
@@ -128,8 +175,13 @@ you can fetch the list of available slugs with this query:
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
-There are 5 fields that can be queried on `getMetric`: `metadata`, `timeseriesData`, `histogramData`, `availableSince` and `lastDatetimeComputedAt`.
-Some of them have additional subfields: `metadata`, `timeseriesData` and `histogramData`
+There are 5 fields that can be queried on `getMetric`:
+
+- `metadata`
+- `timeseriesData`
+- `histogramData`
+- `availableSince`
+- `lastDatetimeComputedAt`.
 
 ## Available metrics per project
 
