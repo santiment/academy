@@ -1,264 +1,46 @@
 ---
 title: Getting started for developers
-author: "Santiment team"
+author: Ivan
 description: Technical documentation on Santiment metrics and indicators. Understand the calculations, logic and algorithms behind our metrics - many of them custom-built by the Santiment team.
 ---
 
 ## Overview
 
-Santiment API uses [GraphQL](https://graphql.org). From the beginning we decided
-to use GraphQL instead of REST for a number of reasons:
+There a few different ways to fetch data:
 
-- You can request exactly the data you need and also easily batch requests together.
-  This is effectively handling the issues with underfetching and overfetching data. Why
-  fetching all 20+ fields of a project when you only need its name?
-- The request describes the format of the response. You no longer need
-  to wonder what data the result contains and how to parse it.
-- Easy out-of-the-box way to explore our API via our Live Explorer
+- [GraphQL API](#graphql-api)
+- [Download CSV from Sanbase](#download-csv-from-sanbase)
+- [Download CSV from Sandata](#download-csv-from-sandata)
+- [Download CSV from Sangraphs](#download-csv-from-sangraphs)
+- [Analyzing Santiment Data][#analyzing-santiment-data]
 
-## Metrics available
+### GraphQL API
 
-Full list of metrics can be found [here](../metrics/index)
+If the desired metric is available in the API this is the preferred way to fetch it.
+Detailed description and examples can be found on the [SanAPI page](../sanapi)
 
-## Access the API
+The API can be consumed in a few different ways:
 
-> Some of the metrics are not available for free or are restricted - historical and realtime data is cut off. In order to explore them use slug `santiment` as it has full access without any restrictions.
+- Use the [GraphiQL Live Explorer](https://api.santiment.net/graphiql) and explore the API with included autocmplete and nice response formatting.
+- Use the `/graphql` API endpoint and construct requests in your preferred programming language. There are examples in R, Ruby, Javascript and Elixir
+- Use the `sanpy` python library that wraps the GraphQL API. It is easy to use and hides all GraphQL-related details.
+- Use `curl` directly from your terminal.
 
-There are different ways to fetch data from Santiment's API:
+### Download CSV from Sandata
 
-### Live API Explorer
+[Sandata](../sandata/index) contains metrics that are both available and not available in the API. All data from Sandata can be exported as a CSV file.
+![sandata-csv-export](sandata-csv-export.png)
 
-There is a live explorer, where you can run queries directly from the browser. The
-explorer is accessible here: [https://api.santiment.net/graphiql](https://api.santiment.net/graphiql)
+### Download CSV from Sanbase
 
-Here is an example of running a query and seeing the results directly in the browser:
+[Sanbase](../sanbase/index) contains only data available in the API. Data from charts can be exported as a CSV file.
+![sanbase-csv-export](sanbase-csv-export.png)
 
-[GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)
+### Download CSV from Sangraphs
 
-### curl
+[Sangraphs](../sangraphs/index) contains metrics that are both available and not available in the API. The social merics from Sangraphs can be exported as a CSV file from the bottom of the social page.
+![sangraphs-csv-export](sanbase-csv-export.png)
 
-The following GraphQL request will be passed as the body of the request:
+### Analyzing Santiment Data
 
-```graphql
-{
-  getMetric(metric: "dev_activity") {
-    timeseriesData(
-      slug: "ethereum"
-      from: "2020-02-10T07:00:00Z"
-      to: "2020-03-10T07:00:00Z"
-      interval: "1w"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-
-Use the curl tool to get development activity of Ethereum.
-Copy and paste this curl request to your console:
-
-```bash
-curl \
--X POST \
--H "Content-Type: application/graphql" \
---data '
-{ getMetric(metric: "dev_activity"){ timeseriesData( slug: "ethereum" from: "2020-02-10T07:00:00Z" to: "2020-03-10T07:00:00Z" interval: "1w"){ datetime value } } }' https://api.santiment.net/graphql
-```
-
-A similar response is returned:
-
-```bash
-{"data":{"getMetric":{"timeseriesData":[{"datetime":"2020-02-13T00:00:00Z","value":1281.0},{"datetime":"2020-02-20T00:00:00Z","value":1115.0},{"datetime":"2020-02-27T00:00:00Z","value":952.0},{"datetime":"2020-03-05T00:00:00Z","value":605.0}]}}}
-```
-
-If you have the `jq` tool installed it could help visuallize this response even better:
-
-```bash
-curl \
--X POST \
--H "Content-Type: application/graphql" \
---data '
-{ getMetric(metric: "dev_activity"){ timeseriesData( slug: "ethereum" from: "2020-02-10T07:00:00Z" to: "2020-03-10T07:00:00Z" interval: "1w"){ datetime value } } }' https://api.santiment.net/graphql \
-| jq .data.getMetric.timeseriesData
-```
-
-shows:
-
-```json
-[
-  {
-    "datetime": "2020-02-13T00:00:00Z",
-    "value": 1281
-  },
-  {
-    "datetime": "2020-02-20T00:00:00Z",
-    "value": 1115
-  },
-  {
-    "datetime": "2020-02-27T00:00:00Z",
-    "value": 952
-  },
-  {
-    "datetime": "2020-03-05T00:00:00Z",
-    "value": 605
-  }
-]
-```
-
-### Santiment-provided Python library
-
-There is a Python wrapper for the graphql API.
-
-The library is called `sanpy` and documentation and instructions how to install can be found [here](https://github.com/santiment/sanpy)
-
-It can be installed via `pip`
-
-```bash
-pip install sanpy
-```
-
-The same ethereum development activity data with this library can be fetched like this:
-
-```python
-san.get(
-  "dev_activity/ethereum",
-  from_date="2019-01-01T00:00:00Z",
-  to_date="2019-01-07T00:00:00Z",
-  interval="1d"
-)
-```
-
-The result is a pandas dataframe:
-
-```python
-datetime                    activity
-2019-01-01 00:00:00+00:00       44.0
-2019-01-02 00:00:00+00:00       89.0
-2019-01-03 00:00:00+00:00      140.0
-2019-01-04 00:00:00+00:00      177.0
-2019-01-05 00:00:00+00:00       46.0
-2019-01-06 00:00:00+00:00       22.0
-```
-
-Examples how to fetch data with sanpy and analyize it can be found here:
-
-- [Santiment Hands On Tutorial](https://github.com/santiment/san-sdk/blob/master/ICDM_2019/ICDM.ipynb)
-- [Corellation analysis between Bitcoin and Gold](https://github.com/santiment/san-sdk/blob/master/correlation-analysis/BTC%20vs%20GOLD.ipynb)
-  - Santiment's GraphQL API also provides price for gold with the slug `gold` and S&P500 with slug `s-and-p-500`
-- [Backtesting trading based on github data](https://github.com/santiment/san-sdk/blob/master/example-backtesting-with-sanpy/Backtest_GitHub_Activity_Portfolio.ipynb)
-- [Stablecoin comparisons](https://github.com/santiment/san-sdk/blob/master/example-stablecoin-analysis/stablecoin%20comparison.ipynb)
-
-### A programming language of your choice
-
-In the [san-sdk](https://github.com/santiment/san-sdk) repository there are examples how to query the API with:
-
-- [R](https://github.com/santiment/san-sdk/tree/master/R-graphql)
-- [Ruby](https://github.com/santiment/san-sdk/blob/master/ruby-graphql/example.rb)
-- [Elixir](https://github.com/santiment/san-sdk/blob/master/elixir-graphql/san_graphql_ex/lib/san_graphql_ex.ex)
-- [Javascript](TODO)
-
-## Authentication
-
-Some of the APIs require a valid API key, belonging to an account with a
-paid subscription to access more data. The API key can be generated on your
-[Account Settings](https://app.santiment.net/account#api-keys) page.
-
-After that you need to pass the API key as an additional HTTP header
-`Authorization: Apikey <YOUR_OWN_API_KEY>`. An example how to do that using curl:
-
-```bash
-curl \
-  -X POST \
-  -H "Content-Type: application/graphql" \
-  -H "Authorization: Apikey <YOUR_OWN_API_KEY>"\
-  --data '<YOUR_OWN_QUERY>' \
-  https://api.santiment.net/graphql
-```
-
-## Errors
-
-In case something is not correct with the request, the API will return an error. The API
-requests should always return status code 200, even if there was an error processing the
-request. An error response is going to include a description of the error that occured.
-For example here is what will happen if the query passed to the API is not valid:
-
-```bash
-$ curl \
-  -X POST \
-  -H "Content-Type: application/graphql" \
-  --data '{transactionVolume' \
-  https://api.santiment.net/graphql | jq .
-
-{
-  "errors": [
-    {
-      "message": "An unknown error occurred during parsing: no function clause matching in Absinthe.Phase.Parse.format_raw_parse_error/1"
-    }
-  ]
-}
-```
-
-If your query is missing some argument, that should be described in the error response:
-
-```bash
-$ curl \
-  -X POST \
-  -H "Content-Type: application/graphql" \
-  --data '{ transactionVolume(slug:"santiment", from:"2019-01-01T00:00:00Z") { datetime transactionVolume }}' \
-  https://api.santiment.net/graphql | jq .
-
-{
-  "errors": [
-    {
-      "locations": [
-        {
-          "column": 3,
-          "line": 1
-        }
-      ],
-      "message": "In argument \"to\": Expected type \"DateTime!\", found null."
-    }
-  ]
-}
-```
-
-If the query does not return status code `200`, then something else is happening. Here are some of the options:
-
-- `429` - you are being rate limited. Reduce the amount of requests you are doing
-- `5xx` - an internal server error has occured. Let us know in the support channel in our [discord server](https://santiment.net/discord)
-
-## Glossary
-
-There are some terms used in this document. Here is a list and description of them:
-
-- `slug` - A string uniquely identifying identifying a project. You can find the slug of the projects, alongside their names, tickers (and much more data) by using the [allProjects API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20infrastructure%0A%20%20%20%20mainContractAddress%0A%20%20%7D%0A%7D%0A).
-- `interval` - A representation of time intervals like 5 minutes, 12 hours, 10 days, 4 weeks, etc..
-  An interval is represented as a string starting with a number and followed by one of the suffixes:
-
-  - `s` - second
-  - `m` - minute
-  - `h` - hour
-  - `d` - day
-  - `w` - week
-
-  These are the intervals corresponding to the given examples:
-
-  - 5 minutes - `5m`
-  - 12 hours - `12h`
-  - 10 days - `10d`
-  - 4 weeks - `4w`
-
-  > Note that there is no suffix for specifying months due to months not containing a fixed amount of days.
-
-  An interval is used when fetching timeseries data. If the raw data is
-  available at 5 minute intervals but you want to fetch it daily, `interval: "1d"`
-  should be provided as parameter. In this case the default aggregation will be applied on all 288 5-minute data points in the given day to compute the value for the whole day. This aggregation varies based on the metric - in some cases taking the average or the last value is required (price), in other cases taking the sum of all values (transaction volume), etc.
-
-- `ISO 8601 format` - The date time format used in the API. The format is `<year>-<month>-<day>T<hour>:<minute>:<second>Z`.
-  For example Jan 10th 2019 12:34:56 is `2019-01-10T12:34:56Z`
-- `API key` - Your API for accessing the premium features in the API. See the `Authentication` section for more details
-
-## Start exploring the API
-
-[Start exploring the API here](/sanapi/exploring/)
+Examples for different analysis based on Santiment data can be found [here](../education-and-use-cases/index)

@@ -1,7 +1,56 @@
 ---
 title: Glossary
-author: Santiment Team
+author: Ivan
 ---
 
-- [Asset](/glossary/asset/)
-- [Slug](/glossary/slug/)
+Find the meaning of terms used throughout the documentation
+
+- [asset](#asset)
+- [slug](#slug)
+- [interval](#interval)
+- [ISO8601](#ISO8601)
+- [API key](#Api-key)
+
+## Terms
+
+### asset
+
+An asset is any cryptocurrency or crypto token which can be associated with a price. Example of assets are Bitcoin, Ethereum and Santiment tokens.
+More detailed info can be found [here](./asset/index)
+
+### slug
+
+A string uniquely identifying identifying an [asset](./asset/index). You can find the slug of the projects, alongside their names, tickers (and much more data) by using the [allProjects API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20infrastructure%0A%20%20%20%20mainContractAddress%0A%20%20%7D%0A%7D%0A).
+
+### interval
+
+A representation of time intervals like 5 minutes, 12 hours, 10 days, 4 weeks, etc..
+An interval is represented as a string starting with a number and followed by one of the suffixes:
+
+- `s` - second
+- `m` - minute
+- `h` - hour
+- `d` - day
+- `w` - week
+
+These are the intervals corresponding to the given examples:
+
+- 5 minutes - `5m`
+- 12 hours - `12h`
+- 10 days - `10d`
+- 4 weeks - `4w`
+
+> Note that there is no suffix for specifying months due to months not containing a fixed amount of days.
+
+An interval is used when fetching timeseries data. If the raw data is
+available at 5 minute intervals but you want to fetch it daily, `interval: "1d"`
+should be provided as parameter. In this case the default aggregation will be applied on all 288 5-minute data points in the given day to compute the value for the whole day. This aggregation varies based on the metric - in some cases taking the average or the last value is required (price), in other cases taking the sum of all values (transaction volume), etc.
+
+### ISO8601
+
+The date time format used in the API. The format is `<year>-<month>-<day>T<hour>:<minute>:<second>Z`.
+For example Jan 10th 2019 12:34:56 is `2019-01-10T12:34:56Z`
+
+### API key
+
+Your API for accessing the premium features in the API. See the `Authentication` section for more details

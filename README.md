@@ -1,4 +1,6 @@
-![](./src/images/academy.png)
+# README
+
+![academy-logo](./src/images/academy.png)
 
 This is the source for [**Santiment Technical Documentation site**](academy.santiment.net)
 
@@ -30,11 +32,12 @@ Example: you want to add `Transaction Volume` article.
 You should choose: `METRICS` category, add `"Transaction Volume"` to `articles` array.
 After that add markdown file `transaction-volume.md` (or transaction-volume/index.md) to `src/docs/metrics/`.
 
-*If you can't find appropriate category for your article, pls, write to @Nastya or someone from frontend. We will discuss it and help with icon*
+> If you can't find appropriate category for your article, pls, write to @Nastya or someone from frontend. We will discuss it and help with icon\_
 
 ---
 
 ### Metadata
+
 A metadata block should be in a yaml notation directly in markdown file.
 
 Each article should contain a **title** and **description** in its metadata. The title is used to set-up the html title.
@@ -51,12 +54,11 @@ description: some description for seo
 author: Tzanko Matev
 date: 2019-01-01
 ---
-
 ## Some title in article
 
 The number of distinct addresses that ...
 ```
 
-Note the three dashes before and after metadata. *Don't forget to put them there*.
+Note the three dashes before and after metadata. _Don't forget to put them there_.
 
 `h2` for headings in article will be in the fast navigation through the article

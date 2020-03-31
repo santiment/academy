@@ -7,7 +7,6 @@ date: 2019-09-17
 Santiment brings a comprehensive set of metrics together in one place so you can get a better picture of what’s happening with your favorite crypto assets and/or crypto markets in general.
 We emphasize plotting metrics against price over time, to more easily spot how trends and events correlate with price action.
 
-
 ## Financial
 
 Traditional fundamentals including price, volume and market cap, plus crypto-related data like total supply, circulating supply, top transactions, ETH spent by the team and ROI since ICO (if applicable)
@@ -23,7 +22,6 @@ Metrics taken from measuring social activity on crypto-related forums and channe
 - [Social volume metrics](/metrics/social-volume-metrics)
 - [Sentiment metrics](/metrics/sentiment-metrics)
 - [Emerging trends](/metrics/emerging-trends)
-
 
 ## Development
 
@@ -46,20 +44,22 @@ Metrics taken directly from various blockchains:
 Includes transaction volume, daily active addresses, metrics about the flow of funds of exchanges, top holder lists, metrics about exchange deposit addresses, MVRV ratio and much more.
 
 ### Network value
+
 - Realized Cap
 - [Market Value To Realized Value](/metrics/mvrv)
 - [NVT Ratio](/metrics/nvt-ratio)
 
 ### Network Activity
+
 - [Network Growth](/metrics/network-growth)
 - [Daily Active Addresses](/metrics/daily-active-addresses)
 
 ### Token Flows/Movement/Activity
+
 - [Token Age Consumed](/metrics/token-age-consumed)
 - [Velocity of tokens](/metrics/token-velocity)
 - [Transaction Volume](/metrics/transaction-volume)
 - [Token Circulation](/metrics/token-circulation)
-
 
 ---
 
