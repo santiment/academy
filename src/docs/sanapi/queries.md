@@ -1,6 +1,6 @@
 ﻿---
 title: "Queries"
-author: "Santiment team"
+author: "Santiment Team"
 date: "2019-09-20"
 ---
 

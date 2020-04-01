@@ -1,6 +1,6 @@
 ---
 title: "API Reference"
-author: "Santiment team"
+author: "Santiment Team"
 date: "2019-09-20"
 description: This page contains a reference of all the APIs provided by Santiment.
 ---

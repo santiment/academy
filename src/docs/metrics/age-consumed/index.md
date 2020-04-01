@@ -5,6 +5,10 @@ author: Santiment Team
 
 _For a more in-depth technical explanation of `Age Consumed`, please click_ [_here_](/metrics/age-consumed/age-consumed-technical)
 
+---
+
+## Description
+
 Age consumed shows the amount of tokens changing addresses on a certain date, multiplied by the time since they last moved.
 
 Spikes on the graph signal a large amount of tokens moving after being idle for an extended period of time.
@@ -17,6 +21,8 @@ Here's the Token Age Consumed graph for [Golem](https://golem.network/), an ERC-
 We can easily spot several significant spikes over time: each could be a large early investor selling their tokens, which commonly results in a parallel price decline.
 
 ---
+
+## API
 
 The query to fetch the age consumed is called `age_destroyed` in the API:
 

@@ -1,6 +1,6 @@
 ---
 title: "Access plans"
-author: "Santiment team"
+author: "Santiment Team"
 date: "2019-09-17"
 # REF sanbase2/lib/sanbase/billing/plan
 # REF sanbase2/lib/sanbase/clickhouse/metric/helper.ex

@@ -1,6 +1,6 @@
 ---
 title: Daily Active Addresses Metric
-author: Santiment team
+author: Santiment Team
 date: 2019-09-17
 # References
 #
@@ -21,9 +21,13 @@ date: 2019-09-17
 
 The number of distinct addresses that participated in a transfer for the given asset in any given day. Each address is counted only once for the day. Both the senders and the receivers of the asset are counted.
 
+---
+
 ## Measuring Unit
 
-Addresses
+Non-negative number of addresses
+
+---
 
 ## Frequency - Daily
 
@@ -32,6 +36,8 @@ according to the UTC timezone. So for example the value of the metric
 for BTC and June 10, 2019 will contain the number of distinct
 addresses for transfers that happened between 2019-06-10 00:00:00 UTC
 and 2019-06-10 23:59:59 UTC.
+
+---
 
 ## Computation time
 
@@ -55,34 +61,24 @@ for the final value is usually 6 hours and 40 minutes. At 00:40 UTC
 you will get an approximate value which will exclude the addresses in
 the last up to 3 blocks.
 
+---
+
 ## Available assets
 
 This metric is computed for Bitcoin, Ethereum, EOS, Ripple and all
 ERC20 tokens.
 
-## How to access
+---
 
-### [Sandata](https://data.santiment.net?utm_source=docs)
-
-You can access the metric on the [On-chain metrics
-V2](https://data.santiment.net/d/iYmn0EGZk/00-on-chain-metrics-v2?utm_source=docs)
-dashboard.
-
-### [Sanbase](https://app.santiment.net?utm_source=docs)
-
-The metric is available on [Sanbase](https://app.santiment.net/?enabledViewOnlySharing=true&from=2019-04-20T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=dailyActiveAddresses&projectId=1538&scale=time&slug=bitcoin&timeRange=6m&title=Bitcoin%20%28BTC%29&to=2019-10-21T21%3A00%3A00.000Z).
-
-### [SanAPI](https://neuro.santiment.net/)
-
-The metric is available on SanAPI:
+## API
 
 ```graphql
 {
   getMetric(metric: "daily_active_addresses") {
     timeseriesData(
-      slug: "bitcoin"
-      from: "2019-01-01T00:00:00Z"
-      to: "2019-09-01T00:00:00Z"
+      slug: "santiment"
+      from: "2020-01-01T00:00:00Z"
+      to: "2020-01-07T00:00:00Z"
       interval: "1d"
     ) {
       datetime
@@ -92,21 +88,4 @@ The metric is available on SanAPI:
 }
 ```
 
-[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%22daily_active_addresses%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22bitcoin%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%0A%20%20%20%20interval%3A%221d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)
-
-### [Sansheets](https://santiment.net/sansheets/)
-
-You can use `SAN_ACTIVE_ADDRESSES` function to get the data. Example:
-
-```
-=SAN_ACTIVE_ADDRESSES("bitcoin","2019-01-01","2019-09-01")
-```
-
-## Availability
-
-|           | Free               | Basic              | Pro                | Premium            | Enterprise         |
-| --------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| Sanbase   | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sandata   | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

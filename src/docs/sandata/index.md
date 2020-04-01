@@ -1,6 +1,6 @@
 ---
 title: Sandata
-author: Santiment team
+author: Santiment Team
 description: Plattform for accessing all metrics, including more experimental metrics and metrics in beta
 ---
 
@@ -9,4 +9,3 @@ Sandata is the plattform that holds the most complete set of metrics, including 
 - [Logging into Sandata](/sandata/logging-into-sandata)
 - [Navigation](/sandata/navigation)
 - [The ERC20 overview page](/sandata/the-erc-20-overview-page)
-

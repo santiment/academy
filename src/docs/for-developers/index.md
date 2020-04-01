@@ -1,7 +1,7 @@
 ---
 title: Getting started for developers
 author: Ivan
-description: Technical documentation on Santiment metrics and indicators. Understand the calculations, logic and algorithms behind our metrics - many of them custom-built by the Santiment team.
+description: Technical documentation on Santiment metrics and indicators. Understand the calculations, logic and algorithms behind our metrics - many of them custom-built by the Santiment Team.
 ---
 
 ## Overview
