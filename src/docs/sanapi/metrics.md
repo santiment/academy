@@ -1,18 +1,21 @@
 ---
-title: "Available Metrics"
+title: "Metrics"
 author: "Santiment team"
 date: "2019-09-20"
 ---
 
 - [Overview](#overview)
-- [All available assets](#all-available-assets)
 - [All available metrics](#all-available-metrics)
+- [All available assets](#all-available-assets)
 - [Available metrics per project](#available-metrics-per-project)
 - [Available projects per metrics](#available-projects-per-metric)
 - [Queryable fields](#queryable-fields)
   - [timeseriesData](#timeseriesdata)
   - [aggregatedTimeseriesData](#aggregatedtimeseriesdata)
   - [histogramData](#histogramdata)
+  - [metadata](#metadata)
+  - [availableSince](#availablesince)
+  - [lastDatetimeComputedAt](#lastdatetimecomputedat)
 
 ## Overview
 
@@ -29,12 +32,6 @@ Supported blockchains:
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-## All available assets
-
-Every metric is fetched for a given asset, identified by its `slug`.
-
-Documentation about biw to fetch all available assets can be found [here](../glossary/asset)
-
 ## All available metrics
 
 The list of all available metrics can be fetched with this query:
@@ -44,6 +41,14 @@ The list of all available metrics can be fetched with this query:
   getAvailableMetrics
 }
 ```
+
+Documentation for those metrics can be found on the [metrics page](/metrics)
+
+## All available assets
+
+Every metric is fetched for a given asset, identified by its `slug`.
+
+Documentation about biw to fetch all available assets can be found [here](../glossary/asset)
 
 **[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAvailableMetrics%0A%7D)**
 

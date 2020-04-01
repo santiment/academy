@@ -54,7 +54,18 @@ by Valentin, our CTO.
 
 ## Development Activity
 
-The 'pure' development activity. It excludes events that are not development related like creating issues, commenting issues, when someone stars the repository, etc. This allows to better compare projects that use github for issue tracking and projects that do not use github for issue tracking. If such events are not excluded then the second project could have inflated activity just by discussion what they are going to build without actually building it.
+The 'pure' development activity. It excludes events that are not development related like:
+
+- Comments on issues
+- Issues created and closed
+- Creating of forks
+- Comments on commits
+- People following an issue
+- Downloading releases
+- Watching a repository
+- Project management events
+
+This allows to better compare projects that use github for issue tracking and projects that do not use github for issue tracking. If such events are not excluded then the second project could have inflated activity just by discussion what they are going to build without actually building it.
 
 - Available For - [All assets with known github organization](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 - Latency - From 1 to 6 hours

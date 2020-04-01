@@ -14,51 +14,75 @@ export const GUIDES = [
     title: "Education and Use cases",
     description: "Examples and use cases for Santiment metrics",
     icon: Education,
-    articles: ["Timing market volatility with Token Age Consumed","Investigate Speculative Activity with Santiment’s Exchange Metrics", "How To Spot tops with Price - Network Activity divergences","Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies"]
+    articles: [
+      "Timing market volatility with Token Age Consumed",
+      "Investigate Speculative Activity with Santiment’s Exchange Metrics",
+      "How To Spot tops with Price - Network Activity divergences",
+      "Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies",
+    ],
   },
   {
     title: "Sanbase",
     icon: Sanbase,
     description: "Our crypto analytics & behavior platform",
-    articles: ["Assets page", "Insights", "Sonar page", "Emerging trends page", "Social trends search", "Account settings", "Logging into Sanbase","Requesting display new project"],
-
+    articles: [
+      "Assets page",
+      "Insights",
+      "Sonar page",
+      "Emerging trends page",
+      "Social trends search",
+      "Account settings",
+      "Logging into Sanbase",
+      "Requesting display new project",
+    ],
   },
   {
     title: "SanAPI",
     icon: SanAPI,
-    description: "Our API, available metrics & queries",
-    articles: ["Exploring", "Available queries", "Available metrics"],
+    description: "Santiment API, Available Metrics & Queries",
+    articles: ["Metrics", "Queries"],
   },
   {
     title: "Sansheets",
     icon: Sansheets,
     description: "Our Spreadsheets plugin for Santiment data",
-    articles: ["Setting up", "Adding an API key", "Functions", "Pro Templates"]
+    articles: ["Setting Up", "Adding an API key", "Functions", "PRO Templates"],
   },
   {
     title: "Sandata",
     icon: Sandata,
     description: "Our advanced crypto dashboards",
-    articles: ["Logging into Sandata", "Navigation", "The erc 20 overview page"],
+    articles: ["Logging into Sandata", "Navigation", "ERC20 Overview Page"],
   },
   {
     title: "Products and plans",
     icon: ProductsAndPlans,
     description: "On the Santiment suite and available plans",
-    articles: ["Access plans", "Santiment products", "How to pay with crypto", "Create an API key", "Sanbase PRO features"],
+    articles: [
+      "Access Plans",
+      "Santiment Products",
+      "How to pay with crypto",
+      "Create an API key",
+      "Sanbase PRO features",
+    ],
   },
   {
     title: "SAN tokens",
     icon: SANtokens,
     description: "Use cases, roadmap and where to buy",
-    articles: ["How to buy SAN", "How to stake SAN", "Buy SAN tokens using Bancor", "About SAN tokens"],
+    articles: [
+      "How to buy SAN",
+      "How to stake SAN",
+      "Buy SAN tokens using Bancor",
+      "About SAN tokens",
+    ],
   },
   {
     title: "Glossary",
     icon: Glossary,
     description: "Introduction to all relevant terms and concepts",
-    articles: ["Asset", "Slug"]
-  }
+    articles: [],
+  },
 ]
 
 export const REFERENCES = [
@@ -66,17 +90,42 @@ export const REFERENCES = [
     title: "Metrics",
     description: "Documentation and API references for Santiment indicators",
     icon: Metrics,
-    articles: ["Social data", "Sentiment metrics", "Social volume metrics", "Emerging trends", "Daily Active Addresses", "MVRV", "EOS", "Mean coin age", "Developer Activity", "Top holders", "Token Age Consumed", "Deposit Addresses", "Metrics for Deposit Addresses", "Exchange Flow metrics", "Network Growth", "Token Circulation", "Transaction Volume", "Velocity of Tokens", "NVT Ratio", "Top 100 transactions", "History Price", "OHLC", "Percentage of token supply on exchanges", "Realized value", "Top Social Gainers Losers"],
+    articles: [
+      "Age Consumed",
+      "Circulation",
+      "Daily Active Addresses",
+      "Deposit Addresses",
+      "Development Activity",
+      "EOS",
+      "Emerging trends",
+      "Exchange Funds Flow",
+      "MVRV",
+      "Mean coin age",
+      "NVT Ratio",
+      "Network Growth",
+      "OHLC",
+      "Percent of total supply on exchanges",
+      "Price",
+      "Realized value",
+      "Sentiment Metrics",
+      "Social Data",
+      "Social Volume",
+      "Top 100 transactions",
+      "Top Social Gainers Losers",
+      "Top holders",
+      "Transaction Volume",
+      "Velocity",
+    ],
   },
   {
     title: "Changelog",
     description: "Keep track of development updates and new product features",
     icon: Changelog,
-    articles: []
-  }
+    articles: [],
+  },
 ]
 
 export const GETTING_STARTED = {
   title: "Getting started",
-  articles: ["For traders","For developers"]
+  articles: ["For Traders", "For Developers"],
 }

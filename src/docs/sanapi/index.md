@@ -150,14 +150,6 @@ datetime                    activity
 2019-01-06 00:00:00+00:00       22.0
 ```
 
-Examples how to fetch data with sanpy and analyize it can be found here:
-
-- [Santiment Hands On Tutorial](https://github.com/santiment/san-sdk/blob/master/ICDM_2019/ICDM.ipynb)
-- [Corellation analysis between Bitcoin and Gold](https://github.com/santiment/san-sdk/blob/master/correlation-analysis/BTC%20vs%20GOLD.ipynb)
-  - Santiment's GraphQL API also provides price for gold with the slug `gold` and S&P500 with slug `s-and-p-500`
-- [Backtesting trading based on github data](https://github.com/santiment/san-sdk/blob/master/example-backtesting-with-sanpy/Backtest_GitHub_Activity_Portfolio.ipynb)
-- [Stablecoin comparisons](https://github.com/santiment/san-sdk/blob/master/example-stablecoin-analysis/stablecoin%20comparison.ipynb)
-
 ### Programming language of your choice
 
 In the [san-sdk](https://github.com/santiment/san-sdk) repository there are examples how to query the API with:
@@ -244,13 +236,12 @@ If the query does not return status code `200`, then something else is happening
 
 There are some terms used in this document like:
 
+- query
+- metric
+- asset
 - slug
 - interval
 - ISO8601
 - apikey
 
-Full glossary can be found [here](../glossary)
-
-## Start exploring the API
-
-[Start exploring the API here](./exploring)
+Their meaning can be found in the dedicated [glossary page](../glossary)
