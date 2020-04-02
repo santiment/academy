@@ -31,42 +31,27 @@ Non-negative number of addresses
 
 ## Frequency - Daily
 
-One value is computed for each day and each asset. The day is taken
-according to the UTC timezone. So for example the value of the metric
-for BTC and June 10, 2019 will contain the number of distinct
-addresses for transfers that happened between 2019-06-10 00:00:00 UTC
-and 2019-06-10 23:59:59 UTC.
+One value is computed for each day and each asset. The day is taken according to the UTC timezone. So for example the value of the metric for BTC and June 10, 2019 will contain the number of distinct addresses for transfers that happened between 2019-06-10 00:00:00 UTC and 2019-06-10 23:59:59 UTC.
 
 ---
 
 ## Computation time
 
-The computation starts around 00:30 UTC each day. The final value of
-this metric is generally available around 00:40 UTC.
+The computation starts around 00:30 UTC each day. The final value of this metric is generally available around 00:40 UTC.
 
-We also compute intermediate values. That means the number of
-addresses from the start of the day in UTC until the time the
-computation is ran. The intermediate computations start at 06:30 UTC,
-12:30 UTC, 18:30 UTC. The intermediate values are generally available
-around 10 minutes after the computation starts.
+We also compute intermediate values. That means the number of addresses from the start of the day in UTC until the time the computation is ran. The intermediate computations start at 06:30 UTC, 12:30 UTC, 18:30 UTC. The intermediate values are generally available around 10 minutes after the computation starts.
 
-_Note:_ Since our Bitcoin latency is generally larger than 30 minutes
-and can go up to 2 hours, the value computed at 00:30 UTC might not be
-final. In that case the value computed at 6:30 UTC will be final.
+_Note:_ Since our Bitcoin latency is generally larger than 30 minutes and can go up to 2 hours, the value computed at 00:30 UTC might not be final. In that case the value computed at 6:30 UTC will be final.
 
 ## Latency
 
-For most assets latency is around 40 minutes. For Bitcoin the latency
-for the final value is usually 6 hours and 40 minutes. At 00:40 UTC
-you will get an approximate value which will exclude the addresses in
-the last up to 3 blocks.
+For most assets latency is around 40 minutes. For Bitcoin the latency for the final value is usually 6 hours and 40 minutes. At 00:40 UTC you will get an approximate value which will exclude the addresses in the last up to 3 blocks.
 
 ---
 
 ## Available assets
 
-This metric is computed for Bitcoin, Ethereum, EOS, Ripple and all
-ERC20 tokens.
+This metric is computed for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 

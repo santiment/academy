@@ -48,7 +48,7 @@ Documentation for those metrics can be found on the [metrics page](/metrics)
 
 Every metric is fetched for a given asset, identified by its `slug`.
 
-Documentation about biw to fetch all available assets can be found [here](../glossary/asset)
+Documentation about biw to fetch all available assets can be found [here](/glossary/#asset)
 
 **[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAvailableMetrics%0A%7D)**
 

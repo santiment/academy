@@ -19,7 +19,7 @@ There are a few different ways to fetch and analyze data data:
 ## GraphQL API
 
 If the desired metric is available in the API using it is the preferred way to fetch data.
-Detailed description and examples can be found on the [SanAPI page](../sanapi)
+Detailed description and examples can be found on the [SanAPI page](/sanapi)
 
 The API can be consumed in a few different ways:
 
@@ -30,22 +30,22 @@ The API can be consumed in a few different ways:
 
 ## Download CSV from Sandata
 
-[Sandata](../sandata/index) contains metrics that are both available and not available in the API. All data from Sandata can be exported as a CSV file.
+[Sandata](/sandata) contains metrics that are both available and not available in the API. All data from Sandata can be exported as a CSV file.
 ![sandata-csv-export](sandata-csv-export.png)
 
 ## Download CSV from Sanbase
 
-[Sanbase](../sanbase/index) contains only data available in the API. Data from charts can be exported as a CSV file.
+[Sanbase](/sanbase) contains only data available in the API. Data from charts can be exported as a CSV file.
 ![sanbase-csv-export](sanbase-csv-export.png)
 
 ## Download CSV from Sangraphs
 
-[Sangraphs](../sangraphs/index) contains metrics that are both available and not available in the API. The social merics from Sangraphs can be exported as a CSV file from the bottom of the social page.
+[Sangraphs](https://graphs.santiment.net) contains metrics that are both available and not available in the API. The social merics from Sangraphs can be exported as a CSV file from the bottom of the social page.
 ![sangraphs-csv-export](sanbase-csv-export.png)
 
 ## Analyzing Santiment Data
 
-Examples for different analysis based on Santiment data can be found on the [Education and use cases page](/education-and-use-cases/index)
+Examples for different analysis based on Santiment data can be found on the [Education and use cases page](/education-and-use-cases)
 
 The are two types of examples included:
 

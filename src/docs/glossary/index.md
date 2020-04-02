@@ -105,11 +105,11 @@ In some cases the query and the metric are the same. In the next example `histor
 ## asset
 
 An asset is any cryptocurrency or crypto token which can be associated with a price. Example of assets are Bitcoin, Ethereum and Santiment tokens.
-More detailed info can be found [here](./asset/index)
+More detailed info can be found [here](/glossary/asset)
 
 ## slug
 
-A string uniquely identifying identifying an [asset](./asset/index). You can find the slug of the projects, alongside their names, tickers (and much more data) by using the [allProjects API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20infrastructure%0A%20%20%20%20mainContractAddress%0A%20%20%7D%0A%7D%0A).
+A string uniquely identifying identifying an [asset](/glossary/asset). You can find the slug of the projects, alongside their names, tickers (and much more data) by using the [allProjects API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20infrastructure%0A%20%20%20%20mainContractAddress%0A%20%20%7D%0A%7D%0A).
 
 ## interval
 

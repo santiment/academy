@@ -14,6 +14,30 @@ Examples:
 
 ---
 
+## Timebound
+
+There are multiple [timebound metrics](/metrics/details/timebound) available
+
+---
+
+## Measuring Unit
+
+Token/Coin amount
+
+---
+
+## Frequency
+
+Circulation is available at [daily intervals](/metrics/details/frequency#daily-frequency)
+
+---
+
+## Latency
+
+Circulation has [on-chain latency](/metrics/details/latency#on-chain-latency)
+
+---
+
 ### API
 
 Gets the total amount of tokens that have been sent at least once during each day for given time period. Projects are referred to by a unique identifier (slug).

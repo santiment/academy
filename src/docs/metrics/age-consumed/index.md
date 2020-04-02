@@ -1,13 +1,15 @@
 ---
 title: Token Age Consumed metric
 author: Santiment Team
+date: 2020-04-02
+description: ASD
 ---
 
 _For a more in-depth technical explanation of `Age Consumed`, please click_ [_here_](/metrics/age-consumed/age-consumed-technical)
 
 ---
 
-## Description
+## Definition
 
 Age consumed shows the amount of tokens changing addresses on a certain date, multiplied by the time since they last moved.
 
@@ -21,6 +23,22 @@ Here's the Token Age Consumed graph for [Golem](https://golem.network/), an ERC-
 We can easily spot several significant spikes over time: each could be a large early investor selling their tokens, which commonly results in a parallel price decline.
 
 ---
+
+## Measuring Unit
+
+Time passed × Token/Coin amount
+
+---
+
+## Frequency
+
+Age Consumed is available at [5-minute intervals](/metrics/details/frequency#five-minute-frequency)
+
+---
+
+## Latency
+
+Age Consumed has [on-chain latency](/metrics/details/latency#on-chain-latency)
 
 ## API
 

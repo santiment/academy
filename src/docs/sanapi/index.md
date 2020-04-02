@@ -27,7 +27,7 @@ Santiment API uses [GraphQL](https://graphql.org). From the beginning it was dec
 
 ## Available Metrics
 
-Full list of metrics can be found [here](../metrics).
+Full list of metrics can be found [here](/metrics).
 
 ## Access the API
 
