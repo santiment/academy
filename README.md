@@ -1,6 +1,6 @@
 ![](./src/images/academy.png)
 
-This is the source for [**Santiment Technical Documentation site**](academy.santiment.net)
+This is the source for [**Santiment Technical Documentation site**](https://academy.santiment.net)
 
 ## Running locally
 
