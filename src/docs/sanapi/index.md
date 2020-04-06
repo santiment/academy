@@ -11,18 +11,22 @@ description: This page contains a reference of all the APIs provided by Santimen
 - [Access the API](#access-the-api)
   - [Live API Explorer](#live-api-explorer)
   - [curl](#curl)
-  - [sanpy - Santiment-provided Python library](#santiment-provided-python-library)
+  - [sanpy - Santiment-provided Python
+    library](#santiment-provided-python-library)
   - [Programming langauge of your choice](#programming-language-of-your-choice)
 - [Authentication](#authentication)
 - [Errors](#errors)
 - [Glossary](#glossary)
 - [Start exploring the API](#start-exploring-the-api)
 
-Santiment API uses [GraphQL](https://graphql.org). From the beginning it was decided to use GraphQL instead of REST for a number of reasons:
+Santiment API uses [GraphQL](https://graphql.org). From the beginning it was
+decided to use GraphQL instead of REST for a number of reasons:
 
 - You can request exactly the data you need and easily batch requests together.
-  This is effectively handling the issues with underfetching and overfetching data. Why fetching all 20+ fields of a project when you only need its name?
-- The request describes the format of the response. You no longer need to wonder what data the result contains and how to parse it.
+  This is effectively handling the issues with underfetching and overfetching
+  data. Why fetching all 20+ fields of a project when you only need its name?
+- The request describes the format of the response. You no longer need to wonder
+  what data the result contains and how to parse it.
 - Easy out-of-the-box way to explore our API via our Live Explorer
 
 ## Available Metrics
@@ -31,18 +35,23 @@ Full list of metrics can be found [here](/metrics).
 
 ## Access the API
 
-> Some of the metrics are not available for free or are restricted - historical and realtime data is cut off. In order to explore them use slug `santiment` as it has full access without any restrictions.
+> Some of the metrics are not available for free or are restricted - historical
+> and realtime data is cut off. In order to explore them use slug `santiment` as
+> it has full access without any restrictions.
 
 There are different ways to fetch data from Santiment's API:
 
 ### Live API Explorer
 
-There is a live explorer, where you can run queries directly from the browser. The
-explorer is accessible here: [https://api.santiment.net/graphiql](https://api.santiment.net/graphiql)
+There is a live explorer, where you can run queries directly from the browser.
+The explorer is accessible here:
+[https://api.santiment.net/graphiql](https://api.santiment.net/graphiql)
 
-Here is an example of running a query and seeing the results directly in the browser:
+Here is an example of running a query and seeing the results directly in the
+browser:
 
-[GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)
+[GraphQL Request fetching transaction
+volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)
 
 ### curl
 
@@ -64,8 +73,8 @@ The following GraphQL request will be passed as the body of the request:
 }
 ```
 
-Use the curl tool to get development activity of Ethereum.
-Copy and paste this curl request to your console:
+Use the curl tool to get development activity of Ethereum. Copy and paste this
+curl request to your console:
 
 ```bash
 curl \
@@ -81,7 +90,8 @@ A similar response is returned:
 {"data":{"getMetric":{"timeseriesData":[{"datetime":"2020-02-13T00:00:00Z","value":1281.0},{"datetime":"2020-02-20T00:00:00Z","value":1115.0},{"datetime":"2020-02-27T00:00:00Z","value":952.0},{"datetime":"2020-03-05T00:00:00Z","value":605.0}]}}}
 ```
 
-If you have the `jq` tool installed it could help visuallize this response even better:
+If you have the `jq` tool installed it could help visuallize this response even
+better:
 
 ```bash
 curl \
@@ -119,7 +129,8 @@ shows:
 
 There is a Python wrapper for the graphql API.
 
-The library is called `sanpy` and documentation and instructions how to install can be found [here](https://github.com/santiment/sanpy)
+The library is called `sanpy` and documentation and instructions how to install
+can be found [here](https://github.com/santiment/sanpy)
 
 It can be installed via `pip`
 
@@ -127,7 +138,8 @@ It can be installed via `pip`
 pip install sanpy
 ```
 
-The same ethereum development activity data with this library can be fetched like this:
+The same ethereum development activity data with this library can be fetched
+like this:
 
 ```python
 san.get(
@@ -152,7 +164,8 @@ datetime                    activity
 
 ### Programming language of your choice
 
-In the [san-sdk](https://github.com/santiment/san-sdk) repository there are examples how to query the API with:
+In the [san-sdk](https://github.com/santiment/san-sdk) repository there are
+examples how to query the API with:
 
 - [R](https://github.com/santiment/san-sdk/tree/master/R-graphql)
 - [Ruby](https://github.com/santiment/san-sdk/blob/master/ruby-graphql/example.rb)
@@ -164,12 +177,13 @@ In the [san-sdk](https://github.com/santiment/san-sdk) repository there are exam
 
 ## Authentication
 
-Some of the APIs require a valid API key, belonging to an account with a
-paid subscription to access more data. The API key can be generated on your
-[Account Settings](https://app.santiment.net/account#api-keys) page.
+Some of the APIs require a valid API key, belonging to an account with a paid
+subscription to access more data. The API key can be generated on your [Account
+Settings](https://app.santiment.net/account#api-keys) page.
 
 After that you need to pass the API key as an additional HTTP header
-`Authorization: Apikey <YOUR_OWN_API_KEY>`. An example how to do that using curl:
+`Authorization: Apikey <YOUR_OWN_API_KEY>`. An example how to do that using
+curl:
 
 ```bash
 curl \
@@ -182,10 +196,11 @@ curl \
 
 ## Errors
 
-In case something is not correct with the request, the API will return an error. The API
-requests should always return status code 200, even if there was an error processing the
-request. An error response is going to include a description of the error that occured.
-For example here is what will happen if the query passed to the API is not valid:
+In case something is not correct with the request, the API will return an error.
+The API requests should always return status code 200, even if there was an
+error processing the request. An error response is going to include a
+description of the error that occured. For example here is what will happen if
+the query passed to the API is not valid:
 
 ```bash
 $ curl \
@@ -203,7 +218,8 @@ $ curl \
 }
 ```
 
-If your query is missing some argument, that should be described in the error response:
+If your query is missing some argument, that should be described in the error
+response:
 
 ```bash
 $ curl \
@@ -227,10 +243,13 @@ $ curl \
 }
 ```
 
-If the query does not return status code `200`, then something else is happening. Here are some of the options:
+If the query does not return status code `200`, then something else is
+happening. Here are some of the options:
 
-- `429` - you are being rate limited. Reduce the amount of requests you are doing
-- `5xx` - an internal server error has occured. Let us know in the support channel in our [discord server](https://santiment.net/discord)
+- `429` - you are being rate limited. Reduce the amount of requests you are
+  doing
+- `5xx` - an internal server error has occured. Let us know in the support
+  channel in our [discord server](https://santiment.net/discord)
 
 ## Glossary
 
