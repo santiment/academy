@@ -70,6 +70,8 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### SanAPI
 
+The metric is available under the `active_deposits` name.
+
 ```graphql
 {
   getMetric(metric: "active_deposits") {

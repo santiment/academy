@@ -1,170 +1,109 @@
 ---
-title: Mean coin age
-author: Tzanko Matev
-date: 2019-05-28
+title: Mean Coin Age
+author: Ivan
+date: 2020-04-06
 ---
 
 ## Definition
 
-Recall that a **coin-age model** allows us at each given point in time
-to split all coins into segments where each segment $x$ has an
-assigned amount $v_x$ and creation timestamp $ot_x$. The set of all
-segments that exist at time $t$ will be denoted by $S_t$.
+Recall that the **[coin-age model](/metrics/details/stack-coin-age-model)**
+allows us at each given point in time to assign age to each coin/token.
 
-Then, the formula for computing the mean coin age $MCA(t)$ is:
+There are two coin age defined metrics:
 
-$$
-MCA(t) = \frac{\sum_{x\in S_t} (t-ot_x)v_x}{\sum_{x\in S_t}v_x}
-$$
+- Mean Coin Age - The average age of all coins/tokens on the blockchain.
+- Mean Dollar Invested Age - The average age of all coins/tokens on the
+  blockchain weighted by the purchase price.
 
-Let us call the quantity in the numerator, the **total coin age** and
-let us denote it by $TCA(t)$. The quantity in the denominator is the
-*total supply* existing at time $t$. We will call it $TS(t)$
+### Example (Mean Coin age)
 
-## Total supply
+Given there are 100 tokens in existence:
 
-We can already compute the coin circulation. For each period $p$ we
-can compute the amount of coins that have been active in the last $p$
-days. Let us denote this amount by $Circ_p(t)$.
+- 50 of them have age 10 days
+- 50 of them have age 20 days
 
-### Lemma
+then the average coin age is: (10 × 50 + 20 × 50) / 100 = 15 (coin-days)
 
-$$
-TS(t) = Circ_p(t)
-$$
+### Example (Mean Dollar Invested Age)
 
-for $p$ sufficiently large. More precisely the equality holds if $p$
-is larger than the total life of the coin.
+Given there 100 tokens in existence:
 
-## Total age
+- 50 of them have age 10 days and the token's price was \$1 at that time
+- 50 of them have age 20 days and the token's price was \$2 at that time
 
-Let's focus on computing the total age of each coin. We have
+then the mean dollar invested age is: (10 × 50 + 20 × 50) / (50 × $1 + 50 × $2)
+= 1500 / 150 = 10 (coin-dollar days)
 
-$$
-TCA(t) = t\left(\sum_{x\in S_t} v_x\right) - \sum_{x\in S_t} ot_x = TS(t)t - TCT(t)
-$$
+> More technical definition and computation description can be found
+> [here](/metrics/mean-coin-age/mean-coin-age-technical)
 
-We call the second summand, the **total creation timestamp**. If we
-divide it by the token supply we will get the **mean creation
-timestamp** $MCT(t)$. Hence we have the following formula:
+---
 
-$$
-MCA(t) = t - MCT(t)
-$$
+## Measuring Unit
 
-In other words the mean coin age is equal to the current timestamp
-minus the mean creation timestamp.
+- Coin Age in Days
+- Coin Dollar Age in Days
 
-## Total creation timestamp
+## Frequency
 
-According to the theory that we have already developed, we can
-efficiently compute the total creation timestamp. It is the metric
-$M_f(t)$ associated to the function $f(x,t) = ot_x v_x$.
+The Mean Age metrics are available at [daily
+intervals](/metrics/details/frequency#daily-frequency)
 
-### Lemma
+---
 
-Let $E$ denote the event stream associated to the coin age model $S$. Then
-$$
-\Delta TCT(t) = \sum_{e\in E \\ t_e = t} \sigma_e ot_x v_e
-$$
+## Latency
 
+The Mean Age metrics have [on-chain
+latency](/metrics/details/latency#on-chain-latency)
 
-The SQL statement for computing the real-time total creation timestamp delta is
+---
 
-```sql
-SELECT
-  asset_id,
-  dt,
-  sum(sigma*odt*amount) as value
-FROM {events}
-GROUP BY asset_id, dt
+## Available assets
+
+- Mean Coin Age is available for [these
+  assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_age%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+- Mean Dollar Invested Age is available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_dollar_invested_age%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+---
+
+## SanAPI
+
+The metrics are available under the `mean_age` and `mean_dollar_invested_age` names.
+
+```graphql
+{
+  getMetric(metric: "mean_age") {
+    timeseriesData(
+      slug: "santiment"
+      from: "2020-01-13T00:00:00Z"
+      to: "2020-01-18T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
 ```
 
-In practice we don't use the real-time delta functions. Instead we use
-daily or five-minute deltas. Those functions must be constructed in
-such a way that the value of the daily TCT is the same as the value of
-the real-time TCT at the start of each day. For the five-minute
-analogue a similar condition must hold. We have:
+**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_age%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)**
 
-### Lemma
+---
 
-The daily TCT delta is computed using the following SQL:
-
-```sql
-SELECT
-  asset_id,
-  toStartOfDay(dt + 86400) AS daily_dt,
-  sum(sigma*odt*amount) AS value
-FROM {events}
-GROUP BY asset_id, daily_dt
+```graphql
+{
+  getMetric(metric: "mean_dollar_invested_age") {
+    timeseriesData(
+      slug: "santiment"
+      from: "2020-01-13T00:00:00Z"
+      to: "2020-01-18T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
 ```
 
-The five-minute TCT delta is computed using the following SQL:
-
-```sql
-SELECT
-  asset_id,
-  toStartOfFiveMinutes(dt + 300) AS five_minute_dt,
-  sum(sigma*odt*amount) AS value
-FROM {events}
-GROUP BY asset_id, daily_dt
-```
-
-## Mean age computation
-
-From the facts above we can easily derive the mean coin age. We first
-compute the daily or five-minute $\Delta TCT$. Then we use a
-cumulative sum to compute the daily of five-minute total creation
-timestamp $TCT$. From that we can compute the mean creation timestamp
-as a *composite metric* with the SQL formula
-
-```sql
-total_creation_timestamp/circulation_20y
-```
-
-Finally we can compute the mean coin age as a composite metric with the SQL formula:
-
-```sql
-dt - mean_creation_timestamp
-```
-
-## Relation to age consumed
-
-There is a relation between the total creation timestamp delta and age
-consumed. The age consumed (or coin-days destroyed) is computed by the
-formula:
-
-$$
-AC(t) = \sum_{e\in E \\ t_e = t} -\sigma_e (t-ot_e)v_e
-$$
-
-So you have
-
-$$
-AC(t) = \Delta TCT(t) - t\sum_{e\in E \\ t_e=t} \sigma_e v_e
-$$
-
-The latter summand is the timestamp multiplied by the total supply
-delta at the time $t$. If we choose a sufficiently large period $p$ it
-is also equal to $\Delta Circ_p(t)$. So if we already compute the age
-consumed we can compute the delta total creation timestamp as a
-composite metric:
-
-```sql
-age_consumed + dt * circulation_delta_20y
-```
-
-However our age consumed metric is measured in days. If we want the delta TCT to be measured in seconds the formula is
-
-```sql
-age_consumed*86400 + dt*circulation_delta_20y
-```
-
-If we want it to be measured in days, then we have
-
-```sql
-age_consumed + dt/86400 * circulation_delta_20y
-```
-
-In conclusion once we have age_consumed and circulation we can compute
-the mean coin age using only cumulative sums and composite metrics.
+**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_dollar_invested_age%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)**

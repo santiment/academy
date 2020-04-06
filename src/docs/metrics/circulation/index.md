@@ -54,6 +54,8 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### API
 
+The metrics are available under the `circulation` and `circulation_<timebound>` names.
+
 Gets the total amount of tokens that have been sent at least once during each
 day for given time period. Projects are referred to by a unique identifier
 (slug). This metric is calculated daily, so the interval should be selected

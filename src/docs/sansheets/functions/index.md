@@ -503,7 +503,7 @@ which filters out excess transactions and provides a cleaner overview of a block
 daily transaction throughput.
 
 - **Kind**: global function
-- **Returns**: <code>Array</code> - of NVT ratios
+- **Returns**: <code>Array</code> - of NVT
 - **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |

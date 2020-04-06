@@ -101,7 +101,7 @@ export const REFERENCES = [
       "Exchange Funds Flow",
       "MVRV",
       "Mean Coin Age",
-      "NVT Ratio",
+      "NVT",
       "Network Growth",
       "OHLC",
       "Percent of total supply on exchanges",

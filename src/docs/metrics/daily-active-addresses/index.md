@@ -53,6 +53,8 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ## API
 
+The metric is available under the `daily_active_addresses` name.
+
 ```graphql
 {
   getMetric(metric: "daily_active_addresses") {

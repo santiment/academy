@@ -53,7 +53,7 @@ Includes transaction volume, daily active addresses, metrics about the flow of f
 
 - Realized Cap
 - [Market Value To Realized Value](/metrics/mvrv)
-- [NVT Ratio](/metrics/nvt-ratio)
+- [NVT](/metrics/nvt-ratio)
 
 ### Network Activity
 
