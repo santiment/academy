@@ -1,7 +1,7 @@
 ﻿---
-title: "Queries"
-author: "Santiment Team"
-date: "2019-09-20"
+title: Queries
+author: Santiment Team
+date: 2020-04-06
 ---
 
 ## Available queries per project

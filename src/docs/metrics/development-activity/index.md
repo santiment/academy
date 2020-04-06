@@ -1,6 +1,7 @@
 ---
 title: Developer Activity metric
 author: Santiment Team
+date: 2020-04-06
 ---
 
 ## Definition

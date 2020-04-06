@@ -1,7 +1,7 @@
 ---
-title: Daily Active Addresses Metric
+title: Daily Active Addresses
 author: Santiment Team
-date: 2019-09-17
+date: 2020-04-06
 # References
 #
 # Source code for metric computation:

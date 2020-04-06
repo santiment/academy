@@ -1,7 +1,7 @@
 ---
 title: Latency
 author: Ivan
-date: 2020-04-02
+date: 2020-04-06
 ---
 
 - [On-Chain Latency](#on-chain-latency)

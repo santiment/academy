@@ -1,7 +1,7 @@
 ---
 title: Emerging trends
 author: Ivan Klimuk
-date: 2019-11-04
+date: 2020-04-06
 ---
 
 ![Emerging trends on Sanbase](emerging-trends.png)

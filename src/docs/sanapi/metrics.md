@@ -1,7 +1,7 @@
 ---
-title: "Metrics"
-author: "Santiment Team"
-date: "2019-09-20"
+title: Metrics
+author: Santiment Team
+date: 2020-04-06
 ---
 
 - [Overview](#overview)

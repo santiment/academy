@@ -1,8 +1,7 @@
 ---
 title: Token Age Consumed metric
 author: Santiment Team
-date: 2020-04-02
-description: ASD
+date: 2020-04-06
 ---
 
 _For a more in-depth technical explanation of `Age Consumed`, please click_
