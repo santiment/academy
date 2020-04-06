@@ -10,7 +10,8 @@ date: 2020-04-02
 
 ## On-Chain Latency
 
-In order to compute on-chain data, a number block confirmations are required before fetching the data for a given block. Measured in time:
+In order to compute on-chain data, a number block confirmations are required
+before fetching the data for a given block. Measured in time:
 
 - Bitcoin - Around 30 minutes
 - Ethereum - Around 5 minutes
@@ -19,11 +20,28 @@ In order to compute on-chain data, a number block confirmations are required bef
 - Binance Chain - Around 5 inutes
 - EOS - Around 1 minute
 
-After the block is considered confirmed and its data is fetched, the data processing can take anywhere from a few minutes to few hours.
-The upper limits are:
+After the block is considered confirmed and its data is fetched, the data
+processing can take anywhere from a few minutes to few hours. The upper limits
+are:
 
-- For 5-minute interval metrics processing the data can take up to 20 minutes most
+- For 5-minute interval metrics processing the data can take up to 20 minutes
+  most
 - For daily metrics processing the data can take up to 2 hours
+
+## Social Data Latency
+
+Each one of the social data source:
+
+- telegram
+- reddit
+- discord
+- professional traders chats
+- bitcointalk -twitter
+
+is being processed separately and usually doesn't take longer than 1 minute.
+
+The emerging trends are computed once per hour so they become available a few
+minutes after every round hour
 
 ## Price Latency
 
@@ -31,4 +49,5 @@ The prices are updated every 5 minutes
 
 ## Development Activity Latency
 
-The development activity metrics are updated every 1 hour with max delays of 6 hours
+The development activity metrics are updated every 1 hour with max delays of 6
+hours
