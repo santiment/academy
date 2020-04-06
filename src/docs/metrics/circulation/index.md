@@ -6,14 +6,14 @@ date: 2020-04-06
 
 ## Definition
 
-Circulation shows number of unique tokens/coins being used during a time period.
+Circulation shows number of unique coins/tokens being used during a time period.
 
 Examples:
 
-- circulation_1d - Shows how many unique tokens/coins were transacted during a
+- circulation_1d - Shows how many unique coins/tokens were transacted during a
   day. If one token/coin changes hands 5 times on a given day, it will be
   counted once by the token circulation, but 5 times by the transaction volume.
-- circulation_1y - Shows how many unique tokens/coins were transacted for the
+- circulation_1y - Shows how many unique coins/tokens were transacted for the
   past 1 year
 
 ![circulation for bitcoin](circulation-bitcoin.png)

@@ -384,7 +384,7 @@ Returns the mean realized price.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
-| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years or days.                                                             |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the coins/tokens that have moved in the past number of years or days.                                                             |
 
 ## SAN_MINERS_BALANCE
 
@@ -454,7 +454,7 @@ Returns MVRV(Market-Value-to-Realized-Value).
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
-| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years or days.                                                             |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the coins/tokens that have moved in the past number of years or days.                                                             |
 
 ## SAN_NETWORK_GROWTH
 
@@ -642,7 +642,7 @@ of all wallets holding tokens at the moment.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
-| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years or days.                                                             |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the coins/tokens that have moved in the past number of years or days.                                                             |
 
 ## SAN_SOCIAL_DOMINANCE
 
@@ -723,7 +723,7 @@ Returns token circulation for a given slug and time interval.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years or days.                                                             |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the coins/tokens that have moved in the past number of years or days.                                                             |
 
 ## SAN_TOKEN_TOP_TRANSACTIONS
 
