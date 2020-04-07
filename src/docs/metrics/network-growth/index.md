@@ -3,51 +3,72 @@ title: Network Growth metric
 author: Santiment Team
 ---
 
-Essentially, this chart illustrates user adoption over time, and can be
-used to identify when the project is gaining - or losing - traction.
+## Definition
 
-![](e0553cbe07ebc5fae995bb3ad585f3a10ed91e2b.png)
+The amount of new addresses that transfered a given coin/token for the first
+time.
 
-Here's a Network Growth graph for [Aragon](https://aragon.org/), which
-lets anyone create and manage a decentralized organization on Ethereum.
+Essentially, this chart illustrates user adoption over time, and can be used to
+identify when the project is gaining - or losing - traction.
 
-Between February and December of 2017, the Aragon network grew by 85-750
-new addresses each day, and the price loyally followed.
+![tether network growth](aragon-network-growth.png)
+
+Here's a Network Growth graph for
+[Aragon](https://app.santiment.net/projects/aragon), which lets anyone create
+and manage a decentralized organization on Ethereum.
+
+UP until December of 2017, the Aragon network grew by 85-750 new addresses each
+day, and the price loyally followed.
 
 Then, right around the start of 2018, the network growth slowly began to
-throttle. It indicated that the Aragon user base was already quite deep,
-and wouldn't be able to sustain future price growth.
+throttle. It indicated that the Aragon user base was already quite deep, and
+wouldn't be able to sustain future price growth.
 
 What happened since speaks for itself.
 
+## Measuring Unit
+
+Number of addresses
+
+## Frequency
+
+Network Growth is available at [daily
+intervals](/metrics/details/frequency#daily-frequency)
+
+---
+
+## Latency
+
+Network Growth ise [on-chain latency](/metrics/details/latency#on-chain-latency)
+
+---
+
+## Available assets
+
+Network Growth is computed for [these
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22network_growth%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+---
+
 ### SanAPI
 
-This metric is calculated daily, so the interval should be selected
-accordingly.
+Network Growth is available under the `network_growth` name.
 
-Grouping by interval works by taking the mean of all newly added
-addresses in the interval. The default value of the interval is 1 day,
-which yields the exact number of new addresses for each day.
-
-[**Run in
-explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20networkGrowth(from%3A%20%222019-05-09T11%3A25%3A04.894Z%22%2C%20interval%3A%20%221d%22%2C%20slug%3A%20%22ethereum%22%2C%20to%3A%20%222019-06-23T11%3A25%3A04.894Z%22)%20%7B%0A%20%20%20%20newAddresses%0A%20%20%20%20datetime%0A%20%20%7D%0A%7D%0A&variables=)
-
-```js
+```graphql
 {
-  networkGrowth(from: "2019-05-09T11:25:04.894Z", interval: "1d", slug: "ethereum", to: "2019-06-23T11:25:04.894Z") {
-    newAddresses
-    datetime
+  getMetric(metric: "network_growth") {
+    timeseriesData(
+      slug: "santiment"
+      from: "2019-01-01T00:00:00Z"
+      to: "2019-09-01T00:00:00Z"
+      interval: "7d"
+    ) {
+      datetime
+      value
+    }
   }
 }
 ```
 
-**Run in terminal**
-
-```sh
-curl \
-  -X POST \
-  -H "Content-Type: application/json" \
-  --data '{ "query": "query{networkGrowth(from:\"2019-05-09T11:25:04.894Z\",interval:\"1d\",slug:\"ethereum\",to:\"2019-06-23T11:25:04.894Z\"){newAddresses,datetime}}" }' \
-  https://api.santiment.net/graphql
-```
-
+**[Run in
+explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22network_growth%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
