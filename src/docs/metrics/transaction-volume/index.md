@@ -3,66 +3,57 @@ title: Transaction Volume metric
 author: Santiment Team
 ---
 
-This graph shows the aggregate amount of tokens across all transactions
-that happened on the network on a certain date. We currently offer
-Transaction Volume for BTC, ETH (including all ERC20 tokens) and EOS.
+## Description
 
-A spike in transaction volume either signals:
+This metric shows the aggregate amount of coins/tokens across all transactions
+that happened on the network for a given asset in an interval.
 
-1.  large amount of tokens moving, or
-2.  large number of transactions
+---
 
-While not as strong of a price indicator as some other metrics in our
-suite, Transaction Volume can still be used for thorough mid-term
-analysis, or in tandem with other indicators.
+## Measuring Unit
 
-Here's the trx volume graph for [Basic Attention
-Token](https://basicattentiontoken.org/) (BAT), a decentralized ad
-network:
+Amount of coins/tokens
 
-![](1.png)
+---
 
-The per-day graph is still a bit noisy, so let's smooth it out with a
-7-day moving average (done with 1 click in Sandata):
+## Frequency
 
-![](2.png)
+Transaction volume is available at [five-minute
+intervals](/metrics/details/frequency#five-minute-frequency)
 
-As you can see, the correlation between price and trx volume can both be
-evident and strenuous at different times.
+---
 
-That said, the metric remains a strong complementary signal in any
-serious trading analysis.
+## Latency
+
+Transaction volume has [on-chain latency](/metrics/details/latency#on-chain-latency)
+
+---
+
+## Available assets
+
+Transaction Volume is available for [these
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+---
 
 ### SanAPI
 
-Fetch total amount of tokens for a project that were transacted on the
-blockchain, grouped by interval. Projects are referred to by a unique
-identifier (slug).
+Transaction volume is available under the `transaction_volume` name.
 
-This metric includes only on-chain volume, not volume in exchanges.
-
-Grouping by interval works by summing all transaction volume records in
-the interval.
-
-[**Run in
-explorer**](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20transactionVolume(from%3A%20%222019-05-12T09%3A45%3A27.283Z%22%2C%20interval%3A%20%221d%22%2C%20slug%3A%20%22dragonchain%22%2C%20to%3A%20%222019-06-26T09%3A45%3A27.283Z%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20transactionVolume%0A%20%20%7D%0A%7D%0A)
-
-```js
+```graphql
 {
-  transactionVolume(from: "2019-05-12T09:45:27.283Z", interval: "1d", slug: "dragonchain", to: "2019-06-26T09:45:27.283Z") {
-    datetime
-    transactionVolume
+  getMetric(metric: "transaction_volume") {
+    timeseriesData(
+      slug: "santiment"
+      from: "2020-04-01T00:00:00Z"
+      to: "2020-04-07T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
   }
 }
 ```
 
-**Run in terminal**
-
-```sh
-curl \
-  -X POST \
-  -H "Content-Type: application/json" \
-  --data '{ "query": "query{transactionVolume(from:\"2019-05-12T09:45:27.283Z\",interval:\"1d\",slug:\"dragonchain\",to:\"2019-06-26T09:45:27.283Z\"){datetime,transactionVolume}}" }' \
-  https://api.santiment.net/graphql
-```
-
+[**Run in Explorer**](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
