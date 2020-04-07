@@ -23,51 +23,51 @@ With the explanation out of the way, let's get into how to get you setup with Sa
 ## Install and activate Sansheets
 
 1. Head over to https://docs.google.com/spreadsheets/u/0/ and ensure you are signed in with any existing Google account.
-	![](02_signin.png)
+   ![](02_signin.png)
 2. Open a Blank Google Sheets template
-	![](03_selectblacksheet.png)
+   ![](03_selectblacksheet.png)
 3. Go to the **Add-Ons** dropdown and click **Get Add-Ons**
-	![](04_getaddons.png)
+   ![](04_getaddons.png)
 4. You'll see a Google Sheets store open up. In the top right, you'll see a search bar. Simply enter "Santiment" here, then hit **Enter**.
-	![](05_addons.png)
+   ![](05_addons.png)
 5. You will see the "Santiment Data" app come up as a result, click on the **+FREE** button to install Sansheets to your system:
-	![](06_santimentdata.png)
+   ![](06_santimentdata.png)
 6. After installation of the Sansheets add-on, you should see confirmation that it was installed successfully. Go to the **Add-Ons** tab, hover over the newly created **Santiment Data** menu, and click **Enable**.
-	![](07_santimentdata2.png)
-	![](08_santimentdataenable.png)
+   ![](07_santimentdata2.png)
+   ![](08_santimentdataenable.png)
 7. After a few seconds, you should see a confirmation message explaining that you are about to enable cryptocurrency data through Santiment custom functions. Click **Ok**.
-	![](09_confirmation.png)
+   ![](09_confirmation.png)
 
 ## Create and add an API key
 
 8. With Sansheets now enabled, you simply need to provide your API key. This key is found by going to https://sheets.santiment.net and clicking on the **account icon** at the top right of your page.
-	![](10_account-icon.png)
+   ![](10_account-icon.png)
 9. If you already have an API key active, you will see your key with a **copy button** to allow you to easily copy it. If one doesn't yet exist yet, simply click on the **Generate** button and then use the **copy button** to save it to your clipboard.
-	![](11_apikey.png)
+   ![](11_apikey.png)
 10. Head back to your Google Sheets page and go to Add-ons -> Santiment Data, and click on Add API Key. Paste your copied API key and click **Confirm**.
-	![](12_addapikey.png)
+    ![](12_addapikey.png)
 
 ## The first call
 
 11. To test out your newly and fully enabled Sansheets add-on, type in **`=SAN`** and look to see if there is a dropdown of different function options to choose from. If you see them, then you are officially ready to enter Santiment formulas and begin creating your own models!
-	![](13_sanequals.png)
+    ![](13_sanequals.png)
 12. Choose a cell and ensure there are 2-5 blank columns to the right of it (depending on the SAN formula you choose to input). You can select between any SAN formula available in the dropdown, or refer to the Sansheets academy page to find the perfect function to accomplish what you're trying to create: https://academy.santiment.net/sansheets/functions/. Once selected, enter it with an open parentheses afterwards, followed by the full name of the project's slug, a comma, then your start date as "`DATE(month,day, year)`", another comma, and your end date as "`DATE(month,day, year)`" OR "`TODAY()`" if you would like your model to auto-update to the current date. Then press enter. Eg, "`=SAN_OHLC("bitcoin",DATE(2015,2,1),TODAY())`" will give you the Open, High, Low, and Close prices of every day between February 1st, 2015 and the most recent Santiment data available.
-	![](14_ohlc.png)
+    ![](14_ohlc.png)
 
-Depending on how large your timeframe was, you will have to wait momentarily while seeing "Loading..." where you entered your formula. Once done, you will see the data you requested generate into the expanded rows and columns from your original cell. 
+Depending on how large your timeframe was, you will have to wait momentarily while seeing "Loading..." where you entered your formula. Once done, you will see the data you requested generate into the expanded rows and columns from your original cell.
 ![](15_ohlcresult.png)
 
 Note that you may also refer to our helpful Github Sansheets function repository to find additional info on functions to pull data for any of your favorite metrics: https://github.com/santiment/google-spreadsheet-addon/blob/master/doc/sheet_functions.md
 
-A nice feature with Sansheets that you won't see in traditional data models is the fact that you can direct it to auto-pull Santiment data on a daily basis without any action needed. Simply take a certain start date and enter it into your formula along with an end date of "`TODAY()`" and Sansheets will add an extra row of data to whatever metric you are directing Sansheets to pull from Santiment's extensive database. 
+A nice feature with Sansheets that you won't see in traditional data models is the fact that you can direct it to auto-pull Santiment data on a daily basis without any action needed. Simply take a certain start date and enter it into your formula along with an end date of "`TODAY()`" and Sansheets will add an extra row of data to whatever metric you are directing Sansheets to pull from Santiment's extensive database.
 
-You have the option to make your insights public and provide access to any of your self-made templates with other members of the Santiment team and Sanfam to collaborate and put great minds together to create a special profitable strategy for cryptocurrency investing.
+You have the option to make your insights public and provide access to any of your self-made templates with other members of the Santiment Team and Sanfam to collaborate and put great minds together to create a special profitable strategy for cryptocurrency investing.
 
 Congratulations on beginning your Sansheets adventures, and contact us at any time should you have questions or troubleshooting needs!
 
 ## Using existing Sansheets templates
 
-When it comes to using existing Sansheets templates, many templates provided by the Santiment team will have an "About" tab to explain the functionality. Regardless, here is a breakdown of a few of our featured "View Only" templates that we offer:
+When it comes to using existing Sansheets templates, many templates provided by the Santiment Team will have an "About" tab to explain the functionality. Regardless, here is a breakdown of a few of our featured "View Only" templates that we offer:
 
 ### NVT Analysis
 
@@ -77,7 +77,7 @@ The objective of the NVT Analysis template is to indicate how a given coin's tok
 2. Three lines representing the high, average, and low price of each respective month
 3. Subtle, colored trendlines which help calculate
 4. Hashmarks on the right of the latest displayed month showing what the daily NVT values have looked like within that month over the past 10 days
-![](16_nvt.png)
+   ![](16_nvt.png)
 
 In short, the main objective of this chart is to provide a macro look at whether the most recent month is getting enough token circulation (unique addresses exchanging tokens) to justify its current market cap.
 
@@ -94,7 +94,7 @@ This model includes four different ways to measure the results of Bitcoin's mark
 2. Month - Measures Bitcoin's price performance based on each month out of the year.
 3. Time of Month - Measures Bitcoin's price performance based on the early, early-mid, mid, late-mid, and late portions of months.
 4. Year - Measures Bitcoin's price performance based on each individual year.
-![](18_dayofweek.png)
+   ![](18_dayofweek.png)
 
 Explore and use filters to find what kinds of trends may be beneficial to your trading strategies.
 
@@ -117,7 +117,7 @@ As is the case with our Daily Active Addresses model, you want to look out for b
 
 ### Top Holders Supply
 
-The top holders supply model provides our users with three ways to see what some key ERC-20 top holders are doing with their funds. This is a great way to get an idea of what may be foreshadowing in the markets, as these high capital holders have a great amount of leverage when it comes to what direction prices of a given project are heading next: 
+The top holders supply model provides our users with three ways to see what some key ERC-20 top holders are doing with their funds. This is a great way to get an idea of what may be foreshadowing in the markets, as these high capital holders have a great amount of leverage when it comes to what direction prices of a given project are heading next:
 ![](22_topholderssupply.png)
 
 1. Cumulative percent change in top holders - View what the top 1, 10, or 100 holders of a given project have been doing with their holdings over the previous 30 days by viewing their percentage added and removed from their addresses during this timeframe.

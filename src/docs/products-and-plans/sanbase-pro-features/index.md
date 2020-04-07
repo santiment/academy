@@ -10,6 +10,7 @@ Our crypto behavior analysis & monitoring platform is packed with custom tools a
 Here’s a rundown of everything you now have access to with Sanbase Pro:
 
 ## Full historical and present-day data for all Sanbase metrics
+
 Here are a few links of examples on how to use our metrics:
 
 - [6 different ways](https://insights.santiment.net/read/6-ways-you-could-have-caught-ren%E2%80%99s-summer-tops-643) to use Sanbase to spot forming tops
@@ -17,6 +18,7 @@ Here are a few links of examples on how to use our metrics:
 - [Identifying trend reversals](https://insights.santiment.net/read/chainlink-hits-ath-following-coinbase-listing---perhaps-it's-time-to-chill-541) with a combination of on-chain and social indicators
 
 ## Full access to Sansheets
+
 Our plugin for importing Santiment data directly into Google Spreadsheets. To get you started, here are a few pre-made Sansheets templates:
 
 - [Determine the most profitable trading days](https://docs.google.com/spreadsheets/d/1RD9AMy2hLWPix0DCupl-LaN5aloFkd_BQDvzJrgU0qI/edit?usp=sharing) for any coin
@@ -26,9 +28,11 @@ Our plugin for importing Santiment data directly into Google Spreadsheets. To ge
 - [Track the NVT ratio](https://docs.google.com/spreadsheets/d/1WHf2CqD-pppmxO8Wt5eyU6p4I9q1A2kJ7MlNkQe_pC0/edit?usp=sharing) of any coin
 
 ## Full access to Graphs
+
 Home to a growing list of new and experimental dashboards, including our Crowd Sentiment metrics, ETH miner stats, MVRV sandbox, comprehensive MakerDAO dashboards, and more. New metrics are constantly being added!
 
 ## Unlimited number of Signals
+
 and access to all future signals added to Sanbase (coming soon!). Here are a few pre-made Signals to get you started:
 
 - [15% spike in daily addresses transferring ETH](https://app.santiment.net/sonar/signal/789?title=Ethereum%20daily%20active%20addresses%20up%2015%25%20compared%20to%201%20day%28s%29%20earlier) (signaling elevated on-chain activity)
@@ -37,21 +41,19 @@ and access to all future signals added to Sanbase (coming soon!). Here are a few
 - [Price/volume divergence for XMR](https://app.santiment.net/sonar/signal/788?title=Price%2Fvolume%20difference%20between%20an%20Monero%20price%20and%20trading%20volume) (previously triggered at Monero’s 1-year high)
 
 ## Weekly performance analytics
- for all your Sanbase Watchlists. To activate them, click on ‘Weekly Report’ in the upper right corner of your Watchlist’s page.
+
+for all your Sanbase Watchlists. To activate them, click on ‘Weekly Report’ in the upper right corner of your Watchlist’s page.
 
 ## Special End-of-Month Reports
-from the Santiment team, covering the most important findings from our data and metrics.
 
+from the Santiment Team, covering the most important findings from our data and metrics.
 
 <hr/>
-
 
 If you have ANY questions, let us know asap. And [join our Discord](https://discordapp.com/invite/MPH2uP5) so we can help you even faster!
 
 Finally, a note from Maksim Balashevich, our founder:
 
-*Excited to have you onboard - together we are crossing the sea from a centralized to decentralized world, from uncertainty to clarity, from too much noise to "I get only what I need when I need it."*
+_Excited to have you onboard - together we are crossing the sea from a centralized to decentralized world, from uncertainty to clarity, from too much noise to "I get only what I need when I need it."_
 
-
-*This is a pretty long way to get to the final destination. But as is the case with every big journey, it starts with the first step. I’m excited we get to walk it together.*
-
+_This is a pretty long way to get to the final destination. But as is the case with every big journey, it starts with the first step. I’m excited we get to walk it together._
