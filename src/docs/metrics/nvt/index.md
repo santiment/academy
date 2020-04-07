@@ -1,16 +1,23 @@
 ---
 title: NVT
 author: Santiment Team
+date: 2020-04-07
 ---
 
-_This metric can be found on the_ [_`Ethereum & ERC20 MVRV`
-page_](https://data.santiment.net/d/4BpXRALik/05-ethereum-and-erc20-mvrv?orgId=1)
-_in Sandata, along with the MVRV metric which is described in_ [_this
-article_](/metrics/mvrv)_._
+## Definition
 
-The `Network Value-to-Transaction` (NVT) ratio is an asset valuation
-metric similar to the P/E ratio traditionally used in equity markets to
-gauge a stock's growth potential.
+The typical formula for NVT is the following:
+
+`NVT = Daily Market Cap / Daily Transaction Volume`
+
+Santiment provides an alternative formula for NVT:
+
+`NVT = Daily Market Cap / Daily Circulation`
+
+The `Network Value-to-Transaction` (NVT) ratio is an asset valuation metric
+similar to the [P/E
+ratio](https://www.investopedia.com/terms/p/price-earningsratio.asp)
+traditionally used in equity markets to gauge a stock's growth potential.
 
 The P/E or `Price-to-Earnings` ratio is calculated by dividing the
 company's current price per share with its earnings per share. A high
@@ -19,21 +26,19 @@ therefore possibly overvalued. Conversely, a low P/E might indicate that
 the current stock price is low relative to earnings and possibly
 undervalued.
 
-As crypto assets are not companies we don't know their earnings, so
+As crypto assets are not companies, their earnings are not known , so
 Transaction Volume is often used as a proxy for the blockchain's
 underlying value.
 
-As such, the typical formula for NVT is the following:
-
-_NVT = Daily Market Cap / Daily Transaction Volume_
-
-Since Daily Trx Volume gets rather noisy and often includes duplicate
-transactions, it's not an ideal measure of a network's economic
-activity. That's why at Santiment we calculate NVT using Daily Trx
-Volume, but also by using Daily Token Circulation instead, which filters
-out excess transactions and provides a cleaner overview of a
-blockchain's daily transaction throughput. You'll find both approaches
-plotted on the graph and can choose which one you prefer.
+Since Transaction Volume gets rather noisy and often includes duplicate
+transactions (sending 10 ETH to a deposit address which then sends them to the
+exchange hot wallet counts as 20 ETH Transaction Volume even though it's the
+same 10 ETH being transacted), it's not an ideal measure of a network's economic
+activity. That's why at Santiment we calculate NVT using Daily Trx Volume, but
+also by using [Circulation](/metrics/circulation) instead, which filters out
+excess transactions and provides a cleaner overview of a blockchain's daily
+transaction throughput. You'll find both approaches plotted on the graph and can
+choose which one you prefer.
 
 As with P/E, a high NVT indicates that an asset's network valuation is
 higher than the value being transmitted on the network. In other words,
@@ -46,36 +51,78 @@ on-chain transaction volume, signaling a potentially undervalued asset.
 NVT is often used as a long-term indicator of an asset's price trends,
 rather than a day-to-day valuation metric.
 
-### SanAPI
+---
 
-Returns the NVT (Network-Value-to-Transactions) Ratio at each interval
-over a given time period. Projects are referred to by a unique
-identifier (slug).
+## Measuring Unit
 
-NVT can be applied to crypto in multiple ways. This implementation
-takes the market cap of an asset as the network value and either the
-Token Circulation or the Transaction Volume as a measurement of
-Transactions, hence two returns.
+Ratio
 
-[**Run in
-explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20nvtRatio(from%3A%20%222019-05-10T00%3A00%3A00.000Z%22%2C%20interval%3A%20%221d%22%2C%20slug%3A%20%22ethereum%22%2C%20to%3A%20%222019-06-23T00%3A00%3A00.000Z%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20nvtRatioCirculation%0A%20%20%20%20nvtRatioTxVolume%0A%20%20%7D%0A%7D%0A&variables=>)
+---
 
-```js
+## Frequency
+
+NVT metrics are available at [daily
+intervals](/metrics/details/frequency#daily-frequency)
+
+---
+
+## Latency
+
+NVT metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
+
+---
+
+## Available assets
+
+- NVT using 1-day circulation is available for [these
+  assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22nvt%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+- NVT Transaction Volume is available for [these
+  assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22nvt_transaction_volume%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+---
+
+## SanAPI
+
+- NVT using 1-day Circulation is availale under the `nvt` name.
+- NVT using Transaction volume is availale under the `nvt_transaction_volume` name.
+
+```graphql
 {
-  nvtRatio(from: "2019-05-10T00:00:00.000Z", interval: "1d", slug: "ethereum", to: "2019-06-23T00:00:00.000Z") {
-    datetime
-    nvtRatioCirculation
-    nvtRatioTxVolume
+  getMetric(metric: "nvt") {
+    timeseriesData(
+      slug: "santiment"
+      from: "2019-01-01T00:00:00Z"
+      to: "2019-09-01T00:00:00Z"
+      interval: "7d"
+    ) {
+      datetime
+      value
+    }
   }
 }
 ```
 
-**Run in terminal**
+[Run in
+explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22nvt%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-```sh
-curl \
-  -X POST \
-  -H "Content-Type: application/json" \
-  --data '{ "query": "query{nvtRatio(from:\"2019-05-10T00:00:00.000Z\",interval:\"1d\",slug:\"ethereum\",to:\"2019-06-23T00:00:00.000Z\"){datetime, nvtRatioCirculation, nvtRatioTxVolume}}" }' \
-  https://api.santiment.net/graphql
+---
+
+```graphql
+{
+  getMetric(metric: "nvt_transaction_volume") {
+    timeseriesData(
+      slug: "santiment"
+      from: "2019-01-01T00:00:00Z"
+      to: "2019-09-01T00:00:00Z"
+      interval: "7d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
 ```
+
+[Run in
+explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22nvt_transaction_volume%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
