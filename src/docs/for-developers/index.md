@@ -50,7 +50,7 @@ can be exported as a CSV file. ![sanbase-csv-export](sanbase-csv-export.png)
 [Sangraphs](https://graphs.santiment.net) contains metrics that are both
 available and not available in the API. The social merics from Sangraphs can be
 exported as a CSV file from the bottom of the social page.
-![sangraphs-csv-export](sanbase-csv-export.png)
+![sangraphs-csv-export](sangraphs-csv-export.png)
 
 ## Analyzing Santiment Data
 
