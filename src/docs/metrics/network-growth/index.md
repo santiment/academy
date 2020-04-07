@@ -26,7 +26,7 @@ wouldn't be able to sustain future price growth.
 
 What happened since speaks for itself.
 
-## Measurement
+## Measuring Unit
 
 Number of addresses
 

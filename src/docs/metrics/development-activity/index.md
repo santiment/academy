@@ -25,7 +25,9 @@ features.
 
 ---
 
-## Measure
+## Measuring Unit
+
+The development activity metric is measured in number of events.
 
 When developers work they encapsulate their code changes in commits. When a
 repository page [like this](https://github.com/santiment/sanbase2) is opened in

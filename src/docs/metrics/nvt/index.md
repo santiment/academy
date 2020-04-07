@@ -1,7 +1,18 @@
 ---
 title: NVT
 author: Santiment Team
+date: 2020-04-07
 ---
+
+## Definition
+
+The typical formula for NVT is the following:
+
+`NVT = Daily Market Cap / Daily Transaction Volume`
+
+Santiment provides an alternative formula for NVT:
+
+`NVT\textsuperscript{2}`
 
 The `Network Value-to-Transaction` (NVT) ratio is an asset valuation metric
 similar to the [P/E
@@ -19,17 +30,14 @@ As crypto assets are not companies we don't know their earnings, so
 Transaction Volume is often used as a proxy for the blockchain's
 underlying value.
 
-As such, the typical formula for NVT is the following:
-
-`NVT = Daily Market Cap / Daily Transaction Volume`
-
-Since Daily Trx Volume gets rather noisy and often includes duplicate
-transactions, it's not an ideal measure of a network's economic
-activity. That's why at Santiment we calculate NVT using Daily Trx
-Volume, but also by using Daily Token Circulation instead, which filters
-out excess transactions and provides a cleaner overview of a
-blockchain's daily transaction throughput. You'll find both approaches
-plotted on the graph and can choose which one you prefer.
+Since Daily Transaction Volume gets rather noisy and often includes duplicate
+transactions (sending 10 ETH to a deposit address which then sends them to the
+exchange hot wallet counts as 20 ETH Transaction Volume), it's not an ideal
+measure of a network's economic activity. That's why at Santiment we calculate
+NVT using Daily Trx Volume, but also by using Daily Token Circulation instead,
+which filters out excess transactions and provides a cleaner overview of a
+blockchain's daily transaction throughput. You'll find both approaches plotted
+on the graph and can choose which one you prefer.
 
 As with P/E, a high NVT indicates that an asset's network valuation is
 higher than the value being transmitted on the network. In other words,
