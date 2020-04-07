@@ -3,14 +3,10 @@ title: NVT
 author: Santiment Team
 ---
 
-_This metric can be found on the_ [_`Ethereum & ERC20 MVRV`
-page_](https://data.santiment.net/d/4BpXRALik/05-ethereum-and-erc20-mvrv?orgId=1)
-_in Sandata, along with the MVRV metric which is described in_ [_this
-article_](/metrics/mvrv)_._
-
-The `Network Value-to-Transaction` (NVT) ratio is an asset valuation
-metric similar to the P/E ratio traditionally used in equity markets to
-gauge a stock's growth potential.
+The `Network Value-to-Transaction` (NVT) ratio is an asset valuation metric
+similar to the [P/E
+ratio](https://www.investopedia.com/terms/p/price-earningsratio.asp)
+traditionally used in equity markets to gauge a stock's growth potential.
 
 The P/E or `Price-to-Earnings` ratio is calculated by dividing the
 company's current price per share with its earnings per share. A high
@@ -25,7 +21,7 @@ underlying value.
 
 As such, the typical formula for NVT is the following:
 
-_NVT = Daily Market Cap / Daily Transaction Volume_
+`NVT = Daily Market Cap / Daily Transaction Volume`
 
 Since Daily Trx Volume gets rather noisy and often includes duplicate
 transactions, it's not an ideal measure of a network's economic
