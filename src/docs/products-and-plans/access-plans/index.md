@@ -1,78 +1,34 @@
 ---
-title: "Access plans"
-author: "Santiment Team"
-date: "2019-09-17"
+title: Access Plans
+author: Ivan
+date: 2020-04-08
 # REF sanbase2/lib/sanbase/billing/plan
 # REF sanbase2/lib/sanbase/clickhouse/metric/helper.ex
 ---
 
 Here are the access plans for the different Santiment products.
 
-## SanAPI
-
-### Free plan
-
-- 1000 API calls per month
-- Historical data access for last 90 days
-- Last 2 days of metric data is cut-off
-  (exception - Realized Value, Age Destroyed and MVRV metrics)
-
-### Basic plan
-
-- 100,000 API calls per month
-- Historical data access for last 2 years
-  (exception - Realized Value and MVRV metrics)
-
-### Pro plan
-
-- 300,000 API calls per month
-- No restriction on historical data
-
 ## Sanbase
 
-### Free plan
+Sanbase plans give access both to [Sanbase](/sanbae) and
+[Sansheets](/sansheets)
 
-- 2 years of historical data for available metrics
-- Last 30 days of metric data is cut-off
-- Up to 10 signals definitions allowed
-- No data from external providers
-- No access to Sanbase Graphs
+Purchasing a plan is done from the [sanbase pricing page](https://app.santiment.net/pricing)
 
-### Pro plan
+[Detailed description of plans](/products-and-plans/access-plans/sanbase)
 
-- 5 years of historical data available
-- Real-time data available
-- No limit to Signals
-- Access to external data providers
-- Access to Sanbase Graphs
-- Bonus: Full access to Sansheets
+## SanAPI
 
-[More detailed article](/products-and-plans/sanbase-pro-features/) with PRO benefits
+SanAPI plans access the [API](/sanapi)
 
-## Special restrictions
+Purchasing a plan is done from the [sanapi pricing page](https://neuro.santiment.net/#pricing)
 
-Some metrics have **special** restrictions.
+[Detailed description of plans](/products-and-plans/access-plans/sanapi)
 
-### Realized value / MVRV metrics
+## Sandata
 
-Those restrictions hold for any metric that contains the string "**mvrv**" or "**realized**"
-in its canonical name.
+Sandata plans give access to [Sandata](/sandata)
 
-#### Free plan (for all products)
+Purchasing a plan is done by submitting a custom request from the [sandata page](https://santiment.net/sandata/)
 
-- Last **30 days** of data not available
-- **One year** of historical data available
-
-#### Basic plan (for all products)
-
-- Last **14 days** of data not available
-- **Two years** of historical data available
-
-### Token age consumed metrics
-
-The following special restrictions hold for any metric that
-contains "**age_consumed**" in its canonical name.
-
-#### Free plan (for all products)
-
-- Last **30 days** of data not available
+[Detailed description of plans](/products-and-plans/access-plans/sandata)
