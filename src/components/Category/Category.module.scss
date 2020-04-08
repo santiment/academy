@@ -3,7 +3,7 @@
 .wrapper {
   margin-bottom: 64px;
   display: flex;
-  color: var(--mirage);
+  color: var(--rhino);
 
   @include responsive("phone", "phone-xs") {
     flex-direction: column;
@@ -39,7 +39,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  color: var(--mirage);
+  color: var(--rhino);
   padding: 40px 16px 30px;
   transition: all 0.1s ease-in-out;
 
@@ -114,7 +114,7 @@
   }
 
   & .title {
-    color: var(--mirage) !important;
+    color: var(--rhino) !important;
   }
 }
 

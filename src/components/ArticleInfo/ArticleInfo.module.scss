@@ -42,13 +42,13 @@
 }
 
 .title {
-	@include text('h3', 'm');
+	@include text('h3', 'l');
 	margin-bottom: 22px;
 	color: var(--rhino);
 }
 
 .author {
-	color: var(--mirage);
+	color: var(--rhino);
 	@include text("body-3");
 }
 

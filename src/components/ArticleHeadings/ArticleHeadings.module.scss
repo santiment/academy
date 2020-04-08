@@ -27,7 +27,7 @@
 }
 
 .heading {
-	@include text('caption');
+	@include text('body-3');
 	font-weight: normal;
 
 	display: block;

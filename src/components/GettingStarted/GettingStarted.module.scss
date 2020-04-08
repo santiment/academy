@@ -3,7 +3,7 @@
 .title {
 	@include text('h4');
 	margin: 0 0 32px;
-	color: var(--mirage);
+	color: var(--rhino);
 }
 
 .blocks {
@@ -20,7 +20,7 @@
 }
 
 .heading {
-	@include text('body-1', 'm');
+	@include text('body-1', 'l');
 	margin: 0 0 16px;
 	color: var(--white);
 
