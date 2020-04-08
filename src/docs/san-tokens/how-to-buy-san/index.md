@@ -105,7 +105,7 @@ MetaMask](/intercom-articles/getting-started/sanbase/logging-into-sanbase).
 We'll detect the SAN you're holding and grant you access to our
 discounts, based on the amount of tokens you hold.
 
-***Please note: We currently have an older*** [***copy of this article
+> **Note:** We currently have an older [copy of this article
 up on our
-forums***](https://community.santiment.net/t/short-guide-how-to-buy-san-token/1062)***,
-where some additional options and comments can be found.***
+forums](https://community.santiment.net/t/short-guide-how-to-buy-san-token/1062),
+where some additional options and comments can be found.

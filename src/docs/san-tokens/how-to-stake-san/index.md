@@ -3,10 +3,10 @@ title: How to stake SAN
 author: Santiment Team
 ---
 
-*This article describes how to stake SAN token that are already in your
-posession. Please refer to* [*this
-article*](/san-token/how-to-buy-san)
-*to learn how to buy SAN in the first place.*
+> This article describes how to stake SAN token that are already in your
+posession. Please refer to [this
+article](/san-tokens/how-to-buy-san)
+to learn how to buy SAN in the first place.
 
 There are two ways to connect an Ethereum address to a Sanbase account.
 You can use MetaMask as a first login (and add an email address later)
@@ -53,7 +53,6 @@ account is in your control and hereby belongs to you.
 After confirmation, you will see your address and SAN token balance in
 the account settings.
 
-*Please note: **Staking** currently means holding a certain number of tokens at an
-ETH address that Sanbase can check each time you visit (it's a lot like
+> **Note:** `Staking` currently means holding a certain number of tokens at an ETH address that Sanbase can check each time you visit (it's a lot like
 maintaining a minimum balance in a bank account). In the future, we plan
-to implement a more advanced staking mechanism.*
+to implement a more advanced staking mechanism.

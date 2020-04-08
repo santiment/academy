@@ -19,7 +19,7 @@ Simply put, Development Activity can be used to gauge a project's commitment to
 creating a working product, and continuously polishing and upgrading its
 features.
 
-> Note: Only development work done in public github repositories can be tracked.
+> **Note:** Only development work done in public github repositories can be tracked.
 > Work done in private/unknown repositories or public repositories outside
 > github won't be counted.
 

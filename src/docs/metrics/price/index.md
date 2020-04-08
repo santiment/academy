@@ -40,7 +40,7 @@ Price metrics have [price latency](/metrics/details/latency#price-latency)
 - All price related metrics are available for [these
   assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-> Note: Fetching the available slugs for any of the price related metrics would
+> **Note:** Fetching the available slugs for any of the price related metrics would
 > yield the same result.
 
 ---

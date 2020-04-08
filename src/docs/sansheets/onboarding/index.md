@@ -4,7 +4,7 @@ description: Learn all the necessary steps to get Sansheets up and running!
 author: Santiment Team
 ---
 
-**Note: In order to enable your computer and Google Sheets documents to use Sansheets, you must be a Sanbase Pro subscriber. If you are a free user, you may still view templates made by our staff and community members. But you will need to become a Pro member for our powerful Sansheets add-on to be a tool you can use yourself.**
+> **Note**: In order to enable your computer and Google Sheets documents to use Sansheets, you must be a Sanbase Pro subscriber. If you are a free user, you may still view templates made by our staff and community members. But you will need to become a Pro member for our powerful Sansheets add-on to be a tool you can use yourself.
 
 Whether you are a data scientist, crypto hobbyist, or simply a trader and investor with very little data background, Sansheets offers a way to create and view interactive market models using Santiment's on-chain, social and project data. With our all-in-one Spreadsheets plugin, you can run trade simulations, backtest new strategies and add context to the behavior and volatility of the crypto market. There is no need to make your own data aggregations. We've prepared the groundwork for you.
 

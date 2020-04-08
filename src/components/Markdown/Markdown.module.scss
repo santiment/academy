@@ -47,6 +47,14 @@
     }
   }
 
+  blockquote {
+    background: var(--athens);
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid var(--porcelain);
+    margin: 20px 0;
+  }
+
 
   .anchor {
     opacity: 0;
