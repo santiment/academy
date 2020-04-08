@@ -11,8 +11,7 @@ description: This page contains a reference of all the APIs provided by Santimen
 - [Access the API](#access-the-api)
   - [Live API Explorer](#live-api-explorer)
   - [curl](#curl)
-  - [sanpy - Santiment-provided Python
-    library](#santiment-provided-python-library)
+  - [sanpy - Santiment-provided Python library](#santiment-provided-python-library)
   - [Programming langauge of your choice](#programming-language-of-your-choice)
 - [Authentication](#authentication)
 - [Errors](#errors)
