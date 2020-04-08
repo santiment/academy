@@ -38,7 +38,7 @@ Custom Github metric we created to accurately measure a team’s development act
 
 ## On-chain
 
---
+
 
 ### Network value
 
@@ -69,6 +69,6 @@ Custom Github metric we created to accurately measure a team’s development act
 
 ---
 
-- [Supply On Or Outside Exchanges](/metrics/supply-on-our-outside-exchanges)
+- [Supply On Or Outside Exchanges](/metrics/supply-on-or-outside-exchanges)
 - [Realized Value](/metrics/realized-value)
 - [Top Social Gainers and Losers](/metrics/top-social-gainers-losers)
