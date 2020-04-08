@@ -10,10 +10,10 @@ Here are the access plans for the different Santiment products.
 
 ## Sanbase
 
-Sanbase plans give access both to [Sanbase](/sanbae) and
+Sanbase plans give access both to [Sanbase](/sanbase) and
 [Sansheets](/sansheets)
 
-Purchasing a plan is done from the [sanbase pricing page](https://app.santiment.net/pricing)
+Purchasing a plan is done from the [Sanbase pricing page](https://app.santiment.net/pricing)
 
 [Detailed description of plans](/products-and-plans/access-plans/sanbase)
 
@@ -21,7 +21,7 @@ Purchasing a plan is done from the [sanbase pricing page](https://app.santiment.
 
 SanAPI plans access the [API](/sanapi)
 
-Purchasing a plan is done from the [sanapi pricing page](https://neuro.santiment.net/#pricing)
+Purchasing a plan is done from the [SanAPI pricing page](https://neuro.santiment.net/#pricing)
 
 [Detailed description of plans](/products-and-plans/access-plans/sanapi)
 
@@ -29,6 +29,6 @@ Purchasing a plan is done from the [sanapi pricing page](https://neuro.santiment
 
 Sandata plans give access to [Sandata](/sandata)
 
-Purchasing a plan is done by submitting a custom request from the [sandata page](https://santiment.net/sandata/)
+Purchasing a plan is done by submitting a custom request from the [Sandata page](https://santiment.net/sandata/)
 
 [Detailed description of plans](/products-and-plans/access-plans/sandata)
