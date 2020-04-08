@@ -9,7 +9,7 @@
 }
 
 .heading {
-  color: var(--mirage);
+  color: var(--rhino);
   margin: 64px 0 32px;
 
   @include text("h3");
@@ -119,7 +119,7 @@
 
   &--category-header {
   	border-bottom: 1px solid var(--porcelain) !important;
-  	color: var(--mirage) !important;
+  	color: var(--rhino) !important;
   }
 
   &--title {

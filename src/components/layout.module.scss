@@ -2,28 +2,31 @@
 @import "~@santiment-network/ui/mixins.scss";
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('../fonts/ProximaNova-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('../fonts/ProximaNova-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('../fonts/ProximaNova-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
-  color: var(--mirage);
+  color: var(--rhino);
   font-size: 16px;
   line-height: 24px;
 }

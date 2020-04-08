@@ -27,7 +27,7 @@ in the send address as an alias to this respective payment address (see below sc
 
 For any assistance on making a payment, you can contact our team at [support@santiment.net](mailto:support@santiment.net) and it will auto-forward your conversation to our Intercom system for quick help.
 
-*Note: If you opt to pay with ETH or DAI, any service is available to pay with this method.*
+> **Note:** If you opt to pay with ETH or DAI, any service is available to pay with this method.
 
 ## Burning SAN Tokens to Make Payments
 
@@ -54,7 +54,7 @@ You can input:
 
 as an alias. which points to this respective send address. Once this has been done, as mentioned earlier, just contact us at via [support@santiment.net](mailto:support@santiment.net), which will open an Intercom chat with our team. There, you can provide the transaction hash of the burning transaction and let us know how you would like to spend the amount of credit equivalent to $1 for each SAN burned.
 
-*Note:*
+> **Note:**
 - *Paying with SAN is limited to purchasing subscriptions of Sanbase and Sandata, so it's not available for subscribing to SanAPI.*
 - *SAN burn is not available for residents of the Swiss Confederation due to tax reasons.*
 - *SAN burn can only be applied to monthly or yearly base subscription prices. No other discounts are applicable when using SAN burn.*

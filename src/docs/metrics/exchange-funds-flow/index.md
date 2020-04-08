@@ -34,7 +34,7 @@ scalable smart contracts:
 
 ![aeternity funds flow balance](aeternity-funds-flow-balance.png)
 
-> Note: Aeternity moved from ERC20 to their own blockchain and Santiment does not have data for this new blockchain.
+> **Note:** Aeternity moved from ERC20 to their own blockchain and Santiment does not have data for this new blockchain.
 
 When a large amount of tokens flow out of the exchange, on the other
 hand, the price is likely to fall soon thereafter.

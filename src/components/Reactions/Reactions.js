@@ -13,7 +13,7 @@ const REACTIONS = [
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <g clip-path='url(#clip0)'>
+        <g clipPath='url(#clip0)'>
           <path
             d='M16 28h-2A14 14 0 010 14.1V14A14 14 0 0114 0h2a14 14 0 0114 13.9v.2A14 14 0 0116 28z'
             fill='#FFDA00'
@@ -64,7 +64,7 @@ const REACTIONS = [
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <g clip-path='url(#clip0)'>
+        <g clipPath='url(#clip0)'>
           <path
             d='M16 28h-2A14 14 0 010 14.1V14A14 14 0 0114 0h2a14 14 0 0114 13.9v.2A14 14 0 0116 28z'
             fill='#FFDA00'
@@ -107,7 +107,7 @@ const REACTIONS = [
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
-        <g clip-path='url(#clip0)'>
+        <g clipPath='url(#clip0)'>
           <path
             d='M16 28h-2A14 14 0 010 14.1V14A14 14 0 0114 0h2a14 14 0 0114 13.9v.2A14 14 0 0116 28z'
             fill='#FFDA00'

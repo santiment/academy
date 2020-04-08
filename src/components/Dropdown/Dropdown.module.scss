@@ -19,7 +19,7 @@
     font-size: 16px !important;
     margin: 32px 0 0 0;
     text-align: center;
-    background: var(--mirage);
+    background: var(--rhino);
     color: var(--waterloo) !important;
 
     &:hover {
@@ -61,7 +61,7 @@
 .menuItem {
   @include responsive('desktop', 'laptop', 'tablet') {
     padding: 6px 9px;
-    color: var(--mirage) !important;
+    color: var(--rhino) !important;
     margin: 0 !important;
 
     @include text('body-3')

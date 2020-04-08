@@ -127,7 +127,7 @@ The aggregations types are:
   all values are expected to have the same result and you just want to take one
   of them.
 
-> Note: The aggregation should be provided capitalized without quotes like this:
+> **Note:** The aggregation should be provided capitalized without quotes like this:
 > `aggregation: MAX`
 
 The following query fetches the default aggregation and all available
@@ -422,7 +422,7 @@ Knowledge of the last datetime computed is essential in some cases. The daily
 metrics (metrics which have one value per day) are recomputed several times a
 day.
 
-> Note: In many cases such incomplete days can lead to misleading data. For
+> **Note:** In many cases such incomplete days can lead to misleading data. For
 > example the Daily Active Address can appear to be much lower than the usual,
 > but this can be caused by the fact that they contain only half a day of data.
 > By default the `includeIncompleteData` flag in `timeseriesData` is set to

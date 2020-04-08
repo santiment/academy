@@ -15,7 +15,7 @@ The following metrics are provided:
 - `Supply outside exchange` - What amount of coins/tokens are stored outside known
   exchange wallets.
 
-> Note: The metrics are computed on the set of publicly known exchange wallets
+> **Note:** The metrics are computed on the set of publicly known exchange wallets
 > and the exchange wallets that Santiment has found by doing analysis.
 
 ---

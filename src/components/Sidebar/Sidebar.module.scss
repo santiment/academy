@@ -48,7 +48,7 @@
   margin: 28px 20px 14px 0;
   padding-top: 32px;
   border-top: 1px solid var(--porcelain);
-  @include text("caption", "m");
+  @include text("caption", "l");
   color: var(--casper);
 
   &:first-child {

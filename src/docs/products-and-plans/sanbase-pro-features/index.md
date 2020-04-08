@@ -54,6 +54,7 @@ If you have ANY questions, let us know asap. And [join our Discord](https://disc
 
 Finally, a note from Maksim Balashevich, our founder:
 
-_Excited to have you onboard - together we are crossing the sea from a centralized to decentralized world, from uncertainty to clarity, from too much noise to "I get only what I need when I need it."_
-
-_This is a pretty long way to get to the final destination. But as is the case with every big journey, it starts with the first step. I’m excited we get to walk it together._
+> Excited to have you onboard - together we are crossing the sea from a centralized to decentralized world, from uncertainty to clarity, from too much noise to "I get only what I need when I need it."
+>
+>
+> This is a pretty long way to get to the final destination. But as is the case with every big journey, it starts with the first step. I’m excited we get to walk it together.

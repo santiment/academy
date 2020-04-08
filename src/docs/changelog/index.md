@@ -7,7 +7,46 @@ author: Santiment Team
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks.
 
+## April 2020
+
+- **`Sanbase`**: We add very specific metric for Ethereum. Say welcome to Miners Balance
+
+![miners balance](minersBalance.png)
+
+- **`Sanbase`**: New Top Holders metric on Sanbase Charts
+
+![top holders](topHolders.png)
+
+
+## March 2020
+
+- **`Sanbase`**: We add Twitter % changes 24h, 7d
+
+![twitter changes](twitterChanges.png)
+
+- **`Sanbase`**: You can create alerts right from the chart with shortcuts.
+
+![signals on chart](signalsOnChart.png)
+
+- **`Sanbase`**: ICO price can be visible right on the chart
+
+![ico price](icoPrice.png)
+
+- **`Sanbase`**: Studio supports comparison our metrics and assets now
+
+![comparing](comparing.png)
+
+- **`Sanbase`**: We add a better explanation for our metrics on •Studio•
+
+![explanations](explanations.png)
+
 ## February 2020
+
+- **`Sanbase`**: We add time bounds metrics
+
+![timebounds](timebounds.png)
+
+- **`Sansheets`**: `=SAN_MEAN_DOLLAR_INVESTED_AGE`  function has been published
 
 - **`Sanbase`**: New look of Santiment Studio. Our chart tool is much ease to use now.
   ![charts](charts.png)

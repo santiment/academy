@@ -129,7 +129,7 @@ These are the intervals corresponding to the given examples:
 - 10 days - `10d`
 - 4 weeks - `4w`
 
-> Note that there is no suffix for specifying months due to months not containing a fixed amount of days.
+> **Note** that there is no suffix for specifying months due to months not containing a fixed amount of days.
 
 An interval is used when fetching timeseries data. If the raw data is
 available at 5 minute intervals but you want to fetch it daily, `interval: "1d"`
