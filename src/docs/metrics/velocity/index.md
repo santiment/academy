@@ -3,8 +3,7 @@ title: Velocity Metric
 author: Santiment Team
 ---
 
-_For a more in-depth explanation of `Velocity`, please click_
-[_here_](/metrics/velocity/velocity-technical).
+> For a more in-depth explanation of `Velocity`, please click [here](/metrics/velocity/velocity-technical).
 
 ---
 
