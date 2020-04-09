@@ -54,11 +54,15 @@ You can input:
 
 as an alias. which points to this respective send address. Once this has been done, as mentioned earlier, just contact us at via [support@santiment.net](mailto:support@santiment.net), which will open an Intercom chat with our team. There, you can provide the transaction hash of the burning transaction and let us know how you would like to spend the amount of credit equivalent to $1 for each SAN burned.
 
-> **Note:**
-- *Paying with SAN is limited to purchasing subscriptions of Sanbase and Sandata, so it's not available for subscribing to SanAPI.*
-- *SAN burn is not available for residents of the Swiss Confederation due to tax reasons.*
-- *SAN burn can only be applied to monthly or yearly base subscription prices. No other discounts are applicable when using SAN burn.*
 
-*Thank you for your understanding.*
+<iframe width="560" height="315" src="https://www.youtube.com/embed/okEPRDim48A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+>
+- Paying with SAN is limited to purchasing subscriptions of Sanbase and Sandata, so it's not available for subscribing to SanAPI.
+- SAN burn is not available for residents of the Swiss Confederation due to tax reasons.
+- SAN burn can only be applied to monthly or yearly base subscription prices. No other discounts are applicable when using SAN burn.
+>
+> Thank you for your understanding.
 
 If any help is needed on this kind of payment method, please let us know at [support@santiment.net](mailto:support@santiment.net) and we will be happy to walk you through the process.
