@@ -20,6 +20,12 @@ Examples:
 
 ---
 
+## Access
+
+Circulation metrics are with [restricted access](/metrics/details/access#restricted-access).
+
+---
+
 ## Timebound
 
 There are multiple [timebound metrics](/metrics/details/timebound) available
@@ -34,25 +40,28 @@ Token/Coin amount
 
 ## Frequency
 
-Circulation is available at [daily
+Circulation metrics are available at [daily
 intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
 ## Latency
 
-Circulation has [on-chain latency](/metrics/details/latency#on-chain-latency)
+Circulation metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
 ## Available assets
 
-This metric is computed for [these
+Circulation metrics are computed for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22circulation%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+> Note: `circulation` metric and all circulation metrics are
+> available for the same set of assets.
 
 ---
 
-### API
+### SanAPI
 
 The metrics are available under the `circulation` and `circulation_<timebound>` names.
 

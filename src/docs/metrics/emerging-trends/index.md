@@ -21,6 +21,13 @@ the resulting list are the top emerging trends.
 
 ---
 
+## Access
+
+The metric's realtime data is **free**.
+The metric's historical data is with [restricted access](/metrics/details/access#restricted-access).
+
+---
+
 ### Filtering and Cleaning
 
 In order to reduce the level of noise, spam and duplicates while calculating the
@@ -101,6 +108,8 @@ The [hype score](#hype-score) doesn't really have a qualitative meaning, it can
 be treated as a relative number: the higher it gets - the faster a given word is
 "emerging".
 
+---
+
 ## Frequency
 
 Emerging Trends are available at [hourly intervals](/metrics/details/frequency#hourly-frequency)
@@ -151,12 +160,3 @@ The emerging trends are available as part of the API, the metric is called
 ```
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getTrendingWords(from%3A%20%222020-01-01T12%3A00%3A00Z%22%2C%20to%3A%20%222020-01-01T13%3A00%3A00Z%22%2C%20size%3A10%2C%20interval%3A%221h%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20topWords%20%7B%0A%20%20%20%20%20%20word%0A%20%20%20%20%20%20score%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
-
-## Availability
-
-|                | Free               | Basic              | Pro                | Premium            | Enterprise         |
-| -------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| Sanbase        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sanbase Graphs | :x:                | :x:                | :x:                | :x:                | :x:                |
-| SanAPI         | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets      | :x:                | :x:                | :x:                | :x:                | :x:                |

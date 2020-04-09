@@ -7,7 +7,7 @@ date: 2020-04-08
 Some metrics have **special** restrictions. They do not follow the time
 restrictions of the product plans but their own.
 
-## Realized Value / MVRV metrics
+## Realized Value and MVRV metrics
 
 Those restrictions hold for any metric that contains "**mvrv**" or
 "**realized_value**" in its canonical name, like `mvrv_usd`, `mvrv_usd_7d`,
@@ -28,7 +28,7 @@ Those restrictions hold for any metric that contains "**mvrv**" or
 - Full historical access
 - Realtime data is not cut-off
 
-## Token Age Consumed Metrics
+## Age Consumed Metrics
 
 The following special restrictions hold for any metric that contains
 "**age_consumed**" or "**age_destroyed**" in its canonical name.

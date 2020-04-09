@@ -12,6 +12,8 @@ date: 2019-09-19
 
 ### Definition
 
+Social Volume is build on top of the [Social Data](/metrics/details/social-data)
+
 The total number of text documents that contain the given search term at least once. The search term can be one particular word (`bitcoin`), an exact phrase (`"when moon"`) or a combination of words, that are combined using binary set operations:
 
 - `OR` - the union of two search results.
@@ -49,7 +51,8 @@ By default we use an auto-generated search query to track the volume of mentions
 The metric is available on Sanbase:
 
 - on our charts **for any selected asset**:
-<iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-06-02T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialVolume&scale=auto&slug=santiment&title=Santiment%20%28SAN%29&to=2019-12-03T21%3A00%3A00.000Z&viewOnly=true"></iframe>
+
+  <iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-06-02T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialVolume&scale=auto&slug=santiment&title=Santiment%20%28SAN%29&to=2019-12-03T21%3A00%3A00.000Z&viewOnly=true"></iframe>
 
 - in the [Labs](https://app.santiment.net/labs/trends) section for **any desired search query**.
 
@@ -67,12 +70,12 @@ The metric is available on Sansheets.
 
 ### Availability
 
-||Free|Basic|Pro|Premium|Enterprise|
-|---|---|---|---|---|---|
-|Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SanAPI|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|                | Free               | Basic              | Pro                | Premium            | Enterprise         |
+| -------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
+| Sanbase        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Sanbase Graphs | :x:                | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SanAPI         | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Sansheets      | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## 2. Unique Social Volume
 
@@ -104,12 +107,12 @@ The metric is available **for any selected asset**.
 
 ### Availability
 
-||Free|Basic|Pro|Premium|Enterprise|
-|---|---|---|---|---|---|
-|Sanbase|:x:|:x:|:x:|:x:|:x:|
-|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SanAPI|:x:|:x:|:x:|:x:|:x:|
-|Sansheets|:x:|:x:|:x:|:x:|:x:|
+|                | Free | Basic | Pro                | Premium            | Enterprise         |
+| -------------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
+| Sanbase        | :x:  | :x:   | :x:                | :x:                | :x:                |
+| Sanbase Graphs | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SanAPI         | :x:  | :x:   | :x:                | :x:                | :x:                |
+| Sansheets      | :x:  | :x:   | :x:                | :x:                | :x:                |
 
 ## 3. Spam Index
 
@@ -141,12 +144,12 @@ The metric is available **for any selected asset**.
 
 ### Availability
 
-||Free|Basic|Pro|Premium|Enterprise|
-|---|---|---|---|---|---|
-|Sanbase|:x:|:x:|:x:|:x:|:x:|
-|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SanAPI|:x:|:x:|:x:|:x:|:x:|
-|Sansheets|:x:|:x:|:x:|:x:|:x:|
+|                | Free | Basic | Pro                | Premium            | Enterprise         |
+| -------------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
+| Sanbase        | :x:  | :x:   | :x:                | :x:                | :x:                |
+| Sanbase Graphs | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SanAPI         | :x:  | :x:   | :x:                | :x:                | :x:                |
+| Sansheets      | :x:  | :x:   | :x:                | :x:                | :x:                |
 
 ## 4. Relative Social Dominance
 
@@ -177,6 +180,7 @@ By default the **Social Dominance** for a given asset is calculated against the 
 #### [Sanbase](https://app.santiment.net)
 
 The metric is available on Sanbase on our charts **for any selected asset**:
+
 <iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-06-02T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialDominance&scale=auto&slug=santiment&title=Santiment%20%28SAN%29&to=2019-12-03T21%3A00%3A00.000Z&viewOnly=true"></iframe>
 
 #### [Sanbase Graphs](https://graphs.santiment.net/social)
@@ -185,9 +189,9 @@ The metric is available **for any selected asset**.
 
 ### Availability
 
-||Free|Basic|Pro|Premium|Enterprise|
-|---|---|---|---|---|---|
-|Sanbase|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sanbase Graphs|:x:|:x:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|SanAPI|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
-|Sansheets|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|:white_check_mark:|
+|                | Free               | Basic              | Pro                | Premium            | Enterprise         |
+| -------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
+| Sanbase        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Sanbase Graphs | :x:                | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SanAPI         | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Sansheets      | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
