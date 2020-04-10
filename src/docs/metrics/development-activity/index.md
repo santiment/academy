@@ -27,7 +27,7 @@ features.
 
 ## Access
 
-Development Activity metrics are with [free access](/metrics/details/access#free-access).
+[Free Access](/metrics/details/access#free-access)
 
 ---
 
@@ -90,15 +90,21 @@ by Valentin, our CTO.
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Development Activity metrics are available at [five-minute intervals](/metrics/details/frequency#five-minute-frequency)
+[Five-minute intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 
 ## Latency
 
-Development Activity metrics have [development activity data latency](/metrics/details/latency#development-activity-latency)
+[Development Activity Data Latency](/metrics/details/latency#development-activity-latency)
 
 ---
 
@@ -166,6 +172,15 @@ be the winner.
 
 As a custom metric, dev activity can help you understand a project's dedication
 to its product, and in turn - its end users.
+
+---
+
+## Available Assets
+
+Available for [these
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+> **Note**: All metrics are available for the same set of assets.
 
 ---
 

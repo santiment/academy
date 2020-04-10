@@ -1,5 +1,5 @@
 ---
-title: Sanbase - Sonar page
+title: Sonar page
 author: Santiment Team
 description: Create your own signal or subscribe to existing, watch recent activity, manage your signals, share them with other users
 ---

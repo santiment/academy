@@ -32,7 +32,7 @@ decline.
 
 ## Access
 
-The following [special restrictions](/products-and-plans/access-plans/special-restrictions#age-consumed-metrics) apply
+[Special Restrictions](/products-and-plans/access-plans/special-restrictions#age-consumed-metrics)
 
 ---
 
@@ -42,29 +42,34 @@ Time passed × Token/Coin amount
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Age Consumed is available at [5-minute
-intervals](/metrics/details/frequency#five-minute-frequency)
+[Five-minute intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 
 ## Latency
 
-Age Consumed has [on-chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
-This metric is computed for [these
+Available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22age_destroyed%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 
 ## API
 
-The query to fetch the age consumed is called `age_destroyed` in the API:
+Available under the `age_destroyed` name:
 
 ```graphql
 {

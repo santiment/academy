@@ -22,13 +22,13 @@ Examples:
 
 ## Access
 
-Circulation metrics are with [restricted access](/metrics/details/access#restricted-access).
+[Restricted Access](/metrics/details/access#restricted-access)
 
 ---
 
 ## Timebound
 
-There are multiple [timebound metrics](/metrics/details/timebound) available
+[Timebound Metrics](/metrics/details/timebound)
 
 ---
 
@@ -38,22 +38,27 @@ Token/Coin amount
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Circulation metrics are available at [daily
-intervals](/metrics/details/frequency#daily-frequency)
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
 ## Latency
 
-Circulation metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
-Circulation metrics are computed for [these
+Available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22circulation%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 > **Note:** `circulation` metric and all circulation metrics are
@@ -63,7 +68,7 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### SanAPI
 
-The metrics are available under the `circulation` and `circulation_<timebound>` names.
+Available under the `circulation` and `circulation_<timebound>` names.
 
 Gets the total amount of tokens that have been sent at least once during each
 day for given time period. Projects are referred to by a unique identifier

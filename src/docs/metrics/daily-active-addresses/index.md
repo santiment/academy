@@ -25,7 +25,7 @@ senders and the receivers of the asset are counted.
 
 ## Access
 
-The metric is with [free access](/metrics/details/access#free-access).
+[Free Access](/metrics/details/access#free-access)
 
 ---
 
@@ -35,29 +35,34 @@ Non-negative number of addresses
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Daily Active Addresses is available at [daily
-intervals](/metrics/details/frequency#daily-frequency)
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
 ## Latency
 
-Daily Active Addresses has [on-chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
-This metric is computed for [these
+Available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 
 ## API
 
-The metric is available under the `daily_active_addresses` name.
+Available under the `daily_active_addresses` name.
 
 ```graphql
 {

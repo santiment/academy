@@ -18,7 +18,7 @@ The following metrics are provided:
 
 ## Access
 
-Price metrics have [free access](/metrics/details/access#free-access).
+[Free Access](/metrics/details/access#free-access)
 
 ---
 
@@ -28,23 +28,28 @@ Amount in dollars/bitcoins
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Price metrics are available at [five-minute
-intervals](/metrics/details/frequency#five-minute-frequency)
+[Five-minute intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 
 ## Latency
 
-Price metrics have [price latency](/metrics/details/latency#price-latency)
+[Price latency](/metrics/details/latency#price-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
-- All price related metrics are available for [these
-  assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+Available for [these
+assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 > Note: All metrics are available for the same set of assets
 

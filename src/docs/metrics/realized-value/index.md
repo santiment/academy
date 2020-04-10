@@ -15,13 +15,13 @@ according to the [coin-age model](/metrics/details/stack-coin-age-model)
 
 ## Access
 
-Realized Value metrics are with [restricted access](/metrics/details/access#restricted-access).
+[Restricted Access](/metrics/details/access#restricted-access).
 
 ---
 
 ## Timebound
 
-There are multiple [timebound metrics](/metrics/details/timebound) available
+[Timebound Metrics](/metrics/details/timebound) available
 
 ---
 
@@ -31,22 +31,27 @@ Dollars
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Realized Value metrics are available at [daily
-intervals](/metrics/details/frequency#daily-frequency)
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
 ## Latency
 
-Realized Value metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
-This metrics are computed for [these
+Available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22realized_value_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 > Note: `realized_value_usd` metric and all timebound realized value metrics are
@@ -54,9 +59,9 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ---
 
-### SanAPI
+## SanAPI
 
-The metrics are available under the `realized_value_usd` and `realized_value_usd_<timebound>` names.
+Available under the `realized_value_usd` and `realized_value_usd_<timebound>` names.
 
 ```graphql
 {

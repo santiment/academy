@@ -16,7 +16,10 @@ Find the meaning of terms used throughout the documentation
 
 ## query
 
-The term refers to the [GraphQL query](https://graphql.org/learn/queries/) and means exactly that - a read operation. In the following example `getAccessRestrictions` is the query. Broadly speaking, in a GraphQL request the `query` is the "name of the function" invoked:
+The term refers to the [GraphQL query](https://graphql.org/learn/queries/) and
+means exactly that - a read operation. In the following example
+`getAccessRestrictions` is the query. Broadly speaking, in a GraphQL request the
+`query` is the "name of the function" invoked:
 
 ```graphql
 {
@@ -30,7 +33,9 @@ The term refers to the [GraphQL query](https://graphql.org/learn/queries/) and m
 }
 ```
 
-One GraphQL request can batch more than one query. The following example has two `getMetric` queries and they are given an alias name so name collision is avoided in the returned result:
+One GraphQL request can batch more than one query. The following example has two
+`getMetric` queries and they are given an alias name so name collision is
+avoided in the returned result:
 
 ```graphql
 {
@@ -47,7 +52,8 @@ One GraphQL request can batch more than one query. The following example has two
 }
 ```
 
-If only different queries are used the aliases can be avoided. In the next example the queries are `getMetric` and `currentUser`:
+If only different queries are used the aliases can be avoided. In the next
+example the queries are `getMetric` and `currentUser`:
 
 ```graphql
 {
@@ -64,7 +70,12 @@ If only different queries are used the aliases can be avoided. In the next examp
 }
 ```
 
-A term with a specific meaning in the context of Santiment's API. A metric is a set of data points with a specific meaning. For example the `daily_active_addresses` metric is represented as pairs of date `D` and a number `N` with the following meaning: The count of the unique addresses `N` that participated in at least one transaction during the day `D`.
+## metric
+
+A term with a specific meaning in the context of Santiment's API. A metric is a
+set of data points with a specific meaning. There are two types of metrics:
+[timeseries metrics](/metrics/details/data-type#timeseries-data) and [histogram
+metrics](/metric/details/data_type#histogram-data)
 
 In the following example `nvt` is the metric, `getMetric` is the query.
 
@@ -85,7 +96,11 @@ In the following example `nvt` is the metric, `getMetric` is the query.
 }
 ```
 
-In some cases the query and the metric are the same. In the next example `historicalBalance` is the query, but the metric is also `historical balance`. This is the case where a query fetches exactly one metric (metric argument is implicit), which is not the case of `getMetric` where the metric argument is explicitly passed with the `metric` argument.
+In some cases the query and the metric are the same. In the next example
+`historicalBalance` is the query, but the metric is also `historical balance`.
+This is the case where a query fetches exactly one metric (metric argument is
+implicit), which is not the case of `getMetric` where the metric argument is
+explicitly passed with the `metric` argument.
 
 ```graphql
 {
@@ -104,17 +119,22 @@ In some cases the query and the metric are the same. In the next example `histor
 
 ## asset
 
-An asset is any cryptocurrency or crypto token which can be associated with a price. Example of assets are Bitcoin, Ethereum and Santiment tokens.
-More detailed info can be found [here](/glossary/asset)
+An asset is any cryptocurrency or crypto token which can be associated with a
+price. Example of assets are Bitcoin, Ethereum and Santiment tokens. More
+detailed info can be found [here](/glossary/asset)
 
 ## slug
 
-A string uniquely identifying identifying an [asset](/glossary/asset). You can find the slug of the projects, alongside their names, tickers (and much more data) by using the [allProjects API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20infrastructure%0A%20%20%20%20mainContractAddress%0A%20%20%7D%0A%7D%0A).
+A string uniquely identifying identifying an [asset](/glossary/asset). You can
+find the slug of the projects, alongside their names, tickers (and much more
+data) by using the [allProjects
+API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20infrastructure%0A%20%20%20%20mainContractAddress%0A%20%20%7D%0A%7D%0A).
 
 ## interval
 
-A representation of time intervals like 5 minutes, 12 hours, 10 days, 4 weeks, etc..
-An interval is represented as a string starting with a number and followed by one of the suffixes:
+A representation of time intervals like 5 minutes, 12 hours, 10 days, 4 weeks,
+etc.. An interval is represented as a string starting with a number and followed
+by one of the suffixes:
 
 - `s` - second
 - `m` - minute
@@ -129,17 +149,24 @@ These are the intervals corresponding to the given examples:
 - 10 days - `10d`
 - 4 weeks - `4w`
 
-> **Note** that there is no suffix for specifying months due to months not containing a fixed amount of days.
+> **Note** that there is no suffix for specifying months due to months not
+> containing a fixed amount of days.
 
-An interval is used when fetching timeseries data. If the raw data is
-available at 5 minute intervals but you want to fetch it daily, `interval: "1d"`
-should be provided as parameter. In this case the default aggregation will be applied on all 288 5-minute data points in the given day to compute the value for the whole day. This aggregation varies based on the metric - in some cases taking the average or the last value is required (price), in other cases taking the sum of all values (transaction volume), etc.
+An interval is used when fetching timeseries data. If the raw data is available
+at 5 minute intervals but you want to fetch it daily, `interval: "1d"` should be
+provided as parameter. In this case the default aggregation will be applied on
+all 288 5-minute data points in the given day to compute the value for the whole
+day. This aggregation varies based on the metric - in some cases taking the
+average or the last value is required (price), in other cases taking the sum of
+all values (transaction volume), etc.
 
 ## ISO8601
 
-The date time format used in the API. The format is `<year>-<month>-<day>T<hour>:<minute>:<second>Z`.
-For example Jan 10th 2019 12:34:56 is `2019-01-10T12:34:56Z`
+The date time format used in the API. The format is
+`<year>-<month>-<day>T<hour>:<minute>:<second>Z`. For example Jan 10th 2019
+12:34:56 is `2019-01-10T12:34:56Z`
 
 ## API key
 
-Your API for accessing the premium features in the API. See the `Authentication` section for more details
+Your API for accessing the premium features in the API. See the `Authentication`
+section for more details

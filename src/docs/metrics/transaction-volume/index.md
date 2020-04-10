@@ -12,7 +12,7 @@ that happened on the network for a given asset in an interval.
 
 ## Access
 
-Transaction Volume has [restricted access](/metrics/details/access#restricted-access).
+[Restricted Access](/metrics/details/access#restricted-access).
 
 ---
 
@@ -22,29 +22,34 @@ Amount of coins/tokens
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Transaction volume is available at [five-minute
-intervals](/metrics/details/frequency#five-minute-frequency)
+[Five-minute intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 
 ## Latency
 
-Transaction volume has [on-chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
-Transaction Volume is available for [these
+Available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 
 ### SanAPI
 
-Transaction volume is available under the `transaction_volume` name.
+Available under the `transaction_volume` name.
 
 ```graphql
 {

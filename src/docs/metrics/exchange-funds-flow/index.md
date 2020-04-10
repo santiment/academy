@@ -25,7 +25,7 @@ There are three separate metrics regarding exchange funds flow:
 
 ## Access
 
-Exchange Funds Flow metrics have [restricted access](/metrics/details/access#restricted-access).
+[Restricted Access](/metrics/details/access#restricted-access).
 
 ---
 
@@ -35,25 +35,21 @@ Amount of coins/tokens
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Exchange Funds Flow metrics are available at [5-minute
-intervals](/metrics/details/frequency#five-minute-frequency)
+[Five-minute intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 
 ## Latency
 
-Exchange Funds Flow metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
-
----
-
-## Available assets
-
-Exchange Funds Flow metrics are computed for [these
-assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22exchange_balanced%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
-
-> Note: All of the metrics are available for the same set of assets.
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
@@ -75,7 +71,18 @@ hand, the price is likely to fall soon thereafter.
 
 ---
 
+## Available Assets
+
+Available for [these
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22exchange_balanced%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+> Note: All of the metrics are available for the same set of assets.
+
+---
+
 ## SanAPI
+
+Available under the `exchange_balance`, `exchange_inflow` and `exchange_outflow` names.
 
 ```graphql
 {

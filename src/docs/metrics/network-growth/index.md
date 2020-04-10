@@ -30,7 +30,7 @@ What happened since speaks for itself.
 
 ## Access
 
-Network Growth has [restricted access](/metrics/details/access#restricted-access).
+[Restricted Access](/metrics/details/access#restricted-access)
 
 ---
 
@@ -40,29 +40,34 @@ Number of addresses
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Network Growth is available at [daily
-intervals](/metrics/details/frequency#daily-frequency)
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
 ## Latency
 
-Network Growth ise [on-chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
-Network Growth is computed for [these
+Available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22network_growth%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 
 ### SanAPI
 
-Network Growth is available under the `network_growth` name.
+Available under the `network_growth` name.
 
 ```graphql
 {

@@ -1,5 +1,6 @@
 ---
-title: Market Value To Realized Value Metric
+title: Market Value To Realized Value (MVRV) Metric
+description: MVRV shows the average profit/loss of all the coins currently in circulation according to the current price.
 author: Irina Pranovich
 date: 2020-04-09
 ---
@@ -44,7 +45,13 @@ in the several years.
 
 ## Access
 
-MVRV metrics have [special restrictions](/products-and-plans/access-plans/special-restrictions#realized-value-and-mvrv-metrics).
+[Special Restrictions](/products-and-plans/access-plans/special-restrictions#realized-value-and-mvrv-metrics).
+
+---
+
+## Timebound
+
+[Timebound Metrics](/metrics/details/timebound) available
 
 ---
 
@@ -54,22 +61,27 @@ Ratio
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-MVRV metrics are available at [daily
-intervals](/metrics/details/frequency#daily-frequency)
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
 ## Latency
 
-MVRV metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
-MVRV metrics are computed for [these
+Available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---

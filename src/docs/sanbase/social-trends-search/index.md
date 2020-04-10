@@ -1,5 +1,5 @@
 ---
-title: Sanbase - Social trends search
+title: Social trends search
 author: Santiment Team
 description: Using this feature you can display the amount of times your search term is mentioned in a specific medium (e.g. Telegram).
 ---
@@ -39,7 +39,7 @@ For example:
 
 Refer to [this blog post](https://santiment.net/blog/introducing-social-trends/) for examples of how to use this tool.
 
-Refer to [this](/metrics/social-volume-metrics/) and [this article](/metrics/sentiment-metrics/) for more information about how it works.
+Refer to [this](/metrics/social-volume/) and [this article](/metrics/sentiment-metrics/) for more information about how it works.
 
 ## Social context
 

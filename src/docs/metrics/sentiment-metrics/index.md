@@ -20,7 +20,7 @@ text. This problem can be solved using different techniques: rule-based or
 machine learning. The first one represents a set of predefined rules that are
 used to estimate the sentiment of the input text. This approach is often less
 accurate and requires a lot of manual work. The amount of documents in our
-[Social Data](/metrics/social-data) storage makes it barely impossible to
+[Social Data](/metrics/details/social-data) storage makes it barely impossible to
 analyze them manually. That's why we use machine learning to approach the
 sentiment analysis problem.
 
@@ -29,7 +29,7 @@ sentiment analysis problem.
 We trained a machine learning model on a large Twitter dataset, that contains
 over 1.6 million tweets, each labelled as either _positive_ or _negative_. This
 model is then used to evaluate the sentiment of each single document in the
-[Social Data](/metrics/social-data) set, i.e. it assigns a positive and negative
+[Social Data](/metrics/details/social-data) set, i.e. it assigns a positive and negative
 _sentiment score_ to each message/post/comment/etc. These scores are
 probabilities that the content of the text being analyzed is positive or
 negative respectively. Therefore both the _positive_ and _negative_ sentiment
@@ -74,7 +74,7 @@ Relative number, less or equal than the corresponding social volume.
 #### Frequency
 
 We store each of the [social
-data](https://acadey.santiment.net/metrics/social-data) documents with its
+data](https://acadey.santiment.net/metrics/details/social-data) documents with its
 absolute timestamp. I.e. it is possible to aggregate the data with **any desired
 interval** [on request](products-and-plans/access-plans/). Currently the time
 intervals we use are the following:
@@ -84,12 +84,12 @@ intervals we use are the following:
 #### Latency
 
 The [sentiment scores](#sentiment-score) are calculated every 5 minutes. Taking
-into account that the [social data](/metrics/social-data) itself is
+into account that the [social data](/metrics/details/social-data) itself is
 quasi-realtime, the maximal latency is 5 minutes.
 
 #### Available Assets
 
-We do not separate or filter the [social data](/metrics/social-data/) being
+We do not separate or filter the [social data](/metrics/details/social-data/) being
 collected by assets. I.e. we can calculate this metric for any asset. More on
 this can be found [here](/metrics/social-volume-metrics/#available-assets).
 

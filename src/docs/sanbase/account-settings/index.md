@@ -1,5 +1,5 @@
 ---
-title: Sanbase - Account settings
+title: Account settings
 author: Santiment Team
 ---
 

@@ -16,16 +16,25 @@ The change is measured in absolute social volume difference
 
 ---
 
+## Access
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-The metric is available at [daily
-intervals](/metrics/details/frequency#daily-frequency)
+[Hourly Intervals](/metrics/details/frequency#hourly-frequency)
 
 ---
 
 ## Latency
 
-The metric has have [social data latency](/metrics/details/latency#social-data-latency)
+[Social Data latency](/metrics/details/latency#social-data-latency)
 
 ---
 
