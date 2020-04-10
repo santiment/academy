@@ -1,15 +1,49 @@
 ---
-title: Mean Coin Age
+title: Coin Spent Cost
 author: Ivan
-date: 2020-04-06
+date: 2020-04-10
 ---
 
 ## Definition
 
-For the coins/tokens transacted on a given day see what is the price they were
-acquired at.
+For the coins/tokens transacted on a given day, get the price they were acquired
+at. The metric does not include:
+
+- Minting/mining/uncle rewards
+- Transactions of coins/tokens that were acquired on the same day.
+
+  - Example: There is a transaction `A - 10ETH -> B` and a transaction
+    `B -> 10ETH C` - `B` moves the coins on the same day that they were received. This
+    second transaction is not counted.
+
+The number total number of coins/tokens that are counted is equal to the [1-day
+circulation](/metrics/circulation) (**not** the [transaction
+volume](/metrics/transaction-volume)) **minus** the block rewards/uncle rewards/mints.
+
+### Example
+
+Let's take a look where do spent coins during the top and low of the Octobor 10,
+2020 - April 10, 2020 come from.
 
 ---
+
+_Analyzing the local top on February 12, 2020_
+![bitcoin spent coin cost high](bitcoin-spent-coin-cost-high2.png)
+The top for that 6-month period happened on February 12, 2020, when the 1-day
+circulation was 163.7k bitcoins. Out of the all bitcoins, only around 2.5k were
+acquired at a lower price - this means that the most of the transactions during
+that day resulted in profit. Over 160k, or 98% of the coins transferred,
+resulted in profits.
+
+---
+
+_Analyzing the local botom on March 16, 2020_
+![bitcoin spent coin cost low](bitcoin-spent-coin-cost-low2.png)
+The low for that 6-month period happened on March 16, 2020, when the 1-day
+circulation was 328.4k bitcoins. Out of the all bitcoins, only around 7.2k were
+acquired at a lower price - this means that the most of the transactions during
+that day resulted in loss. Over 321k, or 97.8% of the coins transferred,
+resulted in loss.
 
 ## Access
 

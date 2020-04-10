@@ -18,6 +18,7 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [OHLC (Open-High-Low-Close)](/metrics/price/#ohlc)
 - [Trading Volume in USD](/metrics/price/#volume-usd)
 - [Marketcap in USD](/metrics/price/#marketcap-usd)
+- [Spent Coin Cost](/metrics/price/spent-coin-cost)
 - [Mean Coin Age](/metrics/mean-coin-age)
 
 ## Social/Sentiment
