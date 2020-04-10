@@ -30,17 +30,17 @@ Amount of documents (messages, posts, comments, etc).
 
 ### Frequency
 
-We store each of the [social data](/metrics/social-data/) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](/products-and-plans/access-plans/). Currently the time intervals we use are the following:
+We store each of the [social data](/metrics/details/social-data/) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](/products-and-plans/access-plans/). Currently the time intervals we use are the following:
 
 - In [Sanbase Graphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
 
 ### Latency
 
-The latency of **Social Volume** depends on the latency of the documents from each [data source](/metrics/social-data/). Real-time social data means that the volume calculated on top of this data is also real-time (max. 1-2 seconds).
+The latency of **Social Volume** depends on the latency of the documents from each [data source](/metrics/details/social-data/). Real-time social data means that the volume calculated on top of this data is also real-time (max. 1-2 seconds).
 
 ### Available Assets
 
-We do not separate or filter the [social data](/metrics/social-data/) being collected by assets. I.e. we can have the social volume for any asset.
+We do not separate or filter the [social data](/metrics/details/social-data/) being collected by assets. I.e. we can have the social volume for any asset.
 
 By default we use an auto-generated search query to track the volume of mentions for each project, e.g.: `btc OR bitcoin NOT cash NOT gold NOT abc ...etc`. These queries can be manually modified by our admins to exclude redundant results or include some additional word to the query if necessary.
 
