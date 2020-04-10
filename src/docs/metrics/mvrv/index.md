@@ -1,5 +1,6 @@
 ---
-title: Market Value To Realized Value Metric
+title: Market Value To Realized Value (MVRV) Metric
+description: MVRV shows the average profit/loss of all the coins currently in circulation according to the current price.
 author: Irina Pranovich
 date: 2020-04-09
 ---

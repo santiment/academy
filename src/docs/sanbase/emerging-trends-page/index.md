@@ -1,5 +1,5 @@
 ---
-title: Sanbase - Emerging trends page
+title: Emerging trends page
 author: Santiment Team
 description: This page contain `Top 10` trending words in crypto and give you a quick overview of the top developing topics in crypto at the moment
 ---

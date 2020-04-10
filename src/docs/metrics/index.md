@@ -22,14 +22,14 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 
 ## Social/Sentiment
 
-Metrics build on top of [Social Data](/metrics/social-data)
+Metrics build on top of [Social Data](/metrics/details/social-data)
 
 They are taken from measuring social activity on crypto-related forums and
 channels, plus custom sentiment measurements analyzing crowd behavior. Includes
 emerging trend words and projects, word clouds to display related words and the
 possibility to enter custom search terms.
 
-- [Social Volume Metrics](/metrics/social-volume-metrics)
+- [Social Volume Metrics](/metrics/social-volume)
 - [Sentiment Metrics](/metrics/sentiment-metrics)
 - [Emerging Trends](/metrics/emerging-trends)
 - [Top Social Gainers/Losers](/metrics/top-social-gainers-losers)

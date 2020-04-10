@@ -106,7 +106,6 @@ export const REFERENCES = [
       "Price",
       "Realized Value",
       "Sentiment Metrics",
-      "Social Data",
       "Social Volume",
       "Top Social Gainers Losers",
       "Top Holders",

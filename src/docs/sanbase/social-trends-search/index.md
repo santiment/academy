@@ -1,5 +1,5 @@
 ---
-title: Sanbase - Social trends search
+title: Social trends search
 author: Santiment Team
 description: Using this feature you can display the amount of times your search term is mentioned in a specific medium (e.g. Telegram).
 ---

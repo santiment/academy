@@ -14,7 +14,7 @@ the topics which _emerged_ faster than any others over the last 24 hours. By
 discussed much more than any other topic.
 
 We detect these words by computing the so called _hype score_ for each single
-word that is present in the [social data](/metrics/social-data/) after filtering
+word that is present in the [social data](/metrics/details/social-data/) after filtering
 and cleaning the data. Once this number is calculated, the words are ranked
 according to the corresponding scores in a descending order. The top 10 words in
 the resulting list are the top emerging trends.
@@ -66,7 +66,7 @@ where:
 - $v_i^n$ is the _normalized_ social volume of the word at the moment $i$ (i.e.
   the usual [social volume](/metrics/social-volume-metrics/#social-volume)
   divided by the total amount of messages in that particular [data
-  source](/metrics/social-data/)),
+  source](/metrics/details/social-data/)),
 
 - $u_t$ is the total amount of unique users that have used the word under
   consideration at least once.
@@ -130,7 +130,7 @@ Emerging Trends has [social data latency](/metrics/details/latency#social-data-l
 
 ## Available Assets
 
-The algorithm takes into account all the [social data](/metrics/social-data/),
+The algorithm takes into account all the [social data](/metrics/details/social-data/),
 so the list may or may not contain asset names and tickers. We do track the
 emerging projects separately for the assets only, but currently it is not
 available through any of the products.
