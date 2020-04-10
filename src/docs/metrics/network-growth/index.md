@@ -26,9 +26,19 @@ wouldn't be able to sustain future price growth.
 
 What happened since speaks for itself.
 
+---
+
+## Access
+
+Network Growth has [restricted access](/metrics/details/access#restricted-access).
+
+---
+
 ## Measuring Unit
 
 Number of addresses
+
+---
 
 ## Frequency
 

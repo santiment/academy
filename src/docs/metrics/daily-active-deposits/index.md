@@ -45,6 +45,12 @@ out in Autumn, coinciding with Maker's surge in popularity.
 
 ---
 
+## Access
+
+The metric is with [restricted access](/metrics/details/access#restricted-access).
+
+---
+
 ## Measuring Unit
 
 Non-negative number of addresses

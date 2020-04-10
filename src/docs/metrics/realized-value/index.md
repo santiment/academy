@@ -1,53 +1,70 @@
 ---
 title: Realized Value
-author: Santiment Team
+author: Ivan
+date: 2020-04-09
 ---
 
-Returns Realized Value of all tokens. Realized Value is based on the
-acquisition costs of an asset located in a wallet, estimated by using
-the historical price when the asset was last moved. The realized Value
-across the whole network is computed by summing the realized values of
-all wallets holding tokens at the moment. Projects are referred to by a
-unique identifier (slug).
+## Definition
 
-The query returns the full RV as well as the RV for all tokens that are
-not in exchange wallets.
+Realized Value is an alternative to the Market Cap (Market Value). Instead of
+multiplying all coins/tokens by the last price, every coin/token is assigned the
+price at which it was last moved. Assigning age to coin/tokens is done
+according to the [coin-age model](/metrics/details/stack-coin-age-model)
 
-##### Realized Value
+---
 
-The realized value metric is calculating the acquisition cost of the assets
-located in a wallet. Imagine that there is a wallet which has 30 tokens and
-these tokens came into the wallet in 3 transactions:
+## Access
 
-10 tokens came in when the price of the tokens was $5 5 tokens came in when the
-price was $15 15 tokens came when the price was \$10 The realized value of the
-address is
+Realized Value metrics are with [restricted access](/metrics/details/access#restricted-access).
 
-$$10 × 5 + 5 × 15 + 15 × 10 = 50 + 75 + 150 = \$275$$
+---
 
-This number gives the value of the tokens for this particular token holder and
-can be compared to the current market value. If the current price of the token
-is below $9.1, then the money this holder paid for acquiring these assets are
-more than their current value, while if the price is over $9.1, the value is
-greater. That means that if the current price is $10, these tokens are worth
-$300 and if the holder sells everything, he will get \$25 profit.
+## Timebound
 
-The interesting part is that we can compute the realized value across the whole
-network, by summing the realized values of all wallets holding tokens at the
-moment. This number gives an estimate of the amount of money the users of the
-network spend to acquire their assets. The definition will be:
+There are multiple [timebound metrics](/metrics/details/timebound) available
 
-$$
-RV_{network}= \sum_{a \in addresses} RV(a)
-$$
+---
+
+## Measuring Unit
+
+Dollars
+
+---
+
+## Frequency
+
+Realized Value metrics are available at [daily
+intervals](/metrics/details/frequency#daily-frequency)
+
+---
+
+## Latency
+
+Realized Value metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
+
+---
+
+## Available assets
+
+This metrics are computed for [these
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22realized_value_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+> Note: `realized_value_usd` metric and all timebound realized value metrics are
+> available for the same set of assets.
+
+---
+
+### SanAPI
+
+The metrics are available under the `realized_value_usd` and `realized_value_usd_<timebound>` names.
 
 ```graphql
 {
   getMetric(metric: "realized_value_usd") {
     timeseriesData(
       slug: "santiment"
-      from: "2020-04-01T00:00:00Z"
-      to: "2020-04-07T00:00:00Z"
+      from: "2020-01-01T00:00:00Z"
+      to: "2020-01-07T00:00:00Z"
       interval: "1d"
     ) {
       datetime
@@ -57,5 +74,4 @@ $$
 }
 ```
 
-[**Run in
-explorer**](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22realized_value_usd%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22realized_value_usd%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**

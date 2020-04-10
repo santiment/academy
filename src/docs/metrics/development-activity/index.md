@@ -25,9 +25,15 @@ features.
 
 ---
 
+## Access
+
+Development Activity metrics are with [free access](/metrics/details/access#free-access).
+
+---
+
 ## Measuring Unit
 
-The development activity metric is measured in number of events.
+Development Activity metrics are measured in number of events.
 
 When developers work they encapsulate their code changes in commits. When a
 repository page [like this](https://github.com/santiment/sanbase2) is opened in

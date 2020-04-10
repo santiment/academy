@@ -10,6 +10,12 @@ that happened on the network for a given asset in an interval.
 
 ---
 
+## Access
+
+Transaction Volume has [restricted access](/metrics/details/access#restricted-access).
+
+---
+
 ## Measuring Unit
 
 Amount of coins/tokens

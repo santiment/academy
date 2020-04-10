@@ -11,7 +11,7 @@ _For a more in-depth technical explanation of `Age Consumed`, please click_
 
 ## Definition
 
-Age consumed shows the amount of tokens changing addresses on a certain date,
+Age Consumed shows the amount of tokens changing addresses on a certain date,
 multiplied by the time since they last moved.
 
 Spikes on the graph signal a large amount of tokens moving after being idle for
@@ -27,6 +27,12 @@ ERC-20 project that lets you rent other people's computing power.
 We can easily spot several significant spikes over time: each could be a large
 early investor selling their tokens, which commonly results in a parallel price
 decline.
+
+---
+
+## Access
+
+The following [special restrictions](/products-and-plans/access-plans/special-restrictions#age-consumed-metrics) apply
 
 ---
 

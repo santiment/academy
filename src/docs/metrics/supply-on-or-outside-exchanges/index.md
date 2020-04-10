@@ -20,23 +20,30 @@ The following metrics are provided:
 
 ---
 
+## Access
+
+Supply On/Outside Exchanges metrics
+have [restricted access](/metrics/details/access#restricted-access).
+
+---
+
 ## Measuring Unit
 
 - Percent of total supply on exchanges is measured in `percentage between 0 and 100`
-- Supply on/outside exchanges is measured in `amount of coins/tokens`
+- Supply On/Outside Exchanges is measured in `amount of coins/tokens`
 
 ---
 
 ## Frequency
 
-Supply on/outside exchange metrics are available at [daily
+Supply On/Outside Exchanges metrics are available at [daily
 intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
 ## Latency
 
-Supply on/outside exchange metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
+Supply On/Outside Exchanges metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 

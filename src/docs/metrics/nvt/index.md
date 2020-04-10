@@ -53,6 +53,12 @@ rather than a day-to-day valuation metric.
 
 ---
 
+## Access
+
+NVT has [restricted access](/metrics/details/access#restricted-access).
+
+---
+
 ## Measuring Unit
 
 Ratio

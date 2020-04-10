@@ -23,6 +23,10 @@ senders and the receivers of the asset are counted.
 
 ![Daily Active Addresses for Bitcoin](bitcoin-daa.png)
 
+## Access
+
+The metric is with [free access](/metrics/details/access#free-access).
+
 ---
 
 ## Measuring Unit

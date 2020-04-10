@@ -1,13 +1,7 @@
 ---
 title: Market Value To Realized Value Metric
 author: Irina Pranovich
-date: 2019-11-04
-# References
-#
-# Source code for metric computation:
-# REF clickhouse-tables/daily_metrics/specs.d/metrics/mvrv_metrics
-# REF clickhouse-tables/daily_metrics/specs.d/metrics/realized_price_metrics
-#
+date: 2020-04-09
 ---
 
 ## Definition
@@ -16,8 +10,8 @@ MVRV shows the average profit/loss of all the coins currently in circulation
 according to the current price.
 
 To understand the MVRV metrics, we have to establish two term. 'MV' as in
-'market value' simply describes the market cap, which is well known when looking
-at crypto assets. The second part is the 'RV' or 'realized value'.
+'Market Value' simply describes the market cap, which is well known when looking
+at crypto assets. The second part is the 'RV' which stands for 'Realized Value'.
 
 If we compare the current **market capitalization (market value or MV)** to the
 current [Realized Value](/metrics/realized-value), we can get an estimate how
@@ -27,7 +21,7 @@ $$
 MVRV = \frac{Market Value}{Realized Value}
 $$
 
-If the MVRV is 2 this means that if all holders sell their coins/tokens at the
+If the MVRV value is 2 this means that if all holders sell their coins/tokens at the
 current price they will generate a x2 profit on average. So in this sense MVRV is
 showing the ratio between the current price and the average price of which every
 coin/token has been acquired. The more this ratio increases, the more people will be
@@ -46,14 +40,19 @@ Another way to deal with lost private keys and graveyard addresses is to compute
 the MVRV ratio only on the subset of tokens that have been active at least once
 in the several years.
 
-The metric depends on:
+---
 
-- daily closing price in usd
-- mean realized price in usd
+## Access
+
+MVRV metrics have [special restrictions](/products-and-plans/access-plans/special-restrictions#realized-value-and-mvrv-metrics).
+
+---
 
 ## Measuring Unit
 
 Ratio
+
+---
 
 ## Frequency
 

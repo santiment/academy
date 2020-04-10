@@ -39,6 +39,12 @@ then the mean dollar invested age is: (10 × 50 + 20 × 50) / (50 × $1 + 50 × 
 
 ---
 
+## Access
+
+Mean Coin Age metrics have [restricted access](/metrics/details/access#restricted-access).
+
+---
+
 ## Measuring Unit
 
 - Coin Age in Days
