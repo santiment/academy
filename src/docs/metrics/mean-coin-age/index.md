@@ -41,7 +41,7 @@ then the mean dollar invested age is: (10 × 50 + 20 × 50) / (50 × $1 + 50 × 
 
 ## Access
 
-Mean Coin Age metrics have [restricted access](/metrics/details/access#restricted-access).
+[Restricted Access](/metrics/details/access#restricted-access)
 
 ---
 
@@ -50,21 +50,27 @@ Mean Coin Age metrics have [restricted access](/metrics/details/access#restricte
 - Coin Age in Days
 - Coin Dollar Age in Days
 
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-The Mean Age metrics are available at [daily
-intervals](/metrics/details/frequency#daily-frequency)
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
 ## Latency
 
-The Mean Age metrics have [on-chain
-latency](/metrics/details/latency#on-chain-latency)
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
 - Mean Coin Age is available for [these
   assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_age%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
@@ -74,7 +80,7 @@ latency](/metrics/details/latency#on-chain-latency)
 
 ## SanAPI
 
-The metrics are available under the `mean_age` and `mean_dollar_invested_age` names.
+Available under the `mean_age` and `mean_dollar_invested_age` names.
 
 ```graphql
 {

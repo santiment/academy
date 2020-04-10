@@ -22,8 +22,7 @@ The following metrics are provided:
 
 ## Access
 
-Supply On/Outside Exchanges metrics
-have [restricted access](/metrics/details/access#restricted-access).
+[Restricted Access](/metrics/details/access#restricted-access).
 
 ---
 
@@ -34,20 +33,25 @@ have [restricted access](/metrics/details/access#restricted-access).
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
-Supply On/Outside Exchanges metrics are available at [daily
-intervals](/metrics/details/frequency#daily-frequency)
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
 ## Latency
 
-Supply On/Outside Exchanges metrics have [on-chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
-## Available assets
+## Available Assets
 
 - Percent of total supply on exchange is available for [these
   assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22percent_of_total_supply_on_exchanges%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
@@ -61,7 +65,7 @@ Supply On/Outside Exchanges metrics have [on-chain latency](/metrics/details/lat
 
 ## SanAPI
 
-The metrics are available under the names:
+Available under the names:
 
 - `percent_of_total_supply_on_exchanges`
 - `supply_on_exchanges`

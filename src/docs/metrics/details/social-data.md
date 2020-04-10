@@ -22,7 +22,7 @@ For almost all of the sources we also have a historical scraper that allows to
 fetch historical text data from the past. We store the data in a NOSQL database
 which allows us to run full-text search queries on top of it very fast.
 
-## Available assets
+## Available Assets
 
 For each of the data sources we have a curated list of accounts/sub-sources from
 where we scrape the data. We collect all the available text documents and don't

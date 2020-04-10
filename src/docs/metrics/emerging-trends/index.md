@@ -110,6 +110,12 @@ be treated as a relative number: the higher it gets - the faster a given word is
 
 ---
 
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
 Emerging Trends are available at [hourly intervals](/metrics/details/frequency#hourly-frequency)

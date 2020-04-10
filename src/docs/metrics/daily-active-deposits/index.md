@@ -55,6 +55,14 @@ The metric is with [restricted access](/metrics/details/access#restricted-access
 
 Non-negative number of addresses
 
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
 ## Frequency
 
 Daily Active Deposits is available at [daily intervals](/metrics/details/frequency#daily-frequency)
@@ -67,7 +75,7 @@ Daily Active Deposits has [on-chain latency](/metrics/details/latency#on-chain-l
 
 ---
 
-## Available assets
+## Available Assets
 
 This metric is computed for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22active_deposits%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
