@@ -7,7 +7,7 @@ date: 2020-04-13
 
 ## Definition
 
-Social Volume is build on top of the [Social Data](/metrics/details/social-data)
+Social Volume is build on top of the [Social Data](/metrics/details/social-data).
 
 The total number of [text documents](/metrics/details/text-document) that
 contain the given search term at least once. Examples of documents are telegram
@@ -78,13 +78,13 @@ Amount of documents that mention the given text pattern.
 
 ## Frequency
 
-[Five-minute intervals](/metrics/details/frequency#five-minute-frequency)
+[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 
 ## Latency
 
-[Social Data latency](/metrics/details/latency#social-data-latency)
+[Social Data Latency](/metrics/details/latency#social-data-latency)
 
 ---
 
@@ -100,13 +100,15 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ## Sanbase
 
-Combined Social Volume from all sources for an asset can be seen on a [project's page](https://tinyurl.com/uqemh89).
+Combined Social Volume from all sources for an asset can be seen on a [project's
+page](https://app.santiment.net/projects/santiment?from=2019-10-12T21%3A00%3A00.000Z&interval=12h&isAnomalyActive=false&isCartesianGridActive=false&isICOPriceActive=true&isLogScale=false&isMultiChartsActive=false&metrics=price_usd,social_volume_total&projectId=101605&slug=santiment&ticker=SAN&timeRange=6m&title=Santiment%20%28SAN%29&to=2020-04-13T21%3A00%3A00.000Z).
 
-Social Volume for arbitrary search terms can be viewed from the [trends page](https://app.santiment.net/labs/trends)
-![trends page](trends-page.png)
+Social Volume for arbitrary search terms can be viewed from the [trends
+page](https://app.santiment.net/labs/trends) ![trends page](trends-page.png)
 
-The combined social volume from all sources is displayed. From the bottom of the page social volume for a specific source can be displayed, too.
-![social volume search term](social-volume-search-term.png)
+The combined social volume from all sources is displayed. From the bottom of the
+page social volume for a specific source can be displayed, too. ![social volume
+search term](social-volume-search-term.png)
 
 ## SanAPI
 

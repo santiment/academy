@@ -1,5 +1,5 @@
 ---
-title: Metrics we offer
+title: Metrics Overview
 author: Santiment Team
 date: 2020-04-09
 ---
@@ -30,7 +30,9 @@ channels, plus custom sentiment measurements analyzing crowd behavior. Includes
 emerging trend words and projects, word clouds to display related words and the
 possibility to enter custom search terms.
 
-- [Social Volume Metrics](/metrics/social-volume)
+- [Social Volume](/metrics/social-volume)
+- [Social Dominance](/metrics/social-dominance)
+- [Community Messages Count](/metrics/community-messages-count)
 - [Sentiment Metrics](/metrics/sentiment-metrics)
 - [Emerging Trends](/metrics/emerging-trends)
 - [Top Social Gainers/Losers](/metrics/top-social-gainers-losers)

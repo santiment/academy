@@ -64,13 +64,13 @@ Number coins/tokens per price range
 
 ## Frequency
 
-[Five-minute intervals](/metrics/details/frequency#five-minute-frequency)
+[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 
 ## Latency
 
-[On-Chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-latency)
 
 ---
 

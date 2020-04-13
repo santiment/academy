@@ -45,7 +45,7 @@ Dollars
 
 ## Latency
 
-[On-Chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-latency)
 
 ---
 

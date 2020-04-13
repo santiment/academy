@@ -34,7 +34,7 @@ The change is measured in absolute social volume difference
 
 ## Latency
 
-[Social Data latency](/metrics/details/latency#social-data-latency)
+[Social Data Latency](/metrics/details/latency#social-data-latency)
 
 ---
 

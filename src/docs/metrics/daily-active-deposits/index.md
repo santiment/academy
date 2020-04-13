@@ -71,7 +71,7 @@ Daily Active Deposits is available at [daily intervals](/metrics/details/frequen
 
 ## Latency
 
-Daily Active Deposits has [on-chain latency](/metrics/details/latency#on-chain-latency)
+Daily Active Deposits has [on-chain Latency](/metrics/details/latency#on-chain-latency)
 
 ---
 
