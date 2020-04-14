@@ -2,6 +2,7 @@
 title: Price Metrics
 author: Ivan
 date: 2020-04-07
+description: Price, Trading Volume and Marketcap data
 ---
 
 ## Definition

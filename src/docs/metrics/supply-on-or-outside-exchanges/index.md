@@ -2,6 +2,8 @@
 title: Supply On/Outside Exchanges
 author: Ivan
 date: 2020-04-07
+description: Amount and percent of the total supply of coins/tokens held by
+exchange and non-exchange wallets
 ---
 
 ## Definition

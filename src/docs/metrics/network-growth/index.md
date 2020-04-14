@@ -1,6 +1,8 @@
 ---
-title: Network Growth metric
+title: Network Growth
 author: Santiment Team
+date: 2020-04-14
+description: Amount of addresses that transferred a given coin/token for the first time
 ---
 
 ## Definition

@@ -1,6 +1,8 @@
 ---
-title: Transaction Volume metric
+title: Transaction Volume
 author: Santiment Team
+date: 2020-04-14
+description: Amount of coin/tokens moved on-chain.
 ---
 
 ## Description
