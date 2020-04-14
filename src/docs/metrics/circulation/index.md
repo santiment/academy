@@ -2,6 +2,7 @@
 title: Circulation
 author: Santiment Team
 date: 2020-04-06
+description: Number of unique coins/tokens being used during a time period
 ---
 
 ## Definition

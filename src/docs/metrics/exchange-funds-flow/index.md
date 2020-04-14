@@ -2,6 +2,7 @@
 title: Exchange Funds Flow
 author: Santiment Team
 date: 2020-04-06
+description: Amount of coins/token going in or out of exchanges
 ---
 
 ## Definition

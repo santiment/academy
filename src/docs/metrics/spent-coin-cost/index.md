@@ -2,6 +2,7 @@
 title: Coin Spent Cost
 author: Ivan
 date: 2020-04-10
+description: Track from what price range are coming the coins/tokens moved on a given day
 ---
 
 ## Definition
@@ -12,8 +13,9 @@ at. The metric does not include:
 - Minting/mining/uncle rewards
 - Transactions of coins/tokens that were acquired on the same day.
 
-  - Example: There is a transaction `A - 10ETH -> B` and a transaction `B -> 10ETH C` - `B` moves the coins on the same day that they were received. This
-    second transaction is not counted.
+  - Example: There is a transaction `A - 10ETH -> B` and a transaction
+    `B -> 10ETH C` - `B` moves the coins on the same day that they were received.
+    This second transaction is not counted.
 
 The number total number of coins/tokens that are counted is equal to the [1-day
 circulation](/metrics/circulation) (**not** the [transaction

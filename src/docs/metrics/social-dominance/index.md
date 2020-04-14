@@ -2,6 +2,7 @@
 title: Social Dominance
 author: Ivan
 date: 2020-04-13
+description: What percent of the total social volume is dedicated to an asset or a search term
 # REF metrics-hub/metricshub/social_dominance.py
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: Top Social Gainers / Losers metric
 author: Santiment Team
+date: 2020-04-14
+description: The projects that have gained/lost most social volume
 ---
 
 ## Definition

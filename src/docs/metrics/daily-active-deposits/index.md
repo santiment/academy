@@ -2,6 +2,7 @@
 title: Daily Active Deposits
 author: Santiment Team
 date: 2020-04-06
+description: Number of unique deposit addresses participating in transactions during one day
 ---
 
 ## Definition
