@@ -2,9 +2,7 @@
 title: Market Value To Realized Value
 author: Irina Pranovich
 date: 2020-04-09
-description: The average profit/loss of all the coins currently
-in circulation according to the current price
-
+description: The average profit/loss of all the coins currently in circulation according to the current price
 ---
 
 ## Definition
