@@ -37,32 +37,30 @@ a centralized exchange like
 your Ethereum wallet.
 
 After you have finished this initial step you can acquire SAN from the
-following exchanges:
-
-#### Bancor
-
-Santiment has an integration with Bancor which allows you to swap SAN
-for ETH or for any other Bancor-supported asset with a _single
-transaction_. To see how to use it please check out [this
-article](/san-token/buy-san-token-using-bancor).
-
-You can also purchase tokens on the [main Bancor site](https://www.bancor.network).
+following exchanges in a _single transaction_.:
 
 #### Kyber
 
 Santiment is available on [Kyber](https://kyber.network/) via
-[Kyber Swap](https://kyberswap.com/swap/eth-san). With Kyber Swap you can also get
-SAN to your wallet with a single transaction
+[Kyber Swap](https://kyberswap.com/swap/eth-san). 
 
 ![Kyberswap](kyber.png)
 
 #### Uniswap
 
-The SAN token is also available on
-[Uniswap](https://uniswap.exchange/swap). Like Bancor and Kyber you
-can swap tokens for ETH with a single transaction
+The SAN token is also available on 
+[Uniswap](https://uniswap.exchange/swap). 
 
 ![Uniswap](uniswap.png)
+
+#### Bancor
+
+Santiment has an integration with Bancor which allows you to swap SAN
+for ETH or for any other Bancor-supported asset, similar to Kyber and Uniswap.
+To see how to use it please check out [this
+article](/san-token/buy-san-token-using-bancor).
+
+You can also purchase tokens on the [main Bancor site](https://www.bancor.network).
 
 #### Decentralized exchange aggregators
 
