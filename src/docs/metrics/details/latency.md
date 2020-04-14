@@ -32,11 +32,12 @@ are:
 
 Each one of the social data source:
 
-- telegram
-- reddit
-- discord
-- professional traders chats
-- bitcointalk -twitter
+- Telegram
+- Reddit
+- Discord
+- Professional traders chats
+- Bitcointalk
+- Twitter
 
 is being processed separately and usually doesn't take longer than 1 minute.
 

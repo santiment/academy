@@ -66,7 +66,7 @@ then the mean dollar invested age is: (10 × 50 + 20 × 50) / (50 × $1 + 50 × 
 
 ## Latency
 
-[On-Chain latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-latency)
 
 ---
 

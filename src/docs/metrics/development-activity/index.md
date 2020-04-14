@@ -98,7 +98,7 @@ by Valentin, our CTO.
 
 ## Frequency
 
-[Five-minute intervals](/metrics/details/frequency#five-minute-frequency)
+[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 

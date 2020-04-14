@@ -1,197 +1,166 @@
 ---
-title: Social volume metrics
-author: Ivan Klimuk
-date: 2019-09-19
+title: Social Volume
+author: Ivan
+date: 2020-04-13
 # REF metrics-hub/metricshub/social_volume.py
-# REF metrics-hub/metricshub/unique_social_volume.py
-# REF metrics-hub/metricshub/spam_index.py
-# REF metrics-hub/metricshub/social_dominance.py
 ---
 
-## 1. Social Volume
+## Definition
 
-### Definition
+Social Volume is build on top of the [Social Data](/metrics/details/social-data).
 
-Social Volume is build on top of the [Social Data](/metrics/details/social-data)
+The total number of [text documents](/metrics/details/text-document) that
+contain the given search term at least once. Examples of documents are telegram
+messages and reddit posts. If a single short telegram message includes the word
+`crypto` more than once, this message will increase the social volume of the
+word `crypto` by 1. If a long reddit post contains the word `crypto` 10 times,
+this again will increase the social volume of the word `crypto` by 1.
 
-The total number of text documents that contain the given search term at least once. The search term can be one particular word (`bitcoin`), an exact phrase (`"when moon"`) or a combination of words, that are combined using binary set operations:
+Social Volume can be computed for an [asset](/glossary#asset) or for arbitrary
+search terms. When an asset is used, a special search term is constructed. For
+example querying the social volume for `santiment` will result in a search term
+similar to:
 
-- `OR` - the union of two search results.
+> (SAN OR santiment OR santoken OR santimentnet OR sancoin OR sansan OR sancoin)
+> AND NOT ((san AND francisco) OR (san AND fran) OR (san AND diego) OR (san AND
+> marino) OR (san AND jose))
 
-- `AND` - the intersection of two search results.
+which includes documents containg `santiment` or `san` but excludes documents
+that contain common phrases containing `san` like `San Francisco`.
 
-- `NOT` - the complement of a set with search results for a given word.
+The arbitrary search term can be:
 
-E.g. this could be a valid complex search query: `(btc OR bitcoin) AND moon NOT lambo` - it will result in all the documents that contain either the words `btc` and `moon` or `bitcoin` and `moon` in one document, excluding any documents that contain the word `lambo`.
+- One particular word like `bitcoin`, `crypto` or `blockchain`.
+- An exact phrase (surrounded by double quotation marks) like `"when moon"`,
+  `"buy high sell low"` or `"btc rekt"`.
+- [Lucene Query](http://www.lucenetutorial.com/lucene-query-syntax.html) - a
+  search term that allows for logical operators. Examples:
 
-### Measuring Unit
+  - `OR` - The union of two search results. `btc OR bitcoin` returns the
+    documents that contain at least one of the words `btc` and `bitcoin`
+  - `AND` - The intersection of two search results. `btc AND moon` returns the
+    documents that contain both of the words `btc` and `moon` at the same time.
+  - `NOT` - Filter out documents that contain a given search term. `btc NOT lambo`
+    returns the documents that contain the word `btc` and does not
+    contain the word `lambo`
+  - `?` - A wildcard search. `?` in the search term means that it can match any
+    character. For example the query `btc AND 1?k` will be the combined result
+    of `btc AND 10k`, `btc AND 11k`, ..., `btc AND 19k` (but also nonsense like
+    `btc AND 1sk`, `btc AND 1Ak`, etc. will be matched)
+  - Many other operators can be used, documentation for which can be found in
+    the lucene query syntax documentation.
 
-Amount of documents (messages, posts, comments, etc).
+The operators can be combined and higher precedence can be expressed by using
+parentheses `(btc OR bitcoin) AND moon NOT lambo` - it will result in all the
+documents that contain either the words `btc` and `moon` or the words `bitcoin`
+and `moon` in one document, excluding any documents that contain the word
+`lambo`.
 
-### Frequency
+---
 
-We store each of the [social data](/metrics/details/social-data/) documents with its absolute timestamp. I.e. it is possible to aggregate the data with **any desired interval** [on request](/products-and-plans/access-plans/). Currently the time intervals we use are the following:
+## Access
 
-- In [Sanbase Graphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
+[Restricted Access](/metrics/details/access#restricted-access).
 
-### Latency
+---
 
-The latency of **Social Volume** depends on the latency of the documents from each [data source](/metrics/details/social-data/). Real-time social data means that the volume calculated on top of this data is also real-time (max. 1-2 seconds).
+## Measuring Unit
 
-### Available Assets
+Amount of documents that mention the given text pattern.
 
-We do not separate or filter the [social data](/metrics/details/social-data/) being collected by assets. I.e. we can have the social volume for any asset.
+---
 
-By default we use an auto-generated search query to track the volume of mentions for each project, e.g.: `btc OR bitcoin NOT cash NOT gold NOT abc ...etc`. These queries can be manually modified by our admins to exclude redundant results or include some additional word to the query if necessary.
+## Data Type
 
-### How to Access
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
 
-#### [Sanbase](https://app.santiment.net)
+---
 
-The metric is available on Sanbase:
+## Frequency
 
-- on our charts **for any selected asset**:
+[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
 
-  <iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-06-02T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialVolume&scale=auto&slug=santiment&title=Santiment%20%28SAN%29&to=2019-12-03T21%3A00%3A00.000Z&viewOnly=true"></iframe>
+---
 
-- in the [Labs](https://app.santiment.net/labs/trends) section for **any desired search query**.
+## Latency
 
-#### [Sanbase Graphs](https://graphs.santiment.net/social)
+[Social Data Latency](/metrics/details/latency#social-data-latency)
 
-The metric is available **for any selected asset**.
+---
 
-#### [SanAPI](https://neuro.santiment.net/)
+## Available Assets
 
-The metric is available on SanAPI.
+Available for [these
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22social_volume_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-#### [Sansheets](https://sheets.santiment.net/)
+> Note: `social_volume_total` metric and all metrics for a specific source are
+> available for the same set of assets.
 
-The metric is available on Sansheets.
+---
 
-### Availability
+## Sanbase
 
-|                | Free               | Basic              | Pro                | Premium            | Enterprise         |
-| -------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| Sanbase        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sanbase Graphs | :x:                | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI         | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets      | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+Combined Social Volume from all sources for an asset can be seen on a [project's
+page](https://app.santiment.net/projects/santiment?from=2019-10-12T21%3A00%3A00.000Z&interval=12h&isAnomalyActive=false&isCartesianGridActive=false&isICOPriceActive=true&isLogScale=false&isMultiChartsActive=false&metrics=price_usd,social_volume_total&projectId=101605&slug=santiment&ticker=SAN&timeRange=6m&title=Santiment%20%28SAN%29&to=2020-04-13T21%3A00%3A00.000Z).
 
-## 2. Unique Social Volume
+Social Volume for arbitrary search terms can be viewed from the [trends
+page](https://app.santiment.net/labs/trends) ![trends page](trends-page.png)
 
-### Definition
-
-The **Unique Social Volume** is the same type of aggregation on top of the social data as the **Social Volume**, but it takes into account only the unique text documents for each interval. I.e. completely duplicated messages will be excluded from the calculations, which results in a slightly lower and to some degree cleaner way to measure the volume of mentions for a given asset or word.
-
-### Measuring Unit
-
-Amount of distinct documents (messages, posts, comments, etc).
-
-### Frequency
-
-Same as [**Social Volume**](#social-volume).
-
-### Latency
-
-Same as [**Social Volume**](#social-volume).
-
-### Available Assets
-
-Same as [**Social Volume**](#social-volume).
-
-### How to Access
-
-#### [Sanbase Graphs](https://graphs.santiment.net/social)
-
-The metric is available **for any selected asset**.
-
-### Availability
-
-|                | Free | Basic | Pro                | Premium            | Enterprise         |
-| -------------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
-| Sanbase        | :x:  | :x:   | :x:                | :x:                | :x:                |
-| Sanbase Graphs | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI         | :x:  | :x:   | :x:                | :x:                | :x:                |
-| Sansheets      | :x:  | :x:   | :x:                | :x:                | :x:                |
-
-## 3. Spam Index
-
-### Definition
-
-The **Spam Index** is the ratio between the **Social Volume** and the **Unique Social Volume**. If the social data didn't contain any duplicated texts, the spam index would be always equal to 1. In fact it's not and the number indicates how many of the documents in the social volume are duplicates.
-
-### Measuring Unit
-
-Relative number, greater or equal than 1.
-
-### Frequency
-
-Same as [**Social Volume**](#social-volume).
-
-### Latency
-
-Same as [**Social Volume**](#social-volume).
-
-### Available Assets
-
-Same as [**Social Volume**](#social-volume).
-
-### How to Access
-
-#### [Sanbase Graphs](https://graphs.santiment.net/social)
-
-The metric is available **for any selected asset**.
-
-### Availability
-
-|                | Free | Basic | Pro                | Premium            | Enterprise         |
-| -------------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
-| Sanbase        | :x:  | :x:   | :x:                | :x:                | :x:                |
-| Sanbase Graphs | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI         | :x:  | :x:   | :x:                | :x:                | :x:                |
-| Sansheets      | :x:  | :x:   | :x:                | :x:                | :x:                |
-
-## 4. Relative Social Dominance
-
-### Definition
-
-The **Relative Social Dominance** (or Social Dominance) for a given asset is the ratio of the **Social Volume** of this asset in comparison to the sum of social volumes for a set of selected assets (by default it's top 50 by market capitalization). E.g. when on a given day the **Social Dominance** of `Ethereum` reaches 23%, this can be explained as _"From all the messages that mentioned any of the top 50 assets, 23% mentioned Ethereum"_.
-
-### Measuring Unit
-
-Relative number from 0 to 1 (or %, from 0 to 100).
-
-### Frequency
-
-Same as [**Social Volume**](#social-volume).
-
-### Latency
-
-Same as [**Social Volume**](#social-volume).
-
-### Available Assets
-
-Same as [**Social Volume**](#social-volume).
-
-By default the **Social Dominance** for a given asset is calculated against the top 50 assets by market capitalization.
-
-### How to Access
-
-#### [Sanbase](https://app.santiment.net)
-
-The metric is available on Sanbase on our charts **for any selected asset**:
-
-<iframe frameborder="0" height="340" src="https://app.santiment.net/chart?from=2019-06-02T21%3A00%3A00.000Z&interval=12h&isShowAnomalies=true&metrics=historyPrice,socialDominance&scale=auto&slug=santiment&title=Santiment%20%28SAN%29&to=2019-12-03T21%3A00%3A00.000Z&viewOnly=true"></iframe>
-
-#### [Sanbase Graphs](https://graphs.santiment.net/social)
-
-The metric is available **for any selected asset**.
-
-### Availability
-
-|                | Free               | Basic              | Pro                | Premium            | Enterprise         |
-| -------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| Sanbase        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sanbase Graphs | :x:                | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI         | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets      | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+The combined social volume from all sources is displayed. From the bottom of the
+page social volume for a specific source can be displayed, too. ![social volume
+search term](social-volume-search-term.png)
+
+## SanAPI
+
+Available under the `social_volume_total` and `social_volume_total_<source>`
+names, where the available sources are:
+
+- telegram
+- reddit
+- discord
+- professional_traders_chat
+- total (combines all sources)
+
+### Social Volume for an asset
+
+```graphql
+{
+  getMetric(metric: "social_volume_total") {
+    timeseriesData(
+      selector: { slug: "santiment" }
+      from: "2020-01-01T00:00:00Z"
+      to: "2020-01-07T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
+**[Run in
+Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22social_volume_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%20slug%3A%20%22santiment%22%20%7D%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
+
+---
+
+### Social Volume for arbitrary search term
+
+```graphql
+{
+  getMetric(metric: "social_volume_telegram") {
+    timeseriesData(
+      selector: { text: "btc AND 1?k" }
+      from: "2020-01-01T00:00:00Z"
+      to: "2020-01-07T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
+**[Run in
+Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22social_volume_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%20text%3A%20%22btc%20AND%201%3Fk%22%20%7D%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**

@@ -36,13 +36,13 @@ Amount in dollars/bitcoins
 
 ## Frequency
 
-[Five-minute intervals](/metrics/details/frequency#five-minute-frequency)
+[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 
 ## Latency
 
-[Price latency](/metrics/details/latency#price-latency)
+[Price Latency](/metrics/details/latency#price-latency)
 
 ---
 
