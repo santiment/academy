@@ -93,6 +93,7 @@ export const REFERENCES = [
     articles: [
       "Age Consumed",
       "Circulation",
+      "Community Messages Count",
       "Daily Active Addresses",
       "Daily Active Deposits",
       "Development Activity",

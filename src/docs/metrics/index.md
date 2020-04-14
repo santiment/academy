@@ -30,11 +30,12 @@ channels, plus custom sentiment measurements analyzing crowd behavior. Includes
 emerging trend words and projects, word clouds to display related words and the
 possibility to enter custom search terms.
 
+- [Community Messages Count](/metrics/community-messages-count)
+- [Emerging Trends](/metrics/emerging-trends)
 - [Social Volume](/metrics/social-volume)
 - [Social Dominance](/metrics/social-dominance)
 - [Community Messages Count](/metrics/community-messages-count)
 - [Sentiment Metrics](/metrics/sentiment-metrics)
-- [Emerging Trends](/metrics/emerging-trends)
 - [Top Social Gainers/Losers](/metrics/top-social-gainers-losers)
 
 ## Development
