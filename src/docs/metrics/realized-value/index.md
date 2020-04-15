@@ -2,8 +2,7 @@
 title: Realized Value
 author: Ivan
 date: 2020-04-09
-description: Marketcap alternative where every coin/token is assigned its
-acquisition price instead of current price
+description: Marketcap alternative where every coin/token is assigned its acquisition price instead of current price
 ---
 
 ## Definition
