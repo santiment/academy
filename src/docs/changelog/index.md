@@ -138,7 +138,7 @@ We update this page every two weeks.
   ![signals-on-chart](signals-on-chart.png)
 
 * **`Sanbase`**: Since today on-chain data is available on the charts for EOS
-  (discontinued in May 2020) Ripple and Binance Chain. Binance Chain is
+  (discontinued in May 2020), Ripple and Binance Chain. Binance Chain is
   available under the `Binance Native` name and `binance-coin-native` slug. The
   old `Binance/binance-coin` is still pointing to the ERC20 contract. Not all
   the available data is currently displayed, the frontend team is working on
