@@ -26,13 +26,13 @@ histogram data, aggregated timeseries data.
 
 Supported blockchains:
 
-| Bitcoin            | Ethereum           | ERC-20             | Ripple             | Binance Chain      |
-| ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-
-| EOS                | EOS tokens         | Bitcoin Cash       | Litecoin           |
+| Bitcoin            | Ethereum           | ERC-20             | Ripple             |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+
+| Binance Chain      | Bitcoin Cash       | Litecoin           |
+| ------------------ | ------------------ | ------------------ |
+| :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ## All available metrics
 
@@ -302,9 +302,7 @@ Explanation:
 
 For all Santiment tokens moved between January 6th, 2020 and January 7th, 2020,
 fetch when these tokens last moved. The result is two lists - of labels and of
-values. For every label there is a corresponding value. The following label `The
-amount of tokens last moved between 2018-11-30 00:00 Etc/UTC and 2018-12-01
-00:00 Etc/UTC` has a corresponding value of `18645`, meaning that 18.6k of the
+values. For every label there is a corresponding value. The following label `The amount of tokens last moved between 2018-11-30 00:00 Etc/UTC and 2018-12-01 00:00 Etc/UTC` has a corresponding value of `18645`, meaning that 18.6k of the
 tokens moved in the specified 1 day interval moved for the last time between
 November 30th, 2018 and December 1st, 2018.
 
