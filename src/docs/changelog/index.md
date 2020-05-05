@@ -17,7 +17,6 @@ We update this page every two weeks.
 
 ![top holders](topHolders.png)
 
-
 ## March 2020
 
 - **`Sanbase`**: We add Twitter % changes 24h, 7d
@@ -46,7 +45,7 @@ We update this page every two weeks.
 
 ![timebounds](timebounds.png)
 
-- **`Sansheets`**: `=SAN_MEAN_DOLLAR_INVESTED_AGE`  function has been published
+- **`Sansheets`**: `=SAN_MEAN_DOLLAR_INVESTED_AGE` function has been published
 
 - **`Sanbase`**: New look of Santiment Studio. Our chart tool is much ease to use now.
   ![charts](charts.png)
@@ -138,4 +137,9 @@ We update this page every two weeks.
 - **`Sanbase`**: New beta feature. You can setup simple pricing signal on the chart tool.
   ![signals-on-chart](signals-on-chart.png)
 
-* **`Sanbase`**: Since today on-chain data is available on the charts for EOS, Ripple and Binance Chain. Binance Chain is available under the `Binance Native` name and `binance-coin-native` slug. The old `Binance/binance-coin` is still pointing to the ERC20 contract. Not all the available data is currently displayed, the frontend team is working on that.
+* **`Sanbase`**: Since today on-chain data is available on the charts for EOS
+  (discontinued in May 2020) Ripple and Binance Chain. Binance Chain is
+  available under the `Binance Native` name and `binance-coin-native` slug. The
+  old `Binance/binance-coin` is still pointing to the ERC20 contract. Not all
+  the available data is currently displayed, the frontend team is working on
+  that.
