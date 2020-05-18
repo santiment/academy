@@ -1,4 +1,4 @@
----
+﻿---
 title: Getting started for traders
 description: Explanations, tutorials and use cases for Santiment metrics and tools. Learn how to use our platform to better understand market behavior, network activity and stakeholder trends.
 author: Dino Ibisbegovic
@@ -64,7 +64,7 @@ Like the above, many of these are exclusive to Santiment and are a result of rig
 
 
 
-In short, the MVRV Long/Short Divergence calculates the difference in the MVRV ratio of longtime holders and the MVRV ratio of ‘new money’ to identify potential deviations. You can read more on the exact methodology here.
+In short, the MVRV Long/Short Divergence calculates the difference in the MVRV ratio of longtime holders and the MVRV ratio of ‘new money’ to identify potential deviations. You can read more on the exact methodology [here](https://insights.santiment.net/read/btc's-mvrv-long%252Fshort-difference-waves-a-bullish-flag-5620).
 
 
 
