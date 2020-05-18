@@ -1,4 +1,4 @@
----
+﻿---
 title: Sanbase PRO features
 desctiption: A rundown of everything you have access to with Sanbase Pro
 author: Santiment Team
@@ -16,6 +16,21 @@ Here are a few links of examples on how to use our metrics:
 - [6 different ways](https://insights.santiment.net/read/6-ways-you-could-have-caught-ren%E2%80%99s-summer-tops-643) to use Sanbase to spot forming tops
 - [Using Token Age Consumed](https://insights.santiment.net/read/btc-%22coin-days-destroyed%22-spiked.-volatility-is-coming.-672) to predict volatility cycles
 - [Identifying trend reversals](https://insights.santiment.net/read/chainlink-hits-ath-following-coinbase-listing---perhaps-it's-time-to-chill-541) with a combination of on-chain and social indicators
+
+## Exclusive market insights
+
+Sanbase Pro grants you access to special market reports and daily analysis produced by the Santiment team. Pro Insights include:
+
+- Actionable market calls based on our in-house signals and indicators
+
+- Daily briefs on the behavior of whales, miners, traders & other market stakeholders
+
+- Timely analysis of short-term market trends and top coins to watch
+
+Each Santiment Insight doubles as a crash course on exactly how to use on-chain, social and development data to de-blur the crypto markets and its biggest driving forces. 
+
+Learn it today, apply it tomorrow.
+
 
 ## Full access to Sansheets
 
