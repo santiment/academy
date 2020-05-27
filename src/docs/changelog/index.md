@@ -7,7 +7,46 @@ author: Santiment Team
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks.
 
+## May 2020
+
+- **`Sanbase`**: You can setup manually amount of top holders for next metrics
+
+![top-holders](top-holders.png)
+
+- **`Sanbase`**: Add categories for Quick Search
+
+![search](search-categories.png)
+
+- **`Sanbase`**: All projects now have Social Volume metric available.
+
+- **`Sanbase`**: Our chart has 2 Axis support now.
+
+![search](axis.png)
+
+- **`Sanbase`**: Social tool has better suggestions. And some small changes for better UX.
+
+![search](social-suggestions.png)
+
+
 ## April 2020
+
+- **`Sanbase`**: Social tool has a new feature. "Comparing". You can compare any topics and assets by social volume and social dominance.
+
+![search](social-compare.png)
+
+- **`Sanbase`**: You can save your ideas with new feature "templates" and manage them in profile
+
+![search](templates.png)
+![search](templates-profile.png)
+
+
+- **`Sanbase`**: We have a new flow for selecting a datetime interval
+
+![search](calendar.png)
+
+- **`Sanbase`**: You can add an alert for any "text" topic in our social tool.
+
+![search](socsalerts.png)
 
 - **`Sanbase`**: We add very specific metric for Ethereum. Say welcome to Miners Balance
 
