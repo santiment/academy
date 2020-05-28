@@ -32,5 +32,3 @@ const NoteRenderer = ({ children }) => {
 }
 
 export default NoteRenderer
-
-// .map(node => node.replace(hasSpecialType, ''))
