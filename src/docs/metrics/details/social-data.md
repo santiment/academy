@@ -81,8 +81,7 @@ max.)
 **History**: The historical data starts at `2016-01-01`.
 
 **Availability**: Data is currently only included in parts of Sanbase
-([https://app.santiment.net/labs/trends/explore/bullrun](https://app.santiment.net/labs/trends/explore/bullrun))
-and Sandata, as well as our experimental platform
+([https://app.santiment.net/labs/trends/explore/bullrun](https://app.santiment.net/labs/trends/explore/bullrun)), as well as our experimental platform
 [https://graphs.santiment.net/social](https://graphs.santiment.net/social).
 
 5. **Discord**

@@ -10,7 +10,7 @@ Whether you are a data scientist, crypto hobbyist, or simply a trader and invest
 
 Through existing custom templates that our team and Sanfam have already created, or through your own creations, you can investigate network activity, discover market patterns, and analyze stakeholder behavior with our clean, reliable data streams for hundreds of digital assets.
 
-Whereas our Sanbase and Sandata platforms are mainly used to provide any cryptocurrency data you may want to access at the tip of your fingertips, Sansheets allows you to make use of this data and actually form public or private strategies to backtest with the full power of Google Sheets, and use them for your own trading any way you'd like.
+Whereas our Sanbase platform are mainly used to provide any cryptocurrency data you may want to access at the tip of your fingertips, Sansheets allows you to make use of this data and actually form public or private strategies to backtest with the full power of Google Sheets, and use them for your own trading any way you'd like.
 
 One of the best parts of Sansheets' integration with Google Sheets is that templates can be setup to auto-update data without any need to refresh or constantly re-input end dates for the model to pull data for. Simply end your date range with "TODAY()" and you'll receive data directly into your model as soon as it becomes available on Santiment.
 

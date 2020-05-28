@@ -1,7 +1,7 @@
 ---
 title: Access Plans
 author: Ivan
-date: 2020-04-08
+date: 2020-05-28
 # REF sanbase2/lib/sanbase/billing/plan
 # REF sanbase2/lib/sanbase/clickhouse/metric/helper.ex
 ---
@@ -24,11 +24,3 @@ SanAPI plans access the [API](/sanapi)
 Purchasing a plan is done from the [SanAPI pricing page](https://neuro.santiment.net/#pricing)
 
 [Detailed description of plans](/products-and-plans/access-plans/sanapi)
-
-## Sandata
-
-Sandata plans give access to [Sandata](/sandata)
-
-Purchasing a plan is done by submitting a custom request from the [Sandata page](https://santiment.net/sandata/)
-
-[Detailed description of plans](/products-and-plans/access-plans/sandata)

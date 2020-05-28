@@ -17,17 +17,6 @@ features with a simple email login.
 
 ![](sanbase.png)
 
-
-## Sandata
-
-Sandata (formerly "Sangraphs") is our beta test area, where
-we have experimental features and work out new datafeeds before
-introducing them to Sanbase. This product is for more advanced users.
-
-<https://data.santiment.net>
-
-![](sandata.png)
-
 ## SanAPI
 
 SanAPI is the GraphQL API which powers Sanbase. Together with the API

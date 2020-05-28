@@ -14,7 +14,6 @@ There are a few different ways to fetch and analyze data data:
 
 - [Get data from the GraphQL API](#graphql-api)
 - [Download CSV from Sanbase](#download-csv-from-sanbase)
-- [Download CSV from Sandata](#download-csv-from-sandata)
 - [Download CSV from Sangraphs](#download-csv-from-sangraphs)
 - [Analyzing Santiment Data](#analyzing-santiment-data)
 
@@ -33,12 +32,6 @@ The API can be consumed in a few different ways:
   programming language. There are examples in R, Ruby, Javascript and Elixir
 - Use the `sanpy` Python library that wraps the GraphQL API. It is easy to use
   and hides all GraphQL-related details.
-
-## Download CSV from Sandata
-
-[Sandata](/sandata) contains metrics that are both available and not available
-in the API. All data from Sandata can be exported as a CSV file.
-![sandata-csv-export](sandata-csv-export.png)
 
 ## Download CSV from Sanbase
 
