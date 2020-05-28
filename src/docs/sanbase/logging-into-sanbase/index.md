@@ -3,9 +3,10 @@ title: Logging into Sanbase
 author: Santiment Team
 ---
 
-*Please note: There are two ways to log into Sanbase, by*
-[*MetaMask*](https://metamask.io/) *and by email, but both can (and
-should be) connected to the same account for ease of use.*
+> **ORANGE_TYPE**
+> There are two ways to log into Sanbase, by
+> [**MetaMask**](https://metamask.io/) and by **email**, but both can (and
+> should be) connected to the same account for ease of use.
 
 ## First Login using MetaMask
 
@@ -33,7 +34,6 @@ the upper right corner of the screen shows little message indicator:
 
 Clicking the MetaMask icon will bring the missing window to the front.
 
-
 As soon as MetaMask and Sanbase are connected, you should see the
 following screen:
 
@@ -46,7 +46,6 @@ Click `Sign in with Metamask`. Another prompt should appear:
 Click `SIGN` to securely sign a message with your private key, hereby
 proving that you are the owner of the connected account. You are now
 logged into Sanbase.
-
 
 #### Adding your email
 

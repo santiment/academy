@@ -48,12 +48,20 @@
     }
   }
 
-  blockquote {
-    background: var(--athens);
+  .blockquote {
     padding: 8px 18px;
     border-radius: 8px;
     border: 1px solid var(--porcelain);
     margin: 20px 0;
+    border-left: 3px solid var(--jungle-green);
+
+    &__warning {
+      border-left: 3px solid var(--texas-rose);
+    }
+
+    &__error {
+      border-left: 3px solid var(--persimmon);
+    }
   }
 
 
