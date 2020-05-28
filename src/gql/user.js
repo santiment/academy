@@ -25,18 +25,6 @@ const userDataFragment = gql`
   }
 `
 
-export const USER_PAYMENTS = gql`
-  query {
-    payments {
-      amount
-      createdAt
-      description
-      receiptUrl
-      status
-    }
-  }
-`
-
 export const CURRENT_USER_QUERY = gql`
   query {
     currentUser {
@@ -46,30 +34,6 @@ export const CURRENT_USER_QUERY = gql`
   ${userDataFragment}
 `
 
-export const GENERATE_APIKEY_MUTATION = gql`
-  mutation {
-    apikeysMutation: generateApikey {
-      apikeys
-    }
-  }
-`
-
-export const REVOKE_APIKEY_MUTATION = gql`
-  mutation revokeApikey($apikey: String!) {
-    apikeysMutation: revokeApikey(apikey: $apikey) {
-      apikeys
-    }
-  }
-`
-
-export const GDPR_MUTATION = gql`
-  mutation updateTermsAndConditions($privacyPolicyAccepted: Boolean!) {
-    updateTermsAndConditions(privacyPolicyAccepted: $privacyPolicyAccepted) {
-      id
-      privacyPolicyAccepted
-    }
-  }
-`
 
 export const VERIFY_EMAIL_MUTATION = gql`
   mutation emailLoginVerify($email: String!, $token: String!) {
@@ -85,8 +49,11 @@ export const VERIFY_EMAIL_MUTATION = gql`
 `
 
 export const EMAIL_LOGIN_MUTATION = gql`
-  mutation($email: String!, $consent: String!) {
-    emailLogin(email: $email, consent: $consent) {
+  mutation(
+      $email: String!
+      $subscribeToWeeklyNewsletter: Boolean = false
+  ) {
+    emailLogin(email: $email, subscribeToWeeklyNewsletter: $subscribeToWeeklyNewsletter) {
       success
     }
   }

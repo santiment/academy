@@ -1,7 +1,97 @@
 @import '~@santiment-network/ui/mixins.scss';
 
 .footer {
-  margin-top: 50px;
+  width: 100%;
+  padding: 64px 24px 50px;
+  background-color: var(--athens);
+  margin: 60px 0 0;
+
+  @include responsive('tablet', 'phone', 'phone-xs') {
+    padding: 56px 24px 46px;
+  }
+
+  &__mini {
+    padding: 0 68px 24px 55px;
+  }
+}
+
+.content {
+  max-width: 1140px;
+  margin: 0 auto;
+
+  @include responsive('phone-xs') {
+    width: 100%;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--porcelain);
+
+  @include responsive('tablet') {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  @include responsive('phone', 'phone-xs') {
+    flex-direction: column;
+  }
+}
+
+.logo {
+  width: 98px;
+
+  @include responsive('phone-xs') {
+    width: 144px;
+  }
+}
+
+.column__last {
+  min-width: 370px;
+
+  @include responsive('phone-xs') {
+    min-width: auto;
+  }
+
+  @include responsive('phone') {
+    margin-bottom: 20px;
+  }
+
+  @include responsive('tablet') {
+    min-width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+  }
+}
+
+.subscribe {
+  min-width: 370px;
+  max-width: 370px;
+
+  @include responsive('phone-xs') {
+    min-width: auto;
+  }
+
+  @include responsive('tablet') {
+    margin-right: 118px;
+  }
+}
+
+.desc {
+  @include text('body-3');
+  color: var(--waterloo);
+  max-width: 124px;
+  margin: 14px 60px 40px 0;
+
+  @include responsive('laptop') {
+    margin-right: 24px;
+  }
+
+  @include responsive('phone', 'phone-xs') {
+    margin-right: 0;
+    max-width: 190px;
+  }
 }
 
 .categories {
@@ -9,54 +99,95 @@
   justify-content: space-between;
   margin-bottom: 40px;
   flex-wrap: wrap;
+
+  @include responsive('phone-xs') {
+    display: none;
+  }
+}
+
+.categories__mobile {
+  display: none;
+
+  @include responsive('phone-xs') {
+    display: flex;
+    flex-direction: column;
+    max-height: 250px;
+  }
 }
 
 .category {
   display: flex;
   flex-direction: column;
+  margin-right: 70px;
 
-  @include responsive('phone', 'phone-xs') {
-    width: 50%;
-    text-align: center;
+  @include responsive('laptop') {
+    width: 116px;
+    margin-right: 30px;
   }
 
-  &__title {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    margin-bottom: 16px;
+  @include responsive('desktop') {
+    width: 116px;
+  }
+
+  &:last-child {
+    margin-right: 10px;
   }
 
   &__item {
     margin-bottom: 14px;
+    color: var(--waterloo) !important;
+
+    &:hover {
+      color: var(--jungle-green-hover) !important;
+    }
+
+    @include responsive('phone-xs') {
+      width: 50%;
+      display: block;
+      text-align: left;
+    }
   }
 }
 
 .text {
-  font-size: 14px;
-  color: var(--waterloo);
-}
-
-.bottomWrapper {
-  padding: 28px 0;
-  border-top: 1px solid var(--porcelain);
+  @include text('body-3');
+  color: var(--casper);
 }
 
 .bottom {
+  padding: 28px 0 0;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
-
-  @include responsive('phone', 'phone-xs') {
+  @include responsive('phone-xs') {
     text-align: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    border: none;
+  }
+
+  @include responsive('tablet', 'phone') {
+    flex-direction: row-reverse;
   }
 }
 
 .rights {
   color: var(--casper);
-  @include responsive('phone', 'phone-xs') {
-    margin-top: 20px;
+  @include responsive('phone-xs') {
+    margin-top: 16px;
+  }
+
+  @include responsive('tablet', 'phone') {
+    display: none;
+  }
+
+  &__additional {
+    display: none;
+    @include responsive('tablet', 'phone') {
+      display: block;
+      text-align: right;
+      margin-top: 4px;
+    }
   }
 }
 
@@ -68,25 +199,128 @@
   }
 }
 
-.planet {
-  margin: 0 6px -3px 0;
+.heading {
+  @include text('body-3', 'm');
+  color: var(--waterloo);
+  margin-bottom: 12px;
+
+  @include responsive('phone-xs') {
+    margin-bottom: 16px;
+    @include text('body-2', 'm');
+    text-align: left;
+    margin-right: auto;
+  }
 }
 
-.minified {
-  max-width: 590px;
-  margin: 0 55px;
+.social {
+  display: flex;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 
-  @include responsive('phone', 'phone-xs', 'tablet') {
-    margin: 0;
-    max-width: 100%;
-  }
-
-  & .bottom {
-    justify-content: center;
+  @include responsive('phone-xs') {
+    width: 100%;
     align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--porcelain);
+    margin-bottom: 40px;
   }
 
-  & .rights {
-    margin-left: 32px;
+  &__img {
+    fill: var(--rhino);
   }
+
+  &__heading {
+    display: none;
+
+    @include responsive('phone-xs') {
+      display: block;
+    }
+  }
+
+  &__link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+
+    @include responsive('phone-xs') {
+      border: 1px solid var(--porcelain);
+      border-radius: 4px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      .twitter {
+        fill: #1da1f2;
+      }
+
+      .telegram {
+        fill: #0088cc;
+      }
+
+      .discord {
+        fill: #7289da;
+      }
+
+      .youtube {
+        fill: #ff0000;
+      }
+
+      .github {
+        fill: #171515;
+      }
+    }
+  }
+}
+
+.form {
+  margin-bottom: 24px;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  display: flex;
+  position: relative;
+
+  @include responsive('phone-xs') {
+    margin-bottom: 40px;
+  }
+
+  &:hover,
+  &:focus {
+    .input {
+      border: 1px solid var(--jungle-green) !important;
+    }
+  }
+}
+
+.input {
+  background: transparent !important;
+  border: 1px solid var(--porcelain) !important;
+  color: var(--rhino);
+  outline: none;
+  height: 40px;
+  padding-right: 138px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid var(--jungle-green) !important;
+  }
+}
+
+.btn {
+  height: 32px !important;
+  padding: 6px 16px !important;
+  margin: 0;
+  width: auto;
+  position: absolute !important;
+  right: 4px;
+  top: 4px;
+  line-height: 20px !important;
+  font-size: 14px !important;
 }
