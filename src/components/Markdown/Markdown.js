@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import ReactMarkdown from "react-markdown"
 import HeadingRenderer from "./HeadingRenderer"
+import NoteRenderer from "./NoteRenderer"
 import CodeBlockRenderer from "./CodeBlockRenderer"
 import TextRenderer from "./TextRenderer"
 import LinkRenderer from "./LinkRenderer"
@@ -23,6 +24,7 @@ const Markdown = ({ markdown, ...rest }) => (
       code: CodeBlockRenderer,
       math: MathBlockRenderer,
       inlineMath: MathRenderer,
+      blockquote: NoteRenderer
     }}
   />
 )
