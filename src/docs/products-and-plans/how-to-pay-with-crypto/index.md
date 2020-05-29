@@ -33,7 +33,7 @@ For any assistance on making a payment, you can contact our team at [support@san
 
 Paying with SAN token provides a substantial discount incentivization for our users who choose to take advantage of the opportunity.
 
-`1 SAN = $1` in terms of value on our platform. At the time of this writing, this would be equivalent to a roughly **87% discount vs. Fiat** (at SAN's current price of $0.13) for any Sanbase or Sandata subscription that you would like to aquire with SAN.
+`1 SAN = $1` in terms of value on our platform. At the time of this writing, this would be equivalent to a roughly **87% discount vs. Fiat** (at SAN's current price of $0.13) for any Sanbase subscription that you would like to aquire with SAN.
 
 To us, loyal users who believe in and utilize our platform and token deserve to be rewarded. As early adopters, this discount lasts until the market price of SAN exceeds $1. When it does advance past this $1 threshold, the discount is simply removed so users are protected from ever getting an inferior value to USD by paying via SAN. For the simplest ways to purchase SAN, we recommend visiting one of the following options:
 
@@ -59,7 +59,7 @@ as an alias. which points to this respective send address. Once this has been do
 
 
 >
-- Paying with SAN is limited to purchasing subscriptions of Sanbase and Sandata, so it's not available for subscribing to SanAPI.
+- Paying with SAN is limited to purchasing subscriptions of Sanbase, so it's not available for subscribing to SanAPI.
 - SAN burn is not available for residents of the Swiss Confederation due to tax reasons.
 - SAN burn can only be applied to monthly or yearly base subscription prices. No other discounts are applicable when using SAN burn.
 >

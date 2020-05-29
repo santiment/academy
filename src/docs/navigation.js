@@ -4,7 +4,6 @@ import Education from "../images/docs/education-and-use-cases.svg"
 import ProductsAndPlans from "../images/docs/products-and-plans.svg"
 import SANtokens from "../images/docs/san-tokens.svg"
 import SanAPI from "../images/docs/sanapi.svg"
-import Sandata from "../images/docs/sandata.svg"
 import Sansheets from "../images/docs/sansheets.svg"
 import Sanbase from "../images/docs/sanbase.svg"
 import Glossary from "../images/docs/glossary.svg"
@@ -47,12 +46,6 @@ export const GUIDES = [
     icon: Sansheets,
     description: "Our Spreadsheets plugin for Santiment data",
     articles: ["Setting Up", "Adding an API key", "Functions", "PRO Templates"],
-  },
-  {
-    title: "Sandata",
-    icon: Sandata,
-    description: "Our advanced crypto dashboards",
-    articles: ["Logging into Sandata", "Navigation", "ERC20 Overview Page"],
   },
   {
     title: "Products and plans",

@@ -68,10 +68,10 @@ export const categories = [
         href: 'https://sheets.santiment.net/'
       },
       {
-        children: 'data',
-        name: 'Sandata',
-        href: 'https://data.santiment.net/'
-      },
+        children: 'Sangraphs',
+        name: 'Graphs',
+        href: 'https://graphs.santiment.net/'
+      }
     ]
   }
 ]

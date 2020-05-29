@@ -1,5 +1,5 @@
 ---
-title: Sandata - Top Holders
+title: Top Holders
 author: Santiment Team
 ---
 
