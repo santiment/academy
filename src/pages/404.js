@@ -9,9 +9,9 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title='404: Not found' />
     <div className={styles.wrapper}>
-      <h1 className={styles.heading}>Looks like you get lose</h1>
+      <h1 className={styles.heading}>Looks like you got lost</h1>
       <p className={styles.desc}>
-        This page is missing or you assembled the link incorrectly.
+        The page you're looking for is missing or your link is incorrect.
       </p>
       <Button
         variant='fill'
