@@ -107,6 +107,12 @@ export const REFERENCES = [
       "Top Holders",
       "Transaction Volume",
       "Velocity",
+      "BitMEX Perpetual Contract Price",
+      "BitMEX Perpetual Contract Funding Rate",
+      "BitMEX Price Index",
+      "BitMEX Perpetual Contract Basis",
+      "BitMEX Perpetual Contracts Open Interest",
+      "BitMEX Perpetual Contracts Open Value",
     ],
   },
   {

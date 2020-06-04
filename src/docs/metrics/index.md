@@ -67,3 +67,12 @@ activity.
 - [Transaction Volume](/metrics/transaction-volume)
 - [Circulation](/metrics/circulation)
 - [Top Holders](/metrics/top-holders)
+
+## Derivatives
+
+- [BitMEX Perpetual Contract Price](/metrics/bitmex-perpetual-contract-price)
+- [BitMEX Perpetual Contract Funding Rate](/metrics/bitmex-perpetual-contract-funding-rate)
+- [BitMEX Price Index](/metrics/bitmex-price-index)
+- [BitMEX Perpetual Contract Basis](/metrics/bitmex-perpetual-contract-basis)
+- [BitMEX Perpetual Contracts Open Interest](/metrics/bitmex-perpetual-contracts-open-interest)
+- [BitMEX Perpetual Contracts Open Value](/metrics/bitmex-perpetual-contracts-open-value)
