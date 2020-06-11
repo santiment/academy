@@ -21,7 +21,7 @@ Those restrictions hold for any metric that contains "**mvrv**" or
 ### Basic Plan
 
 - 2 years of historical data
-- Last 24 days of the data is cut-off
+- Last 14 days of the data is cut-off
 
 ### Pro Plan
 
