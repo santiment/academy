@@ -11,6 +11,7 @@ Stock To Flow model is a measure of scarcity/abundance of particular resource.
 It shows how much supply enters yearly relative to the total supply of the resource.
 We measure Stock To Flow for a given asset as the ratio between [Total Circulation](/metrics/circulation) of the asset
 and the daily minted coins multiplied by days in one year.
+
 ---
 
 ## Access
