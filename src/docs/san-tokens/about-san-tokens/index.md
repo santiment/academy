@@ -19,9 +19,9 @@ here](https://santiment.net/blog/san-next-chapter/).
 
 In view of this, SAN tokens can now be used as a discount to offset
 the price plans. Token holders will get 20% off all pricing plans for
-all of our [products](/intercom-articles/getting-started/get-started/current-products-of-santiment).
+all of our [products](/products-and-plans/santiment-products/).
 
-![](pricing.png)
+![](sanpricing.png)
 
 
 ## Token Burning
