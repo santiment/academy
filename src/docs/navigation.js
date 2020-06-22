@@ -107,6 +107,7 @@ export const REFERENCES = [
       "Top Holders",
       "Transaction Volume",
       "Velocity",
+      "Stock To Flow"
     ],
   },
   {
