@@ -67,3 +67,4 @@ activity.
 - [Transaction Volume](/metrics/transaction-volume)
 - [Circulation](/metrics/circulation)
 - [Top Holders](/metrics/top-holders)
+- [Stock To Flow](/metrics/stock-to-flow)
