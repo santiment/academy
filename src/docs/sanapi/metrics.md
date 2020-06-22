@@ -44,6 +44,15 @@ The list of all available metrics can be fetched with this query:
 }
 ```
 
+The list of available metrics for given plan can be fetched by supplying the `plan`
+argument with query like this:
+
+```graphql
+{
+  getAvailableMetrics(plan: PRO)
+}
+```
+
 Documentation for those metrics can be found on the [metrics page](/metrics)
 
 ## All available assets
