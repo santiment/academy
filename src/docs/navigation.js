@@ -96,6 +96,7 @@ export const REFERENCES = [
       "Mean Coin Age",
       "NVT",
       "Network Growth",
+      "Stock To Flow",
       "Supply On Or Outside Exchanges",
       "Price",
       "Realized Value",
@@ -106,8 +107,7 @@ export const REFERENCES = [
       "Top Social Gainers Losers",
       "Top Holders",
       "Transaction Volume",
-      "Velocity",
-      "Stock To Flow"
+      "Velocity"
     ],
   },
   {
