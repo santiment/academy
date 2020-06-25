@@ -7,7 +7,8 @@ description: Amount of coin/tokens moved on-chain.
 
 ## Description
 
-The calculated funding rate of BitMEX perpetual contract for funding period 8h. This is the rate that longs will pay shorts. If negative, shorts pay longs.  
+The funding rate is a fee paid by one side of the perpetual contract to the other. When the funding rate is positive, Longs pay Shorts. When the funding rate is negative, Shorts pay Longs.  
+
 More details on BitMEX [web-site](https://www.bitmex.com/app/perpetualContractsGuide#Mechanics-of-a-Perpetual-Contract-Market).
 
 ---

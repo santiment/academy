@@ -6,9 +6,8 @@ description: Contract price - index price.
 ---
 
 ## Description
-
-This metric shows the positive or negative difference between BitMEX perpetual contract’s price and BitMEX index price for a given asset.
-
+ 
+Shows the difference between BitMEX [perpetual contract’s price](/metrics/bitmex/perpetual-contract-price) of [Project Ticker] and BitMEX [index (spot) price](/metrics/bitmex/price-index) for [Project Ticker].
 ---
 
 ## Access

@@ -8,6 +8,7 @@ description: Average asset price calculated using a number of data sources.
 ## Description
 
 BitMEX indices are composite, meaning that they are calculated using a number of data sources. BitMEX currently uses 9 constituents: Binance, Bitstamp, Bittrex, Coinbase, Gemini, Huobi, Itbit, Kraken, Poloniex. Aiming to be representative of the underlying asset’s market consensus price, each BitMEX index is calculated as a weighted average of the Last Price for each constituent exchange.  
+
 More details on BitMEX [web-site](https://www.bitmex.com/app/indices).
 
 ---

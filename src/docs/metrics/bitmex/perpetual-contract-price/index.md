@@ -2,7 +2,6 @@
 title: BitMEX Perpetual Contract Price
 author: Santiment Team
 date: 2020-06-03
-description: BitMEX Perpetual Contract Price.
 ---
 
 ## Access
