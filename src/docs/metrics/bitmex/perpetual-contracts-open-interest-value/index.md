@@ -7,7 +7,7 @@ description: The total number of BitMEX perpetual contracts in existence.
 
 ## Description
 
-Open Interest shows the amount of open perpetual contracts currently on Bitmex's [Project Ticker] / USD trading
+Open Interest shows the amount of open perpetual contracts currently on Bitmex's Project Ticker / USD trading
  pairs. When open
  interest reaches unusually high numbers, it can precede increased volatility in the coin’s price.  
 

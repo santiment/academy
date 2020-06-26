@@ -7,7 +7,7 @@ description: Contract price - index price.
 
 ## Description
  
-Shows the difference between BitMEX [perpetual contract’s price](/metrics/bitmex/perpetual-contract-price) of [Project Ticker] and BitMEX [index (spot) price](/metrics/bitmex/price-index) for [Project Ticker].
+Shows the difference between BitMEX [perpetual contract’s price](/metrics/bitmex/perpetual-contract-price) of Project Ticker and BitMEX [index (spot) price](/metrics/bitmex/price-index) for Project Ticker.
 ---
 
 ## Access
