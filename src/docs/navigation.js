@@ -85,6 +85,7 @@ export const REFERENCES = [
     icon: Metrics,
     articles: [
       "Age Consumed",
+      "BitMEX",
       "Circulation",
       "Community Messages Count",
       "Daily Active Addresses",
@@ -96,6 +97,7 @@ export const REFERENCES = [
       "Mean Coin Age",
       "NVT",
       "Network Growth",
+      "Stock To Flow",
       "Supply On Or Outside Exchanges",
       "Price",
       "Realized Value",
@@ -106,13 +108,7 @@ export const REFERENCES = [
       "Top Social Gainers Losers",
       "Top Holders",
       "Transaction Volume",
-      "Velocity",
-      "BitMEX Perpetual Contract Price",
-      "BitMEX Perpetual Contract Funding Rate",
-      "BitMEX Price Index",
-      "BitMEX Perpetual Contract Basis",
-      "BitMEX Perpetual Contracts Open Interest",
-      "BitMEX Perpetual Contracts Open Value",
+      "Velocity"
     ],
   },
   {
