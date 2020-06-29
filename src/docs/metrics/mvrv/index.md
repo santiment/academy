@@ -7,6 +7,8 @@ description: The average profit/loss of all the coins currently in circulation a
 
 ## Definition
 
+### MVRV
+
 MVRV shows the average profit/loss of all the coins currently in circulation
 according to the current price.
 
@@ -40,6 +42,20 @@ market is much higher.
 Another way to deal with lost private keys and graveyard addresses is to compute
 the MVRV ratio only on the subset of tokens that have been active at least once
 in the several years.
+
+### MVRV Long/Short Difference
+
+MVRV Long/Short Difference is defined as `mvrv_usd_365d - mvrv_usd_60d`
+
+Negative values mean that short-term holders are going to realize higher profits
+than long-term holders if they sell at price at this moment. Positive values
+show the opposite.
+
+During strong and long bull runs, this metric tends to grow and during bear
+markets it is decreasing. The rational is that during strong bull runs, the long
+term holders are determining when the bull run will end, when they start
+selling, while during bear markets the long term holders are at loss on average
+and the short term holders manage to realize profits
 
 ---
 
