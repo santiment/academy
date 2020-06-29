@@ -85,6 +85,7 @@ export const REFERENCES = [
     icon: Metrics,
     articles: [
       "Age Consumed",
+      "BitMEX",
       "Circulation",
       "Community Messages Count",
       "Daily Active Addresses",
