@@ -49,7 +49,7 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ---
 
-### SanAPI
+## SanAPI
 
 Available under the `transaction_volume` name.
 

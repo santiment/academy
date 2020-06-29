@@ -85,13 +85,16 @@ export const REFERENCES = [
     icon: Metrics,
     articles: [
       "Age Consumed",
+      "Amount in Top Holders",
       "BitMEX",
       "Circulation",
       "Community Messages Count",
       "Daily Active Addresses",
       "Daily Active Deposits",
       "Development Activity",
+      "Dormant Circulation",
       "Emerging Trends",
+      "Ethereum Spent",
       "Exchange Funds Flow",
       "MVRV",
       "Mean Coin Age",
@@ -108,7 +111,7 @@ export const REFERENCES = [
       "Top Social Gainers Losers",
       "Top Holders",
       "Transaction Volume",
-      "Velocity"
+      "Velocity",
     ],
   },
   {
