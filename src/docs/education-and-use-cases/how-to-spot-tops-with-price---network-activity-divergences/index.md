@@ -13,17 +13,15 @@ If these indicators spike during a pump - signalling a rise in speculative inter
 
 Take ENJ for example, which had a giant spike in active addresses at the beginning of December, coinciding with the price rally:
 
-![](image1.png)
+![enj-active-addresses-and-network-growth](image1.png)
 
 As soon as the on-chain activity reverted back to its pre-pump levels, ENJ was unable to sustain the uptrend and began correcting.
 
-
 ### On-chain Activity as Long-term Health Indicator
 
-![](image2.png)
+![maker-active-addresses-and-network-growth](image2.png)
 
 MKR’s Daily Active Address and Network Growth, all time
-
 
 Before you enter any trade, proper due diligence is key. Both DAA and Network Growth are great proxies for project adoption over time:
 
