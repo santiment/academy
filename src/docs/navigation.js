@@ -91,6 +91,7 @@ export const REFERENCES = [
       "Daily Active Addresses",
       "Daily Active Deposits",
       "Development Activity",
+      "Dormant Circulation",
       "Emerging Trends",
       "Exchange Funds Flow",
       "MVRV",
@@ -108,7 +109,7 @@ export const REFERENCES = [
       "Top Social Gainers Losers",
       "Top Holders",
       "Transaction Volume",
-      "Velocity"
+      "Velocity",
     ],
   },
   {
