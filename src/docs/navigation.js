@@ -93,6 +93,7 @@ export const REFERENCES = [
       "Development Activity",
       "Dormant Circulation",
       "Emerging Trends",
+      "Ethereum Spent",
       "Exchange Funds Flow",
       "MVRV",
       "Mean Coin Age",
