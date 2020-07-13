@@ -74,4 +74,5 @@ activity.
 ## Derivatives
 
 - [BitMEX](/metrics/bitmex)
+- [DeFi](/metrics/defi)
 - [Stock To Flow](/metrics/stock-to-flow)
