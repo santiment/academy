@@ -1,6 +1,6 @@
 ---
 title: BitMEX Price Index
-author: Santiment Team
+author: Anatoliy
 date: 2020-06-03
 description: Average asset price calculated using a number of data sources.
 ---

@@ -1,6 +1,6 @@
 ---
 title: BitMEX Perpetual Contract Basis
-author: Santiment Team
+author: Anatoliy
 date: 2020-06-03
 description: Contract price - index price.
 ---
