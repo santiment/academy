@@ -7,7 +7,12 @@ description: Contract price - index price.
 
 ## Description
  
-Shows the difference between BitMEX [perpetual contract’s price](/metrics/bitmex/perpetual-contract-price) of Project Ticker and BitMEX [index (spot) price](/metrics/bitmex/price-index) for Project Ticker.
+Shows the difference between BitMEX [perpetual contract’s price](/metrics/bitmex/perpetual-contract-price) of
+ Project Ticker and BitMEX [index (spot) price](/metrics/bitmex/price-index) for Project Ticker.  
+
+Available as
+  absolute value or ratio. In the last case it is computed using the formula: `(contract’s price - index
+   price)/index price`
 
 ---
 
@@ -19,7 +24,7 @@ Shows the difference between BitMEX [perpetual contract’s price](/metrics/bitm
 
 ## Measuring Unit
 
-Dollars
+Dollars/Ratio
 
 ---
 
@@ -50,7 +55,7 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### SanAPI
 
-Available under the `bitmex_perpetual_basis` name.
+Basis absolute value is available under the `bitmex_perpetual_basis` name.
 
 ```graphql
 {
@@ -69,3 +74,24 @@ Available under the `bitmex_perpetual_basis` name.
 ```
 
 [**Run in Explorer**](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22bitmex_perpetual_basis%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+And basis ratio - `bitmex_perpetual_basis_ratio`.
+
+```graphql
+{
+  getMetric(metric: "bitmex_perpetual_basis_ratio") {
+    timeseriesData(
+      slug: "bitcoin"
+      from: "2020-04-01T00:00:00Z"
+      to: "2020-04-07T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
+[**Run in Explorer**](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20
+%22bitmex_perpetual_basis_ratio%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
