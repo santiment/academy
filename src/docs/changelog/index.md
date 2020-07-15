@@ -7,6 +7,48 @@ author: Santiment Team
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks.
 
+## July 2020
+
+**`Sanbase`**:
+  * New metric | Top transactions table (It's connected metric with Transaction volume)
+  * New metric | Bitmex Basis Ratio
+  * New metric | Holders distribution (You can add more than one Holders Distributions in your chart layout)
+  * You can apply any chart layout from your watchlist
+  * We add settings for the watermark for our charts.
+  * Webhooks for alerts works with Discord.
+  - New metric | Sentiment Weighted
+  - On Alerts page we add the featured list of alerts. It's a good examples of usage
+  - Add keyboard navigation in all search by assets. ![](https://media.giphy.com/media/lqLdJ505muGP88kXJs/giphy.gif)
+  - Fix when search list was empty
+  - Add formatting for Exchange Flow Balance metric
+  - Fixes for tooltip UX
+  - Fixes for Alpha reports
+  - Fixes Login/Create an account Flow
+  - Shift swapped to CMD + Click for Transactions Table
+  - The huge update for Santiment Charts. There is much more flexibility to setup your own dashboard based on Santiment metrics.
+
+
+## June 2020
+
+**`Sanbase`**:
+  * Webhooks for Alerts
+  * Dev activity on Desktop now looks better (default MA 7 days)
+  * MVRV Long/Short looks better. (Area lines, percents instead of ratio)
+  * Add Sentiment Metrics (Finally on Santiment App we have Sentiments :smile: )
+  * Add Derivatives Metrics (For BTC & ETH)
+  * We rebuild fullscreen for the Chart. It's bigger now
+  * Chart becomes bigger
+  * Grid on the Chart becomes more granular
+  * Chart layouts - small fixes
+  * You can open our chart tool right from navigation now
+  * Add Frequencies for each metric in "Explanation" sidebar
+  * Add Price in BTC & ETH
+  * New Alert: MVRV Intraday
+  * Many fixes for links and docs
+  * New minimap feature: https://www.loom.com/share/8362041e6551404ba7dd092d125dac5d
+  * New Select&ZoomIn feature for Sanbase Charts
+  * You can edit the calendar as a text.
+
 ## May 2020
 
 - **`Sanbase`**: You can setup manually amount of top holders for next metrics
