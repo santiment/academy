@@ -7,6 +7,7 @@ import Icon from '@santiment-network/ui/Icon'
 import sanbaseLogoImg from './../../images/logos/logo-sanbase.svg'
 import sheetsLogoImg from './../../images/logos/logo-sheets.svg'
 import neuroLogoImg from './../../images/logos/logo-neuro.svg'
+import trendsLogoImg from './../../images/logos/logo-trends.svg'
 import mainLogo from './../../images/logos/main-logo.svg'
 import styles from './SantimentProductsTooltip.module.scss'
 
@@ -35,6 +36,14 @@ const PRODUCTS = [
     to: 'https://neuro.santiment.net',
     showLink: true,
     linkTitle: 'SanAPI'
+  },
+  {
+    img: trendsLogoImg,
+    title: 'Santrends',
+    description: 'Explore the social volume of any word on crypto social media',
+    to: 'https://app.santiment.net/labs/trends/',
+    showLink: true,
+    linkTitle: 'Santrends'
   }
 ]
 
