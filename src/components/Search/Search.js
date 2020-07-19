@@ -1,11 +1,12 @@
 import React, { useRef, useEffect } from "react"
+import cx from 'classnames'
 import { InputWithIcon as Input } from "@santiment-network/ui/Input"
 import { isSSR } from '../../utils/utils'
 import styles from "./Search.module.scss"
 
 const SUGGESTIONS = ["Trending words", "Social volume", "MVRV", "Metrics"]
 
-const Search = () => {
+const Search = ({ small }) => {
   useEffect(() => {
         if (isSSR) return;
 
@@ -25,7 +26,19 @@ const Search = () => {
   }
 
 
-  return (
+  return small ? (
+    <div className={cx(styles.wrapper, small && styles.wrapper__small)}>
+    <Input
+        id='search'
+        placeholder='Search docs'
+        icon='search'
+        forwardedRef={inputEl}
+        iconPosition='left'
+        iconClassName={styles.icon}
+        inputClassName={styles.input}
+      />
+    </div>
+    ) : (
     <div className={styles.wrapper}>
       <h3 className={styles.heading}>Santiment Academy</h3>
       <Input

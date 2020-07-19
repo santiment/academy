@@ -3,6 +3,7 @@ import React from "react"
 import cx from "classnames"
 import { Link } from "gatsby"
 import SidebarCategory from './SidebarCategory'
+import Search from '../../components/Search/Search'
 import { GUIDES, REFERENCES, GETTING_STARTED } from "../../docs/navigation"
 import { titleToSlug } from "../../utils/docs"
 import { isArticleActive } from './utils'
@@ -18,6 +19,7 @@ const Sidebar = ({ className }) => {
   return (
     <section className={cx(styles.wrapper, className)}>
       <div className={styles.content}>
+        <Search small={true} />
         <ul className={styles.list}>
           <h3 className={styles.heading}>{GETTING_STARTED.title}</h3>
           <li>
