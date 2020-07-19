@@ -11,11 +11,23 @@
   &__small {
     width: 250px !important;
     position: absolute;
-    top: 40px;
-    right: 21px;
     background: none;
     z-index: 1000;
     align-items: baseline;
+
+    @include responsive("phone-xs", "phone", "tablet") {
+      position: relative;
+      margin-left: auto;
+    }
+
+    @include responsive("phone-xs") {
+      display: none;
+    }
+
+    @include responsive("laptop", "desktop") {
+      top: 110px;
+      left: 15px;
+    }
   }
 }
 

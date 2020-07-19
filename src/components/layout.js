@@ -37,7 +37,7 @@ const Layout = ({ children, isShowSidebar, classes = {}, pageContext }) => (
       <Notifications>
         <div className={cx(styles.container, isShowSidebar && styles.withSidebar)}>
           {envScript}
-          <Header className={styles.header} />
+          <Header className={styles.header} isShowSidebar={isShowSidebar} />
           {isShowSidebar ? (
             <>
             <Sidebar className={styles.sidebar} pageContext={pageContext} />
