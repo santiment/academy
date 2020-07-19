@@ -6,6 +6,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+
+  &__small {
+    width: 250px !important;
+    position: absolute;
+    background: none;
+    z-index: 1000;
+    align-items: baseline;
+
+    @include responsive("phone-xs", "phone", "tablet") {
+      position: relative;
+      margin-left: auto;
+    }
+
+    @include responsive("phone-xs") {
+      display: none;
+    }
+
+    @include responsive("laptop", "desktop") {
+      top: 110px;
+      left: 15px;
+    }
+  }
 }
 
 .heading {
@@ -47,6 +70,18 @@
 .icon {
   transform: scale(1.33);
   margin-left: 8px;
+}
+
+.wrapper__small {
+  & .input {
+    width: 250px !important;
+    height: 40px;
+    min-width: auto;
+  }
+
+  & .icon {
+    transform: scale(1);
+  }
 }
 
 .suggestions {
