@@ -32,7 +32,6 @@ emerging trend words and projects, word clouds to display related words and the
 possibility to enter custom search terms.
 
 - [Community Messages Count](/metrics/community-messages-count)
-- [Community Messages Count](/metrics/community-messages-count)
 - [Emerging Trends](/metrics/emerging-trends)
 - [Sentiment Metrics](/metrics/sentiment-metrics)
 - [Social Dominance](/metrics/social-dominance)
