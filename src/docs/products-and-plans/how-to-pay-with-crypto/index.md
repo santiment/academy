@@ -5,6 +5,8 @@ date: 2020-02-05
 description: Instructions on how to pay with crypto
 ---
 
+> **Note:** Payment in crypto is only available for yearly subscriptions, not for monthly ones.
+
 ## Pay With ETH or DAI
 
 When it comes to cryptocurrency tools and services, having convenient and alternative methods to exchange them outside of traditional Fiat options is very much needed to help work toward mass adoption. This is why we offer our users the ability to pay with different crypto to conveniently exchange quickly and easily for access to our services.
@@ -60,8 +62,9 @@ as an alias. which points to this respective send address. Once this has been do
 
 >
 - Paying with SAN is limited to purchasing subscriptions of Sanbase, so it's not available for subscribing to SanAPI.
-- SAN burn is not available for residents of the Swiss Confederation due to tax reasons.
-- SAN burn can only be applied to monthly or yearly base subscription prices. No other discounts are applicable when using SAN burn.
+- SAN burn is a restricted offer, only available to a certain amount of users each month. First come, first serve.
+- SAN burn is not available for residents of the Swiss Confederation due to tax regulations.
+- SAN burn can only be applied to yearly base subscription prices. No other discounts are applicable when using SAN burn.
 >
 > Thank you for your understanding.
 
