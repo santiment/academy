@@ -1,7 +1,7 @@
 ---
 title: Metrics Overview
 author: Santiment Team
-date: 2020-04-09
+date: 2020-09-16
 ---
 
 Santiment brings a comprehensive set of metrics together in one place so you can
@@ -64,6 +64,7 @@ activity.
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
 - [Circulation](/metrics/circulation)
 - [Dormant Circulation](/metrics/dormant-circulation)
+- [Holders Distribution](/metrics/holders-distribution)
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
 - [Supply On Or Outside Exchanges](/metrics/supply-on-or-outside-exchanges)
 - [Top Holders](/metrics/top-holders)

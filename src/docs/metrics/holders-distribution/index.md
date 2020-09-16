@@ -12,7 +12,10 @@ There are five separate metrics regarding holders distribution:
 - ``holders_distribution_combined_balance_<interval>`` - Represents the sum of all the tokens of all the addresses which hold the amount of tokens from an interval
 - ``holders_distribution_over_<threshold>`` - The number of addresses whose balance exceeds ``threshold``
 - ``holders_distribution_combined_balance_over_<threshold>`` - The sum of all the tokens of all the addresses whose balance exceeds ``threshold``
-- ``percent_of_holders_distribution_combined_balance_<interval>`` - The percent of tokens contained in some interval. It is computed using the following formula: `holders_distribution_combined_balance_<interval>/total_supply`
+- ``percent_of_holders_distribution_combined_balance_<interval>`` - The percent of tokens contained in some interval. It is computed using the following formula:
+$$
+\frac{Holders Distribution Combined Balance For Interval}{Total Supply}
+$$
 
 ![Holders Distribution](bitcoin-hd.png)
 
@@ -24,7 +27,7 @@ There are five separate metrics regarding holders distribution:
 
 ## Measuring Unit
 
-For the holders_distribution_<interval> and holders_distribution_over_<threshold> they're integers, whilst for the rest they're floats
+For the ``holders_distribution_<interval>`` and ``holders_distribution_over_<threshold>`` they're integers, whilst for the rest they're floats
 
 ---
 
