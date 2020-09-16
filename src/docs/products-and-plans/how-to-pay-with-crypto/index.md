@@ -1,7 +1,7 @@
 ﻿---
 title: How to pay with crypto
 author: Santiment Team
-date: 2020-08-14
+date: 2020-09-16
 description: Instructions on how to pay with crypto
 ---
 
@@ -33,17 +33,18 @@ For any assistance on making a payment, you can contact our team at [support@san
 
 ## Burning SAN Tokens to Make Payments
 
-Paying with SAN token provides a substantial discount incentivization for our users who choose to take advantage of the opportunity - and are quick enough to fill one of the limited slots. It lets you burn SAN tokens at a rate of 1USD each, which comes down to a hefty discount at current market rates.
+SAN token holders can use a token burning method to make use of their SAN holdings instead of paying for a subscription the regular way. If you're unfamiliar with what burning entails, it's simply the act of intentionally sending tokens to an invalid address to permanently remove them from the available circulating supply. 
+
+Burning SAN tokens provides a substantial discount incentivization for our users who choose to take advantage of the opportunity. It lets you burn SAN tokens at a rate of twice the current market rate, which comes down to a 50% discount compared to regular payments. In addition, the total supply of SAN shrinks with every burn, benefitting all SAN holders.
 
 Please make sure to note the following restrictions:
 
 >
-- Paying with SAN is limited to purchasing subscriptions of Sanbase, so it's not available for subscribing to SanAPI.
-- SAN burn is a restricted offer, only available to a certain amount of users each month. First come, first serve.
+- Paying via SAN burn is limited to subscriptions of Sanbase, so it's not available for subscribing to SanAPI.
 - SAN burn is not available for residents of the Swiss Confederation due to tax regulations.
 - SAN burn can only be applied to yearly base subscription prices. No other discounts are applicable when using SAN burn.
 >
 > Thank you for your understanding.
 
 
-In case you are ready to burn SAN for a Sanbase Pro subscription, please let us know at [support@santiment.net](mailto:support@santiment.net) and we will be happy to walk you through the process.
+In case you are ready to burn SAN for a yearly Sanbase Pro subscription, please let us know at [support@santiment.net](mailto:support@santiment.net) and we will be happy to walk you through the process.
