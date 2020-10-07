@@ -65,7 +65,7 @@ from the Santiment Team, covering the most important findings from our data and 
 
 <hr/>
 
-If you have ANY questions, let us know asap. And [join our Discord](https://discordapp.com/invite/MPH2uP5) so we can help you even faster!
+If you have ANY questions, let us know asap. And [join our Discord](https://santiment.net/discord) so we can help you even faster!
 
 Finally, a note from Maksim Balashevich, our founder:
 
