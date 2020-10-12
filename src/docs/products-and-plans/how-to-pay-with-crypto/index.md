@@ -48,3 +48,15 @@ Please make sure to note the following restrictions:
 
 
 In case you are ready to burn SAN for a yearly Sanbase Pro subscription, please let us know at [support@santiment.net](mailto:support@santiment.net) and we will be happy to walk you through the process.
+
+## Providing SAN Uniswap Liquidity
+
+Another way of getting Pro access to Sanbase is currently available: Providing liquidity for the SAN/ETH trading pair on Uniswap V2!
+
+As long as you provide 2000+ SAN to our Uniswap V2 pool (and the corresponding amount of ETH), you get FREE access to Sanbase Pro, including all our metrics, new templates and daily market insights!
+
+You can add liquidity to the SAN<->ETH pool here: [https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098](https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098)
+
+As soon as you hold the LP tokens in your wallet, let us know - and we'll activate your Pro subscription 💗
+
+*Please make sure to do your own due diligence regarding the Uniswap protocol and the risk involved in providing liquidity. Santiment naturally has no control over the Uniswap protocol and cannot be held accountable for any potential losses of any kind.*
