@@ -53,7 +53,7 @@ In case you are ready to burn SAN for a yearly Sanbase Pro subscription, please 
 
 Another way of getting Pro access to Sanbase is currently available: Providing liquidity for the SAN/ETH trading pair on Uniswap V2!
 
-As long as you provide 2000+ SAN to our Uniswap V2 pool (and the corresponding amount of ETH), you get FREE access to Sanbase Pro, including all our metrics, new templates and daily market insights!
+As long as you provide 3000+ SAN to our Uniswap V2 pool (and the corresponding amount of ETH), you get FREE access to Sanbase Pro, including all our metrics, new templates and daily market insights!
 
 You can add liquidity to the SAN<->ETH pool here: [https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098](https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098)
 
