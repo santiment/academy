@@ -139,6 +139,14 @@ const Footer = ({ isMinified }) => {
             >
               Privacy
             </a>
+            <a
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://www.notion.so/santiment/Santiment-Media-ff72838a16164db4b7e90478e18c3776'
+              className={cx(styles.text, styles.link)}
+            >
+              Media Kit
+            </a>
           </div>
           <div className={styles.social}>
             <a

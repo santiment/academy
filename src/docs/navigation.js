@@ -121,7 +121,15 @@ export const REFERENCES = [
     description: "Keep track of development updates and new product features",
     icon: Changelog,
     articles: [],
-  },
+  }
+]
+
+export const RESOURCES = [
+  {
+    title: "How we compare",
+    description: "Which crypto analytics solution is right for you?",
+    articles: ["Messari vs Santiment"],
+  }
 ]
 
 export const GETTING_STARTED = {

@@ -71,6 +71,10 @@ export const categories = [
         children: 'Sangraphs',
         name: 'Graphs',
         href: 'https://graphs.santiment.net/'
+      },
+      {
+        name: 'How we compare',
+        href: 'https://academy.santiment.net/how-we-compare/'
       }
     ]
   }
