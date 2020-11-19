@@ -11,7 +11,18 @@ Latest Update **18.11.2020**
 
 ## November 2020
 
-Sanbase has a New Plan!
+Sanbase has a New Plan! This Plan is the perfect for **Crypto Lords**!
+
+What's inside?
+
+* All in PRO and
+* Dedicated account manager
+* Basic API 300k API calls
+* Closed Webinars with Santiment Analytics
+* Closed chat with Santiment market analysts
+* Custom education & onboarding
+
+---
 
 Watchlist & Screener page:
 
