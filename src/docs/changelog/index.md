@@ -5,7 +5,7 @@ author: Santiment Team
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
-We update this page every two weeks.
+We update this page every two weeks or more frequently.
 
 Latest Update **18.11.2020**
 
