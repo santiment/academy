@@ -3,25 +3,21 @@ title: Keyboard Shortcuts
 author: Santiment Team
 ---
 
-### About keyboard shortcuts
-
-Below is a list of some of the available keyboard shortcuts.
-
 ### Site wide shortcuts
 
 | Keyboard shortcut | Description
 |-----------|------------
-|**/** | Focus the search bar
-|**esc** | When focused on a modals, alerts, historical balance tool, closes the hovercard and refocuses on the element the hovercard is in
+|**/** | Select the Sanbase search bar
+|**esc** | When on pop-up modals like alerts, close the hovercard and return to the parent element
 
 ### Charts shortcuts
 
 | Keyboard shortcut | Description
 |-----------|------------
-|**CMD(CTRL) + CLICK** | If you hover any metric on metrics tree, it adds this metric to the first chart
-|**CMD(CTRL) + SHIFT + CLICK** | If you hover any metric on metrics tree, it creates a new chart and adds a metric to this chart
-|**CMD(CTRL) + CLICK** | If you click on metric of Holders Distribution Widget, it makes only this metric is selected
-|**CMD(CTRL) + \ ** | Collapse the tree of metrics
+|**CMD(CTRL) + CLICK** | Hover over any metric on the left-side menu to add it to the first chart
+|**CMD(CTRL) + SHIFT + CLICK** | Hover over any metric on the left-side menu to create a new chart with this metric selected
+|**CMD(CTRL) + CLICK** | For Holder Distribution metrics - select only a single group of holders (deselect all others)
+|**CMD(CTRL) + \ ** | Collapse the tree of metrics (left-side menu)
 |**CMD(CTRL) + M** | Open Mapview
 |**CMD(CTRL) + L** | Open Chart layout explorer
 |**CMD(CTRL) + S** | Save Chart layout
