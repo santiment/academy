@@ -17,6 +17,7 @@ Platform for in-depth coin analysis, low-latency signals, asset watchlists
 
 - [Social trends search](/sanbase/social-trends-search/) displaying the amount of times your search term is mentioned in a specific medium (e.g. Telegram).
 
+- [Keyboard shortcuts](/sanbase/keyboard-shortcuts/)
 - [Account settings](/sanbase/account-settings)
 - [Logging into Sanbase](/sanbase/logging-into-sanbase)
 - [Requesting display new project](/sanbase/requesting-display-new-project)
