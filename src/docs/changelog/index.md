@@ -7,9 +7,16 @@ author: Santiment Team
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
-Latest Update **18.11.2020**
+Latest Update **25.11.2020**
 
 ## November 2020
+
+Charts:
+
+- New metrics: average/median fees (only for ethereum)
+- Small fixes
+
+---
 
 Sanbase has a New Plan! This Plan is the perfect for **Crypto Lords**!
 
