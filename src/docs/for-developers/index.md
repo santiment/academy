@@ -14,6 +14,7 @@ There are a few different ways to fetch and analyze data data:
 
 - [Get data from the GraphQL API](#graphql-api)
 - [Download CSV from Sanbase](#download-csv-from-sanbase)
+- [Download CSV from API no-code way](#download-csv-from-api-no-code-way)
 - [Download CSV from Sangraphs](#download-csv-from-sangraphs)
 - [Analyzing Santiment Data](#analyzing-santiment-data)
 
@@ -37,6 +38,11 @@ The API can be consumed in a few different ways:
 
 [Sanbase](/sanbase) contains only data available in the API. Data from charts
 can be exported as a CSV file. ![sanbase-csv-export](sanbase-csv-export.png)
+
+## Download CSV from API no-code way
+
+[API](/neuro) has only json output format, but you can ease to use this
+sample to get csv file. [CSV API Download Tool](https://colab.research.google.com/drive/1CdnHjL7Se_cO4dQj_PyXRpcZCIzus5SC#scrollTo=r3BZewx3K8Rb)
 
 ## Download CSV from Sangraphs
 
