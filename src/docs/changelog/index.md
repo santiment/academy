@@ -7,9 +7,26 @@ author: Santiment Team
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
-Latest Update **27.11.2020**
+Latest Update **02.12.2020**
 
 ## November 2020
+
+Sanbase
+
+- Added 'sign in with Google' option
+- New topics added to Social Trends widgets on the home page
+- Watchlist & Screener | 'Recent' category added to desktop navigation dropdown
+
+Charts
+
+- Draw straight lines on the chart by holding “Shift” while using the draw tool
+- Fixed the “Spent Coin Cost” widget
+
+Mobile
+
+- Watchlists & Screener | Added a mini price chart next to each asset, supports 24h, 7d and 30d range
+
+---
 
 Charts
 
