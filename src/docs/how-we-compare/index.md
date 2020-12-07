@@ -1,6 +1,6 @@
 ---
 title: How we compare
-author: Yura
+author: Yura Zatsepin
 description: Which crypto analytics solution is right for you?
 ---
 

@@ -12,7 +12,9 @@ import Tsetso from "../images/people/Tsetso.png"
 import Vassil from "../images/people/Vassil.png"
 import Ante from "../images/people/Ante.png"
 import Lyudmil from "../images/people/Lyudmil.png"
-// import Brian from "../images/people/Brian.png"
+import Brian from "../images/people/Brian.png"
+import Yura from "../images/people/Yura.png"
+import Valentin from "../images/people/Valentin.png"
 // import Alan from "../images/people/Alan.png"
 // import Alex from "../images/people/Alex.png"
 // import Anastasiya from "../images/people/Anastasiya.png"
@@ -27,7 +29,6 @@ import Lyudmil from "../images/people/Lyudmil.png"
 // import Nikolay from "../images/people/Nikolay.png"
 // import Rinat from "../images/people/Rinat.png"
 // import Serena from "../images/people/Serena.png"
-// import Valentin from "../images/people/Valentin.png"
 // import Yura from "../images/people/Yura.png"
 
 export const PEOPLE = {
@@ -43,6 +44,11 @@ export const PEOPLE = {
   ivan: {
     description: "Developer",
     imageUrl: Ivan,
+    link: "",
+  },
+  valentin: {
+    description: "",
+    imageUrl: Valentin,
     link: "",
   },
   tsetso: {
@@ -98,6 +104,16 @@ export const PEOPLE = {
   "jan s": {
     description: "Data Scientist",
     imageUrl: Jan,
+    link: "",
+  },
+  "brian quinlivan": {
+    description: "Director of Marketing",
+    imageUrl: Brian,
+    link: "",
+  },
+  "yura zatsepin": {
+    description: "Product Dev Lead",
+    imageUrl: Yura,
     link: "",
   },
 }
