@@ -126,10 +126,15 @@ export const REFERENCES = [
 
 export const RESOURCES = [
   {
+    title: "Labels",
+    description: "Our labels vision for crypto wallets",
+    articles: []
+  },
+  {
     title: "How we compare",
     description: "Which crypto analytics solution is right for you?",
     articles: ["Messari vs Santiment"],
-  }
+  },
 ]
 
 export const GETTING_STARTED = {

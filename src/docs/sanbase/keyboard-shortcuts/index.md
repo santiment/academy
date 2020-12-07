@@ -10,7 +10,9 @@ author: Santiment Team
 |**/** | Select the Sanbase search bar
 |**esc** | When on pop-up modals like alerts, close the hovercard and return to the parent element
 
-### Charts shortcuts
+## Charts
+
+### General shortcuts
 
 | Keyboard shortcut | Description
 |-----------|------------
@@ -21,3 +23,9 @@ author: Santiment Team
 |**CMD(CTRL) + M** | Open Mapview
 |**CMD(CTRL) + L** | Open Chart layout explorer
 |**CMD(CTRL) + S** | Save Chart layout
+
+### Drawing Tools
+
+| Keyboard shortcut | Description
+|-----------|------------
+|**SHIFT + CLICK** | Draw straight lines on the chart by holding “Shift” while using the draw tool
