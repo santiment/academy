@@ -1,7 +1,7 @@
 ﻿---
 title: Getting started for traders
 description: Explanations, tutorials and use cases for Santiment metrics and tools. Learn how to use our platform to better understand market behavior, network activity and stakeholder trends.
-author: Dino Ibisbegovic
+author: Santiment Team
 ---
 
 Santiment is an all-in-one market behavior and network intelligence platform for cryptocurrencies. As a trader, our tools can help you identify, contextualize, and eventually - predict market behavior.
