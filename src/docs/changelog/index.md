@@ -2,12 +2,11 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
+date: 2020-12-02
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
-
-Latest Update **02.12.2020**
 
 ## November 2020
 
