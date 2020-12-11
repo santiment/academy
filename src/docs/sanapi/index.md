@@ -15,6 +15,7 @@ description: This page contains a reference of all the APIs provided by Santimen
   - [Programming langauge of your choice](#programming-language-of-your-choice)
 - [Authentication](#authentication)
 - [Errors](#errors)
+- [Rate limits](#rate-limits)
 - [Glossary](#glossary)
 - [Start exploring the API](#start-exploring-the-api)
 
@@ -249,6 +250,25 @@ happening. Here are some of the options:
   doing
 - `5xx` - an internal server error has occured. Let us know in the support
   channel in our [discord server](https://santiment.net/discord)
+
+## Rate Limits
+
+There are limits that are applied to every minute, hour, month.
+We will respond with '429 Too Many Requests'.
+The HTTP response headers contain a number of rate limiting headers that allow you to see how much api calls you have left:
+* x-ratelimit-remaining-month
+* x-ratelimit-remaining-hour
+* x-ratelimit-remaining-minute
+
+You can also monitor the limits per minute/hour/month with these headers:
+* x-ratelimit-limit-month
+* x-ratelimit-limit-hour
+* x-ratelimit-limit-minute
+
+When does the amount of requests reset?
+
+The minute limits are reset every round minute (13:51:00, 13:52:00, etc.), hour limits are reset every hour.
+Month limits are reset on the first of every month at 00:00:00 UTC.
 
 ## Glossary
 
