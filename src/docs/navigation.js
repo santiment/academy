@@ -27,7 +27,7 @@ export const GUIDES = [
     articles: [
       "Assets page",
       "Insights",
-      "Sonar page",
+      "Alerts page",
       "Emerging trends page",
       "Social trends search",
       "Account settings",

@@ -10,8 +10,8 @@ Platform for in-depth coin analysis, low-latency signals, asset watchlists
 
 - [Sanbase Insights](/sanbase/insights) allow create your own note-like posts, share them with the community or browse existing.
 
-- [Sonar page](/sanbase/sonar-page).
-  Here you can create and manage your own signal or subscribe to existing from other users
+- [Alerts](/sanbase/alerts-page)
+  Here you can create and manage your own alerts or subscribe to existing from other users
 
 - [Emerging trends page](/sanbase/emerging-trends-page) contain `Top 10` trending words in crypto and give you a quick overview of the top developing topics in crypto at the moment
 
