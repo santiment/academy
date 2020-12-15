@@ -253,22 +253,32 @@ happening. Here are some of the options:
 
 ## Rate Limits
 
-There are limits that are applied to every minute, hour, month.
-We will respond with '429 Too Many Requests'.
-The HTTP response headers contain a number of rate limiting headers that allow you to see how much api calls you have left:
-* x-ratelimit-remaining-month
-* x-ratelimit-remaining-hour
-* x-ratelimit-remaining-minute
+There are API call rate limits applied per minute, per hour, and per month. When
+the rate limit is reached, an error response with HTTP code 429 is returned. The
+content of the response body contains human-readable format of the error and how
+much time is left until a request can be made again. The remaining time, in
+seconds, is also returned as the value of the `x-ratelimit-reset` HTTP header.
 
-You can also monitor the limits per minute/hour/month with these headers:
-* x-ratelimit-limit-month
-* x-ratelimit-limit-hour
-* x-ratelimit-limit-minute
+The rate limits are reset every round minute, round hour and beginning of month.
+For all date and time value checks UTC timezone is used.
 
-When does the amount of requests reset?
+Additionally, every response contains two sets of headers:
 
-The minute limits are reset every round minute (13:51:00, 13:52:00, etc.), hour limits are reset every hour.
-Month limits are reset on the first of every month at 00:00:00 UTC.
+### Limits applied to the authenticated users
+
+These headers show the limits applied to the currently authenticated users.
+These values change only when the Sanapi subscription plan changes - whether when
+it changes or when it expires.
+
+- x-ratelimit-limit-month
+- x-ratelimit-limit-hour
+- x-ratelimit-limit-minute
+
+### Remaining API calls count for the authenticated user
+
+- x-ratelimit-remaining-month
+- x-ratelimit-remaining-hour
+- x-ratelimit-remaining-minute
 
 ## Glossary
 
