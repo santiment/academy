@@ -15,6 +15,7 @@ description: This page contains a reference of all the APIs provided by Santimen
   - [Programming langauge of your choice](#programming-language-of-your-choice)
 - [Authentication](#authentication)
 - [Errors](#errors)
+- [Rate limits](#rate-limits)
 - [Glossary](#glossary)
 - [Start exploring the API](#start-exploring-the-api)
 
@@ -249,6 +250,35 @@ happening. Here are some of the options:
   doing
 - `5xx` - an internal server error has occured. Let us know in the support
   channel in our [discord server](https://santiment.net/discord)
+
+## Rate Limits
+
+There are API call rate limits applied per minute, per hour, and per month. When
+the rate limit is reached, an error response with HTTP code 429 is returned. The
+content of the response body contains human-readable format of the error and how
+much time is left until a request can be made again. The remaining time, in
+seconds, is also returned as the value of the `x-ratelimit-reset` HTTP header.
+
+The rate limits are reset every round minute, round hour and beginning of month.
+For all date and time value checks UTC timezone is used.
+
+Additionally, every response contains two sets of headers:
+
+### Limits applied to the authenticated users
+
+These headers show the limits applied to the currently authenticated users.
+These values change only when the Sanapi subscription plan changes - whether when
+it changes or when it expires.
+
+- x-ratelimit-limit-month
+- x-ratelimit-limit-hour
+- x-ratelimit-limit-minute
+
+### Remaining API calls count for the authenticated user
+
+- x-ratelimit-remaining-month
+- x-ratelimit-remaining-hour
+- x-ratelimit-remaining-minute
 
 ## Glossary
 
