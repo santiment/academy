@@ -34,7 +34,7 @@ const Intercom = ({ children }) => {
   updateIntercom()
   return (
     <Query query={CURRENT_USER_QUERY}>
-      {({ data, loading }) => {
+      {({ data = {}, loading }) => {
         if (!loading && typeof window !== 'undefined') {
           const { email, username: name } = data.currentUser || {}
           window.Intercom('boot', {

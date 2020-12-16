@@ -4,11 +4,9 @@ author: Santiment Team
 description: Using this feature you can display the amount of times your search term is mentioned in a specific medium (e.g. Telegram).
 ---
 
-*This article is about **Social trends search** feature.
-For more information about **Emerging Social trends** lists from `Labs -> Social trends` page,
-please have a look at [this article](/sanbase/emerging-social-trends).*
+Start exploring trends context on https://app.santiment.net/labs/trends/explore/
 
-With `Social trends search` you can display the amount of times your
+With this tool you can display the amount of times your
 search term or phraseis mentioned in a specific medium.
 
 ## Channels
@@ -21,7 +19,7 @@ To filter out the noise and only present relevant results, we focused on channel
 
 For additional context, the results are plotted against the price of BTC or ETH, allowing you to correlate market reactions to everyplace crypto chatter:
 
-![](trends-explore.png)
+![](search.png)
 
 ## OR, AND, and parentheses
 
@@ -38,11 +36,10 @@ For example:
 
 
 Refer to [this blog post](https://santiment.net/blog/introducing-social-trends/) for examples of how to use this tool.
-
 Refer to [this](/metrics/social-volume/) and [this article](/metrics/sentiment-metrics/) for more information about how it works.
 
 ## Social context
 
-![](word-cloud.png)
+![](wordcloud.png)
 
-You could find a `word cloud` above the charts. It's show which words are most often used alongside your main keyword on crypto social media. Larger words are found more frequently in comments that also include your main keyword.
+You could find a `word cloud` in sidebar. It's show which words are most often used alongside your main keyword on crypto social media. Larger words are found more frequently in comments that also include your main keyword.

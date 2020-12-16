@@ -29,3 +29,15 @@ author: Santiment Team
 | Keyboard shortcut | Description
 |-----------|------------
 |**SHIFT + CLICK** | Draw straight lines on the chart by holding “Shift” while using the draw tool
+
+## Social tool
+
+| Keyboard shortcut | Description
+|-----------|------------
+|**CMD(CTRL) + CLICK** | Add trending word to compare input
+
+## Tables
+
+| Keyboard shortcut | Description
+|-----------|------------
+|**SHIFT + CLICK** | Apply multiple sorting by holding “Shift” and clicking in sortable column header
