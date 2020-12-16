@@ -23,7 +23,6 @@
     "gatsby-plugin-sharp": "^2.2.32",
     "gatsby-remark-copy-images": "^0.2.1",
     "gatsby-source-filesystem": "^2.1.33",
-    "gatsby-source-graphql": "^2.1.11",
     "gatsby-transformer-remark": "^2.6.30",
     "gatsby-transformer-sharp": "^2.2.23",
     "graphql-tag": "^2.10.1",

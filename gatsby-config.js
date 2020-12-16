@@ -21,17 +21,6 @@ module.exports = {
         debug: true
       }
     },
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        // This type will contain remote schema Query type
-        typeName: 'SAN',
-        // This is the field under which it's accessible
-        fieldName: 'san',
-        // URL to query from
-        url: 'https://api.santiment.net/graphql',
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
