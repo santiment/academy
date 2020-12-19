@@ -2,11 +2,47 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2020-12-02
+date: 2020-12-19
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
+
+## December 2020
+
+New home page for the Sanbase app is here!
+Now you can easily navigate to your personal watchlists, screeners, exclusive PRO features and more, directly from our home page.
+
+Charts:
+
+- “Exchange Flow Balance” settings added
+- Data from Coinbase wallets added to Exchange metrics (Inflow/Outflow/Flow Balance) for ETH and ERC20 projects
+
+Screener & Watchlists
+
+- New "save as" button for community watchlists + description field
+- Added settings for alert frequency
+- Fixed a Firefox bug with small Infographics
+- Two-way table scrolling
+- Saving indicator in the header
+
+Historical balance
+
+- Fixed project infrastructure
+
+Sanbase
+
+More data on Santiment
+We start tracking Coinbase erc20 wallets.
+
+Charts
+
+- Chart layouts stores the color settings
+- New MVRV visualisation
+- More contrast axes in the night mode
+- Assets selector has a new category "DeFi"
+- Add Recents Chart Layouts to desktop navigation dropdown
+
 
 ## November 2020
 
