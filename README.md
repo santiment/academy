@@ -5,7 +5,8 @@ This is the source for [**Santiment Technical Documentation site**](https://acad
 
 ## Running locally
 
-If you have yarn you can run the app simply:
+```  
+If you have [yarn](https://classic.yarnpkg.com/en/docs/install/) you can run the app simply:
 
 ```bash
 yarn

@@ -368,6 +368,7 @@ Each metric has metadata describing:
 - What is the default aggregation which will be used when getting the metric for
   higher resolution.
 - What are the supported aggregations for the metric.
+- What are the existed selectors for the metric.
 - Which are the projects the metric is available for.
 - What is the type of the metrics - timeseries or histogram
 
@@ -376,6 +377,7 @@ Each metric has metadata describing:
   getMetric(metric: "daily_active_addresses") {
     metadata {
       availableAggregations
+      availableSelectors
       availableSlugs
       dataType
       defaultAggregation
@@ -386,7 +388,7 @@ Each metric has metadata describing:
 ```
 
 **[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20metric%0A%20%20%20%20%20%20availableAggregations%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%20%20dataType%0A%20%20%20%20%20%20defaultAggregation%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
+explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20metric%0A%20%20%20%20%20%20availableAggregations%0A%20%20%20%20%20%20availableSelectors%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%20%20dataType%0A%20%20%20%20%20%20defaultAggregation%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 ## availableSince
 
