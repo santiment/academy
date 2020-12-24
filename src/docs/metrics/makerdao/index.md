@@ -1,5 +1,5 @@
 ---
-title: DeFi
+title: MakerDAO
 author: Maksim Razhev
 date: 2020-12-24
 description: MakerDAO Metrics
