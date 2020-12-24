@@ -15,6 +15,7 @@ import Lyudmil from "../images/people/Lyudmil.png"
 import Brian from "../images/people/Brian.png"
 import Yura from "../images/people/Yura.png"
 import Valentin from "../images/people/Valentin.png"
+import Serge from "../images/people/Serge.png"
 // import Alan from "../images/people/Alan.png"
 // import Alex from "../images/people/Alex.png"
 // import Anastasiya from "../images/people/Anastasiya.png"
@@ -114,6 +115,11 @@ export const PEOPLE = {
   "yura zatsepin": {
     description: "Product Dev Lead",
     imageUrl: Yura,
+    link: "",
+  },
+  "serge nedashkovsky": {
+    description: "Data Scientist",
+    imageUrl: Serge,
     link: "",
   },
 }
