@@ -75,4 +75,5 @@ activity.
 
 - [BitMEX](/metrics/bitmex)
 - [DeFi](/metrics/defi)
+- [MakerDAO](/metrics/makerdao)
 - [Stock To Flow](/metrics/stock-to-flow)
