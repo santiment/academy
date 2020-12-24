@@ -1,10 +1,11 @@
 ---
 title: DeFi
-author: Anatoliy
-date: 2020-06-03
-description: Total value locked in DeFi
+author: Serge Nedashkovsky, Maksim Razhev, Anatoliy
+date: 2020-12-24
+description: DeFi Metrics
 ---
-
+# Special metrics
+### [MakerDAO metrics](/metrics/makerdao)
 # Common metrics
 
 ## Description
