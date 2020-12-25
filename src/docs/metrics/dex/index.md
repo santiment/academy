@@ -8,6 +8,7 @@ description: DEX Metrics
 ## Description
 Metric related to DEX trades
 
+Segmented by DEX:
 * `total_trade_volume_by_dex` - Volume of all trades
 * `eth_based_trade_volume_by_dex` - Volume of trades that involve ETH-based tokens (ETH, WETH)
 * `stablecoin_trade_volume_by_dex` - Volume of trades that involve stablecoins (DAI, Tether, etc)
@@ -16,6 +17,8 @@ Metric related to DEX trades
 * `eth_based_trade_amount_by_dex` - Amount of trades that involve ETH-based tokens (ETH, WETH)
 * `stablecoin_trade_amount_by_dex` - Amount of trades that involve stablecoins (DAI, Tether, etc.) 
 * `other_trade_amount_by_dex` - Amount of trades that involve tokens that don't fall in any of the above categories (e.g. BAT)
+
+Segmented by DEX and asset:
 * `eth_trade_volume_by_token` - Volume of trades between ETH and a given ERC20 token
 * `stablecoin_trade_volume_by_token` - Volume of trades between stablecoins and a given ERC20 token
 * `token_eth_price_by_dex_5m` - Token ETH price segmented by dex
