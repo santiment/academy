@@ -17,9 +17,8 @@ Multi-Collateral DAI:
 * `mcd_locked_token` - The volume of collateral locked in Multi-Collateral DAI contracts, measured by a token.
 * `mcd_erc20_supply` - DAI ERC20 token total supply
 * `mcd_supply` - The total amount of Multi-Collareral DAI tokens: DAI ERC20 Supply plus  DAI in DSR
-* `mcd_collat_ratio`, `mcd_collat_ratio_weth`, `daily_dai_collat_ratio_stablecoin`, `daily_dai_collat_ratio_wbtc` - These metrics show the collateralization ratio of MCD collateral tokens.  
-  Calculated by the formula:
-                     `The volume of collateral locked in MCD * Collateral USD price / The volume of DAI created by vaults with this collateral`
+* `mcd_collat_ratio`, `mcd_collat_ratio_weth`, `daily_dai_collat_ratio_stablecoin`, `daily_dai_collat_ratio_wbtc` - These metrics show the collateralization ratio of MCD collateral tokens. Calculated by the formula:
+ <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{The\%20volume\%20of\%20collateral\%20locked\%20in\%20MCD*Collateral\%20USD\%20price}{The\%20volume\%20of\%20DAI\%20created\%20by\%20vault\%20with\%20this\%20collateral}" />
 * `mcd_dsr` - This metric shows historical and current values for Dai Savings Rate. Dai Savings Rate is a parameter that specifies the interest rate paid to DAI deposited in the DSR contract
 * `mcd_stability_fee` - This metric shows values for Stability Fee for MCD Collateral Tokens. 
 * `dai_created` - Amount of DAI created in a given time interval, segmented by the underlying collateral
@@ -85,7 +84,7 @@ USD-based Stablecoin collaterals:
 * `gemini-dollar`
 
 Assets available for metrics:
-* `mcd_locked_token`, `mcd_stability_fee, dai_created, dai_repaid` - all of the MakerDAO collateral assets
+* `mcd_locked_token`, `mcd_stability_fee`, `dai_created`, `dai_repaid` - all of the MakerDAO collateral assets
 * `scd_locked_token`, `mcd_collat_ratio_weth`, `scd_collat_ratio` - `weth`
 * `mcd_collat_ratio` - all the MakerDAO collateral assets except `weth`, `wbtc` and USD-based stablecoin collaterals
 * `daily_dai_collat_ratio_stablecoin` - USD-based stablecoin collaterals
