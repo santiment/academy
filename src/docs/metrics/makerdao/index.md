@@ -87,8 +87,8 @@ USD-based Stablecoin collaterals:
 Assets available for metrics:
 * `mcd_locked_token`, `mcd_stability_fee` - all of the MakerDAO collateral assets
 * `scd_locked_token`, `mcd_collat_ratio_weth`, `scd_collat_ratio` - `weth`
-* `mcd_collat_ratio` - all of the MakerDAO collateral assets except `weth`, `wbtc` and stablecoin collaterals
-* `daily_dai_collat_ratio_stablecoin` - stablecoin collaterals
+* `mcd_collat_ratio` - all the MakerDAO collateral assets except `weth`, `wbtc` and USD-based stablecoin collaterals
+* `daily_dai_collat_ratio_stablecoin` - USD-based stablecoin collaterals
 * `daily_dai_collat_ratio_wbtc` - `wrapped-bitcoin`
 * `mcd_erc20_supply`, `mcd_supply`, `msd_dsr`, `dai_created`, `dai_repaid` - `multi-collateral-dai`
 ---
