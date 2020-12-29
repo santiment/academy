@@ -99,6 +99,8 @@ export const REFERENCES = [
       "Ethereum Spent",
       "Exchange Funds Flow",
       "Holders Distribution",
+      "Labeled",
+      "Labeled Flow",
       "MakerDAO",
       "Mean Coin Age",
       "MVRV",
