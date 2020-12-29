@@ -13,6 +13,7 @@ time, to more easily spot how trends and events correlate with price action.
 
 Traditional fundamentals including price, volume and market cap, mean coin age
 
+- [DEX Trades](/metrics/dex)
 - [Ethereum Spent](/metrics/ethereum-spent)
 - [Marketcap in USD](/metrics/price/#marketcap-usd)
 - [Mean Coin Age](/metrics/mean-coin-age)
