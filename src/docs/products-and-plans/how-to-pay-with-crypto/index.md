@@ -1,7 +1,7 @@
 ﻿---
 title: How to pay with crypto
 author: Santiment Team
-date: 2020-09-16
+date: 2021-01-12
 description: Instructions on how to pay with crypto
 ---
 
