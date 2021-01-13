@@ -1,7 +1,7 @@
 ﻿---
 title: How to pay with crypto
 author: Santiment Team
-date: 2020-09-16
+date: 2021-01-12
 description: Instructions on how to pay with crypto
 ---
 
@@ -33,7 +33,7 @@ For any assistance on making a payment, you can contact our team at [support@san
 
 ## Burning SAN Tokens to Make Payments
 
-SAN token holders can use a token burning method to make use of their SAN holdings instead of paying for a subscription the regular way. If you're unfamiliar with what burning entails, it's simply the act of intentionally sending tokens to an invalid address to permanently remove them from the available circulating supply. 
+SAN token holders can use a token burning method to make use of their SAN holdings instead of paying for a subscription the regular way. If you're unfamiliar with what burning entails, it's simply the act of intentionally sending tokens to an invalid address to permanently remove them from the available circulating supply.
 
 Burning SAN tokens provides a substantial discount incentivization for our users who choose to take advantage of the opportunity. It lets you burn SAN tokens at a rate of twice the current market rate, which comes down to a 50% discount compared to regular payments. In addition, the total supply of SAN shrinks with every burn, benefitting all SAN holders.
 
@@ -51,11 +51,11 @@ In case you are ready to burn SAN for a yearly Sanbase Pro subscription, please 
 
 ## Providing SAN Uniswap Liquidity
 
-Another way of getting Pro access to Sanbase is currently available: Providing liquidity for the SAN/ETH trading pair on Uniswap V2!
+Another way of getting Pro access to Sanbase is currently available: Providing liquidity for the SAN/ETH or SAN/BAC trading pairs on Uniswap V2!
 
-As long as you provide 3000+ SAN to our Uniswap V2 pool (and the corresponding amount of ETH), you get FREE access to Sanbase Pro, including all our metrics, new templates and daily market insights!
+As long as you provide 3000+ SAN to our Uniswap V2 pools (and the corresponding amount of ETH or BAC), you get FREE access to Sanbase Pro, including all our metrics, new templates and daily market insights!
 
-You can add liquidity to the SAN<->ETH pool here: [https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098](https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098)
+You can add liquidity to the SAN<->ETH pool here: [https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098](https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098). The SAN<->BAC pool is here: [https://app.uniswap.org/#/add/0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098](https://app.uniswap.org/#/add/0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098)
 
 As soon as you hold the LP tokens in your wallet, let us know - and we'll activate your Pro subscription 💗
 
