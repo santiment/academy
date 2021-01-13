@@ -2,11 +2,38 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2020-12-19
+date: 2021-01-13
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
+
+## January 2021
+
+-- 13.01.2021
+
+Sanbase
+
+Alerts
+
+- Add MVRV metrics
+- Add Network Profit Loss
+
+Screener
+
+- Autorefresh toggle in Screener and Watchlist table
+- Bug fix: Correct sorting for percent columns in Screener
+
+- Bug fix: Social_active_users, miners_balance metrics
+- Bug fix: Chart Layout with empty title(?)
+- Bug fix: Checkout form night mode styles
+- Bug fix: Show the latest price on social tool
+
+Sansheets | Santiment plugin for Google sheets
+
+- Add SAN_HOLDERS_DISTRIBUTION (projectSlug, from, to, balance, interval)
+- Add SAN_BITMEX_PERPETUAL_CONTRACT_FUNDING_RATE (projectSlug, from, to, interval)
+- Add SAN_NETWORK_PROFIT_LOSS (projectSlug, from, to, interval)
 
 ## December 2020
 
