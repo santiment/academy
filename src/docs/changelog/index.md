@@ -15,16 +15,16 @@ We update this page every two weeks or more frequently.
 
 **Sanbase**
 
-Charts
+Charts & Dashboards
 - New metric "MVRV USD intraday"
-- Dashboard "Ethereum 2.0 Staking Analytics"
-- Custom intervals selector for dashboard charts
+- New dashboard ["Ethereum 2.0 Staking Analytics"](https://app.santiment.net/eth2)
+- Custom interval selector for dashboard charts
 
-Screener and Watchlists
+Screener & Watchlists
 - "Newest first" my watchlists & screeners sorting in navigation dropdown
-- Screener loading improvements: server-side pagination and sorting
+- Screener table loading improvements: server-side pagination and sorting
 - `/watchlists` and `/assets` pages stability improved
-- Watchlists and Screener SEO links
+- Watchlists and Screener pages SEO links
 
 Santrends
 - Trends table stability improved
