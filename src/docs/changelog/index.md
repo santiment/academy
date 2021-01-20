@@ -15,12 +15,23 @@ We update this page every two weeks or more frequently.
 
 **Sanbase**
 
+Charts
+- New metric "MVRV USD intraday"
+- Dashboard "Ethereum 2.0 Staking Analytics"
+- Custom intervals selector for dashboard charts
+
+Screener and Watchlists
 - "Newest first" my watchlists & screeners sorting in navigation dropdown
 - Screener loading improvements: server-side pagination and sorting
 - `/watchlists` and `/assets` pages stability improved
-- Santrends table stability improved
 - Watchlists and Screener SEO links
 
+Santrends
+- Trends table stability improved
+
+Fixes
+- Metamask login
+- Dashboards: mobile/tablet versions, projects selector
 
 
 ``24.12 - 13.01``
