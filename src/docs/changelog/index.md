@@ -31,7 +31,7 @@ Santrends
 
 Fixes
 - Metamask login
-- Dashboards: mobile/tablet versions, projects selector
+- Dashboards: mobile/tablet versions improvements
 
 
 ``24.12 - 13.01``
