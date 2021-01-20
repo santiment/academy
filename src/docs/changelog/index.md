@@ -17,13 +17,13 @@ We update this page every two weeks or more frequently.
 
 Charts & Dashboards
 - New metric "MVRV USD intraday"
-- New dashboard ["Ethereum 2.0 Staking Analytics"](https://app.santiment.net/eth2)
+- New dashboard [Ethereum 2.0 Staking Analytics](https://app.santiment.net/eth2)
 - Custom interval selector for dashboard charts
 
 Screener & Watchlists
 - "Newest first" my watchlists & screeners sorting in navigation dropdown
 - Screener table loading improvements: server-side pagination and sorting
-- `/watchlists` and `/assets` pages stability improved
+- /watchlists and /assets pages stability improved
 - Watchlists and Screener pages SEO links
 
 Santrends
@@ -31,7 +31,7 @@ Santrends
 
 Fixes
 - Metamask login
-- Dashboards: mobile/tablet versions improvements
+- Dashboards: mobile & tablet versions improvements
 
 
 ``24.12 - 13.01``
