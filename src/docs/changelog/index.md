@@ -2,7 +2,7 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-01-13
+date: 2021-01-20
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
@@ -10,9 +10,22 @@ We update this page every two weeks or more frequently.
 
 ## January 2021
 
--- 13.01.2021
 
-Sanbase
+``14.01 - 20.01``
+
+**Sanbase**
+
+- "Newest first" my watchlists & screeners sorting in navigation dropdown
+- Screener loading improvements: server-side pagination and sorting
+- `/watchlists` and `/assets` pages stability improved
+- Santrends table stability improved
+- Watchlists and Screener SEO links
+
+
+
+``24.12 - 13.01``
+
+**Sanbase**
 
 Alerts
 
@@ -29,13 +42,36 @@ Screener
 - Bug fix: Checkout form night mode styles
 - Bug fix: Show the latest price on social tool
 
-Sansheets | Santiment plugin for Google sheets
+**Sansheets | Santiment plugin for Google sheets**
 
 - Add SAN_HOLDERS_DISTRIBUTION (projectSlug, from, to, balance, interval)
 - Add SAN_BITMEX_PERPETUAL_CONTRACT_FUNDING_RATE (projectSlug, from, to, interval)
 - Add SAN_NETWORK_PROFIT_LOSS (projectSlug, from, to, interval)
 
 ## December 2020
+
+``17.12 - 23.12``
+
+Screener
+- Ability to filter assets through your watchlists
+
+Santrends
+- New design for trends page/table
+
+Alerts
+- New metric 'Network profit/loss'
+
+Account settings
+- Show monthly usage of API calls
+
+Historical balance
+- Address’ labels, comments and latest transactions
+- Recently viewed “Chart layouts” on home page
+- Lookup wallets using global search
+- Watchlists for addresses
+
+
+``10.12 - 16.12``
 
 New home page for the Sanbase app is here!
 Now you can easily navigate to your personal watchlists, screeners, exclusive PRO features and more, directly from our home page.
