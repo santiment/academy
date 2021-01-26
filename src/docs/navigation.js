@@ -96,6 +96,7 @@ export const REFERENCES = [
       "Development Activity",
       "Dormant Circulation",
       "Emerging Trends",
+      "ETH 2",
       "Ethereum Spent",
       "Exchange Funds Flow",
       "Holders Distribution",
