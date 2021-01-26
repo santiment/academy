@@ -1,12 +1,12 @@
 ---
-title: Labeled Metrics
+title: Labeled Exchange
 author: Maksim Razhev
 date: 2020-12-24
-description: Labeled Metrics
+description: Labeled Exchange Metrics
 ---
 
 ## Description
-Metrics that shows various stats of labeled addresses
+Metrics that show various stats of labeled addresses
 
 * `active_deposits_per_exchange` - number of deposit addresses received funds from users' addresses over all exchange names
 * `active_withdrawals_per_exchange` - number df addresses received withdrawals from centralized exchanges over all exchange names
