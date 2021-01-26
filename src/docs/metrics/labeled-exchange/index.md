@@ -50,9 +50,8 @@ Available labels:
 ---
 
 ## Available Assets
-
-`ethereum`, All ERC20 assets 
-
+* `ethereum`
+* All ERC20 assets 
 
 ---
 
