@@ -12,11 +12,11 @@ Metrics that shows various stats of labeled addresses
 * `active_withdrawals_per_exchange` - number df addresses received withdrawals from centralized exchanges over all exchange names
 * `deposit_transactions_per_exchange` - number of transactions sent to deposit addresses over all exchange names
 * `withdrawal_transactions_per_exchange` - number of withdrawal transactions from centralized exchanges over all exchange names
-* `inflow_per_label_and_owner,outflow_per_label_and_owner,balance_per_label_and_owner_delta,balance_per_owner` - inflow/outflow/balance of a given owner
+* `inflow_per_label_and_owner`, `outflow_per_label_and_owner`, `balance_per_label_and_owner_delta`, `balance_per_owner` - inflow/outflow/balance of a given owner
 
 Available labels:
-* `active_deposits_per_exchange,active_withdrawals_per_exchange,deposit_transactions_per_exchange,withdrawal_transactions_per_exchange` - `centralized_exchange`
-* `inflow_per_label_and_owner,outflow_per_label_and_owner,balance_per_label_and_owner_delta,balance_per_owner` - `centralized_exchange`, `decentralized_exchange`, `defi, eth2stakingcontract, deposit`
+* `active_deposits_per_exchange`, `active_withdrawals_per_exchange`, `deposit_transactions_per_exchange`, `withdrawal_transactions_per_exchange` - `centralized_exchange`
+* `inflow_per_label_and_owner`, `outflow_per_label_and_owner`, `balance_per_label_and_owner_delta`, `balance_per_owner` - `centralized_exchange`, `decentralized_exchange`, `defi`, `eth2stakingcontract`, `deposit`
 
 ---
 
@@ -28,8 +28,8 @@ Available labels:
 
 ## Measuring Unit
 
-* `active_deposits_per_exchange, active_withdrawals_per_exchange` - Amount of addresses
-* `deposit_transactions_per_exchange, withdrawal_transactions_per_exchange` - Amount of transactions
+* `active_deposits_per_exchange`, `active_withdrawals_per_exchange` - Amount of addresses
+* `deposit_transactions_per_exchange`, `withdrawal_transactions_per_exchange` - Amount of transactions
 * Other - Amount of tokens
 
 ---
@@ -42,7 +42,7 @@ Available labels:
 
 ## Frequency
 
-* `active_deposits_per_exchange, active_withdrawals_per_exchange, deposit_transactions_per_exchange, withdrawal_transactions_per_exchange` - [Daily-minute Intervals](/metrics/details/frequency#daily-freqency)
+* `active_deposits_per_exchange`, `active_withdrawals_per_exchange`, `deposit_transactions_per_exchange`, `withdrawal_transactions_per_exchange` - [Daily Intervals](/metrics/details/frequency#daily-freqency)
 * Other - [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
@@ -55,8 +55,8 @@ Available labels:
 
 ## Available Assets
 
-* `active_deposits_per_exchange,active_withdrawals_per_exchange,deposit_transactions_per_exchange,withdrawal_transactions_per_exchange` - `ethereum`, All ERC20 assets 
-* `inflow_per_label_and_owner,outflow_per_label_and_owner,balance_per_label_and_owner_delta,balance_per_owner` - `ethereum`, `bitcoin`, All ERC20 assets 
+* `active_deposits_per_exchange`, `active_withdrawals_per_exchange`, `deposit_transactions_per_exchange`, `withdrawal_transactions_per_exchange` - `ethereum`, All ERC20 assets 
+* `inflow_per_label_and_owner`, `outflow_per_label_and_owner`, `balance_per_label_and_owner_delta`, `balance_per_owner` - `ethereum`, `bitcoin`, All ERC20 assets 
 
 ---
 
