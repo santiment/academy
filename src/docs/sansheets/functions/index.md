@@ -650,14 +650,30 @@ specifically when price goes up as volume goes down. Currency can be displayed i
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 
-## SAN_PRICES
+## SAN_PRICE
 
-##### SAN_PRICES(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_PRICE(projectSlug, from, to) ⇒ <code>Array</code>
 
 Returns the prices for the specified asset, during a given time interval.
 
 - **Kind**: global function
 - **Returns**: <code>Array</code> - of prices.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+
+## SAN_PRICE_VOLUME
+
+##### SAN_PRICE_VOLUME(projectSlug, from, to) ⇒ <code>Array</code>
+
+Returns the prices and volumes for the specified asset, during a given time interval.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of prices and volumes.
 - **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
@@ -713,6 +729,20 @@ of all wallets holding tokens at the moment.
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
 | timeBound   | <code>string</code> | The metric is calculated only by taking into account the coins/tokens that have moved in the past number of years or days.                                                             |
+
+## SAN_REVERSE
+
+##### SAN_REVERSE(array) ⇒ <code>Array</code>
+
+Returns the reversed array of the results
+
+**Kind**: global function  
+**Returns**: <code>Array</code> - of reversed results  
+**Customfunction**:   
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| array | <code>Array</code> | The array of results |
 
 ## SAN_SOCIAL_DOMINANCE
 
@@ -906,6 +936,22 @@ Returns the token's velocity.
 
 - **Kind**: global function
 - **Returns**: <code>Array</code> - of token velocity values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+
+## SAN_VOLUME
+
+##### SAN_VOLUME(projectSlug, from, to) ⇒ <code>Array</code>
+
+Returns the token's volumes for a given time period.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of token volumes. 
 - **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
