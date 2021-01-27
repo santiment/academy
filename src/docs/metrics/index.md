@@ -66,7 +66,7 @@ activity.
 - [Circulation](/metrics/circulation)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [Holders Distribution](/metrics/holders-distribution)
-- [ETH 2.0](/metrics/eth2)  
+- [ETH 2.0](/metrics/eth-2)  
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
