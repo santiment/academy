@@ -10,25 +10,27 @@ Metrics related to Decentralized Exchanges (DEX) trades of ERC20 tokens and ETH.
 
 Segmented by DEX:
 * `total_trade_volume_by_dex` - Volume of all trades
-* `eth_based_trade_volume_by_dex` - Volume of trades that involve ETH-Based tokens\*
-* `stablecoin_trade_volume_by_dex` - Volume of trades that involve Stablecoins\*\*
+* `eth_based_trade_volume_by_dex` - Volume of trades that involve ETH-Based tokens<sup>[1](#eth-based-tokens)</sup>
+* `stablecoin_trade_volume_by_dex` - Volume of trades that involve Stablecoins<sup>[2](#usd-based-stablecoins)</sup>
 * `other_trade_volume_by_dex` - Volume of trades that involve tokens that don't fall in any of the above categories 
   (e.g. BAT)
 * `total_trade_amount_by_dex` - Amount of all trades
-* `eth_based_trade_amount_by_dex` - Amount of trades that involve ETH-Based tokens\*
-* `stablecoin_trade_amount_by_dex` - Amount of trades that involve Stablecoins\*\*
+* `eth_based_trade_amount_by_dex` - Amount of trades that involve ETH-Based tokens<sup>[1](#eth-based-tokens)</sup>
+* `stablecoin_trade_amount_by_dex` - Amount of trades that involve Stablecoins<sup>[2](#usd-based-stablecoins)</sup>
 * `other_trade_amount_by_dex` - Amount of trades that involve tokens that don't fall in any of the above categories 
   (e.g. BAT)  
 
 Segmented by DEX and asset:
 * `eth_trade_volume_by_token` - Volume of trades between ETH-Based tokens and a given ERC20 token
-* `stablecoin_trade_volume_by_token` - Volume of trades between Stablecoins\*\* and a given ERC20 token
-* `token_eth_price_by_dex_5m` - Token ETH price segmented by DEX for trades between ETH-Based tokens\* and a given 
+* `stablecoin_trade_volume_by_token` - Volume of trades between Stablecoins<sup>[2](#usd-based-stablecoins)</sup> and a given ERC20 token
+* `token_eth_price_by_dex_5m` - Token ETH price segmented by DEX for trades between ETH-Based tokens<sup>[1](#eth-based-tokens)</sup> and a given 
   ERC20 token
 
 ---
-_\* ETH-based tokens - ETH, ETH Kyber, WETH, ETHWrapped and Bancor ETH._   
-_\*\* USD-based Stablecoins - Tether, USD coin, DAI, Binance USD, TrueUSD and etc._
+### ETH Based Tokens
+ETH, ETH Kyber, WETH, ETHWrapped and Bancor ETH.
+### USD-based Stablecoins
+Tether, USD coin, DAI, Binance USD, TrueUSD and etc.
 
 ## Access
 
