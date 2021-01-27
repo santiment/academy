@@ -27,7 +27,7 @@ Total Value Locked metrics:
 
 ## Measuring Unit
 
-Dollars/Amount of coins
+Amount of USD Dollars / ETH 
 
 ---
 
@@ -50,7 +50,7 @@ Dollars/Amount of coins
 ---
 
 ## Available Assets
-Available for `ethereum` and `usd`.
+Available for `ethereum`.
 
 ---
 
