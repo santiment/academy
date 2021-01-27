@@ -52,7 +52,7 @@ Metrics that show stats related to the ETH 2.0 Staking Contract
 ETH 2.0 Staker Count:
 ```graphql
 {
-  getMetric(metric: "eth2_staker_count") {
+  getMetric(metric: "eth2_stakers_count") {
     timeseriesData(
       selector: {
         slug: "ethereum"
