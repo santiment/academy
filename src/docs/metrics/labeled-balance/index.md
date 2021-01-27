@@ -1,7 +1,7 @@
 ---
 title: Labeled Balance
 author: Maksim Razhev
-date: 2021-01-26
+date: 2021-01-28
 description: Labeled Balance Metrics
 ---
 
@@ -13,7 +13,7 @@ Metrics that show labeled addresses inflow, outflow and balances
 * `balance_per_label_and_owner_delta` - balance change of a given owner
 * `balance_per_owner` - balance of a given owner
 
-Available labels:
+Available [labels](/labels):
 * `centralized_exchange`
 * `decentralized_exchange`
 * `defi`

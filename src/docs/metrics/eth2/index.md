@@ -1,7 +1,7 @@
 ---
 title: ETH 2.0 Metrics
 author: Maksim Razhev
-date: 2021-01-26
+date: 2021-01-28
 description: ETH 2.0 Metrics
 ---
 
