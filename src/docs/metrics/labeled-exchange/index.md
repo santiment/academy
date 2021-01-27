@@ -1,7 +1,7 @@
 ---
 title: Labeled Exchange
 author: Maksim Razhev
-date: 2020-12-24
+date: 2021-01-28
 description: Labeled Exchange Metrics
 ---
 
@@ -13,7 +13,7 @@ Metrics that show various stats of labeled addresses
 * `deposit_transactions_per_exchange` - number of transactions sent to deposit addresses over all exchange names
 * `withdrawal_transactions_per_exchange` - number of withdrawal transactions from centralized exchanges over all exchange names
 
-Available labels:
+Available [labels](/labels):
 * `centralized_exchange`
 
 ---

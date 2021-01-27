@@ -1,7 +1,7 @@
 ---
 title: MakerDAO
 author: Maksim Razhev, Serge Nedashkovsky
-date: 2020-12-24
+date: 2021-01-28
 description: MakerDAO Metrics
 ---
 
