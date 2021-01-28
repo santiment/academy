@@ -13,6 +13,7 @@ time, to more easily spot how trends and events correlate with price action.
 
 Traditional fundamentals including price, volume and market cap, mean coin age
 
+- [DEX Trades](/metrics/dex)
 - [Ethereum Spent](/metrics/ethereum-spent)
 - [Marketcap in USD](/metrics/price/#marketcap-usd)
 - [Mean Coin Age](/metrics/mean-coin-age)
@@ -65,7 +66,11 @@ activity.
 - [Circulation](/metrics/circulation)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [Holders Distribution](/metrics/holders-distribution)
+- [ETH 2.0](/metrics/eth-2)  
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
+- [Labeled Balance](/metrics/labeled-balance)
+- [Labeled Exchange](/metrics/labeled-exchange)
+- [Labeled Flow](/metrics/labeled-flow)
 - [Supply On Or Outside Exchanges](/metrics/supply-on-or-outside-exchanges)
 - [Top Holders](/metrics/top-holders)
 - [Transaction Volume](/metrics/transaction-volume)
@@ -75,4 +80,5 @@ activity.
 
 - [BitMEX](/metrics/bitmex)
 - [DeFi](/metrics/defi)
+- [MakerDAO](/metrics/makerdao)
 - [Stock To Flow](/metrics/stock-to-flow)

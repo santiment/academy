@@ -1,13 +1,21 @@
 ---
 title: DeFi
-author: Anatoliy
-date: 2020-06-03
-description: Total value locked in DeFi
+author: Serge Nedashkovsky, Maksim Razhev, Anatoliy
+date: 2020-12-24
+description: DeFi Metrics
 ---
+# Special metrics
+### [MakerDAO metrics](/metrics/makerdao)
+# Common metrics
 
 ## Description
- 
-Shows total value locked in DeFi projects, available in USD and ETH.  
+
+Metrics related to DeFi protocols
+
+[Flow and balance metrics](/metrics/labeled-balance)
+
+Total Value Locked metrics:
+* `defi_total_value_locked_[usd/eth]` - Shows total value locked in DeFi projects, available in USD and ETH.
 
 ---
 
@@ -19,7 +27,7 @@ Shows total value locked in DeFi projects, available in USD and ETH.
 
 ## Measuring Unit
 
-Dollars/Amount of coins
+Amount of USD Dollars / ETH 
 
 ---
 
@@ -42,13 +50,11 @@ Dollars/Amount of coins
 ---
 
 ## Available Assets
-
 Available for `ethereum`.
 
 ---
 
 ### SanAPI
-
 Amount of total locked ETH coins is available under the `defi_total_value_locked_eth` name.
 
 ```graphql
