@@ -2,7 +2,7 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-01-20
+date: 2021-01-28
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
@@ -10,6 +10,11 @@ We update this page every two weeks or more frequently.
 
 ## January 2021
 
+``20.01 - 27.01``
+
+- Historical balance: New Money Flow chart
+- Mobile & Tablet & Laptop styles many fixes
+- Bug fix: dashboard's charts
 
 ``14.01 - 20.01``
 
