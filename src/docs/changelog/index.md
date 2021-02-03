@@ -2,11 +2,29 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-01-28
+date: 2021-02-03
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
+
+## February 2021
+
+``27.01 - 03.02``
+
+Sanbase
+
+- Add zero step app's new version upgrade
+- Add new ETH 2.0 ROI widget
+- New category "addresses"  in "My watchlists"
+- Drag and drop chart rearrangement in the Mapview
+![d&d_chart_layouts_sort](dd_chart_layouts_sort.gif)
+- Allowing to draw on chart for non-beta users
+
+Screener: 
+
+- 200+ new columns (all metrics that supported in filter)
+- Fix "Circulation 180 $" filter + percent filter for that
 
 ## January 2021
 
