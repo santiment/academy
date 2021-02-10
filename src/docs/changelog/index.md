@@ -2,13 +2,31 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-02-03
+date: 2021-02-10
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
 ## February 2021
+
+``04.02 - 10.02``
+
+SanSheets
+
+- SAN_PRICES will be deprecated in the future
+- New functions: SAN_PRICE_VOLUME, SAN_PRICE
+
+Sanbase
+  Alerts has new available metrics:
+    * Holders distributions
+    * Whale transaction count
+    * Bitmex
+    * Mean age
+    * Mean dollar invested age
+    * NVT
+    * Withdrawal transactions
+  Home page: Show percent changes for recent watchlists/screeners
 
 ``27.01 - 03.02``
 
