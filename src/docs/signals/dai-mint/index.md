@@ -2,7 +2,7 @@
 title: DAI Mint
 author: Alex
 date: 2021-02-11
-description: test
+description: Signal indicating a large DAI portion was minted
 ---
 
 ## Definition
