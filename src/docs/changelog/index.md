@@ -18,15 +18,18 @@ SanSheets
 - New functions: SAN_PRICE_VOLUME, SAN_PRICE
 
 Sanbase
-  Alerts has new available metrics:
-    * Holders distributions
-    * Whale transaction count
-    * Bitmex
-    * Mean age
-    * Mean dollar invested age
-    * NVT
-    * Withdrawal transactions
-  Home page: Show percent changes for recent watchlists/screeners
+
+- Alerts has new available metrics:
+  - Holders distributions 
+  - Whale transaction count
+  - Bitmex 
+  - Mean age
+  - Mean dollar invested age
+  - NVT
+  - Withdrawal transactions
+  
+- Home page: Show percent changes for recent watchlists/screeners
+- Screener: reorder columms ability, saving table sorting, fix flow metrics names
 
 ``27.01 - 03.02``
 
