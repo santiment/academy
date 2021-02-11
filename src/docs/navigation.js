@@ -132,6 +132,13 @@ export const REFERENCES = [
 
 export const RESOURCES = [
   {
+    title: "Signals",
+    description: "Documentation for Santiment signals",
+    articles: [
+      "DAI Mint"
+    ]
+  },
+  {
     title: "Labels",
     description: "Our labels vision for crypto wallets",
     articles: []

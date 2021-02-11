@@ -17,8 +17,8 @@ import Yura from "../images/people/Yura.png"
 import Valentin from "../images/people/Valentin.png"
 import Serge from "../images/people/Serge.png"
 import MaksimR from '../images/people/MaksimR.png'
+import Alex from "../images/people/Alex.png"
 // import Alan from "../images/people/Alan.png"
-// import Alex from "../images/people/Alex.png"
 // import Anastasiya from "../images/people/Anastasiya.png"
 // import Jia from "../images/people/Jia.png"
 // import Dima from "../images/people/Dima.png"
@@ -71,6 +71,11 @@ export const PEOPLE = {
   ante: {
     description: "Big Data Engineer",
     imageUrl: Ante,
+    link: "",
+  },
+  alex: {
+    description: "Data Scientist",
+    imageUrl: Alex,
     link: "",
   },
   "ivan klimuk": {

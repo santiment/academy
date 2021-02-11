@@ -4,8 +4,7 @@
 This is the source for [**Santiment Technical Documentation site**](https://academy.santiment.net)
 
 ## Running locally
-
-```  
+  
 If you have [yarn](https://classic.yarnpkg.com/en/docs/install/) you can run the app simply:
 
 ```bash
