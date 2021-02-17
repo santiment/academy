@@ -2,13 +2,23 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-02-10
+date: 2021-02-17
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
 ## February 2021
+
+``11.02 - 17.02``
+
+Sanbase
+
+- Alerts:
+  - Absolute/percent settings for wallet's alert
+  - LTC/BCH/XRP addresses in wallet's tracker
+- Screener: Enhance share popup, horizontal scroll for big tables
+- Beta: Dashboard "ETH Token Trading Analysis"
 
 ``04.02 - 10.02``
 
