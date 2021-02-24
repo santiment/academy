@@ -2,13 +2,32 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-02-17
+date: 2021-02-24
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
 ## February 2021
+
+``17.02 - 24.02``
+
+Sanbase
+
+- Add metric: Whale Transactions Count
+    Number of Transactions Transferring More Than 100k USD
+- 'Explore screeners' category in Navigation Header Dropdown
+- Charts
+    - Metrics’ stability improved
+    - Customizable axes
+    - New auto-hide/lock sidebar flow
+- Bugfixes
+    - Alerts with wrong settings
+    - Infographics loading on screener
+
+SanSheets
+
+- Social volume metric: Add twitter as a source, add TOTAL source
 
 ``11.02 - 17.02``
 
