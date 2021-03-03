@@ -8,6 +8,22 @@ date: 2021-02-24
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
+## March 2021
+
+``25.02 - 03.03``
+
+Sanbase
+
+- Add sharing link for cabinet section: [https://app.santiment.net/#cabinet](https://app.santiment.net/#cabinet)
+- Reset 'Error' view on page change
+- Add metric 'mvrv_usd_z_score'
+- Chart's stability improved
+
+SanSheets
+- Added a new function for marketcap (SAN_MARKETCAP) which uses the ``marketcap_<currency>`` getMetric metric
+
+
+
 ## February 2021
 
 ``17.02 - 24.02``
