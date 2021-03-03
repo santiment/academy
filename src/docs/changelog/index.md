@@ -20,7 +20,7 @@ Sanbase
 - Chart's stability improved
 
 SanSheets
-- Added a new function for marketcap (SAN_MARKETCAP) which uses the ``marketcap_<currency>`` getMetric metric
+- Added a new function for marketcap (`SAN_MARKETCAP`) which uses the `marketcap_<currency>` getMetric metric
 
 
 
