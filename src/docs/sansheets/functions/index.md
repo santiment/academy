@@ -1,19 +1,19 @@
 ---
 title: Functions we offer
 author: Santiment Team
-date: 2019-11-04
+date: 2021-3-8
 ---
 
 ## SAN_ACTIVE_ADDRESSES
 
-##### SAN_ACTIVE_ADDRESSES(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_ACTIVE_ADDRESSES(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the active addresses for the specified asset, during a given time interval.
 Active Addresses" refers to the number of unique addresses that
 participated in transactions on a blockchain.
 
 - **Kind**: global function
-- **Returns**: <code>Array</code> - of daily active addresses numbers.
+- **Returns**: <code>Array</code> - of active addresses.
 - **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
@@ -21,10 +21,11 @@ participated in transactions on a blockchain.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
 
 ## SAN_ACTIVE_ADDRESSES_24H
 
-#### SAN_ACTIVE_ADDRESSES_24H(projectSlug, from, to, interval) ⇒ <code>Array</code>
+##### SAN_ACTIVE_ADDRESSES_24H(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the active addresses for the specified asset, during a given time interval.
 Active Addresses" refers to the number of unique addresses that
@@ -39,11 +40,49 @@ participated in transactions on a blockchain.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| interval | <code>string</code> | The resolution with which the data is fetched. Example: "5m" |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_ACTIVE_ADDRESSES_24H_AGGREGATED
+
+##### SAN_ACTIVE_ADDRESSES_24H_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the active addresses for the specified asset, during a given time interval.
+Active Addresses" refers to the number of unique addresses that
+participated in transactions on a blockchain.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated active addresses for the last 24 hours.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
+
+## SAN_ACTIVE_ADDRESSES_AGGREGATED
+
+##### SAN_ACTIVE_ADDRESSES_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the active addresses for the specified asset, during a given time interval.
+Active Addresses" refers to the number of unique addresses that
+participated in transactions on a blockchain.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated active addresses.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_ACTIVE_DEPOSITS
 
-##### SAN_ACTIVE_DEPOSITS(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_ACTIVE_DEPOSITS(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns number of unique deposit addresses that have been active for a project.
 
@@ -56,10 +95,28 @@ Returns number of unique deposit addresses that have been active for a project.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_ACTIVE_DEPOSITS_AGGREGATED
+
+##### SAN_ACTIVE_DEPOSITS_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns number of unique deposit addresses that have been active for a project.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated deposit address numbers.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_AGE_DESTROYED
 
-##### SAN_AGE_DESTROYED(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_AGE_DESTROYED(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the token's age destroyed
 
@@ -72,6 +129,24 @@ Returns the token's age destroyed
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_AGE_DESTROYED_AGGREGATED
+
+##### SAN_AGE_DESTROYED_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the token's age destroyed
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated age destroyed values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_ALL_PROJECTS
 
@@ -86,9 +161,43 @@ ETH spent in the last 7 days, ETH spent in the last day.
 - **Returns**: <code>Array</code> - of all projects.
 - **Customfunction**:
 
+## SAN_BITMEX_PERPETUAL_CONTRACT_FUNDING_RATE
+
+##### SAN_BITMEX_PERPETUAL_CONTRACT_FUNDING_RATE(projectSlug, from, to, interval) ⇒ <code>Array</code>
+
+Returns the funding rates that are paid by one of the sides of the perpetual contract to the other
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of the funding rates that are paid by one of the sides of the perpetual contract to the other
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_BITMEX_PERPETUAL_CONTRACT_FUNDING_RATE_AGGREGATED
+
+##### SAN_BITMEX_PERPETUAL_CONTRACT_FUNDING_RATE_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the funding rates that are paid by one of the sides of the perpetual contract to the other
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated the funding rates that are paid by one of the sides of the perpetual contract to the other
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
+
 ## SAN_DAILY_AVG_MARKETCAP
 
-##### SAN_DAILY_AVG_MARKETCAP(projectSlug, from, to, currency) ⇒ <code>Array</code>
+##### SAN_DAILY_AVG_MARKETCAP(projectSlug, from, to, currency, interval) ⇒ <code>Array</code>
 
 Returns the daily average marketcap.
 
@@ -102,10 +211,29 @@ Returns the daily average marketcap.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_DAILY_AVG_MARKETCAP_AGGREGATED
+
+##### SAN_DAILY_AVG_MARKETCAP_AGGREGATED(projectSlug, from, to, currency, aggregation) ⇒ <code>number</code>
+
+Returns the daily average marketcap.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated daily average marketcaps.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_DAILY_CLOSING_MARKETCAP
 
-##### SAN_DAILY_CLOSING_MARKETCAP(projectSlug, from, to, currency) ⇒ <code>Array</code>
+##### SAN_DAILY_CLOSING_MARKETCAP(projectSlug, from, to, currency, interval) ⇒ <code>Array</code>
 
 Returns the daily closing marketcap.
 
@@ -119,6 +247,25 @@ Returns the daily closing marketcap.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_DAILY_CLOSING_MARKETCAP_AGGREGATED
+
+##### SAN_DAILY_CLOSING_MARKETCAP_AGGREGATED(projectSlug, from, to, currency, aggregation) ⇒ <code>number</code>
+
+Returns the daily closing marketcap.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated daily closing marketcaps.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_DAILY_CLOSING_PRICE
 
@@ -216,7 +363,7 @@ Returns top ETH transactions for project's team wallets.
 
 ## SAN_EXCHANGE_BALANCE
 
-##### SAN_EXCHANGE_BALANCE(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_EXCHANGE_BALANCE(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the exchange balance.
 
@@ -229,6 +376,24 @@ Returns the exchange balance.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_EXCHANGE_BALANCE_AGGREGATED
+
+##### SAN_EXCHANGE_BALANCE_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the exchange balance.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated exchange balances.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_EXCHANGE_FUNDS_FLOW
 
@@ -249,7 +414,7 @@ the tokens that were withdrawn from an exchange for a given slug and time interv
 
 ## SAN_EXCHANGE_INFLOW
 
-##### SAN_EXCHANGE_INFLOW(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_EXCHANGE_INFLOW(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the exchange inflow.
 
@@ -262,10 +427,28 @@ Returns the exchange inflow.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_EXCHANGE_INFLOW_AGGREGATED
+
+##### SAN_EXCHANGE_INFLOW_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the exchange inflow.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated exchange inflows.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_EXCHANGE_OUTFLOW
 
-##### SAN_EXCHANGE_OUTFLOW(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_EXCHANGE_OUTFLOW(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the exchange outflow.
 
@@ -278,10 +461,28 @@ Returns the exchange outflow.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_EXCHANGE_OUTFLOW_AGGREGATED
+
+##### SAN_EXCHANGE_OUTFLOW_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the exchange outflow.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated exchange outflows.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_EXCHANGE_PERCENT_OF_SUPPLY
 
-#### SAN_EXCHANGE_PERCENT_OF_SUPPLY(projectSlug, from, to, interval) ⇒ <code>Array</code>
+##### SAN_EXCHANGE_PERCENT_OF_SUPPLY(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns exchange percent of total supply.
 
@@ -294,7 +495,24 @@ Returns exchange percent of total supply.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| interval | <code>string</code> | The resolution with which the data is fetched. Example: "5m" |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_EXCHANGE_PERCENT_OF_SUPPLY_AGGREGATED
+
+##### SAN_EXCHANGE_PERCENT_OF_SUPPLY_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns exchange percent of total supply.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated exchange percent of total supply.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_FUNCTIONS
 
@@ -359,7 +577,7 @@ Returns the historical balance for a given ERC20 or ETH address.
 
 ## SAN_HISTORICAL_BALANCE_DEDUP
 
-#### SAN_HISTORICAL_BALANCE_DEDUP(projectSlug, from, to, interval) ⇒ <code>Array</code>
+##### SAN_HISTORICAL_BALANCE_DEDUP(projectSlug, from, to, address) ⇒ <code>Array</code>
 
 Returns the historical balance for a given ERC20 or ETH address.
 
@@ -372,7 +590,7 @@ Returns the historical balance for a given ERC20 or ETH address.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| interval | <code>string</code> | The resolution with which the data is fetched. Example: "5m" |
+| address     | <code>string</code> | ERC20 or ETH address.                                                                                                                                                                  |
 
 ## SAN_HISTORY_TWITTER_DATA
 
@@ -390,6 +608,42 @@ Returns the historical count of twitter followers.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 
+## SAN_HOLDERS_DISTRIBUTION
+
+##### SAN_HOLDERS_DISTRIBUTION(projectSlug, from, to, balance, interval) ⇒ <code>Array</code>
+
+Represents the total number of addresses holding the given amount of tokens.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of total number of addresses holding the given amount of tokens.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| balance     | <code>string</code> | Interval of amount of tokens. Example: "0-0.001"                                                                                                                                       |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_HOLDERS_DISTRIBUTION_AGGREGATED
+
+##### SAN_HOLDERS_DISTRIBUTION_AGGREGATED(projectSlug, from, to, balance, aggregation) ⇒ <code>number</code>
+
+Represents the total number of addresses holding the given amount of tokens.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated total number of addresses holding the given amount of tokens.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| balance     | <code>string</code> | An interval of amount of tokens, which the holders behold. Example: "0-0.001"                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
+
 ## SAN_LATEST_PRICE
 
 ##### SAN_LATEST_PRICE(projectSlug, currency) ⇒ <code>number</code>
@@ -405,9 +659,45 @@ Returns the latest price for a given asset in a desired currency.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | currency    | <code>string</code> | The currency in which the data should be presented. Either "USD" or "BTC".                                                                                                             |
 
+## SAN_MARKETCAP
+
+##### SAN_MARKETCAP(projectSlug, from, to, currency, interval) ⇒ <code>Array</code>
+
+Returns the marketcap for a slug.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of the slug's marketcap.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_MARKETCAP_AGGREGATED
+
+##### SAN_MARKETCAP_AGGREGATED(projectSlug, from, to, currency, aggregation) ⇒ <code>number</code>
+
+Returns the marketcap for a slug.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated the slug's marketcap.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
+
 ## SAN_MEAN_AGE
 
-##### SAN_MEAN_AGE(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_MEAN_AGE(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the token's mean age.
 
@@ -420,10 +710,28 @@ Returns the token's mean age.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_MEAN_AGE_AGGREGATED
+
+##### SAN_MEAN_AGE_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the token's mean age.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated mean age values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_MEAN_DOLLAR_INVESTED_AGE
 
-#### SAN_MEAN_DOLLAR_INVESTED_AGE(projectSlug, from, to, interval) ⇒ <code>Array</code>
+##### SAN_MEAN_DOLLAR_INVESTED_AGE(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the token's mean dollar invested age.
 
@@ -436,11 +744,28 @@ Returns the token's mean dollar invested age.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| interval | <code>string</code> | The resolution with which the data is fetched. Example: "5m" |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_MEAN_DOLLAR_INVESTED_AGE_AGGREGATED
+
+##### SAN_MEAN_DOLLAR_INVESTED_AGE_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the token's mean dollar invested age.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated mean dollar invested age values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_MEAN_REALIZED_PRICE
 
-##### SAN_MEAN_REALIZED_PRICE(projectSlug, from, to, currency, timeBound) ⇒ <code>Array</code>
+##### SAN_MEAN_REALIZED_PRICE(projectSlug, from, to, currency, timeBound, interval) ⇒ <code>Array</code>
 
 Returns the mean realized price.
 
@@ -454,7 +779,27 @@ Returns the mean realized price.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
-| timeBound   | <code>string</code> | The metric is calculated only by taking into account the coins/tokens that have moved in the past number of years or days.                                                             |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years or days.                                                             |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_MEAN_REALIZED_PRICE_AGGREGATED
+
+##### SAN_MEAN_REALIZED_PRICE_AGGREGATED(projectSlug, from, to, currency, timeBound, aggregation) ⇒ <code>number</code>
+
+Returns the mean realized price.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated mean realized prices.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years/days.                                                                |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_MINERS_BALANCE
 
@@ -493,7 +838,7 @@ Currently only ETH is supported.
 
 ## SAN_MVRV_LONG_SHORT_DIFF
 
-##### SAN_MVRV_LONG_SHORT_DIFF(projectSlug, from, to, currency) ⇒ <code>Array</code>
+##### SAN_MVRV_LONG_SHORT_DIFF(projectSlug, from, to, currency, interval) ⇒ <code>Array</code>
 
 Returns the difference between MVRV.
 
@@ -507,10 +852,29 @@ Returns the difference between MVRV.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_MVRV_LONG_SHORT_DIFF_AGGREGATED
+
+##### SAN_MVRV_LONG_SHORT_DIFF_AGGREGATED(projectSlug, from, to, currency, aggregation) ⇒ <code>number</code>
+
+Returns the difference between MVRV.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated MVRV differences.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_MVRV_RATIO
 
-##### SAN_MVRV_RATIO(projectSlug, from, to, currency, timeBound) ⇒ <code>Array</code>
+##### SAN_MVRV_RATIO(projectSlug, from, to, currency, timeBound, interval) ⇒ <code>Array</code>
 
 Returns MVRV(Market-Value-to-Realized-Value).
 
@@ -524,17 +888,36 @@ Returns MVRV(Market-Value-to-Realized-Value).
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
-| timeBound   | <code>string</code> | The metric is calculated only by taking into account the coins/tokens that have moved in the past number of years or days.                                                             |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years or days.                                                             |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_MVRV_RATIO_AGGREGATED
+
+##### SAN_MVRV_RATIO_AGGREGATED(projectSlug, from, to, currency, timeBound, aggregation) ⇒ <code>number</code>
+
+Returns MVRV(Market-Value-to-Realized-Value).
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated MVRV ratios.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years/days.                                                                |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_NETWORK_GROWTH
 
-##### SAN_NETWORK_GROWTH(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_NETWORK_GROWTH(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
-Returns the number of new addresses being created on the project network
-for a given slug and time interval.
+Returns the token's network growth
 
 - **Kind**: global function
-- **Returns**: <code>Array</code> - of number of new addresses.
+- **Returns**: <code>Array</code> - of network growth.
 - **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
@@ -542,38 +925,73 @@ for a given slug and time interval.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
 
-## SAN_NEWS
+## SAN_NETWORK_GROWTH_AGGREGATED
 
-##### SAN_NEWS(tag, from, to, size) ⇒ <code>Array</code>
+##### SAN_NETWORK_GROWTH_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
 
-Returns the news for given word
+Returns the token's network growth
 
 - **Kind**: global function
-- **Returns**: <code>Array</code> - of news.
+- **Returns**: <code>number</code> - of aggregated network growth.
 - **Customfunction**:
 
-| Param | Type                | Description                                                     |
-| ----- | ------------------- | --------------------------------------------------------------- |
-| tag   | <code>string</code> | Project name, ticker or other crypto related words.             |
-| from  | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20) |
-| to    | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)   |
-| size  | <code>number</code> | Size limit of the returned results. Default is 10.              |
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
+
+## SAN_NETWORK_PROFIT_LOSS
+
+##### SAN_NETWORK_PROFIT_LOSS(projectSlug, from, to, interval) ⇒ <code>Array</code>
+
+Returns the network's profit/loss.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of the network's profit/loss.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_NETWORK_PROFIT_LOSS_AGGREGATED
+
+##### SAN_NETWORK_PROFIT_LOSS_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the network's profit/loss.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated the network's profit/loss.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_NVT_RATIO
 
-##### SAN_NVT_RATIO(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_NVT_RATIO(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
-Returns NVT (Network-Value-to-Transactions-Ratio Daily Market Cap / Daily Transaction Volume)
+Returns NVT (Network-Value-to-Transactions-Ratio Daily Market Cap / Daily Token Circulation)
 Since Daily Transaction Volume gets rather noisy and easy to manipulate
-by transferring the same tokens through couple of addresses over and over again,
-it’s not an ideal measure of a network’s economic activity.
-That’s why we calculate NVT using Daily Trx Volume, but also by using Daily Token Circulation instead,
-which filters out excess transactions and provides a cleaner overview of a blockchain’s
+by transferring the same tokens through a couple of addresses repeatedly,
+it’s not an ideal measure of a network’s economic activity. That’s why we also
+offer another way to calculate NVT by using Daily Token Circulation.
+This method filters out excess transactions and provides a cleaner overview of a blockchain’s
 daily transaction throughput.
 
 - **Kind**: global function
-- **Returns**: <code>Array</code> - of NVT
+- **Returns**: <code>Array</code> - of NVT ratios
 - **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
@@ -581,6 +999,30 @@ daily transaction throughput.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_NVT_RATIO_AGGREGATED
+
+##### SAN_NVT_RATIO_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns NVT (Network-Value-to-Transactions-Ratio Daily Market Cap / Daily Token Circulation)
+Since Daily Transaction Volume gets rather noisy and easy to manipulate
+by transferring the same tokens through a couple of addresses repeatedly,
+it’s not an ideal measure of a network’s economic activity. That’s why we also
+offer another way to calculate NVT by using Daily Token Circulation.
+This method filters out excess transactions and provides a cleaner overview of a blockchain’s
+daily transaction throughput.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated NVT ratios
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_OHLC
 
@@ -599,6 +1041,24 @@ during a given time interval.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 
+## SAN_PRICE
+
+##### SAN_PRICE(projectSlug, from, to, currency, interval) ⇒ <code>Array</code>
+
+Returns the prices for the slug in the given time period.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of the prices for the slug in the given time period.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
 ## SAN_PRICE_ABSOLUTE_CHANGE
 
 ##### SAN_PRICE_ABSOLUTE_CHANGE(projectSlug, from, to) ⇒ <code>number</code>
@@ -615,6 +1075,24 @@ Returns the absolute price change for the specified asset, during a given time i
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 
+## SAN_PRICE_AGGREGATED
+
+##### SAN_PRICE_AGGREGATED(projectSlug, from, to, currency, aggregation) ⇒ <code>number</code>
+
+Returns the prices for the slug in the given time period.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated the prices for the slug in the given time period.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
+
 ## SAN_PRICE_PERCENT_CHANGE
 
 ##### SAN_PRICE_PERCENT_CHANGE(projectSlug, from, to) ⇒ <code>number</code>
@@ -630,6 +1108,23 @@ Returns the percent price change for the specified asset, during a given time in
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+
+## SAN_PRICE_VOLUME
+
+##### SAN_PRICE_VOLUME(projectSlug, from, to, interval) ⇒ <code>Array</code>
+
+Returns the prices for the specified asset, during a given time interval.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of prices.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
 
 ## SAN_PRICE_VOLUME_DIFF
 
@@ -650,9 +1145,9 @@ specifically when price goes up as volume goes down. Currency can be displayed i
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 
-## SAN_PRICE
+## SAN_PRICES
 
-##### SAN_PRICE(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_PRICES(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the prices for the specified asset, during a given time interval.
 
@@ -665,22 +1160,7 @@ Returns the prices for the specified asset, during a given time interval.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-
-## SAN_PRICE_VOLUME
-
-##### SAN_PRICE_VOLUME(projectSlug, from, to) ⇒ <code>Array</code>
-
-Returns the prices and volumes for the specified asset, during a given time interval.
-
-- **Kind**: global function
-- **Returns**: <code>Array</code> - of prices and volumes.
-- **Customfunction**:
-
-| Param       | Type                | Description                                                                                                                                                                            |
-| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
-| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
-| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
 
 ## SAN_PROJECT_FUNDAMENTALS
 
@@ -712,7 +1192,7 @@ Returns social data for a specified project.
 
 ## SAN_REALIZED_VALUE
 
-##### SAN_REALIZED_VALUE(projectSlug, from, to, currency, timeBound) ⇒ <code>Array</code>
+##### SAN_REALIZED_VALUE(projectSlug, from, to, currency, timeBound, interval) ⇒ <code>Array</code>
 
 Returns Realized value - sum of the acquisition costs of an asset located in a wallet.
 The realized value across the whole network is computed by summing the realized values
@@ -728,7 +1208,29 @@ of all wallets holding tokens at the moment.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
 | currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
-| timeBound   | <code>string</code> | The metric is calculated only by taking into account the coins/tokens that have moved in the past number of years or days.                                                             |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years or days.                                                             |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_REALIZED_VALUE_AGGREGATED
+
+##### SAN_REALIZED_VALUE_AGGREGATED(projectSlug, from, to, currency, timeBound, aggregation) ⇒ <code>number</code>
+
+Returns Realized value - sum of the acquisition costs of an asset located in a wallet.
+The realized value across the whole network is computed by summing the realized values
+of all wallets holding tokens at the moment.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated realized values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| currency    | <code>string</code> | The metric is calculated using a currency of choice. Available currencies: USD                                                                                                         |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years/days.                                                                |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_REVERSE
 
@@ -736,13 +1238,13 @@ of all wallets holding tokens at the moment.
 
 Returns the reversed array of the results
 
-**Kind**: global function  
-**Returns**: <code>Array</code> - of reversed results  
-**Customfunction**:   
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of reversed results
+- **Customfunction**:
 
-| Param       | Type                | Description                                                                                                                                                                            |
-| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| array | <code>Array</code> | The array of results |
+| Param | Type               | Description          |
+| ----- | ------------------ | -------------------- |
+| array | <code>array</code> | The array of results |
 
 ## SAN_SOCIAL_DOMINANCE
 
@@ -763,20 +1265,38 @@ Returns the % of the social dominance a given project has over time in a given s
 
 ## SAN_SOCIAL_VOLUME
 
-##### SAN_SOCIAL_VOLUME(projectSlug, from, to, socialVolumeType) ⇒ <code>Array</code>
+##### SAN_SOCIAL_VOLUME(projectSlug, from, to, source, interval) ⇒ <code>Array</code>
 
-Returns a list of mentions count for a given project and time interval.
+Returns the social volume for a slug.
 
 - **Kind**: global function
-- **Returns**: <code>Array</code> - of mention counts.
+- **Returns**: <code>Array</code> - of the slug's social volume.
 - **Customfunction**:
 
-| Param            | Type                | Description                                                                                                                                                                            |
-| ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlug      | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
-| from             | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
-| to               | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| socialVolumeType | <code>string</code> | The source of mention counts, one of the following: "PROFESSIONAL_TRADERS_CHAT_OVERVIEW", "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "DISCORD_DISCUSSION_OVERVIEW"     |
+| Param       | Type                | Description                                                                                                                                                                                                                                       |
+| ----------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment).                                                            |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                   |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                     |
+| source      | <code>string</code> | The source of mention counts, one of the following: "PROFESSIONAL_TRADERS_CHAT_OVERVIEW", "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "DISCORD_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL" |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                      |
+
+## SAN_SOCIAL_VOLUME_AGGREGATED
+
+##### SAN_SOCIAL_VOLUME_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the social volume for a slug.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated the slug's social volume.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_SOCIAL_VOLUME_PROJECTS
 
@@ -810,7 +1330,7 @@ Grouping by interval works by summing all records in the interval.
 
 ## SAN_TOKEN_CIRCULATION
 
-##### SAN_TOKEN_CIRCULATION(projectSlug, from, to, timeBound) ⇒ <code>Array</code>
+##### SAN_TOKEN_CIRCULATION(projectSlug, from, to, timeBound, interval) ⇒ <code>Array</code>
 
 Returns token circulation for a given slug and time interval.
 
@@ -823,7 +1343,26 @@ Returns token circulation for a given slug and time interval.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| timeBound   | <code>string</code> | The metric is calculated only by taking into account the coins/tokens that have moved in the past number of years or days.                                                             |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years or days.                                                             |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_TOKEN_CIRCULATION_AGGREGATED
+
+##### SAN_TOKEN_CIRCULATION_AGGREGATED(projectSlug, from, to, timeBound, aggregation) ⇒ <code>number</code>
+
+Returns token circulation for a given slug and time interval.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated token circulation values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| timeBound   | <code>string</code> | The metric is calculated only by taking into account the tokens/coins that have moved in the past number of years/days.                                                                |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_TOKEN_TOP_TRANSACTIONS
 
@@ -844,7 +1383,7 @@ Returns top token transactions for a given slug
 
 ## SAN_TOP_HOLDERS_HELD_OFF_EXCHANGE
 
-#### SAN_TOP_HOLDERS_HELD_OFF_EXCHANGE(projectSlug, from, to, interval) ⇒ <code>Array</code>
+##### SAN_TOP_HOLDERS_HELD_OFF_EXCHANGE(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the amount of coins/tokens held only by the non exchange top holders.
 
@@ -857,11 +1396,11 @@ Returns the amount of coins/tokens held only by the non exchange top holders.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| interval | <code>string</code> | The resolution with which the data is fetched. Example: "5m" |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
 
 ## SAN_TOP_HOLDERS_HELD_ON_EXCHANGE
 
-#### SAN_TOP_HOLDERS_HELD_ON_EXCHANGE(projectSlug, from, to, interval) ⇒ <code>Array</code>
+##### SAN_TOP_HOLDERS_HELD_ON_EXCHANGE(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the amount of coins/tokens held only by the exchange top holders.
 
@@ -874,11 +1413,11 @@ Returns the amount of coins/tokens held only by the exchange top holders.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| interval | <code>string</code> | The resolution with which the data is fetched. Example: "5m" |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
 
 ## SAN_TOP_HOLDERS_HELD_OVERALL
 
-#### SAN_TOP_HOLDERS_HELD_OVERALL(projectSlug, from, to, interval) ⇒ <code>Array</code>
+##### SAN_TOP_HOLDERS_HELD_OVERALL(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the amount of coins/tokens held by the top holders.
 
@@ -891,7 +1430,7 @@ Returns the amount of coins/tokens held by the top holders.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| interval | <code>string</code> | The resolution with which the data is fetched. Example: "5m" |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
 
 ## SAN_TOP_HOLDERS_PERCENT_OF_TOTAL_SUPPLY
 
@@ -912,7 +1451,7 @@ Returns the top holders' percent of total supply - in exchanges, outside exchang
 
 ## SAN_TRANSACTION_VOLUME
 
-##### SAN_TRANSACTION_VOLUME(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_TRANSACTION_VOLUME(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Gets the transaction volume for the specified asset, during a given time interval.
 Transaction Volume" refers to the total number of tokens within all
@@ -927,10 +1466,30 @@ transfers that have occurred on a blockchain.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_TRANSACTION_VOLUME_AGGREGATED
+
+##### SAN_TRANSACTION_VOLUME_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Gets the transaction volume for the specified asset, during a given time interval.
+Transaction Volume" refers to the total number of tokens within all
+transfers that have occurred on a blockchain.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated transaction volumes.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
 
 ## SAN_VELOCITY
 
-##### SAN_VELOCITY(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_VELOCITY(projectSlug, from, to, interval) ⇒ <code>Array</code>
 
 Returns the token's velocity.
 
@@ -943,15 +1502,16 @@ Returns the token's velocity.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
 
-## SAN_VOLUME
+## SAN_VELOCITY_AGGREGATED
 
-##### SAN_VOLUME(projectSlug, from, to) ⇒ <code>Array</code>
+##### SAN_VELOCITY_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
 
-Returns the token's volumes for a given time period.
+Returns the token's velocity.
 
 - **Kind**: global function
-- **Returns**: <code>Array</code> - of token volumes. 
+- **Returns**: <code>number</code> - of aggregated token velocity values.
 - **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
@@ -959,3 +1519,38 @@ Returns the token's volumes for a given time period.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
+
+## SAN_VOLUME
+
+##### SAN_VOLUME(projectSlug, from, to, interval) ⇒ <code>Array</code>
+
+Returns the slug's trading volume.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of the slug's trading volume.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                           |
+
+## SAN_VOLUME_AGGREGATED
+
+##### SAN_VOLUME_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns the slug's trading volume.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated the slug's trading volume.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment). |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                |
