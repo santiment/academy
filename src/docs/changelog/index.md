@@ -2,13 +2,25 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-02-24
+date: 2021-03-10
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
 ## March 2021
+
+``03.03 - 10.03``
+
+Sanbase
+
+- Add `BTC/ETH` infographics in screener
+- `Create alert` button in feed
+- Move `Edit assets/Addresses` to table header
+- Open watchlist after creation
+- User's favorite chart metrics category
+- Axis values readability improved
+
 
 ``25.02 - 03.03``
 
