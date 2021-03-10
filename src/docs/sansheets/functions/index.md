@@ -1,7 +1,7 @@
 ---
 title: Functions we offer
 author: Santiment Team
-date: 2021-3-8
+date: 2021-03-08
 ---
 
 ## SAN_ACTIVE_ADDRESSES
