@@ -18,6 +18,7 @@ import Valentin from "../images/people/Valentin.png"
 import Serge from "../images/people/Serge.png"
 import MaksimR from '../images/people/MaksimR.png'
 import Alex from "../images/people/Alex.png"
+import Vlad from "../images/people/Vlad.png"
 // import Alan from "../images/people/Alan.png"
 // import Anastasiya from "../images/people/Anastasiya.png"
 // import Jia from "../images/people/Jia.png"
@@ -86,6 +87,11 @@ export const PEOPLE = {
   "irina pranovich": {
     description: "Data scientist",
     imageUrl: Irina,
+    link: "",
+  },
+  vlad: {
+    description: "Data Scientist",
+    imageUrl: Vlad,
     link: "",
   },
   "anatoliy": {
