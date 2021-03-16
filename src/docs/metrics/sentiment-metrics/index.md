@@ -108,7 +108,7 @@ The metric is available **for any selected asset**.
 | SanAPI         | :x:  | :x:   | :x:                | :x:                | :x:                |
 | Sansheets      | :x:  | :x:   | :x:                | :x:                | :x:                |
 
-### 2. Sentiment Balance
+### 2. Average Sentiment
 
 #### Definition
 
@@ -155,7 +155,7 @@ Balance](#sentiment-balance) that also takes into account the [Unique Social
 Volume](/metrics/social-volume-metrics/#unique-social-volume).
 
 **Sentiment Volume Consumed** is defined as a rolling Z-score of $X =
-\mathrm{Unique Social Volume} \times \mathrm{Sentiment Balance}$.
+\mathrm{Unique Social Volume} \times \mathrm{Average Sentiment}$.
 
 More precisely we choose a duration $d$ which will be the length of our sliding
 window. Then for any timestamp $t$ we consider the population $X(t,d)$

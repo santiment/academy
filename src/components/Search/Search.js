@@ -15,7 +15,7 @@ const SUGGESTIONS = [{
 },
 {
   label: "MVRV",
-  link: "/metrics/mvrv/"
+  link: "/metrics/mvrv-ratio/"
 },
 {
   label: "Metrics",

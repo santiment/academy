@@ -1,22 +1,22 @@
 ---
-title: Stock To Flow
+title: Stock To Flow ratio
 author: Tsetso
 date: 2020-06-12
-description: Stock To Flow modeal is a measure of scarcity/abundance of particular resource.
+description: Stock To Flow ratio modeal is a measure of scarcity/abundance of particular resource.
 ---
 
 ## Definition
 
-Stock To Flow model is a measure of scarcity/abundance of particular resource.
+Stock To Flow ratio model is a measure of scarcity/abundance of particular resource.
 It shows how much supply enters yearly relative to the total supply of the resource.
-We measure Stock To Flow for a given asset as the ratio between [Total Circulation](/metrics/circulation) of the asset
+We measure Stock To Flow ratio for a given asset as the ratio between [Total Circulation](/metrics/circulation) of the asset
 and the daily minted coins multiplied by days in one year.
 
 ---
 
 ## Access
 
-Stock To Flow metric is available only in `Custom` plans.
+Stock To Flow ratio metric is available only in `Custom` plans.
 
 [Restricted Access](/metrics/details/access#restricted-access).
 
