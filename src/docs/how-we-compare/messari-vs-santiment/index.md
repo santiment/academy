@@ -105,17 +105,17 @@ Total assets covered by on-chain data:
 * Deposit transactions
 * Exchange inflow
 * Exchange outflow
-* Exchange flow balance
-* Coin supply on exchanges
-* Coin supply on exchanges (as % of total supply)
-* Coin supply outside of exchanges
+* Exchange balance
+* Supply on exchanges
+* Supply on exchanges (as % of total supply)
+* Supply outside of exchanges
 * Withdrawal transactions
 * Holder distribution
 * Holder distribution combined balance
-* Amount held by top addresses
-* Amount held by top addresses (as % of total supply)
-* Amount held by top non-exchange addresses
-* Amount held by top exchange addresses
+* Supply held by top addresses
+* Supply held by top addresses (as % of total supply)
+* Supply held by top non-exchange addresses
+* Supply held by top exchange addresses
 * Total value locked in DeFi
 * Tokenized BTC on Ethereum
 * Decentralized exchanges (total volume)
@@ -191,8 +191,8 @@ A list of available filters for the Sanbase Screener include:
 * Exchange inlow (in USD)
 * Exchange outflow
 * Exchange outflow (in USD)
-* Exchange flow balance
-* Coin supply on exchanges
+* Exchange balance
+* Supply on exchanges
 * MVRV (30d, 180d and 365d)
 * Mean dollar invested age
 

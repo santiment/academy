@@ -42,7 +42,7 @@ SanSheets
 
 Sanbase
 
-- Add metric: Whale Transactions Count
+- Add metric: Whale Transaction Count
     Number of Transactions Transferring More Than 100k USD
 - 'Explore screeners' category in Navigation Header Dropdown
 - Charts
@@ -190,7 +190,7 @@ Now you can easily navigate to your personal watchlists, screeners, exclusive PR
 
 Charts:
 
-- “Exchange Flow Balance” settings added
+- “Exchange Balance” settings added
 - Data from Coinbase wallets added to Exchange metrics (Inflow/Outflow/Flow Balance) for ETH and ERC20 projects
 
 Screener & Watchlists
@@ -350,11 +350,11 @@ Fixes:
 - Charts | "Exchange Inflow" and "Exchange Outflow", You can choose specific exchange
 - Charts | More sanfam users added to  the “Sanfam Insights”
 - Charts | Chart performance improved
-- Charts | Holders Distribution Combined Balance widget
-- Charts | Holders Distribution percentage metric’s label and value are appended with the ‘%’ sign
+- Charts | Supply Distribution Combined Balance widget
+- Charts | Supply Distribution percentage metric’s label and value are appended with the ‘%’ sign
 - Screener | New filter category `Flow metrics` with 34 new filters;
 - Screener | Fix some problems of "Compare"
-- Screener | New metrics: Social volume %, Mean dollar inv. age (only %), Circulation (180d) in USD, Exchange inflow in USD, Exchange outflow in USD, Coin Supply on Exchanges (as % of total supply)
+- Screener | New metrics: Social volume %, Mean dollar inv. age (only %), Circulation (180d) in USD, Exchange inflow in USD, Exchange outflow in USD, Supply on Exchanges (as % of total supply)
 - Screener | Search input for Market Segments filter
 - Screener & Watchlists | New "compare" feature, which makes life easier to compare assets from your list
 - Screener | UX improvement | Open operator by default (when add a new filter)
@@ -429,7 +429,7 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
 - Charts | Small fixes for Chart Layouts (Remove Duplication Action)
 - Charts | CMD + SHIFT + CLICK - Add metric to the new chart
 - Charts | New metric - Defi total value locked in USD (ETH, for beta users)
-- Charts | Holders Distribution is available in Search for metrics
+- Charts | Supply Distribution is available in Search for metrics
 - Charts | Make more visible Insigths on the chart
 - Charts | Add more categories for Insights
 - Charts | Chart layout hot fix
@@ -441,7 +441,7 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
 - Charts | Interval setting for line metrics
 - Charts | Showing only backend-available intervals
 - Charts | Hiding tooltip when future ticks are hovered
-- Charts | Holders Distribution has Merge tool now
+- Charts | Supply Distribution has Merge tool now
 - Screener | Add suggestions for some filters
 - Screener | Small updates for visualisations
 - Screener | New metric in the Filter "Network Growth" with % changes
@@ -465,7 +465,7 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
   - Watchlist & Screener has new column "Market segments"
   * New metric | Top transactions table (It's connected metric with Transaction volume)
   * New metric | Bitmex Basis Ratio
-  * New metric | Holders distribution (You can add more than one Holders Distributions in your chart layout)
+  * New metric | Supply distribution (You can add more than one Supply Distributions in your chart layout)
   * You can apply any chart layout from your watchlist
   * We add settings for the watermark for our charts.
   * Webhooks for alerts works with Discord.
@@ -473,7 +473,7 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
   - On Alerts page we add the featured list of alerts. It's a good examples of usage
   - Add keyboard navigation in all search by assets. ![](https://media.giphy.com/media/lqLdJ505muGP88kXJs/giphy.gif)
   - Fix when search list was empty
-  - Add formatting for Exchange Flow Balance metric
+  - Add formatting for Exchange Balance metric
   - Fixes for tooltip UX
   - Fixes for Alpha reports
   - Fixes Login/Create an account Flow

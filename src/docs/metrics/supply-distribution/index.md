@@ -1,12 +1,12 @@
 ---
-title: Holders Distribution
+title: Supply Distribution
 author: Santiment Team
 date: 2020-08-24
 ---
 
 ## Definition
 
-There are five separate metrics regarding holders distribution:
+There are five separate metrics regarding supply distribution:
 
 - ``holders_distribution_<interval>`` - Represents the number of addresses holding the amount of tokens that belong to a given interval
 - ``holders_distribution_combined_balance_<interval>`` - Represents the sum of all the tokens of all the addresses which hold the amount of tokens from an interval
@@ -14,10 +14,10 @@ There are five separate metrics regarding holders distribution:
 - ``holders_distribution_combined_balance_over_<threshold>`` - The sum of all the tokens of all the addresses whose balance exceeds ``threshold``
 - ``percent_of_holders_distribution_combined_balance_<interval>`` - The percent of tokens contained in some interval. It is computed using the following formula:
 $$
-\frac{Holders Distribution Combined Balance For Interval}{Total Supply}
+\frac{Supply Distribution Combined Balance For Interval}{Total Supply}
 $$
 
-![Holders Distribution](bitcoin-hd.png)
+![Supply Distribution](bitcoin-hd.png)
 
 ## Access
 

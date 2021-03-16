@@ -6,14 +6,14 @@ date: 2020-02-05
 
 You can analyze the amount of speculative activity on the blockchain with a number Santiment metrics. Here, we’ll cover two popular exchange-based indicators:
 
-- **Exchange Flow Balance**
+- **Exchange Balance**
 - **Daily Active Deposits**
 
-First up, Exchange Flow Balance shows the combined values of an asset moving in and out of exchange wallets over time. Simply put, if the line is above zero for the day, it means more of a certain coin entered the exchange wallets than left, and vice versa.
+First up, Exchange Balance shows the combined values of an asset moving in and out of exchange wallets over time. Simply put, if the line is above zero for the day, it means more of a certain coin entered the exchange wallets than left, and vice versa.
 
 It is not uncommon for large movements of tokens to exchanges to precede rapid price decline, as the rising sell pressure proves to be too much for bulls to absorb.
 
-Take a look at Bancor’s (BNT) Exchange Flow Balance below. You’ll notice that 3 of the biggest spikes in Bancor’s recent exchange flows came shortly before major corrections:
+Take a look at Bancor’s (BNT) Exchange Balance below. You’ll notice that 3 of the biggest spikes in Bancor’s recent exchange flows came shortly before major corrections:
 
 ![](image1.png)
 
