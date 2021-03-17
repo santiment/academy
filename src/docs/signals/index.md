@@ -11,3 +11,4 @@ Signals belong to nonequidistant timeseries data type (the sequence taken at suc
 ## Signals
 
 - [DAI Mint](/signals/dai-mint)
+- [Anomalies](/signals/anomalies)
