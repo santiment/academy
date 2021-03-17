@@ -2,13 +2,23 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-03-10
+date: 2021-03-17
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
 ## March 2021
+
+``10.03 - 17.03``
+
+Sanbase
+
+ - Social: show social volume for last day, fix asset's detection
+ - Screener: 'Explore watchlists' category as new Screener's entry point
+ - Charts: update the structure of metrics tree
+ - DEXes dashboard: chart shows price of selected asset
+ - Historical Balance: "Assets USD distribution" and "Current balance" widgets
 
 ``03.03 - 10.03``
 
