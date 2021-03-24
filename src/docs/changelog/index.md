@@ -2,13 +2,21 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-03-17
+date: 2021-03-24
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
 ## March 2021
+
+``17.03 - 24.03``
+
+Sanbase
+
+  - 'Fees Distribution' in metrics sidebar for Ethereum
+  - You can save notes for any addresses in your watchlists. Addresses watchlist table: 'Notes' column, horizontal scroll
+  - Charts: Price metric new visualisation type – Candles
 
 ``10.03 - 17.03``
 
