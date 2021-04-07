@@ -13,7 +13,7 @@ We used fbprophet which is written by facebook to predict confidence intervals f
 Signals can be useful because there are many assets and metrics out there, so it's hard to view all of this data.
 After that we compare predicted lower and upper values to actual value and if it doesn't fall in the interval then we fire a signal. 
 
-List of supported tokens:
+### List of supported tokens:
 * bitcoin
 * ethereum
 * ripple
@@ -60,7 +60,7 @@ List of supported tokens:
 * omisego
 * santiment
 
-List of supported metrics:
+### List of supported metrics:
 * stack_circulation (1d,7d,30d,60d,90d,180d,365d,2y,3y,5y,10y,20y)
 * mvrv_usd (1d,7d,30d,60d,90d,180d,365d,2y,3y,5y,10y,20y)
 * transaction_volume
