@@ -136,7 +136,8 @@ export const RESOURCES = [
     description: "Documentation for Santiment signals",
     articles: [
       "DAI Mint",
-      "Anomalies"
+      "Anomalies",
+      "Large Exchange Transactions"
     ]
   },
   {

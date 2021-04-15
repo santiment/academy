@@ -35,7 +35,7 @@ After that we compare predicted lower and upper values to actual value and if it
 * loopring
 * 1inch
 * curve-dao-token
-* yber-network
+* kyber-network
 * badger-dao
 * band-protocol
 * balancer
@@ -61,7 +61,7 @@ After that we compare predicted lower and upper values to actual value and if it
 * santiment
 
 ### List of supported metrics:
-* stack_circulation (1d,7d,30d,60d,90d,180d,365d,2y,3y,5y,10y,20y)
+* stack_circulation_1d
 * mvrv_usd (1d,7d,30d,60d,90d,180d,365d,2y,3y,5y,10y,20y)
 * transaction_volume
 * daily_active_addresses

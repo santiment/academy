@@ -10,9 +10,10 @@ description: Signal shows that any large transaction has been made.
 **Large Exchange Transactions** indicates that large transactions has been made.
 
 We take transaction of the last 30 days and updating this table every day and get values of top10 transaction volume(threshold) in usd for the list of assets. 
-Then we take all the transactions that have transaction volume more than this value for each asset.
+Then we take all the transactions that have transaction volume more than this threshold separately for each asset.
 
 ### List of assets
+* ethereum
 * uniswap
 * chainlink
 * aave
