@@ -1,7 +1,7 @@
 ---
 title: Anomalies
 author: Vlad
-date: 2021-03-25
+date: 2021-04-17
 description: Signal indicating that real value of the metric doesn't fall in the predicted interval
 ---
 
