@@ -12,6 +12,16 @@ We update this page every two weeks or more frequently.
 ``14.04 - 21.04``
 Sanbase
 
+- New coins: K21, TLM, EPNS, VISR, SRK, GS, ZCX
+- New header navigation
+- Home page “Conversations” widget
+- Top Holders Table: “Part of Total” values as percentages
+- Screener: Allowing to save the whole table as a .csv
+- Charts: Loading and performance optimizations for big chart layouts
+- Charts: Adjusted "Weighted Sentiment" metrics' auto-interval
+- Fix: Watchlist links "/assets/all" & "/assets/erc20”
+- Fix: Screener column save
+- Fix: Alerts bugfixes for some metrics/watchlists
 
 ``07.04 - 14.04``
 Sanbase
