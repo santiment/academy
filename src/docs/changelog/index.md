@@ -2,13 +2,56 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-03-24
+date: 2021-04-21
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
+## April 2021
+``14.04 - 21.04``
+Sanbase
+
+
+``07.04 - 14.04``
+Sanbase
+- New coins: CFX, MDX, TKO, SHOPX, RAGE, BLANK, AIOZ, 10SET, NFTX, LQTY, KTN
+- Address watchlist: More assets columns in table, Asset distribution column
+  ![image](https://user-images.githubusercontent.com/24521041/115566326-d1ac0980-a2c2-11eb-8828-5ed2ac9f5bb6.png)
+- Add [Key Stakeholder Signals](https://app.santiment.net/#stakeholders) widget
+  ![image](https://user-images.githubusercontent.com/24521041/115566435-e9838d80-a2c2-11eb-9ede-571f368c0770.png)
+- Update 'Quick start guide'
+- Move metrics from beta state (labeled holders widget is still in beta)
+- Fix trial subscription status
+- Fix labels on Historical balance tool
+- Fix 1d resolution on mobile charts
+
+
+``31.03 - 07.04``
+
+Sanbase 
+- New coins added: EPS, ATD, FMG, USDF, TIDAL, RAMP, QIUCK, CONV, POLK, MARSH, CELL, FST, STN, BLES, GLQ
+- Screener new filters and columns: Network Realized Profit/Loss, Whale transaction count
+- Fix bug for empty watchlist screen, update infographics after screener filter changes
+- Add labeled holders widget(for ETH/ERC20)
+- Alerts: Add more metrics
+
+
+
 ## March 2021
+
+``24.03 - 31.03``
+
+Sanbase
+- New coins added: STR, L3P, KONO, PKF, COVER, BAMBOO, PROPS, VRA, BANK, NFT, ERN, KLAY
+- New in Watchlists: dynamic columns (as in screener), server-side pagination, horizontal scroll
+- Increased speed of 'eth spent overview' table ('Key stats' tab on ETH chart page)
+- Address watchlist: fixed bug with dublicates in addresses
+- Add table 'Top Holders' table
+- Add metrics 'whale_transaction_count_100k_usd_to_inf' and 'whale_transaction_count_1m_usd_to_inf'
+- Add anchor(link) for sheets templates on home page https://app.santiment.net/#san-sheets
+
+
 
 ``17.03 - 24.03``
 
@@ -16,7 +59,8 @@ Sanbase
 
   - 'Fees Distribution' in metrics sidebar for Ethereum
   - You can save notes for any addresses in your watchlists. Addresses watchlist table: 'Notes' column, horizontal scroll
-  - Charts: Price metric new visualisation type – Candles
+  - Charts: Price metric new visualisation type – [Candles](https://app.santiment.net/s/YCt8Wk0R)
+![image](https://user-images.githubusercontent.com/24521041/115565626-32871200-a2c2-11eb-8c05-305d81786870.png)
 
 ``10.03 - 17.03``
 
