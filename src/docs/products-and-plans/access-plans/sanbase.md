@@ -6,6 +6,12 @@ date: 2021-03-22
 
 The plans apply to all metrics except the ones with [special restrictions](/products-and-plans/access-plans/special-restrictions)
 
+## Overview
+
+Sanbase Plans give access to the metrics via the [Sanbase
+website](https://app.santiment.net). When a direct API call is made, the request
+is treated as made with [Sanapi Free plan](/products-and-plans/access-plans/sanapi#free-plan).
+
 ## Free plan
 
 - Full access to the free metrics
