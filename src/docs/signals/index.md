@@ -13,3 +13,4 @@ Signals belong to nonequidistant timeseries data type (the sequence taken at suc
 - [DAI Mint](/signals/dai-mint)
 - [Anomalies](/signals/anomalies)
 - [Large Exchange Transactions](/signals/large-exchange-transactions)
+- [Large Transactions](/signals/large-transactions)
