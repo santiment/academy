@@ -137,7 +137,8 @@ export const RESOURCES = [
     articles: [
       "DAI Mint",
       "Anomalies",
-      "Large Exchange Transactions"
+      "Large Exchange Transactions",
+      "Large Transactions"
     ]
   },
   {
