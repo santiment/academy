@@ -15,7 +15,7 @@ If the transaction's approximate value in USD is above the threshold value, a si
 
 Approximate transaction values are calculated by multiplying the amount of transferres coins to closest coin's price value using price data with 5 minutes interval for each transaction.
 
-### List of assets
+## List of supported tokens
 * ethereum
 * tether
 * 1inch
