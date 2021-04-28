@@ -9,6 +9,22 @@ Keep track of development updates, new product features and other items from our
 We update this page every two weeks or more frequently.
 
 ## April 2021
+``21.04 - 28.04``
+**Sanbase**
+
+- New coins: DOGEFI, FORTH, KISHU, XEND, ELON, OHM, OMI
+- Home page: updated recents block, conversations feed.
+- Signals in widget 'Key Stakeholder Signals' are sorted by marketcap.
+
+**Hunters**
+
+Welcome to our new DApp [https://hunters.santiment.net/](https://hunters.santiment.net/)
+----
+What is Hunters app? -> [https://www.notion.so/santiment/Introducing-Wallet-Hunters-A-decentralized-platform-for-crowdsourced-market-intelligence-777586562ced436682125816eb206c63](https://www.notion.so/santiment/Introducing-Wallet-Hunters-A-decentralized-platform-for-crowdsourced-market-intelligence-777586562ced436682125816eb206c63)
+How distribution reward works? -> [https://www.notion.so/santiment/WalletHunters-Reward-Distribution-14c7ad8f39684024970814fa051631a7](https://www.notion.so/santiment/WalletHunters-Reward-Distribution-14c7ad8f39684024970814fa051631a7)
+----
+Hunters App is **BETA**. When you are trying the SAN hunters app that you agree with BETA behavior. Some of the features can work with bugs, lags or some of them can be changed completely in the Release version.
+
 ``14.04 - 21.04``
 Sanbase
 
