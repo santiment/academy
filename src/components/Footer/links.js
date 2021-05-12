@@ -16,7 +16,16 @@ export const categories = [
       {
         children: 'contact',
         name: 'Contact us',
-        href: 'mailto:support@santiment.net'
+        href: 'mailto:support@santiment.net',
+        onClick: evt => {
+          if (window.Intercom) {
+            evt.preventDefault()
+            window.Intercom(
+              'showNewMessage',
+              'Hello! I have a question'
+            )
+          }
+        }
       }
     ]
   },
@@ -73,8 +82,8 @@ export const categories = [
         href: 'https://graphs.santiment.net/'
       },
       {
-        name: 'How we compare',
-        href: 'https://academy.santiment.net/how-we-compare/'
+        name: 'Sanhunters',
+        href: 'https://hunters.santiment.net/'
       }
     ]
   }

@@ -43,13 +43,14 @@ const Footer = ({ isMinified }) => {
             </ul>
             <div className={cx(styles.categories, styles.categories__mobile)}>
               {categories.map(({ links }, idx) => {
-                return links.map(({ children, href, name = "" }, i) => (
+                return links.map(({ children, href, onClick, name = "" }, i) => (
                   <a
                     key={i}
                     target='_blank'
                     rel='noopener noreferrer'
                     children={name}
                     href={href}
+                    onClick={evt => onClick ? onClick(evt) : null}
                     className={cx(styles.text, styles.category__item)}
                   />
                 ))
@@ -146,6 +147,14 @@ const Footer = ({ isMinified }) => {
               className={cx(styles.text, styles.link)}
             >
               Media Kit
+            </a>
+            <a
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://status.santiment.net/'
+              className={cx(styles.text, styles.link)}
+            >
+              Status
             </a>
           </div>
           <div className={styles.social}>
