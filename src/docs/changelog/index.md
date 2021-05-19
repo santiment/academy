@@ -2,14 +2,33 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-04-21
+date: 2021-05-19
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
+## May 2021
+
+``12.05.2021 - 19.05.2021``
+
+**Sanbase**
+
+- Fix historical balance page crash from top claimers table
+- Fix watchlist & screener loader for anon user
+- Fix stories crash on mobile app
+- Minor changes of Keystakeholder Signals
+
+``28.04.2021 - 12.05.2021``
+
+**Sanbase**
+
+- New coins: NFY, BOSON, ICE, MIST, MTHD, SMTY, SAKE, URQA, MOB, BAKE, SPORE
+
 ## April 2021
+
 ``21.04 - 28.04``
+
 **Sanbase**
 
 - New coins: DOGEFI, FORTH, KISHU, XEND, ELON, OHM, OMI
@@ -18,10 +37,12 @@ We update this page every two weeks or more frequently.
 
 **Hunters**
 
-Welcome to our new DApp [https://hunters.santiment.net/](https://hunters.santiment.net/)
-----
+***Welcome to our new DApp [https://hunters.santiment.net/](https://hunters.santiment.net/)***
+
 What is Hunters app? -> [https://www.notion.so/santiment/Introducing-Wallet-Hunters-A-decentralized-platform-for-crowdsourced-market-intelligence-777586562ced436682125816eb206c63](https://www.notion.so/santiment/Introducing-Wallet-Hunters-A-decentralized-platform-for-crowdsourced-market-intelligence-777586562ced436682125816eb206c63)
+
 How distribution reward works? -> [https://www.notion.so/santiment/WalletHunters-Reward-Distribution-14c7ad8f39684024970814fa051631a7](https://www.notion.so/santiment/WalletHunters-Reward-Distribution-14c7ad8f39684024970814fa051631a7)
+
 ----
 Hunters App is **BETA**. When you are trying the SAN hunters app that you agree with BETA behavior. Some of the features can work with bugs, lags or some of them can be changed completely in the Release version.
 
