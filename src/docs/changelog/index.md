@@ -18,6 +18,9 @@ We update this page every two weeks or more frequently.
 - Fix watchlist & screener loader for anon user
 - Fix stories crash on mobile app
 - Minor changes of Keystakeholder Signals
+- 2 more mini charts on Screener/Watchlists 1d/30d Price Changes
+![image](https://user-images.githubusercontent.com/522287/118840637-424d4280-b8d0-11eb-8668-398f2bd8d476.png)
+
 
 ``28.04.2021 - 12.05.2021``
 
