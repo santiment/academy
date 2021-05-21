@@ -7,8 +7,8 @@ import Logo from "../SantimentProductsTooltip/Logo"
 import SantimentProductsTooltip from "../SantimentProductsTooltip/SantimentProductsTooltip"
 import styles from "./Header.module.scss"
 
-const Header = ({ isShowSidebar, className }) => (
-    <header className={cx(styles.wrapper, className)}>
+const Header = ({ isShowSidebar, fixedHeader = true }) => (
+    <header className={cx(styles.wrapper, fixedHeader && styles.fixed)}>
       <div className={cx(styles.header, 'container')}>
         <Logo />
         <SantimentProductsTooltip />

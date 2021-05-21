@@ -107,6 +107,7 @@
   margin-right: 8px;
 
   @include text("caption");
+  font-weight: 400;
 
   &:hover {
     background: var(--white);

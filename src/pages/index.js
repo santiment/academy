@@ -11,7 +11,7 @@ import styles from './index.module.scss'
 
 const IndexPage = ({pageContext}) => {
   return (
-  <Layout pageContext={pageContext}>
+  <Layout pageContext={pageContext} fixedHeader={false}>
     <SEO title="Academy - Santiment Technical Documentation" />
     <section className={styles.wrapper}>
     	<Search />
