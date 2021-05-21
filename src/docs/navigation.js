@@ -1,12 +1,14 @@
-import Metrics from "../images/docs/metrics.svg"
-import Changelog from "../images/docs/changelog.svg"
-import Education from "../images/docs/education-and-use-cases.svg"
-import ProductsAndPlans from "../images/docs/products-and-plans.svg"
-import SANtokens from "../images/docs/san-tokens.svg"
-import SanAPI from "../images/docs/sanapi.svg"
-import Sansheets from "../images/docs/sansheets.svg"
-import Sanbase from "../images/docs/sanbase.svg"
-import Glossary from "../images/docs/glossary.svg"
+import Metrics from "../images/docs/Metrics"
+import Changelog from "../images/docs/Changelog"
+import Education from "../images/docs/Education"
+import ProductsAndPlans from "../images/docs/Products"
+import SANtokens from "../images/docs/San"
+import SanAPI from "../images/docs/Sanapi"
+import Sansheets from "../images/docs/Sansheets"
+import Sanbase from "../images/docs/Sanbase"
+import Glossary from "../images/docs/Glossary"
+import Signals from "../images/docs/Signals"
+import Labels from "../images/docs/Labels"
 
 export const GUIDES = [
   {
@@ -81,7 +83,7 @@ export const GUIDES = [
 export const REFERENCES = [
   {
     title: "Metrics",
-    description: "Documentation and API references for Santiment indicators",
+    description: "Documentation for on-chain, social & development indicators",
     icon: Metrics,
     articles: [
       "Age Consumed",
@@ -124,28 +126,30 @@ export const REFERENCES = [
   },
   {
     title: "Changelog",
-    description: "Keep track of development updates and new product features",
+    description: "Development updates, new features & platform improvements",
     icon: Changelog,
     articles: [],
-  }
-]
-
-export const RESOURCES = [
+  },
+  {
+    title: "Labels",
+    description: "List and descriptions of all address labels on Santiment",
+    icon: Labels,
+    articles: [],
+  },
   {
     title: "Signals",
-    description: "Documentation for Santiment signals",
+    description: "Directory of key stakeholder signals available on Santiment",
+    icon: Signals,
     articles: [
       "DAI Mint",
       "Anomalies",
       "Large Exchange Transactions",
       "Large Transactions"
-    ]
-  },
-  {
-    title: "Labels",
-    description: "Our labels vision for crypto wallets",
-    articles: []
-  },
+    ],
+  }
+]
+
+export const RESOURCES = [
   {
     title: "How we compare",
     description: "Which crypto analytics solution is right for you?",

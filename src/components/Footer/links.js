@@ -16,7 +16,6 @@ export const categories = [
       {
         children: 'contact',
         name: 'Contact us',
-        href: 'mailto:support@santiment.net',
         onClick: evt => {
           if (window.Intercom) {
             evt.preventDefault()
@@ -25,7 +24,8 @@ export const categories = [
               'Hello! I have a question'
             )
           }
-        }
+        },
+        href: 'mailto:support@santiment.net'
       }
     ]
   },
