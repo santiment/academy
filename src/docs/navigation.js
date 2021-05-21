@@ -81,7 +81,7 @@ export const GUIDES = [
 export const REFERENCES = [
   {
     title: "Metrics",
-    description: "Documentation and API references for Santiment indicators",
+    description: "Documentation for Santiment's on-chain, social and development indicators",
     icon: Metrics,
     articles: [
       "Age Consumed",
@@ -124,28 +124,30 @@ export const REFERENCES = [
   },
   {
     title: "Changelog",
-    description: "Keep track of development updates and new product features",
+    description: "Development updates, new features and other platform-wide improvements",
     icon: Changelog,
     articles: [],
-  }
-]
-
-export const RESOURCES = [
+  },
+  {
+    title: "Labels",
+    description: "List and descriptions of all address labels on Santiment",
+    icon: Metrics,
+    articles: [],
+  },
   {
     title: "Signals",
-    description: "Documentation for Santiment signals",
+    description: "Directory of key stakeholder signals available on Santiment",
+    icon: Metrics,
     articles: [
       "DAI Mint",
       "Anomalies",
       "Large Exchange Transactions",
       "Large Transactions"
-    ]
-  },
-  {
-    title: "Labels",
-    description: "Our labels vision for crypto wallets",
-    articles: []
-  },
+    ],
+  }
+]
+
+export const RESOURCES = [
   {
     title: "How we compare",
     description: "Which crypto analytics solution is right for you?",
