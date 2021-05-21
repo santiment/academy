@@ -25,7 +25,7 @@
 
 .heading {
   color: var(--rhino);
-  margin: 64px 0 32px;
+  margin: 64px 0 40px;
 
   @include text("h3");
 
@@ -37,7 +37,7 @@
 
 .input {
   width: 100%;
-  height: 48px;
+  height: 40px;
   min-width: 326px;
   padding-left: 44px !important;
 
@@ -46,11 +46,11 @@
   }
 
   @include responsive("phone") {
-    width: 400px;
+    width: 100%;
   }
 
   @include responsive("phone-xs") {
-    width: 326px;
+    width: 100%;
     font-size: 15px;
   }
 
@@ -60,7 +60,6 @@
 }
 
 .icon {
-  transform: scale(1.33);
   margin-left: 8px;
 }
 
@@ -69,10 +68,6 @@
     width: 250px !important;
     height: 40px;
     min-width: auto;
-  }
-
-  & .icon {
-    transform: scale(1);
   }
 }
 
@@ -96,14 +91,10 @@
 }
 
 .group {
-  @include text("caption");
-  color: var(--casper);
-  margin-right: 15px;
-
-  @include responsive("phone-xs") {
-    width: 100%;
-    margin-bottom: 10px;
-  }
+  @include text("caption", "m");
+  color: #4E5472;
+  margin-right: 16px;
+  margin-bottom: 4px;
 }
 
 .word {
@@ -112,10 +103,11 @@
   border-radius: 4px;
   padding: 3px 6px;
   margin-bottom: 4px;
-  color: var(--waterloo);
+  color: var(--rhino);
   margin-right: 8px;
 
   @include text("caption");
+  font-weight: 400;
 
   &:hover {
     background: var(--white);

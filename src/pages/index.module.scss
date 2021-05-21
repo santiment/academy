@@ -25,7 +25,7 @@
 
 .blocks {
 	@include grid-wrap(4);
-	grid-gap: 18px;
+	grid-gap: 24px;
 
   @include responsive('phone') {
     grid-template-columns: 1fr 1fr;
@@ -34,7 +34,7 @@
 
 .wide {
 	@include grid-wrap(2);
-	grid-gap: 18px;
+	grid-gap: 24px;
 
 }
 
