@@ -20,7 +20,7 @@
 }
 
 .heading {
-	@include text('body-1', 'l');
+	@include text('body-1', 'm');
 	margin: 0 0 16px;
 	color: var(--white);
 
@@ -38,7 +38,6 @@
 
 .traders {
 	background-color: var(--jungle-green);
-	background-image: url(./lines.svg);
 
 	& .description {
 		color: var(--athens);
@@ -47,7 +46,6 @@
 
 .developers {
 	background-color: $rhino;
-	background-image: url(./scheme.svg);
 }
 
 .block {
