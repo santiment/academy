@@ -1,12 +1,12 @@
-import Metrics from "../images/docs/metrics.svg"
-import Changelog from "../images/docs/changelog.svg"
-import Education from "../images/docs/education-and-use-cases.svg"
-import ProductsAndPlans from "../images/docs/products-and-plans.svg"
-import SANtokens from "../images/docs/san-tokens.svg"
-import SanAPI from "../images/docs/sanapi.svg"
-import Sansheets from "../images/docs/sansheets.svg"
-import Sanbase from "../images/docs/sanbase.svg"
-import Glossary from "../images/docs/glossary.svg"
+import Metrics from "../images/docs/Metrics"
+import Changelog from "../images/docs/Changelog"
+import Education from "../images/docs/Education"
+import ProductsAndPlans from "../images/docs/Products"
+import SANtokens from "../images/docs/San"
+import SanAPI from "../images/docs/Sanapi"
+import Sansheets from "../images/docs/Sansheets"
+import Sanbase from "../images/docs/Sanbase"
+import Glossary from "../images/docs/Glossary"
 
 export const GUIDES = [
   {
