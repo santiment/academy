@@ -163,7 +163,8 @@
 
 .icon svg {
   & path,
-  & rect {
-    transition: fill 0.15s ease;
+  & rect,
+  & circle {
+    transition: fill 0.1s ease, stroke 0.1s ease;
   }
 }
