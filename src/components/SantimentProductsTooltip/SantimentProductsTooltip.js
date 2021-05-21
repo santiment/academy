@@ -7,11 +7,10 @@ import {BUSINESS_PRODUCTS, CHAIN_PRODUCTS} from "./Products"
 import { ProductsTrigger } from './Trigger'
 import styles from './SantimentProductsTooltip.module.scss'
 
-const SantimentProductsTooltip = ({ className, intl, children }) => {
+const SantimentProductsTooltip = ({ className, intl }) => {
   const [isOpen, setOpen] = useState(false)
 
   return (
-      <>
     <Tooltip
       passOpenStateAs='isActive'
       closeTimeout={150}
@@ -61,33 +60,6 @@ const SantimentProductsTooltip = ({ className, intl, children }) => {
             </div>
         </div>
     </Tooltip>
-          <div className={styles.mobileWrapper}>
-              <div className={styles.block}>
-                  <h3 className={styles.title}>SAN business</h3>
-                  <div className={styles.products}>
-                      {BUSINESS_PRODUCTS.map((item, index) => (
-                          <ProductItem
-                              key={index}
-                              product={item}
-                              className={styles.product}
-                          />
-                      ))}
-                  </div>
-              </div>
-              <div className={styles.block}>
-                  <h3 className={styles.title}>SAN chain</h3>
-                  <div className={styles.products}>
-                      {CHAIN_PRODUCTS.map((item, index) => (
-                          <ProductItem
-                              key={index}
-                              product={item}
-                              className={styles.product}
-                          />
-                      ))}
-                  </div>
-              </div>
-          </div>
-          </>
   )
 }
 

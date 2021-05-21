@@ -3,8 +3,6 @@ import cx from 'classnames'
 import Message from '@santiment-network/ui/Message'
 import styles from './Product.module.scss'
 
-const cb = () => {}
-
 const ProductItem = ({
   className,
   product: {

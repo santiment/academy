@@ -7,10 +7,6 @@
   svg {
     fill: var(--rhino);
   }
-
-  @include responsive('phone', 'phone-xs', 'laptop', 'tablet') {
-    margin-right: 24px;
-  }
 }
 
 .logoText {
@@ -18,8 +14,4 @@
 
   margin: 0 8px;
   color: var(--rhino) !important;
-
-  @include responsive('phone', 'phone-xs', 'laptop', 'tablet') {
-    display: none;
-  }
 }
