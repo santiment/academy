@@ -160,3 +160,10 @@
     padding: 20px;
   }
 }
+
+.icon svg {
+  & path,
+  & rect {
+    transition: fill 0.15s ease;
+  }
+}
