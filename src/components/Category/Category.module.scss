@@ -80,7 +80,7 @@
 }
 
 .length {
-  @include text("body-2");
+  @include text("body-3");
   color: var(--casper);
   text-align: center;
   margin: 0 12px;
@@ -117,22 +117,28 @@
 
   & .icon {
     position: absolute;
-    bottom: -10px;
-    right: -20px;
+    right: 20px;
+    top: 0;
+    bottom: 0;
     margin: 0;
     width: auto;
     height: auto;
     z-index: -1;
 
     @include responsive("phone-xs") {
-      bottom: -20px;
-      right: -40px;
+      right: -10px;
+      transform: scale(0.8);
+    }
+
+    @include responsive("tablet") {
+      right: -10px;
+      transform: scale(0.8);
     }
   }
 
   & .title {
     text-align: left;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
     @include responsive("phone-xs") {
       margin-left: 0;
@@ -142,7 +148,12 @@
   & .length {
     text-align: left;
     margin: 0;
-    max-width: 77%;
+    max-width: 74%;
+
+    @include responsive("phone-xs") {
+     max-width: 69%;
+    }
+
   }
 
   @include responsive("phone-xs") {

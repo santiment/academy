@@ -7,6 +7,8 @@ import SanAPI from "../images/docs/Sanapi"
 import Sansheets from "../images/docs/Sansheets"
 import Sanbase from "../images/docs/Sanbase"
 import Glossary from "../images/docs/Glossary"
+import Signals from "../images/docs/Signals"
+import Labels from "../images/docs/Labels"
 
 export const GUIDES = [
   {
@@ -81,7 +83,7 @@ export const GUIDES = [
 export const REFERENCES = [
   {
     title: "Metrics",
-    description: "Documentation for Santiment's on-chain, social and development indicators",
+    description: "Documentation for on-chain, social & development indicators",
     icon: Metrics,
     articles: [
       "Age Consumed",
@@ -124,20 +126,20 @@ export const REFERENCES = [
   },
   {
     title: "Changelog",
-    description: "Development updates, new features and other platform-wide improvements",
+    description: "Development updates, new features & platform improvements",
     icon: Changelog,
     articles: [],
   },
   {
     title: "Labels",
     description: "List and descriptions of all address labels on Santiment",
-    icon: Metrics,
+    icon: Labels,
     articles: [],
   },
   {
     title: "Signals",
     description: "Directory of key stakeholder signals available on Santiment",
-    icon: Metrics,
+    icon: Signals,
     articles: [
       "DAI Mint",
       "Anomalies",
