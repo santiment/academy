@@ -28,13 +28,14 @@ const Footer = ({ isMinified }) => {
             <ul className={styles.categories}>
               {categories.map(({ links }, idx) => (
                 <li key={idx} className={styles.category}>
-                  {links.map(({ children, href, name = "" }, i) => (
+                  {links.map(({ children, href, onClick, name = "" }, i) => (
                     <a
                       key={i}
                       target='_blank'
                       rel='noopener noreferrer'
                       children={name}
                       href={href}
+                      onClick={evt => onClick ? onClick(evt) : null}
                       className={cx(styles.text, styles.category__item)}
                     />
                   ))}
@@ -168,7 +169,6 @@ const Footer = ({ isMinified }) => {
                 className={cx(styles.social__img, styles.discord)}
                 width='20'
                 height='15'
-                xmlns='http://www.w3.org/2000/svg'
               >
                 <path
                   fillRule='evenodd'
@@ -186,7 +186,6 @@ const Footer = ({ isMinified }) => {
                 className={cx(styles.social__img, styles.twitter)}
                 width='20'
                 height='17'
-                xmlns='http://www.w3.org/2000/svg'
               >
                 <path d='M20 2.38c-.75.37-1.5.5-2.38.62.88-.5 1.5-1.25 1.75-2.25a8.2 8.2 0 01-2.62 1 4.36 4.36 0 00-3-1.25c-2.13 0-4 1.88-4 4.13 0 .37 0 .62.13.87a11.5 11.5 0 01-8.5-4.25C1 1.88.88 2.5.88 3.38a4.1 4.1 0 001.87 3.37c-.63 0-1.25-.25-1.88-.5 0 2 1.38 3.63 3.25 4-.37.13-.75.13-1.12.13-.25 0-.5 0-.75-.13.5 1.63 2 2.88 3.88 2.88A7.95 7.95 0 011 14.87H0a12.2 12.2 0 006.25 1.88c7.5 0 11.63-6.25 11.63-11.63v-.5A7.27 7.27 0 0020 2.38z' />
               </svg>
@@ -201,7 +200,6 @@ const Footer = ({ isMinified }) => {
                 className={cx(styles.social__img, styles.github)}
                 width='21'
                 height='20'
-                xmlns='http://www.w3.org/2000/svg'
               >
                 <path
                   fillRule='evenodd'
@@ -219,7 +217,6 @@ const Footer = ({ isMinified }) => {
                 className={cx(styles.social__img, styles.telegram)}
                 width='21'
                 height='17'
-                xmlns='http://www.w3.org/2000/svg'
               >
                 <path d='M20.75.63c0-.13-.13-.26-.25-.38h-.75s-17.5 6.25-18.5 7c-.37.25-.37.38-.5.38-.12.5.38.75.38.75l4.5 1.5h.25c1-.63 10.37-6.5 10.87-6.76h.13c-.25.75-8.25 7.88-8.25 8 0 0-.13.13 0 .13l-.38 4.38s-.12 1.37 1.25 0c1-1 1.88-1.76 2.38-2.13 1.5 1.13 3.24 2.25 4 2.88.24.25.62.37.87.37.38 0 .75-.38.88-.75 0 0 3.25-12.88 3.25-14.63V1c-.13-.13-.13-.25-.13-.38z' />
               </svg>
@@ -234,7 +231,6 @@ const Footer = ({ isMinified }) => {
                 className={cx(styles.social__img, styles.youtube)}
                 width='20'
                 height='16'
-                xmlns='http://www.w3.org/2000/svg'
               >
                 <path d='M19.47 3.15a2.5 2.5 0 00-1.74-1.77C16.18.95 10 .95 10 .95s-6.18 0-7.73.41C1.44 1.6.76 2.3.53 3.16.13 4.72.13 8 .13 8s0 3.29.4 4.85c.23.86.9 1.54 1.74 1.77 1.56.43 7.73.43 7.73.43s6.18 0 7.73-.41a2.5 2.5 0 001.74-1.78c.4-1.57.4-4.84.4-4.84s.02-3.29-.4-4.87z' />
                 <path d='M8.59 10.82L12.82 8 8.6 5.18v5.64z' fill='#fff' />
