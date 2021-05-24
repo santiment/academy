@@ -121,7 +121,7 @@ const Footer = ({ isMinified }) => {
         )}
         <div className={styles.bottom}>
           <div className={cx(styles.text, styles.rights)}>
-            © 2016-{year.getFullYear()} Santiment
+            © 2016—{year.getFullYear()} Santiment
           </div>
           <div>
             <a
