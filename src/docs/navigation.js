@@ -155,6 +155,11 @@ export const RESOURCES = [
     description: "Which crypto analytics solution is right for you?",
     articles: ["Messari vs Santiment"],
   },
+  {
+    title: "Youtube videos",
+    description: "Explore our tutorials and webinars",
+    articles: [],
+  },
 ]
 
 export const GETTING_STARTED = {
