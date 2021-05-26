@@ -1,7 +1,7 @@
 ---
 title: Anomalies
 author: Vlad
-date: 2021-04-17
+date: 2021-05-26
 description: Signal indicating that real value of the metric doesn't fall in the predicted interval
 ---
 
@@ -14,51 +14,51 @@ Signals can be useful because there are many assets and metrics out there, so it
 After that we compare predicted lower and upper values to actual value and if it doesn't fall in the interval then we fire a signal. 
 
 ### List of supported tokens:
-* bitcoin
-* ethereum
-* ripple
-* litecoin
-* bitcoin-cash
-* binance-coin
-* uniswap
-* chainlink
-* aave
-* sushiswap
-* synthetix-network-token
-* maker
-* compound
-* enjin-coin
-* bancor
-* yearn-finance
 * 0x
-* ren
-* loopring
 * 1inch
-* curve-dao-token
-* kyber-network
-* badger-dao
-* band-protocol
-* balancer
-* dodo
+* aave
 * augur
-* orion-protocol
-* tether
-* usd-coin
-* crypto-com
-* ftx-token
-* binance-usd
-* multi-collateral-dai
-* huobi-token
-* unus-sed-leo
-* hex
-* chiliz
-* the-graph
+* badger-dao
+* balancer
+* bancor
+* band-protocol
 * basic-attention-token
-* matic-network
+* binance-coin
+* binance-usd
+* bitcoin
+* bitcoin-cash
+* chainlink
+* chiliz
+* compound
+* crypto-com
+* curve
 * decentraland
+* dodo
+* enjin-coin
+* ethereum
+* ftx-token
+* hex
+* huobi-token
+* kyber-network
+* litecoin
+* loopring
+* maker
+* matic-network
+* multi-collateral-dai
 * nexo
 * omisego
+* orion-protocol
+* ren
+* ripple
 * santiment
+* sushi
+* synthetix-network-token
+* tether
+* the-graph
+* uniswap
+* unus-sed-leo
+* usd-coin
+* yearn-finance
 
 ### List of supported metrics:
 * stack_circulation_1d
@@ -74,4 +74,7 @@ After that we compare predicted lower and upper values to actual value and if it
 * stack_cumulative_age_consumed
 * active_deposits
 * active_withdrawals
-
+* daily_avg_price_usd
+* daily_trading_volume_usd
+* mvrv_usd_long_short_diff
+* avg_fees_usd
