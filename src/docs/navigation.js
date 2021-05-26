@@ -9,6 +9,7 @@ import Sanbase from "../images/docs/Sanbase"
 import Glossary from "../images/docs/Glossary"
 import Signals from "../images/docs/Signals"
 import Labels from "../images/docs/Labels"
+import Youtube from "../images/docs/Youtube"
 
 export const GUIDES = [
   {
@@ -78,6 +79,12 @@ export const GUIDES = [
     description: "Introduction to all relevant terms and concepts",
     articles: [],
   },
+  {
+    title: "Youtube videos",
+    description: "Explore our tutorials and webinars",
+    icon: Youtube,
+    articles: ['Webinars', 'Walkthroughs', 'Tutorials'],
+  },
 ]
 
 export const REFERENCES = [
@@ -146,7 +153,7 @@ export const REFERENCES = [
       "Large Exchange Transactions",
       "Large Transactions"
     ],
-  }
+  },
 ]
 
 export const RESOURCES = [
@@ -154,11 +161,6 @@ export const RESOURCES = [
     title: "How we compare",
     description: "Which crypto analytics solution is right for you?",
     articles: ["Messari vs Santiment"],
-  },
-  {
-    title: "Youtube videos",
-    description: "Explore our tutorials and webinars",
-    articles: [],
   },
 ]
 

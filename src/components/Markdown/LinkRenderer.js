@@ -15,7 +15,13 @@ const LinkRenderer = ({href, children}) => {
   	}
   }
 
-  return isLinkComponent ? <Link to={link}>{children}</Link> : <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+  let props
+
+  if (!isLinkComponent && !href.startsWith('#')) {
+		props = { target: "_blank", rel: "noopener noreferrer"}
+	}
+
+  return isLinkComponent ? <Link to={link}>{children}</Link> : <a href={href} {...props}>{children}</a>
 }
 
 export default LinkRenderer
