@@ -31,7 +31,7 @@ const Category = ({ wide, title, description, icon: Icon }) => {
       onMouseLeave={removeHover}
     >
       <div className={styles.icon}>
-        <Icon withColor={true} />
+        <Icon withColor={isHover} />
       </div>
       <div>
         <h4 className={styles.title}>{title}</h4>
