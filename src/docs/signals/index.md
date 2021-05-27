@@ -8,8 +8,6 @@ We consider signal as some specific occurrence happening at some point of time. 
 
 Signals belong to nonequidistant timeseries data type (the sequence taken at successive non-equally spaced points in time).
 
-### Signals
-
 - [DAI Mint](/signals/dai-mint)
 - [Anomalies](/signals/anomalies)
 - [Large Exchange Transactions](/signals/large-exchange-transactions)

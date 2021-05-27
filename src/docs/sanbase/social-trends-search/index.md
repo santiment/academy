@@ -1,6 +1,7 @@
 ---
-title: Social trends search
+title: Social Tool
 author: Santiment Team
+date: 2021-05-27
 description: Using this feature you can display the amount of times your search term is mentioned in a specific medium (e.g. Telegram).
 ---
 
