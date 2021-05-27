@@ -2,13 +2,27 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-05-19
+date: 2021-05-27
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
 ## May 2021
+
+``19.05.2021 - 26.05.2021``
+
+**Sanbase**
+
+Introducing **Charts v3** 📈👋
+
+- Better performance
+- Displaying search suggestions in the sidebar
+- Mark metric as a favorite directly in the sidebar
+- Metrics’ compact layout
+- Quick settings access by clicking on the metric
+![](https://media.giphy.com/media/2cQiNEFfdy4tIKztHf/source.gif)
+![](https://media.giphy.com/media/PJFgKCfAuH1U6GBhjP/source.gif)
 
 ``12.05.2021 - 19.05.2021``
 
