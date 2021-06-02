@@ -2,11 +2,47 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-05-27
+date: 2021-06-02
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
+
+## June 2021
+
+``26.05.2021 - 02.06.2021``
+
+**Sanbase**
+
+- New coins: BRG, WEST, CSPR, LOWB, TRU, UNCX, RAY, ID, TRIAS
+- New Sessions control panel [https://app.santiment.net/account#sessions](https://app-stage.santiment.net/account#sessions)
+- Add Shared axis toggle on Social Tool page
+- Add `Social tool` and `Social Trends` to the Navigation → Dashboards
+- `Notifications` dropdown in header
+![image](https://user-images.githubusercontent.com/522287/120511618-3d5db800-c3d3-11eb-9f02-968fa4277de1.png)
+
+**Screener**
+
+Add new filter option -`Rank`
+![Untitled-2](https://user-images.githubusercontent.com/522287/120509618-582f2d00-c3d1-11eb-8644-e4736512c015.png)
+
+**Charts**
+
+- Notable metrics
+![image](https://user-images.githubusercontent.com/522287/120517024-a85dbd80-c3d8-11eb-8440-74264108008c.png)
+- Auto-update toggle
+![image](https://user-images.githubusercontent.com/522287/120516795-6af93000-c3d8-11eb-9148-729ebce8360f.png)
+- “Holdings on the top exchanges" widget
+- Searching metrics by group name
+![image](https://user-images.githubusercontent.com/522287/120516208-c840b180-c3d7-11eb-8dc0-f32ffcbee3ae.png)
+- New metrics: “Circulation NVT”, “Percent of Stablecoin Total Supply held by Whales with more than 5 million USD”
+- Normalizing “'MVRV USD intraday” values
+- **Fix:** preserving metric’s settings after un/lock
+
+**Sanbase Mobile**
+
+- Add recently used metrics
+![image](https://user-images.githubusercontent.com/522287/120517317-01c5ec80-c3d9-11eb-8182-be12eb48968a.png)
 
 ## May 2021
 
