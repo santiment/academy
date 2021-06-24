@@ -2,13 +2,57 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-06-02
+date: 2021-06-24
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
 ## June 2021
+``16.06.21 - 23.06.21``
+
+**Sanbase**
+- Fix trx hash link in Recent transactions
+- Add Top transactions table to the Wallet Address Tool
+  ![](https://user-images.githubusercontent.com/24521041/123233913-25b1b500-d4e3-11eb-9ed2-49aaef15f9a7.png)
+
+**Sanbase Charts**
+- Color picker HEX input
+- Smoothing setting for all Social metrics;
+- MVRV USD intraday renamed to MVRV Ratio Intraday
+
+
+``09.06.21 - 16.06.21``
+
+**Sanbase**
+- Home page UI improvements
+
+**Sanbase Charts**
+- New color picker
+- "Weighted sentiment" metrics' smoothing
+- “Download as PNG” button in chart's controls bar
+
+
+
+``02.06.2021 - 09.06.2021``
+
+**Sanbase**
+- New coins: GTC, ATA, CVX, HAPI
+- Support datetime on Social Trends Page: [/labs/trends?datetime=2021-06-04T12:04:21Z](https://app.santiment.net/labs/trends?datetime=2021-06-04T12:04:21Z)
+
+**Sanbase Charts**
+- Stability improvements
+- "Stablecoins" asset
+  ![](https://media.giphy.com/media/XTX186r2ZeQkUBNcfk/source.gif)
+- "Keyboard Shortcuts" panel
+  ![](https://user-images.githubusercontent.com/24521041/123233337-a8864000-d4e2-11eb-8e06-a8b9165c5687.png)
+- Metric's loading indicator
+- "Presenter mode" for a clean chart view
+  ![](https://media.giphy.com/media/zF9cLlvalQWkrvCDku/source.gif)
+- Labelling metrics with tickers in downloaded PNG
+- "Supply Distribution" merged metrics’ MA indicators support
+- [Beta only] Reordering chart’s metrics by using drag and drop
+![](https://media.giphy.com/media/uoy6WD4LIvjCVMzNUo/source.gif)
 
 ``26.05.2021 - 02.06.2021``
 
