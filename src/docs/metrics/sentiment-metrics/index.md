@@ -152,7 +152,7 @@ The metric is available **for any selected asset**.
 
 The **Sentiment Volume Consumed** is an improved version of the [Sentiment
 Balance](#sentiment-balance) that also takes into account the [Unique Social
-Volume](/metrics/social-volume-metrics/#unique-social-volume).
+Volume](/metrics/unique-social-volume).
 
 **Sentiment Volume Consumed** is defined as a rolling Z-score of $X =
 \mathrm{Unique Social Volume} \times \mathrm{Average Sentiment}$.
