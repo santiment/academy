@@ -50,3 +50,23 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ## SanAPI
 
+Example of query for **network_profit_loss**:
+
+```graphql
+{
+  getMetric(metric: "network_profit_loss") {
+    timeseriesData(
+      slug: "santiment"
+      from: "2021-01-01T00:00:00Z"
+      to: "2021-02-01T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
+[Run in
+explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22network_profit_loss%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222021-01-01T00%3A00%3A00Z%22%2C%20to%3A%222021-02-01T00%3A00%3A00Z%22%2C%20interval%3A%221d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
