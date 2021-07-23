@@ -116,6 +116,7 @@ export const REFERENCES = [
       "Mean Coin Age",
       "MVRV ratio",
       "Network Growth",
+      "Network Profit Loss",
       "NVT",
       "Price",
       "Realized Value",
