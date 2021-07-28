@@ -19,7 +19,7 @@ We update this page every two weeks or more frequently.
 **Sanbase Charts**
 - Offsetting tooltip position when it blocks the hovered area
 - Displaying values' difference in tooltip when selecting area and holding Shift key
-  ![](https://media.giphy.com/media/dCyyZL3zbIM4zLaAZJ/giphy.gif)
+  ![](https://user-images.githubusercontent.com/24521041/127341368-602cd1cb-c9e1-4e7e-81ad-c3d93002c01d.gif)
 
 ``07.07.21 - 14.07.21``
 
@@ -62,7 +62,7 @@ We update this page every two weeks or more frequently.
 **Sanbase Charts**
 - Undoing changes by pressing CMD/CTRL + Z
 - Redoing changes by pressing CMD/CTRL + SHIFT + Z
-  ![](https://media.giphy.com/media/kRCY51Q99nMqelWYz9/giphy.gif)
+  ![](https://user-images.githubusercontent.com/24521041/127341515-a57498b0-6dcb-4dc1-85a6-a3e2214edd8c.gif)
 - Supply Distribution labeled by number of addresses widget
   ![](https://user-images.githubusercontent.com/24521041/127335518-d2116a4a-62d1-4452-a818-6be52e2bc7db.png)
 
