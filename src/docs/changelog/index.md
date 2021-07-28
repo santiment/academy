@@ -2,13 +2,71 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-06-24
+date: 2021-07-28
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
+## July 2021
+``14.07.21 - 28.07.21``
+
+**Sanbase**
+- New assets: SKILL, STEP, FOX, MVI, WSG, DPET, MIST, ALPACA
+- Exchanges filter in Screener: `ANY` selector by default
+- `Explore address watchlists` category in watchlists navigation dropdown
+
+**Sanbase Charts**
+- Offsetting tooltip position when it blocks the hovered area
+- Displaying values' difference in tooltip when selecting area and holding Shift key
+  ![](https://media.giphy.com/media/dCyyZL3zbIM4zLaAZJ/giphy.gif)
+
+``07.07.21 - 14.07.21``
+
+**Sanbase**
+- New assets: DAWN, TOTM, DEXE, ILV
+- Exchange filter in Screener
+
+**Sanbase Charts**
+- Updated mapview UI
+- Increased granularity for Active Deposits, Deposit Transactions, Withdrawal Transactions metrics
+- New metric: Active Withdrawals
+- Positive/Negative Bars style option for BitMEX Perpetual Contract Funding Rate metric
+- “Recent Chart Layouts" bug fix
+
+
+``30.06.21 - 07.07.21``
+
+**Sanbase**
+- Labels for sender/receiver in Latest transactions and Top transactions table in Wallet Balance tool
+- Live This Week In Crypto Widget
+
+**Sanbase Charts**
+- Automatic short/live links
+- Supporting drawings in the downloaded png
+- "Project in Trends" signal as a subitem of the "Social Volume" metric (for non BTC/ETH assets)
+- Candles' width fix
+
+
 ## June 2021
+
+``23.06.21 - 30.06.21``
+
+**Sanbase**
+
+- New assets: MINA, CQT, SLP, PNY, TIME, RNO, NDX
+- Update webinars section
+- Fix ATH signals
+- Notifications & Profile Page UI improvements
+
+**Sanbase Charts**
+- Undoing changes by pressing CMD/CTRL + Z
+- Redoing changes by pressing CMD/CTRL + SHIFT + Z
+  ![](https://media.giphy.com/media/kRCY51Q99nMqelWYz9/giphy.gif)
+- Supply Distribution labeled by number of addresses widget
+  ![](https://user-images.githubusercontent.com/24521041/127335518-d2116a4a-62d1-4452-a818-6be52e2bc7db.png)
+
+
 ``16.06.21 - 23.06.21``
 
 **Sanbase**
