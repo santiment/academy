@@ -6,6 +6,7 @@ date: 2020-04-06
 
 - [Five-minute frequency](#five-minute-freqency)
 - [Hourly frequency](#hourly-freqency)
+- [Eight-hour frequency](#eight-hour-frequency)
 - [Daily frequency](#daily-freqency)
 
 ## Five-minute frequency
@@ -35,7 +36,13 @@ Examples:
 
 One value is computed for every hour of the day.
 
-Example: The emerging trends are being computed for every round hour in a day
+Example: The emerging trends are being computed for every round hour in a day.
+
+## Eight-hour frequency
+
+One value is computed for every eight hours of the day.
+
+Example: The binance funding rate metrics are being computed once every eight hours in a day.
 
 ## Daily frequency
 

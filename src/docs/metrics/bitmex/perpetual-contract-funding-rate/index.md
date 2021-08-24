@@ -33,7 +33,7 @@ Ratio
 
 ## Frequency
 
-[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+[Eight-Hour Intervals](/metrics/details/frequency#eight-hour-frequency)
 
 ---
 
