@@ -42,7 +42,7 @@ export const GUIDES = [
     title: "SanAPI",
     icon: SanAPI,
     description: "Santiment API, Available Metrics & Queries",
-    articles: ["Metrics", "Queries"],
+    articles: ["Metrics", "Queries", "Common Queries"],
   },
   {
     title: "Sansheets",
