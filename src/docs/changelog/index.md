@@ -2,13 +2,66 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-07-28
+date: 2021-08-26
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
+## August 2021
+
+``19.08.21 - 25.08.21``
+
+**Sanbase**
+
+- New assets: FEI, TRIBE, RARE, CHART, JULD
+
+**Charts**
+
+- `Average Gas Used in Gwei` metric
+- \[Beta only\] Embed chart 
+  ![](https://user-images.githubusercontent.com/25135650/130820158-c47c1121-66bf-4f8a-adb3-53c66a55919d.mp4)
+- \[Beta only\] `Binance Exchange Funding Rates (USDT)`, `Binance Exchange Funding Rates (BUSD)` metrics
+
+``12.08.21 - 18.08.21``
+
+**Charts**
+
+- `Top holders` setting for `Supply held by … addresses` metrics
+- Highlighting metric with opened settings
+
+``05.08.21 - 11.08.21``
+
+**Sanbase**
+
+- New assets: PIPT, HYVE, GMEE, GALA, CGG, CLV, EFI, FCL, FEAR, C98
+
+**Charts**
+
+- Stability improvements
+- \[Beta only\] Combined metrics 
+  ![](https://user-images.githubusercontent.com/25135650/129046723-bbd83864-9a93-4057-bdc5-82e72e87ea24.mp4)
+- `My chart layouts` sorted by the edit date
+
+![](https://user-images.githubusercontent.com/25135650/129046723-bbd83864-9a93-4057-bdc5-82e72e87ea24.mp4)
+
+``29.07.21 - 04.08.21``
+
+Migrated [neuro.santiment.net](http://neuro.santiment.net) —> [api.santiment.net](http://api.santiment.net) 
+
+**Sanbase**
+
+- Screener: enhance ALL/ANY combinators in filters
+
+**Charts**
+
+- Stability improvements
+- Closing fullscreen chart with the `Esc` key
+- Supply distribution merged metrics' compact labels
+- `Active Addresses` values' domain adjusted
+
 ## July 2021
+
 ``14.07.21 - 28.07.21``
 
 **Sanbase**
@@ -109,7 +162,7 @@ We update this page every two weeks or more frequently.
   ![](https://media.giphy.com/media/zF9cLlvalQWkrvCDku/source.gif)
 - Labelling metrics with tickers in downloaded PNG
 - "Supply Distribution" merged metrics’ MA indicators support
-- [Beta only] Reordering chart’s metrics by using drag and drop
+- \[Beta only\] Reordering chart’s metrics by using drag and drop
 ![](https://media.giphy.com/media/uoy6WD4LIvjCVMzNUo/source.gif)
 
 ``26.05.2021 - 02.06.2021``
