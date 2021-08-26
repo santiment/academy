@@ -20,7 +20,7 @@ We update this page every two weeks or more frequently.
 
 - `Average Gas Used in Gwei` metric
 - \[Beta only\] Embed chart 
-  ![](https://user-images.githubusercontent.com/25135650/130820158-c47c1121-66bf-4f8a-adb3-53c66a55919d.mp4)
+  ![](https://user-images.githubusercontent.com/522287/130962013-92dfbc31-dba9-406a-a900-b1f7ac00118b.mp4)
 - \[Beta only\] `Binance Exchange Funding Rates (USDT)`, `Binance Exchange Funding Rates (BUSD)` metrics
 
 ``12.08.21 - 18.08.21``
