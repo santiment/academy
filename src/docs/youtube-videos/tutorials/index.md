@@ -1,12 +1,16 @@
 ---
 title: Youtube tutorials
 author: Santiment Team
-date: 2021-05-26
+date: 2021-08-24
 ---
 
 
 ## Santiment Screener
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4H5FlcJwi5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+## Combine any metrics to take fundamental analysis to the next level **Charts**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/58EeGvnwuH8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Yield farming explained - 1

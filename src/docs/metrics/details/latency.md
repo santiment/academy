@@ -5,6 +5,7 @@ date: 2020-04-06
 ---
 
 - [On-Chain Latency](#on-chain-latency)
+- [Funding Rates Latency](#funding-rates-latency)
 - [Price Latency](#price-latency)
 - [Development Activity Latency](#development-activity-latency)
 
@@ -42,6 +43,10 @@ is being processed separately and usually doesn't take longer than 1 minute.
 
 The emerging trends are computed once per hour so they become available a few
 minutes after every round hour
+
+## Funding Rates Latency
+
+The funding rates are updated every 15 minutes
 
 ## Price Latency
 

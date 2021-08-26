@@ -42,7 +42,7 @@ export const GUIDES = [
     title: "SanAPI",
     icon: SanAPI,
     description: "Santiment API, Available Metrics & Queries",
-    articles: ["Metrics", "Queries"],
+    articles: ["Metrics", "Queries", "Common Queries"],
   },
   {
     title: "Sansheets",
@@ -117,6 +117,7 @@ export const REFERENCES = [
              "Mean Coin Age",
              "MVRV ratio",
              "Network Growth",
+             "Network Profit Loss",
              "NVT",
              "Price",
              "Realized Value",

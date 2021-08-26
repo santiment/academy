@@ -17,6 +17,18 @@ Here are a few links of examples on how to use our metrics:
 - [Using Token Age Consumed](https://insights.santiment.net/read/btc-%22coin-days-destroyed%22-spiked.-volatility-is-coming.-672) to predict volatility cycles
 - [Identifying trend reversals](https://insights.santiment.net/read/chainlink-hits-ath-following-coinbase-listing---perhaps-it's-time-to-chill-541) with a combination of on-chain and social indicators
 
+## Access to our private #sanbase-pro Discord channel
+
+With Sanbase Pro, you also get to enjoy our private Discord channel on our Santiment server, known as #sanbase-pro.
+
+On this exclusive channel for our paid members, you can enjoy discussing the current state of the markets and where our data is heading next with both our staff and our top tier traders who use our platform! Discussions include:
+
+- Deep analysis of Santiment's key leading indicators, and whether they're pointing to buy, hold, or sell opportunities
+- Instant assistance with any aspect of the platform that is currently giving you trouble
+- Improvement suggestions for our staff, and how we can create a better experience for you as a VIP member of Santiment's community
+
+Enjoy discussing anything and everything beyond just the more generic content that is discussed in our #general channel on our Discord server. You'll be amazed with the high level discussions we have there, and what kinds of insights are uncovered from our most valued members!
+
 ## Exclusive market insights
 
 Sanbase Pro grants you access to special market reports and daily analysis produced by the Santiment team. Pro Insights include:

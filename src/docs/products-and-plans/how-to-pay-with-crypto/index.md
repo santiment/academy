@@ -55,7 +55,7 @@ Another way of getting Pro access to Sanbase is currently available: Providing l
 
 As long as you provide 3000+ SAN to our Uniswap V2 pools (and the corresponding amount of ETH or BAC), you get FREE access to Sanbase Pro, including all our metrics, new templates and daily market insights!
 
-You can add liquidity to the SAN<->ETH pool here: [https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098](https://app.uniswap.org/#/add/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098). The SAN<->BAC pool is here: [https://app.uniswap.org/#/add/0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098](https://app.uniswap.org/#/add/0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098)
+You can add liquidity to the SAN<->ETH pool here: [https://app.uniswap.org/#/add/v2/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098](https://app.uniswap.org/#/add/v2/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098). The SAN<->BAC pool is here: [https://app.uniswap.org/#/add/v2/0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098](https://app.uniswap.org/#/add/v2/0x3449FC1Cd036255BA1EB19d65fF4BA2b8903A69a/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098)
 
 As soon as you hold the LP tokens in your wallet and connect it to your account or login with it
 you will automatically receive Pro subscription within one hour. 💗
