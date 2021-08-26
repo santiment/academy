@@ -37,6 +37,7 @@ possibility to enter custom search terms.
 - [Sentiment Metrics](/metrics/sentiment-metrics)
 - [Social Dominance](/metrics/social-dominance)
 - [Social Volume](/metrics/social-volume)
+- [Unique Social Volume](/metrics/unique-social-volume)
 - [Top Social Gainers/Losers](/metrics/top-social-gainers-losers)
 
 ## Development
@@ -66,7 +67,7 @@ activity.
 - [Circulation](/metrics/circulation)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [Supply Distribution](/metrics/supply-distribution)
-- [ETH 2.0](/metrics/eth-2)  
+- [ETH 2.0](/metrics/eth-2)
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
