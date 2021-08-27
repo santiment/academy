@@ -157,6 +157,14 @@ const Footer = ({ isMinified }) => {
             >
               Status
             </a>
+            <a
+              rel='noopener noreferrer'
+              target='_blank'
+              href='https://academy.santiment.net/changelog'
+              className={cx(styles.text, styles.link)}
+            >
+              Changelog
+            </a>
           </div>
           <div className={styles.social}>
             <a

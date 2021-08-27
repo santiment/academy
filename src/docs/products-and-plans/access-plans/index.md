@@ -21,6 +21,6 @@ Purchasing a plan is done from the [Sanbase pricing page](https://app.santiment.
 
 SanAPI plans access the [API](/sanapi)
 
-Purchasing a plan is done from the [SanAPI pricing page](https://neuro.santiment.net/#pricing)
+Purchasing a plan is done from the [SanAPI pricing page](https://api.santiment.net/#pricing)
 
 [Detailed description of plans](/products-and-plans/access-plans/sanapi)

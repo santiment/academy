@@ -144,7 +144,7 @@ available through any of the products.
 
 The emerging trends are available in the _`Labs`_ section.
 
-### [SanAPI](https://neuro.santiment.net)
+### [SanAPI](https://api.santiment.net)
 
 The emerging trends are available as part of the API, the metric is called
 `getTrendingWords`:

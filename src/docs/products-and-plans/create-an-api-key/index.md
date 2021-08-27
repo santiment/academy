@@ -17,7 +17,7 @@ subscription plan.
 
 Creating API keys is done in the account settings of
 [Sanbase](https://app.santiment.net/account),
-[SanAPI](https://neuro.santiment.net/account) or
+[SanAPI](https://api.santiment.net/account) or
 [Sansheets](https://sheets.santiment.net/account).
 
 In accounts settings you should click on the **`Generate`** button to

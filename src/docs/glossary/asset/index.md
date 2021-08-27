@@ -21,7 +21,7 @@ import san
 san.get("projects/all")
 ```
 
-### [SanAPI](https://neuro.santiment.net)
+### [SanAPI](https://api.santiment.net)
 
 The following GraphQL query gives a list of all assets
 

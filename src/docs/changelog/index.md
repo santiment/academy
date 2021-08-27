@@ -38,9 +38,9 @@ We update this page every two weeks or more frequently.
 
 **Charts**
 
-- Stability improvements
-- \[Beta only\] Combined metrics 
-  ![](https://user-images.githubusercontent.com/24521041/131119917-cd8c36d0-bc47-49d5-9f9a-db758f23c340.gif)
+#### Combined metrics
+\[Beta only\]
+![](https://user-images.githubusercontent.com/24521041/131119917-cd8c36d0-bc47-49d5-9f9a-db758f23c340.gif)
 - `My chart layouts` sorted by the edit date
 
 ``29.07.21 - 04.08.21``

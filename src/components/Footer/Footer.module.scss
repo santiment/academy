@@ -159,31 +159,32 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 
-  @include responsive('phone-xs') {
+  @include responsive('phone-xs', 'phone') {
     text-align: center;
     flex-direction: column-reverse;
     border: none;
   }
 
-  @include responsive('tablet', 'phone') {
+  @include responsive('tablet') {
     flex-direction: row-reverse;
   }
 }
 
 .rights {
   color: var(--casper);
-  @include responsive('phone-xs') {
+  @include responsive('phone-xs', 'phone') {
     margin-top: 16px;
   }
 
-  @include responsive('tablet', 'phone') {
+  @include responsive('tablet') {
     display: none;
   }
 
   &__additional {
     display: none;
-    @include responsive('tablet', 'phone') {
+    @include responsive('tablet') {
       display: block;
       text-align: right;
       margin-top: 4px;
@@ -193,6 +194,12 @@
 
 .link {
   margin-right: 32px;
+  display: inline-flex;
+  align-items: center;
+
+  @include responsive('phone-xs') {
+    margin-right: 16px;
+  }
 
   &:last-child {
     margin: 0;
@@ -226,6 +233,14 @@
     margin-bottom: 40px;
   }
 
+  @include responsive('phone') {
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--porcelain);
+    margin-bottom: 40px;
+  }
+
   &__img {
     fill: var(--rhino);
   }
@@ -233,7 +248,7 @@
   &__heading {
     display: none;
 
-    @include responsive('phone-xs') {
+    @include responsive('phone-xs', 'phone') {
       display: block;
     }
   }
@@ -246,9 +261,13 @@
     justify-content: center;
     margin-right: 10px;
 
-    @include responsive('phone-xs') {
+    @include responsive('phone-xs', 'phone') {
       border: 1px solid var(--porcelain);
       border-radius: 4px;
+    }
+
+    @include responsive('phone') {
+      margin-right: 32px;
     }
 
     &:last-child {

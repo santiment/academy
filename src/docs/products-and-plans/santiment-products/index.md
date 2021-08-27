@@ -24,7 +24,7 @@ we offer a Python library [Sanpy](https://github.com/santiment/sanpy)
 which offers easy access to the data for data scientists knowledgable
 in Python.
 
-<https://neuro.santiment.net>
+<https://api.santiment.net>
 
 
 ![](neuro.png)
