@@ -4,7 +4,6 @@ import sanbase from './icons/sanbase.svg'
 import insights from './icons/insights.svg'
 import sansheets from './icons/sansheets.svg'
 import sanhunters from './icons/sanhunters.svg'
-import datascience from './icons/datascience.svg'
 
 export const BUSINESS_PRODUCTS = [
   {
@@ -24,14 +23,7 @@ export const BUSINESS_PRODUCTS = [
     img: sanapi,
     title: 'SanAPI',
     description: 'The most comprehensive crypto API on the market',
-    to: 'https://neuro.santiment.net'
-  },
-  {
-    img: datascience,
-    title: 'Data Science as a Service',
-    description: 'Bespoke market intelligence for digital assets',
-    to: '/',
-    onClick: () => window.Intercom && window.Intercom('showNewMessage', 'Talk with expert about Data Science as a Service.')
+    to: 'https://api.santiment.net'
   }
 ]
 
