@@ -2,7 +2,7 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-08-26
+date: 2021-08-27
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
@@ -20,7 +20,7 @@ We update this page every two weeks or more frequently.
 
 - `Average Gas Used in Gwei` metric
 - \[Beta only\] Embed chart 
-  ![](https://user-images.githubusercontent.com/522287/130962013-92dfbc31-dba9-406a-a900-b1f7ac00118b.mp4)
+  ![](https://user-images.githubusercontent.com/24521041/131119924-412b0f73-7d0f-4c79-bbad-78815aae9a45.gif)
 - \[Beta only\] `Binance Exchange Funding Rates (USDT)`, `Binance Exchange Funding Rates (BUSD)` metrics
 
 ``12.08.21 - 18.08.21``
@@ -40,10 +40,8 @@ We update this page every two weeks or more frequently.
 
 - Stability improvements
 - \[Beta only\] Combined metrics 
-  ![](https://user-images.githubusercontent.com/25135650/129046723-bbd83864-9a93-4057-bdc5-82e72e87ea24.mp4)
+  ![](https://user-images.githubusercontent.com/24521041/131119917-cd8c36d0-bc47-49d5-9f9a-db758f23c340.gif)
 - `My chart layouts` sorted by the edit date
-
-![](https://user-images.githubusercontent.com/25135650/129046723-bbd83864-9a93-4057-bdc5-82e72e87ea24.mp4)
 
 ``29.07.21 - 04.08.21``
 
