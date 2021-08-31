@@ -11,7 +11,7 @@ description: What percent of the total social volume is dedicated to an asset or
 Social Dominance is build on top of the [Social Data](/metrics/details/social-data).
 
 Social Dominance for an asset compares the [Social
-Volume](/metrics/social-volume) of that asset to the combined social volume of
+Volume](/metrics/social-volume) of that asset to the combined social volume of the
 100 largest market cap assets.
 
 Social Dominance for arbitrary search term compares the [Social
