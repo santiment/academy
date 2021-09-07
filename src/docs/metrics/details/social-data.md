@@ -33,18 +33,7 @@ them is usually very low).
 
 ## Available data sources
 
-1. **Professional traders chat**
-
-This chat is hidden from search engines and usually has over 500 professional
-traders chatting every day about the state of the crypto market.
-
-**Latency**: All the messages are collected in real-time (1-2s delay max.)
-
-**History**: The historical data starts at `2018-02-09`.
-
-**Availability**: Used in all of our social metrics.
-
-2. **Telegram**
+1. **Telegram**
 
 We track a curated list with over 300 crypto related Telegram chats. For each
 of them we have the full history of the chat.
@@ -56,7 +45,7 @@ at `2016-03-29`.
 
 **Availability**: Used in all of our social metrics.
 
-3. **Twitter**
+2. **Twitter**
 
 We track a curated list with over 500 crypto related Twitter accounts. For
 each of them we collect their tweets, their retweets and all the replies to
@@ -66,10 +55,9 @@ their tweets.
 
 **History**: The historical data starts at `2018-02-13`.
 
-**Availability**: Currently only available through our experimental platform
-[https://graphs.santiment.net/social](https://graphs.santiment.net/social).
+**Availability**: Used in all of our social metrics.
 
-4. **Reddit**
+3. **Reddit**
 
 We track a curated list with over 350 crypto related subreddits. For each of
 them we collect the posts themselves, as well as all the comments to these
@@ -84,18 +72,7 @@ max.)
 ([https://app.santiment.net/labs/trends/explore/bullrun](https://app.santiment.net/labs/trends/explore/bullrun)), as well as our experimental platform
 [https://graphs.santiment.net/social](https://graphs.santiment.net/social).
 
-5. **Discord**
-
-We track a curated list with over 30 crypto related servers. For each of them
-we collect the messages from all the public chats on the given server.
-
-**Latency**: All the messages are collected in real-time (1-2s delay max.)
-
-**History**: The historical data starts at `2016-05-21`.
-
-**Availability**: Used in all of our social metrics.
-
-6. **Bitcointalk**
+4. **Bitcointalk**
 
 We collect all the new public posts from
 [bitcointalk.org](https://bitcointalk.org). We also have the full historical
@@ -107,5 +84,4 @@ seconds.
 **History**: we have collected the full forum history, starting from
 `2009-11-22`.
 
-**Availability**: Currently only available through our experimental platform
-[https://graphs.santiment.net/](https://graphs.santiment.net/).
+**Availability**: Used in all of our social metrics.

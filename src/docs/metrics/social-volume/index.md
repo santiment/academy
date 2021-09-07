@@ -118,8 +118,6 @@ names, where the available sources are:
 
 - telegram
 - reddit
-- discord
-- professional_traders_chat
 - total (combines all sources)
 
 ### Social Volume for an asset
