@@ -1,0 +1,10 @@
+FROM python
+
+WORKDIR /academy
+ADD . /academy
+
+RUN apt-get update && apt-get install --assume-yes aspell aspell-en
+RUN python -m pip install --upgrade pip setuptools
+RUN python -m pip install pyspelling
+
+#RUN python -m pyspelling --config spellcheck.yaml

@@ -33,7 +33,7 @@ After that add markdown file `transaction-volume.md` (or transaction-volume/inde
 
 Also, need to add a reference to the article file in category root article (see examples in `src/docs/metrics/index.md`)
 
-> If you can't find appropriate category for your article, pls, write to @Nastya or someone from frontend. We will discuss it and help with icon
+> If you can't find appropriate category for your article, please, write to @Nastya or someone from frontend. We will discuss it and help with icon
 
 ---
 
