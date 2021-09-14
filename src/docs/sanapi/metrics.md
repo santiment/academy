@@ -34,6 +34,8 @@ Supported blockchains:
 | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
+[View in the GraphiQL Explorer](https://api.santiment.net/graphiql?variables=&query=%7BgetAvailableBlockchains%20%7B%0A%20%20blockchain%0A%7D%7D)
+
 ## All available metrics
 
 The list of all available metrics can be fetched with this query:
