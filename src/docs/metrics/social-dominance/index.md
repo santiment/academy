@@ -82,8 +82,6 @@ names, where the available sources are:
 
 - telegram
 - reddit
-- discord
-- professional_traders_chat
 - total (combines all sources)
 
 ### Social Dominance for an asset

@@ -38,10 +38,8 @@ The results are sourced from more than 1000 crypto-specific social
 media channels, including:
 - 300+ Telegram groups
 - 350+ crypto subreddits
-- 30+ of Discord servers
 - 500+ Twitter accounts
 - BitcoinTalk
-- Private trader chats
 
 ## How to use it
 

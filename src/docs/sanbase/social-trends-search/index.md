@@ -14,9 +14,7 @@ search term or phraseis mentioned in a specific medium.
 
 To filter out the noise and only present relevant results, we focused on channels where at least 90% of all discussions center on crypto:
 - Telegram channels
-- Discord channels
 - Reddit
-- Proffessional traders chat
 
 For additional context, the results are plotted against the price of BTC or ETH, allowing you to correlate market reactions to everyplace crypto chatter:
 

@@ -34,8 +34,6 @@ Each one of the social data source:
 
 - Telegram
 - Reddit
-- Discord
-- Professional traders chats
 - Bitcointalk
 - Twitter
 
