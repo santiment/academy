@@ -3,6 +3,8 @@ import cx from 'classnames'
 import { Link } from 'gatsby'
 import { InputWithIcon as Input } from "@santiment-network/ui/Input"
 import { isSSR } from '../../utils/utils'
+import Girl from './girl.png'
+import Man from './man.png'
 import styles from "./Search.module.scss"
 
 const SUGGESTIONS = [{
@@ -56,6 +58,10 @@ const Search = ({ small }) => {
     </div>
     ) : (
     <div className={styles.wrapper}>
+      <div className={styles.illustrations}>
+        <img src={Girl} alt="girl" width="605px" className={styles.girl} />
+        <img src={Man} alt="man" width="655px" className={styles.man} />
+      </div>
       <h3 className={styles.heading}>Santiment Academy</h3>
       <Input
         id='search'

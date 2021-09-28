@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 
 
   &__small {
@@ -23,9 +24,33 @@
   }
 }
 
+.illustrations {
+  position: absolute;
+  width: 1840px;
+
+
+  @include responsive("phone-xs", "phone", "tablet") {
+    display: none;
+  }
+}
+
+.girl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: auto;
+}
+
+.man {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: auto;
+}
+
 .heading {
   color: var(--rhino);
-  margin: 64px 0 40px;
+  margin: 78px 0 40px;
 
   @include text("h3");
 
@@ -74,7 +99,7 @@
 .suggestions {
   display: flex;
   align-items: center;
-  margin: 16px 0 64px;
+  margin: 16px 0 78px;
   width: 100%;
   max-width: 500px;
 
