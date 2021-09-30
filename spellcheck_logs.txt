@@ -1,0 +1,4184 @@
+docker run -it --mount type=bind,source="/Users/yurazatsepin/Work/santiment/academy",target=/academy spellchecker python -m pyspelling --config spellcheck.yaml
+Misspelled words:
+<htmlcontent> pull_request_template.md: html>body>ul>li
+--------------------------------------------------------------------------------
+README
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+changelog
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+changelog
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+FEI
+JULD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+CGG
+CLV
+EFI
+FCL
+GMEE
+HYVE
+PIPT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+neuro
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+combinators
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+fullscreen
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+DPET
+MVI
+WSG
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+tooltip
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+DEXE
+ILV
+TOTM
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+BitMEX
+UI
+mapview
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+png
+subitem
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+CQT
+MINA
+NDX
+PNY
+RNO
+SLP
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ATH
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+UI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+CMD
+CTRL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+trx
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+Intraday
+intraday
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+UI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+PNG
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+ATA
+CVX
+GTC
+HAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+Labelling
+Metric's
+PNG
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BRG
+CSPR
+LOWB
+TRIAS
+TRU
+UNCX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Stablecoin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+intraday
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+metric’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Keystakeholder
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BOSON
+MTHD
+NFY
+SMTY
+URQA
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DOGEFI
+ELON
+KISHU
+OMI
+XEND
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+recents
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+DApp
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+ced
+crowdsourced
+eb
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+WalletHunters
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+EPNS
+SRK
+TLM
+VISR
+ZCX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+csv
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+bugfixes
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+AIOZ
+CFX
+KTN
+LQTY
+MDX
+NFTX
+SHOPX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+ATD
+BLES
+CONV
+EPS
+FMG
+FST
+GLQ
+QIUCK
+STN
+USDF
+infographics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+ERN
+KLAY
+KONO
+NFT
+PKF
+STR
+VRA
+dublicates
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+visualisation
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Screener's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DEXes
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+infographics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+getMetric
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li>ul>li
+--------------------------------------------------------------------------------
+Customizable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Bugfixes
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li>ul>li
+--------------------------------------------------------------------------------
+Infographics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BCH
+LTC
+XRP
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Bitmex
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+columms
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ROI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Mapview
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+Analytics
+intraday
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Autorefresh
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BITMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Infographics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+visualisation
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Recents
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Analytics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Infographics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+infographic
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Labelling
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+LTC
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+metric’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+timebounds
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+minichart’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DEXs
+Sushiswap
+ctrl
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+infographics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Socail
+submetrics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+metric’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+inv
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+UX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ui
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Stablecoin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+tinyurl
+yyycjjcg
+zrc
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+CMD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Defi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Insigths
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ttt
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+backend
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+tooltip
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+visualisations
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+visualisations
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Navbar
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Barj
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+Bitmex
+CMD
+Mapview
+UX
+Webhooks
+tooltip
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>p
+--------------------------------------------------------------------------------
+Intraday
+Webhooks
+ZoomIn
+dac
+fullscreen
+minimap
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+UX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ICO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li>p
+--------------------------------------------------------------------------------
+Sanbase's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li>p
+--------------------------------------------------------------------------------
+fullscreen
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li>p
+--------------------------------------------------------------------------------
+CSV
+Sanbase's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/changelog/index.md: html>body>ul>li>p
+--------------------------------------------------------------------------------
+EOS
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/how-to-spot-tops-with-price---network-activity-divergences/index.md: html>body>p
+--------------------------------------------------------------------------------
+Ibisbegovic
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/how-to-spot-tops-with-price---network-activity-divergences/index.md: html>body>p
+--------------------------------------------------------------------------------
+signalling
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/how-to-spot-tops-with-price---network-activity-divergences/index.md: html>body>p
+--------------------------------------------------------------------------------
+ENJ
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/how-to-spot-tops-with-price---network-activity-divergences/index.md: html>body>p
+--------------------------------------------------------------------------------
+ENJ
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/how-to-spot-tops-with-price---network-activity-divergences/index.md: html>body>p
+--------------------------------------------------------------------------------
+MKR’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/index.md: html>body>p
+--------------------------------------------------------------------------------
+Ibisbegovic
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Corellation
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Backtesting
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Stablecoin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Santiment’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/investigate-speculative-activity-with-santiment’s-exchange-metrics/index.md: html>body>p
+--------------------------------------------------------------------------------
+Ibisbegovic
+Santiment’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/investigate-speculative-activity-with-santiment’s-exchange-metrics/index.md: html>body>p
+--------------------------------------------------------------------------------
+BNT
+Bancor’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/investigate-speculative-activity-with-santiment’s-exchange-metrics/index.md: html>body>p
+--------------------------------------------------------------------------------
+RLC’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/index.md: html>body>p
+--------------------------------------------------------------------------------
+Granger
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/index.md: html>body>p
+--------------------------------------------------------------------------------
+tradable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/index.md: html>body>p
+--------------------------------------------------------------------------------
+underperformed
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/index.md: html>body>p
+--------------------------------------------------------------------------------
+cryptocurrencies
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/index.md: html>body>p
+--------------------------------------------------------------------------------
+MKR
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/index.md: html>body>p
+--------------------------------------------------------------------------------
+HODLers
+MKR
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/index.md: html>body>p
+--------------------------------------------------------------------------------
+Sangraphs
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/santiment-pro-reports-samples/index.md: html>body>p
+--------------------------------------------------------------------------------
+Covid
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/santiment-pro-reports-samples/index.md: html>body>p
+--------------------------------------------------------------------------------
+backtesting
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/santiment-pro-reports-samples/index.md: html>body>h3
+--------------------------------------------------------------------------------
+UNI’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/santiment-pro-reports-samples/index.md: html>body>p
+--------------------------------------------------------------------------------
+DeFi
+UNI's
+Uniswap’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/timing-market-volatility-with-token-age-consumed/index.md: html>body>p
+--------------------------------------------------------------------------------
+Ibisbegovic
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/timing-market-volatility-with-token-age-consumed/index.md: html>body>p
+--------------------------------------------------------------------------------
+HODLers
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/timing-market-volatility-with-token-age-consumed/index.md: html>body>p
+--------------------------------------------------------------------------------
+signalled
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/timing-market-volatility-with-token-age-consumed/index.md: html>body>p
+--------------------------------------------------------------------------------
+BNT
+Bancor’s
+altcoin
+bounceback
+signalled
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/education-and-use-cases/timing-market-volatility-with-token-age-consumed/index.md: html>body>p
+--------------------------------------------------------------------------------
+Aragon’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+CSV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+CSV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+CSV
+Sangraphs
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>h2
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+GraphiQL
+autocmplete
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>h2
+--------------------------------------------------------------------------------
+CSV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>p
+--------------------------------------------------------------------------------
+CSV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>h2
+--------------------------------------------------------------------------------
+CSV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>p
+--------------------------------------------------------------------------------
+CSV
+csv
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>h2
+--------------------------------------------------------------------------------
+CSV
+Sangraphs
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>p
+--------------------------------------------------------------------------------
+CSV
+Sangraphs
+merics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-developers/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+interpert
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+cryptocurrencies
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+signalling
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+Tezos
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+MDIA
+hodler
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+backtesting
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+jumpstarted
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+HODLers
+ICO
+longterm
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+HODLers
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+lifsepan
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+ETH’s
+trx
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+trx
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+longterm
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/for-traders/index.md: html>body>p
+--------------------------------------------------------------------------------
+ICO
+altcoins
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/asset/index.md: html>body>p
+--------------------------------------------------------------------------------
+synonims
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/asset/index.md: html>body>p
+--------------------------------------------------------------------------------
+Santiment's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/asset/index.md: html>body>h3
+--------------------------------------------------------------------------------
+Sanpy
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/asset/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/asset/index.md: html>body>p
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/asset/index.md: html>body>p
+--------------------------------------------------------------------------------
+intalled
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/deposit-addresses/index.md: html>body>ol>li
+--------------------------------------------------------------------------------
+SDD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/deposit-addresses/index.md: html>body>ol>li
+--------------------------------------------------------------------------------
+SDT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/index.md: html>body>p
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/index.md: html>body>p
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/index.md: html>body>p
+--------------------------------------------------------------------------------
+Santiment's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/glossary/index.md: html>body>p
+--------------------------------------------------------------------------------
+allProjects
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/index.md: html>body>p
+--------------------------------------------------------------------------------
+Yura
+Zatsepin
+analytics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/index.md: html>body>h2
+--------------------------------------------------------------------------------
+analytics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Ibisbegovic
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari
+cryptocurrencies
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari
+cryptocurrencies
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+BNB
+LTC
+Messari
+XRP
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+cryptocurrencies
+dataset
+subreddits
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Bitmex
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Trx
+messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Trx
+messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+MakerDAO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+MakerDAO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+MakerDAO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>h2
+--------------------------------------------------------------------------------
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li>p
+--------------------------------------------------------------------------------
+Compund
+dydx
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+dydx
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+dydx
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+intraday
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Tokenized
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Polychain
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ATH
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+inlow
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+infographics
+toggleable
+treemap
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari
+cryptocurrencies
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari
+paywalled
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>p
+--------------------------------------------------------------------------------
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+CSV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Messari
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+defi
+dexes
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/how-we-compare/messari-vs-santiment/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Analytics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/labels/index.md: html>body>p
+--------------------------------------------------------------------------------
+stakingcontract
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/labels/index.md: html>body>h2
+--------------------------------------------------------------------------------
+Defi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/labels/index.md: html>body>p
+--------------------------------------------------------------------------------
+CDP
+DeFi
+MakerDAO
+cdp
+collateralized
+defi
+makerdao
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/labels/index.md: html>body>p
+--------------------------------------------------------------------------------
+recieved
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/age-consumed/age-consumed-technical.md: html>body>p
+--------------------------------------------------------------------------------
+XMR
+ZEC
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/age-consumed/age-consumed-technical.md: html>body>p
+--------------------------------------------------------------------------------
+cdots
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/age-consumed/age-consumed-technical.md: html>body>p
+--------------------------------------------------------------------------------
+cdots
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/age-consumed/index.md: html>body>p
+--------------------------------------------------------------------------------
+multipled
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/age-consumed/index.md: html>body>p
+--------------------------------------------------------------------------------
+ICO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/age-consumed/index.md: html>body>p
+--------------------------------------------------------------------------------
+Golem
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/amount-in-top-holders/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/binance/busd-bnb-funding-rates/index.md: html>body>p
+--------------------------------------------------------------------------------
+Lyudmil
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/binance/busd-bnb-funding-rates/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/binance/usdt-bnb-funding-rates/index.md: html>body>p
+--------------------------------------------------------------------------------
+Lyudmil
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/binance/usdt-bnb-funding-rates/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/index.md: html>body>p
+--------------------------------------------------------------------------------
+Anatoliy
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/index.md: html>body>p
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contract-basis/index.md: html>body>p
+--------------------------------------------------------------------------------
+Anatoliy
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contract-basis/index.md: html>body>p
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contract-basis/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contract-funding-rate/index.md: html>body>p
+--------------------------------------------------------------------------------
+Anatoliy
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contract-funding-rate/index.md: html>body>p
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contract-funding-rate/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contract-price/index.md: html>body>p
+--------------------------------------------------------------------------------
+Anatoliy
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contract-price/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contracts-open-interest-value/index.md: html>body>p
+--------------------------------------------------------------------------------
+Anatoliy
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contracts-open-interest-value/index.md: html>body>p
+--------------------------------------------------------------------------------
+Bitmex's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contracts-open-interest-value/index.md: html>body>p
+--------------------------------------------------------------------------------
+Satoshis
+XBT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contracts-open-interest-value/index.md: html>body>p
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contracts-open-interest-value/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/perpetual-contracts-open-interest-value/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/price-index/index.md: html>body>p
+--------------------------------------------------------------------------------
+Anatoliy
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/price-index/index.md: html>body>p
+--------------------------------------------------------------------------------
+BitMEX
+Bitstamp
+Bittrex
+Huobi
+Itbit
+Kraken
+Poloniex
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/price-index/index.md: html>body>p
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/bitmex/price-index/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/circulation/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/community-messages-count/index.md: html>body>h1
+--------------------------------------------------------------------------------
+metricshub
+py
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/community-messages-count/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/daily-active-addresses/index.md: html>body>h1
+--------------------------------------------------------------------------------
+clickhouse
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/daily-active-addresses/index.md: html>body>h1
+--------------------------------------------------------------------------------
+addon
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/daily-active-addresses/index.md: html>body>h1
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/daily-active-addresses/index.md: html>body>h1
+--------------------------------------------------------------------------------
+clickhouse
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/daily-active-deposits/index.md: html>body>p
+--------------------------------------------------------------------------------
+outcoming
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/daily-active-deposits/index.md: html>body>p
+--------------------------------------------------------------------------------
+MKR's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/daily-active-deposits/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/defi/index.md: html>body>p
+--------------------------------------------------------------------------------
+Anatoliy
+DeFi
+Maksim
+Nedashkovsky
+Razhev
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/defi/index.md: html>body>h3
+--------------------------------------------------------------------------------
+MakerDAO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/defi/index.md: html>body>p
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/defi/index.md: html>body>p
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/defi/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/access.md: html>body>p
+--------------------------------------------------------------------------------
+realtime
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/access.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/access.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/access.md: html>body>ul>li
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/access.md: html>body>ul>li
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/access.md: html>body>ul>li
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/access.md: html>body>ul>li
+--------------------------------------------------------------------------------
+realtime
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/data-type.md: html>body>p
+--------------------------------------------------------------------------------
+represtented
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/latency.md: html>body>ul>li
+--------------------------------------------------------------------------------
+inutes
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/latency.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Bitcointalk
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/social-data.md: html>body>p
+--------------------------------------------------------------------------------
+Klimuk
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/social-data.md: html>body>p
+--------------------------------------------------------------------------------
+NOSQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/social-data.md: html>body>p
+--------------------------------------------------------------------------------
+subreddits
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/social-data.md: html>body>p
+--------------------------------------------------------------------------------
+bullrun
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/social-data.md: html>body>ol>li
+--------------------------------------------------------------------------------
+Bitcointalk
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/social-data.md: html>body>p
+--------------------------------------------------------------------------------
+bitcointalk
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+UTXOs
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Acknowldgements
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+onchain
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+BDD
+HODL
+UTXO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+UTXO
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+inerested
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>h2
+--------------------------------------------------------------------------------
+UTXOs
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+UTXO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+UTXO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+UTXO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+UTXO
+satoshi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+satoshi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+UTXO
+satoshi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+satoshi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>h2
+--------------------------------------------------------------------------------
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+UTXO
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+CMD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+UTXO
+utxo
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>h2
+--------------------------------------------------------------------------------
+Acknowldgements
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+IBA
+Lopatchouk
+Maksim
+Michail
+Santiment's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+Akiron
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+Bansal
+Dhruv
+HODL
+hodl
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+Honeybadger
+Nic
+honeybadged
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+Calvez
+Coinmetrics
+Nic
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+Coinmetrics
+coinmetrics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/stack-coin-age-model/index.md: html>body>p
+--------------------------------------------------------------------------------
+jratcliff
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/timebound.md: html>body>p
+--------------------------------------------------------------------------------
+UTXO
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/timebound.md: html>body>ul>li
+--------------------------------------------------------------------------------
+yers
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/details/timebound.md: html>body>p
+--------------------------------------------------------------------------------
+properities
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/development-activity/index.md: html>body>p
+--------------------------------------------------------------------------------
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/development-activity/index.md: html>body>p
+--------------------------------------------------------------------------------
+Bitoin
+SV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/development-activity/index.md: html>body>p
+--------------------------------------------------------------------------------
+SV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/development-activity/index.md: html>body>p
+--------------------------------------------------------------------------------
+SV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/development-activity/index.md: html>body>p
+--------------------------------------------------------------------------------
+CTO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/development-activity/index.md: html>body>p
+--------------------------------------------------------------------------------
+backtested
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/development-activity/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/dex/index.md: html>body>p
+--------------------------------------------------------------------------------
+Maksim
+Nedashkovsky
+Razhev
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/dex/index.md: html>body>p
+--------------------------------------------------------------------------------
+ETHWrapped
+WETH
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/dex/index.md: html>body>p
+--------------------------------------------------------------------------------
+TrueUSD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/dex/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/dex/index.md: html>body>p
+--------------------------------------------------------------------------------
+Stablecoin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/dex/index.md: html>body>p
+--------------------------------------------------------------------------------
+Stablecoin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/dex/index.md: html>body>p
+--------------------------------------------------------------------------------
+Stablecoin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/dormant-circulation/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/emerging-trends/index.md: html>body>p
+--------------------------------------------------------------------------------
+Klimuk
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/emerging-trends/index.md: html>body>p
+--------------------------------------------------------------------------------
+metric's
+realtime
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/emerging-trends/index.md: html>body>p
+--------------------------------------------------------------------------------
+preprocessing
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/emerging-trends/index.md: html>body>ol>li>p
+--------------------------------------------------------------------------------
+stopwords
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/emerging-trends/index.md: html>body>p
+--------------------------------------------------------------------------------
+HypeScore
+frac
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/emerging-trends/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/eth-2/index.md: html>body>p
+--------------------------------------------------------------------------------
+Maksim
+Razhev
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/eth-2/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+stakers
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/eth-2/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/eth-2/index.md: html>body>p
+--------------------------------------------------------------------------------
+Staker
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/eth-2/index.md: html>body>p
+--------------------------------------------------------------------------------
+ROI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/eth-2/index.md: html>body>p
+--------------------------------------------------------------------------------
+getMetric
+graphql
+histogramData
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/eth-2/index.md: html>body>p
+--------------------------------------------------------------------------------
+getMetric
+graphql
+histogramData
+staker
+unlabelled
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/eth-2/index.md: html>body>p
+--------------------------------------------------------------------------------
+getMetric
+graphql
+histogramData
+stakers
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/ethereum-spent/index.md: html>body>p
+--------------------------------------------------------------------------------
+ICO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/ethereum-spent/index.md: html>body>p
+--------------------------------------------------------------------------------
+ICO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/ethereum-spent/index.md: html>body>p
+--------------------------------------------------------------------------------
+Golem
+ICO
+ICOs
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/ethereum-spent/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/ethereum-spent/index.md: html>body>p
+--------------------------------------------------------------------------------
+graphql
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/ethereum-spent/index.md: html>body>p
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/exchange-funds-flow/index.md: html>body>p
+--------------------------------------------------------------------------------
+aeternity
+scalable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/exchange-funds-flow/index.md: html>body>blockquote>p
+--------------------------------------------------------------------------------
+Aeternity
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/exchange-funds-flow/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BitMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+MakerDAO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-balance/index.md: html>body>p
+--------------------------------------------------------------------------------
+Maksim
+Razhev
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-balance/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-balance/index.md: html>body>p
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-balance/index.md: html>body>p
+--------------------------------------------------------------------------------
+Aave
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-balance/index.md: html>body>p
+--------------------------------------------------------------------------------
+Aave
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-exchange/index.md: html>body>p
+--------------------------------------------------------------------------------
+Maksim
+Razhev
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-exchange/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+df
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-exchange/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-flow/index.md: html>body>p
+--------------------------------------------------------------------------------
+Maksim
+Razhev
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-flow/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-flow/index.md: html>body>p
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/labeled-flow/index.md: html>body>p
+--------------------------------------------------------------------------------
+DeFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+MakerDAO
+Maksim
+Nedashkovsky
+Razhev
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+MakerDAO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+Collateralization
+WETH
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Collareral
+DSR
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+MCD
+collateralization
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+DSR
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+MCD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>h3
+--------------------------------------------------------------------------------
+Collateralization
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+Collateralization
+MCD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+MakerDAO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+Stablecoin
+collaterals
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+MakerDAO
+collaterals
+stablecoin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>h3
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+CDPs
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+MCD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+SCD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+MCD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/makerdao/index.md: html>body>p
+--------------------------------------------------------------------------------
+MCD
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+MCA
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+MCA
+frac
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+TCA
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+Circ
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+Circ
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+TCA
+TCT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+MCT
+summand
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+MCA
+MCT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+TCT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+TCT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+TCT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+TCT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+TCT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+TCT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+Circ
+summand
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mean-coin-age/mean-coin-age-technical.md: html>body>p
+--------------------------------------------------------------------------------
+TCT
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mvrv-ratio/index.md: html>body>p
+--------------------------------------------------------------------------------
+Irina
+Pranovich
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mvrv-ratio/index.md: html>body>p
+--------------------------------------------------------------------------------
+MV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mvrv-ratio/index.md: html>body>p
+--------------------------------------------------------------------------------
+MV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mvrv-ratio/index.md: html>body>p
+--------------------------------------------------------------------------------
+frac
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/mvrv-ratio/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/network-growth/index.md: html>body>p
+--------------------------------------------------------------------------------
+transfered
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/network-growth/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/network-profit-loss/index.md: html>body>p
+--------------------------------------------------------------------------------
+NPL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/network-profit-loss/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/nvt/index.md: html>body>p
+--------------------------------------------------------------------------------
+prceise
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/nvt/index.md: html>body>p
+--------------------------------------------------------------------------------
+blockchain's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/nvt/index.md: html>body>p
+--------------------------------------------------------------------------------
+Trx
+blockchain's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/nvt/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/nvt/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+availale
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/nvt/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+availale
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/price/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/realized-value/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>p
+--------------------------------------------------------------------------------
+Klimuk
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>h1
+--------------------------------------------------------------------------------
+metricshub
+py
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>h1
+--------------------------------------------------------------------------------
+metricshub
+py
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>h1
+--------------------------------------------------------------------------------
+metricshub
+py
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>h1
+--------------------------------------------------------------------------------
+metricshub
+py
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>p
+--------------------------------------------------------------------------------
+dataset
+labelled
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>p
+--------------------------------------------------------------------------------
+realtime
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>p
+--------------------------------------------------------------------------------
+mathrm
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/sentiment-metrics/index.md: html>body>p
+--------------------------------------------------------------------------------
+frac
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/social-dominance/index.md: html>body>h1
+--------------------------------------------------------------------------------
+metricshub
+py
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/social-dominance/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/social-volume/index.md: html>body>h1
+--------------------------------------------------------------------------------
+metricshub
+py
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/social-volume/index.md: html>body>blockquote>p
+--------------------------------------------------------------------------------
+marino
+sancoin
+sansan
+santimentnet
+santoken
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/social-volume/index.md: html>body>p
+--------------------------------------------------------------------------------
+containg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/social-volume/index.md: html>body>ul>li>p
+--------------------------------------------------------------------------------
+Lucene
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/social-volume/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+lucene
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/social-volume/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/spent-coin-cost/index.md: html>body>p
+--------------------------------------------------------------------------------
+botom
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/spent-coin-cost/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/stock-to-flow/index.md: html>body>p
+--------------------------------------------------------------------------------
+Tsetso
+modeal
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/stock-to-flow/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/supply-distribution/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+frac
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/supply-on-or-outside-exchanges/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/top-holders/index.md: html>body>p
+--------------------------------------------------------------------------------
+analyse
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/top-holders/index.md: html>body>p
+--------------------------------------------------------------------------------
+HoldersCount
+assets's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/top-holders/index.md: html>body>p
+--------------------------------------------------------------------------------
+HoldersCount
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/top-holders/index.md: html>body>p
+--------------------------------------------------------------------------------
+HoldersCount
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/top-holders/index.md: html>body>p
+--------------------------------------------------------------------------------
+etherscan
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/top-social-gainers-losers/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/transaction-volume/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/unique-social-volume/index.md: html>body>h1
+--------------------------------------------------------------------------------
+metricshub
+py
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/unique-social-volume/index.md: html>body>p
+--------------------------------------------------------------------------------
+aggresive
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/unique-social-volume/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/velocity/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/velocity/velocity-technical.md: html>body>p
+--------------------------------------------------------------------------------
+timespan
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/metrics/velocity/velocity-technical.md: html>body>p
+--------------------------------------------------------------------------------
+frac
+vel
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/index.md: html>body>h1
+--------------------------------------------------------------------------------
+clickhouse
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/index.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/index.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/sanapi.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/sanapi.md: html>body>p
+--------------------------------------------------------------------------------
+Sanapi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/sanapi.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Realtime
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/sanbase.md: html>body>p
+--------------------------------------------------------------------------------
+Sanapi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/sanbase.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Realtime
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/sanbase.md: html>body>ul>li
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/sanbase.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Analytics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/access-plans/special-restrictions.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Realtime
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/create-an-api-key/index.md: html>body>p
+--------------------------------------------------------------------------------
+Sangraphs
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/create-an-api-key/index.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/how-to-pay-with-crypto/index.md: html>body>p
+--------------------------------------------------------------------------------
+dF
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/how-to-pay-with-crypto/index.md: html>body>p
+--------------------------------------------------------------------------------
+benefitting
+incentivization
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/how-to-pay-with-crypto/index.md: html>body>blockquote>ul>li
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/how-to-pay-with-crypto/index.md: html>body>p
+--------------------------------------------------------------------------------
+BAC
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/how-to-pay-with-crypto/index.md: html>body>p
+--------------------------------------------------------------------------------
+BAC
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/how-to-pay-with-crypto/index.md: html>body>p
+--------------------------------------------------------------------------------
+BAC
+EB
+FC
+cae
+daf
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>p
+--------------------------------------------------------------------------------
+desctiption
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Santiment's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Santiment's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Sortino
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>p
+--------------------------------------------------------------------------------
+MakerDAO
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+BTC’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Chainlink’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Monero’s
+XMR
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>h2
+--------------------------------------------------------------------------------
+analytics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>p
+--------------------------------------------------------------------------------
+Watchlist’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/sanbase-pro-features/index.md: html>body>p
+--------------------------------------------------------------------------------
+Balashevich
+Maksim
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/santiment-products/index.md: html>body>p
+--------------------------------------------------------------------------------
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/santiment-products/index.md: html>body>h2
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/products-and-plans/santiment-products/index.md: html>body>p
+--------------------------------------------------------------------------------
+GraphQL
+SanAPI
+Sanpy
+knowledgable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/san-tokens/buy-san-tokens-using-bancor/index.md: html>body>p
+--------------------------------------------------------------------------------
+Trezor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/san-tokens/how-to-buy-san/index.md: html>body>p
+--------------------------------------------------------------------------------
+Trezor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/san-tokens/how-to-buy-san/index.md: html>body>p
+--------------------------------------------------------------------------------
+Trezor
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/san-tokens/how-to-buy-san/index.md: html>body>p
+--------------------------------------------------------------------------------
+Bitfinex
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/san-tokens/how-to-buy-san/index.md: html>body>h4
+--------------------------------------------------------------------------------
+DeversiFi
+ethfinex
+trustless
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/san-tokens/how-to-buy-san/index.md: html>body>p
+--------------------------------------------------------------------------------
+DeversiFi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/san-tokens/how-to-buy-san/index.md: html>body>p
+--------------------------------------------------------------------------------
+Bitfinex
+USDT
+coinmarketcap
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/san-tokens/how-to-stake-san/index.md: html>body>blockquote>p
+--------------------------------------------------------------------------------
+posession
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/san-tokens/how-to-stake-san/index.md: html>body>p
+--------------------------------------------------------------------------------
+Nano
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/common-queries.md: html>body>p
+--------------------------------------------------------------------------------
+SanAPI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/common-queries.md: html>body>p
+--------------------------------------------------------------------------------
+GraphiQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/common-queries.md: html>body>p
+--------------------------------------------------------------------------------
+GraphiQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+sanpy
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+langauge
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+overfetching
+underfetching
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>blockquote>p
+--------------------------------------------------------------------------------
+realtime
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+Santiment's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+graphiql
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+GraphQL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+visuallize
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+graphql
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+dataframe
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+sdk
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Highchart
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+occured
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+graphql
+jq
+transactionVolume
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+graphql
+jq
+transactionVolume
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+occured
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>p
+--------------------------------------------------------------------------------
+Sanapi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ratelimit
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ratelimit
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ratelimit
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ratelimit
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ratelimit
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+ratelimit
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+apikey
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Queryable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+timeseriesData
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+aggregatedTimeseriesData
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+histogramData
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+availableSince
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+lastDatetimeComputedAt
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>p
+--------------------------------------------------------------------------------
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>p
+--------------------------------------------------------------------------------
+biw
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>p
+--------------------------------------------------------------------------------
+metricthe
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>h2
+--------------------------------------------------------------------------------
+Queryable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>p
+--------------------------------------------------------------------------------
+queryable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>h3
+--------------------------------------------------------------------------------
+timeseriesData
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>p
+--------------------------------------------------------------------------------
+subquery
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>p
+--------------------------------------------------------------------------------
+includeIncompleteData
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+includeIncompleteData
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>h2
+--------------------------------------------------------------------------------
+aggregatedTimeseriesData
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>p
+--------------------------------------------------------------------------------
+ATH
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>h2
+--------------------------------------------------------------------------------
+histogramData
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>p
+--------------------------------------------------------------------------------
+subquery
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>p
+--------------------------------------------------------------------------------
+datetimes
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+fetchable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+fetchable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>ul>li
+--------------------------------------------------------------------------------
+granularities
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>h2
+--------------------------------------------------------------------------------
+availableSince
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanapi/metrics.md: html>body>h2
+--------------------------------------------------------------------------------
+lastDatetimeComputedAt
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/assets-page/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+blockchains
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/emerging-trends-page/index.md: html>body>p
+--------------------------------------------------------------------------------
+BitcoinTalk
+subreddits
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+subreddits
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/insights/index.md: html>body>p
+--------------------------------------------------------------------------------
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/keyboard-shortcuts/index.md: html>body>p
+--------------------------------------------------------------------------------
+esc
+hovercard
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/keyboard-shortcuts/index.md: html>body>p
+--------------------------------------------------------------------------------
+CMD
+CTRL
+Mapview
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/keyboard-shortcuts/index.md: html>body>p
+--------------------------------------------------------------------------------
+CMD
+CTRL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/keyboard-shortcuts/index.md: html>body>p
+--------------------------------------------------------------------------------
+sortable
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/social-trends-search/index.md: html>body>p
+--------------------------------------------------------------------------------
+phraseis
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sanbase/social-trends-search/index.md: html>body>p
+--------------------------------------------------------------------------------
+Proffessional
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/adding-an-api-key/index.md: html>body>p
+--------------------------------------------------------------------------------
+Bartel
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/assets-correlation-matrix-google-sheets/index.md: html>body>p
+--------------------------------------------------------------------------------
+Cryptowatch
+Yura
+Zatsepin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/assets-correlation-matrix-google-sheets/index.md: html>body>p
+--------------------------------------------------------------------------------
+Cryptowatch
+powerfull
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/assets-correlation-matrix-google-sheets/index.md: html>body>blockquote>p
+--------------------------------------------------------------------------------
+cryptocurrencies
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/assets-correlation-matrix-google-sheets/index.md: html>body>blockquote>p
+--------------------------------------------------------------------------------
+BTC’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/assets-correlation-matrix-google-sheets/index.md: html>body>p
+--------------------------------------------------------------------------------
+CORREL
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/assets-correlation-matrix-google-sheets/index.md: html>body>blockquote>p
+--------------------------------------------------------------------------------
+beautifull
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Customfunction
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Customfunction
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>h2
+--------------------------------------------------------------------------------
+BITMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>h5
+--------------------------------------------------------------------------------
+BITMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>h2
+--------------------------------------------------------------------------------
+BITMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>h5
+--------------------------------------------------------------------------------
+BITMEX
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+marketcaps
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+marketcaps
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+marketcaps
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+marketcaps
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>h5
+--------------------------------------------------------------------------------
+transactionType
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+transactionType
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>h2
+--------------------------------------------------------------------------------
+DEDUP
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>h5
+--------------------------------------------------------------------------------
+DEDUP
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+blockchain’s
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>h5
+--------------------------------------------------------------------------------
+numberOfHolders
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/functions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Param
+eg
+numberOfHolders
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+Cryptowatch
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/onboarding/index.md: html>body>p
+--------------------------------------------------------------------------------
+Santiment's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/onboarding/index.md: html>body>ol>li
+--------------------------------------------------------------------------------
+Ons
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/onboarding/index.md: html>body>ol>li
+--------------------------------------------------------------------------------
+Ons
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/onboarding/index.md: html>body>ol>li
+--------------------------------------------------------------------------------
+ons
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/onboarding/index.md: html>body>ol>li
+--------------------------------------------------------------------------------
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/onboarding/index.md: html>body>ol>li
+--------------------------------------------------------------------------------
+Eg
+dropdown
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/onboarding/index.md: html>body>p
+--------------------------------------------------------------------------------
+addon
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/onboarding/index.md: html>body>p
+--------------------------------------------------------------------------------
+Santiment's
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/pro-templates/index.md: html>body>p
+--------------------------------------------------------------------------------
+Quinlivan
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/pro-templates/index.md: html>body>p
+--------------------------------------------------------------------------------
+analytics
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/pro-templates/index.md: html>body>p
+--------------------------------------------------------------------------------
+MV
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/pro-templates/index.md: html>body>p
+--------------------------------------------------------------------------------
+ROI
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/pro-templates/index.md: html>body>h2
+--------------------------------------------------------------------------------
+Stablecoin
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/setting-up/index.md: html>body>p
+--------------------------------------------------------------------------------
+Bartel
+ons
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/setting-up/index.md: html>body>p
+--------------------------------------------------------------------------------
+ons
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/sansheets/setting-up/index.md: html>body>p
+--------------------------------------------------------------------------------
+tooltip
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/anomalies/index.md: html>body>p
+--------------------------------------------------------------------------------
+Anomalie
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/anomalies/index.md: html>body>p
+--------------------------------------------------------------------------------
+fbprophet
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/anomalies/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+aave
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/anomalies/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+dao
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/anomalies/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+balancer
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/anomalies/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+huobi
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/dai-mint/index.md: html>body>p
+--------------------------------------------------------------------------------
+quantile
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/index.md: html>body>p
+--------------------------------------------------------------------------------
+nonequidistant
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/large-transactions/index.md: html>body>p
+--------------------------------------------------------------------------------
+Katsiaryna
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/large-transactions/index.md: html>body>p
+--------------------------------------------------------------------------------
+transferres
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/large-transactions/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+aave
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/large-transactions/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+dao
+--------------------------------------------------------------------------------
+
+Misspelled words:
+<htmlcontent> src/docs/signals/large-transactions/index.md: html>body>ul>li
+--------------------------------------------------------------------------------
+balancer
+--------------------------------------------------------------------------------
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/local/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/usr/local/lib/python3.9/site-packages/pyspelling/__main__.py", line 87, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.9/site-packages/pyspelling/__main__.py", line 30, in main
+    return run(
+  File "/usr/local/lib/python3.9/site-packages/pyspelling/__main__.py", line 55, in run
+    for results in spellcheck(
+  File "/usr/local/lib/python3.9/site-packages/pyspelling/__init__.py", line 673, in spellcheck
+    for result in spellchecker.run_task(task, source_patterns=sources):
+  File "/usr/local/lib/python3.9/site-packages/pyspelling/__init__.py", line 317, in run_task
+    for sources in self._walk_src(source_patterns, glob_flags, glob_limit, self.pipeline_steps, expect_match):
+  File "/usr/local/lib/python3.9/site-packages/pyspelling/__init__.py", line 213, in _walk_src
+    raise RuntimeError(
+RuntimeError: None of the source targets from the configuration match any files:
+- src/**/*.json

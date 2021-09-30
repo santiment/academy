@@ -65,7 +65,7 @@ Here are those same signals, now marked based on whether DAA goes ↑ or ↓ com
 
 Success! The 'price grew more than DAA' signals seem to be very interesting buy indicators (September 2017, February 2018, August 2018 etc). Similarly, the 'price declined more than DAA' signals appear as potent exit indicators (June 2017, December 2017, July 2018 etc). 
 
-Now THAT looks almost like a tradeable strategy. So let's run a backtest, and see how our Bitcoin portfolio would have performed if we only BOUGHT and SOLD per these historical signals:
+Now THAT looks almost like a tradable strategy. So let's run a backtest, and see how our Bitcoin portfolio would have performed if we only BOUGHT and SOLD per these historical signals:
 
 ![](05.png)
 
