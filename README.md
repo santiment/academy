@@ -1,9 +1,8 @@
+This is the source for [**Santiment Knowledge Base site**](https://academy.santiment.net)
 
-![academy-logo](./src/images/academy.png)
+## Contributing
 
-This is the source for [**Santiment Technical Documentation site**](https://academy.santiment.net)
-
-## Running locally
+### Running locally
   
 If you have [yarn](https://classic.yarnpkg.com/en/docs/install/) you can run the app simply:
 
@@ -14,15 +13,14 @@ yarn start
 
 This is going to run the app on port 8000, so [`localhost:8000`](http://localhost:8000) should be accessible.
 
----
 
-## How to add an article
+### How to add an article
 
 Basically, you can add `.md` (Markdown) file in `src/docs/test.md` or put `index.md` to `src/docs/test` folder.
 It will be available at `academy.santiment.net/test` (locally: `localhost:8000/test`)
 Also you can put images under that folder
 
-## Add an article into navigation sidebar
+### Add an article into navigation sidebar
 
 If you want to see article not only by direct link, choose category for article, (example: "Metrics")
 Categories are available in [`src/docs/navigation.js`](https://github.com/santiment/academy/blob/master/src/docs/navigation.js)
@@ -33,7 +31,7 @@ After that add markdown file `transaction-volume.md` (or transaction-volume/inde
 
 Also, need to add a reference to the article file in category root article (see examples in `src/docs/metrics/index.md`)
 
-> If you can't find appropriate category for your article, pls, write to @Nastya or someone from frontend. We will discuss it and help with icon
+> If you can't find appropriate category for your article [write us](mailto:support@santiment.net).
 
 ---
 
@@ -62,3 +60,29 @@ The number of distinct addresses that ...
 Note the three dashes before and after metadata. _Don't forget to put them there_.
 
 `h2` for headings in article will be in the fast navigation through the article
+
+---
+
+## Learn More
+* [Sanbase](https://app.santiment.net)
+* [Insights](https://insights.santiment.net)
+* [Sheets](https://sheets.santiment.net)
+* [SanR](https://sanr.santiment.net)
+* [API](https://api.santiment.net)
+* [Knowledge Base](https://academy.santiment.net)
+
+## Become a SanDev
+We're hiring developers, support people, and product managers all the time. Please check our [open positions](https://santiment.notion.site/Open-positions-f1880de7557b468a80b1465013f311cd)
+
+[Contact us](mailto:jobs@santiment.net)
+
+## Community
+Join thousands of members worldwide in our [community server](https://santiment.net/discord).
+
+## Get the Latest News
+
+* [Twitter](https://twitter.com/santimentfeed)
+* [Blog](https://insights.santiment.net)
+* [Youtube](https://www.youtube.com/channel/UCSzP_Z3MrygWlbLMyrNmMkg)
+
+Any other questions, reach out to us at [support@santiment.net](support@santiment.net). We’d happy to help!
