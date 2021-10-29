@@ -70,3 +70,16 @@ This one possible is the simplest solution.
 }
 ```
 Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20allProjects(selector%3A%20%7BbaseProjects%3A%20%7Bslugs%3A%20%5B%22ethereum%22%2C%20%22bitcoin%22%2C%20%22aave%22%5D%7D%7D)%20%7B%0A%20%20%20%20slug%0A%20%20%20%20aggregatedTimeseriesData(metric%3A%20%22mvrv_usd_intraday_365d%22%2C%20from%3A%20%22utc_now-1d%22%2C%20to%3A%20%22utc_now%22%2C%20aggregation%3A%20LAST)%0A%0A%20%20%7D%0A%7D%0A)
+
+### Get all available slugs for any metric 
+
+```graphql
+{
+  getMetric(metric: "mcd_liquidation") {
+    metadata {
+      availableSlugs
+    }
+  }
+}
+```
+Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22mcd_liquidation%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
