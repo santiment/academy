@@ -83,3 +83,34 @@ Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variabl
 }
 ```
 Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22mcd_liquidation%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+
+### Get current price for all available assets on Sanbase 
+
+```graphql
+{
+  allProjects {
+    slug
+    price: aggregatedTimeseriesData(
+      metric: "price_usd"
+      from: "utc_now-1d"
+      to: "utc_now"
+      aggregation: LAST)
+  }
+}
+```
+Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20price%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22price_usd%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-1d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20aggregation%3A%20LAST)%0A%20%20%7D%0A%7D%0A)
+
+### Get current trending words
+
+```graphql
+{
+  getTrendingWords(from: "utc_now-3h", to: "utc_now", size: 20, interval: "1h") {
+    datetime
+    topWords {
+      word
+      score
+    }
+  }
+}
+```
+Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getTrendingWords(from%3A%20%22utc_now-3h%22%2C%20to%3A%20%22utc_now%22%2C%20size%3A%2020%2C%20interval%3A%20%221h%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20topWords%20%7B%0A%20%20%20%20%20%20word%0A%20%20%20%20%20%20score%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
