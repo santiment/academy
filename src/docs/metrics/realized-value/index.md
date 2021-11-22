@@ -1,16 +1,16 @@
 ---
 title: Realized Value
 author: Ivan
-date: 2020-04-09
-description: Marketcap alternative where every coin/token is assigned its acquisition price instead of current price
+date: 2021-11-19
+description: Marketcap alternative with acquisition price instead of current price
 ---
 
 ## Definition
 
-Realized Value is an alternative to the Market Cap (Market Value). Instead of
+Realized Value is an alternative to Market Capitalization (Market Value). Instead of
 multiplying all coins/tokens by the last price, every coin/token is assigned the
 price at which it was last moved. Assigning age to coin/tokens is done
-according to the [coin-age model](/metrics/details/stack-coin-age-model)
+according to the [coin-age model](/metrics/details/stack-coin-age-model).
 
 ---
 
