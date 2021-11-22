@@ -91,7 +91,7 @@ export const REFERENCES = [
   {
     title: "Metrics",
     description:
-    "Documentation for on-chain, social & development indicators",
+      "Documentation for on-chain, social & development indicators",
     icon: Metrics,
     articles: [
       "Age Consumed",
@@ -125,7 +125,7 @@ export const REFERENCES = [
       "Social Dominance",
       "Social Volume",
       "Unique Social Volume",
-      "Spent Coin Cost",
+      "Transacted Coin Acquisition Cost",
       "Stock To Flow",
       "Supply On Or Outside Exchanges",
       "Top Holders",
@@ -137,21 +137,21 @@ export const REFERENCES = [
   {
     title: "Changelog",
     description:
-    "Development updates, new features & platform improvements",
+      "Development updates, new features & platform improvements",
     icon: Changelog,
     articles: [],
   },
   {
     title: "Labels",
     description:
-    "List and descriptions of all address labels on Santiment",
+      "List and descriptions of all address labels on Santiment",
     icon: Labels,
     articles: [],
   },
   {
     title: "Signals",
     description:
-    "Directory of key stakeholder signals available on Santiment",
+      "Directory of key stakeholder signals available on Santiment",
     icon: Signals,
     articles: [
       "DAI Mint",
