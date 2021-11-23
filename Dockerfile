@@ -2,6 +2,7 @@ FROM node:17.1-slim
 
 ARG GIT_HEAD
 RUN GIT_HEAD=$GIT_HEAD
+RUN apt-get update || : && apt-get install python -y
 
 WORKDIR /app
 
