@@ -14,7 +14,7 @@ WORKDIR /app
 COPY ./package.json /app/package.json
 COPY ./yarn.lock /app/yarn.lock
 
-RUN npm install -g yarn path stream --force && yarn install --production
+RUN npm install -g yarn --force && yarn install --production
 
 COPY ./ /app
 
