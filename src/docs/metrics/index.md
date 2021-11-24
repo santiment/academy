@@ -50,7 +50,7 @@ activity.
 
 ## Network Value (On-Chain)
 
-- [Market Value To Realized Value](/metrics/mvrv)
+- [MVRV](/metrics/mvrv)
 - [NVT](/metrics/nvt)
 - [Realized Value](/metrics/realized-value)
 - [Network Profit Loss](/metrics/network-profit-loss)
