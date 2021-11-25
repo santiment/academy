@@ -26,11 +26,7 @@ const ArticleInfo = ({title, author, date}) => {
 			</div>
 			<div>
 				<h4 className={styles.author}>{name}</h4>
-				{dateString ? (
-						<span className={styles.description}>{dateString}</span>
-					) : (
-						<span className={styles.description}>{description}</span>
-					)}
+				<span className={styles.description}>{dateString ? dateString : description}</span>
 			</div>
 		</div>
 	</section>
