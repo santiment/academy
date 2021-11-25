@@ -2,11 +2,156 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-08-27
+date: 2021-11-25
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
+
+## November 2021
+
+### `17.11.21 - 26.11.21`
+
+**Watchlist**
+
+- Quick action `delete` button with `undo` added.
+- `Save as` menu item changed to `Duplicate` with new icon (Also in `Screener`)
+
+**Sanbase**
+
+- New assets: ASM, BANANA, BLCT, BSW,, CUSD, DDX, DERC, DOGEDASH, EURT, HAI, KAR, LGCY, METIS, MPL, NFT, PLSPAD, SFUND, SGB, SHFT, SNL, SPS, SSV, SSX, TKING, USDX, WHALE, WNCG, XSGD
+- Nightmode styles fixes
+
+**Alerts**
+
+- Fixed some bugs on Alerts page
+
+**Charts**
+
+- Add Layout comments
+- Charts header tool bar is updated. We make it more compact
+
+### `10.11.21 - 17.11.21`
+
+**Sanbase**
+
+- New assets: ALT, BLOK, BNX, DAR, DPR, DVI, GAFI, IMX, KLV, LAT, LN, MC, OOE, PEAK, PSP, RMRK, RVP, SAFE, SAMO, SAPP, SPH, STARL, SUN, TABOO, TOKE, WILD
+- Main navigation items resorted, "Signals" and "Explore screeners" moved (internal update)
+
+**Screener**
+
+- Add one more filter option - Weighted Sentiment (Total)
+- Bar chart, X-axis label position centered
+
+**Charts**
+
+- New sidebar open/close toggle
+- `Insights` category
+- All derivative metrics made public
+
+## October 2021
+
+### `14.10.21 - 10.11.21`
+
+**Sanbase**
+
+- New assets: AI, ARV, ATLAS, BETA, BRY, BTRST, CFG, CFI, CIRUS, DHV, DOE, ENS, FLUX, FONT, GODS, HERO, JOE, KLIMA, LSS, MIM, PDEX, PHB, POLIS, PYR, QRDO, RACA, RBC, SDN, TFL, WEMIX, XIO
+- Fixed Screener performance issues
+- Fixed 404/Broken pages
+- Fixed Charts small bugs
+- Added new metric Santiment
+
+**Weighted Sentiment Total**
+
+(eg.[https://app.santiment.net/s/lE6Y9IjH](https://app.santiment.net/s/lE6Y9IjH))
+- Added more derivatives! New FTX Funding Rate (Available for *beta*)
+
+### `07.10.21 - 13.10.21`
+
+**Sanbase**
+
+- New assets: DORA, NWC, KOK, IF, RBN, YLD
+
+**Insights**
+
+- Embedding charts in the article
+
+## September 2021
+
+### `30.09.21 - 06.10.21`
+
+**Charts**
+
+- Sticky notes
+
+**Insights**
+
+- Make better search experience
+- Add new Search Results Page
+
+**Sanbase**
+
+- Fresh Home page
+
+### `23.09.21 - 29.09.21`
+
+**Charts**
+
+- Adding emojis to chart;
+- Drawings' visibility toggle
+
+### `16.09.21 - 22.09.21`
+
+**Sanbase**
+
+- New assets: DAFI, PPAY, YGG, RAZE, ZLW, LUSD, FAB, XCH, XPRT
+
+**Charts**
+
+- `Transacted Coin Acquisition Cost` available for all users
+- New bitcoin metrics: `Exchanges v2.0`
+
+### `09.09.21 - 15.09.21`
+
+**Sanbase**
+
+- New assets: DYDX, SENSO, TTT, EGR, YOUC, URUS, ORC, XEC, DFI
+
+**Charts**
+
+- Combining project locked metrics
+- Metric's axis max/min settings
+- Saving `Shared axis` state
+- [Beta only] `Spent Coin Cost` histogram on chart
+
+### `02.09.21 - 08.09.21`
+
+**Sanbase**
+
+- New assets: MOBX, O3, PLA, DG, BIT, AGLD, NPX, VEGA, BIFI, MOVR
+
+**Charts**
+
+- Layouts stability improvements
+- Layout's sidebar items quick actions: `edit` and `Save to my library`
+- "Embed chart" available for all users
+
+### `26.08.21 - 01.09.21`
+
+**Sanbase**
+
+- New assets: BIN, SLIM, SLRS, TULIP, MNGO
+- Enhanced webinars widget
+
+**Charts**
+
+We've enhanced our Charts layout. It is more compact, clean and powerful.
+
+- Better sidebar's search
+- Updated shortcuts dialog with more useful shortcuts
+- Sidebar layouts explorer
+- "Combine metrics" has passed beta testing, it's available for all users
+- "Reapply metric" action in metric's options menu
 
 ## August 2021
 
