@@ -40,7 +40,7 @@ export const query = graphql`
       rawMarkdownBody
       frontmatter {
         title
-        date(formatString: "MMM DD, YYYY")
+        date
         author
         description
       }

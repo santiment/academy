@@ -1,5 +1,6 @@
 import React from "react"
 import cx from 'classnames'
+import moment from 'moment'
 import {PEOPLE} from './../../docs/people'
 import logo from '../../images/logos/logo-sanbase.svg'
 import styles from "./ArticleInfo.module.scss"
@@ -19,7 +20,7 @@ const ArticleInfo = ({title, author, date}) => {
 			<div>
 				<h4 className={styles.author}>{name}</h4>
 				{date ? (
-						<span className={styles.description}>{date}</span>
+						<span className={styles.description}>{moment(date).format("MMM DD, YYYY")}</span>
 					) : (
 						<span className={styles.description}>{description}</span>
 					)}
