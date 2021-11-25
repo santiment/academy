@@ -32,7 +32,6 @@
     "katex": "^0.11.1",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
-    "moment": "^2.29.1",
     "node-sass": "^6.0.1",
     "npm": "^6.12.0",
     "prop-types": "^15.7.2",
