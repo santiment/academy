@@ -82,6 +82,8 @@ names, where the available sources are:
 
 - telegram
 - reddit
+- twitter
+- bitcointalk
 - total (combines all sources)
 
 ### Social Dominance for an asset

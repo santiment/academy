@@ -118,6 +118,8 @@ names, where the available sources are:
 
 - telegram
 - reddit
+- twitter
+- bitcointalk
 - total (combines all sources)
 
 ### Social Volume for an asset
