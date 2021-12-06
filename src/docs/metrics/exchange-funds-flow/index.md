@@ -1,7 +1,7 @@
 ---
-title: Exchange Funds Flow
+title: Exchange Inflow/Outflow
 author: Santiment Team
-date: 2020-04-06
+date: 2021-11-25
 description: Amount of coins/token going in or out of exchanges
 ---
 
@@ -9,15 +9,18 @@ description: Amount of coins/token going in or out of exchanges
 
 There are three separate metrics regarding exchange funds flow:
 
-- exchange inflow - How many coins/tokens are moved from non-exchange to
+- `exchange_inflow` - How many coins/tokens are moved from non-exchange to
   exchange wallets.
-- exchange outflow - How many coins/tokens are moved from exchange to
+- `exchange_outflow` - How many coins/tokens are moved from exchange to
   non-exchange wallets.
-- exchange balance - The difference inflow-outflow (inflow minus outflow). The
+- `exchange_balance` - The difference inflow-outflow (inflow minus outflow). The
   usefulness of this metric comes from the fact that transactions from
   missing/unknown exchange wallets to missing/unknown exchange wallets cancel
-  each other - for example the way Coinbase works makes it impossible to detect
-  exchange wallets.
+  each other.
+
+Some of the metrics have a USD equivalent - the raw value is multiplied by the
+price of the coin/token at the given date. The available USD metrics are
+`exchange_inflow_usd` and `exchange_outflow_usd`
 
 ![bitcoin funds in/outflow](bitcoin-funds-inflow-outflow.png)
 ![bitcoin funds balance](bitcoin-funds-flow-balance.png)
@@ -44,8 +47,8 @@ Amount of coins/tokens
 
 ## Frequency
 
-[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
-
+**[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+**
 ---
 
 ## Latency
