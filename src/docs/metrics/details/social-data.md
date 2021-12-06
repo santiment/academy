@@ -34,53 +34,53 @@ them is usually very low).
 
 1. **Telegram**
 
-We track a curated list with over 300 crypto-related Telegram chats. For each
-of them, we have the entire history of the chat.
+    We track a curated list with over 300 crypto-related Telegram chats. For each
+    of them, we have the entire history of the chat.
 
-**Latency**. We collect the messages in real-time (1-2s delay max.)
+    **Latency**. We collect the messages in real-time (1-2s delay max.)
 
-**History**. Each chat has its complete historical data; the oldest discussion starts
-at `2016-03-29`.
+    **History**. Each chat has its complete historical data; the oldest discussion starts
+    at `2016-03-29`.
 
-**Availability**: Used in all of our social metrics.
+    **Availability**: Used in all of our social metrics.
 
 2. **Twitter**
 
-We track a curated list with over 500 crypto-related Twitter accounts. For
-each of them, we collect their tweets, their retweets, and all the replies to
-their tweets.
+    We track a curated list with over 500 crypto-related Twitter accounts. For
+    each of them, we collect their tweets, their retweets, and all the replies to
+    their tweets.
 
-**Latency**: We collect all the tweets in real-time. 
+    **Latency**: We collect all the tweets in real-time. 
 
-**History**: The historical data starts at `2018-02-13`.
+    **History**: The historical data starts at `2018-02-13`.
 
-**Availability**: Used in all of our social metrics.
+    **Availability**: Used in all of our social metrics.
 
 3. **Reddit**
 
-We track a curated list with over 350 crypto-related subreddits. For each of
-them we collect the posts themselves, as well as all the comments to these
-posts.
+    We track a curated list with over 350 crypto-related subreddits. For each of
+    them we collect the posts themselves, as well as all the comments to these
+    posts.
 
-**Latency**: All the posts and comments are collected in real-time (1-2s delay
-max.)
+    **Latency**: All the posts and comments are collected in real-time (1-2s delay
+    max.)
 
-**History**: The historical data starts at `2016-01-01`.
+    **History**: The historical data starts at `2016-01-01`.
 
-**Availability**: Data is currently only included in parts of Sanbase
-([https://app.santiment.net/labs/trends/explore/bullrun](https://app.santiment.net/labs/trends/explore/bullrun)),
-as well as our experimental platform
-[https://graphs.santiment.net/social](https://graphs.santiment.net/social).
+    **Availability**: Data is currently only included in parts of Sanbase
+    ([https://app.santiment.net/labs/trends/explore/bullrun](https://app.santiment.net/labs/trends/explore/bullrun)),
+    as well as our experimental platform
+    [https://graphs.santiment.net/social](https://graphs.santiment.net/social).
 
 4. **Bitcointalk**
 
-We collect all the new public posts from
-[bitcointalk.org](https://bitcointalk.org). We also have the full historical
-data for the whole forum.
+    We collect all the new public posts from
+    [bitcointalk.org](https://bitcointalk.org). We also have the full historical
+    data for the whole forum.
 
-**Latency**: The scraper goes through all the new messages once per 10 seconds.
+    **Latency**: The scraper goes through all the new messages once per 10 seconds.
 
-**History**: we have collected the entire forum history, starting from
-`2009-11-22`.
+    **History**: we have collected the entire forum history, starting from
+    `2009-11-22`.
 
-**Availability**: Used in all of our social metrics.
+    **Availability**: Used in all of our social metrics.
