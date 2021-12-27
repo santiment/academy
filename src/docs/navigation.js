@@ -154,10 +154,15 @@ export const REFERENCES = [
       "Directory of key stakeholder signals available on Santiment",
     icon: Signals,
     articles: [
-      "DAI Mint",
       "Anomalies",
+      "ATH price USD",
+      "DAI Mint",
+      "DEX Trades",
       "Large Exchange Transactions",
       "Large Transactions",
+      "MCD ART Liquidation",
+      "Old Coins Moved",
+      "UniswapV3 PoolCreated",
     ],
   },
 ]
