@@ -16,3 +16,4 @@ Signals belong to nonequidistant timeseries data type (the sequence taken at suc
 - [Large Transactions](/signals/large-transactions)
 - [MCD ART Liquidation](/signals/mcd-art-liquidation)
 - [Old Coins Moved](/signals/old-coins-moved)
+- [UniswapV3 PoolCreated](/signals/uniswap-v3-pool-created)
