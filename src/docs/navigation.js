@@ -162,7 +162,8 @@ export const REFERENCES = [
       "Large Transactions",
       "MCD ART Liquidation",
       "Old Coins Moved",
-      "UniswapV3 PoolCreated",
+      "Project in Trending Words",
+      "UniswapV3 PoolCreated" 
     ],
   },
 ]
