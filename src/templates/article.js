@@ -26,7 +26,7 @@ export default function Template({data, pageContext}) {
           crumbLabel={article.frontmatter.title}
         />
         <ArticleInfo {...article.frontmatter} />
-        <ArticleHeadings list={article.headings} />
+        <ArticleHeadings list={article.headings} crumbs={crumbs} />
         <Markdown markdown={article.rawMarkdownBody} />
         <Reactions article={article.frontmatter.title} />
       </div>
