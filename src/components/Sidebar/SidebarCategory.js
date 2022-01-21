@@ -27,20 +27,25 @@ const SidebarCategory = ({ className, active, title, articles = [] }) => {
         />}
       </div>
         <ul className={styles.articles}>
-          {articles.map(article => (
-            <li key={article}>
-              <Link
-                to={`/${titleToSlug(title)}/${titleToSlug(article)}/`}
-                className={cx(
-                  styles.article,
-                  isArticleActive(active, title, article) &&
-                    styles.article__active
-                )}
-              >
-                {article}
-              </Link>
-            </li>
-          ))}
+          {articles.map((article, idx) => {
+            const slugTitle = article.slug || article
+            const linkTitle = article.title || article
+            console.log({slugTitle, linkTitle})
+            return (
+              <li key={idx}>
+                <Link
+                  to={`/${titleToSlug(title)}/${titleToSlug(slugTitle)}/`}
+                  className={cx(
+                    styles.article,
+                    isArticleActive(active, title, slugTitle) &&
+                      styles.article__active
+                  )}
+                >
+                  {linkTitle}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
     </li>
   )

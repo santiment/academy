@@ -18,9 +18,9 @@ export const GUIDES = [
     icon: Education,
     articles: [
       "Timing market volatility with Token Age Consumed",
-      "Investigate Speculative Activity with Santiment’s Exchange Metrics",
-      "How To Spot tops with Price - Network Activity divergences",
-      "Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies",
+      {slug: "Investigate Speculative Activity with Santiment’s Exchange Metrics", title: "Analyze Speculative Activity with Santiment’s Exchange Metrics"},
+      {slug: "How To Spot tops with Price - Network Activity divergences", title: "Spot tops with Price - Network Activity divergences"},
+      {slug: "Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies", title: "Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategies"},
     ],
   },
   {
@@ -28,14 +28,14 @@ export const GUIDES = [
     icon: Sanbase,
     description: "Our crypto analytics & behavior platform",
     articles: [
-      "Assets page",
+      {slug: "Assets page", title: "Assets Overview page"},
       "Insights",
       "Alerts page",
-      "Emerging trends page",
-      "Social trends search",
+      {slug: "Emerging trends page", title: "Social Trends page"},
+      {slug: "Social trends search", title: "Social Tool"},
       "Account settings",
       "Logging into Sanbase",
-      "Requesting display new project",
+      {slug: "Requesting display new project", title: "Requesting new projects and their tokens to be displayed on Sanbase"},
     ],
   },
   {
