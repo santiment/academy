@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
 const intercomScript = (
   <script
@@ -28,7 +28,7 @@ const firstPromoterScript = (
   <script
     dangerouslySetInnerHTML={{
       __html: `  (function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src='https://cdn.firstpromoter.com/fprom.js',t.onload=t.onreadystatechange=function(){var t=this.readyState;if(!t||"complete"==t||"loaded"==t)try{$FPROM.init("ks4svmdl",".santiment.net")}catch(t){}};var e=document.getElementsByTagName("script")[0];
-            e.parentNode.insertBefore(t,e)})();`
+            e.parentNode.insertBefore(t,e)})();`,
     }}
   />
 )
@@ -62,25 +62,28 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
-        <meta charSet='utf-8' />
-        <meta httpEquiv='x-ua-compatible' content='ie=edge' />
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta
-          name='viewport'
-          content='width=device-width, initial-scale=1, shrink-to-fit=no'
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
         {intercomScript}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100571693-14"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-100571693-14"
+        ></script>
         {gtagScript}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
-        <noscript key='noscript' id='gatsby-noscript'>
+        <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.
         </noscript>
         <div
           key={`body`}
-          id='___gatsby'
+          id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}

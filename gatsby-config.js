@@ -72,6 +72,6 @@ module.exports = {
         ],
         useClassNames: true,
       }
-     }
+    }
   ],
 }

@@ -46,8 +46,7 @@
     "react-sizes": "^2.0.0",
     "react-syntax-highlighter": "^11.0.2",
     "react-transition-group": "^4.3.0",
-    "remark-math": "^2.0.0",
-    "smooth-scroll": "^16.1.0"
+    "remark-math": "^2.0.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

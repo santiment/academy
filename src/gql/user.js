@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import gql from "graphql-tag"
 
 const userDataFragment = gql`
   fragment userDataFragment on User {
@@ -34,7 +34,6 @@ export const CURRENT_USER_QUERY = gql`
   ${userDataFragment}
 `
 
-
 export const VERIFY_EMAIL_MUTATION = gql`
   mutation emailLoginVerify($email: String!, $token: String!) {
     emailLoginVerify(email: $email, token: $token) {
@@ -49,11 +48,11 @@ export const VERIFY_EMAIL_MUTATION = gql`
 `
 
 export const EMAIL_LOGIN_MUTATION = gql`
-  mutation(
-      $email: String!
-      $subscribeToWeeklyNewsletter: Boolean = false
-  ) {
-    emailLogin(email: $email, subscribeToWeeklyNewsletter: $subscribeToWeeklyNewsletter) {
+  mutation($email: String!, $subscribeToWeeklyNewsletter: Boolean = false) {
+    emailLogin(
+      email: $email
+      subscribeToWeeklyNewsletter: $subscribeToWeeklyNewsletter
+    ) {
       success
     }
   }

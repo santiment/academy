@@ -16,7 +16,7 @@ import Brian from "../images/people/Brian.png"
 import Yura from "../images/people/Yura.png"
 import Valentin from "../images/people/Valentin.png"
 import Serge from "../images/people/Serge.png"
-import MaksimR from '../images/people/MaksimR.png'
+import MaksimR from "../images/people/MaksimR.png"
 import Alex from "../images/people/Alex.png"
 import Vlad from "../images/people/Vlad.png"
 import Katsiaryna from "../images/people/Katsiaryna.png"
@@ -100,7 +100,7 @@ export const PEOPLE = {
     imageUrl: Katsiaryna,
     link: "",
   },
-  "anatoliy": {
+  anatoliy: {
     description: "Big Data Engineer",
     imageUrl: Anatoliy,
     link: "",

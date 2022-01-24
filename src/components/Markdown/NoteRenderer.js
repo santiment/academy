@@ -6,8 +6,8 @@ import styles from "./Markdown.module.scss"
 const TYPES = ["ORANGE_TYPE", "RED_TYPE"]
 
 const TYPES_STYLES = {
-  "ORANGE_TYPE": styles.blockquote__warning,
-  "RED_TYPE": styles.blockquote__error,
+  ORANGE_TYPE: styles.blockquote__warning,
+  RED_TYPE: styles.blockquote__error,
 }
 
 const NoteRenderer = ({ children }) => {

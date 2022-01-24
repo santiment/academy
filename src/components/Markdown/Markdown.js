@@ -24,7 +24,7 @@ const Markdown = ({ markdown, ...rest }) => (
       code: CodeBlockRenderer,
       math: MathBlockRenderer,
       inlineMath: MathRenderer,
-      blockquote: NoteRenderer
+      blockquote: NoteRenderer,
     }}
   />
 )

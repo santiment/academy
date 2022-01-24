@@ -4,17 +4,17 @@ import ContextMenu from "@santiment-network/ui/ContextMenu"
 import Button from "@santiment-network/ui/Button"
 import styles from "./Dropdown.module.scss"
 
-const Dropdown = ({ title, children, isDesktop, position='bottom' }) => {
-  const [isOpen, setOpen] = useState(false);
+const Dropdown = ({ title, children, isDesktop, position = "bottom" }) => {
+  const [isOpen, setOpen] = useState(false)
   const close = force => {
     setTimeout(
       () => {
-        setOpen(false);
+        setOpen(false)
       },
       force ? 0 : 1000
     )
   }
-  const open = () => setOpen(true);
+  const open = () => setOpen(true)
 
   return (
     <>
@@ -26,7 +26,7 @@ const Dropdown = ({ title, children, isDesktop, position='bottom' }) => {
             onClose={() => close(true)}
             onOpen={open}
             trigger={
-              <div  className={styles.trigger}>
+              <div className={styles.trigger}>
                 <Trigger title={title} isOpen={isOpen} />
               </div>
             }
@@ -44,7 +44,7 @@ const Dropdown = ({ title, children, isDesktop, position='bottom' }) => {
               title={title}
               isOpen={isOpen}
               onClick={() => {
-                setOpen(!isOpen);
+                setOpen(!isOpen)
               }}
             />
             {isOpen && children}

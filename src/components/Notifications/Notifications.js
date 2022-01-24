@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import Notification from '@santiment-network/ui/Notification'
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import styles from './Notifications.module.scss'
+import React, { Component } from "react"
+import Notification from "@santiment-network/ui/Notification"
+import { CSSTransition, TransitionGroup } from "react-transition-group"
+import styles from "./Notifications.module.scss"
 
 export const NotificationsContext = React.createContext({
   notifications: [],
@@ -61,7 +61,7 @@ class Notifications extends Component {
                 className={styles.notification}
                 onClose={() => this.remove(notification)}
                 style={{
-                  '--y-offset': `calc(-${i}00% - ${i}0px - 25px)`,
+                  "--y-offset": `calc(-${i}00% - ${i}0px - 25px)`,
                 }}
               />
             </CSSTransition>

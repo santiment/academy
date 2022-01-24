@@ -18,9 +18,21 @@ export const GUIDES = [
     icon: Education,
     articles: [
       "Timing market volatility with Token Age Consumed",
-      {slug: "Investigate Speculative Activity with Santiment’s Exchange Metrics", title: "Analyze Speculative Activity with Santiment’s Exchange Metrics"},
-      {slug: "How To Spot tops with Price - Network Activity divergences", title: "Spot tops with Price - Network Activity divergences"},
-      {slug: "Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies", title: "Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategies"},
+      {
+        slug:
+          "Investigate Speculative Activity with Santiment’s Exchange Metrics",
+        title: "Analyze Speculative Activity with Santiment’s Exchange Metrics",
+      },
+      {
+        slug: "How To Spot tops with Price - Network Activity divergences",
+        title: "Spot tops with Price - Network Activity divergences",
+      },
+      {
+        slug:
+          "Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies",
+        title:
+          "Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategies",
+      },
     ],
   },
   {
@@ -28,14 +40,18 @@ export const GUIDES = [
     icon: Sanbase,
     description: "Our crypto analytics & behavior platform",
     articles: [
-      {slug: "Assets page", title: "Assets Overview page"},
+      { slug: "Assets page", title: "Assets Overview page" },
       "Insights",
       "Alerts page",
-      {slug: "Emerging trends page", title: "Social Trends page"},
-      {slug: "Social trends search", title: "Social Tool"},
+      { slug: "Emerging trends page", title: "Social Trends page" },
+      { slug: "Social trends search", title: "Social Tool" },
       "Account settings",
       "Logging into Sanbase",
-      {slug: "Requesting display new project", title: "Requesting new projects and their tokens to be displayed on Sanbase"},
+      {
+        slug: "Requesting display new project",
+        title:
+          "Requesting new projects and their tokens to be displayed on Sanbase",
+      },
     ],
   },
   {
@@ -83,15 +99,14 @@ export const GUIDES = [
     title: "Youtube videos",
     description: "Explore our tutorials and webinars",
     icon: Youtube,
-    articles: ['Webinars', 'Walkthroughs', 'Tutorials'],
+    articles: ["Webinars", "Walkthroughs", "Tutorials"],
   },
 ]
 
 export const REFERENCES = [
   {
     title: "Metrics",
-    description:
-      "Documentation for on-chain, social & development indicators",
+    description: "Documentation for on-chain, social & development indicators",
     icon: Metrics,
     articles: [
       "Age Consumed",
@@ -136,22 +151,19 @@ export const REFERENCES = [
   },
   {
     title: "Changelog",
-    description:
-      "Development updates, new features & platform improvements",
+    description: "Development updates, new features & platform improvements",
     icon: Changelog,
     articles: [],
   },
   {
     title: "Labels",
-    description:
-      "List and descriptions of all address labels on Santiment",
+    description: "List and descriptions of all address labels on Santiment",
     icon: Labels,
     articles: [],
   },
   {
     title: "Signals",
-    description:
-      "Directory of key stakeholder signals available on Santiment",
+    description: "Directory of key stakeholder signals available on Santiment",
     icon: Signals,
     articles: [
       "Anomalies",
@@ -163,7 +175,7 @@ export const REFERENCES = [
       "MCD ART Liquidation",
       "Old Coins Moved",
       "Project in Trending Words",
-      "UniswapV3 PoolCreated" 
+      "UniswapV3 PoolCreated",
     ],
   },
 ]
