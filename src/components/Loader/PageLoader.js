@@ -1,9 +1,9 @@
-import React from "react"
-import cx from "classnames"
-import logo from "../../images/logo-SAN.svg"
-import styles from "./PageLoader.module.scss"
+import React from 'react'
+import cx from 'classnames'
+import logo from '../../images/logo-SAN.svg'
+import styles from './PageLoader.module.scss'
 
-const PageLoader = ({ className, text = "Loading" }) => (
+const PageLoader = ({ className, text = 'Loading' }) => (
   <div className="page">
     <div className={cx(styles.loader, className)}>
       <img

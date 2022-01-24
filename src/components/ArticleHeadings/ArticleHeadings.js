@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react"
-import { useLocation } from "@reach/router"
-import { sluggify } from "../Markdown/utils"
-import { scrollToTargetAdjusted } from "../../utils/utils"
-import cx from "classnames"
-import styles from "./ArticleHeadings.module.scss"
+import React, { useState, useEffect } from 'react'
+import { useLocation } from '@reach/router'
+import { sluggify } from '../Markdown/utils'
+import { scrollToTargetAdjusted } from '../../utils/utils'
+import cx from 'classnames'
+import styles from './ArticleHeadings.module.scss'
 
 const ArrowRight = () => (
   <svg
@@ -29,9 +29,9 @@ const ArrowRight = () => (
 )
 
 const TOPICS = {
-  sanbase: { href: "https://app.santiment.net/", title: "Sanbase" },
-  sanapi: { href: "https://api.santiment.net/", title: "Sanapi" },
-  sansheets: { href: "https://sheets.santiment.net/", title: "Sansheets" },
+  sanbase: { href: 'https://app.santiment.net/', title: 'Sanbase' },
+  sanapi: { href: 'https://api.santiment.net/', title: 'Sanapi' },
+  sansheets: { href: 'https://sheets.santiment.net/', title: 'Sansheets' },
 }
 
 const ArticleHeadings = ({ list = [], crumbs = [] }) => {

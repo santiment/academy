@@ -1,11 +1,11 @@
-import React from "react"
-import cx from "classnames"
-import { getDateFormats } from "../../utils/dates"
-import { PEOPLE } from "./../../docs/people"
-import logo from "../../images/logos/logo-sanbase.svg"
-import styles from "./ArticleInfo.module.scss"
+import React from 'react'
+import cx from 'classnames'
+import { getDateFormats } from '../../utils/dates'
+import { PEOPLE } from './../../docs/people'
+import logo from '../../images/logos/logo-sanbase.svg'
+import styles from './ArticleInfo.module.scss'
 
-const DEFAULT_NAME = "Santiment Team"
+const DEFAULT_NAME = 'Santiment Team'
 
 const ArticleInfo = ({ title, author, date }) => {
   const name = author || DEFAULT_NAME

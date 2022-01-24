@@ -1,11 +1,11 @@
-import React, { useState } from "react"
-import cx from "classnames"
-import GA from "react-ga"
-import styles from "./Reactions.module.scss"
+import React, { useState } from 'react'
+import cx from 'classnames'
+import GA from 'react-ga'
+import styles from './Reactions.module.scss'
 
 const REACTIONS = [
   {
-    type: "like",
+    type: 'like',
     icon: (
       <svg
         width="30"
@@ -56,7 +56,7 @@ const REACTIONS = [
     ),
   },
   {
-    type: "netral",
+    type: 'netral',
     icon: (
       <svg
         width="30"
@@ -99,7 +99,7 @@ const REACTIONS = [
     ),
   },
   {
-    type: "bad",
+    type: 'bad',
     icon: (
       <svg
         width="30"
@@ -148,7 +148,7 @@ const Reactions = ({ article }) => {
 
   const onClick = ({ type, article }) => {
     GA.event({
-      category: "Reaction",
+      category: 'Reaction',
       action: `${type} reaction for '${article}' article"`,
     })
 
@@ -159,8 +159,8 @@ const Reactions = ({ article }) => {
     <div className={styles.wrapper}>
       <h4 className={styles.text}>
         {isClicked
-          ? "Thank you for your feedback!"
-          : "Was this article helpful?"}
+          ? 'Thank you for your feedback!'
+          : 'Was this article helpful?'}
       </h4>
       <div className={cx(styles.reactions, isClicked && styles.hide)}>
         {REACTIONS.map(({ icon, type }) => (

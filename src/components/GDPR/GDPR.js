@@ -1,16 +1,16 @@
-import React, { useState } from "react"
-import { replace } from "gatsby"
-import Panel from "@santiment-network/ui/Panel/Panel"
-import Button from "@santiment-network/ui/Button"
-import Checkboxes from "@santiment-network/ui/Checkboxes"
-import styles from "./GDPR.module.scss"
+import React, { useState } from 'react'
+import { replace } from 'gatsby'
+import Panel from '@santiment-network/ui/Panel/Panel'
+import Button from '@santiment-network/ui/Button'
+import Checkboxes from '@santiment-network/ui/Checkboxes'
+import styles from './GDPR.module.scss'
 
 const GDPRPage = ({ togglePrivacyPolicy, privacyPolicyAccepted }) => {
   const [isGDPR, setGDPR] = useState(false)
   const toggleGDPR = () => setGDPR(!isGDPR)
 
   if (privacyPolicyAccepted) {
-    replace("/account")
+    replace('/account')
   }
 
   return (
@@ -22,7 +22,7 @@ const GDPRPage = ({ togglePrivacyPolicy, privacyPolicyAccepted }) => {
       <Checkboxes
         className={styles.checkbox}
         labelOnRight
-        options={["I have read and accept the "]}
+        options={['I have read and accept the ']}
         onSelect={toggleGDPR}
       />
 

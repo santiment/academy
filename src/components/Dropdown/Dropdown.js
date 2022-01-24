@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import cx from "classnames"
-import ContextMenu from "@santiment-network/ui/ContextMenu"
-import Button from "@santiment-network/ui/Button"
-import styles from "./Dropdown.module.scss"
+import React, { useState } from 'react'
+import cx from 'classnames'
+import ContextMenu from '@santiment-network/ui/ContextMenu'
+import Button from '@santiment-network/ui/Button'
+import styles from './Dropdown.module.scss'
 
-const Dropdown = ({ title, children, isDesktop, position = "bottom" }) => {
+const Dropdown = ({ title, children, isDesktop, position = 'bottom' }) => {
   const [isOpen, setOpen] = useState(false)
   const close = force => {
     setTimeout(

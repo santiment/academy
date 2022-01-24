@@ -1,11 +1,11 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import copy from "copy-to-clipboard"
-import cx from "classnames"
-import SyntaxHighlighter from "react-syntax-highlighter"
-import Icon from "@santiment-network/ui/Icon"
-import { foundation } from "react-syntax-highlighter/dist/esm/styles/hljs"
-import styles from "./Markdown.module.scss"
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import copy from 'copy-to-clipboard'
+import cx from 'classnames'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import Icon from '@santiment-network/ui/Icon'
+import { foundation } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import styles from './Markdown.module.scss'
 
 const CodeBlockRenderer = ({ language, value }) => {
   const [copiedShown, setCopiedShown] = useState(false)
@@ -33,11 +33,11 @@ const CodeBlockRenderer = ({ language, value }) => {
         style={foundation}
         showLineNumbers={true}
         lineNumberContainerStyle={{
-          padding: "10px",
-          background: "var(--athens)",
-          borderRight: "1px solid var(--porcelain)",
+          padding: '10px',
+          background: 'var(--athens)',
+          borderRight: '1px solid var(--porcelain)',
         }}
-        lineNumberStyle={{ color: "var(--casper)" }}
+        lineNumberStyle={{ color: 'var(--casper)' }}
         className={styles.codeBlock}
       >
         {value}

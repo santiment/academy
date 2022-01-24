@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-export const formatError = msg => msg.replace("GraphQL error: ", "")
+export const formatError = msg => msg.replace('GraphQL error: ', '')
 
 export const contactAction = [
   {

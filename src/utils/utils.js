@@ -1,14 +1,14 @@
 export const isLocalStorage = () => {
   if (
-    typeof window === "undefined" ||
-    typeof window.localStorage === "undefined"
+    typeof window === 'undefined' ||
+    typeof window.localStorage === 'undefined'
   ) {
     return false
   }
   return true
 }
 
-export const isSSR = typeof window === "undefined"
+export const isSSR = typeof window === 'undefined'
 
 export const scrollToTargetAdjusted = (id, headerOffset = 95) => {
   let element = document.getElementById(id)
@@ -16,7 +16,7 @@ export const scrollToTargetAdjusted = (id, headerOffset = 95) => {
   let offsetPosition = elementPosition + window.pageYOffset - headerOffset
   window.scrollTo({
     top: offsetPosition,
-    behavior: "smooth",
+    behavior: 'smooth',
   })
-  window.history.pushState({}, "", `#${id}`)
+  window.history.pushState({}, '', `#${id}`)
 }

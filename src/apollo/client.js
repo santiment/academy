@@ -1,9 +1,9 @@
-import ApolloClient from "apollo-client"
-import fetch from "isomorphic-fetch"
-import { createHttpLink } from "apollo-link-http"
-import { setContext } from "apollo-link-context"
-import { from } from "apollo-link"
-import { InMemoryCache } from "apollo-cache-inmemory"
+import ApolloClient from 'apollo-client'
+import fetch from 'isomorphic-fetch'
+import { createHttpLink } from 'apollo-link-http'
+import { setContext } from 'apollo-link-context'
+import { from } from 'apollo-link'
+import { InMemoryCache } from 'apollo-cache-inmemory'
 
 const authLink = setContext((_, { headers }) => {
   return {
@@ -16,11 +16,11 @@ const authLink = setContext((_, { headers }) => {
 
 const httpLink = createHttpLink({
   uri: `${
-    typeof window !== "undefined" && window.env
+    typeof window !== 'undefined' && window.env
       ? window.env.BACKEND_URL
-      : "https://api-stage.santiment.net"
+      : 'https://api-stage.santiment.net'
   }/graphql`,
-  credentials: "include",
+  credentials: 'include',
 })
 
 export const client = new ApolloClient({

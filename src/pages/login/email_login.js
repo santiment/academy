@@ -1,11 +1,11 @@
-import React from "react"
-import { replace } from "gatsby"
-import { Mutation } from "react-apollo"
-import { parse } from "query-string"
-import Layout from "../../components/layout"
-import PageLoader from "../../components/Loader/PageLoader"
-import { CURRENT_USER_QUERY, VERIFY_EMAIL_MUTATION } from "../../gql/user"
-import styles from "./email_login.module.scss"
+import React from 'react'
+import { replace } from 'gatsby'
+import { Mutation } from 'react-apollo'
+import { parse } from 'query-string'
+import Layout from '../../components/layout'
+import PageLoader from '../../components/Loader/PageLoader'
+import { CURRENT_USER_QUERY, VERIFY_EMAIL_MUTATION } from '../../gql/user'
+import styles from './email_login.module.scss'
 
 const updateCache = (
   cache,
@@ -21,7 +21,7 @@ const updateCache = (
       query: CURRENT_USER_QUERY,
       data: { currentUser },
     })
-    replace("/")
+    replace('/')
   }, 1000)
 }
 

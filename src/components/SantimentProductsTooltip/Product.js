@@ -1,7 +1,7 @@
-import React from "react"
-import cx from "classnames"
-import Message from "@santiment-network/ui/Message"
-import styles from "./Product.module.scss"
+import React from 'react'
+import cx from 'classnames'
+import Message from '@santiment-network/ui/Message'
+import styles from './Product.module.scss'
 
 const ProductItem = ({
   className,
@@ -15,9 +15,9 @@ const ProductItem = ({
     ) : (
       <a
         className={className}
-        href={!isSelected ? to : "/"}
-        target={!isSelected ? "_blank" : ""}
-        rel={!isSelected ? "noopener noreferrer" : ""}
+        href={!isSelected ? to : '/'}
+        target={!isSelected ? '_blank' : ''}
+        rel={!isSelected ? 'noopener noreferrer' : ''}
       >
         {children}
       </a>

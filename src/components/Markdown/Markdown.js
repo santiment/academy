@@ -1,14 +1,14 @@
-import React from "react"
-import PropTypes from "prop-types"
-import ReactMarkdown from "react-markdown"
-import HeadingRenderer from "./HeadingRenderer"
-import NoteRenderer from "./NoteRenderer"
-import CodeBlockRenderer from "./CodeBlockRenderer"
-import TextRenderer from "./TextRenderer"
-import LinkRenderer from "./LinkRenderer"
-import { MathRenderer, MathBlockRenderer } from "./MathRenderer"
-import styles from "./Markdown.module.scss"
-const RemarkMathPlugin = require("remark-math")
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
+import HeadingRenderer from './HeadingRenderer'
+import NoteRenderer from './NoteRenderer'
+import CodeBlockRenderer from './CodeBlockRenderer'
+import TextRenderer from './TextRenderer'
+import LinkRenderer from './LinkRenderer'
+import { MathRenderer, MathBlockRenderer } from './MathRenderer'
+import styles from './Markdown.module.scss'
+const RemarkMathPlugin = require('remark-math')
 
 const Markdown = ({ markdown, ...rest }) => (
   <ReactMarkdown

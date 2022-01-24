@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import TeX from "@matejmazur/react-katex"
-import "katex/dist/katex.min.css"
+import React from 'react'
+import PropTypes from 'prop-types'
+import TeX from '@matejmazur/react-katex'
+import 'katex/dist/katex.min.css'
 
 export const MathRenderer = ({ value }) => <TeX>{value}</TeX>
 

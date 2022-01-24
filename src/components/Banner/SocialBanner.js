@@ -1,5 +1,5 @@
-import React from "react"
-import styles from "./SocialBanner.module.scss"
+import React from 'react'
+import styles from './SocialBanner.module.scss'
 
 const SocialBanner = () => (
   <section className={styles.wrapper}>

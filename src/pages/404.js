@@ -1,9 +1,9 @@
-import React from "react"
-import Button from "@santiment-network/ui/Button"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import styles from "./404.module.scss"
+import React from 'react'
+import Button from '@santiment-network/ui/Button'
+import { Link } from 'gatsby'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import styles from './404.module.scss'
 
 const NotFoundPage = () => (
   <Layout>

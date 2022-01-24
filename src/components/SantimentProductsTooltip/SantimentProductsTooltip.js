@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import cx from "classnames"
-import Tooltip from "@santiment-network/ui/Tooltip"
-import ProductItem from "./Product"
-import { BUSINESS_PRODUCTS, CHAIN_PRODUCTS } from "./Products"
-import { ProductsTrigger } from "./Trigger"
-import styles from "./SantimentProductsTooltip.module.scss"
+import React, { useState } from 'react'
+import cx from 'classnames'
+import Tooltip from '@santiment-network/ui/Tooltip'
+import ProductItem from './Product'
+import { BUSINESS_PRODUCTS, CHAIN_PRODUCTS } from './Products'
+import { ProductsTrigger } from './Trigger'
+import styles from './SantimentProductsTooltip.module.scss'
 
 const SantimentProductsTooltip = ({ className }) => {
   const [isOpen, setOpen] = useState(false)

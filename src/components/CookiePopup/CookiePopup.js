@@ -1,15 +1,15 @@
-import React, { useState } from "react"
-import Panel from "@santiment-network/ui/Panel/Panel"
-import Button from "@santiment-network/ui/Button"
-import Cookie from "./cookie.svg"
-import styles from "./CookiePopup.module.scss"
+import React, { useState } from 'react'
+import Panel from '@santiment-network/ui/Panel/Panel'
+import Button from '@santiment-network/ui/Button'
+import Cookie from './cookie.svg'
+import styles from './CookiePopup.module.scss'
 
-const COOKIE_POLICY_ACCEPTED = "COOKIE_POLICY_ACCEPTED"
+const COOKIE_POLICY_ACCEPTED = 'COOKIE_POLICY_ACCEPTED'
 
 const isNotAccepted = key => {
   if (
-    typeof window === "undefined" ||
-    typeof window.localStorage === "undefined"
+    typeof window === 'undefined' ||
+    typeof window.localStorage === 'undefined'
   ) {
     return
   }
@@ -18,7 +18,7 @@ const isNotAccepted = key => {
 }
 
 const acceptCookiePolicy = () => {
-  window.gtag("event", "cookie_accept")
+  window.gtag('event', 'cookie_accept')
   localStorage.setItem(COOKIE_POLICY_ACCEPTED, true)
 }
 
@@ -39,7 +39,7 @@ const CookiePopup = () => {
         </h2>
         <p className={styles.text}>
           By clicking “Allow all”, you agree to the storing of cookie and accept
-          our{" "}
+          our{' '}
           <a
             href="https://santiment.net/terms-conditions/"
             target="_blank"

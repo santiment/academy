@@ -1,8 +1,8 @@
-import React from "react"
-import cx from "classnames"
-import { Link } from "gatsby"
-import Icon from "@santiment-network/ui/Icon"
-import styles from "./Breadcrumb.module.scss"
+import React from 'react'
+import cx from 'classnames'
+import { Link } from 'gatsby'
+import Icon from '@santiment-network/ui/Icon'
+import styles from './Breadcrumb.module.scss'
 
 const Breadcrumb = ({ crumbs, crumbLabel, className }) => {
   const crumbsWithoutLast = crumbs.map(({ pathname, crumbLabel }) => ({

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react"
-import cx from "classnames"
-import { Link } from "gatsby"
-import Icon from "@santiment-network/ui/Icon"
-import { titleToSlug } from "../../utils/docs"
-import { isCategoryActive, isArticleActive } from "./utils"
-import styles from "./Sidebar.module.scss"
+import React, { useState, useEffect } from 'react'
+import cx from 'classnames'
+import { Link } from 'gatsby'
+import Icon from '@santiment-network/ui/Icon'
+import { titleToSlug } from '../../utils/docs'
+import { isCategoryActive, isArticleActive } from './utils'
+import styles from './Sidebar.module.scss'
 
 const SidebarCategory = ({ active, title, articles = [] }) => {
   const isActive = isCategoryActive(active, title)

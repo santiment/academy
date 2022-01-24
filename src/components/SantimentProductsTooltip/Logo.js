@@ -1,7 +1,7 @@
-import React from "react"
-import cx from "classnames"
-import { Link } from "gatsby"
-import styles from "./Logo.module.scss"
+import React from 'react'
+import cx from 'classnames'
+import { Link } from 'gatsby'
+import styles from './Logo.module.scss'
 
 const Logo = ({ className }) => (
   <Link className={cx(styles.logo, className)} to="/">

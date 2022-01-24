@@ -1,18 +1,18 @@
-import React, { useEffect } from "react"
-import { Link } from "gatsby"
-import Panel from "@santiment-network/ui/Panel/Panel"
-import Input from "@santiment-network/ui/Input"
-import Button from "@santiment-network/ui/Button"
-import Icon from "@santiment-network/ui/Icon"
-import cx from "classnames"
-import { Mutation } from "react-apollo"
-import Layout from "../../components/layout"
-import { EMAIL_LOGIN_MUTATION } from "../../gql/user"
-import styles from "./index.module.scss"
+import React, { useEffect } from 'react'
+import { Link } from 'gatsby'
+import Panel from '@santiment-network/ui/Panel/Panel'
+import Input from '@santiment-network/ui/Input'
+import Button from '@santiment-network/ui/Button'
+import Icon from '@santiment-network/ui/Icon'
+import cx from 'classnames'
+import { Mutation } from 'react-apollo'
+import Layout from '../../components/layout'
+import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
+import styles from './index.module.scss'
 
 export default () => {
   useEffect(() => {
-    window.gtag("event", "sign_up", { method: "email" })
+    window.gtag('event', 'sign_up', { method: 'email' })
   }, [])
 
   return (
@@ -45,7 +45,7 @@ export default () => {
                     addBlog({
                       variables: {
                         email: e.currentTarget.email.value,
-                        consent: "",
+                        consent: '',
                       },
                     })
                   }}
@@ -63,7 +63,7 @@ export default () => {
                     type="submit"
                     disabled={loading}
                   >
-                    {loading ? "Waiting..." : "Continue"}
+                    {loading ? 'Waiting...' : 'Continue'}
                   </Button>
                 </form>
               </>

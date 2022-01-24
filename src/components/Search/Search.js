@@ -1,28 +1,28 @@
-import React, { useRef, useEffect } from "react"
-import cx from "classnames"
-import { Link } from "gatsby"
-import { InputWithIcon as Input } from "@santiment-network/ui/Input"
-import { isSSR } from "../../utils/utils"
-import Girl from "./girl.png"
-import Man from "./man.png"
-import styles from "./Search.module.scss"
+import React, { useRef, useEffect } from 'react'
+import cx from 'classnames'
+import { Link } from 'gatsby'
+import { InputWithIcon as Input } from '@santiment-network/ui/Input'
+import { isSSR } from '../../utils/utils'
+import Girl from './girl.png'
+import Man from './man.png'
+import styles from './Search.module.scss'
 
 const SUGGESTIONS = [
   {
-    label: "Trending words",
-    link: "/metrics/emerging-trends/",
+    label: 'Trending words',
+    link: '/metrics/emerging-trends/',
   },
   {
-    label: "Social volume",
-    link: "/metrics/social-volume/",
+    label: 'Social volume',
+    link: '/metrics/social-volume/',
   },
   {
-    label: "MVRV",
-    link: "/metrics/mvrv-ratio/",
+    label: 'MVRV',
+    link: '/metrics/mvrv-ratio/',
   },
   {
-    label: "Metrics",
-    link: "/metrics/",
+    label: 'Metrics',
+    link: '/metrics/',
   },
 ]
 
@@ -31,9 +31,9 @@ const Search = ({ small }) => {
     if (isSSR) return
 
     window.docsearch({
-      apiKey: "93cdd643257923145fa8093e68b5c453", // required
-      indexName: "santiment_academy", // required
-      inputSelector: "#search", // required
+      apiKey: '93cdd643257923145fa8093e68b5c453', // required
+      indexName: 'santiment_academy', // required
+      inputSelector: '#search', // required
     })
   }, [])
 

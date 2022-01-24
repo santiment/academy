@@ -1,21 +1,21 @@
-import React from "react"
-import cx from "classnames"
-import { Link } from "gatsby"
-import SidebarCategory from "./SidebarCategory"
+import React from 'react'
+import cx from 'classnames'
+import { Link } from 'gatsby'
+import SidebarCategory from './SidebarCategory'
 import {
   GUIDES,
   REFERENCES,
   RESOURCES,
   GETTING_STARTED,
-} from "../../docs/navigation"
-import { titleToSlug } from "../../utils/docs"
-import { isArticleActive } from "./utils"
-import styles from "./Sidebar.module.scss"
+} from '../../docs/navigation'
+import { titleToSlug } from '../../utils/docs'
+import { isArticleActive } from './utils'
+import styles from './Sidebar.module.scss'
 
 const Sidebar = ({ className }) => {
   let active = []
-  if (typeof window !== "undefined") {
-    active = window.location.pathname.split("/").slice(1)
+  if (typeof window !== 'undefined') {
+    active = window.location.pathname.split('/').slice(1)
   }
 
   return (
