@@ -13,7 +13,7 @@ const updateCache = (
     data: {
       emailLoginVerify: { user },
     },
-  },
+  }
 ) => {
   const currentUser = { ...user }
   setTimeout(() => {
@@ -34,22 +34,22 @@ export default ({ location: { search } }) => (
         }
         if (error) {
           return (
-              <div className={styles.wrapper}>
-                <h2>Login failed</h2>
-                <br/>
-                <p>
-                  Maybe you are trying to login with an old email link. Please, make
-                  sure, that you are using the latest link
-                </p>
-              </div>
-            )
+            <div className={styles.wrapper}>
+              <h2>Login failed</h2>
+              <br />
+              <p>
+                Maybe you are trying to login with an old email link. Please,
+                make sure, that you are using the latest link
+              </p>
+            </div>
+          )
         }
 
         return (
           <div className={styles.wrapper}>
-            <PageLoader text='Verifying' className={styles.loader} />
+            <PageLoader text="Verifying" className={styles.loader} />
           </div>
-          )
+        )
       }}
     </Mutation>
   </Layout>

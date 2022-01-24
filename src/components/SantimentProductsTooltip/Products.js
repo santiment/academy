@@ -11,20 +11,20 @@ export const BUSINESS_PRODUCTS = [
     title: 'Sanbase',
     description:
       'Behavior analysis & monitoring platform for 1500+ crypto assets',
-    to: 'https://app.santiment.net'
+    to: 'https://app.santiment.net',
   },
   {
     img: sansheets,
     title: 'Sansheets',
     description: 'Google Spreadsheets plugin for importing Santiment data',
-    to: 'https://sheets.santiment.net'
+    to: 'https://sheets.santiment.net',
   },
   {
     img: sanapi,
     title: 'SanAPI',
     description: 'The most comprehensive crypto API on the market',
-    to: 'https://api.santiment.net'
-  }
+    to: 'https://api.santiment.net',
+  },
 ]
 
 export const CHAIN_PRODUCTS = [
@@ -32,19 +32,19 @@ export const CHAIN_PRODUCTS = [
     img: sanr,
     title: 'SanR',
     description: 'Decentralized marketplace for crypto price signals',
-    to: 'https://sanr.santiment.net'
+    to: 'https://sanr.santiment.net',
   },
   {
     img: sanhunters,
     title: 'Sanhunters',
     description: 'Get rewarded for market research and your crypto know-how',
-    to: 'https://hunters.santiment.net'
+    to: 'https://hunters.santiment.net',
   },
   {
     img: insights,
     title: 'Insights',
     description: 'Market analysis from the San team and community members',
     label: 'SAN chain support soon',
-    to: 'https://insights.santiment.net'
-  }
+    to: 'https://insights.santiment.net',
+  },
 ]

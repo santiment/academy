@@ -1,5 +1,5 @@
 import React from 'react'
-import  {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import cx from 'classnames'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
@@ -10,9 +10,11 @@ import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 import Reactions from '../components/Reactions/Reactions'
 import styles from './article.module.scss'
 
-export default function Template({data, pageContext}) {
-  const {markdownRemark: article} = data
-  const {breadcrumb: { crumbs }} = pageContext
+export default function Template({ data, pageContext }) {
+  const { markdownRemark: article } = data
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext
   const meta = {
     title: `${article.frontmatter.title} | Santiment Academy`,
     description: `${article.frontmatter.description || ''}`,
@@ -20,13 +22,10 @@ export default function Template({data, pageContext}) {
   return (
     <Layout isShowSidebar={true}>
       <SEO {...meta} />
-      <div className={cx(styles.wrapper, "container")}>
-        <Breadcrumb
-          crumbs={crumbs}
-          crumbLabel={article.frontmatter.title}
-        />
+      <div className={cx(styles.wrapper, 'container')}>
+        <Breadcrumb crumbs={crumbs} crumbLabel={article.frontmatter.title} />
         <ArticleInfo {...article.frontmatter} />
-        <ArticleHeadings list={article.headings} />
+        <ArticleHeadings list={article.headings} crumbs={crumbs} />
         <Markdown markdown={article.rawMarkdownBody} />
         <Reactions article={article.frontmatter.title} />
       </div>

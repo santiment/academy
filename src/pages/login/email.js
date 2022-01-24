@@ -20,7 +20,7 @@ export default () => {
       <Mutation mutation={EMAIL_LOGIN_MUTATION}>
         {(
           addBlog,
-          { loading, error, data: { emailLogin: { success } = {} } = {} },
+          { loading, error, data: { emailLogin: { success } = {} } = {} }
         ) => (
           <Panel className={styles.wrapper}>
             <h2 className={cx(styles.title, styles.email__title)}>
@@ -29,9 +29,8 @@ export default () => {
             {success ? (
               <h3 className={styles.email__subtitle}>
                 We sent an email to you.
-                <br/>
-                Please login in to email provider and
-                click the confirm link
+                <br />
+                Please login in to email provider and click the confirm link
               </h3>
             ) : (
               <>
@@ -40,7 +39,7 @@ export default () => {
                 </h3>
                 <form
                   className={styles.email__form}
-                  action=''
+                  action=""
                   onSubmit={e => {
                     e.preventDefault()
                     addBlog({
@@ -52,16 +51,16 @@ export default () => {
                   }}
                 >
                   <Input
-                    placeholder='your@email.com'
-                    name='email'
-                    type='email'
+                    placeholder="your@email.com"
+                    name="email"
+                    type="email"
                     className={styles.input}
                   />
                   <Button
-                    variant='fill'
-                    accent='positive'
+                    variant="fill"
+                    accent="positive"
                     className={styles.email__btn}
-                    type='submit'
+                    type="submit"
                     disabled={loading}
                   >
                     {loading ? 'Waiting...' : 'Continue'}
@@ -69,8 +68,8 @@ export default () => {
                 </form>
               </>
             )}
-            <Link to='/login' className={styles.email__link}>
-              <Icon className={styles.email__pointer} type='pointer-right' />
+            <Link to="/login" className={styles.email__link}>
+              <Icon className={styles.email__pointer} type="pointer-right" />
               All login options
             </Link>
           </Panel>

@@ -5,19 +5,13 @@ import styles from './Product.module.scss'
 
 const ProductItem = ({
   className,
-  product: {
-    to,
-    img,
-    onClick,
-    title,
-    label,
-    isSelected,
-    description
-  }
+  product: { to, img, onClick, title, label, isSelected, description },
 }) => {
   const Wrapper = ({ children, className }) =>
     onClick ? (
-        <span className={className} onClick={onClick}>{children}</span>
+      <span className={className} onClick={onClick}>
+        {children}
+      </span>
     ) : (
       <a
         className={className}
@@ -44,7 +38,7 @@ const ProductItem = ({
           <h4 className={styles.title}>{title}</h4>
           <p className={styles.description}>{description}</p>
           {label && (
-            <Message className={styles.label} variant='warn'>
+            <Message className={styles.label} variant="warn">
               SAN chain support soon
             </Message>
           )}

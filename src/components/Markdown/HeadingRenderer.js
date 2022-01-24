@@ -4,22 +4,22 @@ import { flatten, sluggify } from './utils'
 import Icon from '@santiment-network/ui/Icon'
 import styles from './Markdown.module.scss'
 
-const HeadingRenderer = ({level, children}) => {
+const HeadingRenderer = ({ level, children }) => {
   const content = React.Children.toArray(children)
-  const text = content.reduce(flatten, "")
+  const text = content.reduce(flatten, '')
   const slug = sluggify(text)
 
   return React.createElement(`h${level}`, { id: slug }, [
     <a href={`#${slug}`} key={slug} className={styles.anchor}>
       <Icon type="link" />
     </a>,
-    children
-  ]);
-};
+    children,
+  ])
+}
 
 HeadingRenderer.propTypes = {
   children: PropTypes.node.isRequired,
-  level: PropTypes.number.isRequired
-};
+  level: PropTypes.number.isRequired,
+}
 
 export default HeadingRenderer

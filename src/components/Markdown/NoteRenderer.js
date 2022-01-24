@@ -1,18 +1,18 @@
-import React from "react"
-import cx from "classnames"
-import { flatten } from "./utils"
-import styles from "./Markdown.module.scss"
+import React from 'react'
+import cx from 'classnames'
+import { flatten } from './utils'
+import styles from './Markdown.module.scss'
 
-const TYPES = ["ORANGE_TYPE", "RED_TYPE"]
+const TYPES = ['ORANGE_TYPE', 'RED_TYPE']
 
 const TYPES_STYLES = {
-  "ORANGE_TYPE": styles.blockquote__warning,
-  "RED_TYPE": styles.blockquote__error,
+  ORANGE_TYPE: styles.blockquote__warning,
+  RED_TYPE: styles.blockquote__error,
 }
 
 const NoteRenderer = ({ children }) => {
   let content = React.Children.toArray(children)
-  const text = content.reduce(flatten, "")
+  const text = content.reduce(flatten, '')
 
   const hasSpecialType = TYPES.find(type => text.includes(type))
   if (hasSpecialType) {

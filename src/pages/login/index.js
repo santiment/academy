@@ -1,10 +1,10 @@
-import React from "react"
-import { Link } from "gatsby"
-import cx from "classnames"
-import Icon from "@santiment-network/ui/Icon"
-import Panel from "@santiment-network/ui/Panel/Panel"
-import Layout from "../../components/layout"
-import styles from "./index.module.scss"
+import React from 'react'
+import { Link } from 'gatsby'
+import cx from 'classnames'
+import Icon from '@santiment-network/ui/Icon'
+import Panel from '@santiment-network/ui/Panel/Panel'
+import Layout from '../../components/layout'
+import styles from './index.module.scss'
 
 export default () => (
   <Layout>

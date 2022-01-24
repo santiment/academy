@@ -6,7 +6,6 @@ const updateIntercom = () => {
   if (typeof window !== 'undefined') {
     window.Intercom('update')
 
-
     // Wait for the iframe to become ready (max 30 seconds)
     const timeout = setTimeout(() => clearInterval(interval), 30000)
     const interval = setInterval(() => {
@@ -26,7 +25,7 @@ const updateIntercom = () => {
         clearInterval(interval)
         clearTimeout(timeout)
       }
-  }, 100)
+    }, 100)
   }
 }
 
