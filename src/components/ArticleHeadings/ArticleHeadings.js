@@ -35,13 +35,14 @@ const TOPICS = {
 }
 
 const ArticleHeadings = ({ list = [], crumbs = [] }) => {
-  const {hash} = useLocation()
+  const { hash } = useLocation()
   const [pageHash, setPageHash] = useState()
   useEffect(() => {
     setPageHash(hash)
-    const hashChangeHandler = ({detail}) => setPageHash(detail)
+    const hashChangeHandler = ({ detail }) => setPageHash(detail)
     window.addEventListener('hashScrollChanged', hashChangeHandler, false)
-    return () => window.removeEventListener('hashScrollChanged', hashChangeHandler, false)
+    return () =>
+      window.removeEventListener('hashScrollChanged', hashChangeHandler, false)
   }, [])
   const topic = crumbs.length > 1 && crumbs[1].crumbLabel
   const appLink = topic && TOPICS[topic]

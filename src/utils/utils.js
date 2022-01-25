@@ -20,5 +20,5 @@ export const scrollToTargetHander = (id, headerOffset = 95) => {
     behavior: 'smooth',
   })
   window.history.pushState({}, '', hash)
-  window.dispatchEvent(new CustomEvent("hashScrollChanged", {detail: hash}))
+  window.dispatchEvent(new CustomEvent('hashScrollChanged', { detail: hash }))
 }

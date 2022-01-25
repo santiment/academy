@@ -11,10 +11,15 @@ const HeadingRenderer = ({ level, children }) => {
   const slug = sluggify(text)
 
   return React.createElement(`h${level}`, { id: slug }, [
-    <a href={`#${slug}`} onClick={e => {
-      e.preventDefault();
-      scrollToTargetHander(slug)
-    }} key={slug} className={styles.anchor}>
+    <a
+      href={`#${slug}`}
+      onClick={e => {
+        e.preventDefault()
+        scrollToTargetHander(slug)
+      }}
+      key={slug}
+      className={styles.anchor}
+    >
       <Icon type="link" />
     </a>,
     children,
