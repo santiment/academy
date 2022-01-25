@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from '@reach/router'
 import { sluggify } from '../Markdown/utils'
-import { scrollToTargetHander } from '../../utils/utils'
+import { scrollToTargetAdjusted } from '../../utils/utils'
 import cx from 'classnames'
 import styles from './ArticleHeadings.module.scss'
 
@@ -38,7 +38,7 @@ const ArticleHeadings = ({ list = [], crumbs = [] }) => {
   const { hash } = useLocation()
   const [pageHash, setPageHash] = useState()
   useEffect(() => {
-    setPageHash(hash)
+    if (hash) setPageHash(hash)
     const hashChangeHandler = ({ detail }) => setPageHash(detail)
     window.addEventListener('hashScrollChanged', hashChangeHandler, false)
     return () =>
@@ -71,7 +71,7 @@ const ArticleHeadings = ({ list = [], crumbs = [] }) => {
               href={`#${slug}`}
               onClick={e => {
                 e.preventDefault()
-                scrollToTargetHander(slug)
+                scrollToTargetAdjusted(slug)
               }}
               className={cx(
                 styles.heading,

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { flatten, sluggify } from './utils'
-import { scrollToTargetHander } from '../../utils/utils'
+import { scrollToTargetAdjusted } from '../../utils/utils'
 import Icon from '@santiment-network/ui/Icon'
 import styles from './Markdown.module.scss'
 
@@ -15,7 +15,7 @@ const HeadingRenderer = ({ level, children }) => {
       href={`#${slug}`}
       onClick={e => {
         e.preventDefault()
-        scrollToTargetHander(slug)
+        scrollToTargetAdjusted(slug)
       }}
       key={slug}
       className={styles.anchor}
