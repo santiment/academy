@@ -60,10 +60,7 @@ const ArticleHeadings = ({ list = [], crumbs = [] }) => {
           >
             <a
               href={`#${slug}`}
-              onClick={e => {
-                e.preventDefault()
-                scrollToTargetAdjusted(slug)
-              }}
+              onClick={e => scrollToTargetAdjusted(e, slug)}
               className={cx(
                 styles.heading,
                 depth === 2 && styles.second,

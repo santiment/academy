@@ -13,10 +13,7 @@ const HeadingRenderer = ({ level, children }) => {
   return React.createElement(`h${level}`, { id: slug }, [
     <a
       href={`#${slug}`}
-      onClick={e => {
-        e.preventDefault()
-        scrollToTargetAdjusted(slug)
-      }}
+      onClick={e => scrollToTargetAdjusted(e, slug)}
       key={slug}
       className={styles.anchor}
     >
