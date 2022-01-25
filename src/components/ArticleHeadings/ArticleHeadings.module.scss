@@ -22,13 +22,27 @@
 }
 
 .item {
-  border-left: 2px solid var(--porcelain);
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    display: block;
+    height: 4px;
+    border-left: 2px solid var(--porcelain);
+  }
+
+  a {
+    border-left: 2px solid var(--porcelain);
+    display: block;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .current {
-  border-left: 2px solid var(--waterloo) !important;
-
   a {
+    border-left: 2px solid var(--waterloo) !important;
     font-weight: 500;
   }
 }
@@ -82,6 +96,17 @@
 
     svg {
       margin-left: 9px;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(0);       
     }
+
+    &:hover {
+      color: var(--jungle-green-hover);
+      fill: var(--jungle-green-hover);
+  
+      & svg {
+        transform: translateX(4px);
+      }
+    } 
   }
 }
