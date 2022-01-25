@@ -54,7 +54,8 @@ const ArticleHeadings = ({ list = [], crumbs = [] }) => {
             className={cx(
               styles.item,
               pageHash === `#${slug}` && styles.current,
-              idx === 0 && (appLink ? styles.mt50 : styles.mt170)
+              idx === 0 && (appLink ? styles.mt50 : styles.mt170),
+              idx > 0 && styles.hasBefore
             )}
             key={idx}
           >
