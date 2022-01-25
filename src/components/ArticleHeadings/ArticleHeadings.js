@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { useLocation } from '@reach/router'
+import React from 'react'
 import { sluggify } from '../Markdown/utils'
-import { scrollToTargetAdjusted } from '../../utils/utils'
+import { scrollToTargetAdjusted, usePageHash } from '../../utils/utils'
 import cx from 'classnames'
 import styles from './ArticleHeadings.module.scss'
 
@@ -35,12 +34,7 @@ const TOPICS = {
 }
 
 const ArticleHeadings = ({ list = [], crumbs = [] }) => {
-  const { hash } = useLocation()
-  const [pageHash, setPageHash] = useState()
-  useEffect(() => {
-    setPageHash(hash)
-  }, [hash])
-
+  const pageHash = usePageHash()
   const topic = crumbs.length > 1 && crumbs[1].crumbLabel
   const appLink = topic && TOPICS[topic]
 
@@ -66,11 +60,7 @@ const ArticleHeadings = ({ list = [], crumbs = [] }) => {
           >
             <a
               href={`#${slug}`}
-              onClick={e => {
-                e.preventDefault()
-                scrollToTargetAdjusted(slug)
-                setPageHash(`#${slug}`)
-              }}
+              onClick={e => scrollToTargetAdjusted(e, slug)}
               className={cx(
                 styles.heading,
                 depth === 2 && styles.second,

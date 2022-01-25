@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { flatten, sluggify } from './utils'
+import { scrollToTargetAdjusted } from '../../utils/utils'
 import Icon from '@santiment-network/ui/Icon'
 import styles from './Markdown.module.scss'
 
@@ -10,7 +11,12 @@ const HeadingRenderer = ({ level, children }) => {
   const slug = sluggify(text)
 
   return React.createElement(`h${level}`, { id: slug }, [
-    <a href={`#${slug}`} key={slug} className={styles.anchor}>
+    <a
+      href={`#${slug}`}
+      onClick={e => scrollToTargetAdjusted(e, slug)}
+      key={slug}
+      className={styles.anchor}
+    >
       <Icon type="link" />
     </a>,
     children,
