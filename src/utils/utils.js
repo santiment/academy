@@ -1,3 +1,6 @@
+import { useState, useEffect } from 'react'
+import { useLocation } from '@reach/router'
+
 export const isLocalStorage = () => {
   if (
     typeof window === 'undefined' ||
@@ -21,4 +24,17 @@ export const scrollToTargetAdjusted = (id, headerOffset = 95) => {
   })
   window.history.pushState({}, '', hash)
   window.dispatchEvent(new CustomEvent('hashScrollChanged', { detail: hash }))
+}
+
+export const usePageHash = () => {
+  const { hash } = useLocation()
+  const [pageHash, setPageHash] = useState()
+  useEffect(() => {
+    if (hash) setPageHash(hash)
+    const hashChangeHandler = ({ detail }) => setPageHash(detail)
+    window.addEventListener('hashScrollChanged', hashChangeHandler, false)
+    return () =>
+      window.removeEventListener('hashScrollChanged', hashChangeHandler, false)
+  }, [])
+  return pageHash
 }
