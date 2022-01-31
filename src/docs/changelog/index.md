@@ -2,11 +2,42 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2021-11-25
+date: 2022-01-31
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
+
+
+## December 2021 and January 2022
+
+**Sanbase**
+
+- New assets: APX, BTT, CBK, CUBE, DESO, DG, DOBO, FORM, GF, GFI, GLMR, HERO, HOO, HYDRA, ISP, KILT, LOOKS, MAGIC, ONUS, OOKI, OUSD, POSI, RISE, SHILL, SIDUS, SOS, THN, YIME, TONCOIN, VADER, VOXEL, VR, ZUM
+- Updated Create chart layout link
+- NFT metrics (NFT Harbor)
+- added on-chain data for Dogecoin DOGE
+
+**Watchlist**
+
+- "Copy", "Save as", "Clear all" action buttons added to Watchlists
+
+**Alerts**
+
+- New Fresh UI of Alerts Master 🤡
+- Updated Share modal for alerts
+- Updated notifications channels. You can set up any public channel as a notification source.
+- Added new type selector for alert modal
+- Added asset categories tabs
+- Added ability to create Social trends alert with any word
+- Fixed Social trends alert creation
+- Fixed creating different types of alert
+- Fixed Edit button on a signal card
+- Fixed signal card title when a user is not logged in
+
+**Academy**
+
+- Navigation from Academy to Sanbase become better. 
 
 ## November 2021
 
