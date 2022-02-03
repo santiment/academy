@@ -34,7 +34,7 @@ them is usually very low).
 
 1. **Telegram**
 
-    We track a curated list with over 300 crypto-related Telegram chats. For each
+    We track a curated list with over 400 crypto-related Telegram chats. For each
     of them, we have the entire history of the chat.
 
     **Latency**. We collect the messages in real-time (1-2s delay max.)
@@ -46,7 +46,7 @@ them is usually very low).
 
 2. **Twitter**
 
-    We track a curated list with over 500 crypto-related Twitter accounts. For
+    We track a curated list with over 4000 crypto-related and NFT-related Twitter accounts. For
     each of them, we collect their tweets, their retweets, and all the replies to
     their tweets.
 
