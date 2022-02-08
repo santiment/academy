@@ -81,6 +81,11 @@ activity.
 ## Derivatives
 
 - [BitMEX](/metrics/bitmex)
+- [Binance](/metrics/binance)
+- [Bitfinex](/metrics/bitfinex)
+- [Deribit](/metrics/deribit)
 - [DeFi](/metrics/defi)
+- [FTX](/metrics/ftx)
+- [DyDx](/metrics/dydx)
 - [MakerDAO](/metrics/makerdao)
 - [Stock To Flow ratio](/metrics/stock-to-flow)
