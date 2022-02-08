@@ -9,7 +9,7 @@ description: Amount of coin/tokens moved on-chain.
 
 The Deribit perpetual contract features a continuous measurement of the difference between the mark price of the contract and the Deribit BTC Index. The percentage difference between these two price levels is the basis for the 8-hourly funding rate that is applied to all outstanding perpetual contracts.
 
-More details on Binance [web-site](https://legacy.deribit.com/pages/docs/perpetual).
+More details on Deribit [web-site](https://legacy.deribit.com/pages/docs/perpetual).
 
 ---
 
