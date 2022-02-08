@@ -87,5 +87,6 @@ activity.
 - [DeFi](/metrics/defi)
 - [FTX](/metrics/ftx)
 - [DyDx](/metrics/dydx)
+- [Huobi](/metrics/huobi)
 - [MakerDAO](/metrics/makerdao)
 - [Stock To Flow ratio](/metrics/stock-to-flow)

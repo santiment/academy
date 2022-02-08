@@ -1,7 +1,7 @@
 ---
 title: DyDx Contract Funding Rate
 author: Lyudmil
-date: 2021-08-25
+date: 2022-02-08
 description: Amount of coin/tokens moved on-chain.
 ---
 
