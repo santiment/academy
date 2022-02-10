@@ -1,7 +1,7 @@
 ---
 title: Functions we offer
 author: Santiment Team
-date: 2021-10-29
+date: 2022-02-08
 ---
 
 ## SAN_ACTIVE_ADDRESSES
@@ -472,6 +472,180 @@ Returns the closing price for a given day.
 | projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment).                                                                                              |
 | day         | <code>date</code>   | The date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                              |
 
+## SAN_DAILY_DEPOSIT_TRANSACTIONS
+
+##### SAN_DAILY_DEPOSIT_TRANSACTIONS(projectSlug, from, to, interval) ⇒ <code>Array</code>
+
+Returns number of withdrawal transactions.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of number of withdrawal transactions.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
+## SAN_DAILY_DEPOSIT_TRANSACTIONS_AGGREGATED
+
+##### SAN_DAILY_DEPOSIT_TRANSACTIONS_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns number of withdrawal transactions.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated number of withdrawal transactions.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
+
+## SAN_DAILY_DEPOSIT_TRANSACTIONS_MULTIPLE_SLUGS
+
+##### SAN_DAILY_DEPOSIT_TRANSACTIONS_MULTIPLE_SLUGS(projectSlugsList, from, to, interval) ⇒ <code>Array</code>
+
+Returns number of withdrawal transactions.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of results for multiple slugs
+number of withdrawal transactions.
+- **Customfunction**:
+
+| Param            | Type                | Description                                                                                                                                                                            |
+| ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlugsList | <code>string</code> | Comma-separated names of the assets, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment,bitcoin".                                                                                                                                                       |
+| from             | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to               | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| interval         | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
+## SAN_DAILY_WITHDRAWAL_TRANSACTIONS
+
+##### SAN_DAILY_WITHDRAWAL_TRANSACTIONS(projectSlug, from, to, interval) ⇒ <code>Array</code>
+
+Returns number of withdrawal transactions.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of number of withdrawal transactions.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
+## SAN_DAILY_WITHDRAWAL_TRANSACTIONS_AGGREGATED
+
+##### SAN_DAILY_WITHDRAWAL_TRANSACTIONS_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns number of withdrawal transactions.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated number of withdrawal transactions.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
+
+## SAN_DAILY_WITHDRAWAL_TRANSACTIONS_MULTIPLE_SLUGS
+
+##### SAN_DAILY_WITHDRAWAL_TRANSACTIONS_MULTIPLE_SLUGS(projectSlugsList, from, to, interval) ⇒ <code>Array</code>
+
+Returns number of withdrawal transactions.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of results for multiple slugs
+number of withdrawal transactions.
+- **Customfunction**:
+
+| Param            | Type                | Description                                                                                                                                                                            |
+| ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlugsList | <code>string</code> | Comma-separated names of the assets, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment,bitcoin".                                                                                                                                                       |
+| from             | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to               | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| interval         | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
+## SAN_DEPOSIT_TRANSACTIONS_BY_EXCHANGE
+
+##### SAN_DEPOSIT_TRANSACTIONS_BY_EXCHANGE(projectSlug, from, to, owner, interval) ⇒ <code>Array</code>
+
+Returns the deposit transactions for a slug in a specific exchange
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - exchange inflow values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| owner       | <code>string</code> | Name of the exchange                                                                                                                                                                                                                                                                |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
+## SAN_DEPOSIT_TRANSACTIONS_INTRADAY
+
+##### SAN_DEPOSIT_TRANSACTIONS_INTRADAY(projectSlug, from, to, interval) ⇒ <code>Array</code>
+
+Returns number of withdrawal transactions with the option of smaller intervals.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of number of withdrawal transactions with the option of smaller intervals.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
+## SAN_DEPOSIT_TRANSACTIONS_INTRADAY_AGGREGATED
+
+##### SAN_DEPOSIT_TRANSACTIONS_INTRADAY_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns number of withdrawal transactions with the option of smaller intervals.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated number of withdrawal transactions with the option of smaller intervals.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
+
+## SAN_DEPOSIT_TRANSACTIONS_INTRADAY_MULTIPLE_SLUGS
+
+##### SAN_DEPOSIT_TRANSACTIONS_INTRADAY_MULTIPLE_SLUGS(projectSlugsList, from, to, interval) ⇒ <code>Array</code>
+
+Returns number of withdrawal transactions with the option of smaller intervals.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of results for multiple slugs
+number of withdrawal transactions with the option of smaller intervals.
+- **Customfunction**:
+
+| Param            | Type                | Description                                                                                                                                                                            |
+| ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlugsList | <code>string</code> | Comma-separated names of the assets, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment,bitcoin".                                                                                                                                                       |
+| from             | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to               | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| interval         | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
 ## SAN_DEV_ACTIVITY
 
 ##### SAN_DEV_ACTIVITY(projectSlug, from, to) ⇒ <code>Array</code>
@@ -585,6 +759,24 @@ Returns the exchange balance.
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
 | aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
 
+## SAN_EXCHANGE_BALANCE_BY_EXCHANGE
+
+##### SAN_EXCHANGE_BALANCE_BY_EXCHANGE(projectSlug, from, to, owner, interval) ⇒ <code>Array</code>
+
+Returns the exchange balance for a slug in a specific exchange
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - exchange inflow values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| owner       | <code>string</code> | Name of the exchange                                                                                                                                                                                                                                                                |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
 ## SAN_EXCHANGE_BALANCE_MULTIPLE_SLUGS
 
 ##### SAN_EXCHANGE_BALANCE_MULTIPLE_SLUGS(projectSlugsList, from, to, interval) ⇒ <code>Array</code>
@@ -654,6 +846,24 @@ Returns the exchange inflow.
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
 | aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
 
+## SAN_EXCHANGE_INFLOW_BY_EXCHANGE
+
+##### SAN_EXCHANGE_INFLOW_BY_EXCHANGE(projectSlug, from, to, owner, interval) ⇒ <code>Array</code>
+
+Returns the exchange inflow for a slug in a specific exchange
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - exchange inflow values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| owner       | <code>string</code> | Name of the exchange                                                                                                                                                                                                                                                                |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
 ## SAN_EXCHANGE_INFLOW_MULTIPLE_SLUGS
 
 ##### SAN_EXCHANGE_INFLOW_MULTIPLE_SLUGS(projectSlugsList, from, to, interval) ⇒ <code>Array</code>
@@ -705,6 +915,24 @@ Returns the exchange outflow.
 | from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
 | to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
 | aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
+
+## SAN_EXCHANGE_OUTFLOW_BY_EXCHANGE
+
+##### SAN_EXCHANGE_OUTFLOW_BY_EXCHANGE(projectSlug, from, to, owner, interval) ⇒ <code>Array</code>
+
+Returns the exchange outflow for a slug in a specific exchange
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - exchange inflow values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| owner       | <code>string</code> | Name of the exchange                                                                                                                                                                                                                                                                |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
 
 ## SAN_EXCHANGE_OUTFLOW_MULTIPLE_SLUGS
 
@@ -801,7 +1029,7 @@ Returns the funding rates that are paid by one of the sides of the perpetual con
 | projectSlug         | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
 | from                | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
 | to                  | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
-| fundingRateExchange | <code>string</code> | The exchange platform, from which funding rates are fetched, BITMEX by default: "BITMEX" "BINANCE"                                                                                                                                                                                  |
+| fundingRateExchange | <code>string</code> | The exchange platform, from which funding rates are fetched, BITMEX by default: "BITMEX" "BINANCE" "FTX" "DYDX" "BITFINEX" "DERIBIT"                                                                                                                                                |
 | interval            | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
 
 ## SAN_FUNDING_RATE_BUSD_AGGREGATED
@@ -856,7 +1084,7 @@ Returns the funding rates that are paid by one of the sides of the perpetual con
 | projectSlug         | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
 | from                | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
 | to                  | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
-| fundingRateExchange | <code>string</code> | The exchange platform, from which funding rates are fetched, BITMEX by default: "BITMEX" "BINANCE"                                                                                                                                                                                  |
+| fundingRateExchange | <code>string</code> | The exchange platform, from which funding rates are fetched, BITMEX by default: "BITMEX" "BINANCE" "FTX" "DYDX" "BITFINEX" "DERIBIT"                                                                                                                                                |
 | interval            | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
 
 ## SAN_FUNDING_RATE_USDT_AGGREGATED
@@ -2557,6 +2785,76 @@ Returns the number of transactions transferring more than 100k USD.
 - **Kind**: global function
 - **Returns**: <code>Array</code> - of results for multiple slugs
 the number of transactions transferring more than 100k USD.
+- **Customfunction**:
+
+| Param            | Type                | Description                                                                                                                                                                            |
+| ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlugsList | <code>string</code> | Comma-separated names of the assets, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment,bitcoin".                                                                                                                                                       |
+| from             | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to               | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| interval         | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
+## SAN_WITHDRAWAL_TRANSACTIONS_BY_EXCHANGE
+
+##### SAN_WITHDRAWAL_TRANSACTIONS_BY_EXCHANGE(projectSlug, from, to, owner, interval) ⇒ <code>Array</code>
+
+Returns the withdrawal transactions for a slug in a specific exchange
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - exchange inflow values.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| owner       | <code>string</code> | Name of the exchange                                                                                                                                                                                                                                                                |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
+## SAN_WITHDRAWAL_TRANSACTIONS_INTRADAY
+
+##### SAN_WITHDRAWAL_TRANSACTIONS_INTRADAY(projectSlug, from, to, interval) ⇒ <code>Array</code>
+
+Returns number of withdrawal transactions with the option of smaller intervals.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of number of withdrawal transactions with the option of smaller intervals.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
+
+## SAN_WITHDRAWAL_TRANSACTIONS_INTRADAY_AGGREGATED
+
+##### SAN_WITHDRAWAL_TRANSACTIONS_INTRADAY_AGGREGATED(projectSlug, from, to, aggregation) ⇒ <code>number</code>
+
+Returns number of withdrawal transactions with the option of smaller intervals.
+
+- **Kind**: global function
+- **Returns**: <code>number</code> - of aggregated number of withdrawal transactions with the option of smaller intervals.
+- **Customfunction**:
+
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
+
+## SAN_WITHDRAWAL_TRANSACTIONS_INTRADAY_MULTIPLE_SLUGS
+
+##### SAN_WITHDRAWAL_TRANSACTIONS_INTRADAY_MULTIPLE_SLUGS(projectSlugsList, from, to, interval) ⇒ <code>Array</code>
+
+Returns number of withdrawal transactions with the option of smaller intervals.
+
+- **Kind**: global function
+- **Returns**: <code>Array</code> - of results for multiple slugs
+number of withdrawal transactions with the option of smaller intervals.
 - **Customfunction**:
 
 | Param            | Type                | Description                                                                                                                                                                            |
