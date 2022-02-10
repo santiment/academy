@@ -119,6 +119,7 @@ export const REFERENCES = [
       'Daily Active Addresses',
       'Daily Active Deposits',
       'DeFi',
+      'Deribit',
       'DEX',
       'Development Activity',
       'Dormant Circulation',
