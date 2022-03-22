@@ -17,6 +17,11 @@ export const GUIDES = [
     description: 'Examples and use cases for Santiment metrics',
     icon: Education,
     articles: [
+      {
+        slug:
+          'alerts on Sanbase',
+        title: 'Sanbase Alerts - Age Consumed example',
+      },
       'Timing market volatility with Token Age Consumed',
       {
         slug:

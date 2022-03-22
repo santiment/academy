@@ -3,6 +3,7 @@ title: Education and Use cases
 author: Dino Ibisbegovic
 ---
 
+- [Sanbase Alerts - Age Consumed example](/education-and-use-cases/alerts-on-sanbase/)
 - [Santiment Hands On Tutorial (Jupyter Notebook)](https://github.com/santiment/san-sdk/blob/master/ICDM_2019/ICDM.ipynb)
 - [Corellation analysis between Bitcoin and Gold (Jupyter Notebook)](https://github.com/santiment/san-sdk/blob/master/correlation-analysis/BTC%20vs%20GOLD.ipynb)
 - [Backtesting trading based on github data (Jupyter Notebook)](https://github.com/santiment/san-sdk/blob/master/example-backtesting-with-sanpy/Backtest_GitHub_Activity_Portfolio.ipynb)
