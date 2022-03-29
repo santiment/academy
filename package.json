@@ -34,6 +34,8 @@
     "lodash.template": "^4.5.0",
     "node-sass": "^6.0.1",
     "npm": "^6.12.0",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
     "prop-types": "^15.7.2",
     "query-string": "^6.8.3",
     "react": "^16.10.2",
@@ -62,7 +64,8 @@
     "format": "prettier --single-quote --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
