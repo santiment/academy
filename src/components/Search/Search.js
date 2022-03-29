@@ -31,7 +31,8 @@ const Search = ({ small }) => {
     if (isSSR) return
 
     window.docsearch({
-      apiKey: '93cdd643257923145fa8093e68b5c453', // required
+      appId: "ZVVHPHW3IV",
+      apiKey: 'ad83a9a7b30fda58f4c61a55a73d9338', // required
       indexName: 'santiment_academy', // required
       inputSelector: '#search', // required
     })
