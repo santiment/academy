@@ -2,12 +2,70 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2022-01-31
+date: 2022-03-31
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
+## March 2022
+
+**Sanbase**
+
+- New assets: 1ECO, ALPINE, GMT, LAZIO, MCONTENT, THG, TREEB, XFL, WTRX, APE, HI, RPG, POLC
+- Alert creation bug fixed
+- Add Cardano Onchain Metrics (https://app.santiment.net/s/eIzhNOf6)
+
+**Charts**
+- Combined metrics section in the sidebar
+- “Top Transaction Table” sorting fixed
+- “Smoothing” sharing fixed
+- Fullscreen-freeze bug fixed
+- Asset’s market cap and rank info in the top header
+- New master asset selector
+- New metrics: 
+  * Daily On-Chain Transaction Volume in Profit
+  * Daily On-Chain Transaction Volume in Loss
+  * The Ratio of Daily On-Chain Transaction Volume in Profit to Loss
+https://academy.santiment.net/metrics/transaction-volume-in-profit-or-loss
+- Add Master selector blockchains’ filter
+- Ctrl+K (Cmd+K) shortcut for opening master selector
+
+**Insights/Charts**
+- Performance improvements
+- New comments features:
+    - Bold, italic, links
+    - Type $ for assets suggestions
+    - Type @ to mention an user
+    - Type # to link a trend 
+
+**Screeners/Watchlists**
+
+- New Screener's Filters: Mvrv 7d, 60d, 90d
+- You can like and comment any public watchlist or screener. One more step for our community.
+
+## February 2022
+
+**Sanbase**
+
+- New assets added: ASTR, CCX, WRLD, XCAD
+- User info added to profile dropdown
+- Create alert bug fixed
+- Profile page fixed
+- Watchlist Addresses bugs fix
+- Updated Cookies policy dialog
+- Follow/Unfollow inside profile page bug fixed
+- NEW Metric on Sanbase - Social Volume AI.
+
+**Charts**
+
+- Fix empty data issue when Exchanges 2.0 metrics were combined
+- Combined metrics’ project locking fix
+- Open Edit/Save dialog by clicking on the layout name in the header 
+- Displaying amount of available metrics
+
+We exited to announce our new social metric - Social Volume AI. This metric is alternative to Social Volume. For old metric we have a simple algorythm to detect an asset per message. New metric computed using Natural Language Processing (NLP) technique such as Named Entity Recognition (NER). Our trained NER model can process large amount of social data and extract from it mentions about crypto assets.
+Look at [https://app.santiment.net/s/0UQIX6NU](this metric)
 
 ## December 2021 and January 2022
 
