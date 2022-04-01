@@ -48,10 +48,14 @@
     "react-sizes": "^2.0.0",
     "react-syntax-highlighter": "^11.0.2",
     "react-transition-group": "^4.3.0",
-    "remark-math": "^2.0.0"
+    "remark-math": "^2.0.0",
+    "phoenix": "^1.6.6",
+    "svelte": "^3.46.3",
+    "san-webkit": "https://github.com/santiment/san-webkit#1c702b5"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "svelte-loader": "^2.13.6"
   },
   "keywords": [
     "gatsby"
@@ -65,7 +69,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "postinstall": "patch-package"
+    "webkit": "node scripts/webkit",
+    "postinstall": "patch-package && npm run webkit"
   },
   "repository": {
     "type": "git",
