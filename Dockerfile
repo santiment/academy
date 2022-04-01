@@ -1,4 +1,4 @@
-FROM node:16.13-slim
+FROM node:13 AS builder
 
 ARG GIT_HEAD
 
@@ -11,12 +11,9 @@ RUN GIT_HEAD=$GIT_HEAD && \
 
 WORKDIR /app
 
-COPY ./package.json /app/package.json
-COPY ./yarn.lock /app/yarn.lock
+COPY ./ /app
 
 RUN npm install -g yarn --force && yarn install --production
-
-COPY ./ /app
 
 RUN yarn build
 
