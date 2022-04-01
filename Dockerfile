@@ -1,4 +1,4 @@
-FROM node:13 AS builder
+FROM node:16 AS builder
 
 ARG GIT_HEAD
 
