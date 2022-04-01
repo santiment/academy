@@ -140,7 +140,8 @@
   }
 }
 
-:global(.algolia-docsearch-suggestion) {
+:global {
+   .algolia-docsearch-suggestion {
 
 	&--content {
 
@@ -181,6 +182,7 @@
   	&:before {
   		background: var(--porcelain) !important;
   	}
+    }
   }
 }
 
