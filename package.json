@@ -50,12 +50,12 @@
     "react-transition-group": "^4.3.0",
     "remark-math": "^2.0.0",
     "phoenix": "^1.6.6",
+    "svelte-loader": "^2.13.6",
     "svelte": "^3.46.3",
     "san-webkit": "https://github.com/santiment/san-webkit#1c702b5"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
-    "svelte-loader": "^2.13.6"
+    "prettier": "^1.18.2"
   },
   "keywords": [
     "gatsby"
