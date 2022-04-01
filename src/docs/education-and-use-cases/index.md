@@ -13,3 +13,4 @@ author: Dino Ibisbegovic
 - [Investigate Speculative Activity with Santiment’s Exchange Metrics](/education-and-use-cases/investigate-speculative-activity-with-santiment’s-exchange-metrics/)
 - [Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies](/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/)
 - [Santiment Pro Reports Samples](/education-and-use-cases/santiment-pro-reports-samples/)
+- [Santiment Testimonials](/education-and-use-cases/santiment-testimonials/)
