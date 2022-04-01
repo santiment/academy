@@ -1,7 +1,7 @@
-const webpack = require("webpack")
+const webpack = require('webpack')
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { onPostBuild } = require("gatsby-plugin-meta-redirect/gatsby-node")
+const { onPostBuild } = require('gatsby-plugin-meta-redirect/gatsby-node')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -33,14 +33,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { createRedirect } = actions
   createRedirect({
-    fromPath: "/metrics/mvrv/",
-    toPath: "/metrics/mvrv-ratio/",
+    fromPath: '/metrics/mvrv/',
+    toPath: '/metrics/mvrv-ratio/',
     isPermanent: true,
     redirectInBrowser: true,
   })
   createRedirect({
-    fromPath: "/metrics/holders-distribution/",
-    toPath: "/metrics/supply-distribution/",
+    fromPath: '/metrics/holders-distribution/',
+    toPath: '/metrics/supply-distribution/',
     isPermanent: true,
     redirectInBrowser: true,
   })
@@ -58,7 +58,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        webkit: path.resolve("node_modules/san-webkit/lib"),
+        webkit: path.resolve('node_modules/san-webkit/lib'),
       },
     },
 
@@ -67,7 +67,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         {
           test: /\.svelte/,
           use: {
-            loader: "svelte-loader",
+            loader: 'svelte-loader',
           },
         },
       ],
@@ -75,8 +75,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 
     plugins: [
       new webpack.DefinePlugin({
-        "process.env.MEDIA_PATH": JSON.stringify("/static/webkit"),
-        "process.env.ICONS_PATH": JSON.stringify("/static/webkit/icons"),
+        'process.env.MEDIA_PATH': JSON.stringify('/static/webkit'),
+        'process.env.ICONS_PATH': JSON.stringify('/static/webkit/icons'),
       }),
     ],
   })
