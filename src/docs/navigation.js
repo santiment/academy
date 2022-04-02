@@ -38,6 +38,16 @@ export const GUIDES = [
         title:
           'Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategies',
       },
+      {
+        slug:
+          'santiment pro report samples',
+        title: 'Santiment PRO Reports Samples',
+      },
+      {
+        slug:
+          'santiment testimonials',
+        title: 'Santiment Testimonials',
+      },
     ],
   },
   {
