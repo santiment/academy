@@ -18,9 +18,16 @@ export const GUIDES = [
     icon: Education,
     articles: [
       {
-        slug:
-          'alerts on Sanbase',
+        slug: 'alerts on Sanbase',
         title: 'Sanbase Alerts - Age Consumed example',
+      },
+      {
+        slug: 'social trends alerts',
+        title: 'Sanbase Alerts - Social trends / Trending words example',
+      },
+      {
+        slug: 'whale alert',
+        title: 'Sanbase Alerts - Whale Alert example',
       },
       'Timing market volatility with Token Age Consumed',
       {
@@ -39,13 +46,11 @@ export const GUIDES = [
           'Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategies',
       },
       {
-        slug:
-          'santiment pro report samples',
+        slug: 'santiment pro reports samples',
         title: 'Santiment PRO Reports Samples',
       },
       {
-        slug:
-          'santiment testimonials',
+        slug: 'santiment testimonials',
         title: 'Santiment Testimonials',
       },
     ],
