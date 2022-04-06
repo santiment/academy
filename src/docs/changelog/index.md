@@ -2,7 +2,7 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2022-04-01
+date: 2022-04-06
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
@@ -10,40 +10,25 @@ We update this page every two weeks or more frequently.
 
 ## April 2022
 
-### Product updates summary
+### `30.03.22 - 6.04.22` 
 
-- Cardano metrics updated: on-chain data available now
-- Combined metrics easily available in sidebar and for saving
-- New metrics: Transaction Volume in Profit/Loss
-- Social toggle for improved Santiment communication
-- Master Asset selector - more intuitive layout
-- Cmd+K: easily perform search right on screen
-- MVRV filter available in screeners now
+**Sanbase**
 
-### Product updates
+- New assets: ALI, FRTS, GENE, TT, ZIG
+- New TopBar added to Watchlists / Screeners / Addresses
+- Add comments and likes to Watchlists / Screeners / Addresses
+- Fix Alert’s creating issues
+- Fix treemap chart issues
 
-We are happy to announce some of our finest updates of the month which are driving our platform - and your crypto experience - further.
+**Charts**
 
-- Santiment now features a full set of on-chain metrics for Cardano (ADA) 
-  * Explore how ADA performs in terms of Price, Daily Active Addresses, Age Consumed, and Network Realized Profit/Loss, among many others.
-  * For instant overview visit our pre-build chart layout here https://app.santiment.net/s/eIzhNOf6 
+- Embedded chart live preview
+- Embedded chart shared data access
 
-- We made Combined Metrics now sitting directly in the sidebar. Simply go to the metric, select minimum two you would like to track together and save it to the chart layout. It will now always be there for you. For example, you may wish to add up several Funding Rates and have their average (https://app.santiment.net/charts/DCSax8kR__sCl). 
+**Academy**
 
-- New set of metrics added to Sanbase: 
-    - “Daily On-Chain Transaction Volume in Profit” 
-    - “Daily On-Chain Transaction Volume in Loss” 
-    - “The Ratio of Daily On-Chain Transaction Volume in Profit to Loss”
-  * The metrics show the aggregate amount of coins/tokens across all transactions on the network that moved in profit or loss for a given asset in an interval. The last one shows the ratio between transaction volume in profit and transaction volume in loss.
-
-- Communicate with fellow Sanbase users more effectively now with the social toggle we added. Simply type @ to mention a user you wish to converse with in insights/charts
-
-- We made our chart layout more intuitive with the Master Asset selector now located in the top left corner just above the supporting selector. Use the master selector to create a required template and then switch between assets to see performance of each. To compare metrics for different assets use the secondary selector to add coins/tokens to the chart. 
-
-- Shortcut cmd+K (ctrl+K) will enable you to instantly open Master Selector on screen
-
-- MVRV filter now available in Screener too. MVRV can quickly show you how a certain asset performs in relation to its initial acquisition price. Higher MVRV numbers indicate most holders are in profit. 
-
+- Update cookies preferences
+- Add Alerts use cases
 
 ## March 2022
 
