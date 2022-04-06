@@ -30,6 +30,8 @@ We update this page every two weeks or more frequently.
 - Update cookies preferences
 - Add Alerts use cases
 
+![Embed chart dialog](https://user-images.githubusercontent.com/25135650/162019025-e3aecb38-c1cb-4abc-a281-4e45084c8894.jpg)
+
 ## March 2022
 
 **Sanbase**
