@@ -35,6 +35,12 @@ Amount in dollars/bitcoins
 
 ---
 
+## Change Metrics
+
+[Change Metrics](/metrics/details/change_metrics)
+
+---
+
 ## Frequency
 
 [Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)

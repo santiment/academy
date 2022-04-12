@@ -65,6 +65,11 @@ profit/loss long-term and short-term holders can realize.
 
 ---
 
+## Change Metrics
+
+[Change Metrics](/metrics/details/change_metrics)
+
+---
 
 ### MVRV Long/Short Difference
 

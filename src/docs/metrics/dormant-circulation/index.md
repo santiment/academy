@@ -27,12 +27,6 @@ Examples:
 
 ---
 
-## Timebound
-
-[Timebound Metrics](/metrics/details/timebound)
-
----
-
 ## Measuring Unit
 
 Token/Coin amount
@@ -42,6 +36,18 @@ Token/Coin amount
 ## Data Type
 
 [Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Timebound
+
+[Timebound Metrics](/metrics/details/timebound)
+
+---
+
+## Change Metrics
+
+[Change Metrics](/metrics/details/change_metrics)
 
 ---
 

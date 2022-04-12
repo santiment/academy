@@ -48,6 +48,12 @@ Number of addresses
 
 ---
 
+## Change Metrics
+
+[Change Metrics](/metrics/details/change_metrics)
+
+---
+
 ## Frequency
 
 [Daily Intervals](/metrics/details/frequency#daily-frequency)

@@ -103,11 +103,11 @@ The metric is available **for any selected asset**.
 
 #### Availability
 
-|                | Free | Basic | Pro                | Pro+               | Enterprise         |
-| -------------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
-| Sanbase        | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI         | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets      | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|           | Free | Basic | Pro                | Pro+               | Enterprise         |
+| --------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
+| Sanbase   | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SanAPI    | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Sansheets | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### 2. Average Sentiment
 
@@ -141,11 +141,11 @@ The metric is available **for any selected asset**.
 
 #### Availability
 
-|                | Free | Basic | Pro                | Pro+               | Enterprise         |
-| -------------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
-| Sanbase        | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI         | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets      | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|           | Free | Basic | Pro                | Pro+               | Enterprise         |
+| --------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
+| Sanbase   | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SanAPI    | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Sansheets | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
 ### 3. Sentiment Weighted
 
@@ -204,8 +204,8 @@ The metric is available **for any selected asset**.
 
 #### Availability
 
-|                | Free | Basic | Pro                | Pro+               | Enterprise         |
-| -------------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
-| Sanbase        | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI         | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets      | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|           | Free | Basic | Pro                | Pro+               | Enterprise         |
+| --------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
+| Sanbase   | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| SanAPI    | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+| Sansheets | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
