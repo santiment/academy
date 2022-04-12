@@ -1,23 +1,23 @@
 ---
 title: Timebound
 author: Ivan
-date: 2020-04-02
+date: 2022-04-12
 ---
 
 - [Definition](#definition)
-- [Examples](#price-latency)
-- [Development Activity Latency](#development-activity-latency)
+- [Examples](#examples)
+  - [circulation_1d](#circulation_1d)
 
 ## Definition
 
-Normally metrics are computed with taking into account all coins/tokens.
+Typically metrics are computed by taking into account all coins/tokens.
 
-For some metrics it makes sense to also compute a derivation of them on the
-subset of coins/tokens, that were moved at least once no longer than X
+For some metrics, it makes sense also to compute a derivation of them on the
+subset of coins/tokens that have been moved at least once no longer than X
 days/years ago.
 
-UTXO blockchain naturally define the age of a coin, but this is not true for
-account-based blockchains. In order to define the age of a coin in account-based
+UTXO blockchains naturally define the age of a coin, but this is not true for
+account-based blockchains. To define the age of a coin in account-based
 blockchains we developed our own [Coin Age
 Model](/metrics/details/stack-coin-age-model)
 
@@ -37,12 +37,12 @@ timebound suffix. Available timebound suffixes are:
 
 Examples:
 
-- mvrv_usd_30d - The MVRV metric computed by considering only the coins/tokens
-  that were active in the past 30 days.
-- circulation_3y - The number of tokens that were transacted at least once in
-  the past 3 years. If a coin/token is considered dead/lost (sent to graveyard
-  address, owner lost private key, etc.) such circulation can serve as an
-  approximation of total supply minus lost/dead coins.
+- mvrv_usd_30d - The MVRV metric is computed by considering only the
+  coins/tokens that were active in the past 30 days.
+- circulation_3y - The number of tokens transacted at least once in the past 3
+  years. If a coin/token is considered dead/lost (sent to graveyard address, the
+  owner lost private key, etc.), such circulation can approximate total supply
+  minus lost/dead coins.
 
 ## Examples
 
@@ -51,8 +51,8 @@ Examples:
 The `circulation_1d` metric counts the number of coins/tokens that participated
 in on-chain transactions in the past 24 hours.
 
-In one particular day Alice sends 20 ETH to Bob, Bob sends 10 ETH to Charlie and
-Charlie sends 5 ETH to Dean.
+On one particular day, Alice sends 20 ETH to Bob, Bob sends 10 ETH to Charlie
+and Charlie sends 5 ETH to Dean.
 
 ```bash
 Alice  -- 20 ETH -->  Bob
@@ -66,10 +66,10 @@ Dean <-- 5  ETH -- Charlie
 In this scenario the transaction volume is 20 + 10 + 5 = 35 ETH, but the ETH in
 circulation is 20 ETH.
 
-This can be explained as having twenty \$1 bills. Alice sends all of them to
-Bob, Bob sends 10 of the received bills to Charlie and Charlie sends 5 of them
-to Dean. There are 20 dollars in circulation total in this case.
+This difference can be explained as having twenty \$1 bills. Alice sends all of
+them to Bob, Bob sends 10 of the received bills to Charlie, and Charlie sends 5
+of them to Dean. There are 20 dollars in circulation total in this case.
 
-One of the most useful properities of Circulation is that it is immune to mixers
-and gives a much better view of the actual amount of tokens that are being
-transacted on-chain.
+One of the most valuable properties of circulation is that it is immune to
+mixers and gives a much better view of the actual amount of tokens that are
+being transacted on-chain.
