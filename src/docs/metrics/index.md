@@ -58,6 +58,7 @@ activity.
 ## Network Activity (On-Chain)
 
 - [Daily Active Addresses](/metrics/daily-active-addresses)
+- [Active Addresses 24h](/metrics/active-addresses-24h)
 - [Daily Active Deposits](/metrics/daily-active-deposits)
 - [Network Growth](/metrics/network-growth)
 

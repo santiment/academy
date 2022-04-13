@@ -30,13 +30,19 @@ assets are discussing exactly this asset.
 
 ## Measuring Unit
 
-% between 0 and 100.
+Number - % between 0 and 100
 
 ---
 
 ## Data Type
 
 [Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Change Metrics
+
+[Change Metrics](/metrics/details/change_metrics)
 
 ---
 

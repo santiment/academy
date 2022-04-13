@@ -137,6 +137,7 @@ export const REFERENCES = [
       'Circulation',
       'Community Messages Count',
       'Daily Active Addresses',
+      'Active Addresses 24h',
       'Daily Active Deposits',
       'DeFi',
       'Deribit',

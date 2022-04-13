@@ -31,6 +31,12 @@ Ratio
 
 ---
 
+## Change Metrics
+
+[Change Metrics](/metrics/details/change_metrics)
+
+---
+
 ## Frequency
 
 [Eight-Hour Intervals](/metrics/details/frequency#eight-hour-frequency)

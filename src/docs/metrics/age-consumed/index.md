@@ -49,6 +49,12 @@ Time passed × Token/Coin amount
 
 ---
 
+## Change Metrics
+
+[Change Metrics](/metrics/details/change_metrics)
+
+---
+
 ## Frequency
 
 [Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)

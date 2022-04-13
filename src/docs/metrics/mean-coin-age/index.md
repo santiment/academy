@@ -59,6 +59,12 @@ then the mean dollar invested age is: (10 × 50 + 20 × 50) / (50 × $1 + 50 × 
 
 ---
 
+## Change Metrics
+
+[Change Metrics](/metrics/details/change_metrics)
+
+---
+
 ## Frequency
 
 [Daily Intervals](/metrics/details/frequency#daily-frequency)
