@@ -1,15 +1,18 @@
 ---
-title: Developer Activity metric
+title: Developer Activity
 author: Santiment Team
-date: 2020-04-06
+date: 2022-04-18
 description: Development activity in public github repositories
 ---
 
 ## Definition
 
-The development activity of a project done in its public github repositories.
+The development activity of a project is done in its public GitHub repositories.
+The work done in private repositories is hidden from the public and cannot be
+tracked. In Crypto, a lot of the work is done in public repositories, so this
+metric is available for many projects.
 
-A developer's time is a relatively expensive resource (especially in crypto), so
+A developer's time is a relatively expensive resource (especially in Crypto), so
 high development activity implies that:
 
 1. The project is serious about its business proposition

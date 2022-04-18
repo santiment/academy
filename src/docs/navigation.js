@@ -143,6 +143,7 @@ export const REFERENCES = [
       'Deribit',
       'DEX',
       'Development Activity',
+      'Development Activity Contributors Count',
       'Dormant Circulation',
       'dYdX',
       'Emerging Trends',
