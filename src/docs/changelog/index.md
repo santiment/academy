@@ -2,13 +2,50 @@
 title: Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
-date: 2022-04-06
+date: 2022-04-20
 ---
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
 ## April 2022
+
+`06.04.22 - 20.04.22`
+
+**Sanbase**
+
+- New assets: ATOLO, INSUR, MV, SENATE, STANDARD, STG, WMT, XCN, XDEFI
+- Fix creating alerts from Watchlists / Screeners / Charts / Balance pages
+
+**Alerts**
+
+- Update Alert’s Explore page
+- Update Alert’s Preview
+- Alert’s matching metrics conditions fix
+- Update alert’s notification flow
+
+**Charts**
+
+- Main selector supports chain addresses
+- Add recently shown assets
+- 2 new metrics: Contract Interacting Addreses, Contract Transactions Count
+
+Last 2 weeks we made many fixes for our Alerts. Our Alerts notifications and preview work better now. 
+
+🎉🎉🎉 Finally We have added new selector for our Charts tool. You can remember our Charts as a great analytics tool for ERC20 or many other type of assets, but now it’s much advanced tool. You can  do a research of any chain addresses on supported blockchains In the closed future we will add social metrics for some type of smart contracts like erc721.
+
+Example:
+1. [https://app.santiment.net/s/rk-8It-D](https://app.santiment.net/s/rk-8It-D) (BoredApeYachtClub (BAYC) Contract)
+
+You can see 2 available metrics:
+
+- Contract Interecting Addresses
+- Contract Transactions Count
+
+Actually it’s not only for contract, it works for any address. 
+I am really appreciate any feedback.
+Disclaimer new 2 metrics for our addresses have slow performance.
+Loaded time can be up to 1 minute. Sorry.
 
 ### `30.03.22 - 6.04.22` 
 
