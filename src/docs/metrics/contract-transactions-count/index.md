@@ -21,7 +21,7 @@ Get transactions count for a chain address / contract
 
 ## API
 
-Available under the `Transactions Count` name:
+Available under the `contract_transactions_count` name:
 
 ```graphql
 query getMetric($metric: String!, $from: DateTime!, $to: DateTime!, $interval: interval, $transform: TimeseriesMetricTransformInputObject, $aggregation: Aggregation, $address: String, $includeIncompleteData: Boolean = true) {

@@ -21,7 +21,7 @@ Get interacting address count for a chain address / contract
 
 ## API
 
-Available under the `interacting address count` name:
+Available under the `contract_interacting_addresses_count` name:
 
 ```graphql
 query getMetric($metric: String!, $from: DateTime!, $to: DateTime!, $interval: interval, $transform: TimeseriesMetricTransformInputObject, $aggregation: Aggregation, $address: String, $includeIncompleteData: Boolean = true) {
