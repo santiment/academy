@@ -9,7 +9,7 @@ description: Get interacting address count for a chain address / contract
 
 Get interacting address count for a chain address / contract
 
-[Example of usage **interacting address count** on Sanbase](https://app.santiment.net/s/rk-8It-D)
+![Example of usage **interacting address count** on Sanbase](conract_interacting_address.png)
 
 ---
 
