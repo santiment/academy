@@ -77,7 +77,7 @@ activity.
 - [Supply On Or Outside Exchanges](/metrics/supply-on-or-outside-exchanges)
 - [Top Holders](/metrics/top-holders)
 - [Transaction Volume](/metrics/transaction-volume)
-- [Transaction Volume In Profit Or Loss](/metrics/transaction-volume-profit-loss)
+- [Transaction Volume In Profit Or Loss](/metrics/transaction-volume-in-profit-or-loss)
 - [Velocity](/metrics/velocity)
 
 ## Derivatives
