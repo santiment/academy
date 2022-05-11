@@ -67,7 +67,7 @@ Note the three dashes before and after metadata. _Don't forget to put them there
 * [Sanbase](https://app.santiment.net)
 * [Insights](https://insights.santiment.net)
 * [Sheets](https://sheets.santiment.net)
-* [SanR](https://sanr.santiment.net)
+* [SanR](https://sanr.app)
 * [API](https://api.santiment.net)
 * [Knowledge Base](https://academy.santiment.net)
 

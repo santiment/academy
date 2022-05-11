@@ -32,7 +32,7 @@ export const CHAIN_PRODUCTS = [
     img: sanr,
     title: 'SanR',
     description: 'Decentralized marketplace for crypto price signals',
-    to: 'https://sanr.santiment.net',
+    to: 'https://sanr.app',
   },
   {
     img: sanhunters,
