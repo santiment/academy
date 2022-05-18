@@ -39,6 +39,7 @@ possibility to enter custom search terms.
 - [Social Volume](/metrics/social-volume)
 - [Unique Social Volume](/metrics/unique-social-volume)
 - [Top Social Gainers/Losers](/metrics/top-social-gainers-losers)
+- [NFT Social Volume](/metrics/nft-social-volume)
 
 ## Development
 

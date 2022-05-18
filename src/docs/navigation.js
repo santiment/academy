@@ -161,6 +161,7 @@ export const REFERENCES = [
       'MVRV ratio',
       'Network Growth',
       'Network Profit Loss',
+      'NFT Social Volume',
       'NVT',
       'Price',
       'Realized Value',
