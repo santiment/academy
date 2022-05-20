@@ -19,7 +19,7 @@ const ArticleInfo = ({ title, author, date }) => {
 
   return (
     <section className={styles.block}>
-      <h3 className={styles.title}>{title}</h3>
+      <h1 className={styles.title}>{title}</h1>
       <div className={styles.info}>
         <div className={cx(styles.imageWrapper, !imageUrl && styles.onlyPhoto)}>
           <img src={imageUrl || logo} alt="author" />
