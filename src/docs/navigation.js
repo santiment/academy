@@ -178,6 +178,7 @@ export const REFERENCES = [
       'Top Social Gainers Losers',
       'Transaction Volume',
       'Transaction Volume In Profit Or Loss',
+      'Trending Words Rank',
       'Velocity',
     ],
   },
