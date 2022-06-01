@@ -55,6 +55,7 @@ activity.
 - [NVT](/metrics/nvt)
 - [Realized Value](/metrics/realized-value)
 - [Network Profit Loss](/metrics/network-profit-loss)
+- [Realized Market Capitalization Hodl Waves](/metrics/realized-market-capitalization-hodl-waves)
 
 ## Network Activity (On-Chain)
 
@@ -70,6 +71,7 @@ activity.
 - [Circulation](/metrics/circulation)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [Supply Distribution](/metrics/supply-distribution)
+- [Spent Coins Age Band](/metrics/spent-coins-age-band)
 - [ETH 2.0](/metrics/eth-2)
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
 - [Labeled Balance](/metrics/labeled-balance)

@@ -33,7 +33,7 @@ timebound suffix. Available timebound suffixes are:
 - `_2y` - 2 years
 - `_3y` - 3 years
 - `_5y` - 5 years
-- `_10y` - 10 yers
+- `_10y` - 10 years
 
 Examples:
 
