@@ -2,14 +2,17 @@
 title: Realized Market Capitalization Hodl Waves
 author: Ante
 date: 2022-06-01
-description: Marketcap alternative with acquisition price instead of current price
+description: Percent of interval Realized Marketcap in total Realized Marketcap
 ---
 
 ## Definition
 
 Realized Market Capitalization Hodl Waves is an alternative to Circulation Hodl Waves.
-The metric is representing the percentage of realized cap for a given timebound
+This metric is representing the percentage of realized cap for a given timebound
 interval in total realized cap value.
+For example `realized_cap_hodl_waves_1d_to_7d` is computed by dividing the realized
+cap of coins that are 1 to 7 days old with total realized market cap:
+`(realized_cap_usd_7d - realized_cap_usd_1d) / realized_cap_usd`
 Assigning age to coin/tokens is done according to the [coin-age model](/metrics/details/stack-coin-age-model).
 
 ---

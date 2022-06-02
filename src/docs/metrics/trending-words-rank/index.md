@@ -1,7 +1,7 @@
 ---
 title: Trending Words Rank
 author: Filip
-date: 2022-04-13
+date: 2022-06-01
 description: Rank of asset in top trending words
 ---
 ## Definition
@@ -34,7 +34,8 @@ Ordinal number
 
 ## Frequency
 
-[Five-Minute Intervals](/metrics/details/frequency#daily-freqency)
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
+
 
 ---
 
@@ -47,7 +48,7 @@ Ordinal number
 ## Available Assets
 
 Available for [these
-assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22social_dominance_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22trending_words_rank%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 
 ---
