@@ -1,15 +1,35 @@
 ---
 title: MVRV - Market Value To Realized Value
-author: Ivan, Irina Pranovich
-date: 2021-11-19
-description: The average profit/loss of all the coins currently in circulation according to the current price
+author: Santiment Team
+date: 2022-06-07
+description: MVRV (Market Value to Realized Value) ratio shows the average profit/loss of all the coins currently in circulation according to the current price.
 ---
 
 ## Definition
 
-### MVRV
+MVRV (Market Value to Realized Value) ratio is defined as an asset's market capitalization divided by realized capitalization.
 
-MVRV shows the average profit/loss of all the coins currently in circulation
+## MVRV Ratio Overview
+
+MVRV shows the ratio between the current price and the average price of every coin/token acquired. The more the ratio increases, the more people will be willing to sell as the potential profits increase. The value of MVRV gives an idea of how much overvalued or undervalued an asset is.
+
+### MVRV Indicator Explainer Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vbYQLNJ40yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## How MVRV Measured
+
+The MVRV Ratio is used as an on-chain indicator for the purpose of studying aggregate investor behaviors as price moves to/from their cost basis. It can be considered as a mean reversion style model, where the Realized Cap (aggregate market cost basis) functions as the mean and MVRV measures deviations from this mean.
+
+The value of an asset’s given MVRV gives an idea of how much overvalued or undervalued an asset is based on short, mid, or long-term timeframes.
+
+An MVRV value of 100% (or 2.0) means that if all holders sell their coins/tokens at the current price, they will generate a 100% (x2) profit on average. The more this ratio increases, the more likely traders have historically demonstrated their willingness to sell.
+
+On the other side of the spectrum, a negative MVRV value indicates that the asset is "undervalued" on average. This means that if all coins were sold, most traders will be realizing losses at the asset’s current price.
+
+MVRV values (regardless of which timeframe) will hover around 0%, assuming the asset has had enough time to normalize after its introduction as a publicly-traded asset.
+
+Overall, MVRV shows the average profit/loss of all the coins currently in circulation
 given the current price.
 
 We need to define two terms:
@@ -25,29 +45,19 @@ $$
 MVRV = \frac{MV}{RV}
 $$
 
-MVRV value of 2 means that if all holders sell their coins/tokens at the current
-price, they will generate an x2 profit on average. In this sense, MVRV shows the
-ratio between the current price and the average price of every coin/token
-acquired. The more the ratio increases, the more people will be willing to sell
-as the potential profits **increase**.
+## Usage Guide
 
-The value of MVRV gives an idea of how much overvalued or undervalued an asset
-is.
+The MVRV ratio allows traders to gauge both actual profitability vs. loss on the network, as well as gauge the inherent degree of fear and greed that comes with it. Assets have different extremes in terms of how far a positive or negative fluctuation in its MVRV can go. And if we measure the coin’s current MVRV vs. its lowest and highest points, it’s usually fair to make educated presumptions of when price tops and bottoms are forming.
 
-If the MVRV value is between 0 and 1, then the market is "undervalued" on
-average, meaning most people will be realizing losses if they all sell their
-holdings at the current price.
+### MVRV Bitcoin chart
 
-Keep in mind that this is in the ideal case and does not account for the
-addresses with private keys or graveyard addresses. The way to adjust for this
-is to look at the historical values for the MVRV values. As the value is
-approaching historical maximums or minimums, then the possibility of a highly
-overvalued or undervalued market is much higher.
+<iframe title="Santiment Chart: Price (BTC), MVRV Ratio (30d) (BTC)" width="100%" height="300" src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&df=2021-12-07T16%3A59%3A59.999Z&emcg=1&wm=price_usd%3Bmvrv_usd_30d&wax=0%3B1&wc=%2326C953%3B%23F47BF7&ws=%3B" scrolling="no"></iframe>
 
-Another way to deal with lost private keys and graveyard addresses is to compute
-the MVRV value only taking into account the subset of tokens that have been
-active at least once in the last several years.
+**High MVRV Values ( > 2 )**
+MVRV value of 2 means that if all holders sell their coins/tokens at the current price, they will generate an x2 profit on average. 
 
+**Low MVRV Values ( < 1 )**
+If the MVRV value is between 0 and 1, then the market is "undervalued" on average, meaning most people will realize losses if they all sell their holdings at the current price.
 
 ## Timebound
 
