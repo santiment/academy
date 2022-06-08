@@ -53,10 +53,10 @@ The MVRV ratio allows traders to gauge both actual profitability vs. loss on the
 
 <iframe title="Santiment Chart: Price (BTC), MVRV Ratio (30d) (BTC)" width="100%" height="300" src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&df=2021-12-07T16%3A59%3A59.999Z&emcg=1&wm=price_usd%3Bmvrv_usd_30d&wax=0%3B1&wc=%2326C953%3B%23F47BF7&ws=%3B" scrolling="no"></iframe>
 
-**High MVRV Values ( > 2 )**
+### High MVRV Values ( > 2 )
 MVRV value of 2 means that if all holders sell their coins/tokens at the current price, they will generate an x2 profit on average. 
 
-**Low MVRV Values ( < 1 )**
+### Low MVRV Values ( < 1 )
 If the MVRV value is between 0 and 1, then the market is "undervalued" on average, meaning most people will realize losses if they all sell their holdings at the current price.
 
 ## Timebound
