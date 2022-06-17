@@ -162,6 +162,8 @@ export const REFERENCES = [
       'Network Growth',
       'Network Profit Loss',
       'NFT Social Volume',
+      'NFT Collection price',
+      'NFT Collection holders balance',
       'NVT',
       'Price',
       'Realized Market Capitalization Hodl Waves',

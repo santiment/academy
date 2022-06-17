@@ -17,6 +17,8 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [Ethereum Spent](/metrics/ethereum-spent)
 - [Marketcap in USD](/metrics/price/#marketcap-usd)
 - [Mean Coin Age](/metrics/mean-coin-age)
+- [NFT Collection price](/metrics/nft-collection-price)
+- [NFT Collection holders balance](/metrics/nft-collection-holders-balance)
 - [OHLC (Open-High-Low-Close)](/metrics/price/#ohlc)
 - [Price in BTC](/metrics/price/#price-btc)
 - [Price in USD](/metrics/price/#price-usd)
