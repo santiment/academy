@@ -10,11 +10,11 @@ NFT Collection price is a set of metrics that represent prices and number of tra
 for NFT collections and tokens. Based on the collection address and interval, users can
 fetch data for minimum, maximum and average prices in ETH and USD for NFT collection
 with that address. Also, they can fetch number of trades for some NFT collection.
-Based on the collection address and token ID, users can fetch all the prices of an NFT
-token.
+Based on the collection address and token ID, users can fetch all the prices for that
+NFT token.
 
-For some NFT collection and interval users can fetch buy/sell market volume and count. 
-Assumption is that when the majority of the volume is buying NFTs, the market 
+For some NFT collection and interval users can fetch buy/sell market volume and count.
+Assumption is that when the majority of the volume is buying NFTs, the market
 is in a euphoric state. On the other hand, when NFT owners accept many orders,
 the market is depressed.
 
@@ -26,8 +26,8 @@ the market is depressed.
 
 ## Measuring Unit
 
-Price and volume metrics - amount USD and ETH
-Trade count metrics - amount of trades
+* Price and volume metrics - amount USD and ETH
+* Trade count metrics - amount of trades
 
 ---
 
@@ -39,8 +39,8 @@ Trade count metrics - amount of trades
 
 ## Frequency
 
-NFT collection: [Daily Intervals](/metrics/details/frequency#daily-frequency)
-NFT tokens: [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
+* NFT collection: [Daily Intervals](/metrics/details/frequency#daily-frequency)
+* NFT tokens: [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
 
 
 ---
