@@ -1,5 +1,5 @@
 ---
-title: NFT Collection price
+title: NFT Collection Price
 author: Filip
 date: 2022-06-17
 description: Daily minimum, maximum, average price in eth and usd, and daily trade count for NFT collections and tokens

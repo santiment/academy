@@ -1,5 +1,5 @@
 ---
-title: NFT Collection holders balance
+title: NFT Collection Holders Balance
 author: Filip
 date: 2022-06-17
 description: Average balance of all holders of NFT collection
