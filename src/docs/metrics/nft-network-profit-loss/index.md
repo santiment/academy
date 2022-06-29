@@ -56,7 +56,7 @@ NFT Network Profit Loss - `nft_network_profit_loss<_usd>`:
 
 ```graphql
 {
-	getMetric(metric:"nft_network_profit_loss") {
+  getMetric(metric:"nft_network_profit_loss") {
     timeseriesData(
       slug:"ethereum"
       from:"2022-01-01T00:00:00Z"
