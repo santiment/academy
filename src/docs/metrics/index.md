@@ -19,7 +19,7 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [Mean Coin Age](/metrics/mean-coin-age)
 - [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
 - [NFT Collection Price](/metrics/nft-collection-price)
-- [NFT Collection Trade Volume](/metrics/nft-collection-trade-volume)
+- [NFT Market Volume](/metrics/nft-market-volume)
 - [NFT Network Profit Loss](/metrics/nft-network-profit-loss)
 - [OHLC (Open-High-Low-Close)](/metrics/price/#ohlc)
 - [Price in BTC](/metrics/price/#price-btc)
