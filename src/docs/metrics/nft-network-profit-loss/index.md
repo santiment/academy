@@ -9,8 +9,8 @@ description: NFT network realized profit/loss for all NFTs and for each NFT coll
 
 NFT Network Profit/Loss computes the average profit or loss of all NFTs 
 that change addresses. 
-NFT Collection Profit/Loss computes the average profit or loss of each 
-NFT collection that change addresses daily.
+This metric represents the average profit or loss of each
+NFT collection that is being transacted on a given day.
 
 
 ## Access
