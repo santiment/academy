@@ -184,6 +184,7 @@ export const REFERENCES = [
       'Transaction Volume In Profit Or Loss',
       'Trending Words Rank',
       'Velocity',
+      'Whale Transaction Count',
     ],
   },
   {
