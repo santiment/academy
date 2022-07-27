@@ -16,6 +16,13 @@ There are two coin age defined metrics:
 - Mean Dollar Invested Age - The average age of all coins/tokens on the
   blockchain weighted by the purchase price.
 
+There is a timebound option for these metrics 
+([Timebound Metrics](/metrics/details/timebound)). With timebound option, Mean 
+Age is calculated only for tokens that have moved in the last `x` days, 
+where `x` can be:
+- `_90d` - 3 months, `_180d` - 6 months, `_365d` - 1 year, 
+`_2y` - 2 years, `_3y` - 3 years and `_5y` - 5 years
+
 ### Example (Mean Coin age)
 
 Given there are 100 tokens in existence:
@@ -83,11 +90,14 @@ then the mean dollar invested age is: (10 × 50 + 20 × 50) / (50 × $1 + 50 × 
   assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_age%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 - Mean Dollar Invested Age is available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_dollar_invested_age%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
+> Note: timebound Mean Age metrics are available for [these
+  assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_age_90d%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
 ---
 
 ## SanAPI
 
-Available under the `mean_age` and `mean_dollar_invested_age` names.
+Available under the `mean_age` and `mean_age_<timebound>` names.
 
 ```graphql
 {
@@ -108,6 +118,9 @@ Available under the `mean_age` and `mean_dollar_invested_age` names.
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_age%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)**
 
 ---
+
+Available under the `mean_dollar_invested_age` and 
+`mean_dollar_invested_age_<timebound>` names.
 
 ```graphql
 {
