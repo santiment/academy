@@ -87,6 +87,7 @@ activity.
 - [Transaction Volume](/metrics/transaction-volume)
 - [Transaction Volume In Profit Or Loss](/metrics/transaction-volume-in-profit-or-loss)
 - [Velocity](/metrics/velocity)
+- [Whale Transaction Count](/metrics/whale-transaction-count)
 
 ## Derivatives
 
