@@ -27,13 +27,17 @@ timebound suffix. Available timebound suffixes are:
 - `_1d` - 1 day
 - `_7d` - 7 days
 - `_30d` - 30 days
-- `_60d` - 2 months
-- `_180d` - 6 months
-- `_365d` - 1 year
+- `_60d` - 60 days
+- `_90d` - 90 days
+- `_180d` - 180 days
+- `_365d` - 365 days
 - `_2y` - 2 years
 - `_3y` - 3 years
 - `_5y` - 5 years
 - `_10y` - 10 years
+
+> Note: There are metrics that support only part of the timebounds. For example, the
+> mean_coin_age has only `_90d`, `_180d`, `_365d`, `_2y`, `_3y` and `_5y`.
 
 Examples:
 

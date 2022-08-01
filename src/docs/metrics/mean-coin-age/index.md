@@ -16,13 +16,6 @@ There are two coin age defined metrics:
 - Mean Dollar Invested Age - The average age of all coins/tokens on the
   blockchain weighted by the purchase price.
 
-There is a timebound option for these metrics 
-([Timebound Metrics](/metrics/details/timebound)). With timebound option, Mean 
-Age is calculated only for tokens that have moved in the last `x` days, 
-where `x` can be:
-- `_90d` - 3 months, `_180d` - 6 months, `_365d` - 1 year, 
-`_2y` - 2 years, `_3y` - 3 years and `_5y` - 5 years
-
 ### Example (Mean Coin age)
 
 Given there are 100 tokens in existence:
@@ -63,6 +56,12 @@ then the mean dollar invested age is: (10 × 50 + 20 × 50) / (50 × $1 + 50 × 
 ## Data Type
 
 [Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Timebound
+
+[Timebound Metrics](/metrics/details/timebound)
 
 ---
 
