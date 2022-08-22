@@ -75,6 +75,16 @@ export const GUIDES = [
     ],
   },
   {
+    title: 'SQL Editor',
+    icon: Sanbase,
+    description: 'Our database explorer & research tool',
+    articles: [
+      'Introduction',
+      'Exploration',
+      'Writing SQL Queries'
+    ],
+  },
+  {
     title: 'SanAPI',
     icon: SanAPI,
     description: 'Santiment API, Available Metrics & Queries',
