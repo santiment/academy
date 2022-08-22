@@ -7,7 +7,8 @@ description: Learn how to explore the contents of the database and table structu
 
 # Overview
 
-This documents aims at improving the reader abilities to navigate through Clickhouse using SQL and explore the available tables and their structure.
+This documents aims at improving the reader abilities to navigate through
+Clickhouse using SQL and explore the available tables and their structure.
 
 ## List of tables
 
@@ -34,7 +35,8 @@ The `%` in the end means that there could be other characters to the right.
 
 ## Get information about a table
 
-In order to inspect the structure of a given table, one can execute the `DESCRIBE` statement:
+In order to inspect the structure of a given table, one can execute the
+`DESCRIBE` statement:
 
 ```sql
 DESCRIBE intraday_metrics
@@ -53,36 +55,41 @@ DESCRIBE intraday_metrics
 └────────────────────┴──────────────────┴──────────────┴────────────────────────────────┴─────────┴──────────────────┴────────────────┘
 ```
 
-In order to see how a table was created one can execute the `SHOW CREATE TABLE` statement. This includes information
-about the partitioning, ordering, table engine and other settings. Knowing the `ORDER BY` helps creating better and faster queries.
+In order to see how a table was created one can execute the `SHOW CREATE TABLE`
+statement. This includes information about the partitioning, ordering, table
+engine and other settings. Knowing the `ORDER BY` helps creating better and
+faster queries.
 
 ```sql
 SHOW CREATE TABLE intraday_metrics
 ```
 ```
 ┌─statement──────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ CREATE TABLE default.intraday_metrics
-(
-    `asset_id` UInt64 CODEC(DoubleDelta, LZ4),
-    `metric_id` UInt64 CODEC(DoubleDelta, LZ4),
-    `dt` DateTime CODEC(DoubleDelta, LZ4),
-    `value` Float64,
-    `computed_at` DateTime
-)
-ENGINE = ReplicatedReplacingMergeTree('/clickhouse/tables/global/intraday_metrics_v2', '{hostname}', computed_at)
-PARTITION BY toYYYYMM(dt)
-ORDER BY (asset_id, metric_id, dt)
-SETTINGS index_granularity = 8192 │
+│ CREATE TABLE default.intraday_metrics                                                                                  │
+│ (                                                                                                                      │
+│     `asset_id` UInt64 CODEC(DoubleDelta, LZ4),                                                                         │
+│     `metric_id` UInt64 CODEC(DoubleDelta, LZ4),                                                                        │
+│     `dt` DateTime CODEC(DoubleDelta, LZ4),                                                                             │
+│     `value` Float64,                                                                                                   │
+│     `computed_at` DateTime                                                                                             │
+│ )                                                                                                                      │
+│ ENGINE = ReplicatedReplacingMergeTree('/clickhouse/tables/global/intraday_metrics_v2', '{hostname}', computed_at)      │                               
+│ PARTITION BY toYYYYMM(dt)                                                                                              │
+│ ORDER BY (asset_id, metric_id, dt)                                                                                     │
+│ SETTINGS index_granularity = 8192 │                                                                                    │
 └────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ## Get data from a table
 
-After inspecting the structure of a given table, one can execute a few simple queries to obtain some data from the table in order to see how it looks like.
+After inspecting the structure of a given table, one can execute a few simple
+queries to obtain some data from the table in order to see how it looks like.
 
-Most times it makes more sense to select more recent data instead of data starting from the beginning as it will be more relevant.
-In order to improve the readability, one can apply the functions for transforming the `metric_id` and `asset_id` to their names.
-The `, *` syntax allows to select all fields, but also add something else to the result.
+Most times it makes more sense to select more recent data instead of data
+starting from the beginning as it will be more relevant. In order to improve the
+readability, one can apply the functions for transforming the `metric_id` and
+`asset_id` to their names. The `, *` syntax allows to select all fields, but
+also add something else to the result.
 
 ```sql
 SELECT
@@ -109,3 +116,60 @@ LIMIT 10
 │ bnb-uniswap               │ payment_count           │       179 │    41050 │ 2022-08-15 │                  15 │ 2022-08-15 00:13:20 │
 └───────────────────────────┴─────────────────────────┴───────────┴──────────┴────────────┴─────────────────────┴─────────────────────┘
 ```
+
+## How to interpret the table structure
+
+When looking at a tablle structure there are several important things that the
+reader needs to pay attention to.
+
+Let's take a look at the following table strucutre:
+```
+┌─statement──────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ CREATE TABLE default.intraday_metrics                                                                                  │
+│ (                                                                                                                      │
+│     `asset_id` UInt64 CODEC(DoubleDelta, LZ4),                                                                         │
+│     `metric_id` UInt64 CODEC(DoubleDelta, LZ4),                                                                        │
+│     `dt` DateTime CODEC(DoubleDelta, LZ4),                                                                             │
+│     `value` Float64,                                                                                                   │
+│     `computed_at` DateTime                                                                                             │
+│ )                                                                                                                      │
+│ ENGINE = ReplicatedReplacingMergeTree('/clickhouse/tables/global/intraday_metrics_v2', '{hostname}', computed_at)      │                               
+│ PARTITION BY toYYYYMM(dt)                                                                                              │
+│ ORDER BY (asset_id, metric_id, dt)                                                                                     │
+│ SETTINGS index_granularity = 8192 │                                                                                    │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Table name
+
+The full table name is `default.intraday_metrics` where `default` refers to the
+database and `intraday_metrics` is the table name. The queries are executed in
+the `default` database, so `default` can be omitted when referring to the table.
+
+### Columns
+
+The columns are represented with their name and their types. The types can have
+modifiers that control how to the data is stored on disk (like
+`CODEC(DoubleDelta, LZ4)`). This modifier can be ignored when introspecting a
+table.
+
+### Engine
+
+The [Table Engine](https://clickhouse.com/docs/en/engines/table-engines/) controls
+how data is stored, updated and access. In case the engine is *MergeTree, then
+the `FINAL` keyword needs to be utilized. See the [Writing SQL Queries] page for
+more detailed example and reasoning.
+
+### Partition
+
+The partitioning has no or negligible effect on the performance, so it's safe to
+ignore that.
+
+### ORDER BY
+
+This is the most important field to be understood and taken into consideration
+when writing a query. Clickhouse is column-oriented database, which means that
+on-disk the data for columns is stored continiously. This makes it harder and less
+efficient to use multiple indexes, so the columns order in `ORDER BY` is important
+to write performant queries - if filters for the columns in the start of the list
+are present, then the query will run faster.

@@ -5,40 +5,29 @@ date: 2022-08-17
 description: What is this tool and why it exists
 ---
 
-Start exploring trends context on https://app.santiment.net/labs/trends/explore/
+## Overview 
 
-With this tool you can display the amount of times your
-search term or phraseis mentioned in a specific medium.
+At Santiment we make heavy use of [Clickhouse](https://clickhouse.com/), a blazing fast
+column-oriented database, where we store on-chain, financial, social and development activity data.
+Apart from storing data, Clickhouse is capable of doing complex calculations and aggregations on
+millions of rows of data. This makes it a perfect tool to power your research.
 
-## Channels
+The SQL Editor is an on-line web tool giving access to a Clickhouse cluster, containing our datasets.
 
-To filter out the noise and only present relevant results, we focused on channels where at least 90% of all discussions center on crypto:
-- Telegram channels
-- Reddit
+Basic SQL knowledge is required to use the tool. In case you have not experience, you can follow the
+very short [Clickhouse Tutorial]()
 
-For additional context, the results are plotted against the price of BTC or ETH, allowing you to correlate market reactions to everyplace crypto chatter:
+## Access
 
-![](search.png)
+The SQL Editor can be found at https://app.santiment.net/queries.
+Anonymous users can browse the public dashboards. Logged in users can create public and private dashboards.
 
-## OR, AND, and parentheses
+## Exploration
 
-One graph will be displayed for the total mentions, as well as one for
-each data source. `AND`, `OR` (as well as parentheses) can be used
-to logically combine multiple search terms.
+The [Exploration](/sql-editor/exploration) page shows the reader how to explore the contents of the database,
+what are the available tables and what is their structure.
 
-For example:
+## Writing your first SQL Query
 
-- `btc moon` – for that exact phrase.
-- `btc AND moon` – for messages where both words appear, regardless if they’re next to each other or not.
-- `btc OR moon` – for messages where either word appears.
-- `(btc OR bitcoin) AND moon` – for messages where moon appears either with `btc` or `Bitcoin`
-
-
-Refer to [this blog post](https://santiment.net/blog/introducing-social-trends/) for examples of how to use this tool.
-Refer to [this](/metrics/social-volume/) and [this article](/metrics/sentiment-metrics/) for more information about how it works.
-
-## Social context
-
-![](wordcloud.png)
-
-You could find a `word cloud` in sidebar. It's show which words are most often used alongside your main keyword on crypto social media. Larger words are found more frequently in comments that also include your main keyword.
+The [Writing SQL queries](/sql-editor/writing-sql-queries) page guides the reader though writing their first
+SQL query.

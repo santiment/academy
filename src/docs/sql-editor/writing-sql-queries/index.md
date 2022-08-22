@@ -75,8 +75,10 @@ ORDER BY dt DESC
 LIMIT 2
 ```
 
-This `FINAL` keyword is not free - it slightly reduces the performance. In case performance is seeked, the same goal can be
-achieved with standard SQL by using `GROUP BY` the primary key and aggregate functions. This approach has smaller performance penalty at the cost of code readability and maintainability.
+This `FINAL` keyword is not free - it slightly reduces the performance. In case
+performance is seeked, the same goal can be achieved with standard SQL by using
+`GROUP BY` the primary key and aggregate functions. This approach has smaller
+performance penalty at the cost of code readability and maintainability.
 ```sql
 SELECT dt, argMax(value, computed_at)
 FROM daily_metrics_v2
@@ -156,11 +158,11 @@ LIMIT 2
 ```
 
 The result still contains the integer representation of the asset and metric. To
-convert the `asset_id` to the asset name and the `metric_id` to the metric name there are a few options:
-- Join the result with the `asset_metadata` and `metric_metadata` tables. This works, but is highly verbose.
-- Use
-  [dictionaries](https://clickhouse.com/docs/en/sql-reference/dictionaries/external-dictionaries/external-dicts)
-  that store these mappings and can be used without JOIN.
+convert the `asset_id` to the asset name and the `metric_id` to the metric name
+there are a few options:
+- Join the result with the `asset_metadata` and `metric_metadata` tables. This
+  works, but is highly verbose.
+- Use [dictionaries](https://clickhouse.com/docs/en/sql-reference/dictionaries/external-dictionaries/external-dicts) that store these mappings and can be used without JOIN.
 
 ```SQL
 SELECT
@@ -201,10 +203,10 @@ LIMIT 2
 ```
 
 To obtain the average value per month, aggregation and grouping must be used.
-When grouping, all columns not part of the `GROUP BY` must have an
-aggregation applied. In this case, as there is data for a single
-asset and a single metric, their corresponding id columns can be aggregated with
-`any` as all these values are the same.
+When grouping, all columns not part of the `GROUP BY` must have an aggregation
+applied. In this case, as there is data for a single asset and a single metric,
+their corresponding id columns can be aggregated with `any` as all these values
+are the same.
 
 ```SQL
 SELECT
@@ -251,9 +253,9 @@ we can use them to compute the MVRV (and that's how we do it for the official
 MVRV metric!). Depending on the load on the database, the query duration can
 vary. At the moment of writing this, running the query takes 0.13 seconds.
 
-In the query `anyIf` is used as there is filtering by `asset_id` and `metric_id`,
-so there is only one value per metric for each `dt`. The example after that discusses
-how to handle more complex `GROUP BY` clauses.
+In the query `anyIf` is used as there is filtering by `asset_id` and
+`metric_id`, so there is only one value per metric for each `dt`. The example
+after that discusses how to handle more complex `GROUP BY` clauses.
 
 ```sql
 SELECT
@@ -352,12 +354,14 @@ argMaxIf(value, dt, metric_id=get_metric_id('price_usd')) AS price_usd,
 
 This function call has three parameters:
 - `value` - This is the column that is returned
-- `dt` - This is the column that `max` is performed upon. Of all columns matching the filter, the one with the max `dt` is returned.
+- `dt` - This is the column that `max` is performed upon. Of all columns
+  matching the filter, the one with the max `dt` is returned.
 - `metric_id=get_metric_id('price_usd')` - This a boolean expression. Look only
   at the rows for which the expression evaluates to true.
 
-If the `FINAL` keyword is not used, taking the row with biggest `computed_at` among those
-with the same `dt` can be achieved by using a tuple as a second argument:
+If the `FINAL` keyword is not used, taking the row with biggest `computed_at`
+among those with the same `dt` can be achieved by using a tuple as a second
+argument:
 
 ```sql
 argMaxIf(value, (dt, computed_at), metric_id=get_metric_id('price_usd')) AS price_usd,
@@ -371,9 +375,10 @@ Get the UNI balance changes for an address
 
 Find the 5 biggest ETH transactions to the graveyard address 0x0000000000000000000000000000000000000000
 
-> There are some duplicated tables with different `ORDER BY`. In the case of transfer tables there are
-> tables with the `_to` suffix. This indicates that the `to` address is to the front of the `ORDER BY`
-> key. This table has bigger performance when only filtering of `to` address is applied.
+> There are some duplicated tables with different `ORDER BY`. In the case of
+> transfer tables there are tables with the `_to` suffix. This indicates that
+> the `to` address is to the front of the `ORDER BY` key. This table has bigger
+> performance when only filtering of `to` address is applied.
 
 ```sql
 SELECT
@@ -460,7 +465,8 @@ are produced only when the balance changes.
 ### Example for Development Activity
 
 The `github_v2` table contains [Github Events](https://docs.github.com/en/developers/webhooks-and-events/events/github-event-types) data.
-Using these events one can compute better development activity metrics compared to using just commits counts, as described in [this article](https://medium.com/santiment/tracking-github-activity-of-crypto-projects-introducing-a-better-approach-9fb1af3f1c32)
+Using these events one can compute better development activity metrics compared to using just commits counts,
+as described in [this article](https://medium.com/santiment/tracking-github-activity-of-crypto-projects-introducing-a-better-approach-9fb1af3f1c32)
 
 To compute the development activity of an organization:
 
