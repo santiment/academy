@@ -36,6 +36,6 @@ export const usePageHash = () => {
     window.addEventListener('hashScrollChanged', hashChangeHandler, false)
     return () =>
       window.removeEventListener('hashScrollChanged', hashChangeHandler, false)
-  }, [])
+  }, [hash])
   return pageHash
 }

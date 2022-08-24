@@ -5,6 +5,7 @@ import ProductsAndPlans from '../images/docs/Products'
 import SANtokens from '../images/docs/San'
 import SanAPI from '../images/docs/Sanapi'
 import Sansheets from '../images/docs/Sansheets'
+import Sanqueries from '../images/docs/Sanqueries'
 import Sanbase from '../images/docs/Sanbase'
 import Glossary from '../images/docs/Glossary'
 import Signals from '../images/docs/Signals'
@@ -76,7 +77,7 @@ export const GUIDES = [
   },
   {
     title: 'SQL Editor',
-    icon: Sanbase,
+    icon: Sanqueries,
     description: 'Our database explorer & research tool',
     articles: [
       'Introduction',
