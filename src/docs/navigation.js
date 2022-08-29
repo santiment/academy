@@ -1,3 +1,4 @@
+import React from 'react'
 import Metrics from '../images/docs/Metrics'
 import Changelog from '../images/docs/Changelog'
 import Education from '../images/docs/Education'
@@ -15,7 +16,7 @@ import Youtube from '../images/docs/Youtube'
 export const GUIDES = [
   {
     title: 'Education and Use cases',
-    description: 'Examples and use cases for Santiment metrics',
+    description: <>Examples and use cases<br />for Santiment metrics</>,
     icon: Education,
     articles: [
       {
@@ -59,7 +60,7 @@ export const GUIDES = [
   {
     title: 'Sanbase',
     icon: Sanbase,
-    description: 'Our crypto analytics & behavior platform',
+    description: <>Our crypto analytics<br />& behavior platform</>,
     articles: [
       { slug: 'Assets page', title: 'Assets Overview page' },
       'Insights',
@@ -78,7 +79,7 @@ export const GUIDES = [
   {
     title: 'SQL Editor',
     icon: Sanqueries,
-    description: 'Our database explorer & research tool',
+    description: <>Our database explorer<br />& research tool</>,
     articles: [
       'Introduction',
       'Exploration',
@@ -88,19 +89,19 @@ export const GUIDES = [
   {
     title: 'SanAPI',
     icon: SanAPI,
-    description: 'Santiment API, Available Metrics & Queries',
+    description: <>Our API, available metrics<br />& documentation</>,
     articles: ['Metrics', 'Queries', 'Common Queries'],
   },
   {
     title: 'Sansheets',
     icon: Sansheets,
-    description: 'Our Spreadsheets plugin for Santiment data',
+    description: <>Our Spreadsheets plugin<br />for Santiment data</>,
     articles: ['Setting Up', 'Adding an API key', 'Functions', 'PRO Templates'],
   },
   {
     title: 'Products and plans',
     icon: ProductsAndPlans,
-    description: 'On the Santiment suite and available plans',
+    description: <>On the Santiment suite<br />and available plans</>,
     articles: [
       'Access Plans',
       'Santiment Products',
@@ -112,7 +113,7 @@ export const GUIDES = [
   {
     title: 'SAN tokens',
     icon: SANtokens,
-    description: 'Use cases, roadmap and where to buy',
+    description: <>Use cases, roadmap<br />and where to buy</>,
     articles: [
       'How to buy SAN',
       'How to stake SAN',
@@ -123,12 +124,12 @@ export const GUIDES = [
   {
     title: 'Glossary',
     icon: Glossary,
-    description: 'Introduction to all relevant terms and concepts',
+    description: <>Introduction to all relevant<br />terms and concepts</>,
     articles: [],
   },
   {
     title: 'Youtube videos',
-    description: 'Explore our tutorials and webinars',
+    description: <>Santiment webinars, video<br />tutorials and more</>,
     icon: Youtube,
     articles: ['Webinars', 'Walkthroughs', 'Tutorials'],
   },
@@ -137,7 +138,7 @@ export const GUIDES = [
 export const REFERENCES = [
   {
     title: 'Metrics',
-    description: 'Documentation for on-chain, social & development indicators',
+    description: `Introduction to Santiment's on-chain, social and development indicators`,
     icon: Metrics,
     articles: [
       'Age Consumed',
@@ -200,7 +201,7 @@ export const REFERENCES = [
   },
   {
     title: 'Changelog',
-    description: 'Development updates, new features & platform improvements',
+    description: 'Development updates, new features and other platform-wide improvements',
     icon: Changelog,
     articles: [],
   },
