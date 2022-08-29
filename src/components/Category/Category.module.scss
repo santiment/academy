@@ -149,7 +149,6 @@
   & .length {
     text-align: left;
     margin: 0;
-    max-width: 74%;
 
     @include responsive("phone-xs") {
      max-width: 69%;
