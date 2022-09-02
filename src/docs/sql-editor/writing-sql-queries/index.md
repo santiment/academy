@@ -1,8 +1,8 @@
 ---
-title: Introducing the SQL Editor
+title: Writing SQL Queries
 author: Santiment Team
 date: 2022-08-17
-description: What is this tool and why it exists
+description: First steps in using SQL combined with Santiment's datasets
 ---
 
 # Overview
@@ -131,8 +131,8 @@ The following example shows how to fetch rows for Bitcoin's
 SELECT asset_id, metric_id, dt, value
 FROM daily_metrics_v2 FINAL
 WHERE
-    asset_id = (SELECT asset_id FROM asset_metadata FINAL PREWHERE name = 'bitcoin' LIMIT 1) AND
-    metric_id = (SELECT metric_id FROM metric_metadata FINAL PREWHERE name = 'daily_active_addresses' LIMIT 1) AND
+    asset_id = (SELECT asset_id FROM asset_metadata FINAL WHERE name = 'bitcoin' LIMIT 1) AND
+    metric_id = (SELECT metric_id FROM metric_metadata FINAL WHERE name = 'daily_active_addresses' LIMIT 1) AND
     dt >= toDateTime('2020-01-01 00:00:00')
 LIMIT 2
 ```
@@ -368,8 +368,6 @@ argMaxIf(value, (dt, computed_at), metric_id=get_metric_id('price_usd')) AS pric
 ```
 
 ## Using raw data
-
-Get the UNI balance changes for an address
 
 ### Example for top transfers
 

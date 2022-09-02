@@ -97,7 +97,6 @@ SELECT
     get_metric_name(metric_id) AS metric,
     *
 FROM daily_metrics_v2
-FINAL
 WHERE dt >= (now() - toIntervalDay(2))
 LIMIT 10
 ```
