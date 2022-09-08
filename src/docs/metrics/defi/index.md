@@ -15,7 +15,7 @@ Metrics related to DeFi protocols
 [Flow and balance metrics](/metrics/labeled-balance)
 
 Total Value Locked metrics:
-* `defi_total_value_locked_[usd/eth]` - Shows total value locked in DeFi projects, available in USD and ETH.
+* `defi_total_value_locked_[usd/eth]` - Shows total value locked in DeFi projects, available in USD and ETH. **Temporary these metrics are not updated from 2022-03-15.**
 
 ---
 
