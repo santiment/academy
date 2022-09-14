@@ -1,5 +1,5 @@
 ---
-title: Glossary
+title: API Glossary
 author: Ivan
 ---
 
