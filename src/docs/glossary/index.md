@@ -9,10 +9,9 @@ Find the meaning of terms used throughout the documentation
 - [metric](#metric)
 - [asset](#asset)
 - [slug](#slug)
-- [metric](#metric)
 - [interval](#interval)
-- [ISO8601](#ISO8601)
-- [API key](#Api-key)
+- [ISO8601](#iso8601)
+- [API key](#api-key)
 
 ## query
 
@@ -132,9 +131,10 @@ API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%2
 
 ## interval
 
-A representation of time intervals like 5 minutes, 12 hours, 10 days, 4 weeks,
-etc.. An interval is represented as a string starting with a number and followed
-by one of the suffixes:
+A representation of time intervals like 5 minutes, 12 hours, 10 days, 4 weeks.
+The interval supports two distinctive representation types: fixed time interval
+and functions. The fixed interval is a string starting with a number and
+followed by one of the suffixes:
 
 - `s` - second
 - `m` - minute
@@ -152,10 +152,26 @@ These are the intervals corresponding to the given examples:
 > **Note** that there is no suffix for specifying months due to months not
 > containing a fixed amount of days.
 
+The second representation of intervals is by function names. The functions can
+achieve two main goals, that fixed intervals cannot:
+- The function can create not-fixed interval ranges like months - months have 
+  between 28 and 31 days.
+- The function can change the alignment. If the requirement is not just 7 days,
+  but also the time intervals to start on Monday or Sunday.
+
+The following functions are supported:
+- toStartOfHour
+- toStartOfDay
+- toMonday
+- toStartOfWeek (aligns dates on Sundays)
+- toStartOfMonth
+- toStartOfQuarter
+- toStartOfYear
+
 An interval is used when fetching timeseries data. If the raw data is available
 at 5 minute intervals but you want to fetch it daily, `interval: "1d"` should be
 provided as parameter. In this case the default aggregation will be applied on
-all 288 5-minute data points in the given day to compute the value for the whole
+all 288 5-minute data points in a day to compute the value for the whole
 day. This aggregation varies based on the metric - in some cases taking the
 average or the last value is required (price), in other cases taking the sum of
 all values (transaction volume), etc.
