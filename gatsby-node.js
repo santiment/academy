@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require(`path`)
+const { execSync } = require("child_process")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { onPostBuild } = require('gatsby-plugin-meta-redirect/gatsby-node')
 
@@ -11,6 +12,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       name: `slug`,
       value: slug,
+    })
+    const lastUpdatedAt = execSync(`git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`).toString()
+    createNodeField({
+      node,
+      name: "lastUpdatedAt",
+      value: lastUpdatedAt,
     })
   }
 }

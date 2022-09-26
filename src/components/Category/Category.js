@@ -33,7 +33,7 @@ const Category = ({ wide, title, description, icon: Icon, maxWidth }) => {
       <div className={styles.icon}>
         <Icon withColor={isHover} />
       </div>
-      <div style={{maxWidth}}>
+      <div style={{ maxWidth }}>
         <h4 className={styles.title}>{title}</h4>
         <p className={styles.length}>{description}</p>
       </div>

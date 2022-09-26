@@ -149,6 +149,6 @@ export const PEOPLE = {
   ilya: {
     description: 'Data Scientist',
     imageUrl: Ilya,
-    link: ''
-  }
+    link: '',
+  },
 }

@@ -4,7 +4,7 @@ import { scrollToTargetAdjusted, usePageHash } from '../../utils/utils'
 import cx from 'classnames'
 import styles from './ArticleHeadings.module.scss'
 
-const ArrowRight = () => (
+export const ArrowRight = () => (
   <svg
     width="14"
     height="9"
@@ -31,8 +31,14 @@ const TOPICS = {
   sanbase: { href: 'https://app.santiment.net/', title: 'Sanbase' },
   sanapi: { href: 'https://api.santiment.net/', title: 'Sanapi' },
   sansheets: { href: 'https://sheets.santiment.net/', title: 'Sansheets' },
-  'sql-editor': { href: 'https://app.santiment.net/queries', title: 'SQL Editor' },
-  'youtube-videos': { href: 'https://www.youtube.com/c/santimentnetwork', title: 'Youtube channel' },
+  'sql-editor': {
+    href: 'https://app.santiment.net/queries',
+    title: 'SQL Editor',
+  },
+  'youtube-videos': {
+    href: 'https://www.youtube.com/c/santimentnetwork',
+    title: 'Youtube channel',
+  },
 }
 
 const ArticleHeadings = ({ list = [], crumbs = [] }) => {
