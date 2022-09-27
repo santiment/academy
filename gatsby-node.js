@@ -13,7 +13,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     })
-    const lastUpdatedAt = execSync(`git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`).toString()
+    const lastUpdatedAt = execSync(`git log -1 --pretty=format:%aI`).toString()
     createNodeField({
       node,
       name: "lastUpdatedAt",
