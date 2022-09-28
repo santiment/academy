@@ -13,6 +13,11 @@ export const isLocalStorage = () => {
 
 export const isSSR = typeof window === 'undefined'
 
+export function updateHash(hash) {
+  window.history.pushState({}, '', hash)
+  window.dispatchEvent(new CustomEvent('hashScrollChanged', { detail: hash }))
+}
+
 export const scrollToTargetAdjusted = (e, id, headerOffset = 95) => {
   e.preventDefault()
   const hash = `#${id}`
@@ -23,8 +28,7 @@ export const scrollToTargetAdjusted = (e, id, headerOffset = 95) => {
     top: offsetPosition,
     behavior: 'smooth',
   })
-  window.history.pushState({}, '', hash)
-  window.dispatchEvent(new CustomEvent('hashScrollChanged', { detail: hash }))
+  updateHash(hash)
 }
 
 export const usePageHash = () => {
