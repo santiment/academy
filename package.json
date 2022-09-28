@@ -52,7 +52,7 @@
     "phoenix": "^1.6.6",
     "svelte-loader": "^2.13.6",
     "svelte": "^3.46.3",
-    "san-webkit": "https://github.com/santiment/san-webkit#1c702b5"
+    "san-webkit": "https://github.com/santiment/san-webkit#fa2e3b1"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
