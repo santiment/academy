@@ -30,7 +30,7 @@ const Template = ({ data, pageContext, isDesktop }) => {
     <Layout isShowSidebar={true}>
       <SEO {...meta} />
       <IntercomWidget isDesktop={isDesktop} />
-      <div id="article-body" className={cx(styles.wrapper, 'container')}>
+      <div className={cx(styles.wrapper, 'container')}>
         <Breadcrumb crumbs={crumbs} crumbLabel={article.frontmatter.title} />
         <ArticleHeadings
           crumbs={crumbs}
