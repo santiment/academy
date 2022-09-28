@@ -30,7 +30,7 @@
     "install": "^0.13.0",
     "isomorphic-fetch": "^2.2.1",
     "katex": "^0.11.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lodash.template": "^4.5.0",
     "node-sass": "^6.0.1",
     "npm": "^6.12.0",
