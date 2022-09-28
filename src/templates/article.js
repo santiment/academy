@@ -32,7 +32,10 @@ const Template = ({ data, pageContext, isDesktop }) => {
       <IntercomWidget isDesktop={isDesktop} />
       <div className={cx(styles.wrapper, 'container')}>
         <Breadcrumb crumbs={crumbs} crumbLabel={article.frontmatter.title} />
-        <ArticleHeadings list={article.headings} crumbs={crumbs} />
+        <ArticleHeadings
+          crumbs={crumbs}
+          tableOfContents={article.tableOfContents}
+        />
         <Markdown markdown={article.rawMarkdownBody} />
         <ArticleFooter lastUpdatedAt={lastUpdatedAt} />
       </div>
@@ -55,10 +58,7 @@ export const query = graphql`
       fields {
         lastUpdatedAt
       }
-      headings(depth: h2) {
-        value
-        depth
-      }
+      tableOfContents(maxDepth: 3)
     }
   }
 `

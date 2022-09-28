@@ -13,7 +13,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       name: `slug`,
       value: slug,
     })
-    const lastUpdatedAt = execSync(`git log -1 --pretty=format:%aI`).toString()
+    // node.fileAbsolutePath is used for each file separately
+    // if we remove it all updated at values would be the same as this file modified date
+    const lastUpdatedAt = execSync(`git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`).toString()
     createNodeField({
       node,
       name: "lastUpdatedAt",
