@@ -26,7 +26,11 @@
     color: var(--rhino);
     @include text("h4", "l");
     padding-bottom: 8px;
-    margin: 20px 0 10px;
+    margin: 56px 0 24px;
+
+    &:first-of-type {
+      margin: 0 0 32px;
+    }
   }
 
   h3 {
