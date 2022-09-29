@@ -48,8 +48,9 @@ export function useSidenavItems(tableOfContents) {
     const result = []
     const ids = []
 
-    function parseItems(items, depth = 1) {
-      for (let item of items) {
+    function parseItems(elements, depth = 1) {
+      if (!elements || !elements[0] || !elements[0].children) return
+      for (let item of elements[0].children) {
         if (item.firstElementChild.tagName === 'A') {
           const slug = sluggify(item.innerText)
           ids.push(slug)
@@ -64,14 +65,14 @@ export function useSidenavItems(tableOfContents) {
             value: item.firstElementChild.textContent,
             depth,
           })
-          parseItems(item.getElementsByTagName('ul')[0].children, 2)
+          parseItems(item.getElementsByTagName('ul'), 2)
         }
       }
     }
 
     const parser = new DOMParser()
     const parsedHtml = parser.parseFromString(tableOfContents, 'text/html')
-    parseItems(parsedHtml.getElementsByTagName('ul')[0].children)
+    parseItems(parsedHtml.getElementsByTagName('ul'))
 
     setList(result)
     setElementIDs(ids)
