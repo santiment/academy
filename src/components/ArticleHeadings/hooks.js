@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { sluggify } from '../Markdown/utils'
-import { updateHash } from '../../utils/utils'
+import { updateHash, isSSR } from '../../utils/utils'
 
 function useScrollListener(elementIDs = []) {
   let lastScrollTop = 0
@@ -35,8 +35,8 @@ function useScrollListener(elementIDs = []) {
     }
   }
 
-  window.addEventListener('scroll', scrollListender)
-  return () => window.removeEventListener('scroll', scrollListender)
+  if (!isSSR) window.addEventListener('scroll', scrollListender)
+  return () => !isSSR && window.removeEventListener('scroll', scrollListender)
 }
 
 export function useSidenavItems(tableOfContents) {
