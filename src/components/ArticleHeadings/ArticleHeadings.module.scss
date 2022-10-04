@@ -42,7 +42,8 @@
 
 .current {
   a {
-    border-left: 2px solid var(--waterloo) !important;
+    border-left: 2px solid var(--green) !important;
+    color: var(--green);
     font-weight: 500;
   }
 }
@@ -80,11 +81,7 @@
 }
 
 .second {
-	color: var(--rhino);
-}
-
-.third {
-	color: var(--waterloo);
+  padding-left: 32px;
 }
 
 .appLink {

@@ -1,7 +1,7 @@
 @import '~@santiment-network/ui/mixins';
 
 .wrapper {
-	margin: 7px 0 48px;
+	margin: 20px 0 48px;
 
 	@include responsive('phone', 'phone-xs') {
 		margin-bottom: 20px;

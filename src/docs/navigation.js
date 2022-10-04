@@ -16,7 +16,13 @@ import Youtube from '../images/docs/Youtube'
 export const GUIDES = [
   {
     title: 'Education and Use cases',
-    description: <>Examples and use cases<br />for Santiment metrics</>,
+    description: (
+      <>
+        Examples and use cases
+        <br />
+        for Santiment metrics
+      </>
+    ),
     icon: Education,
     articles: [
       {
@@ -60,7 +66,12 @@ export const GUIDES = [
   {
     title: 'Sanbase',
     icon: Sanbase,
-    description: <>Our crypto analytics<br />& behavior platform</>,
+    description: (
+      <>
+        Our crypto analytics
+        <br />& behavior platform
+      </>
+    ),
     articles: [
       { slug: 'Assets page', title: 'Assets Overview page' },
       'Insights',
@@ -79,29 +90,47 @@ export const GUIDES = [
   {
     title: 'SQL Editor',
     icon: Sanqueries,
-    description: <>Our database explorer<br />& research tool</>,
-    articles: [
-      'Introduction',
-      'Exploration',
-      'Writing SQL Queries'
-    ],
+    description: (
+      <>
+        Our database explorer
+        <br />& research tool
+      </>
+    ),
+    articles: ['Introduction', 'Exploration', 'Writing SQL Queries'],
   },
   {
     title: 'SanAPI',
     icon: SanAPI,
-    description: <>Our API, available metrics<br />& documentation</>,
+    description: (
+      <>
+        Our API, available metrics
+        <br />& documentation
+      </>
+    ),
     articles: ['Metrics', 'Queries', 'Common Queries'],
   },
   {
     title: 'Sansheets',
     icon: Sansheets,
-    description: <>Our Spreadsheets plugin<br />for Santiment data</>,
+    description: (
+      <>
+        Our Spreadsheets plugin
+        <br />
+        for Santiment data
+      </>
+    ),
     articles: ['Setting Up', 'Adding an API key', 'Functions', 'PRO Templates'],
   },
   {
     title: 'Products and plans',
     icon: ProductsAndPlans,
-    description: <>On the Santiment suite<br />and available plans</>,
+    description: (
+      <>
+        On the Santiment suite
+        <br />
+        and available plans
+      </>
+    ),
     articles: [
       'Access Plans',
       'Santiment Products',
@@ -113,7 +142,13 @@ export const GUIDES = [
   {
     title: 'SAN tokens',
     icon: SANtokens,
-    description: <>Use cases, roadmap<br />and where to buy</>,
+    description: (
+      <>
+        Use cases, roadmap
+        <br />
+        and where to buy
+      </>
+    ),
     articles: [
       'How to buy SAN tokens',
       'Connect a wallet to the Sanbase account',
@@ -123,12 +158,24 @@ export const GUIDES = [
   {
     title: 'Glossary',
     icon: Glossary,
-    description: <>Introduction to all relevant<br />terms and concepts</>,
+    description: (
+      <>
+        Introduction to all relevant
+        <br />
+        terms and concepts
+      </>
+    ),
     articles: [],
   },
   {
     title: 'Youtube videos',
-    description: <>Santiment webinars, video<br />tutorials and more</>,
+    description: (
+      <>
+        Santiment webinars, video
+        <br />
+        tutorials and more
+      </>
+    ),
     icon: Youtube,
     articles: ['Webinars', 'Walkthroughs', 'Tutorials'],
   },
@@ -200,7 +247,8 @@ export const REFERENCES = [
   },
   {
     title: 'Changelog',
-    description: 'Development updates, new features and other platform-wide improvements',
+    description:
+      'Development updates, new features and other platform-wide improvements',
     icon: Changelog,
     articles: [],
   },

@@ -1,10 +1,10 @@
 import React from 'react'
-import { sluggify } from '../Markdown/utils'
+import { useSidenavItems } from './hooks'
 import { scrollToTargetAdjusted, usePageHash } from '../../utils/utils'
 import cx from 'classnames'
 import styles from './ArticleHeadings.module.scss'
 
-const ArrowRight = () => (
+export const ArrowRight = () => (
   <svg
     width="14"
     height="9"
@@ -31,12 +31,19 @@ const TOPICS = {
   sanbase: { href: 'https://app.santiment.net/', title: 'Sanbase' },
   sanapi: { href: 'https://api.santiment.net/', title: 'Sanapi' },
   sansheets: { href: 'https://sheets.santiment.net/', title: 'Sansheets' },
-  'sql-editor': { href: 'https://app.santiment.net/queries', title: 'SQL Editor' },
-  'youtube-videos': { href: 'https://www.youtube.com/c/santimentnetwork', title: 'Youtube channel' },
+  'sql-editor': {
+    href: 'https://app.santiment.net/queries',
+    title: 'SQL Editor',
+  },
+  'youtube-videos': {
+    href: 'https://www.youtube.com/c/santimentnetwork',
+    title: 'Youtube channel',
+  },
 }
 
-const ArticleHeadings = ({ list = [], crumbs = [] }) => {
+const ArticleHeadings = ({ tableOfContents, crumbs = [] }) => {
   const pageHash = usePageHash()
+  const list = useSidenavItems(tableOfContents)
   const topic = crumbs.length > 1 && crumbs[1].crumbLabel
   const appLink = topic && TOPICS[topic]
 
@@ -49,32 +56,25 @@ const ArticleHeadings = ({ list = [], crumbs = [] }) => {
           </a>
         </li>
       )}
-      {list.map(({ value, depth }, idx) => {
-        const slug = sluggify(value)
-        return (
-          <li
-            className={cx(
-              styles.item,
-              pageHash === `#${slug}` && styles.current,
-              idx === 0 && (appLink ? styles.mt50 : styles.mt170),
-              idx > 0 && styles.hasBefore
-            )}
-            key={idx}
+      {list.map(({ slug, value, depth }, idx) => (
+        <li
+          className={cx(
+            styles.item,
+            pageHash === `#${slug}` && styles.current,
+            idx === 0 && (appLink ? styles.mt50 : styles.mt170),
+            idx > 0 && styles.hasBefore
+          )}
+          key={idx}
+        >
+          <a
+            href={`#${slug}`}
+            onClick={e => scrollToTargetAdjusted(e, slug)}
+            className={cx(styles.heading, depth === 2 && styles.second)}
           >
-            <a
-              href={`#${slug}`}
-              onClick={e => scrollToTargetAdjusted(e, slug)}
-              className={cx(
-                styles.heading,
-                depth === 2 && styles.second,
-                depth === 3 && styles.third
-              )}
-            >
-              {value}
-            </a>
-          </li>
-        )
-      })}
+            {value}
+          </a>
+        </li>
+      ))}
     </ul>
   )
 }

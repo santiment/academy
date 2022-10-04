@@ -1,16 +1,19 @@
 import React from 'react'
+import withSizes from 'react-sizes'
 import { graphql } from 'gatsby'
 import cx from 'classnames'
+import { dateDifferenceInWords } from 'webkit/utils/dates'
+import { mapSizesToProps } from '../utils/sizes'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Markdown from '../components/Markdown/Markdown'
-import ArticleInfo from '../components/ArticleInfo/ArticleInfo'
 import ArticleHeadings from '../components/ArticleHeadings/ArticleHeadings'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
-import Reactions from '../components/Reactions/Reactions'
+import ArticleFooter from '../components/ArticleFooter'
+import IntercomWidget from '../components/IntercomWidget'
 import styles from './article.module.scss'
 
-export default function Template({ data, pageContext }) {
+const Template = ({ data, pageContext, isDesktop }) => {
   const { markdownRemark: article } = data
   const {
     breadcrumb: { crumbs },
@@ -19,19 +22,28 @@ export default function Template({ data, pageContext }) {
     title: `${article.frontmatter.title} | Santiment Academy`,
     description: `${article.frontmatter.description || ''}`,
   }
+  const lastUpdatedAt = dateDifferenceInWords(
+    new Date(article.fields.lastUpdatedAt)
+  )
+
   return (
     <Layout isShowSidebar={true}>
       <SEO {...meta} />
+      <IntercomWidget isDesktop={isDesktop} />
       <div className={cx(styles.wrapper, 'container')}>
         <Breadcrumb crumbs={crumbs} crumbLabel={article.frontmatter.title} />
-        <ArticleInfo {...article.frontmatter} />
-        <ArticleHeadings list={article.headings} crumbs={crumbs} />
+        <ArticleHeadings
+          crumbs={crumbs}
+          tableOfContents={article.tableOfContents}
+        />
         <Markdown markdown={article.rawMarkdownBody} />
-        <Reactions article={article.frontmatter.title} />
+        <ArticleFooter lastUpdatedAt={lastUpdatedAt} />
       </div>
     </Layout>
   )
 }
+
+export default withSizes(mapSizesToProps)(Template)
 
 export const query = graphql`
   query($slug: String!) {
@@ -43,10 +55,10 @@ export const query = graphql`
         author
         description
       }
-      headings(depth: h2) {
-        value
-        depth
+      fields {
+        lastUpdatedAt
       }
+      tableOfContents(maxDepth: 3)
     }
   }
 `
