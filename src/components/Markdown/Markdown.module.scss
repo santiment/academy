@@ -18,19 +18,15 @@
 
   h1 {
     color: var(--rhino);
-    @include text("h3", "l");
-    margin: 26px 0 22px;
+    @include text("h3");
+    margin: 26px 0 32px;
+    font-weight: 500;
   }
 
   h2 {
     color: var(--rhino);
-    @include text("h4", "l");
-    padding-bottom: 8px;
+    @include text("h4");
     margin: 56px 0 24px;
-
-    &:first-of-type {
-      margin: 0 0 32px;
-    }
   }
 
   h3 {
@@ -93,6 +89,11 @@
     width: 100%;
     border: 1px solid var(--porcelain);
     border-radius: 4px;
+
+    &[src$='#noborder'] { 
+      border: none;
+      border-radius: initial;
+    }
   }
 
   p {
@@ -248,6 +249,29 @@
   		font-size: 12px;
   		padding: 6px 5px;
     }
+  }
+
+  mark {
+    padding: 16px 24px 16px 48px;
+    border: 1px solid var(--porcelain, #E7EAF3);
+    border-radius: 8px;
+    display: block;
+    font-size: 18px;
+    line-height: 26px;    
+    color: var(--rhino, #2F354D);
+    background-color: transparent;
+    position: relative;
+    margin-top: 24px;
+
+    strong {
+      margin-right: 4px;
+    }
+  }
+
+  mark:before {
+    content: '✅';
+    position: absolute;
+    left: 12px;
   }
 }
 

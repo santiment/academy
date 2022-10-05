@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSidenavItems } from './hooks'
-import { scrollToTargetAdjusted, usePageHash } from '../../utils/utils'
+import { usePageHash } from '../../utils/utils'
 import cx from 'classnames'
 import styles from './ArticleHeadings.module.scss'
 
@@ -42,8 +42,8 @@ const TOPICS = {
 }
 
 const ArticleHeadings = ({ tableOfContents, crumbs = [] }) => {
-  const pageHash = usePageHash()
-  const list = useSidenavItems(tableOfContents)
+  const { list, elementIDs } = useSidenavItems(tableOfContents)
+  const { pageHash, scrollToTargetAdjusted } = usePageHash(elementIDs)
   const topic = crumbs.length > 1 && crumbs[1].crumbLabel
   const appLink = topic && TOPICS[topic]
 

@@ -1,25 +1,25 @@
 @import '~@santiment-network/ui/mixins';
 
 .wrapper {
-	max-width: 620px;
+  max-width: 620px;
 
-	@include responsive('phone', 'phone-xs', 'tablet') {
+  @include responsive('phone', 'phone-xs', 'tablet') {
     padding: 10px 15px 15px;
     margin-left: 0;
   }
 
-	@include responsive('phone', 'phone-xs') {
+  @include responsive('phone', 'phone-xs') {
     max-width: 100%;
     margin: 0 auto;
   }
 
-	@include responsive('laptop', 'desktop') {
+  @include responsive('laptop', 'desktop') {
     margin-left: 0 !important;
-		max-width: 620px !important;
-		position: relative;
+    max-width: 620px !important;
+    position: relative;
   }
-}
 
-strong span {
-  font-weight: bold;
+  strong span {
+    font-weight: bold;
+  }
 }

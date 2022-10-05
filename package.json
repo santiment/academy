@@ -27,6 +27,7 @@
     "gatsby-transformer-remark": "^2.6.30",
     "gatsby-transformer-sharp": "^4.2.0",
     "graphql-tag": "^2.10.1",
+    "html-react-parser": "^3.0.4",
     "install": "^0.13.0",
     "isomorphic-fetch": "^2.2.1",
     "katex": "^0.11.1",
@@ -35,6 +36,7 @@
     "node-sass": "^6.0.1",
     "npm": "^6.12.0",
     "patch-package": "^6.4.7",
+    "phoenix": "^1.6.6",
     "postinstall-postinstall": "^2.1.0",
     "prop-types": "^15.7.2",
     "query-string": "^6.8.3",
@@ -49,10 +51,9 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-transition-group": "^4.3.0",
     "remark-math": "^2.0.0",
-    "phoenix": "^1.6.6",
-    "svelte-loader": "^2.13.6",
+    "san-webkit": "https://github.com/santiment/san-webkit#fa2e3b1",
     "svelte": "^3.46.3",
-    "san-webkit": "https://github.com/santiment/san-webkit#fa2e3b1"
+    "svelte-loader": "^2.13.6"
   },
   "devDependencies": {
     "prettier": "^1.18.2"

@@ -1,48 +1,27 @@
 import { useState, useEffect } from 'react'
 import { sluggify } from '../Markdown/utils'
-import { updateHash, isSSR } from '../../utils/utils'
 
-function useScrollListener(elementIDs = []) {
-  let lastScrollTop = 0
-  let lastId
+function getParsedHtml(tableOfContents) {
+  const parser = new DOMParser()
+  let parsedHtml = parser.parseFromString(tableOfContents, 'text/html')
 
-  function scrollListender() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop
-    let checkUpdate = scrollTop < lastScrollTop
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
+  // Trim if it has only 1 h1 element and 2 ul elements
+  const pCount = parsedHtml.getElementsByTagName('p').length
+  const ulCount = parsedHtml.getElementsByTagName('ul').length
 
-    for (let id of elementIDs) {
-      const element = document.getElementById(id)
-      if (!element) continue
-      const { top, bottom } = element.getBoundingClientRect()
-      if (top > 100 && bottom < 700) {
-        updateHash(`#${id}`)
-        lastId = id
-        checkUpdate = false
-        break
-      }
-    }
-
-    if (checkUpdate) {
-      const { hash } = new URL(document.URL)
-      const id = hash.substring(1)
-      if (id === lastId) {
-        const index = elementIDs.indexOf(id)
-        if (index > 0) {
-          updateHash(`#${elementIDs[index - 1]}`)
-        }
-      }
-    }
+  if (pCount === 1 && ulCount === 2) {
+    parsedHtml = parser.parseFromString(
+      parsedHtml.getElementsByTagName('ul')[1].outerHTML,
+      'text/html'
+    )
   }
 
-  if (!isSSR) window.addEventListener('scroll', scrollListender)
-  return () => !isSSR && window.removeEventListener('scroll', scrollListender)
+  return parsedHtml
 }
 
 export function useSidenavItems(tableOfContents) {
   const [list, setList] = useState([])
   const [elementIDs, setElementIDs] = useState([])
-  useScrollListener(elementIDs)
 
   useEffect(() => {
     const result = []
@@ -65,18 +44,17 @@ export function useSidenavItems(tableOfContents) {
             value: item.firstElementChild.textContent,
             depth,
           })
-          parseItems(item.getElementsByTagName('ul'), 2)
+          parseItems(item.getElementsByTagName('ul'), depth + 1)
         }
       }
     }
 
-    const parser = new DOMParser()
-    const parsedHtml = parser.parseFromString(tableOfContents, 'text/html')
+    const parsedHtml = getParsedHtml(tableOfContents)
     parseItems(parsedHtml.getElementsByTagName('ul'))
 
     setList(result)
     setElementIDs(ids)
   }, [tableOfContents])
 
-  return list
+  return { list, elementIDs }
 }
