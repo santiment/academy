@@ -42,9 +42,8 @@
 
 .current {
   a {
-    border-left: 2px solid var(--green) !important;
+    border-left: 2px solid var(--green);
     color: var(--green);
-    font-weight: 500;
   }
 }
 
@@ -96,14 +95,14 @@
       transition: transform 0.3s ease-in-out;
       transform: translateX(0);       
     }
-
-    &:hover {
-      color: var(--jungle-green-hover);
-      fill: var(--jungle-green-hover);
-  
-      & svg {
-        transform: translateX(4px);
-      }
-    } 
   }
+
+  &:hover {
+    color: var(--jungle-green-hover);
+    fill: var(--jungle-green-hover);
+
+    & a svg {
+      transform: translateX(4px);
+    }
+  } 
 }

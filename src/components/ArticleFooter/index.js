@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import cx from 'classnames'
 import { ArrowRight } from '../ArticleHeadings/ArticleHeadings'
 import headingStyle from '../ArticleHeadings/ArticleHeadings.module.scss'
@@ -25,27 +25,39 @@ const ArticleLastUpdate = ({ lastUpdatedAt }) => (
   </div>
 )
 
-const DiscordCTA = () => (
-  <div className={cx(styles.discordCTA, 'row h-center')}>
-    <DiscordLogo />
-    <div className={styles.discordinfo}>
-      <h4 className="h4 txt-m mrg--b mrg-xs">Talk to us in Discord</h4>
-      <p className="body-2 mrg--b mrg-l">
-        Still have some questions left? Join our Discord and get help from the
-        Santiment team!
-      </p>
-      <div className={headingStyle.appLink}>
+const DiscordCTA = () => {
+  const anchor = useRef()
+
+  function clickHandler() {
+    if (anchor && anchor.current) {
+      anchor.current.click()
+    }
+  }
+
+  return (
+    <div
+      className={cx(styles.discordCTA, 'row', headingStyle.appLink)}
+      onClick={clickHandler}
+    >
+      <DiscordLogo />
+      <div className={styles.discordinfo}>
+        <h4 className="h4 txt-m mrg--b mrg-xs">Talk to us in Discord</h4>
+        <p className="body-2 mrg--b mrg-l">
+          Still have some questions left? Join our Discord and get help from the
+          Santiment team!
+        </p>
         <a
           href="https://santiment.net/discord"
           target="_blank"
           rel="noreferrer"
+          ref={anchor}
         >
           Go to Discord <ArrowRight />
         </a>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 const DiscordLogo = () => (
   <div className={cx(styles.discordlogo, 'row hv-center mrg--r mrg-xl')}>

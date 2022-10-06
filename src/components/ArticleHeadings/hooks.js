@@ -1,24 +1,6 @@
 import { useState, useEffect } from 'react'
 import { sluggify } from '../Markdown/utils'
 
-function getParsedHtml(tableOfContents) {
-  const parser = new DOMParser()
-  let parsedHtml = parser.parseFromString(tableOfContents, 'text/html')
-
-  // Trim if it has only 1 h1 element and 2 ul elements
-  const pCount = parsedHtml.getElementsByTagName('p').length
-  const ulCount = parsedHtml.getElementsByTagName('ul').length
-
-  if (pCount === 1 && ulCount === 2) {
-    parsedHtml = parser.parseFromString(
-      parsedHtml.getElementsByTagName('ul')[1].outerHTML,
-      'text/html'
-    )
-  }
-
-  return parsedHtml
-}
-
 export function useSidenavItems(tableOfContents) {
   const [list, setList] = useState([])
   const [elementIDs, setElementIDs] = useState([])
@@ -49,7 +31,10 @@ export function useSidenavItems(tableOfContents) {
       }
     }
 
-    const parsedHtml = getParsedHtml(tableOfContents)
+    const parsedHtml = new DOMParser().parseFromString(
+      tableOfContents,
+      'text/html'
+    )
     parseItems(parsedHtml.getElementsByTagName('ul'))
 
     setList(result)
