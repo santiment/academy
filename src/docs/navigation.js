@@ -150,10 +150,9 @@ export const GUIDES = [
       </>
     ),
     articles: [
-      'How to buy SAN',
-      'How to stake SAN',
-      'Buy SAN tokens using Bancor',
-      'About SAN tokens',
+      'How to buy SAN tokens',
+      'Connect a wallet to the Sanbase account',
+      'SAN tokens holding benefits',
     ],
   },
   {

@@ -74,7 +74,7 @@ Relative number, less or equal than the corresponding social volume.
 #### Frequency
 
 We store each of the [social
-data](https://academy.santiment.net/metrics/details/social-data) documents with its
+data](/metrics/details/social-data) documents with its
 absolute timestamp. I.e. it is possible to aggregate the data with **any desired
 interval** [on request](products-and-plans/access-plans/). Currently the time
 intervals we use are the following:

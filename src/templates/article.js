@@ -11,6 +11,7 @@ import ArticleHeadings from '../components/ArticleHeadings/ArticleHeadings'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 import ArticleFooter from '../components/ArticleFooter'
 import IntercomWidget from '../components/IntercomWidget'
+import injectCustomMarkdownComponents from '../components/MarkdownCustomComponents'
 import styles from './article.module.scss'
 
 const Template = ({ data, pageContext, isDesktop }) => {
@@ -36,7 +37,9 @@ const Template = ({ data, pageContext, isDesktop }) => {
           crumbs={crumbs}
           tableOfContents={article.tableOfContents}
         />
-        <Markdown markdown={article.rawMarkdownBody} />
+        <Markdown
+          markdown={injectCustomMarkdownComponents(article.rawMarkdownBody)}
+        />
         <ArticleFooter lastUpdatedAt={lastUpdatedAt} />
       </div>
     </Layout>
@@ -58,7 +61,7 @@ export const query = graphql`
       fields {
         lastUpdatedAt
       }
-      tableOfContents(maxDepth: 3)
+      tableOfContents(maxDepth: 2)
     }
   }
 `

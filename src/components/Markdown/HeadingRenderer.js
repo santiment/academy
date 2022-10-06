@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { flatten, sluggify } from './utils'
-import { scrollToTargetAdjusted } from '../../utils/utils'
+import { usePageHash } from '../../utils/utils'
 import Icon from '@santiment-network/ui/Icon'
 import styles from './Markdown.module.scss'
 
 const HeadingRenderer = ({ level, children }) => {
+  const { scrollToTargetAdjusted } = usePageHash()
   const content = React.Children.toArray(children)
   const text = content.reduce(flatten, '')
   const slug = sluggify(text)

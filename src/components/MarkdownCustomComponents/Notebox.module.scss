@@ -1,0 +1,23 @@
+.noteBox {
+    display: flex;
+    border-radius: 8px;
+    padding: 16px 24px;
+    margin: 16px 0;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+
+    .boxIcon {
+        margin-right: 12px;
+    }
+}
+
+.pin {
+    border: 1px solid var(--porcelain);
+}
+
+.note {
+    border: 1px solid var(--texas-rose-light-3);
+}
