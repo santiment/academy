@@ -52,7 +52,7 @@
     "react-transition-group": "^4.3.0",
     "remark-math": "^2.0.0",
     "san-webkit": "https://github.com/santiment/san-webkit#fa2e3b1",
-    "svelte": "^3.46.3",
+    "svelte": "^3.49.0",
     "svelte-loader": "^2.13.6"
   },
   "devDependencies": {
