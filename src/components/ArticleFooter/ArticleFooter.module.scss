@@ -15,8 +15,23 @@
     padding: 28px 48px;
     cursor: pointer;
 
-    a {
+    span {
         font-size: 16px;
+
+        svg {
+            margin-left: 9px;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(0);
+        }
+    }
+
+    &:hover {
+        color: var(--jungle-green-hover);
+        fill: var(--jungle-green-hover);
+
+        & span svg {
+            transform: translateX(4px);
+        }
     }
 }
 
