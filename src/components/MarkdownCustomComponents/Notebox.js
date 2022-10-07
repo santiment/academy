@@ -9,18 +9,12 @@ const ICONS = {
 }
 
 const Notebox = ({ type = 'note', children }) => {
-  const ICON = ICONS[type] ?? '⚠️'
+  const icon = ICONS[type] ?? '⚠️'
+  const style = styles[type] ?? styles.note
 
   return (
-    <div
-      className={cx(
-        styles.noteBox,
-        type === 'pin' && styles.pin,
-        type === 'note' && styles.note,
-        type === 'hand' && styles.hand
-      )}
-    >
-      <div className={styles.boxIcon}>{ICON}</div>
+    <div className={cx(styles.noteBox, style)}>
+      <div className={styles.boxIcon}>{icon}</div>
       {children}
     </div>
   )
