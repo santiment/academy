@@ -35,7 +35,7 @@ const DiscordCTA = () => {
   }
 
   return (
-    <div
+    <a
       className={cx(styles.discordCTA, 'row', headingStyle.appLink)}
       onClick={clickHandler}
     >
@@ -55,7 +55,7 @@ const DiscordCTA = () => {
           Go to Discord <ArrowRight />
         </a>
       </div>
-    </div>
+    </a>
   )
 }
 
