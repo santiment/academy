@@ -2,17 +2,22 @@ import React from 'react'
 import cx from 'classnames'
 import styles from './Notebox.module.scss'
 
-const Notebox = ({ type = 'note', children }) => (
-  <div
-    className={cx(
-      styles.noteBox,
-      type === 'pin' && styles.pin,
-      type === 'note' && styles.note
-    )}
-  >
-    <div className={styles.boxIcon}>{type === 'pin' ? '📌' : '⚠️'}</div>
-    {children}
-  </div>
-)
+const ICONS = {
+  hand: '👋',
+  pin: '📌',
+  note: '⚠️',
+}
+
+const Notebox = ({ type = 'note', children }) => {
+  const icon = ICONS[type] ?? '⚠️'
+  const style = styles[type] ?? styles.note
+
+  return (
+    <div className={cx(styles.noteBox, style)}>
+      <div className={styles.boxIcon}>{icon}</div>
+      {children}
+    </div>
+  )
+}
 
 export default Notebox

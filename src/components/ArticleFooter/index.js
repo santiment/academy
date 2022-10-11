@@ -1,7 +1,6 @@
 import React from 'react'
 import cx from 'classnames'
 import { ArrowRight } from '../ArticleHeadings/ArticleHeadings'
-import headingStyle from '../ArticleHeadings/ArticleHeadings.module.scss'
 import styles from './ArticleFooter.module.scss'
 
 const ArticleLastUpdate = ({ lastUpdatedAt }) => (
@@ -26,7 +25,12 @@ const ArticleLastUpdate = ({ lastUpdatedAt }) => (
 )
 
 const DiscordCTA = () => (
-  <div className={cx(styles.discordCTA, 'row h-center')}>
+  <a
+    className={cx(styles.discordCTA, 'row')}
+    href="https://santiment.net/discord"
+    target="_blank"
+    rel="noreferrer"
+  >
     <DiscordLogo />
     <div className={styles.discordinfo}>
       <h4 className="h4 txt-m mrg--b mrg-xs">Talk to us in Discord</h4>
@@ -34,17 +38,9 @@ const DiscordCTA = () => (
         Still have some questions left? Join our Discord and get help from the
         Santiment team!
       </p>
-      <div className={headingStyle.appLink}>
-        <a
-          href="https://santiment.net/discord"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Go to Discord <ArrowRight />
-        </a>
-      </div>
+      <span className="btn-0">Go to Discord <ArrowRight /></span>
     </div>
-  </div>
+  </a>
 )
 
 const DiscordLogo = () => (
