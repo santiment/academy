@@ -16,7 +16,7 @@ SAN tokens can now be used as a discount to offset Santiment’s price plans. Ho
 
 This discount would be automatically applied to your account if you log in with your crypto wallet or you connect your wallet to your existing account.
 
-![](sanpricing_v3.png#noborder)
+![noborder](sanpricing_v3.png)
 
 ## Sanbase Payment with SAN Tokens
 
@@ -34,7 +34,7 @@ You can pay for your subscription plan partially by using credits from SAN burni
 
 By providing 3,000+ SAN to our Uniswap V2 pools (and the corresponding amount of ETH), you get FREE access to Sanbase Pro, including all our metrics, new templates, and daily market insights!
 
-![](liquidity.png#noborder)
+![noborder](liquidity.png)
 
 You can add liquidity to the SAN<->ETH pool here:
 <https://app.uniswap.org/#/add/v2/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098>

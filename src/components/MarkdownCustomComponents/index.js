@@ -22,11 +22,14 @@ const injectCustomMarkdownComponents = rawMarkdownBody => {
     const parsedElement = parsedHtml.children[0]
     const DynamicComponent = components[ucFirst(parsedElement.tagName)]
     if (!DynamicComponent) return
-    if (!parsedElement.children || !parsedElement.children[0] || parsedElement.children[0].data) return
-    const children = <Markdown markdown={parsedElement.children[0].data.trim()} />
+    if (!parsedElement.children || !parsedElement.children[0] || !parsedElement.children[0].data) return
     rawMarkdownBody = rawMarkdownBody.replace(
       rawTag,
-      renderToString(<DynamicComponent {...parsedElement.attribs}>{children}</DynamicComponent>)
+      renderToString(
+        <DynamicComponent {...parsedElement.attribs}>
+          <Markdown markdown={parsedElement.children[0].data.trim()} />
+        </DynamicComponent>
+      )
     )
   })
   return rawMarkdownBody
