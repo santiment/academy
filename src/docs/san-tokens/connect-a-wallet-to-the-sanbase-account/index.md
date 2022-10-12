@@ -15,11 +15,11 @@ This procedure is described in the article [Logging into Sanbase](/sanbase/loggi
 
 After logging into Sanbase using your email address, open the account settings. These settings can be found in the upper right corner by hovering over your account icon:
 
-![](41_account_settings_v2.png)
+![noborder](41_account_settings_v2.png)
 
 In account settings, you will find the following option. Click it:
 
-![](44_connect_wallet_with_mm_v2.png)
+![noborder](44_connect_wallet_with_mm_v2.png)
 
 In case your MetaMask plugin is not logged in yet, please do it now as prompted.
 
@@ -27,11 +27,11 @@ In case your MetaMask plugin is not logged in yet, please do it now as prompted.
 
 Please confirm the following steps to let Sanbase connect to MetaMask (and the selected wallet):
 
-![](45_v2.png#noborder)
+![noborder](45_v2.png)
 
 You will now be asked to sign a message with your private key. Please note that this is not a transaction, no tokens are sent, and no changes are made to the blockchain. This step simply proves that the connected account is in your control, and hereby belongs to you.
 
-![](46_connect_wallet_with_mm_sign_v2.png#noborder)
+![noborder](46_connect_wallet_with_mm_sign_v2.png)
 
 After confirmation, you will see your address and SAN token balance in the account settings.
 
