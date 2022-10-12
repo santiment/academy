@@ -22,10 +22,8 @@ Also you can put images under that folder
 
 ### Custom Components
 
-- Embed custom components can be done by surraning component by `!`, eg: `!<componentname>Any Markdown Children</componentname>!`
-- Available custom components: `!<Resource title="title">Markdown Content</Resource>!`, `!<Notebox type="note|pin|hand">Markdown Content</Notebox>!`
+- Available custom components: `<Resource title="title">Markdown Content</Resource>`, `<Notebox type="note|pin|hand">Markdown Content</Notebox>`
 - Disable image automatic bordering: Append `#noborder` to image name, eg: `![](46_connect_wallet_with_mm_sign_v2.png#noborder)`
-
 
 ### Add an article into navigation sidebar
 

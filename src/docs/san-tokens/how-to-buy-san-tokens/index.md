@@ -56,8 +56,8 @@ Now just [login with a MetaMask](https://app.santiment.net/login) account, which
 
 We'll detect the SAN you're holding and grant you access to our discounts, based on the amount of tokens you hold.
 
-!<Resource title="Here are a few resources you can refer to:">
+<Resource title="Here are a few resources you can refer to:">
 🔮 [Connect a wallet to the Sanbase account](/san-tokens/connect-a-wallet-to-the-sanbase-account/)
 
 💎 [SAN tokens holding benefits](/san-tokens/san-tokens-holding-benefits)
-</Resource>!
+</Resource>

@@ -27,7 +27,7 @@
     "gatsby-transformer-remark": "^2.6.30",
     "gatsby-transformer-sharp": "^4.2.0",
     "graphql-tag": "^2.10.1",
-    "html-react-parser": "^3.0.4",
+    "htmlparser2": "^6.1.0",
     "install": "^0.13.0",
     "isomorphic-fetch": "^2.2.1",
     "katex": "^0.11.1",

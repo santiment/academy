@@ -1,6 +1,6 @@
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import parse from 'html-react-parser'
+import { parseDocument } from 'htmlparser2'
 import Markdown from '../Markdown/Markdown'
 import * as components from './components'
 
@@ -11,27 +11,22 @@ const injectCustomMarkdownComponents = rawMarkdownBody => {
   if (rawMarkdownBody.length < 1) return
   const rawTags = Array.from(
     rawMarkdownBody.matchAll(
-      /(!<[a-zA-z]*?.*?>){1}[\s\S]*?(<\/[a-zA-z]*?>!){1}/g
+      /(<[A-Z]{1}[a-zA-z]*?.*?>){1}[\s\S]*?(<\/[A-Z]{1}[a-zA-z]*?>){1}/g
     ),
     m => m[0]
   )
   if (rawTags.length === 0) return rawMarkdownBody
   rawTags.map(rawTag => {
-    const tagString = rawTag.replaceAll('!', '')
-    const parsedHtml = new DOMParser().parseFromString(tagString, 'text/html')
-    const parsedTag = parsedHtml.body.firstChild
-    const DynamicComponent = components[ucFirst(parsedTag.tagName)]
+    const parsedHtml = parseDocument(rawTag)
+    if (!parsedHtml.children || !parsedHtml.children[0]) return
+    const parsedElement = parsedHtml.children[0]
+    const DynamicComponent = components[ucFirst(parsedElement.tagName)]
     if (!DynamicComponent) return
-    const children = parse(
-      renderToString(<Markdown markdown={parsedTag.innerHTML.trim()} />)
-    )
-    const props = {}
-    parsedTag
-      .getAttributeNames()
-      .map(key => (props[key] = parsedTag.getAttribute(key)))
+    if (!parsedElement.children || !parsedElement.children[0] || parsedElement.children[0].data) return
+    const children = <Markdown markdown={parsedElement.children[0].data.trim()} />
     rawMarkdownBody = rawMarkdownBody.replace(
       rawTag,
-      renderToString(<DynamicComponent {...props}>{children}</DynamicComponent>)
+      renderToString(<DynamicComponent {...parsedElement.attribs}>{children}</DynamicComponent>)
     )
   })
   return rawMarkdownBody
