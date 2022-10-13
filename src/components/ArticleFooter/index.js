@@ -1,5 +1,7 @@
 import React from 'react'
+import withSizes from 'react-sizes'
 import cx from 'classnames'
+import { mapSizesToProps } from '../../utils/sizes'
 import { ArrowRight } from '../ArticleHeadings/ArticleHeadings'
 import styles from './ArticleFooter.module.scss'
 
@@ -24,9 +26,9 @@ const ArticleLastUpdate = ({ lastUpdatedAt }) => (
   </div>
 )
 
-const DiscordCTA = () => (
+const DiscordCTA = ({isSmall}) => (
   <a
-    className={cx(styles.discordCTA, 'row')}
+    className={cx('row', styles.discordCTA, isSmall && styles.small)}
     href="https://santiment.net/discord"
     target="_blank"
     rel="noreferrer"
@@ -62,11 +64,11 @@ const DiscordLogo = () => (
   </div>
 )
 
-const ArticleFooter = ({ lastUpdatedAt }) => (
+const ArticleFooter = ({ lastUpdatedAt, isTablet, isPhone }) => (
   <>
     <ArticleLastUpdate lastUpdatedAt={lastUpdatedAt} />
-    <DiscordCTA />
+    <DiscordCTA isSmall={isTablet || isPhone} />
   </>
 )
 
-export default ArticleFooter
+export default withSizes(mapSizesToProps)(ArticleFooter)

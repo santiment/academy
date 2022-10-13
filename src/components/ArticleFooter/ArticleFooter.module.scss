@@ -35,8 +35,12 @@
     }
 }
 
+.small {
+    padding: 28px 24px;
+}
+
 .discordlogo {
-    width: 56px;
+    min-width: 56px;
     height: 56px;
     background: var(--athens);
     border-radius: 40px;
