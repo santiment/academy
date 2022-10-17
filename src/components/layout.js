@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
+import withSizes from 'react-sizes'
 import cx from 'classnames'
 import GoogleAnalytics from 'react-ga'
 import Helmet from 'react-helmet'
 import { startResponsiveController } from 'webkit/responsive'
+import { mapSizesToProps } from '../utils/sizes'
 import CookiesPopup from 'webkit/ui/CookiesPopup.svelte'
 import Dialogs from 'webkit/ui/Dialog/Dialogs.svelte'
 import Intercom from './Intercom'
+import IntercomWidget from '../components/IntercomWidget'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Sidebar from './Sidebar/Sidebar'
@@ -36,6 +39,7 @@ const Layout = ({
   fixedHeader,
   classes = {},
   pageContext,
+  isDesktop,
 }) => {
   useEffect(() => {
     const cookies = new CookiesPopup({ target: document.body })
@@ -75,6 +79,7 @@ const Layout = ({
           )}
         </div>
       </Notifications>
+      {isShowSidebar && <IntercomWidget isDesktop={isDesktop} />}
     </Intercom>
   )
 }
@@ -83,4 +88,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default withSizes(mapSizesToProps)(Layout)

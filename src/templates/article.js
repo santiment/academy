@@ -1,20 +1,17 @@
 import React from 'react'
-import withSizes from 'react-sizes'
 import { graphql } from 'gatsby'
 import cx from 'classnames'
 import { dateDifferenceInWords } from 'webkit/utils/dates'
-import { mapSizesToProps } from '../utils/sizes'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Markdown from '../components/Markdown/Markdown'
 import ArticleHeadings from '../components/ArticleHeadings/ArticleHeadings'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 import ArticleFooter from '../components/ArticleFooter'
-import IntercomWidget from '../components/IntercomWidget'
 import injectCustomMarkdownComponents from '../components/MarkdownCustomComponents'
 import styles from './article.module.scss'
 
-const Template = ({ data, pageContext, isDesktop }) => {
+const Template = ({ data, pageContext }) => {
   const { markdownRemark: article } = data
   const {
     breadcrumb: { crumbs },
@@ -30,7 +27,6 @@ const Template = ({ data, pageContext, isDesktop }) => {
   return (
     <Layout isShowSidebar={true}>
       <SEO {...meta} />
-      <IntercomWidget isDesktop={isDesktop} />
       <div className={cx(styles.wrapper, 'container')}>
         <Breadcrumb crumbs={crumbs} crumbLabel={article.frontmatter.title} />
         <ArticleHeadings
@@ -46,7 +42,7 @@ const Template = ({ data, pageContext, isDesktop }) => {
   )
 }
 
-export default withSizes(mapSizesToProps)(Template)
+export default Template
 
 export const query = graphql`
   query($slug: String!) {
