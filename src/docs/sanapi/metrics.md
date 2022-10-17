@@ -30,7 +30,7 @@ Supported blockchains:
 | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-| Binance Chain      | Bitcoin Cash       | Litecoin           | Cardano            |
+| BNB Chain          | Bitcoin Cash       | Litecoin           | Cardano            |
 | ------------------ | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
