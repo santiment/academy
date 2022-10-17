@@ -1,6 +1,20 @@
 import { useState, useEffect } from 'react'
 import { sluggify } from '../Markdown/utils'
 
+function getElements(tableOfContents) {
+  const parsedHtml = new DOMParser().parseFromString(
+    tableOfContents,
+    'text/html'
+  )
+  const ul = parsedHtml.getElementsByTagName('ul')
+  const pCount = parsedHtml.getElementsByTagName('p').length
+  const ulCount = ul.length
+  if (pCount === 1 && ulCount === 2) {
+    return [ul[1]]
+  }
+  return ul
+}
+
 export function useSidenavItems(tableOfContents) {
   const [list, setList] = useState([])
   const [elementIDs, setElementIDs] = useState([])
@@ -31,18 +45,8 @@ export function useSidenavItems(tableOfContents) {
       }
     }
 
-    const parsedHtml = new DOMParser().parseFromString(
-      tableOfContents,
-      'text/html'
-    )
-    const pCount = parsedHtml.getElementsByTagName('p').length
-    const ulCount = parsedHtml.getElementsByTagName('ul').length
-    if (pCount === 1 && ulCount === 2) {
-      parseItems([parsedHtml.getElementsByTagName('ul')[1]])
-    } else {
-      parseItems(parsedHtml.getElementsByTagName('ul'))
-    }
-    
+    parseItems(getElements(tableOfContents))
+
     setList(result)
     setElementIDs(ids)
   }, [tableOfContents])
