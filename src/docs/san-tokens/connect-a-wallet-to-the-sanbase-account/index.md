@@ -2,6 +2,7 @@
 title: Connect a wallet to the Sanbase account
 author: Santiment Team
 ---
+# Connect a wallet to the Sanbase account
 
 <Notebox type="pin">This article describes how to stake SAN token that are already in your posession. Please refer to [this article](/san-tokens/how-to-buy-san-tokens/) to learn how to buy SAN in the first place.</Notebox>
 
@@ -15,7 +16,7 @@ This procedure is described in the article [Logging into Sanbase](/sanbase/loggi
 
 After logging into Sanbase using your email address, open the account settings. These settings can be found in the upper right corner by hovering over your account icon:
 
-![noborder](41_account_settings_v2.png)
+![noborder](41_account_settings_v4.png)
 
 In account settings, you will find the following option. Click it:
 

@@ -35,8 +35,14 @@ export function useSidenavItems(tableOfContents) {
       tableOfContents,
       'text/html'
     )
-    parseItems(parsedHtml.getElementsByTagName('ul'))
-
+    const pCount = parsedHtml.getElementsByTagName('p').length
+    const ulCount = parsedHtml.getElementsByTagName('ul').length
+    if (pCount === 1 && ulCount === 2) {
+      parseItems([parsedHtml.getElementsByTagName('ul')[1]])
+    } else {
+      parseItems(parsedHtml.getElementsByTagName('ul'))
+    }
+    
     setList(result)
     setElementIDs(ids)
   }, [tableOfContents])
