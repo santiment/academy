@@ -1,26 +1,36 @@
 ---
 title: Social Dominance
-author: Ivan
-date: 2020-04-13
-description: What percent of the total social volume is dedicated to an asset or a search term
+author: Santiment Team
+date: 2022-10-18
+description: Share of the crypto discussions that refer to an asset/phrase
 # REF metrics-hub/metricshub/social_dominance.py
 ---
 
 ## Definition
 
-Social Dominance is build on top of the [Social Data](/metrics/details/social-data).
+Social Dominance shows the share of the discussions in crypto media that is referring
+to a particular asset or phrase.
+
+The metric is build on top of the [Social Data](/metrics/details/social-data).
+
+### Social Dominance for an Asset
 
 Social Dominance for an asset compares the [Social
 Volume](/metrics/social-volume) of that asset to the combined social volume of the
-100 largest market cap assets.
+100 largest assets by marketcap.
 
-Social Dominance for arbitrary search term compares the [Social
+Social Dominance of 50% for an asset means that the number of messages/posts that discuss
+this asset equal half the number of messages/posts that discuss the Top 100 assets.
+
+> This definition allows the social dominance of an asset to exceed 100%.
+> This can happen for assets whose name and/or ticker is a very common English word.
+
+### Social Dominance for a text phrase
+
+Social Dominance for an arbitrary text phrase compares the [Social
 Volume](/metrics/social-volume) of that search term to the total number of
-documents available. This essentially counts how many percent of all documents
-match this search term.
-
-Social Dominance of 50 for an asset means that half of all messages/posts regarding
-assets are discussing exactly this asset.
+documents available. This essentially computes the percentage of all documents
+that match this search term.
 
 ## Access
 
