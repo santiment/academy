@@ -19,6 +19,11 @@ $$
 
 ![Supply Distribution](bitcoin-hd.png)
 
+Additionally, the above metrics can be calculated only for active holders. Active 
+holders are holders that moved coins in the past year. 
+To include only active holders add `active_` prefix (for example: 
+`active_holders_distribution_<interval>`)
+
 ## Access
 
 [Free Access](/metrics/details/access#free-access)
@@ -27,7 +32,7 @@ $$
 
 ## Measuring Unit
 
-For the ``holders_distribution_<interval>`` and ``holders_distribution_over_<threshold>`` they're integers, whilst for the rest they're floats
+For the ``<active_>holders_distribution_<interval>`` and ``<active_>holders_distribution_over_<threshold>`` they're integers, whilst for the rest they're floats
 
 ---
 
@@ -60,7 +65,7 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ## API
 
-Available under the `holders_distribution_<interval>`, `holders_distribution_combined_balance_<interval>`, `holders_distribution_over_<threshold>`, `holders_distribution_combined_balance_over_<threshold>` and `percent_of_holders_distribution_combined_balance_<interval>` names.
+Available under the `<active_>holders_distribution_<interval>`, `<active_>holders_distribution_combined_balance_<interval>`, `<active_>holders_distribution_over_<threshold>`, `<active_>holders_distribution_combined_balance_over_<threshold>` and `percent_of_<active_>holders_distribution_combined_balance_<interval>` names.
 
 ```graphql
 {
