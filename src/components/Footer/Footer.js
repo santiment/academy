@@ -4,7 +4,6 @@ import { Mutation } from 'react-apollo'
 import Button from '@santiment-network/ui/Button'
 import Input from '@santiment-network/ui/Input'
 import logo from './images/santiment.svg'
-import android from './images/google_play.svg'
 import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
 import { NotificationsContext } from '../Notifications/Notifications'
 import { categories } from './links'
@@ -106,18 +105,6 @@ const Footer = ({ isMinified }) => {
                     </Mutation>
                   )}
                 </NotificationsContext.Consumer>
-              </div>
-              <div className={styles.app}>
-                <h4 className={cx(styles.heading, styles.heading__app)}>
-                  Download Sanbase app
-                </h4>
-                <a
-                  href="https://play.google.com/store/apps/details?id=net.santiment.sanbase.android"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={android} alt="play market" />
-                </a>
               </div>
             </div>
           </div>
