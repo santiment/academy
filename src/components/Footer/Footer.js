@@ -1,14 +1,13 @@
-import React from 'react'
-import cx from 'classnames'
-import { Mutation } from 'react-apollo'
-import Button from '@santiment-network/ui/Button'
-import Input from '@santiment-network/ui/Input'
-import logo from './images/santiment.svg'
-import android from './images/google_play.svg'
-import { EMAIL_LOGIN_MUTATION } from '../../gql/user'
-import { NotificationsContext } from '../Notifications/Notifications'
-import { categories } from './links'
-import styles from './Footer.module.scss'
+import React from "react"
+import cx from "classnames"
+import { Mutation } from "react-apollo"
+import Button from "@santiment-network/ui/Button"
+import Input from "@santiment-network/ui/Input"
+import logo from "./images/santiment.svg"
+import { EMAIL_LOGIN_MUTATION } from "../../gql/user"
+import { NotificationsContext } from "../Notifications/Notifications"
+import { categories } from "./links"
+import styles from "./Footer.module.scss"
 
 const Footer = ({ isMinified }) => {
   const year = new Date()
@@ -28,7 +27,7 @@ const Footer = ({ isMinified }) => {
             <ul className={styles.categories}>
               {categories.map(({ links }, idx) => (
                 <li key={idx} className={styles.category}>
-                  {links.map(({ children, href, onClick, name = '' }, i) => (
+                  {links.map(({ children, href, onClick, name = "" }, i) => (
                     <a
                       key={i}
                       target="_blank"
@@ -45,7 +44,7 @@ const Footer = ({ isMinified }) => {
             <div className={cx(styles.categories, styles.categories__mobile)}>
               {categories.map(({ links }, idx) => {
                 return links.map(
-                  ({ children, href, onClick, name = '' }, i) => (
+                  ({ children, href, onClick, name = "" }, i) => (
                     <a
                       key={i}
                       target="_blank"
@@ -79,9 +78,9 @@ const Footer = ({ isMinified }) => {
                               },
                             }).then(() => {
                               addNot({
-                                type: 'success',
+                                type: "success",
                                 title:
-                                  'Verification email was sent to the provided email!',
+                                  "Verification email was sent to the provided email!",
                               })
                             })
                           }}
@@ -90,7 +89,7 @@ const Footer = ({ isMinified }) => {
                             className={styles.input}
                             type="email"
                             required
-                            placeholder={'Enter your email'}
+                            placeholder={"Enter your email"}
                             name="email"
                           />
                           <Button
@@ -106,18 +105,6 @@ const Footer = ({ isMinified }) => {
                     </Mutation>
                   )}
                 </NotificationsContext.Consumer>
-              </div>
-              <div className={styles.app}>
-                <h4 className={cx(styles.heading, styles.heading__app)}>
-                  Download Sanbase app
-                </h4>
-                <a
-                  href="https://play.google.com/store/apps/details?id=net.santiment.sanbase.android"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={android} alt="play market" />
-                </a>
               </div>
             </div>
           </div>
