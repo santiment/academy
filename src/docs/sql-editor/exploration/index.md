@@ -5,7 +5,7 @@ date: 2022-08-17
 description: Learn how to explore the contents of the database and table structure
 ---
 
-# Overview
+## Overview
 
 This documents aims at improving the reader abilities to navigate through
 Clickhouse using SQL and explore the available tables and their structure.

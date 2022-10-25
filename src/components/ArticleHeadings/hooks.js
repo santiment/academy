@@ -1,20 +1,23 @@
 import { useState, useEffect } from 'react'
 import { sluggify } from '../Markdown/utils'
 
-function getElements(tableOfContents) {
+function getElements(tableOfContents, title) {
   const parsedHtml = new DOMParser().parseFromString(
-    tableOfContents,
+    `<ul><li><p>${title}</p>${tableOfContents}</li></ul>`,
     'text/html'
   )
   const ul = parsedHtml.getElementsByTagName('ul')
   const pCount = parsedHtml.getElementsByTagName('p').length
-  if (pCount === 1 && ul.length === 2) {
+  if (ul.length === 1 && pCount === 1) {
+    return
+  }
+  if (ul.length - pCount === 1) {
     return [ul[1]]
   }
   return ul
 }
 
-export function useSidenavItems(tableOfContents) {
+export function useSidenavItems(tableOfContents, title) {
   const [list, setList] = useState([])
   const [elementIDs, setElementIDs] = useState([])
 
@@ -44,7 +47,7 @@ export function useSidenavItems(tableOfContents) {
       }
     }
 
-    parseItems(getElements(tableOfContents))
+    parseItems(getElements(tableOfContents, title))
 
     setList(result)
     setElementIDs(ids)

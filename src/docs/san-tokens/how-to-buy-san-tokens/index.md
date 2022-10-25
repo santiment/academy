@@ -4,8 +4,6 @@ author: Santiment Team
 date: 2019-12-18
 description: Instructions on how to acquire SAN token
 ---
-# How to Buy SAN
-
 To use the SAN token with our platform, you need to have it in a MetaMask wallet or a wallet supported by MetaMask (like Trezor or Ledger). We'll describe the three steps necessary to achieve that.
 
 ## Step 1: Install and set up MetaMask

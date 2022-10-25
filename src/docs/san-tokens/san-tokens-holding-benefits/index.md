@@ -3,8 +3,6 @@ title: SAN tokens holding benefits
 author: Santiment Team
 ---
 
-# SAN tokens holding benefits
-
 There are several benefits for our SAN token holders:
 - Sanbase Subscription Discount
 - Sanbase Payment with SAN Tokens

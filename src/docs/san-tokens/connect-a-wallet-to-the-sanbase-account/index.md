@@ -2,8 +2,6 @@
 title: Connect a wallet to the Sanbase account
 author: Santiment Team
 ---
-# Connect a wallet to the Sanbase account
-
 <Notebox type="pin">This article describes how to stake SAN token that are already in your posession. Please refer to [this article](/san-tokens/how-to-buy-san-tokens/) to learn how to buy SAN in the first place.</Notebox>
 
 There are two ways to connect an Ethereum address to a Sanbase account. You can use MetaMask as a first login (and add an email address later) or add it to an existing account.

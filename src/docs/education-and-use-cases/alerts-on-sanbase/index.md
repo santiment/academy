@@ -11,7 +11,7 @@ Creating a very specific alert based on your own vision will guarantee you will 
 
 Let’s take a look at some of the possible ways for you to work with Alerts. 
 
-# Setting up an Age Consumed Alert
+## Setting up an Age Consumed Alert
 
 Token Age Consumed metric tracks the activity of coins based on how long they’ve stayed in their current wallets. Spikes on the chart indicate the movement of previously idle coins, i.e. those owned by long term HODLers or even ICO investors.
 

@@ -41,8 +41,8 @@ const TOPICS = {
   },
 }
 
-const ArticleHeadings = ({ tableOfContents, crumbs = [] }) => {
-  const { list, elementIDs } = useSidenavItems(tableOfContents)
+const ArticleHeadings = ({ tableOfContents, crumbs = [], title }) => {
+  const { list, elementIDs } = useSidenavItems(tableOfContents, title)
   const { pageHash, scrollToTargetAdjusted } = usePageHash(elementIDs)
   const topic = crumbs.length > 1 && crumbs[1].crumbLabel
   const appLink = topic && TOPICS[topic]
@@ -69,7 +69,11 @@ const ArticleHeadings = ({ tableOfContents, crumbs = [] }) => {
           <a
             href={`#${slug}`}
             onClick={e => scrollToTargetAdjusted(e, slug)}
-            className={cx(styles.heading, depth === 2 && styles.second)}
+            className={cx(
+              styles.heading,
+              depth === 2 && styles.second,
+              depth === 3 && styles.third,
+            )}
           >
             {value}
           </a>

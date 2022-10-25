@@ -4,11 +4,12 @@ author: Serge Nedashkovsky, Maksim Razhev, Anatoliy
 date: 2020-12-24
 description: DeFi Metrics
 ---
-# Special metrics
+## Special metrics
 ### [MakerDAO metrics](/metrics/makerdao)
-# Common metrics
 
-## Description
+## Common metrics
+
+### Description
 
 Metrics related to DeFi protocols
 
@@ -21,42 +22,42 @@ Total Value Locked metrics:
 
 ---
 
-## Access
+### Access
 
 [Restricted Access](/metrics/details/access#restricted-access).
 
 ---
 
-## Measuring Unit
+### Measuring Unit
 
 Amount of USD Dollars / ETH 
 
 ---
 
-## Data Type
+### Data Type
 
 [Timeseries Data](/metrics/details/data-type#timeseries-data)
 
 ---
 
-## Frequency
+### Frequency
 
 [Hourly Intervals](/metrics/details/frequency#hourly-frequency)
 
 ---
 
-## Latency
+### Latency
 
 [Price Latency](/metrics/details/latency#price-latency)
 
 ---
 
-## Available Assets
+### Available Assets
 Available for `ethereum`.
 
 ---
 
-### SanAPI
+## SanAPI
 Amount of total locked ETH coins is available under the `defi_total_value_locked_eth` name.
 
 ```graphql
