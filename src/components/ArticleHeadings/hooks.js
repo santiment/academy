@@ -8,7 +8,8 @@ function getElements(tableOfContents) {
   )
   const ul = parsedHtml.getElementsByTagName('ul')
   const pCount = parsedHtml.getElementsByTagName('p').length
-  if (pCount === 1 && ul.length === 2) {
+  // if (pCount === 1 && ul.length === 2) {
+  if (ul.length - pCount === 1) {
     return [ul[1]]
   }
   return ul

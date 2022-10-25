@@ -4,6 +4,7 @@ author: Ivan
 date: 2021-11-19
 description: Marketcap alternative with acquisition price instead of current price
 ---
+# Realized Value
 
 ## Definition
 

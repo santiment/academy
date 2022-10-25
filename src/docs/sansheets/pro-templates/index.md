@@ -2,8 +2,9 @@
 title: Sansheets Pro Templates
 author: Brian Quinlivan
 ---
+# Sansheets Pro Templates
 
-# The Perks of Being a Pro Subscriber on Sanbase
+## The Perks of Being a Pro Subscriber on Sanbase
 
 As most of you know, Sanbase is a free to use platform to do research and study on-chain and behavioral analytics on the crypto markets. However, there is a paid version, known as "Pro", that unlocks many doors and models that our free users are unable to access. Take a look at the [list of perks we offer to our Pro subscribers](https://app.santiment.net/pricing), and see all of the benefits that come with being an insider on our platform!
 

@@ -3,6 +3,7 @@ title: Timebound
 author: Ivan
 date: 2022-04-12
 ---
+# Timebound
 
 - [Definition](#definition)
 - [Examples](#examples)

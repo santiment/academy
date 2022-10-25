@@ -4,6 +4,7 @@ author: Katsiaryna
 date: 2021-12-27
 description: Signal indicates that some project appeared in top-10 trending words
 ---
+# Project in Trending Words
 
 ## Definition
 

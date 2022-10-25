@@ -4,6 +4,7 @@ author: Ivan
 date: 2021-11-19
 description: Track from what price range are coming the coins/tokens moved on a given day
 ---
+# Transacted Coin Acquisition Cost
 
 ## Definition
 

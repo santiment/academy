@@ -4,6 +4,7 @@ author: Alex
 date: 2021-12-08
 description: Signal indicating a large trade occured on a DEX
 ---
+# DEX trades
 
 ## Definition
 

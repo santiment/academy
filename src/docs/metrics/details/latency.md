@@ -3,6 +3,7 @@ title: Latency
 author: Ivan
 date: 2020-04-06
 ---
+# Latency
 
 - [On-Chain Latency](#on-chain-latency)
 - [Funding Rates Latency](#funding-rates-latency)

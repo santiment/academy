@@ -2,6 +2,7 @@
 title: Asset
 author: Santiment Team
 ---
+# Asset
 
 An **asset** is any cryptocurrency or crypto token which can be
 associated with a price. Example of assets are Bitcoin, Ethereum and

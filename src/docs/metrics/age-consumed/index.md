@@ -4,6 +4,7 @@ author: Santiment Team
 date: 2020-04-06
 description: Amount of coins/tokens moved multipled by their age
 ---
+# Token Age Consumed metric
 
 _For a more in-depth technical explanation of `Age Consumed`, please click_
 [_here_](/metrics/age-consumed/age-consumed-technical)

@@ -4,6 +4,7 @@ author: Santiment Team
 date: 2020-04-07
 description: The ratio between marketcap and transaction volume or circulation
 ---
+# NVT
 
 ## Definition
 

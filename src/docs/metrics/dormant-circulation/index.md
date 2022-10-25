@@ -4,6 +4,7 @@ author: Ivan
 date: 2020-06-29
 description: Number of unique coins/tokens transferred after being idle for some time
 ---
+# Dormant Circulation
 
 ## Definition
 

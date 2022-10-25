@@ -4,6 +4,7 @@ description: Keep track of development updates, new product features and other i
 author: Santiment Team
 date: 2022-04-20
 ---
+# Development changelog
 
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.

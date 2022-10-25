@@ -3,6 +3,7 @@ title: Sanbase Alerts Use Cases
 author: Daria Karpova
 date: 2022-03-22
 ---
+# Sanbase Alerts Use Cases
 
 Alerts are a powerful tool that will help you keep your attention where it is most important.
 With an overwhelming number of metrics available on Sanbase and an even bigger number of crypto assets on the market, it may become troublesome to keep track of every single daily change, which however may be essential if you want to not only watch the market but to be ahead of the game.

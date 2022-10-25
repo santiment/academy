@@ -4,6 +4,7 @@ author: Ivan Klimuk
 date: 2020-04-06
 description: List of words getting more than the average social attraction in the past 24 hours
 ---
+# Emerging trends
 
 ![Emerging trends on Sanbase](emerging-trends.png)
 

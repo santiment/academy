@@ -4,6 +4,7 @@ author: Santiment Team
 date: 2020-04-14
 description: Average number of times a coin/token changes wallets each day
 ---
+# Velocity
 
 > For a more in-depth explanation of `Velocity`, please click
 > [here](/metrics/velocity/velocity-technical).

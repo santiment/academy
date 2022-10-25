@@ -4,6 +4,7 @@ author: Maksim Razhev
 date: 2021-01-28
 description: Labeled Balance Metrics
 ---
+# Labeled Balance
 
 ## Description
 Metrics that show labeled addresses inflow, outflow and balances

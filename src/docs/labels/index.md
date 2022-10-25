@@ -4,6 +4,7 @@ author: Santiment Team
 description: Santiment labels vision for crypto wallets
 date: 2021-01-27
 ---
+# Labels
 
 ## General
 

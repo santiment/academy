@@ -2,6 +2,7 @@
 title: Top Holders
 author: Santiment Team
 ---
+# Top Holders
 
 `Top Holders` describes a set of up to 100 Ethereum addresses which
 have the highest balances at a given time, either in Ether or in a
@@ -33,7 +34,7 @@ more information
 - ***`Balance in USD`*** - display the top holders balances in amount of
 tokens or converted to USD
 
-### Our current metrics for top holders:
+# Our current metrics for top holders:
 
 ## Top Holders - Balance
 This graph shows the sum of all the top holders balances plotted against

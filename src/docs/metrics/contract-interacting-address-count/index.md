@@ -4,6 +4,7 @@ author: Yury
 date: 2022-04-21
 description: Get interacting address count for a chain address / contract
 ---
+# Interacting Address Count
 
 ## Definition
 

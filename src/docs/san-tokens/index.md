@@ -2,7 +2,7 @@
 title: SAN tokens
 author: Santiment Team
 ---
-# SAN token
+# SAN tokens
 
 Santiment Network Token (SAN)
 

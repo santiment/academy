@@ -3,6 +3,7 @@ title: Timing market volatility with Token Age Consumed
 author: Dino Ibisbegovic
 date: 2020-02-05
 ---
+# Timing market volatility with Token Age Consumed
 
 **Token Age Consumed** (TAC for short) is one of the most reliable on-chain indicators of major changes in market conditions.
 

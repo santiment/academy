@@ -2,6 +2,7 @@
 title: Logging into Sanbase
 author: Santiment Team
 ---
+# Logging into Sanbase
 
 > **ORANGE_TYPE**
 > There are two ways to log into Sanbase, by

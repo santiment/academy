@@ -4,6 +4,7 @@ desctiption: A rundown of everything you have access to with Sanbase Pro
 author: Santiment Team
 date: 2019-12-19
 ---
+# Sanbase PRO features
 
 Our crypto behavior analysis & monitoring platform is packed with custom tools and features to give you context and remove noise from the crypto markets.
 

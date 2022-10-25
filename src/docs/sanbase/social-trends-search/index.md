@@ -4,6 +4,7 @@ author: Santiment Team
 date: 2021-05-27
 description: Using this feature you can display the amount of times your search term is mentioned in a specific medium (e.g. Telegram).
 ---
+# Social Tool
 
 Start exploring trends context on https://app.santiment.net/labs/trends/explore/
 

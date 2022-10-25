@@ -3,6 +3,7 @@ title: Interval Timebound
 author: Ante
 date: 2022-06-01
 ---
+# Interval Timebound
 
 - [Definition](#definition)
 

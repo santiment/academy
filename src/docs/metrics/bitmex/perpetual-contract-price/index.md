@@ -3,6 +3,7 @@ title: BitMEX Perpetual Contract Price
 author: Anatoliy
 date: 2020-06-03
 ---
+# BitMEX Perpetual Contract Price
 
 ## Access
 

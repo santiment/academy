@@ -4,6 +4,7 @@ author: Anatoliy
 date: 2020-06-03
 description: Contract price - index price.
 ---
+# BitMEX Perpetual Contract Basis
 
 ## Description
  

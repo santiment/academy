@@ -2,6 +2,7 @@
 title: Requesting new projects and their tokens to be displayed on Sanbase
 author: Santiment Team
 ---
+# Requesting new projects and their tokens to be displayed on Sanbase
 
 As we are working directly with Ethereum on-chain data, we have the
 ability to display information about any token which contract address is

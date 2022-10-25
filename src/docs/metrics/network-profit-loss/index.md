@@ -4,6 +4,7 @@ author: Santiment Team
 date: 2021-07-23
 description: Average profit or loss of all coins that change addresses.
 ---
+# Network Profit Loss
 
 ## Definition
 

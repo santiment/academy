@@ -3,6 +3,7 @@ title: BitMEX
 author: Anatoliy 
 date: 2020-06-26
 ---
+# BitMEX
 
 [BitMEX](https://www.bitmex.com/) is a P2P crypto-products trading platform.  
 Metrics build on top of BitMEX trading contracts.

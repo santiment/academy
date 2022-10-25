@@ -3,6 +3,7 @@ title: SanAPI Plans
 author: Ivan
 date: 2021-03-22
 ---
+# SanAPI Plans
 
 The plans apply to all metrics except the ones with [special restrictions](/products-and-plans/access-plans/special-restrictions)
 

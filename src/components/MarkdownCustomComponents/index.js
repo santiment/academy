@@ -7,7 +7,7 @@ import * as components from './components'
 const ucFirst = text =>
   text.charAt(0).toUpperCase() + text.toLowerCase().slice(1)
 
-const injectCustomMarkdownComponents = rawMarkdownBody => {
+function injectCustomMarkdownComponents(rawMarkdownBody) {
   if (rawMarkdownBody.length < 1) return
   const rawTags = Array.from(
     rawMarkdownBody.matchAll(

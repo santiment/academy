@@ -4,6 +4,7 @@ author: Alex
 date: 2021-12-08
 description: Signal indicating a large MakerDAO liquidation
 ---
+# MCD ART Liquidation
 
 ## Definition
 

@@ -2,6 +2,7 @@
 title: Messari vs Santiment
 author: Dino Ibisbegovic
 ---
+# Messari vs Santiment
 
 In this article we’ll be comparing Sanbase and Messari, two popular market intelligence platforms for cryptocurrencies. 
 

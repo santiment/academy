@@ -3,6 +3,7 @@ title: Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategi
 author: Jan S
 date: 2019-09-17
 ---
+# Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategies
 
 Of all the metrics that can be generated from on-chain data, **the daily active addresses** - DAA for short - is probably most well known. 
 

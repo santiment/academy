@@ -3,6 +3,7 @@ title: Metrics
 author: Santiment Team
 date: 2020-04-06
 ---
+# Metrics
 
 - [Overview](#overview)
 - [All available metrics](#all-available-metrics)

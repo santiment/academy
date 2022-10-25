@@ -3,6 +3,7 @@ title: Binance
 author: Lyudmil 
 date: 2022-02-08
 ---
+# Binance
 
 [Binance](https://www.binance.com/) is a cryptocurrency exchange which is the largest exchange in the world in terms of daily trading volume of cryptocurrencies.
 

@@ -69,7 +69,11 @@ const ArticleHeadings = ({ tableOfContents, crumbs = [] }) => {
           <a
             href={`#${slug}`}
             onClick={e => scrollToTargetAdjusted(e, slug)}
-            className={cx(styles.heading, depth === 2 && styles.second)}
+            className={cx(
+              styles.heading,
+              depth === 2 && styles.second,
+              depth === 3 && styles.third,
+            )}
           >
             {value}
           </a>

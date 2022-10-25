@@ -2,6 +2,7 @@
 title: Santiment Pro Report Samples
 author: Santiment team
 ---
+# Santiment Pro Report Samples
 
 ### On latest BTC fundamentals and the push to $14k
 

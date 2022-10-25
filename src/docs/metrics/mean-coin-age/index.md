@@ -4,6 +4,7 @@ author: Ivan
 date: 2020-04-06
 description: The average age of all coins/tokens on a given blockchain
 ---
+# Mean Coin Age
 
 ## Definition
 

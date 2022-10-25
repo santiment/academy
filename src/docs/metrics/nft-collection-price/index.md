@@ -4,6 +4,8 @@ author: Filip
 date: 2022-07-12
 description: Daily minimum, maximum, average price in eth and usd, and daily trade count for NFT collections and tokens
 ---
+# NFT Collection Price
+
 ## Definition
 
 NFT Collection price is a set of metrics that represent prices and number of trades

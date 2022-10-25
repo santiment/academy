@@ -3,6 +3,7 @@ title: Functions we offer
 author: Santiment Team
 date: 2022-02-08
 ---
+# Functions we offer
 
 ## SAN_ACTIVE_ADDRESSES
 

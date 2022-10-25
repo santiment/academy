@@ -2,6 +2,7 @@
 title: Adding an API key to Sansheets
 author: Max Bartel
 ---
+# Adding an API key to Sansheets
 
 Adding an API key to Sansheets is very simple. But there is two things
 you need to do first:

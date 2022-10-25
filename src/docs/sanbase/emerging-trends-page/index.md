@@ -4,6 +4,7 @@ author: Santiment Team
 date: 2021-05-27
 description: This page contain `Top 10` trending words in crypto and give you a quick overview of the top developing topics in crypto at the moment
 ---
+# Social Trends page
 
 **Social Trends** page contain `Top 10` trending words in crypto:
 

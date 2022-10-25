@@ -3,6 +3,7 @@ title: Sanbase Insights
 author: Santiment Team
 description: You can use "Sanbase Insights" to create your own note-like posts, share them with the community or browse existing.
 ---
+# Sanbase Insights
 
 Start exploring **Insights** here: https://insights.santiment.net/
 

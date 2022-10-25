@@ -3,6 +3,8 @@ title: Sanbase Alerts Use Cases
 author: Daria Karpova
 date: 2022-04-04
 ---
+# Sanbase Alerts Use Cases
+
 Santiment is proud to be the only tool in the industry that developed its proprietary method of looking at the crypto market.
 Social dynamics can be a strong indicator of turbulence approaching.
 You are probably already following some Twitter accounts or getting your latest updates from Telegram chats, however there is a problem:

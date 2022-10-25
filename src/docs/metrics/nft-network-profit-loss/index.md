@@ -4,8 +4,9 @@ author: Filip
 date: 2022-06-29
 description: NFT network realized profit/loss for all NFTs and for each NFT collection separately
 ---
-## Definition
+# NFT Network Profit Loss
 
+## Definition
 
 NFT Network Profit/Loss computes the average profit or loss of all NFTs 
 that change addresses. 

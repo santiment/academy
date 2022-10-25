@@ -3,6 +3,7 @@ title: How we compare
 author: Yura Zatsepin
 description: Which crypto analytics solution is right for you?
 ---
+# How we compare
 
 ## Which crypto analytics solution is right for you?
 

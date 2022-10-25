@@ -5,6 +5,7 @@ date: 2021-07-14
 description: The amount of messages/documents containing a given search term without spam
 # REF metrics-hub/metricshub/unique_social_volume.py
 ---
+# Unique Social Volume
 
 ## Definition
 

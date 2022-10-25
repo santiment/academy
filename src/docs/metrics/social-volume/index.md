@@ -5,6 +5,7 @@ date: 2020-04-13
 description: The amount of messages/documents containing a given search term
 # REF metrics-hub/metricshub/social_volume.py
 ---
+# Social Volume
 
 ## Definition
 

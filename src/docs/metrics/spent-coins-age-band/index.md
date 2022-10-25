@@ -4,6 +4,7 @@ author: Ante
 date: 2022-06-01
 description: The distribution by age of coins spend on a given day
 ---
+# Spent Coins Age Band
 
 ## Definition
 

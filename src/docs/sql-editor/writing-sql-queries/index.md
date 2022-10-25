@@ -4,8 +4,9 @@ author: Santiment Team
 date: 2022-08-17
 description: First steps in using SQL combined with Santiment's datasets
 ---
+# Writing SQL Queries
 
-# Overview
+## Overview
 
 This document introduces the reader to the basics of Clickhouse SQL and
 Santiment's datasets.

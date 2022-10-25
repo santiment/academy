@@ -4,6 +4,7 @@ author: Santiment Team
 date: 2022-04-18
 description: Development activity in public github repositories
 ---
+# Developer Activity
 
 ## Definition
 

@@ -4,6 +4,7 @@ author: Lyudmil
 date: 2022-02-08
 description: The total number of Binance perpetual contracts in existence.
 ---
+# Binance Perpetual Contracts Open Interest/Value (BUSD)
 
 ## Description
 

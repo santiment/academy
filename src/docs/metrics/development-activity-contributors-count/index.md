@@ -4,9 +4,9 @@ author: Santiment Team
 date: 2022-04-18
 description: Development activity contributors count in public Github repositories
 ---
+# Developer Activity Contributors Count
 
 ## Definition
-
 
 The development activity of a project is done in its public GitHub repositories.
 The work done in private repositories is hidden from the public and cannot be

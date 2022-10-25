@@ -2,6 +2,7 @@
 title: Keyboard Shortcuts
 author: Santiment Team
 ---
+# Keyboard Shortcuts
 
 ### Site wide shortcuts
 

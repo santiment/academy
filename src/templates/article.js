@@ -57,7 +57,7 @@ export const query = graphql`
       fields {
         lastUpdatedAt
       }
-      tableOfContents(maxDepth: 2)
+      tableOfContents(maxDepth: 3)
     }
   }
 `

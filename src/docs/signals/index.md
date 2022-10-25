@@ -3,6 +3,7 @@ title: Signals Overview
 author: Santiment Team
 date: 2021-05-27
 ---
+# Signals Overview
 
 We consider signal as some specific event happening at some point of time. Usually the signal is linked to the asset.
 

@@ -4,6 +4,7 @@ author: Maksim Razhev
 date: 2021-01-28
 description: ETH 2.0 Metrics
 ---
+# ETH 2.0 Metrics
 
 ## Description
 Metrics that show stats related to the ETH 2.0 Staking Contract

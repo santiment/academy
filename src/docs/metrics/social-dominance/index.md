@@ -5,6 +5,7 @@ date: 2022-10-18
 description: Share of the crypto discussions that refer to an asset/phrase
 # REF metrics-hub/metricshub/social_dominance.py
 ---
+# Social Dominance
 
 ## Definition
 

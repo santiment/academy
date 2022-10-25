@@ -3,6 +3,7 @@ title: Velocity - Technical
 author: Valentin
 date: 2020-04-08
 ---
+# Velocity - Technical
 
 `Velocity` is a metric which estimates the average frequency at which the
 tokens change hands during some period of time. It mimics to a large extent the

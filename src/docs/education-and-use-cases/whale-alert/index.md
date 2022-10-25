@@ -3,6 +3,8 @@ title: Sanbase Alerts Use Cases
 author: Daria Karpova
 date: 2022-04-04
 ---
+# Sanbase Alerts Use Cases
+
 Whale activity is one of the most intriguing metrics. Keeping a close eye on what the major players in the market are doing (depending on the asset could be addresses worth $1mn+) can be used for guiding your own crypto strategy.
 
 Most traders, predictably, are wary of making wrong decisions when the markets enter turbulent times. The risk of buying or selling at the wrong moment is too high: will the prices drop? Will they climb back up?
