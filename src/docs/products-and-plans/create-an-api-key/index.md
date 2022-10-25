@@ -2,7 +2,6 @@
 title: How to create an API key
 author: Santiment Team
 ---
-# How to create an API key
 
 All of our current products use the [Sanbase](https://app.santiment.net)
 account as reference. Sangraphs let you directly use Sanbase as a login

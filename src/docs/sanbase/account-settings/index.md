@@ -2,7 +2,6 @@
 title: Account settings
 author: Santiment Team
 ---
-# Account settings
 
 Tune your profile on https://app.santiment.net/account
 

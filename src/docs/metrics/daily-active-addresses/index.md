@@ -15,7 +15,6 @@ description: Number of unique addresses participating in transactions during one
 #
 # REF sanbase2/lib/sanbase/clickhouse/metric
 ---
-# Daily Active Addresses
 
 ## Definition
 

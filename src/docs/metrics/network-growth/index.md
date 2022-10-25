@@ -4,7 +4,6 @@ author: Santiment Team
 date: 2020-04-14
 description: Amount of addresses that transferred a given coin/token for the first time
 ---
-# Network Growth
 
 ## Definition
 

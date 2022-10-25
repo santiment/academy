@@ -4,7 +4,6 @@ author: Santiment Team
 date: 2021-01-12
 description: Instructions on how to pay with crypto
 ---
-# How to pay with crypto
 
 > **Note:** Payment in crypto is only available for yearly subscriptions, not for monthly ones.
 

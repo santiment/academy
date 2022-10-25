@@ -4,7 +4,6 @@ author: Anatoliy
 date: 2020-06-03
 description: The total number of BitMEX perpetual contracts in existence.
 ---
-# BitMEX Perpetual Contracts Open Interest/Value
 
 ## Description
 

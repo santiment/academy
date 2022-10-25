@@ -4,7 +4,6 @@ author: Maksim Razhev, Serge Nedashkovsky
 date: 2021-01-25
 description: DEX Metrics
 ---
-# Decentralized Exchanges
 
 ## Description
 Metrics related to Decentralized Exchanges (DEX) trades of ERC20 tokens and ETH.

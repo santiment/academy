@@ -3,7 +3,6 @@ title: Assets Overview page
 author: Santiment Team
 description: This page shows a fast overview on your watchlists and common categories
 ---
-# Assets Overview page
 
 ## Structure
 

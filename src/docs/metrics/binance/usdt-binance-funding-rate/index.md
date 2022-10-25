@@ -4,7 +4,6 @@ author: Lyudmil
 date: 2021-08-25
 description: Amount of coin/tokens moved on-chain.
 ---
-# Binance Contract Funding Rate (USDT)
 
 ## Description
 

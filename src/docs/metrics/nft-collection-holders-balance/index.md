@@ -4,8 +4,6 @@ author: Filip
 date: 2022-06-17
 description: Average balance of all holders of NFT collection
 ---
-# NFT Collection Holders Balance
-
 ## Definition
 
 This metric represents average balance of collection holders 

@@ -4,7 +4,6 @@ author: Alex
 date: 2021-12-08
 description: Signal indicating a new price USD All Time High is reached.
 ---
-# ATH price USD
 
 ## Definition
 

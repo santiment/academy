@@ -4,7 +4,6 @@ author: Yury
 date: 2022-04-21
 description: Metric returns historical balance for a chain address / contract
 ---
-# Historical Balance
 
 ## Definition
 

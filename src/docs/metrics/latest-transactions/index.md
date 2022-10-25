@@ -4,7 +4,6 @@ author: Yury
 date: 2022-04-21
 description: Get latest transactions for a chain address
 ---
-# Latest Transactions
 
 ## Definition
 

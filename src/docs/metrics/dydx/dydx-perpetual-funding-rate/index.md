@@ -4,7 +4,6 @@ author: Lyudmil
 date: 2022-02-08
 description: Amount of coin/tokens moved on-chain.
 ---
-# dYdX Contract Funding Rate
 
 ## Description
 

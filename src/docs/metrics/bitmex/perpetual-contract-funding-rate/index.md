@@ -4,7 +4,6 @@ author: Anatoliy
 date: 2020-06-03
 description: Amount of coin/tokens moved on-chain.
 ---
-# BitMEX Perpetual Contract Funding Rate
 
 ## Description
 

@@ -3,7 +3,6 @@ title: Youtube webinars
 author: Santiment Team
 date: 2021-05-24
 ---
-# Youtube webinars
 
 ## Top on-chain 'valuation' metrics and how to use them (Public Webinar)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DfcvFdhpDAo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

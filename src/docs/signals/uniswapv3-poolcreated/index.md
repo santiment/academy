@@ -4,7 +4,6 @@ author: Vlad
 date: 2021-12-27
 description: Signal shows that new pool was created.
 ---
-# UniswapV3 PoolCreated
 
 ## Definition
 

@@ -2,7 +2,6 @@
 title: Deposit Addresses
 author: Santiment Team
 ---
-# Deposit Addresses
 
 ## What are deposit addresses?
 

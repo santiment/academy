@@ -4,8 +4,6 @@ author: Filip
 date: 2022-06-01
 description: Rank of asset in top trending words
 ---
-# Trending Words Rank
-
 ## Definition
 
 Trending Words Rank is build on top of the [Social Data](/metrics/details/social-data).

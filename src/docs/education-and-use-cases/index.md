@@ -2,8 +2,6 @@
 title: Education and Use cases
 author: Dino Ibisbegovic
 ---
-# Education and Use cases
-
 - [Sanbase Alerts - Age Consumed example](/education-and-use-cases/alerts-on-sanbase/)
 - [Sanbase Alerts - Social Trends / Trending words example](/education-and-use-cases/social-trends-alerts/)
 - [Sanbase Alerts - Whale Alert example](/education-and-use-cases/whale-alert/)

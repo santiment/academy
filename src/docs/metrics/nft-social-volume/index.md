@@ -4,7 +4,6 @@ author: Ilya
 date: 2022-05-15
 description: The amount of messages/documents containing a mention of NFT Collection
 ---
-# NFT Social Volume
 
 ## Definition
 

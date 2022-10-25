@@ -3,7 +3,6 @@ title: Queries
 author: Santiment Team
 date: 2020-04-06
 ---
-# Queries
 
 ## Available queries per project
 

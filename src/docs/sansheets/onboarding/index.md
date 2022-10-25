@@ -3,7 +3,6 @@ title: Sansheets Onboarding article
 description: Learn all the necessary steps to get Sansheets up and running!
 author: Santiment Team
 ---
-# Sansheets Onboarding article
 
 > **Note**: In order to enable your computer and Google Sheets documents to use Sansheets, you must be a Sanbase Pro subscriber. If you are a free user, you may still view templates made by our staff and community members. But you will need to become a Pro member for our powerful Sansheets add-on to be a tool you can use yourself.
 

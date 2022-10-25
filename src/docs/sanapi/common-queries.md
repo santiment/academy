@@ -3,11 +3,10 @@ title: Common Queries
 author: Santiment Team
 date: 2021-08-26
 ---
-# Common Queries
 
 Here are several of the most common queries to the SanAPI. 
 
-## Get multiple assets data in a single API call
+### Get multiple assets data in a single API call
 
 This query returns data for the group of assets. You can provide a list of
 assets via a special selector ```slugs```
@@ -35,7 +34,7 @@ Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variabl
 > Note if you want to get latest data you can use "utc_now"
 > as a value for ```to``` argument instead of using date methods.
 
-## Get 1 sec resolution
+### Get 1 sec resolution
 
 If the price changed every 1 second in a given interval, then you can fetch it from our API
 
@@ -57,7 +56,7 @@ If the price changed every 1 second in a given interval, then you can fetch it f
 ```
 Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%20slug%3A%20%22bitcoin%22%20source%3A%20%22cryptocompare%22%20%7D%0A%20%20%20%20%20%20from%3A%20%22utc_now-1m%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20interval%3A%20%221s%22%0A%20%20%20%20%20%20cachingParams%3A%20%7BbaseTtl%3A%201%2C%20maxTtlOffset%3A%201%7D%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
 
-## Get aggregation for many assets
+### Get aggregation for many assets
 
 If you want to get only the latest data for MVRV for 3 assets. You can solve it using several queries.
 This one possible is the simplest solution.
@@ -72,7 +71,7 @@ This one possible is the simplest solution.
 ```
 Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20allProjects(selector%3A%20%7BbaseProjects%3A%20%7Bslugs%3A%20%5B%22ethereum%22%2C%20%22bitcoin%22%2C%20%22aave%22%5D%7D%7D)%20%7B%0A%20%20%20%20slug%0A%20%20%20%20aggregatedTimeseriesData(metric%3A%20%22mvrv_usd_intraday_365d%22%2C%20from%3A%20%22utc_now-1d%22%2C%20to%3A%20%22utc_now%22%2C%20aggregation%3A%20LAST)%0A%0A%20%20%7D%0A%7D%0A)
 
-## Get all available slugs for any metric 
+### Get all available slugs for any metric 
 
 ```graphql
 {
@@ -85,7 +84,7 @@ Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variabl
 ```
 Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22mcd_liquidation%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
 
-## Get current price for all available assets on Sanbase 
+### Get current price for all available assets on Sanbase 
 
 ```graphql
 {
@@ -101,7 +100,7 @@ Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variabl
 ```
 Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20price%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22price_usd%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-1d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20aggregation%3A%20LAST)%0A%20%20%7D%0A%7D%0A)
 
-## Get current trending words
+### Get current trending words
 
 ```graphql
 {

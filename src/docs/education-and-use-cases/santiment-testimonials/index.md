@@ -2,7 +2,6 @@
 title: Santiment Testimonials
 author: Santiment team
 ---
-# Santiment Testimonials
 
 ### by qz255
 

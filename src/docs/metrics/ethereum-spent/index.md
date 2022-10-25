@@ -4,7 +4,6 @@ author: Ivan
 date: 2020-06-29
 description: Ethereum spent of ERC20 project ICO wallets
 ---
-# Ethereum Spent
 
 ## Definition
 

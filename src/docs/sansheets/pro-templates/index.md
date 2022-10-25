@@ -2,7 +2,6 @@
 title: Sansheets Pro Templates
 author: Brian Quinlivan
 ---
-# Sansheets Pro Templates
 
 ## The Perks of Being a Pro Subscriber on Sanbase
 

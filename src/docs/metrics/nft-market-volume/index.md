@@ -4,8 +4,6 @@ author: Filip
 date: 2022-07-12
 description: Daily market volume in ETH, and daily market count for NFT collections
 ---
-# NFT Market Volume/Count
-
 ## Definition
 
 NFT Market Volume/Count is metric which calculates market count and the market volume 

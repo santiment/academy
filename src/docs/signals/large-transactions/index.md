@@ -4,7 +4,6 @@ author: Katsiaryna
 date: 2021-04-26
 description: Signal indicating transactions with big value in USD
 ---
-# Large Transactions
 
 ## Definition
 

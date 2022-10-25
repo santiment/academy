@@ -4,7 +4,6 @@ author: Alex
 date: 2021-12-08
 description: Signal indicating a large portion of old coins were moved.
 ---
-# Old Coins Moved
 
 ## Definition
 

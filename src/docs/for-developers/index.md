@@ -4,7 +4,6 @@ author: Ivan
 date: 2020-04-06
 description: Technical documentation on Santiment metrics and indicators. Understand the calculations, logic and algorithms behind our metrics - many of them custom-built by the Santiment Team.
 ---
-# Getting started for developers
 
 ## Overview
 

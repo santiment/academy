@@ -4,7 +4,6 @@ author: Santiment Team
 date: 2022-08-17
 description: What is this tool and why it exists
 ---
-# Introducing the SQL Editor
 
 ## Overview 
 

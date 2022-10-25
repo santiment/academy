@@ -4,7 +4,6 @@ author: Santiment Team
 date: 2022-08-17
 description: Database explorer & research tool
 ---
-# SQL Editor
 
 The SQL Editor gives access to a Clickhouse Database cluster that holds crypto-related on-chain, financial, social and development activity data.
 

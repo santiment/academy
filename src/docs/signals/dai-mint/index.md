@@ -4,7 +4,6 @@ author: Alex
 date: 2021-02-11
 description: Signal indicating a large DAI portion was minted
 ---
-# DAI Mint
 
 ## Definition
 

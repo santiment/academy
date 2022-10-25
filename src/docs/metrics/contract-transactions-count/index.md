@@ -4,7 +4,6 @@ author: Yury
 date: 2022-04-21
 description: Get transactions count for a chain address / contract
 ---
-# Transactions Count
 
 ## Definition
 

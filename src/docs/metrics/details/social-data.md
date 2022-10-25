@@ -3,7 +3,6 @@ title: Social Data
 author: Ivan Ivanov, Ivan Klimuk
 date: 2021-11-2
 ---
-# Social Data
 
 ## Definition
 

@@ -5,7 +5,6 @@ date: 2020-04-13
 description: Number of messages in a project's community chat server
 # REF metrics-hub/metricshub/community_messages.py
 ---
-# Community Messages Count
 
 ## Definition
 

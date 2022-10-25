@@ -4,7 +4,6 @@ author: Santiment Team
 date: 2021-05-27
 description: Platform for in-depth coin analysis, low-latency signals, asset watchlists
 ---
-# Sanbase
 
 Platform for in-depth coin analysis, low-latency signals, asset watchlists
 

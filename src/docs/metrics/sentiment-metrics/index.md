@@ -7,7 +7,6 @@ date: 2021-08-24
 # REF metrics-hub/metricshub/sentiment_balance.py
 # REF metrics-hub/metricshub/sentiment_volume_consumed.py
 ---
-# Sentiment Metrics
 
 ## Sentiment Analysis
 

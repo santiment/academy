@@ -3,7 +3,6 @@ title: Stack Coin Age Model
 author: Santiment Team
 date: 2020-04-02
 ---
-# Stack Coin Age Model
 
 ## Overview
 

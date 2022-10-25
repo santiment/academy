@@ -3,7 +3,6 @@ title: Youtube Walkthroughs
 author: Santiment Team
 date: 2021-05-26
 ---
-# Youtube Walkthroughs
 
 ## Walking Through SanR
 #### SanR - The First Blockchain-Backed, Price Prediction Marketplace

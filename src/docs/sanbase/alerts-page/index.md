@@ -3,8 +3,6 @@ title: Alerts page
 author: Santiment Team
 description: Create your own alerts or subscribe to existing, watch recent activity, manage your alerts, share them with other users
 ---
-# Alerts page
-
 Start using **Alerts** on Sanbase here: https://app.santiment.net/alerts
 
 ## Intro

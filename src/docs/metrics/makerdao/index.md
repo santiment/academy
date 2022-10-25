@@ -4,7 +4,6 @@ author: Maksim Razhev, Serge Nedashkovsky
 date: 2021-01-28
 description: MakerDAO Metrics
 ---
-# MakerDAO
 
 ## Description
 Metrics related to MakerDAO protocols.

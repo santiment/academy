@@ -2,7 +2,6 @@
 title: Santiment products and plans
 author: Santiment Team
 ---
-# Santiment products and plans
 
 - [Access plans](/products-and-plans/access-plans/)
 - [Santiment products](/products-and-plans/santiment-products/)

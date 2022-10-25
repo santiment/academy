@@ -3,7 +3,6 @@ title: Change Metrics
 author: Ivan
 date: 2022-04-12
 ---
-# Change Metrics
 
 - [Definition](#definition)
 - [Units](#units)

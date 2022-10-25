@@ -2,7 +2,6 @@
 title: How to create a correlation matrix as Cryptowatch.io has?
 author: Yura Zatsepin
 ---
-# How to create a correlation matrix as Cryptowatch.io has?
 
 Let's show a sample how powerfull and easy to use Google Sheets Integration of
 Santiment data. In this article you will understand how to create a correlation

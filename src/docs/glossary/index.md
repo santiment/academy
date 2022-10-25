@@ -2,7 +2,6 @@
 title: API Glossary
 author: Ivan
 ---
-# API Glossary
 
 Find the meaning of terms used throughout the documentation
 

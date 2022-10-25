@@ -3,7 +3,6 @@ title: Latency
 author: Ivan
 date: 2020-04-10
 ---
-# Latency
 
 - [Timeseries Data](#timeseries-data)
 - [Histogram Data](#histogram-data)

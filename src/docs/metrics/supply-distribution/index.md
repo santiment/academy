@@ -3,7 +3,6 @@ title: Supply Distribution
 author: Santiment Team
 date: 2020-08-24
 ---
-# Supply Distribution
 
 ## Definition
 

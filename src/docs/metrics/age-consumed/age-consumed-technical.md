@@ -3,7 +3,6 @@ title: Token Age Consumed - Technical Details
 author: Ivan Ivanov, Tzanko Matev
 date: 2021-11-22
 ---
-# Token Age Consumed - Technical Details
 
 We will describe here one statistic that we call the _token age consumed_. This
 is a measurement that detects changes in the volume of the token circulation and
@@ -46,12 +45,12 @@ Also, the sum $s_1+\cdots+s_k$ equals the current balance of the account.
 Assume that the current block number is $t$. There are several cases regarding
 the account $a$:
 
-## No transactions
+### No transactions
 
 In that case the contribution $tac(a,t)$ (token age consumed) of the account $a$
 towards the token age consumed at block $t$ is 0.
 
-## Incoming transaction
+### Incoming transaction
 
 In that case, we need to put the amount of the incoming transaction at the top of
 our stack. If that amount was $s$, the new stack becomes
@@ -63,7 +62,7 @@ $$
 In that case the contribution $tac(a,t)$ of the account $a$ towards the token
 age consumed at block $t$ is 0.
 
-## Outgoing transaction
+### Outgoing transaction
 
 The outgoing transaction will _consume_ the elements at the top of the stack. If
 the amount of the transaction was $s$, then all elements $(s_i, t_i)$ such that
@@ -87,7 +86,7 @@ which means all elements will be fully consumed, and their age is added
 to the whole contribution, while the last consumed stack can be only partially
 consumed.
 
-## Multiple transactions
+### Multiple transactions
 
 If there were multiple incoming and/or outgoing transactions happening at the
 same block number $t$, we replace them in our calculations with a single
@@ -102,7 +101,7 @@ $$
 tac(t) := \sum_{a} tac(a,t)
 $$
 
-## Example
+### Example
 
 Imagine again that Alice and Bob are exchanging tokens. Initially, Alice had 5000
 tokens, which she obtained at block 0, and Bob doesn't have any tokens.

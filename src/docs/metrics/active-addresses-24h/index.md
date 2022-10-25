@@ -3,8 +3,8 @@ title: Active Addresses 24h
 author: Ivan
 date: 2022-04-12
 description: Number of unique addresses participating in transactions for the last 24 hour window
+
 ---
-# Active Addresses 24h
 
 ## Definition
 

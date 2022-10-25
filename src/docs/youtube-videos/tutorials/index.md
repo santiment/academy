@@ -3,7 +3,7 @@ title: Youtube tutorials
 author: Santiment Team
 date: 2021-08-24
 ---
-# Youtube tutorials
+
 
 ## Santiment Screener
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4H5FlcJwi5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

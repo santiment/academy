@@ -4,7 +4,6 @@ author: Maksim Razhev
 date: 2021-01-28
 description: Labeled Flow Metrics
 ---
-# Labeled Flow Metrics
 
 ## Description
 Metrics that shows token flow between labels and labeled balances

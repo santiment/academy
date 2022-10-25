@@ -4,7 +4,6 @@ author: Santiment Team
 date: 2021-11-25
 description: Amount of coins/token going in or out of exchanges
 ---
-# Exchange Inflow/Outflow
 
 ## Definition
 

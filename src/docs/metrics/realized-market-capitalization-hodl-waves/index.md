@@ -4,7 +4,6 @@ author: Ante
 date: 2022-06-01
 description: Percent of interval Realized Marketcap in total Realized Marketcap
 ---
-# Realized Market Capitalization Hodl Waves
 
 ## Definition
 

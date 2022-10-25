@@ -3,7 +3,6 @@ title: Mean Coin Age - Technical Details
 author: Tzanko Matev
 date: 2021-11-22
 ---
-# Mean Coin Age - Technical Details
 
 ## Definition
 

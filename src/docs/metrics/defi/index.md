@@ -4,8 +4,6 @@ author: Serge Nedashkovsky, Maksim Razhev, Anatoliy
 date: 2020-12-24
 description: DeFi Metrics
 ---
-# DeFi
-
 # Special metrics
 ### [MakerDAO metrics](/metrics/makerdao)
 

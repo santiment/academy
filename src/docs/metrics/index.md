@@ -3,7 +3,6 @@ title: Metrics Overview
 author: Santiment Team
 date: 2022-04-21
 ---
-# Metrics Overview
 
 Santiment brings a comprehensive set of metrics together in one place so you can
 get a better picture of what’s happening with your favorite crypto assets and/or

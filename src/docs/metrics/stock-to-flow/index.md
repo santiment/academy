@@ -4,7 +4,6 @@ author: Tsetso
 date: 2020-06-12
 description: Stock To Flow ratio modeal is a measure of scarcity/abundance of particular resource.
 ---
-# Stock To Flow ratio
 
 ## Definition
 

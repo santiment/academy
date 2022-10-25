@@ -3,7 +3,6 @@ title: Setting up Sansheets
 description: To add Sansheets to your Google Sheets first open a spreadsheet. It can be a fresh one. You will find the option "Get add-ons..."" in the top navigation under...
 author: Max Bartel
 ---
-# Setting up Sansheets
 
 ## Install Sansheets
 
