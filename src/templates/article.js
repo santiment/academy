@@ -24,7 +24,7 @@ const Template = ({ data, pageContext }) => {
     new Date(article.fields.lastUpdatedAt)
   )
 
-  const rayBodyWithTitle = `# ${article.frontmatter.title}\n${article.rawMarkdownBody}`
+  const rawyBodyWithTitle = `# ${article.frontmatter.title}\n${article.rawMarkdownBody}`
 
   return (
     <Layout isShowSidebar={true}>
@@ -37,7 +37,7 @@ const Template = ({ data, pageContext }) => {
           title={article.frontmatter.title}
         />
         <Markdown
-          markdown={injectCustomMarkdownComponents(rayBodyWithTitle)}
+          markdown={injectCustomMarkdownComponents(rawyBodyWithTitle)}
         />
         <ArticleFooter lastUpdatedAt={lastUpdatedAt} />
       </div>
