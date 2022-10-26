@@ -65,30 +65,29 @@
   cursor: pointer;
   padding: 8px 10px;
   margin-right: 2px;
-  transform: scale(1.2);
-
-  &:hover {
-    background-color: var(--jungle-green-light-2);
-  }
 }
 
 .category {
-  border-radius: 4px;
+  border-radius: 6px;
   margin-left: -10px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 4px 10px;
   @include text("body-2");
 
   &__title {
     width: 100%;
-    padding: 2px 0 2px 10px;
     color: var(--rhino);
   }
 
+  &__active &__title {
+    color: var(--jungle-green);
+  }
+
   &__wrapper {
-    margin: 11px 9px 11px 0;
+    margin: 12px 0 14px 0;
   }
 
   &__active {
@@ -103,17 +102,13 @@
 
   &__opened .articles {
     height: auto;
-    margin: 16px 0 16px;
+    margin: 17px 0 17px;
     overflow: visible;
   }
 
   &__opened .arrow {
     visibility: visible;
-    transform: rotate(90deg) scale(1.2);
-
-    &:hover {
-      background-color: var(--jungle-green-light-2);
-    }
+    transform: rotate(90deg);
   }
 
   &__opened .category {
