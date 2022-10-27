@@ -51,7 +51,7 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-transition-group": "^4.3.0",
     "remark-math": "^2.0.0",
-    "san-webkit": "https://github.com/santiment/san-webkit#fa2e3b1",
+    "san-webkit": "https://github.com/santiment/san-webkit#161165f",
     "svelte": "^3.46.3",
     "svelte-loader": "^2.13.6"
   },

@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const path = require(`path`)
-const { execSync } = require("child_process")
+const { execSync } = require('child_process')
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { onPostBuild } = require('gatsby-plugin-meta-redirect/gatsby-node')
 
@@ -15,10 +15,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
     // node.fileAbsolutePath is used for each file separately
     // if we remove it all updated at values would be the same as this file modified date
-    const lastUpdatedAt = execSync(`git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`).toString()
+    const lastUpdatedAt = execSync(
+      `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
+    ).toString()
     createNodeField({
       node,
-      name: "lastUpdatedAt",
+      name: 'lastUpdatedAt',
       value: lastUpdatedAt,
     })
   }
@@ -86,6 +88,8 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       new webpack.DefinePlugin({
         'process.env.MEDIA_PATH': JSON.stringify('/static/webkit'),
         'process.env.ICONS_PATH': JSON.stringify('/static/webkit/icons'),
+        'process.env.GQL_SERVER_URL':
+          '`https://api${window.location.hostname.includes("stage") ? "-stage" : ""}.santiment.net/graphql`',
       }),
     ],
   })
