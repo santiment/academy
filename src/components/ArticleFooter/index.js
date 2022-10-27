@@ -26,7 +26,7 @@ const ArticleLastUpdate = ({ lastUpdatedAt }) => (
   </div>
 )
 
-const DiscordCTA = ({isSmall}) => (
+const DiscordCTA = ({ isSmall }) => (
   <a
     className={cx('row', styles.discordCTA, isSmall && styles.small)}
     href="https://santiment.net/discord"
@@ -40,7 +40,9 @@ const DiscordCTA = ({isSmall}) => (
         Still have some questions left? Join our Discord and get help from the
         Santiment team!
       </p>
-      <span className="btn-0">Go to Discord <ArrowRight /></span>
+      <span className="btn-0">
+        Go to Discord <ArrowRight />
+      </span>
     </div>
   </a>
 )
