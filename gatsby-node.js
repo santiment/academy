@@ -1,8 +1,8 @@
-const webpack = require('webpack')
+const webpack = require("webpack")
 const path = require(`path`)
 const { execSync } = require("child_process")
 const { createFilePath } = require(`gatsby-source-filesystem`)
-const { onPostBuild } = require('gatsby-plugin-meta-redirect/gatsby-node')
+const { onPostBuild } = require("gatsby-plugin-meta-redirect/gatsby-node")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -15,7 +15,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     })
     // node.fileAbsolutePath is used for each file separately
     // if we remove it all updated at values would be the same as this file modified date
-    const lastUpdatedAt = execSync(`git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`).toString()
+    const lastUpdatedAt = execSync(
+      `git log -1 --pretty=format:%aI ${node.fileAbsolutePath}`
+    ).toString()
     createNodeField({
       node,
       name: "lastUpdatedAt",
@@ -42,14 +44,14 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { createRedirect } = actions
   createRedirect({
-    fromPath: '/metrics/mvrv/',
-    toPath: '/metrics/mvrv-ratio/',
+    fromPath: "/metrics/mvrv/",
+    toPath: "/metrics/mvrv-ratio/",
     isPermanent: true,
     redirectInBrowser: true,
   })
   createRedirect({
-    fromPath: '/metrics/holders-distribution/',
-    toPath: '/metrics/supply-distribution/',
+    fromPath: "/metrics/holders-distribution/",
+    toPath: "/metrics/supply-distribution/",
     isPermanent: true,
     redirectInBrowser: true,
   })
@@ -67,7 +69,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        webkit: path.resolve('node_modules/san-webkit/lib'),
+        webkit: path.resolve("node_modules/san-webkit/lib"),
       },
     },
 
@@ -76,7 +78,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         {
           test: /\.svelte/,
           use: {
-            loader: 'svelte-loader',
+            loader: "svelte-loader",
           },
         },
       ],
@@ -84,8 +86,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 
     plugins: [
       new webpack.DefinePlugin({
-        'process.env.MEDIA_PATH': JSON.stringify('/static/webkit'),
-        'process.env.ICONS_PATH': JSON.stringify('/static/webkit/icons'),
+        "process.env.MEDIA_PATH": JSON.stringify("/static/webkit"),
+        "process.env.ICONS_PATH": JSON.stringify("/static/webkit/icons"),
+        "process.env.GQL_SERVER_URL":
+          '`https://api${window.location.hostname.includes("stage") ? "-stage" : ""}.santiment.net/graphql`',
       }),
     ],
   })

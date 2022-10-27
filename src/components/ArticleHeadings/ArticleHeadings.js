@@ -1,8 +1,20 @@
-import React from 'react'
-import { useSidenavItems } from './hooks'
-import { usePageHash } from '../../utils/utils'
-import cx from 'classnames'
-import styles from './ArticleHeadings.module.scss'
+import React, { useEffect, useRef } from "react"
+import AcademySvelte from "webkit/ui/Halloween/Academy.svelte"
+import { useSidenavItems } from "./hooks"
+import { isSSR, usePageHash } from "../../utils/utils"
+import cx from "classnames"
+import styles from "./ArticleHeadings.module.scss"
+
+const Halloween = () => {
+  const ref = useRef()
+
+  useEffect(() => {
+    const svelte = new AcademySvelte({ target: ref.current })
+    return () => svelte.$destroy()
+  }, [])
+
+  return <li ref={ref} className={styles.halloween} />
+}
 
 export const ArrowRight = () => (
   <svg
@@ -28,16 +40,16 @@ export const ArrowRight = () => (
 )
 
 const TOPICS = {
-  sanbase: { href: 'https://app.santiment.net/', title: 'Sanbase' },
-  sanapi: { href: 'https://api.santiment.net/', title: 'Sanapi' },
-  sansheets: { href: 'https://sheets.santiment.net/', title: 'Sansheets' },
-  'sql-editor': {
-    href: 'https://app.santiment.net/queries',
-    title: 'SQL Editor',
+  sanbase: { href: "https://app.santiment.net/", title: "Sanbase" },
+  sanapi: { href: "https://api.santiment.net/", title: "Sanapi" },
+  sansheets: { href: "https://sheets.santiment.net/", title: "Sansheets" },
+  "sql-editor": {
+    href: "https://app.santiment.net/queries",
+    title: "SQL Editor",
   },
-  'youtube-videos': {
-    href: 'https://www.youtube.com/c/santimentnetwork',
-    title: 'Youtube channel',
+  "youtube-videos": {
+    href: "https://www.youtube.com/c/santimentnetwork",
+    title: "Youtube channel",
   },
 }
 
@@ -46,6 +58,7 @@ const ArticleHeadings = ({ tableOfContents, crumbs = [], title }) => {
   const { pageHash, scrollToTargetAdjusted } = usePageHash(elementIDs)
   const topic = crumbs.length > 1 && crumbs[1].crumbLabel
   const appLink = topic && TOPICS[topic]
+
 
   return (
     <ul className={styles.list}>
@@ -72,13 +85,14 @@ const ArticleHeadings = ({ tableOfContents, crumbs = [], title }) => {
             className={cx(
               styles.heading,
               depth === 2 && styles.second,
-              depth === 3 && styles.third,
+              depth === 3 && styles.third
             )}
           >
             {value}
           </a>
         </li>
       ))}
+      {!isSSR && topic === 'san-tokens' <Halloween />}
     </ul>
   )
 }
