@@ -92,7 +92,7 @@ const ArticleHeadings = ({ tableOfContents, crumbs = [], title }) => {
           </a>
         </li>
       ))}
-      {!isSSR && topic === 'san-tokens' <Halloween />}
+      {!isSSR && topic === "san-tokens" && <Halloween />}
     </ul>
   )
 }
