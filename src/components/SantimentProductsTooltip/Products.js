@@ -3,7 +3,6 @@ import sanapi from './icons/sanapi.svg'
 import sanbase from './icons/sanbase.svg'
 import insights from './icons/insights.svg'
 import sansheets from './icons/sansheets.svg'
-import sanhunters from './icons/sanhunters.svg'
 
 export const BUSINESS_PRODUCTS = [
   {
@@ -33,12 +32,6 @@ export const CHAIN_PRODUCTS = [
     title: 'SanR',
     description: 'Decentralized marketplace for crypto price signals',
     to: 'https://sanr.app',
-  },
-  {
-    img: sanhunters,
-    title: 'Sanhunters',
-    description: 'Get rewarded for market research and your crypto know-how',
-    to: 'https://hunters.santiment.net',
   },
   {
     img: insights,

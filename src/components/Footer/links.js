@@ -41,7 +41,7 @@ export const categories = [
       {
         children: 'trends',
         name: 'Social trends',
-        href: 'https://app.santiment.net/labs/trends',
+        href: 'https://app.santiment.net/dashboards/social-tool',
       },
       {
         children: 'balance',
@@ -50,8 +50,8 @@ export const categories = [
       },
       {
         children: 'buy',
-        name: 'Buy SAN',
-        href: 'https://academy.santiment.net/san-tokens/how-to-buy-san/',
+        name: 'Buy SAN Tokens',
+        href: 'https://academy.santiment.net/san-tokens/how-to-buy-san-tokens/',
       },
     ],
   },
@@ -76,10 +76,6 @@ export const categories = [
         children: 'Sangraphs',
         name: 'Graphs',
         href: 'https://graphs.santiment.net/',
-      },
-      {
-        name: 'Sanhunters',
-        href: 'https://hunters.santiment.net/',
       },
     ],
   },
