@@ -33,7 +33,7 @@
     "katex": "^0.11.1",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "npm": "^6.12.0",
     "patch-package": "^6.4.7",
     "phoenix": "^1.6.6",
