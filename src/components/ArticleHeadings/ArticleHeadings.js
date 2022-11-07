@@ -1,20 +1,8 @@
-import React, { useEffect, useRef } from 'react'
-import AcademySvelte from 'webkit/ui/Halloween/Academy.svelte'
+import React from 'react'
 import { useSidenavItems } from './hooks'
-import { isSSR, usePageHash } from '../../utils/utils'
+import { usePageHash } from '../../utils/utils'
 import cx from 'classnames'
 import styles from './ArticleHeadings.module.scss'
-
-const Halloween = () => {
-  const ref = useRef()
-
-  useEffect(() => {
-    const svelte = new AcademySvelte({ target: ref.current })
-    return () => svelte.$destroy()
-  }, [])
-
-  return <li ref={ref} className={styles.halloween} />
-}
 
 export const ArrowRight = () => (
   <svg
@@ -91,7 +79,6 @@ const ArticleHeadings = ({ tableOfContents, crumbs = [], title }) => {
           </a>
         </li>
       ))}
-      {!isSSR && topic === 'san-tokens' && <Halloween />}
     </ul>
   )
 }
