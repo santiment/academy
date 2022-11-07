@@ -4,7 +4,7 @@ author: Santiment Team
 ---
 Santiment Network Token (SAN)
 
-SAN token is an ERC-20 token issued by Santiment on the Ethereum blockchain. Santiment and is a market data and analytic research platform that aims to help crypto beginners and experts by providing in-depth and accessible analyses of the market's condition at any given time.
+SAN token is an ERC-20 token issued by Santiment on the Ethereum blockchain. Santiment is a market data and analytic research platform that aims to help crypto beginners and experts by providing in-depth and accessible analyses of the market's condition at any given time.
 
 ## [How to buy SAN tokens](/san-tokens/how-to-buy-san-tokens/)
 
