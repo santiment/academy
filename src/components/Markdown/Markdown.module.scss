@@ -26,20 +26,20 @@
   h2 {
     color: var(--rhino);
     @include text("h4");
-    margin: 28px 0 24px;
+    margin: 56px 0 24px;
     font-weight: 500;
   }
 
   h3 {
     color: var(--rhino);
     @include text("h4");
-    margin: 20px 0 12px;
+    margin: 40px 0 24px;
   }
 
   h4, h5 {
     color: var(--rhino);
     @include text("body-1", "l");
-    margin: 12px 0 8px;
+    margin: 12px 0 16px;
   }
 
   h1,

@@ -28,19 +28,19 @@ You can use decentralized exchanges or decentralized exchange aggregators to swa
 
 The SAN token is also available on [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098&inputCurrency=ETH) at the best rates. 
 
-![Uniswap](Uniswap.png)
+![noborder](Uniswap.png)
 
 #### Kyber
 
 San tokens are also available on [Kyber](https://kyber.network/) via [Kyber Swap](https://kyberswap.com/swap/ethereum/eth-to-san). If you don’t have any crypto, you may get it on [Kyber](https://kyberswap.com/buy-crypto) using your credit card.
 
-![Kyberswap](Kyber.png)
+![noborder](Kyber.png)
 
 #### Bancor
 
 The SAN token is available on [Bancor](https://app.bancor.network/trade?from=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&to=0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098). Once you connect your Metamask, you can [purchase ETH on Bancor](https://app.bancor.network/fiat) using your credit card to swap for SAN Tokens afterward.
 
-![Bancor](Bancor.png)
+![noborder](Bancor.png)
 
 ### Decentralized exchange aggregators
 
