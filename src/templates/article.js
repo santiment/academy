@@ -9,6 +9,7 @@ import ArticleHeadings from '../components/ArticleHeadings/ArticleHeadings'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 import ArticleFooter from '../components/ArticleFooter'
 import injectCustomMarkdownComponents from '../components/MarkdownCustomComponents'
+import { sluggify } from '../components/Markdown/utils'
 import styles from './article.module.scss'
 
 const Template = ({ data, pageContext }) => {
@@ -29,7 +30,7 @@ const Template = ({ data, pageContext }) => {
   return (
     <Layout isShowSidebar={true}>
       <SEO {...meta} />
-      <div className={cx(styles.wrapper, 'container')}>
+      <div className={cx(styles.wrapper, 'container', sluggify(article.frontmatter.title))}>
         <Breadcrumb crumbs={crumbs} crumbLabel={article.frontmatter.title} />
         <ArticleHeadings
           crumbs={crumbs}
