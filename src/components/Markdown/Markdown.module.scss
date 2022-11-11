@@ -340,3 +340,8 @@
     background: transparent;
   }
 }
+
+:global(.san-tokens h2) {
+  font-weight: 400;
+  margin: 32px 0 12px;
+}
