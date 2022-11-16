@@ -81,18 +81,18 @@ export const usePageHash = (elementIDs = []) => {
     return () => !isSSR && window.removeEventListener('scroll', scrollListender)
   }, [elementIDs, scrollListenderEnabled])
 
-  function scrollToTargetAdjusted(e, id, headerOffset = 95) {
+  function scrollToTargetAdjusted(e, id, hasCopy = false) {
     e.preventDefault()
     setScrollListenderEnabled(false)
     let element = document.getElementById(id)
     let elementPosition = element.getBoundingClientRect().top
-    let offsetPosition = elementPosition + window.pageYOffset - headerOffset
+    let offsetPosition = elementPosition + window.pageYOffset - 95
     window.scrollTo({
       top: offsetPosition,
       behavior: 'smooth',
     })
     updateHash(`#${id}`)
-    if (!isSSR) copy(document.URL)
+    if (!isSSR && hasCopy) copy(document.URL)
   }
 
   return {
