@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useLocation } from '@reach/router'
+import copy from 'copy-to-clipboard'
 
 export const isLocalStorage = () => {
   if (
@@ -91,6 +92,7 @@ export const usePageHash = (elementIDs = []) => {
       behavior: 'smooth',
     })
     updateHash(`#${id}`)
+    if (!isSSR) copy(document.URL)
   }
 
   return {
