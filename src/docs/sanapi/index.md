@@ -53,6 +53,10 @@ browser:
 [GraphQL Request fetching transaction
 volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)
 
+A version of the GraphiQL that is useful to API users is  https://api.santiment.net/graphiql_advanced 
+It allows adding HTTP headers, which can be used to add an API key, so the requests are authenticated.
+To achieve this, add a header `Authorization: Apikey <YOUR_OWN_API_KEY>`
+
 ### curl
 
 The following GraphQL request will be passed as the body of the request:
