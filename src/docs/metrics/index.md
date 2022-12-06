@@ -71,16 +71,21 @@ activity.
 
 ## Other On-Chain
 
+- [Aave v2](/metrics/aave-v2)
 - [Age Consumed](/metrics/age-consumed)
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
 - [Circulation](/metrics/circulation)
+- [Compound](/metrics/compound)
+- [DeFi](/metrics/defi)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [ETH 2.0](/metrics/eth-2)
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
 - [Labeled Flow](/metrics/labeled-flow)
+- [MakerDAO](/metrics/makerdao)
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
+- [Stock To Flow ratio](/metrics/stock-to-flow)
 - [Supply Distribution](/metrics/supply-distribution)
 - [Supply On Or Outside Exchanges](/metrics/supply-on-or-outside-exchanges)
 - [Top Holders](/metrics/top-holders)
@@ -95,12 +100,9 @@ activity.
 - [Binance](/metrics/binance)
 - [Bitfinex](/metrics/bitfinex)
 - [Deribit](/metrics/deribit)
-- [DeFi](/metrics/defi)
 - [FTX](/metrics/ftx)
 - [dYdX](/metrics/dydx)
 - [Huobi](/metrics/huobi)
-- [MakerDAO](/metrics/makerdao)
-- [Stock To Flow ratio](/metrics/stock-to-flow)
 
 ## Chain Address Metrics
 

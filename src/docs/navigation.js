@@ -187,6 +187,7 @@ export const REFERENCES = [
     description: `Introduction to Santiment's on-chain, social and development indicators`,
     icon: Metrics,
     articles: [
+      'Aave v2',
       'Age Consumed',
       'Amount in Top Holders',
       'Binance',
@@ -194,6 +195,7 @@ export const REFERENCES = [
       'BitMEX',
       'Circulation',
       'Community Messages Count',
+      'Compound',
       'Daily Active Addresses',
       'Active Addresses 24h',
       'Daily Active Deposits',
