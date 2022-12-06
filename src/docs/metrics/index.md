@@ -71,9 +71,11 @@ activity.
 
 ## Other On-Chain
 
+- [Aave v2](/metrics/aave-v2)
 - [Age Consumed](/metrics/age-consumed)
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
 - [Circulation](/metrics/circulation)
+- [Compound](/metrics/compound)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [ETH 2.0](/metrics/eth-2)
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
@@ -91,11 +93,9 @@ activity.
 
 ## Derivatives
 
-- [Aave v2](/metrics/aave-v2)
 - [BitMEX](/metrics/bitmex)
 - [Binance](/metrics/binance)
 - [Bitfinex](/metrics/bitfinex)
-- [Compound](/metrics/compound)
 - [Deribit](/metrics/deribit)
 - [DeFi](/metrics/defi)
 - [FTX](/metrics/ftx)
