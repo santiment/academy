@@ -91,7 +91,7 @@ activity.
 
 ## Derivatives
 
-- [Aave v2](/metrics/aave_v2)
+- [Aave v2](/metrics/aave-v2)
 - [BitMEX](/metrics/bitmex)
 - [Binance](/metrics/binance)
 - [Bitfinex](/metrics/bitfinex)
