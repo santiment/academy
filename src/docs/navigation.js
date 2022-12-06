@@ -227,6 +227,7 @@ export const REFERENCES = [
       'NFT Social Volume',
       'NVT',
       'Price',
+      'Price Volatility',
       'Realized Market Capitalization Hodl Waves',
       'Realized Value',
       'Sentiment Metrics',
