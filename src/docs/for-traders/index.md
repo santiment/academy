@@ -125,7 +125,7 @@ This is why deep network analysis is so important for successful traders. Compar
 
 ![](image1.png)
 
-Higher token velocity means that the same token is used in transactions more often. You can notice the same steep drop-off in ETH’s velocity around the start of 2018. This heightened activity (and subsequent dip) correlates strongly with the huge [ETH mixer](https://nulltx.com/over-68-of-all-ethereum-transaction-value-is-mixed-by-one-entity/) that operated between March 2017-2018, artificially inflation on-chain trx volumes by moving the same coins many times over.
+Higher token velocity means that the same token is used in transactions more often. You can notice the same steep drop-off in ETH’s velocity around the start of 2018. This heightened activity (and subsequent dip) correlates strongly with the huge ETH mixer that operated between March 2017-2018, artificially inflation on-chain trx volumes by moving the same coins many times over.
 
 
 Once the mixer was liquidated, token velocity toppled back to ‘normal’ levels (as tokens weren’t mixed as much anymore), where it’s remained ever since. This lets us know that the decline in trx volume wasn’t due to speculative, but rather technical reasons, allowing us to better understand - and valuate the network.
