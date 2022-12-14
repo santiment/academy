@@ -255,7 +255,7 @@ Realized Capitalization.” 2018.
 [introducing realized capitalization](https://coinmetrics.io/realized-capitalization/).
 
 Coinmetrics. “Data Downloads - Coin Metrics.”
-[coinmetrics](https://coinmetrics.io/data/btc.csv).
+[coinmetrics](https://coinmetrics.io/community-network-data/).
 
 /u/jratcliff63367. “An Area Chart Showing the Distribution of Bitcoins Based on
 Age of Last Use Throughout History.”
