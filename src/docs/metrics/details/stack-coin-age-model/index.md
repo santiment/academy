@@ -58,12 +58,6 @@ This article covers a technical subject. We've written several articles (and
 will publish many more in the future) explaining what Santiment metrics actually
 tell us about different types of behavior of market participants.
 
-If you are not interested in nerd talk and just want to give our metrics a spin,
-feel free to [stake some
-SAN](/intercom-articles/getting-started/san-tokens-and-metamask/how-to-stake-san)
-tokens and jump right into our [dashboards](https://data.santiment.net).
-Otherwise $-$ read on.
-
 ## Bitcoin UTXOs and coin age
 
 The Bitcoin blockchain uses the so-called **UTXO model** for keeping track of
@@ -249,7 +243,7 @@ Akiron. “Bitcoin Days Destroyed.”
 [bitcoin days destroyed](https://en.bitcoin.it/wiki/Bitcoin_Days_Destroyed).
 
 Bansal, Dhruv. “Bitcoin Data Science (Pt. 1): HODL Waves.”
-[hodl waves](https://blog.unchained-capital.com/bitcoin-data-science-pt-1-hodl-waves-7f3501d53f63).
+[hodl waves](https://unchained.com/blog/tag/hodl-waves/).
 
 Carter, Nic. “Bitcoin Honeybadger 2018 Bitcoin Conference, Riga, Day 2.”
 [bitcoin honeybadged 2018](https://www.youtube.com/watch?v=D2WXxgZ8h-0&t=78m8s).
@@ -259,7 +253,7 @@ Realized Capitalization.” 2018.
 [introducing realized capitalization](https://coinmetrics.io/realized-capitalization/).
 
 Coinmetrics. “Data Downloads - Coin Metrics.”
-[coinmetrics](https://coinmetrics.io/data/btc.csv).
+[coinmetrics](https://coinmetrics.io/community-network-data/).
 
 /u/jratcliff63367. “An Area Chart Showing the Distribution of Bitcoins Based on
 Age of Last Use Throughout History.”

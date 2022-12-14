@@ -590,7 +590,7 @@ Introducing **Charts v3** 📈👋
 
 **Hunters**
 
-***Welcome to our new DApp [https://hunters.santiment.net/](https://hunters.santiment.net/)***
+***Welcome to our new DApp https://hunters.santiment.net/ ***
 
 What is Hunters app? -> [https://www.notion.so/santiment/Introducing-Wallet-Hunters-A-decentralized-platform-for-crowdsourced-market-intelligence-777586562ced436682125816eb206c63](https://www.notion.so/santiment/Introducing-Wallet-Hunters-A-decentralized-platform-for-crowdsourced-market-intelligence-777586562ced436682125816eb206c63)
 
