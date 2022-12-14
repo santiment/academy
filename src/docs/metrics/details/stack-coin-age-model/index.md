@@ -55,7 +55,7 @@ tell us about different types of behavior of market participants.
 If you are not inerested in nerd talk and just want to give our metrics a spin,
 feel free to [stake some
 SAN](/intercom-articles/getting-started/san-tokens-and-metamask/how-to-stake-san)
-tokens and jump right into our [dashboards](https://data.santiment.net).
+tokens and jump right into our [dashboards](https://app.santiment.net/dashboards/).
 Otherwise -- read on.
 
 ## Bitcoin UTXOs and coin age
