@@ -24,7 +24,7 @@
     "gatsby-plugin-sharp": "^4.2.0",
     "gatsby-remark-copy-images": "^0.2.1",
     "gatsby-source-filesystem": "^4.2.0",
-    "gatsby-transformer-remark": "^2.6.30",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^4.2.0",
     "graphql-tag": "^2.10.1",
     "htmlparser2": "^6.1.0",
