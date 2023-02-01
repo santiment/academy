@@ -2,16 +2,16 @@
 title: Social Trends page
 author: Santiment Team
 date: 2021-05-27
-description: This page contain `Top 10` trending words in crypto and give you a quick overview of the top developing topics in crypto at the moment
+description: This page contains `Top 10` trending words in crypto and give you a quick overview of the top developing topics in crypto at the moment
 ---
 
-**Social Trends** page contain `Top 10` trending words in crypto:
+**Social Trends** page contains `Top 10` trending words in crypto:
 
 ![](https://user-images.githubusercontent.com/24521041/119869571-0f86f800-bf29-11eb-91dd-2e9e6c4c48d1.png)
 
 Start exploring it there: https://app.santiment.net/labs/trends/
 
-Those lists aims to do 2 things:
+Those lists aim to do 2 things:
 
 - Give you a quick overview of the top developing topics in crypto at the moment
 - Help you spot hype peaks and local tops
@@ -58,7 +58,7 @@ Other than the actual words, our list has several columns that help bring more c
 
 ## Hype Score
 
-(hidden column) this is the main criteria for ranking the words on our list. It based on a [sophisticated formula](/metrics/emerging-trends/#hype-score) (developed by Santiment) that analyzes all social media messages, and then - using a dozen parameters - ranks the words by the likelihood of sustained chatter.
+(hidden column) this is the main criteria for ranking the words on our list. It is based on a [sophisticated formula](/metrics/emerging-trends/#hype-score) (developed by Santiment) that analyzes all social media messages, and then - using a dozen parameters - ranks the words by the likelihood of sustained chatter.
 The bigger the **Hype Score**, the more likely it is that a particular word/topic will continue to be discussed in the near future, whereas a lower **Hype Score** means that although a word/topic is very popular in crypto at the moment, it’s already slowly losing the crowd’s attention.
 While **Social Volume** shows the absolute number of social mentions for each word, the **Hype Score** is much more complex and actually tries to predict which of the top 10 words are more likely to continue to be talked about on crypto social media, and which are starting to fizzle out.
 
@@ -67,4 +67,4 @@ Shows the total amount of mentions of a word/topic on crypto social media today.
 ## Trending chart
 Shows how the word was popular during last 7 days
 ## Connected words
-It's show which words are most often used alongside your main keyword on crypto social media. Larger words are found more frequently in comments that also include your main keyword.
+It shows which words are most often used alongside your main keyword on crypto social media. Larger words are found more frequently in comments that also include your main keyword.
