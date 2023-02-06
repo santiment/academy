@@ -39,61 +39,89 @@ Below we have listed all the nft tables with thier columns, a brief descriptions
 
 ### nft_trades
 
-1. tx_hash: Hash of the transaction in which the trade has been included. With type: String
-2. platform: Name of platform where trades occured such as opensea, cryptopunks and etc. With type: String
-3. seller_address: Address who sold the nft. With type: String
-4. buyer_address: Address who bought the nft. With type: String
-5. nft_contract_address: Address of the nft's collection. With type: String
-6. currency_contract_address: Address of ERC20 token or empty if native ether is used. With type: Nullable(String)
-7. asset_ref_id: Reference id of currency contract in format cityHash64('ETH_{address}'). We can use it to get more information about the asset from asset_metadata. With type: UInt64
-8. token_ids: Array ids of NFT token in hex. With type: Array(String)
-9. amount_tokens: Array of amounts, which describes how many tokens were transfered. With type: Array(String)
-10. nft_contract_type: Type of nft contract, 0 - erc721, 1 - erc1155. Based on signature of transfer. With type: UInt8
-11. amount: The amount of the transaction in the asset used in it. With type: String
-12. log_index: Log index of trade event. With type: UInt32
-13. complete: State of the transaction. (1 means it is completed). With type: UInt8
-14. dt: When the transaction happened. With type: DateTime
-15. computed_at: When it was computed. With type: DateTime
-16. blockchain: On which blockchain. With type: String
+>The "nft_trades" is a table designed to store information about the NFT trades that we have collected. It has the following columns:
+
+- **tx_hash**: Hash of the transaction in which the trade has been included. With type: String
+
+- **platform**: Name of platform where trades occured such as opensea, cryptopunks and etc. With type: String
+
+- **seller_address**: Address who sold the nft. With type: String
+
+- **buyer_address**: Address who bought the nft. With type: String
+
+- **nft_contract_address**: Address of the nft's collection. With type: String
+
+- **currency_contract_address**: Address of ERC20 token or empty if native ether is used. With type: Nullable(String)
+
+- **asset_ref_id**: Reference id of currency contract in format cityHash64('ETH_{address}'). We can use it to get more information about the asset from asset_metadata. With type: UInt64
+
+- **token_ids**: Array ids of NFT token in hex. With type: Array(String)
+
+- **amount_tokens**: Array of amounts, which describes how many tokens were transfered. With type: Array(String)
+
+- **nft_contract_type**: Type of nft contract, 0 - erc721, 1 - erc1155. Based on signature of transfer. With type: UInt8
+
+- **amount**: The amount of the transaction in the asset used in it. With type: String
+
+- **log_index**: Log index of trade event. With type: UInt32
+
+- **complete**: State of the transaction. (1 means it is completed). With type: UInt8
+
+- **dt**: When the transaction happened. With type: DateTime
+
+- **computed_at**: When it was computed. With type: DateTime
+
+- **blockchain**: On which blockchain. With type: String
+
+### nft_tokens_metadata
+
+>The "nft_tokens_metadata" is a table designed to store information about NFT tokens. It has the following columns:
+
+- **Blockchain**: Refers to the decentralized platform on which the NFT exists, e.g. Ethereum, Binance Smart Chain, etc. With type: String
+
+- **Address**: Represents the unique public address of the NFT owner. With type: String
+
+- **Token ID**: Unique identifier assigned to each NFT, used to distinguish it from others. With type: String
+
+- **URI**: Uniform Resource Identifier, a link that directs to additional information or media related to the NFT. With type: Nullable(String)
+
+- **Data**: Contains the NFT's metadata, such as its name, image, and any other relevant information. With type: Nullable(String)
+
+- **Created At**: The date and time when the NFT was created. With type: DateTime
+
+- **Error**: Any error message associated with the NFT, such as a transaction failure, if applicable. This column is used to track and monitor any issues that arise in the NFT creation process. With type: Nullable(String)
+
+### intraday_nft_metrics
+
+>The "intraday_nft_metrics" is a table designed to store intraday metrics for NFT assets. It has the following columns:
+
+- **Asset ID**: Unique identifier assigned to the NFT asset. With type: UInt64
+
+- **Metric ID**: Unique identifier assigned to the specific metric being recorded. With type: UInt64
+
+- **Address**: Represents the unique public address of the NFT owner. With type: String
+
+- **Collection Name**: The name of the NFT collection that the asset belongs to. With type: String
+
+- **Token ID**: Unique identifier assigned to each NFT, used to distinguish it from others. With type: Nullable(UInt64)
+
+- **DT**: The date and time when the metric was recorded. With type: DateTime
+
+- **Value**: The value of the metric recorded at the specified DT. With type: Float64
+
+- **Computed At**: The date and time when the metric was computed. This is used to track the accuracy of the metric calculation and to ensure that the most up-to-date information is available. With type: DateTime
+
+## Sample Queries
 
 <details>
 <summary>Well</summary>
 
-<details>
-<summary>Try this</summary>
-
- <details>
- <summary>The other one</summary>
-
-   <details>
+   - <details>
+   <summary>1</summary>
+   You got me �
+   </details>
+   - <details>
    <summary>Ok, try this</summary>
    You got me �
    </details>
- </details>
 </details>
-</details>
-
-### nft_tokens_metadata
-
-|Column name|Type|Description|
-|----------|----------|----------|
-| blockchain | String | Refers to the decentralized platform on which the NFT exists.|
-| address    | String | The unique public address of the NFT owner.|
-| token_id   | String | Unique identifier assigned to each NFT, used to distinguish it from others.|
-| uri        | Nullable(String)       | A link that directs to additional information or media related to the NFT.|
-| data       | Nullable(String)       | Contains the NFT's metadata, such as its name, description, image.|
-| created_at | DateTime               | The date and time when the NFT was created.|
-| error      | Nullable(String)       | Any error message associated with the NFT.|
-
-### intraday_nft_metrics
-
-|Column name|Type|Description|
-|----------|----------|----------|
-| asset_id        | UInt64 | Unique identifier assigned to the NFT asset.|
-| metric_id       | UInt64 | Unique identifier assigned to the specific metric being recorded.|
-| address         | String | Represents the unique public address of the NFT owner.|
-| collection_name | String | The name of the NFT collection that the asset belongs to.|
-| token_id        | Nullable(UInt64) | Unique identifier assigned to each NFT, used to distinguish it from others.|
-| dt              | DateTime | The date and time when the metric was recorded.|
-| value           | Float64 | The value of the metric recorded at the specified dt.|
-| computed_at     | DateTime | The date and time when the metric was computed. |
