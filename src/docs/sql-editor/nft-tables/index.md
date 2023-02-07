@@ -2,19 +2,15 @@
 title: NFT Tables overview
 author: Santiment Team
 date: 2023-01-30
-description: Information about Non-Fungible Token (NFT) tables stored in SanQuery.
+description: Information about Non-Fungible Token (NFT) tables stored in Santiment Queries.
 ---
 
 ## Overview
+NFT stands for Non-Fungible Token, which is a digital asset that represents ownership of a unique item or piece of content, like art, music, video, or tweets. NFTs are different from cryptocurrencies because each NFT is unique and can't be exchanged one-to-one, while cryptocurrencies are interchangeable. 
 
-> NFT stands for Non-Fungible Token, which is a type of digital asset that represents ownership of a unique item or piece of content, such as a piece of artwork, music, video, or even tweets.
+NFTs are made using blockchain technology, which provides a secure and transparent record of ownership and transfer, allowing creators and owners to prove ownership, authenticity, and rarity, potentially increasing the value of their digital assets over time. 
 
-Unlike cryptocurrencies, which are fungible and interchangeable, NFTs cannot be exchanged on a one-to-one basis because each NFT is unique and has its own set of attributes and characteristics.
-NFTs are created using blockchain technology, which provides a secure and transparent ledger of ownership and transfer of the asset.
-This allows creators and owners to establish proof of ownership, authenticity, and scarcity for their digital assets, which can increase their value over time.
-
-> Here in SanQuery we collect all the data for all nfts. Which gives you the oppurtinity to easily track a nft of your interest or the whole collection.
-You can also investigate all the prices it was sold for before or his previous owners for example.
+In Santiment Queries, we collect data for all NFTs from the following exchanges: cryptopunks, foundation, looksrare, opensea, opensea_polygon, rarible, superrare. This information gives you the ability to easily track an NFT of interest or an entire collection, as well as investigate past prices and owners.
 
 ## List of nft tables
 
@@ -37,100 +33,120 @@ SHOW TABLES LIKE '%nft%'
 
 Below we have listed all the nft tables with thier columns, a brief descriptions and some example queries which you can use to explore the tables.
 
-### nft_trades
+### `nft_trades`
 
->The "nft_trades" is a table designed to store information about the NFT trades that we have collected. It has the following columns:
+The `nft_trades` is a table designed to store information about the NFT trades that we have collected. It has the following columns:
 
-- **tx_hash**: Hash of the transaction in which the trade has been included. With type: String
+- **dt** (*DateTime*): When the transaction happened.
 
-- **platform**: Name of platform where trades occured such as opensea, cryptopunks and etc. With type: String
+- **blockchain** (*String*): On which blockchain.
 
-- **seller_address**: Address who sold the nft. With type: String
+- **tx_hash** (*String*): Unique identifier that is generated when the transaction was executed.
 
-- **buyer_address**: Address who bought the nft. With type: String
+- **log_index** (*UInt32*): Log index of trade event. 
 
-- **nft_contract_address**: Address of the nft's collection. With type: String
+- **platform** (*String*): Name of platform where trades occured such as opensea, cryptopunks and etc. 
 
-- **currency_contract_address**: Address of ERC20 token or empty if native ether is used. With type: Nullable(String)
+- **seller_address** (*String*): Address who sold the nft.
 
-- **asset_ref_id**: Reference id of currency contract in format cityHash64('ETH_{address}'). We can use it to get more information about the asset from asset_metadata. With type: UInt64
+- **buyer_address** (*String*): Address who bought the nft.
 
-- **token_ids**: Array ids of NFT token in hex. With type: Array(String)
+- **nft_contract_address** (*String*): Address of the nft's collection.
 
-- **amount_tokens**: Array of amounts, which describes how many tokens were transfered. With type: Array(String)
+- **currency_contract_address** (*Nullable(String)*): Address of ERC20 token or empty if native ether is used.
 
-- **nft_contract_type**: Type of nft contract, 0 - erc721, 1 - erc1155. Based on signature of transfer. With type: UInt8
+- **asset_ref_id** (*UInt64*): Reference ID of the currency contract that can be used to retrieve additional information about the asset from the `asset_metadata` table.
 
-- **amount**: The amount of the transaction in the asset used in it. With type: String
+- **token_ids** (*Array(String)*): Array ids of NFT token in hex.
 
-- **log_index**: Log index of trade event. With type: UInt32
+- **amount_tokens** (*Array(String)*): Array of amounts, which describes how many tokens were transfered.
 
-- **complete**: State of the transaction. (1 means it is completed). With type: UInt8
+- **nft_contract_type** (*UInt8*): Type of nft contract, 0 - erc721, 1 - erc1155. Based on signature of transfer.
 
-- **dt**: When the transaction happened. With type: DateTime
+- **amount** (*String*): The amount of the transaction in the asset used in it.
 
-- **computed_at**: When it was computed. With type: DateTime
+- **complete** (*UInt8*): State of the transaction. (1 means it is completed).
 
-- **blockchain**: On which blockchain. With type: String
+- **computed_at** (*DateTime*): The timestamp when the trade was inserted to the table.
 
-### nft_tokens_metadata
+### `nft_tokens_metadata`
 
->The "nft_tokens_metadata" is a table designed to store information about NFT tokens. It has the following columns:
+The `nft_tokens_metadata` is a table designed to store information about NFT tokens. It has the following columns:
 
-- **Blockchain**: Refers to the decentralized platform on which the NFT exists, e.g. Ethereum, Binance Smart Chain, etc. With type: String
+- **blockchain** (*String*): Refers to the decentralized platform on which the NFT exists, e.g. Ethereum, Binance Smart Chain, etc.
 
-- **Address**: Represents the unique public address of the NFT owner. With type: String
+- **address** (*String*): Represents the unique public address of the NFT owner.
 
-- **Token ID**: Unique identifier assigned to each NFT, used to distinguish it from others. With type: String
+- **token_id** (*String*): Unique identifier assigned to each NFT, used to distinguish it from others.
 
-- **URI**: Uniform Resource Identifier, a link that directs to additional information or media related to the NFT. With type: Nullable(String)
+- **uri** (*Nullable(String)*): Uniform Resource Identifier, a link that directs to additional information or media related to the NFT.
 
-- **Data**: Contains the NFT's metadata, such as its name, image, and any other relevant information. With type: Nullable(String)
+- **data** (*Nullable(String)*): Contains the NFT's metadata, such as its name, image, and any other relevant information.
 
-- **Created At**: The date and time when the NFT was created. With type: DateTime
+- **created_at_** (*DateTime*): The date and time when the NFT was created.
 
-- **Error**: Any error message associated with the NFT, such as a transaction failure, if applicable. This column is used to track and monitor any issues that arise in the NFT creation process. With type: Nullable(String)
+- **error** (*Nullable(String)*): Any error message associated with the NFT, such as a transaction failure, if applicable. This column is used to track and monitor any issues that arise in the NFT creation process.
 
-### intraday_nft_metrics
+### `intraday_nft_metrics`
 
->The "intraday_nft_metrics" is a table designed to store intraday metrics for NFT assets. It has the following columns:
+The "intraday_nft_metrics" is a table designed to store intraday metrics for NFT assets. The table has the following columns:
 
-- **Asset ID**: Unique identifier assigned to the NFT asset. With type: UInt64
+- **asset_id** (*UInt64*): Unique identifier assigned to the NFT asset.
 
-- **Metric ID**: Unique identifier assigned to the specific metric being recorded. With type: UInt64
+- **metric_id** (*UInt64*): Unique identifier assigned to the specific metric being recorded.
 
-- **Address**: Represents the unique public address of the NFT owner. With type: String
+- **address** (*String*): Represents the unique public address of the NFT owner.
 
-- **Collection Name**: The name of the NFT collection that the asset belongs to. With type: String
+- **collection_name** (*String*): The name of the NFT collection that the asset belongs to.
 
-- **Token ID**: Unique identifier assigned to each NFT, used to distinguish it from others. With type: Nullable(UInt64)
+- **token_id** (*Nullable(UInt64)*): Unique identifier assigned to each NFT, used to distinguish it from others.
 
-- **DT**: The date and time when the metric was recorded. With type: DateTime
+- **dt** (*DateTime*): The date and time when the metric was recorded.
 
-- **Value**: The value of the metric recorded at the specified DT. With type: Float64
+- **value** (*Float64*): The value of the metric recorded at the specified `dt`.
 
-- **Computed At**: The date and time when the metric was computed. This is used to track the accuracy of the metric calculation and to ensure that the most up-to-date information is available. With type: DateTime
+- **computed_at** (*DateTime*): The timestamp when the trade was inserted to the table. This is used to track the accuracy of the metric calculation and to ensure that the most up-to-date information is available.
+
+There are currently 16 metrics we track:
+
+| Name | ID |
+|----------|------|
+| nft_collection_min_price       | 1279 |
+| nft_collection_max_price       | 1280 |
+| nft_collection_avg_price       | 1281 |
+| nft_collection_trades_count    | 1282 |
+| nft_collection_min_price_usd   | 1283 |
+| nft_collection_max_price_usd   | 1284 |
+| nft_collection_avg_price_usd   | 1285 |
+| nft_token_id_price             | 1286 |
+| nft_token_id_price_usd         | 1287 |
+| nft_market_volume              | 1288 |
+| nft_market_count               | 1289 |
+| nft_collection_holders_balance | 1290 |
+| nft_network_profit_loss        | 1291 |
+| nft_network_profit_loss_usd    | 1292 |
+| nft_collection_profit_loss     | 1293 |
+| nft_collection_profit_loss_usd | 1294 |
 
 ## Sample Queries
 
 <details>
-<summary>⬇️ Check the number of unique wallets that have owned an NFT ever / last 7 days.</summary>
+<summary>Check the number of unique wallets that have owned an NFT ever / last 7 days.</summary>
  <details>
- <summary>⬇️ Ever</summary>
+ <summary>Ever</summary>
   <code>
 SELECT countDistinct(buyer_address) AS uniqueBuyers
 FROM nft_trades
   </code>
-  Try in SanQueries <a href='https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%20FROM%20nft_trades%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%20FROM%20nft_trades%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0' target="_blank">Here</a>
+  Try in Santiment Queries <a href='https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%20FROM%20nft_trades%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%20FROM%20nft_trades%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0' target="_blank">Here</a>
  </details>
  <details>
- <summary>⬇️ Last 7 days</summary>
+ <summary>Last 7 days</summary>
   <code>
 SELECT countDistinct(buyer_address) AS uniqueBuyers
 FROM nft_trades
 WHERE dt >= (now() - INTERVAL 6 DAY)
   </code>
-  Try in SanQueries <a href='https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0' target="_blank">Here</a>
+  Try in Santiment Queries <a href='https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0' target="_blank">Here</a>
  </details>
 </details>
-
