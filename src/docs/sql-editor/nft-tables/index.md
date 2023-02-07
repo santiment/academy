@@ -33,7 +33,7 @@ SHOW TABLES LIKE '%nft%'
 
 Below we have listed all the nft tables with thier columns, a brief descriptions and some example queries which you can use to explore the tables.
 
-### `nft_trades`
+### nft_trades
 
 The `nft_trades` is a table designed to store information about the NFT trades that we have collected. It has the following columns:
 
@@ -69,7 +69,7 @@ The `nft_trades` is a table designed to store information about the NFT trades t
 
 - **computed_at** (*DateTime*): The timestamp when the trade was inserted to the table.
 
-### `nft_tokens_metadata`
+### nft_tokens_metadata
 
 The `nft_tokens_metadata` is a table designed to store information about NFT tokens. It has the following columns:
 
@@ -87,7 +87,7 @@ The `nft_tokens_metadata` is a table designed to store information about NFT tok
 
 - **error** (*Nullable(String)*): Any error message associated with the NFT, such as a transaction failure, if applicable. This column is used to track and monitor any issues that arise in the NFT creation process.
 
-### `intraday_nft_metrics`
+### intraday_nft_metrics
 
 The "intraday_nft_metrics" is a table designed to store intraday metrics for NFT assets. The table has the following columns:
 
@@ -109,44 +109,155 @@ The "intraday_nft_metrics" is a table designed to store intraday metrics for NFT
 
 There are currently 16 metrics we track:
 
-| Name | ID |
+| ID | Name | Description |
 |----------|------|
-| nft_collection_min_price       | 1279 |
-| nft_collection_max_price       | 1280 |
-| nft_collection_avg_price       | 1281 |
-| nft_collection_trades_count    | 1282 |
-| nft_collection_min_price_usd   | 1283 |
-| nft_collection_max_price_usd   | 1284 |
-| nft_collection_avg_price_usd   | 1285 |
-| nft_token_id_price             | 1286 |
-| nft_token_id_price_usd         | 1287 |
-| nft_market_volume              | 1288 |
-| nft_market_count               | 1289 |
-| nft_collection_holders_balance | 1290 |
-| nft_network_profit_loss        | 1291 |
-| nft_network_profit_loss_usd    | 1292 |
-| nft_collection_profit_loss     | 1293 |
-| nft_collection_profit_loss_usd | 1294 |
+| 1279 | nft_collection_min_price       ||
+| 1280 | nft_collection_max_price       ||
+| 1281 | nft_collection_avg_price       ||
+| 1282 | nft_collection_trades_count    ||
+| 1283 | nft_collection_min_price_usd   ||
+| 1284 | nft_collection_max_price_usd   ||
+| 1285 | nft_collection_avg_price_usd   ||
+| 1286 | nft_token_id_price             ||
+| 1287 | nft_token_id_price_usd         ||
+| 1288 | nft_market_volume              ||
+| 1289 | nft_market_count               ||
+| 1290 | nft_collection_holders_balance ||
+| 1291 | nft_network_profit_loss        ||
+| 1292 | nft_network_profit_loss_usd    ||
+| 1293 | nft_collection_profit_loss     ||
+| 1294 | nft_collection_profit_loss_usd ||
 
 ## Sample Queries
 
-<details>
-<summary>Check the number of unique wallets that have owned an NFT ever / last 7 days.</summary>
- <details>
- <summary>Ever</summary>
-  <code>
-SELECT countDistinct(buyer_address) AS uniqueBuyers
-FROM nft_trades
-  </code>
-  Try in Santiment Queries <a href='https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%20FROM%20nft_trades%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%20FROM%20nft_trades%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0' target="_blank">Here</a>
- </details>
- <details>
- <summary>Last 7 days</summary>
-  <code>
+---
+- Check the number of unique wallets that have owned an NFT in the last 7 days.
+
+```sql
 SELECT countDistinct(buyer_address) AS uniqueBuyers
 FROM nft_trades
 WHERE dt >= (now() - INTERVAL 6 DAY)
-  </code>
-  Try in Santiment Queries <a href='https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0' target="_blank">Here</a>
- </details>
-</details>
+```
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+
+---
+- Check the platforms ordered by sales for last 7 days
+
+```sql
+SELECT
+    platform,
+    count(platform) AS sales
+FROM nft_trades
+WHERE (complete = 1) AND (dt >= (now() - toIntervalDay(6)))
+GROUP BY platform
+ORDER BY sales DESC
+```
+Test in [Queries]()
+
+---
+- Sales for platform (in this case ‘opensea’) for last 5 months split by month
+
+```sql
+SELECT
+    toStartOfMonth(dt) AS month,
+    count(platform) AS sales
+FROM nft_trades
+WHERE (complete = 1) AND (dt >= (now() - toIntervalMonth(4))) AND (platform = 'opensea')
+GROUP BY month
+```
+Test in [Queries]()
+
+---
+- Top 10 buyers ordered by completed purchases count for last 5 days.
+If we want to get the top 10 sellers we can swap buyer_address with seller_address.
+
+```sql
+SELECT
+    buyer_address,
+    platform,
+    count(platform) AS purchases
+FROM nft_trades
+WHERE (complete = 1) AND (dt >= (now() - toIntervalDay(4)))
+GROUP BY
+    buyer_address,
+    platform
+ORDER BY purchases DESC
+LIMIT 10
+```
+Test in [Queries]()
+
+---
+- Unique assets for the last 7 days for a single platform with summed amounts.
+We can get simmilar information for buyers and sellers if swap the platform in where with buyer/seller
+
+```sql
+SELECT
+    DISTINCT tb1.asset_ref_id,
+    tb2.name,
+    tb1.sum_amount
+FROM
+(
+    SELECT
+        asset_ref_id,
+        sum(CAST(amount, 'UInt64')) AS sum_amount
+    FROM nft_trades
+    WHERE
+    	dt >= (now() - INTERVAL 6 DAY) and platform = 'opensea'
+    GROUP BY asset_ref_id
+	order by sum_amount
+) AS tb1
+INNER JOIN asset_metadata AS tb2 ON tb1.asset_ref_id = tb2.asset_ref_id
+ORDER BY sum_amount DESC
+```
+Test in [Queries]()
+
+---
+- Collections ranked based on number of traded Tokens in collection for the last 5 days
+
+```sql
+SELECT 
+	nft_contract_address,
+	platform,
+	count(token_ids) as number_of_traded_nfts
+FROM nft_trades 
+WHERE (complete = 1) and (dt >= NOW() - toIntervalDay(4))
+GROUP BY 
+	nft_contract_address,
+	platform
+ORDER BY number_of_traded_nfts desc
+LIMIT 10
+```
+Test in [Queries]()
+
+---
+- Collections ranked based on number of recorded Tokens in collection
+
+```sql
+SELECT
+	blockchain,
+	address,
+	COUNT(token_id) as number_of_nfts
+FROM
+	nft_tokens_metadata
+GROUP BY
+	blockchain,
+	address 
+ORDER BY number_of_nfts DESC
+LIMIT 10
+```
+Test in [Queries]()
+
+---
+- Get all the tokens and information about them for a given address
+
+```sql
+SELECT
+	token_id,
+	simpleJSONExtractString(data, 'name') as token_name,
+	simpleJSONExtractString(data, 'description') as token_description,
+	simpleJSONExtractString(data, 'external_url') as external_url
+FROM nft_tokens_metadata
+WHERE address = '0x76be3b62873462d2142405439777e971754e8e77'
+ORDER BY token_id
+```
+Test in [Queries]()
