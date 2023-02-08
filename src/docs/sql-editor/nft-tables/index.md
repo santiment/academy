@@ -10,7 +10,22 @@ NFT stands for Non-Fungible Token, which is a digital asset that represents owne
 
 NFTs are made using blockchain technology, which provides a secure and transparent record of ownership and transfer, allowing creators and owners to prove ownership, authenticity, and rarity, potentially increasing the value of their digital assets over time. 
 
-In Santiment Queries, we collect data for all NFTs from the following exchanges: cryptopunks, foundation, looksrare, opensea, opensea_polygon, rarible, superrare. This information gives you the ability to easily track an NFT of interest or an entire collection, as well as investigate past prices and owners.
+In **Santiment Queries**, we collect data for all NFTs from exchanges on: 
+
+### Ethereum:
+
+- Cryptopunks
+- Foundation
+- Looksrare
+- Opensea
+- Rarible
+- Superrare
+
+### Polygon:
+- Opensea_polygon
+
+
+This information gives you the ability to easily track an NFT of interest or an entire collection, as well as investigate past prices and owners.
 
 ## List of nft tables
 
@@ -33,7 +48,7 @@ SHOW TABLES LIKE '%nft%'
 
 Below we have listed all the nft tables with thier columns, a brief descriptions and some example queries which you can use to explore the tables.
 
-### nft_trades
+### nft trades
 
 The `nft_trades` is a table designed to store information about the NFT trades that we have collected. It has the following columns:
 
@@ -69,7 +84,7 @@ The `nft_trades` is a table designed to store information about the NFT trades t
 
 - **computed_at** (*DateTime*): The timestamp when the trade was inserted to the table.
 
-### nft_tokens_metadata
+### nft tokens metadata
 
 The `nft_tokens_metadata` is a table designed to store information about NFT tokens. It has the following columns:
 
@@ -87,9 +102,9 @@ The `nft_tokens_metadata` is a table designed to store information about NFT tok
 
 - **error** (*Nullable(String)*): Any error message associated with the NFT, such as a transaction failure, if applicable. This column is used to track and monitor any issues that arise in the NFT creation process.
 
-### intraday_nft_metrics
+### intraday nft metrics
 
-The "intraday_nft_metrics" is a table designed to store intraday metrics for NFT assets. The table has the following columns:
+The `intraday_nft_metrics` is a table designed to store intraday metrics for NFT assets. The table has the following columns:
 
 - **asset_id** (*UInt64*): Unique identifier assigned to the NFT asset.
 
@@ -109,28 +124,29 @@ The "intraday_nft_metrics" is a table designed to store intraday metrics for NFT
 
 There are currently 16 metrics we track:
 
-| ID | Name | Description |
+| ID | Name | Additional Information |
 |----------|------|
-| 1279 | nft_collection_min_price       ||
-| 1280 | nft_collection_max_price       ||
-| 1281 | nft_collection_avg_price       ||
-| 1282 | nft_collection_trades_count    ||
-| 1283 | nft_collection_min_price_usd   ||
-| 1284 | nft_collection_max_price_usd   ||
-| 1285 | nft_collection_avg_price_usd   ||
-| 1286 | nft_token_id_price             ||
-| 1287 | nft_token_id_price_usd         ||
-| 1288 | nft_market_volume              ||
-| 1289 | nft_market_count               ||
-| 1290 | nft_collection_holders_balance ||
-| 1291 | nft_network_profit_loss        ||
-| 1292 | nft_network_profit_loss_usd    ||
-| 1293 | nft_collection_profit_loss     ||
-| 1294 | nft_collection_profit_loss_usd ||
+| 1279 | nft_collection_min_price       | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
+| 1280 | nft_collection_max_price       | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
+| 1281 | nft_collection_avg_price       | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
+| 1282 | nft_collection_trades_count    | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
+| 1283 | nft_collection_min_price_usd   | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
+| 1284 | nft_collection_max_price_usd   | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
+| 1285 | nft_collection_avg_price_usd   | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
+| 1286 | nft_token_id_price             | [more Information]() |
+| 1287 | nft_token_id_price_usd         | [more Information]() |
+| 1288 | nft_market_volume              | [more Information](/metrics/nft-market-volume) |
+| 1289 | nft_market_count               | [more Information](/metrics/nft-market-volume) |
+| 1290 | nft_collection_holders_balance | [more Information](/metrics/nft-collection-holders-balance) |
+| 1291 | nft_network_profit_loss        | [more Information](/metrics/nft-network-profit-loss) |
+| 1292 | nft_network_profit_loss_usd    | [more Information](/metrics/nft-network-profit-loss) |
+| 1293 | nft_collection_profit_loss     | [more Information](/metrics/nft-network-profit-loss) |
+| 1294 | nft_collection_profit_loss_usd | [more Information](/metrics/nft-network-profit-loss) |
 
 ## Sample Queries
 
 ---
+### Query #1
 - Check the number of unique wallets that have owned an NFT in the last 7 days.
 
 ```sql
@@ -141,6 +157,7 @@ WHERE dt >= (now() - INTERVAL 6 DAY)
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20countDistinct(buyer_address)%20AS%20uniqueBuyers%5CnFROM%20nft_trades%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22uniqueBuyers%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
+### Query #2
 - Check the platforms ordered by sales for last 7 days
 
 ```sql
@@ -152,9 +169,10 @@ WHERE (complete = 1) AND (dt >= (now() - toIntervalDay(6)))
 GROUP BY platform
 ORDER BY sales DESC
 ```
-Test in [Queries]()
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20platform%2C%5Cn%20%20%20%20count(platform)%20AS%20sales%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalDay(6)))%5CnGROUP%20BY%20platform%5CnORDER%20BY%20sales%20DESC%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22sales%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20platform%2C%5Cn%20%20%20%20count(platform)%20AS%20sales%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalDay(6)))%5CnGROUP%20BY%20platform%5CnORDER%20BY%20sales%20DESC%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22sales%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
+### Query #3
 - Sales for platform (in this case ‘opensea’) for last 5 months split by month
 
 ```sql
@@ -165,9 +183,10 @@ FROM nft_trades
 WHERE (complete = 1) AND (dt >= (now() - toIntervalMonth(4))) AND (platform = 'opensea')
 GROUP BY month
 ```
-Test in [Queries]()
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20toStartOfMonth(dt)%20AS%20month%2C%5Cn%20%20%20%20count(platform)%20AS%20sales%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalMonth(4)))%20AND%20(platform%20%3D%20%27opensea%27)%5CnGROUP%20BY%20month%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22month%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22sales%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20toStartOfMonth(dt)%20AS%20month%2C%5Cn%20%20%20%20count(platform)%20AS%20sales%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalMonth(4)))%20AND%20(platform%20%3D%20'opensea')%5CnGROUP%20BY%20month%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22month%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22sales%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
+### Query #4
 - Top 10 buyers ordered by completed purchases count for last 5 days.
 If we want to get the top 10 sellers we can swap buyer_address with seller_address.
 
@@ -184,9 +203,10 @@ GROUP BY
 ORDER BY purchases DESC
 LIMIT 10
 ```
-Test in [Queries]()
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20buyer_address%2C%5Cn%20%20%20%20platform%2C%5Cn%20%20%20%20count(platform)%20AS%20purchases%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalDay(4)))%5CnGROUP%20BY%5Cn%20%20%20%20buyer_address%2C%5Cn%20%20%20%20platform%5CnORDER%20BY%20purchases%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22buyer_address%22%7D%2C%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22purchases%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20buyer_address%2C%5Cn%20%20%20%20platform%2C%5Cn%20%20%20%20count(platform)%20AS%20purchases%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalDay(4)))%5CnGROUP%20BY%5Cn%20%20%20%20buyer_address%2C%5Cn%20%20%20%20platform%5CnORDER%20BY%20purchases%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22buyer_address%22%7D%2C%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22purchases%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
+### Query #5
 - Unique assets for the last 7 days for a single platform with summed amounts.
 We can get simmilar information for buyers and sellers if swap the platform in where with buyer/seller
 
@@ -209,9 +229,10 @@ FROM
 INNER JOIN asset_metadata AS tb2 ON tb1.asset_ref_id = tb2.asset_ref_id
 ORDER BY sum_amount DESC
 ```
-Test in [Queries]()
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20DISTINCT%20tb1.asset_ref_id%2C%5Cn%20%20%20%20tb2.name%2C%5Cn%20%20%20%20tb1.sum_amount%5CnFROM%5Cn(%5Cn%20%20%20%20SELECT%5Cn%20%20%20%20%20%20%20%20asset_ref_id%2C%5Cn%20%20%20%20%20%20%20%20sum(CAST(amount%2C%20%27UInt64%27))%20AS%20sum_amount%5Cn%20%20%20%20FROM%20nft_trades%5Cn%20%20%20%20WHERE%5Cn%20%20%20%20%5Ctdt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%20and%20platform%20%3D%20%27opensea%27%5Cn%20%20%20%20GROUP%20BY%20asset_ref_id%5Cn%5Ctorder%20by%20sum_amount%5Cn)%20AS%20tb1%5CnINNER%20JOIN%20asset_metadata%20AS%20tb2%20ON%20tb1.asset_ref_id%20%3D%20tb2.asset_ref_id%5CnORDER%20BY%20sum_amount%20DESC%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22asset_ref_id%22%7D%2C%7B%22title%22%3A%22name%22%7D%2C%7B%22title%22%3A%22sum_amount%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20DISTINCT%20tb1.asset_ref_id%2C%5Cn%20%20%20%20tb2.name%2C%5Cn%20%20%20%20tb1.sum_amount%5CnFROM%5Cn(%5Cn%20%20%20%20SELECT%5Cn%20%20%20%20%20%20%20%20asset_ref_id%2C%5Cn%20%20%20%20%20%20%20%20sum(CAST(amount%2C%20'UInt64'))%20AS%20sum_amount%5Cn%20%20%20%20FROM%20nft_trades%5Cn%20%20%20%20WHERE%5Cn%20%20%20%20%5Ctdt%20%3E%3D%20(now()%20-%20INTERVAL%206%20DAY)%20and%20platform%20%3D%20'opensea'%5Cn%20%20%20%20GROUP%20BY%20asset_ref_id%5Cn%5Ctorder%20by%20sum_amount%5Cn)%20AS%20tb1%5CnINNER%20JOIN%20asset_metadata%20AS%20tb2%20ON%20tb1.asset_ref_id%20%3D%20tb2.asset_ref_id%5CnORDER%20BY%20sum_amount%20DESC%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22asset_ref_id%22%7D%2C%7B%22title%22%3A%22name%22%7D%2C%7B%22title%22%3A%22sum_amount%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
+### Query #6
 - Collections ranked based on number of traded Tokens in collection for the last 5 days
 
 ```sql
@@ -227,9 +248,10 @@ GROUP BY
 ORDER BY number_of_traded_nfts desc
 LIMIT 10
 ```
-Test in [Queries]()
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20%5Cn%5Ctnft_contract_address%2C%5Cn%5Ctplatform%2C%5Cn%5Ctcount(token_ids)%20as%20number_of_traded_nfts%5CnFROM%20nft_trades%20%5CnWHERE%20(complete%20%3D%201)%20and%20(dt%20%3E%3D%20NOW()%20-%20toIntervalDay(4))%5CnGROUP%20BY%20%5Cn%5Ctnft_contract_address%2C%5Cn%5Ctplatform%5CnORDER%20BY%20number_of_traded_nfts%20desc%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22nft_contract_address%22%7D%2C%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22number_of_traded_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20%5Cn%5Ctnft_contract_address%2C%5Cn%5Ctplatform%2C%5Cn%5Ctcount(token_ids)%20as%20number_of_traded_nfts%5CnFROM%20nft_trades%20%5CnWHERE%20(complete%20%3D%201)%20and%20(dt%20%3E%3D%20NOW()%20-%20toIntervalDay(4))%5CnGROUP%20BY%20%5Cn%5Ctnft_contract_address%2C%5Cn%5Ctplatform%5CnORDER%20BY%20number_of_traded_nfts%20desc%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22nft_contract_address%22%7D%2C%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22number_of_traded_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
+### Query #7
 - Collections ranked based on number of recorded Tokens in collection
 
 ```sql
@@ -245,9 +267,10 @@ GROUP BY
 ORDER BY number_of_nfts DESC
 LIMIT 10
 ```
-Test in [Queries]()
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%2C%5Cn%5CtCOUNT(token_id)%20as%20number_of_nfts%5CnFROM%5Cn%5Ctnft_tokens_metadata%5CnGROUP%20BY%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%20%5CnORDER%20BY%20number_of_nfts%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22blockchain%22%7D%2C%7B%22title%22%3A%22address%22%7D%2C%7B%22title%22%3A%22number_of_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%2C%5Cn%5CtCOUNT(token_id)%20as%20number_of_nfts%5CnFROM%5Cn%5Ctnft_tokens_metadata%5CnGROUP%20BY%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%20%5CnORDER%20BY%20number_of_nfts%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22blockchain%22%7D%2C%7B%22title%22%3A%22address%22%7D%2C%7B%22title%22%3A%22number_of_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
+### Query #8
 - Get all the tokens and information about them for a given address
 
 ```sql
@@ -260,4 +283,31 @@ FROM nft_tokens_metadata
 WHERE address = '0x76be3b62873462d2142405439777e971754e8e77'
 ORDER BY token_id
 ```
-Test in [Queries]()
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Cttoken_id%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20%27name%27)%20as%20token_name%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20%27description%27)%20as%20token_description%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20%27external_url%27)%20as%20external_url%5CnFROM%20nft_tokens_metadata%5CnWHERE%20address%20%3D%20%270x76be3b62873462d2142405439777e971754e8e77%27%5CnORDER%20BY%20token_id%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22token_id%22%7D%2C%7B%22title%22%3A%22token_name%22%7D%2C%7B%22title%22%3A%22token_description%22%7D%2C%7B%22title%22%3A%22external_url%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Cttoken_id%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20'name')%20as%20token_name%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20'description')%20as%20token_description%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20'external_url')%20as%20external_url%5CnFROM%20nft_tokens_metadata%5CnWHERE%20address%20%3D%20'0x76be3b62873462d2142405439777e971754e8e77'%5CnORDER%20BY%20token_id%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22token_id%22%7D%2C%7B%22title%22%3A%22token_name%22%7D%2C%7B%22title%22%3A%22token_description%22%7D%2C%7B%22title%22%3A%22external_url%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+
+---
+### Query #9
+- Recent NFT trades volume of an address with amount calculated in usd
+
+```sql
+SELECT day_dt, SUM((amount/POW(10, decimals))*price) as volume_usd FROM (
+    SELECT 
+        toDate(dt) as day_dt,
+        dictGet('default.assets_by_ref_id', 'decimals', asset_ref_id) as decimals,
+        dictGet('default.assets_by_ref_id', 'asset_id', asset_ref_id) as asset_id,
+        SUM(toInt256(amount)) as amount
+    FROM nft_trades
+    WHERE (
+        buyer_address == '0x94fc70cffb47fc77d16f7997acd527e45a87b050'
+        OR
+        seller_address == '0x94fc70cffb47fc77d16f7997acd527e45a87b050'
+    ) AND blockchain = 'ethereum' AND dt >= toDate(NOW()) - INTERVAL 7 DAY
+    GROUP BY day_dt, asset_id, decimals
+) INNER JOIN (
+    SELECT dt as day_dt, asset_id, value as price
+    FROM daily_metrics_v2
+    WHERE metric_id = (SELECT metric_id FROM metric_metadata FINAL WHERE name = 'daily_avg_price_usd')
+) USING day_dt, asset_id
+GROUP BY day_dt
+```
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20day_dt%2C%20SUM((amount%2FPOW(10%2C%20decimals))*price)%20as%20volume_usd%20FROM%20(%5Cn%20%20%20%20SELECT%20%5Cn%20%20%20%20%20%20%20%20toDate(dt)%20as%20day_dt%2C%5Cn%20%20%20%20%20%20%20%20dictGet(%27default.assets_by_ref_id%27%2C%20%27decimals%27%2C%20asset_ref_id)%20as%20decimals%2C%5Cn%20%20%20%20%20%20%20%20dictGet(%27default.assets_by_ref_id%27%2C%20%27asset_id%27%2C%20asset_ref_id)%20as%20asset_id%2C%5Cn%20%20%20%20%20%20%20%20SUM(toInt256(amount))%20as%20amount%5Cn%20%20%20%20FROM%20nft_trades%5Cn%20%20%20%20WHERE%20(%5Cn%20%20%20%20%20%20%20%20buyer_address%20%3D%3D%20%270x94fc70cffb47fc77d16f7997acd527e45a87b050%27%5Cn%20%20%20%20%20%20%20%20OR%5Cn%20%20%20%20%20%20%20%20seller_address%20%3D%3D%20%270x94fc70cffb47fc77d16f7997acd527e45a87b050%27%5Cn%20%20%20%20)%20AND%20blockchain%20%3D%20%27ethereum%27%20AND%20dt%20%3E%3D%20toDate(NOW())%20-%20INTERVAL%207%20DAY%5Cn%20%20%20%20GROUP%20BY%20day_dt%2C%20asset_id%2C%20decimals%5Cn)%20INNER%20JOIN%20(%5Cn%20%20%20%20SELECT%20dt%20as%20day_dt%2C%20asset_id%2C%20value%20as%20price%5Cn%20%20%20%20FROM%20daily_metrics_v2%5Cn%20%20%20%20WHERE%20metric_id%20%3D%20(SELECT%20metric_id%20FROM%20metric_metadata%20FINAL%20WHERE%20name%20%3D%20%27daily_avg_price_usd%27)%5Cn)%20USING%20day_dt%2C%20asset_id%5CnGROUP%20BY%20day_dt%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22day_dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22volume_usd%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20day_dt%2C%20SUM((amount%2FPOW(10%2C%20decimals))*price)%20as%20volume_usd%20FROM%20(%5Cn%20%20%20%20SELECT%20%5Cn%20%20%20%20%20%20%20%20toDate(dt)%20as%20day_dt%2C%5Cn%20%20%20%20%20%20%20%20dictGet('default.assets_by_ref_id'%2C%20'decimals'%2C%20asset_ref_id)%20as%20decimals%2C%5Cn%20%20%20%20%20%20%20%20dictGet('default.assets_by_ref_id'%2C%20'asset_id'%2C%20asset_ref_id)%20as%20asset_id%2C%5Cn%20%20%20%20%20%20%20%20SUM(toInt256(amount))%20as%20amount%5Cn%20%20%20%20FROM%20nft_trades%5Cn%20%20%20%20WHERE%20(%5Cn%20%20%20%20%20%20%20%20buyer_address%20%3D%3D%20'0x94fc70cffb47fc77d16f7997acd527e45a87b050'%5Cn%20%20%20%20%20%20%20%20OR%5Cn%20%20%20%20%20%20%20%20seller_address%20%3D%3D%20'0x94fc70cffb47fc77d16f7997acd527e45a87b050'%5Cn%20%20%20%20)%20AND%20blockchain%20%3D%20'ethereum'%20AND%20dt%20%3E%3D%20toDate(NOW())%20-%20INTERVAL%207%20DAY%5Cn%20%20%20%20GROUP%20BY%20day_dt%2C%20asset_id%2C%20decimals%5Cn)%20INNER%20JOIN%20(%5Cn%20%20%20%20SELECT%20dt%20as%20day_dt%2C%20asset_id%2C%20value%20as%20price%5Cn%20%20%20%20FROM%20daily_metrics_v2%5Cn%20%20%20%20WHERE%20metric_id%20%3D%20(SELECT%20metric_id%20FROM%20metric_metadata%20FINAL%20WHERE%20name%20%3D%20'daily_avg_price_usd')%5Cn)%20USING%20day_dt%2C%20asset_id%5CnGROUP%20BY%20day_dt%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22day_dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22volume_usd%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
