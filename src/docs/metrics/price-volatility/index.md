@@ -21,6 +21,9 @@ Price volatility metrics are available for 4 different time periods
 * `price_volatility_2w` - Price volatility for the last 14 days
 * `price_volatility_4w` - Price volatility for the last 28 days
 
+Examples of use cases:
+* Traders who want their investments to be as volatile as possible, so they can earn (lose) a lot in a short time.
+* Investors who do not want to be involved in highly volatile investments.
 
 ---
 
