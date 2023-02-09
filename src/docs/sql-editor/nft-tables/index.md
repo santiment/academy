@@ -48,7 +48,7 @@ SHOW TABLES LIKE '%nft%'
 
 Below we have listed all the nft tables with thier columns, a brief descriptions and some example queries which you can use to explore the tables.
 
-### nft trades
+### nft\_trades
 
 The `nft_trades` is a table designed to store information about the NFT trades that we have collected. It has the following columns:
 
@@ -68,11 +68,11 @@ The `nft_trades` is a table designed to store information about the NFT trades t
 
 - **nft_contract_address** (*String*): Address of the nft's collection.
 
-- **currency_contract_address** (*Nullable(String)*): Address of ERC20 token or empty if native ether is used.
+- **currency_contract_address** (*Nullable(String)*): Identifier of the currency used in the trade. It is empty if native coin was used (ether or matic), otherwise it is the address of the smart contract of the ERC20 token.
 
 - **asset_ref_id** (*UInt64*): Reference ID of the currency contract that can be used to retrieve additional information about the asset from the `asset_metadata` table.
 
-- **token_ids** (*Array(String)*): Array ids of NFT token in hex.
+- **token_ids** (*Array(String)*): Array of those NFT token ids in hex which were exchanged in the trade. Usually only one is exchanged.
 
 - **amount_tokens** (*Array(String)*): Array of amounts, which describes how many tokens were transfered.
 
@@ -84,7 +84,7 @@ The `nft_trades` is a table designed to store information about the NFT trades t
 
 - **computed_at** (*DateTime*): The timestamp when the trade was inserted to the table.
 
-### nft tokens metadata
+### nft\_tokens\_ metadata
 
 The `nft_tokens_metadata` is a table designed to store information about NFT tokens. It has the following columns:
 
@@ -92,25 +92,25 @@ The `nft_tokens_metadata` is a table designed to store information about NFT tok
 
 - **address** (*String*): Represents the unique public address of the NFT owner.
 
-- **token_id** (*String*): Unique identifier assigned to each NFT, used to distinguish it from others.
+- **token_id** (*String*): Unique identifier assigned to each NFT in decimal, used to distinguish it from others.
 
 - **uri** (*Nullable(String)*): Uniform Resource Identifier, a link that directs to additional information or media related to the NFT.
 
-- **data** (*Nullable(String)*): Contains the NFT's metadata, such as its name, image, and any other relevant information.
+- **data** (*Nullable(String)*): Contains the NFT's metadata, such as its name, image, and any other relevant information in JSON format.
 
-- **created_at_** (*DateTime*): The date and time when the NFT was created.
+- **created_at** (*DateTime*): The date and time when the NFT was created.
 
 - **error** (*Nullable(String)*): Any error message associated with the NFT, such as a transaction failure, if applicable. This column is used to track and monitor any issues that arise in the NFT creation process.
 
-### intraday nft metrics
+### intraday\_nft\_metrics
 
 The `intraday_nft_metrics` is a table designed to store intraday metrics for NFT assets. The table has the following columns:
 
-- **asset_id** (*UInt64*): Unique identifier assigned to the NFT asset.
+- **asset_id** (*UInt64*): ID of the currency used in value calculation(ETH or WETH).
 
 - **metric_id** (*UInt64*): Unique identifier assigned to the specific metric being recorded.
 
-- **address** (*String*): Represents the unique public address of the NFT owner.
+- **address** (*String*): Represents the address of the NFT collection.
 
 - **collection_name** (*String*): The name of the NFT collection that the asset belongs to.
 
@@ -133,8 +133,6 @@ There are currently 16 metrics we track:
 | 1283 | nft_collection_min_price_usd   | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
 | 1284 | nft_collection_max_price_usd   | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
 | 1285 | nft_collection_avg_price_usd   | [more Information](/metrics/nft-collection-price/#nft-collection-price) |
-| 1286 | nft_token_id_price             | [more Information]() |
-| 1287 | nft_token_id_price_usd         | [more Information]() |
 | 1288 | nft_market_volume              | [more Information](/metrics/nft-market-volume) |
 | 1289 | nft_market_count               | [more Information](/metrics/nft-market-volume) |
 | 1290 | nft_collection_holders_balance | [more Information](/metrics/nft-collection-holders-balance) |
