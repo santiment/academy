@@ -22,8 +22,8 @@ Price volatility metrics are available for 4 different time periods
 * `price_volatility_4w` - Price volatility for the last 28 days
 
 Examples of use cases:
-* Traders who want their investments to be as volatile as possible, so they can earn (lose) a lot in a short time.
-* Investors who do not want to be involved in highly volatile investments.
+* Traders seek volatile assets because they move more quickly and have larger price changes. Those price changes are both upward and downward. Keeping this in mind, a trader needs effective risk management in order to trade volatile assets profitably.
+* On the other hand, some traders seek exposure to the assets that are the least volatile, and they might use this metric to identify those assets.
 
 ---
 
