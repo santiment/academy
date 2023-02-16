@@ -49,7 +49,7 @@ After that we compare predicted lower and upper values to actual value and if it
 * omisego
 * orion-protocol
 * ren
-* ripple
+* xrp
 * santiment
 * sushi
 * synthetix-network-token
