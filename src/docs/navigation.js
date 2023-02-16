@@ -88,7 +88,7 @@ export const GUIDES = [
     ],
   },
   {
-    title: 'SQL Editor',
+    title: 'Santiment Queries',
     icon: Sanqueries,
     description: (
       <>
