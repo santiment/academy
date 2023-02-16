@@ -12,9 +12,9 @@ column-oriented database, where we store on-chain, financial, social and develop
 Apart from storing data, Clickhouse is capable of doing complex calculations and aggregations on
 millions of rows of data. This makes it a perfect tool to power your research.
 
-Santiment Queries is an on-line web tool giving access to a Clickhouse cluster, containing our datasets.
+Santiment Queries is an online web tool giving access to a Clickhouse cluster, containing our datasets.
 
-Basic SQL knowledge is required to use the tool. In case you have not experience, you can follow the
+Basic SQL knowledge is required to use the tool. In case you have no experience, you can follow the
 very short [Clickhouse Tutorial]()
 
 ## Access
@@ -29,5 +29,5 @@ what are the available tables and what is their structure.
 
 ## Writing your first SQL Query
 
-The [Writing SQL queries](/santiment-queries/writing-sql-queries) page guides the reader though writing their first
+The [Writing SQL queries](/santiment-queries/writing-sql-queries) page guides the reader through writing their first
 SQL query.
