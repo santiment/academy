@@ -1,5 +1,5 @@
 ---
-title: Introducing the Santiment Queries
+title: Introducing Santiment Queries
 author: Santiment Team
 date: 2022-08-17
 description: What is this tool and why it exists
