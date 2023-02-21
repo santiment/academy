@@ -44,7 +44,7 @@ SHOW TABLES LIKE '%nft%'
 
 ## Exploration of the tables
 
-> We can inspect the tables with the commands we learnt in [Exploration](/sql-editor/exploration/)
+> We can inspect the tables with the commands we learnt in [Exploration](/santiment-queries/exploration/)
 
 Below we have listed all the nft tables with thier columns, a brief descriptions and some example queries which you can use to explore the tables.
 
