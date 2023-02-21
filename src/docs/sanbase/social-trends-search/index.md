@@ -2,13 +2,13 @@
 title: Social Tool
 author: Santiment Team
 date: 2021-05-27
-description: Using this feature you can display the amount of times your search term is mentioned in a specific medium (e.g. Telegram).
+description: Using this feature you can display the number of times your search term is mentioned in a specific medium (e.g. Telegram).
 ---
 
 Start exploring trends context on https://app.santiment.net/labs/trends/explore/
 
-With this tool you can display the amount of times your
-search term or phraseis mentioned in a specific medium.
+With this tool you can display the number of times your
+search term or phrase is mentioned in a specific medium.
 
 ## Channels
 
@@ -41,4 +41,4 @@ Refer to [this](/metrics/social-volume/) and [this article](/metrics/sentiment-m
 
 ![](wordcloud.png)
 
-You could find a `word cloud` in sidebar. It's show which words are most often used alongside your main keyword on crypto social media. Larger words are found more frequently in comments that also include your main keyword.
+You could find a `word cloud` in sidebar. It shows which words are most often used alongside your main keyword on crypto social media. Larger words are found more frequently in comments that also include your main keyword.

@@ -29,6 +29,11 @@ Total supplied/borrowed metrics:
 * `aave_v2_total_borrowed` - Total borrowed tokens
 * `aave_v2_total_borrowed_usd` - Total borrowed tokens in usd
 
+APY (annual percentage yield) metrics:
+* `aave_v2_supply_apy` - Supply APY
+* `aave_v2_stable_borrow_apy` - Stable borrow APY (stable interest rate will stay the same for the duration of the loan)
+* `aave_v2_variable_borrow_apy` - Variable borrow APY (variable interest rate will fluctuate based on the market conditions)
+
 ---
 
 ## Access
@@ -131,3 +136,22 @@ Total supplied/borrowed metrics: `aave_v2_total_supplied<_usd>` and
 }
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v2_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
+
+APY metrics: `aave_v2_supply_apy`, `aave_v2_stable_borrow_apy` and `aave_v2_variable_borrow_apy`
+
+```graphql
+{
+  getMetric(metric: "aave_v2_supply_apy"){
+    timeseriesData(
+      slug: "wrapped-bitcoin"
+      from: "2022-11-01T00:00:00Z"
+      to: "2022-11-03T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m"){
+        datetime
+        value
+      }
+  }
+}
+```
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v2_supply_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

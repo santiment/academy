@@ -10,7 +10,7 @@ date: 2020-04-02
 - [Bitcoin UTXOs and coin age](#bitcoin-utxos-and-coin-age)
 - [Account-based blockchains](#account-based-blockchains)
 - [The stack coin age model](#the-stack-coin-age-model)
-- [Acknowldgements](#acknowledgments)
+- [Acknowledgements](#acknowledgements)
 - [References](#references)
 
 ## Introduction
@@ -52,7 +52,7 @@ This article covers a technical subject. We've written several articles (and
 will publish many more in the future) explaining what Santiment metrics actually
 tell us about different types of behavior of market participants.
 
-If you are not inerested in nerd talk and just want to give our metrics a spin,
+If you are not interested in nerd talk and just want to give our metrics a spin,
 feel free to [stake some
 SAN](/intercom-articles/getting-started/san-tokens-and-metamask/how-to-stake-san)
 tokens and jump right into our [dashboards](https://data.santiment.net).
@@ -229,14 +229,14 @@ slightly lower than the utxo-based metric. We do not yet understand the
 significance of the difference between the two different realized cap measures
 and why the stack-based metric is always lower than the UTXO-based one.
 
-## Acknowldgements
+## Acknowledgments
 
 The stack coin age model was first developed at the end of 2017 by Michail
 Lopatchouk from [IBA](https://ibagroupit.com/en/). Maksim, Santiment's founder
 and CEO, had asked him if it is possible to develop an Ethereum and ERC20
 equivalent to the _Bitcoin-days destroyed_ metric. Milan, Tzanko and Valentin
 from [Santiment](https://santiment.net) optimized the calculations and used the
-the model to create Ethereum equivalents for _age distribution_ and _realized
+model to create Ethereum equivalents for _age distribution_ and _realized
 cap_.
 
 ## References
