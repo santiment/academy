@@ -1,38 +1,42 @@
-import React from 'react'
-import { renderToString } from 'react-dom/server'
-import { parseDocument } from 'htmlparser2'
-import Markdown from '../Markdown/Markdown'
-import * as components from './components'
+import React from "react"
+import { renderToString } from "react-dom/server"
+import { parseDocument } from "htmlparser2"
+import Markdown from "../Markdown/Markdown"
+import * as components from "./components"
 
-const ucFirst = text =>
-  text.charAt(0).toUpperCase() + text.toLowerCase().slice(1)
+function renderJSX(node) {
+  return node.children.map(node => {
+    const { type, name, data, parent, attribs } = node
 
-function injectCustomMarkdownComponents(rawMarkdownBody) {
-  if (rawMarkdownBody.length < 1) return
-  const rawTags = Array.from(
-    rawMarkdownBody.matchAll(
-      /(<[A-Z]{1}[a-zA-z]*?.*?>){1}[\s\S]*?(<\/[A-Z]{1}[a-zA-z]*?>){1}/g
-    ),
-    m => m[0]
-  )
-  if (rawTags.length === 0) return rawMarkdownBody
-  rawTags.map(rawTag => {
-    const parsedHtml = parseDocument(rawTag)
-    if (!parsedHtml.children || !parsedHtml.children[0]) return
-    const parsedElement = parsedHtml.children[0]
-    const DynamicComponent = components[ucFirst(parsedElement.tagName)]
-    if (!DynamicComponent) return
-    if (!parsedElement.children || !parsedElement.children[0] || !parsedElement.children[0].data) return
-    rawMarkdownBody = rawMarkdownBody.replace(
-      rawTag,
-      renderToString(
-        <DynamicComponent {...parsedElement.attribs}>
-          <Markdown markdown={parsedElement.children[0].data.trim()} />
-        </DynamicComponent>
-      )
-    )
+    if (type !== "tag") {
+      if (parent.type !== "tag") {
+        return data
+      }
+
+      return <Markdown markdown={data.trim()} />
+    }
+
+    const Component = components[name]
+    if (!Component) return `⚠️[INCORRECT MARKUP]: \<${name} /\>⚠️`
+
+    return <Component {...attribs}>{renderJSX(node)}</Component>
   })
-  return rawMarkdownBody
+}
+
+function injectCustomMarkdownComponents(rawMarkdown) {
+  if (rawMarkdown.length < 1) return rawMarkdown
+
+  // NOTE: Normalizing same-text-link shorthand [@vanguard | 28 Feb, 2023]
+  rawMarkdown = rawMarkdown.replaceAll(
+    /(<http?s:\/\/)(.*)(>)/g,
+    "[https://$2](https://$2)"
+  )
+
+  const ast = parseDocument(rawMarkdown, {
+    lowerCaseTags: false,
+  })
+
+  return renderToString(renderJSX(ast))
 }
 
 export default injectCustomMarkdownComponents
