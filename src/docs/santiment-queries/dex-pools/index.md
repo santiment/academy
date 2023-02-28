@@ -17,14 +17,16 @@ In **Santiment Queries**, we collect data from protocols that provide liquidity 
 - Clipper
 - Curve
 - DefiPlaza
+- DefiSwap
 - DoDo
 - Elk
 - EmpireDex
 - KwikSwap
+- KyberSwap
 - MooniSwap
 - RadioShack
 - Saddle
-- ShibaSwap
+- ShibaSwap Swap
 - StandardTech
 - Sum Swap
 - SushiSwap
@@ -32,8 +34,6 @@ In **Santiment Queries**, we collect data from protocols that provide liquidity 
 - Synapse
 - Uniswap v2/v3
 - YouSwap
-- DefiSwap
-- KyberSwap
 
 
 This information gives you the ability to check:
@@ -85,7 +85,7 @@ The `dex_pools` is a table designed to store information about liquidity pool cr
 
 - **fee** (*Nullable(Float64)*): Fee of the pool in percentage, NoneType if they are not available or variable
 
-- **computed_at** (*DateTime*):
+- **computed_at** (*DateTime*): The timestamp when the pool was inserted to the table.
 
 ### dex\_pools\_trades
 
@@ -103,9 +103,9 @@ The `dex_pools_trades` is a table designed to store trading events on DEX protoc
 
 - **pool_address** (*String*): Address of the pool
 
-- **router_address** (*String*): Address of the router used in this transaction
+- **router_address** (*String*): Address of the router used in this transaction. A router routes trade orders to the most appropriate pool of liquidity for efficient execution and optimal pricing based on available liquidity.
 
-- **from** (*String*): Sender address of the transaction
+- **from** (*String*): Sender address of the transaction.
 
 - **to** (*String*): Receiver address of the transaction
 
@@ -117,11 +117,11 @@ The `dex_pools_trades` is a table designed to store trading events on DEX protoc
 
 - **amount_out** (*UInt256*): The amount of the token received
 
-- **asset_in_ref_id** (*UInt64*): 
+- **asset_in_ref_id** (*UInt64*): Reference ID of the currency contract that was sent which can be used to retrieve additional information about the asset from the `asset_metadata` table.
 
-- **asset_out_ref_id** (*UInt64*): 
+- **asset_out_ref_id** (*UInt64*): Reference ID of the currency contract that was recieved.
 
-- **computed_at** (*DateTime*): 
+- **computed_at** (*DateTime*): The timestamp when the trade was inserted to the table.
 
 ## Sample Queries
 
