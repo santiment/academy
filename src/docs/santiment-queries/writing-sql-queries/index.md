@@ -284,18 +284,18 @@ LIMIT 10
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20dt%2C%5Cn%20%20get_asset_name(any(asset_id))%20AS%20asset%2C%5Cn%20%20anyIf(value%2C%20metric_id%3Dget_metric_id(%27price_usd%27))%20AS%20nominator%2C%5Cn%20%20anyIf(value%2C%20metric_id%3Dget_metric_id(%27mean_realized_price_usd_intraday_20y%27))%20AS%20denominator%2C%5Cn%20%20nominator%20%2F%20denominator%20AS%20mvrv_usd_ratio%2C%5Cn%20%20floor((mvrv_usd_ratio%20-%201)%20*%20100%2C%202)%20AS%20mvrv_usd_percent%5CnFROM%20intraday_metrics%20FINAL%5CnWHERE%5Cn%20%20asset_id%20%3D%20get_asset_id(%27bitcoin%27)%20AND%5Cn%20%20metric_id%20IN%20(get_metric_id(%27price_usd%27)%2C%20get_metric_id(%27mean_realized_price_usd_intraday_20y%27))%20AND%5Cn%20%20dt%20%3E%3D%20toDateTime(%272022-01-01%2000%3A00%3A00%27)%5CnGROUP%20BY%20dt%5CnORDER%20BY%20dt%20ASC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22asset%22%7D%2C%7B%22title%22%3A%22nominator%22%7D%2C%7B%22title%22%3A%22denominator%22%7D%2C%7B%22title%22%3A%22mvrv_usd_ratio%22%7D%2C%7B%22title%22%3A%22mvrv_usd_percent%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20dt%2C%5Cn%20%20get_asset_name(any(asset_id))%20AS%20asset%2C%5Cn%20%20anyIf(value%2C%20metric_id%3Dget_metric_id('price_usd'))%20AS%20nominator%2C%5Cn%20%20anyIf(value%2C%20metric_id%3Dget_metric_id('mean_realized_price_usd_intraday_20y'))%20AS%20denominator%2C%5Cn%20%20nominator%20%2F%20denominator%20AS%20mvrv_usd_ratio%2C%5Cn%20%20floor((mvrv_usd_ratio%20-%201)%20*%20100%2C%202)%20AS%20mvrv_usd_percent%5CnFROM%20intraday_metrics%20FINAL%5CnWHERE%5Cn%20%20asset_id%20%3D%20get_asset_id('bitcoin')%20AND%5Cn%20%20metric_id%20IN%20(get_metric_id('price_usd')%2C%20get_metric_id('mean_realized_price_usd_intraday_20y'))%20AND%5Cn%20%20dt%20%3E%3D%20toDateTime('2022-01-01%2000%3A00%3A00')%5CnGROUP%20BY%20dt%5CnORDER%20BY%20dt%20ASC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22asset%22%7D%2C%7B%22title%22%3A%22nominator%22%7D%2C%7B%22title%22%3A%22denominator%22%7D%2C%7B%22title%22%3A%22mvrv_usd_ratio%22%7D%2C%7B%22title%22%3A%22mvrv_usd_percent%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ```
-┌──────────────────dt─┬──────────price_usd─┬─realized_price_usd─┬─────mvrv_usd_ratio─┬─mvrv_usd_percent─┐
-│ 2022-01-01 00:00:00 │  46378.15778582922 │  23026.68649269964 │ 2.0141047128310414 │           101.41 │
-│ 2022-01-01 00:05:00 │   46418.9618983969 │  23026.68649269964 │  2.015876748620064 │           101.58 │
-│ 2022-01-01 00:10:00 │  46376.92099283003 │  23026.68736678082 │    2.0140509250903 │            101.4 │
-│ 2022-01-01 00:15:00 │  46333.90243842331 │  23026.68736678082 │  2.012182720874839 │           101.21 │
-│ 2022-01-01 00:20:00 │  46365.91591529093 │  23026.62194196269 │ 2.0135787191084136 │           101.35 │
-│ 2022-01-01 00:25:00 │  46418.47006354396 │ 23026.590133451697 │  2.015863825018099 │           101.58 │
-│ 2022-01-01 00:30:00 │   46433.0344984134 │ 23026.601073686023 │ 2.0164953720189045 │           101.64 │
-│ 2022-01-01 00:35:00 │  46502.41393773127 │ 23026.619212135225 │ 2.0195067938251263 │           101.95 │
-│ 2022-01-01 00:40:00 │  46564.63864446795 │  23026.62694351816 │ 2.0222084093639072 │           102.22 │
-│ 2022-01-01 00:45:00 │ 46668.585782409915 │  23026.71967910803 │  2.026714461841127 │           102.67 │
-└─────────────────────┴────────────────────┴────────────────────┴────────────────────┴──────────────────┘
+┌──────────────────dt─┬─asset───┬──────────nominator─┬────────denominator─┬─────mvrv_usd_ratio─┬─mvrv_usd_percent─┐
+│ 2022-01-01 00:00:00 │ bitcoin │  46378.15778582922 │ 23002.992048445383 │ 2.0161793599786777 │           101.61 │
+│ 2022-01-01 00:05:00 │ bitcoin │  46394.94838737312 │ 23002.992048445383 │  2.016909291176695 │           101.69 │
+│ 2022-01-01 00:10:00 │ bitcoin │  46376.92099283003 │ 23002.997373190537 │ 2.0161251266707207 │           101.61 │
+│ 2022-01-01 00:15:00 │ bitcoin │ 46342.625905845896 │ 23002.997373190537 │   2.01463423022676 │           101.46 │
+│ 2022-01-01 00:20:00 │ bitcoin │ 46349.908441099375 │  23002.95114246238 │  2.014954870531355 │           101.49 │
+│ 2022-01-01 00:25:00 │ bitcoin │ 46419.391208461006 │ 23002.920905515144 │ 2.0179781254358686 │           101.79 │
+│ 2022-01-01 00:30:00 │ bitcoin │ 46423.024145185496 │  23002.93075048584 │ 2.0181351954122198 │           101.81 │
+│ 2022-01-01 00:35:00 │ bitcoin │ 46499.005410722944 │ 23002.948585722002 │  2.021436740487479 │           102.14 │
+│ 2022-01-01 00:40:00 │ bitcoin │ 46573.474600493675 │  23002.95629498449 │  2.024673437763669 │           102.46 │
+│ 2022-01-01 00:45:00 │ bitcoin │  46647.52193392966 │ 23003.039167275976 │ 2.0278851674647504 │           102.78 │
+└─────────────────────┴─────────┴────────────────────┴────────────────────┴────────────────────┴──────────────────┘
 ```
 
 To return only some of the columns, the query can be provided as a FROM subquery. This does not induce any
