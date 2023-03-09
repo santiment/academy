@@ -103,9 +103,9 @@ The `dex_pools_trades` is a table designed to store trading events on DEX protoc
 
 - **pool_address** (*String*): Address of the pool
 
-- **router_address** (*String*): Address of the router used in this transaction. A router routes trade orders to the most appropriate pool of liquidity for efficient execution and optimal pricing based on available liquidity.
+- **router_address** (*String*): Address of the router used in this transaction. A router routes trade orders to the most appropriate pool of liquidity for efficient execution and optimal pricing based on available liquidity. *
 
-- **from** (*String*): Sender address of the transaction.
+- **from** (*String*): Sender address of the transaction. **
 
 - **to** (*String*): Receiver address of the transaction
 
@@ -123,11 +123,16 @@ The `dex_pools_trades` is a table designed to store trading events on DEX protoc
 
 - **computed_at** (*DateTime*): The timestamp when the trade was inserted to the table.
 
+\* In decentralized exchanges (DEXs), a router is used to direct transactions between different blockchain networks or between different liquidity pools within the same network.
+ When a user wants to make a trade on a DEX, the router identifies the best path for the trade to take in order to get the best possible price. The router can also split the trade into smaller orders and route them through multiple liquidity pools in order to find the best overall price.
+ Additionally, the router can be used to manage liquidity and minimize the impact of large trades on the market by routing the trade through multiple liquidity pools. By doing so, the router ensures that the trade does not cause significant price movements in any single pool, which could adversely affect the price of the traded asset.
+
+** Note about **from** and **to**: They can be equal when a router is used in the transaction then the address in **from** will be the same as **to** and also the **router_address**. But it is also possible to have a routed transactions in which they are not equal then 
+
 ## Sample Queries
 
 ---
-### Volume on certain token
-- Uniswap_v3 30 days volume on a certain token
+### Volume on certain token for last 30 days on certain exchange
 
 ```sql
 SELECT
@@ -145,8 +150,7 @@ WHERE
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtSUM(dpt.amount_in)%2F1e6%20as%20total_amount%5CnFROM%20%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5Cn%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20%27uniswap_v3%27%5Cn%5CtAND%20dpt.token_in%20%3D%20LOWER(%270xdAC17F958D2ee523a2206206994597C13D831ec7%27)%20--USDT%5Cn%5CtAND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22total_amount%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtSUM(dpt.amount_in)%2F1e6%20as%20total_amount%5CnFROM%20%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5Cn%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20'uniswap_v3'%5Cn%5CtAND%20dpt.token_in%20%3D%20LOWER('0xdAC17F958D2ee523a2206206994597C13D831ec7')%20--USDT%5Cn%5CtAND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22total_amount%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
-### Number of trades
-- happened in the past 30 days on Curve (Duplicates?)
+### Number of trades which occured in the past 30 days on certain exchange
 
 ```sql
 SELECT
@@ -162,7 +166,7 @@ WHERE
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(*)%20AS%20trade_count%5CnFROM%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20%27curve%27%5Cn%20%20AND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22trade_count%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(*)%20AS%20trade_count%5CnFROM%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20'curve'%5Cn%20%20AND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22trade_count%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
-### Unique traders
+### Unique traders in the past 30 days on certain exchange 
 - on dodo in the past 30 days
 
 ```sql
@@ -179,8 +183,7 @@ WHERE
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(DISTINCT%20from)%20AS%20unique_trader%5CnFROM%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20%27dodo%27%5Cn%20%20AND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22unique_trader%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(DISTINCT%20from)%20AS%20unique_trader%5CnFROM%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20'dodo'%5Cn%20%20AND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22unique_trader%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
-### Number of pools
-- on sushi_v2
+### Number of pools on certain exchange
 
 ```sql
 SELECT
@@ -193,7 +196,7 @@ WHERE
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(DISTINCT%20pool_address)%20AS%20pool_count%5CnFROM%5Cn%5Ctdex_pools%5CnWHERE%5Cn%5Ctproject_name%20%3D%20%27sushi_v2%27%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22pool_count%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(DISTINCT%20pool_address)%20AS%20pool_count%5CnFROM%5Cn%5Ctdex_pools%5CnWHERE%5Cn%5Ctproject_name%20%3D%20'sushi_v2'%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22pool_count%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
-### Pool fee ranking
+### Pool fee ranked descending
 
 ```sql
 SELECT
@@ -206,7 +209,7 @@ LIMIT 50
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctpool_address%2C%20project_name%2C%20fee%5CnFROM%20%5Cn%5Ctdex_pools%5CnORDER%20BY%20fee%20DESC%2C%20project_name%20DESC%5CnLIMIT%2050%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22pool_address%22%7D%2C%7B%22title%22%3A%22project_name%22%7D%2C%7B%22title%22%3A%22fee%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctpool_address%2C%20project_name%2C%20fee%5CnFROM%20%5Cn%5Ctdex_pools%5CnORDER%20BY%20fee%20DESC%2C%20project_name%20DESC%5CnLIMIT%2050%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22pool_address%22%7D%2C%7B%22title%22%3A%22project_name%22%7D%2C%7B%22title%22%3A%22fee%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
-### Project number of pools ranking
+### Projects ranked by the number of pools
 
 ```sql
 SELECT
