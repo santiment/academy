@@ -5,17 +5,21 @@ import * as components from "./components"
 import { parseMarkdown } from "./parser"
 
 function renderJSX(node) {
-  return node.children.map(node => {
+  return node.children.map((node, i) => {
     const { type, name, data, attributes } = node
 
     if (type == "text") {
-      return <Markdown markdown={data.trim()} />
+      return <Markdown key={i} markdown={data.trim()} />
     }
 
     const Component = components[name]
     if (!Component) return `⚠️[INCORRECT MARKUP]: \<${name} /\>⚠️`
 
-    return <Component {...attributes}>{renderJSX(node)}</Component>
+    return (
+      <Component key={i} {...attributes}>
+        {renderJSX(node)}
+      </Component>
+    )
   })
 }
 

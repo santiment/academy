@@ -9,10 +9,7 @@ export function parseMarkdown(text, options = {}) {
 
   parseChildren(ctx, parent)
 
-  const lastChild = parent.children[parent.children.length - 1]
-  const textStart = lastChild ? lastChild.tagEnd : 0
-
-  parent.children.push(Text(ctx.source.slice(textStart)))
+  appendHangingTextNode(ctx, parent)
 
   return parent
 }
@@ -21,22 +18,14 @@ function parseChildren(ctx, parent) {
   return iterate(ctx, char => {
     if (char === "<") {
       if (parseTagEnd(ctx, parent) === true) {
-        const lastChild = parent.children[parent.children.length - 1]
-        const textStart = lastChild ? lastChild.tagEnd : parent.childrenStart
-
-        parent.children.push(
-          Text(ctx.source.slice(textStart, parent.childrenEnd))
-        )
+        appendHangingTextNode(ctx, parent, parent.childrenEnd)
 
         return true
       }
 
       const node = parseReactTag(ctx, parent)
       if (node) {
-        const lastNode = parent.children[parent.children.length - 1]
-        const textStart = lastNode ? lastNode.tagEnd : parent.childrenStart || 0
-
-        parent.children.push(Text(ctx.source.slice(textStart, node.tagStart)))
+        appendHangingTextNode(ctx, parent, node.tagStart)
         parent.children.push(node)
       }
     }
@@ -160,4 +149,12 @@ function iterate(ctx, clb) {
 
     ctx.cursor++
   }
+}
+
+function appendHangingTextNode(ctx, parent, textEnd) {
+  const lastChild = parent.children[parent.children.length - 1]
+
+  const textStart = lastChild ? lastChild.tagEnd : parent.childrenStart || 0
+
+  parent.children.push(Text(ctx.source.slice(textStart, textEnd)))
 }
