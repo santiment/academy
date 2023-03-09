@@ -1,10 +1,10 @@
-.summary {
+:global(summary) {
   cursor: pointer;
   list-style-type: disclosure-closed;
   display: list-item;
   margin-left: 18px;
 }
 
-:global(details[open]) .summary {
+:global(details[open]) :global(summary) {
   list-style-type: disclosure-open;
 }

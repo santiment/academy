@@ -6,8 +6,6 @@ const Details = ({ children }) => {
   return <details>{children}</details>
 }
 
-export const Summary = ({ children }) => (
-  <summary className={cx(styles.summary)}>{children}</summary>
-)
+export const Summary = ({ children }) => <summary>{children}</summary>
 
 export default Details
