@@ -10,9 +10,12 @@ import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 import ArticleFooter from '../components/ArticleFooter'
 import injectCustomMarkdownComponents from '../components/MarkdownCustomComponents'
 import { sluggify } from '../components/Markdown/utils'
+import { usePageHash } from "../utils/utils"
 import styles from './article.module.scss'
 
+
 const Template = ({ data, pageContext }) => {
+  const { scrollToTargetAdjusted } = usePageHash()
   const { markdownRemark: article } = data
   const {
     breadcrumb: { crumbs },
@@ -39,6 +42,7 @@ const Template = ({ data, pageContext }) => {
         />
         <Markdown
           markdown={injectCustomMarkdownComponents(rawBodyWithTitle)}
+          scrollToTargetAdjusted={scrollToTargetAdjusted}
         />
         <ArticleFooter lastUpdatedAt={lastUpdatedAt} />
       </div>

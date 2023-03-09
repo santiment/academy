@@ -5,8 +5,7 @@ import { usePageHash } from '../../utils/utils'
 import Icon from '@santiment-network/ui/Icon'
 import styles from './Markdown.module.scss'
 
-const HeadingRenderer = ({ level, children }) => {
-  const { scrollToTargetAdjusted } = usePageHash()
+const HeadingRenderer = ({ level, children, scrollToTargetAdjusted }) => {
   const content = React.Children.toArray(children)
   const text = content.reduce(flatten, '')
   const slug = sluggify(text)
