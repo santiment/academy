@@ -12,10 +12,7 @@ export function parseMarkdown(text, options = {}) {
   const lastChild = parent.children[parent.children.length - 1]
   const textStart = lastChild ? lastChild.tagEnd : 0
 
-  parent.children.push({
-    type: "text",
-    data: ctx.source.slice(textStart),
-  })
+  parent.children.push(Text(ctx.source.slice(textStart)))
 
   return parent
 }
@@ -29,10 +26,9 @@ function parseChildren(ctx, parent) {
         const lastChild = parent.children[parent.children.length - 1]
         const textStart = lastChild ? lastChild.tagEnd : parent.childrenStart
 
-        parent.children.push({
-          type: "text",
-          data: ctx.source.slice(textStart, parent.childrenEnd),
-        })
+        parent.children.push(
+          Text(ctx.source.slice(textStart, parent.childrenEnd))
+        )
 
         return
       }
@@ -42,10 +38,7 @@ function parseChildren(ctx, parent) {
         const lastNode = parent.children[parent.children.length - 1]
         const textStart = lastNode ? lastNode.tagEnd : parent.childrenStart || 0
 
-        parent.children.push({
-          type: "text",
-          data: ctx.source.slice(textStart, node.tagStart),
-        })
+        parent.children.push(Text(ctx.source.slice(textStart, node.tagStart)))
         parent.children.push(node)
       }
     }
@@ -55,7 +48,7 @@ function parseChildren(ctx, parent) {
 }
 
 function parseTagEnd(ctx, parent) {
-  if (ctx.source[ctx.cursor + 1] !== "/") {
+  if (ctx.source[ctx.cursor + 1] !== "/" || parent.type !== "tag") {
     return false
   }
 
@@ -90,7 +83,7 @@ function parseReactTag(ctx) {
     return
   }
 
-  const node = { name, attributes: {}, children: [], tagStart }
+  const node = Tag(name, tagStart)
 
   parseAttributes(ctx, node)
 
@@ -169,4 +162,12 @@ function parseAttributeValue(ctx) {
 
     ctx.cursor++
   }
+}
+
+function Text(data) {
+  return { type: "text", data }
+}
+
+function Tag(name, tagStart) {
+  return { type: "tag", name, attributes: {}, children: [], tagStart }
 }

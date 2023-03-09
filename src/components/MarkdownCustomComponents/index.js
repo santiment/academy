@@ -1,39 +1,29 @@
 import React from "react"
 import { renderToString } from "react-dom/server"
-import { parseDocument } from "htmlparser2"
 import Markdown from "../Markdown/Markdown"
 import * as components from "./components"
+import { parseMarkdown } from "./parser"
 
 function renderJSX(node) {
   return node.children.map(node => {
-    const { type, name, data, parent, attribs } = node
+    const { type, name, data, attributes } = node
 
-    if (type !== "tag") {
-      if (parent.type !== "tag") {
-        return data
-      }
-
+    if (type == "text") {
       return <Markdown markdown={data.trim()} />
     }
 
     const Component = components[name]
     if (!Component) return `⚠️[INCORRECT MARKUP]: \<${name} /\>⚠️`
 
-    return <Component {...attribs}>{renderJSX(node)}</Component>
+    return <Component {...attributes}>{renderJSX(node)}</Component>
   })
 }
 
 function injectCustomMarkdownComponents(rawMarkdown) {
   if (rawMarkdown.length < 1) return rawMarkdown
 
-  // NOTE: Normalizing same-text-link shorthand [@vanguard | 28 Feb, 2023]
-  rawMarkdown = rawMarkdown.replaceAll(
-    /(<http?s:\/\/)(.*)(>)/g,
-    "[https://$2](https://$2)"
-  )
-
-  const ast = parseDocument(rawMarkdown, {
-    lowerCaseTags: false,
+  const ast = parseMarkdown(rawMarkdown, {
+    validTags: Object.keys(components),
   })
 
   return renderToString(renderJSX(ast))
