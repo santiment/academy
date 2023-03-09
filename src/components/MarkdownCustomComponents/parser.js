@@ -18,9 +18,7 @@ export function parseMarkdown(text, options = {}) {
 }
 
 function parseChildren(ctx, parent) {
-  for (; ctx.cursor < ctx.source.length; ) {
-    const char = ctx.source[ctx.cursor]
-
+  return iterate(ctx, char => {
     if (char === "<") {
       if (parseTagEnd(ctx, parent) === true) {
         const lastChild = parent.children[parent.children.length - 1]
@@ -30,7 +28,7 @@ function parseChildren(ctx, parent) {
           Text(ctx.source.slice(textStart, parent.childrenEnd))
         )
 
-        return
+        return true
       }
 
       const node = parseReactTag(ctx, parent)
@@ -42,9 +40,7 @@ function parseChildren(ctx, parent) {
         parent.children.push(node)
       }
     }
-
-    ctx.cursor++
-  }
+  })
 }
 
 function parseTagEnd(ctx, parent) {
@@ -97,15 +93,11 @@ function parseReactTag(ctx) {
 function parseReactTagName(ctx) {
   const { cursor, source } = ctx
 
-  for (; ctx.cursor < source.length; ) {
-    const char = source[ctx.cursor]
-
+  return iterate(ctx, char => {
     if (char === " " || char === ">") {
       return source.slice(cursor, ctx.cursor)
     }
-
-    ctx.cursor++
-  }
+  })
 }
 
 function parseAttributes(ctx, node) {
@@ -115,36 +107,28 @@ function parseAttributes(ctx, node) {
 
   if (hasAttributes === false) return
 
-  for (; ctx.cursor < ctx.source.length; ) {
-    const char = ctx.source[ctx.cursor]
-
+  return iterate(ctx, char => {
     if (char === ">") {
       ctx.cursor++
-      return
+      return true
     }
 
     const attribute = parseAttribute(ctx)
     if (attribute) node.attributes[attribute.name] = attribute.value
-
-    ctx.cursor++
-  }
+  })
 }
 
 function parseAttribute(ctx) {
   const { source, cursor } = ctx
 
-  for (; ctx.cursor < source.length; ) {
-    const char = source[ctx.cursor]
-
+  return iterate(ctx, char => {
     if (char === "=") {
       return {
         name: source.slice(cursor, ctx.cursor),
         value: parseAttributeValue(ctx),
       }
     }
-
-    ctx.cursor++
-  }
+  })
 }
 
 function parseAttributeValue(ctx) {
@@ -154,14 +138,11 @@ function parseAttributeValue(ctx) {
 
   const start = ++ctx.cursor
 
-  for (; ctx.cursor < ctx.source.length; ) {
-    const char = ctx.source[ctx.cursor]
+  return iterate(ctx, char => {
     if (char === openClose && ctx.source[ctx.cursor - 1] !== "\\") {
       return ctx.source.slice(start, ctx.cursor)
     }
-
-    ctx.cursor++
-  }
+  })
 }
 
 function Text(data) {
@@ -170,4 +151,13 @@ function Text(data) {
 
 function Tag(name, tagStart) {
   return { type: "tag", name, attributes: {}, children: [], tagStart }
+}
+
+function iterate(ctx, clb) {
+  for (; ctx.cursor < ctx.source.length; ) {
+    const data = clb(ctx.source[ctx.cursor])
+    if (data) return data
+
+    ctx.cursor++
+  }
 }
