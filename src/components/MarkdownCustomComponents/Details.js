@@ -1,6 +1,5 @@
 import React from "react"
-import cx from "classnames"
-import styles from "./Details.module.scss"
+import "./Details.module.scss"
 
 const Details = ({ children }) => {
   return <details>{children}</details>
