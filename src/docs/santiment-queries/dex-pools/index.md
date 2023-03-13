@@ -99,7 +99,7 @@ The `dex_pools_trades` is a table designed to store trading events on DEX protoc
 
 - **log_index** (*UInt32*): Log index of trade event
 
-- **trade_index** (*UInt32*): The sequence order of the trade in the transaction
+- **trade_index** (*UInt32*): The sequence order of the trade in the transaction. For example there are 5 trades happened in a transaction, then ideally the trade index should be 0 to 4 accordingly.
 
 - **pool_address** (*String*): Address of the pool
 
@@ -127,7 +127,8 @@ The `dex_pools_trades` is a table designed to store trading events on DEX protoc
  When a user wants to make a trade on a DEX, the router identifies the best path for the trade to take in order to get the best possible price. The router can also split the trade into smaller orders and route them through multiple liquidity pools in order to find the best overall price.
  Additionally, the router can be used to manage liquidity and minimize the impact of large trades on the market by routing the trade through multiple liquidity pools. By doing so, the router ensures that the trade does not cause significant price movements in any single pool, which could adversely affect the price of the traded asset.
 
-** Note about **from** and **to**: They can be equal when a router is used in the transaction then the address in **from** will be the same as **to** and also the **router_address**. But it is also possible to have a routed transactions in which they are not equal then 
+** Note about **from** and **to**: They can be equal when there is an internal router transaction then the address in **from** will be the same as **to** and also the **router_address**.
+But it is also possible to have a routed transactions in which they are not equal. When it is the transaction to or from the router or when a router is used for a normal trade between addresses. 
 
 ## Sample Queries
 
