@@ -246,6 +246,7 @@ export const REFERENCES = [
       'Trending Words Rank',
       'Velocity',
       'Whale Transaction Count',
+      'XRPL',
     ],
   },
   {

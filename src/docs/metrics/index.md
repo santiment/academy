@@ -104,6 +104,7 @@ activity.
 - [FTX](/metrics/ftx)
 - [dYdX](/metrics/dydx)
 - [Huobi](/metrics/huobi)
+- [XRPL](metrics/xrpl)
 
 ## Chain Address Metrics
 
