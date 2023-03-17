@@ -7,7 +7,7 @@ description:
 
 ## Description
 
-The number of new accounts created is computed on top of the balances table. It is computed as a unique counter of addresses that don’t have `oldBlockNumber` defined, i.e. equal to  NULL, which is exactly the new address since the Flink job does not have old block number saved in memory for given address.
+The number of new accounts created is computed as a unique counter of addresses that we see for the first time.
 
 https://academy.santiment.net/metrics/network-growth/
 
