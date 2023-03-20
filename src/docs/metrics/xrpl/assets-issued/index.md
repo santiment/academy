@@ -7,9 +7,10 @@ description: Descriptions about the assets issued metrics
 
 ## Description
 
-We can track the issued assets under 2 metrics:
-- Total assets issued - `total_assets_issued` - which tracks the total number for a given time
-- Number of new assets issued - `daily_assets_issued` - which tracks only the new assets for a given time
+We track the issued assets under two metrics:
+
+- Total assets issued - total number of issued assets through time
+- Number of new assets issued - tracks only the new assets issued per day
 
 ---
 

@@ -8,6 +8,7 @@ description: Accounts with movement in the last 30/60/90days
 ## Description
 
 Number of active accounts tracks the number of addresses which have had a balance change in any token in a previous period of time. It is computed on top of balances table.
+
 ---
 
 ## Access

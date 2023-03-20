@@ -7,11 +7,10 @@ description: Descriptions about the trustline count metrics
 
 ## Description
 
-We can compute this metric a cumulative sum over the RippleState source table.
-We have 2 metrics about the trustline count:
-- Total number of trustlines - `total_trustlines_count` - which tracks the total amount of trustline for a given time
-Since we are interested in total number, we can count the sign column (+1 or -1) and aggregate.
-- Net trustlines created - `daily_trustlines_count_change` - which tracks the number of opened or closed trustlines for a given time
+We track two metrics related to trustline count:
+
+- Total number of trustlines - the total amount of active trustline through time.
+- Net trustlines created - change in number of active trustlines on a daily basis.
 
 ---
 

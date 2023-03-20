@@ -1,5 +1,5 @@
 ---
-title: Daily DEX volume in XRP
+title: Daily DEX volume in USD
 author: Boris
 date: 2023-03-13
 description:
@@ -7,7 +7,7 @@ description:
 
 ## Description
 
-TBD
+Daily DEX volume in USD tracks the exchange volume at the XRPL Decentralized Exchange. The volume includes all trades where at least one of the assets in the pair have recently traded against XRP.
 
 ---
 
@@ -19,7 +19,7 @@ TBD
 
 ## Measuring Unit
 
-XRP
+USD
 
 ---
 
