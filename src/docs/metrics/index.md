@@ -104,7 +104,6 @@ activity.
 - [FTX](/metrics/ftx)
 - [dYdX](/metrics/dydx)
 - [Huobi](/metrics/huobi)
-- [XRPL](metrics/xrpl)
 
 ## Chain Address Metrics
 
@@ -117,3 +116,7 @@ Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and ot
 - [Top Transfers](/metrics/top-transfers)
 - [Contract Transaction Count](/metrics/contract-transactions-count)
 - [Contract Interacting Address Count](/metrics/contract-interacting-address-count)
+
+## XRPL Metrics
+
+- [XRPL](metrics/xrpl)

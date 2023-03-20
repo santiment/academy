@@ -18,7 +18,7 @@ Santiment provide key metrics about the XRPL Chain which are listed below:
 
 ## Activity Metrics
 - [Daily DEX Volume in XRP](/metrics/xrpl/daily-dex-volume-in-xrp)
-- Total assets issued
-- Number of new assets issued
-- Total number of trustlines - total_trustlines_count
-- Daily number of trustlines created or closed - daily_trustlines_count_change
+- [Total assets issued]()
+- [Number of new assets issued]()
+- [Total number of trustlines](/metrics/xrpl/trustline-count)
+- [Daily number of trustlines created or closed](/metrics/xrpl/trustline-count)
