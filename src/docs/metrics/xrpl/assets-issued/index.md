@@ -1,15 +1,15 @@
 ---
-title: 
+title: Assets Issued Metrics
 author: Boris
 date: 2023-03-13
-description:
+description: Descriptions about the assets issued metrics
 ---
 
 ## Description
 
 We can track the issued assets under 2 metrics:
-- `total_assets_issued` - which tracks the total number for a given time
-- `daily_assets_issued` - which tracks only the new assets for a given time
+- Total assets issued - `total_assets_issued` - which tracks the total number for a given time
+- Number of new assets issued - `daily_assets_issued` - which tracks only the new assets for a given time
 
 ---
 
@@ -21,7 +21,7 @@ We can track the issued assets under 2 metrics:
 
 ## Measuring Unit
 
-Number of assets
+Amount of assets
 
 ---
 

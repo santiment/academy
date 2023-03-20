@@ -1,5 +1,5 @@
 ---
-title: 
+title: Daily DEX volume in XRP
 author: Boris
 date: 2023-03-13
 description:
