@@ -241,6 +241,7 @@ export const REFERENCES = [
       'Top Holders',
       'Top Social Gainers Losers',
       'Transacted Coin Acquisition Cost',
+      `Transaction Count`,
       'Transaction Volume',
       'Transaction Volume In Profit Or Loss',
       'Trending Words Rank',
