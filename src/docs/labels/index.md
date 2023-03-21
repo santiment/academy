@@ -2,40 +2,63 @@
 title: Labels
 author: Santiment Team
 description: Santiment labels vision for crypto wallets
-date: 2021-01-27
+date: 2023-03-21
 ---
 
-## General
+## Labels overview
 
-| Label's title | Label's name in the API | Description
-|-----------|------------|------------
-|**Whale** | whale | One of top 100 asset owners
-|**Miner** | miner | Address receiving a reward from the ETH System
-|**Genesis** | genesis | Address that took part in the Genesis 
-|**System** | system | Address associated with the ETH System
-|**ETH 2.0 Staking Contract** | eth2stakingcontract | ETH 2.0 Staking Contract
-|**Proxy** | proxy | Proxy contract
+what is label
 
-## Defi
+## Labels usecases
 
-| Label's title | Label's name in the API | Description
-|-----------|------------|------------
-|**DeFi** | defi | Address of Lending protocol
-|**MakerDAO Bite Keeper** | makerdao-bite-keeper | Address initializing the liquidation of a collateralized debt position (CDP) in MakerDAO protocol
-|**MakerDAO CDP Owner** | makerdao-cdp-owner | Owner of a collateralized debt position (CDP) in MakerDAO protocol
+1. track activity
+2. market state
+3. metrics
 
-## DEX
+## How we gather labels
 
-| Label's title | Label's name in the API | Description
-|-----------|------------|------------
-|**DEX** | decentralized_exchange | Decentralized Exchange contract
-|**DEX Trader** | dex_trader | Participant (maker or taker) in a trade on a Decentralized Exchange
-|**UniSwap Ecosystem** | uniswap_ecosystem | Address that belong to Uniswap ecosystem
+1. open sources
+2. algorythms
 
-## CEX
+## Labels systematization
 
-| Label's title | Label's name in the API | Description
-|-----------|------------|------------
-|**CEX** | centralized_exchange | a hot or cold address of a Centralized Exchange, excluding deposit addresses
-|**CEX Deposit** | deposit | Address sending funds to one Centralized Exchange addresses only
-|**CEX Trader** | withdrawal | Address recieved funds from Centralized Exchange addresses
+1. the scheme
+2. how it works
+3. groups description
+    * domains
+    * owner
+    * infrastructure
+    * activity
+    * social_networks
+    * status
+    * chain
+
+
+### Domains
+
+- [defi](/labels/defi)
+    - [dex](/labels/dex)
+    - [lending](/labels/lending)
+    - [yeild](/labels/yeild)
+    - [liquid_staking](/labels/liquid_staking)
+    - [bridge](/labels/bridge)
+    - [stablecoin](/labels/stablecoin)
+    - [derivative](/labels/derivative)
+- [cefi](/labels/cefi)
+    - [centralized_exchange](/labels/centralized_exchange)
+    - [fund](/labels/fund)
+    - [money_changer](/labels/money_changer)
+    - [market_maker](/labels/market_maker)
+- [nft](/labels/nft)
+    - [nft_collection](/labels/nft_collection)
+    - [nft_merketplace](/labels/nft_merketplace)
+- [gamefi](/labels/gamefi)
+    - [gambling](/labels/gambling)
+- [iot](/labels/iot)
+- [mining_pool](/labels/mining_pool)
+- [wallet_app](/labels/wallet_app)
+- [portfolio_tracker](/labels/portfolio_tracker)
+- [decentralzied_identity](/labels/decentralzied_identity)
+- [dao](/labels/dao)
+- [mixer](/labels/mixer)
+
