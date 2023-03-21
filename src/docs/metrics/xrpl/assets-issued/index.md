@@ -9,8 +9,8 @@ description: Descriptions about the assets issued metrics
 
 We track the issued assets under two metrics:
 
-- Total assets issued - total number of issued assets through time
-- Number of new assets issued - tracks only the new assets issued per day
+- **Total assets issued** - total number of issued assets through time
+- **Number of new assets issued** - tracks only the new assets issued per day
 
 ---
 

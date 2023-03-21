@@ -9,8 +9,8 @@ description: Descriptions about the trustline count metrics
 
 We track two metrics related to trustline count:
 
-- Total number of trustlines - the total amount of active trustline through time.
-- Net trustlines created - change in number of active trustlines on a daily basis.
+- **Total number of trustlines** - the total amount of active trustline through time.
+- **Net trustlines created** - change in number of active trustlines on a daily basis.
 
 ---
 
