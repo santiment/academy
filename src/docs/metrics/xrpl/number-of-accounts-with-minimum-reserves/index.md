@@ -50,17 +50,3 @@ Amount of accounts
 
 Available for [these assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22holders_distribution_inf%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
 
----
-
-### SanAPI
-
-Available under the `holders_distribution_inf`, `holders_distribution_1e<2-9>` name.
-
-```graphql
-{
-  getMetric(metric: "holders_distribution_inf") {
-  }
-}
-```
-
-[**Run in Explorer**]()
