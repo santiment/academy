@@ -31,7 +31,7 @@ USD
 
 ## Frequency
 
-[Daily frequency](/metrics/details/frequency/#daily-frequency)
+[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
 
 ---
 
@@ -43,21 +43,21 @@ USD
 
 ## Available Assets
 
-Available for [these assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22daily_dex_volume_in_xrp%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+Available for [these assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dex_volume_in_usd_5m%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
 
 ---
 
 ### SanAPI
 
-Available under the `daily_dex_volume_in_xrp` name.
+Available under the `dex_volume_in_usd_5m` name.
 
 ```graphql
 {
-  getMetric(metric: "daily_dex_volume_in_xrp") {
+  getMetric(metric: "dex_volume_in_usd_5m") {
     timeseriesData(
       slug: "xrp"
-      from: "2020-01-01T00:00:00Z"
-      to: "2020-01-07T00:00:00Z"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-01-07T00:00:00Z"
     ) {
       datetime
       value
@@ -66,4 +66,4 @@ Available under the `daily_dex_volume_in_xrp` name.
 }
 ```
 
-[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_dex_volume_in_xrp%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22xrp%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
+[**Run in Explorer**](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dex_volume_in_usd_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22xrp%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
