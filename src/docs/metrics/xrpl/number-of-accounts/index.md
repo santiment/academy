@@ -7,8 +7,8 @@ description: Metrics related to accounts
 
 ## Description
 
-- **Total number of accounts** - Counts all addresses which hold any token across time. It is computed by summing all holder distribution metrics. Holder distribution metrics are computed on top of balances table.
-- **Number of active accounts** - Tracks the number of addresses which have had a balance change in any token in a previous period of time. It is computed on top of balances table.
+- **Total number of accounts** - Counts all addresses which hold XRP token across time. It is computed by summing all holder distribution metrics. Holder distribution metrics are computed on top of balances table.
+- **Number of active accounts** - Tracks the number of addresses which have either sent or received XRP token in a previous 30, 60 or 90 days. It is computed on top of balances table.
 - **Number of accounts with minimum reserves** - computed by summing all holder distribution metrics except the following groups:
     - 0-0.001
     - 0.001-0.01
@@ -38,7 +38,9 @@ Amount of accounts
 
 ## Frequency
 
-[Daily frequency](/metrics/details/frequency/#daily-frequency)
+- **Total number of accounts** - [Daily frequency](/metrics/details/frequency/#daily-frequency)
+- **Number of active accounts** - [Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+- **Number of accounts with minimum reserves** - [Daily frequency](/metrics/details/frequency/#daily-frequency)
 
 ---
 
