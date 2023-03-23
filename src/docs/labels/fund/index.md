@@ -1,8 +1,8 @@
 ---
-title: 
+title: Fund
 author: Alex
 date: 2023-03-22
-description: label
+description: Fund label
 ---
 
 ## Description

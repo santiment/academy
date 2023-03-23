@@ -14,14 +14,6 @@ Most common usecase is to denote the owner of the given address. E.g. address A 
 There are a lot of label types and usecases which are described below.
 
 
-<!-- ## Labels usecases
-
-In this section described some of usecases for labels.
-
-1. Track onchain activity [Top transfers](/metrics/top-transfers)
-2. Track aggregating onchain activity
-3. Follow protocol activity -->
-
 ## How we gather labels
 
 Collecting labels is not a trivial task. To keep story short there are 3 main ways to gather a label:
@@ -39,18 +31,19 @@ Collecting labels is not a trivial task. To keep story short there are 3 main wa
 
     The most powerful way if you need to label a lot of addresses. In Santiment we have a lot of manually developed algorithms labelling different types of addresses. Some of algorithms are naive (e.g. in order to find NFT traders just track trades on NFT trading platform), some are quite sophisticated (e.g. we developed an algorithm that tracks coinbase coldwallets that relies on some counterintuitive assumptions and filters the whole history of ETH transactions to find these cold wallets).
 
-    Very often we combine different ways. For instance we could manually collect some addresses, manually analyse its onchain behaviour and design an algorithm gathering all addresses of the initial type.
+
+Very often we combine different ways. For instance we could manually collect some addresses, manually analyse its onchain behaviour and design an algorithm gathering all addresses of the initial type.
 
 
 ## Labels limitations
 
 Although we constantly working on adding and improving labels there are 2 types of errors might occur:
 
-1. False positive error (wrong label was added to the address)
+1. **False positive error** (wrong label was added to the address)
 
     In Santiment we care a lot about false positive errors. We do not add labels without making sure the label is correct or mark the label as suspicious and exclude the address from further computations. Our goal is to build trustworthy labels so low false positive error rate is our priority.
 
-2. False negative error (address was not labelled properly)
+2. **False negative error** (address was not labelled properly)
 
     It is not a trivial task to find all addresses that belong to a person. Let's say you decided to label all addresses belonging to your friend, Alice. Once you find some Alice addresses it's very hard to prove there are no other addresses that are controlled by Alice. Moreover, Alice might want to hide her funds or transactions so she might use different addresses or use mixers or design some sophisticated way to distribute her funds so no one can find it. So we always have to assume that there might be addresses that we missed and didn't label.
 
@@ -63,33 +56,34 @@ In Santiment we label millions of addresses with dozens of different labels. In 
 
 We split all labels into major groups. Each major group might consist of smaller groups. Here's a list of major groups:
 
-* Domains
+* **Domains**
 
     The group includes legal entities (exchanges, platforms, mining pools, etc.), DAOs and smart contracts.
 
-* Owner
+* **Owner**
 
     A standalone label which denotes the person or company which controls a given address. Note that the owner label is not a nickname. Owner is a broader term rather than nickname which is an owner's attribute (e.g. Vitalik Buterin might have several nicknames: 'Vitaliy', 'ETH_daddy', 'John Galt', etc)
 
 
-* Infrastructure
+* **Infrastructure**
 
     A group including addresses that are bound to any other group and serve any internal tasks.
 
-* Activity
+* **Activity**
 
     A group including addresses which are actively or passively engaged in a certain type of activity (for example, trading, receiving airdrop, blogging, etc.)
 
-* Social_networks
+* **Social_networks**
 
     A group including users’ nicknames on social networks, forums, platforms, etc.
 
-* Status
+* **Status**
 
     A group that includes the status of the project: blocked, hacked or associated with fraudulent activity (scam).
 
+---
 
-Below you can find labels which are attached to every group from above. Please note that an address might have many labels. For example every `DEX` address is labelled as `DeFi` as well (`DeFi` is a parent group for `DEX` group) or `centralized_exchange` addresses most often owe a dedicated `owner` label.
+Below you can find labels which are attached to every group from above. Please note that an address might have many labels. For example every _DEX_ address is labelled as _DeFi_ as well (_DeFi_ is a parent group for _DEX_ group) or _centralized_exchange_ addresses most often owe a dedicated _owner_ label.
 
 
 ### Domains
@@ -108,7 +102,7 @@ Below you can find labels which are attached to every group from above. Please n
     - [market_maker](/labels/market_maker)
 - [nft](/labels/nft)
     - [nft_collection](/labels/nft_collection)
-    - [nft_merketplace](/labels/nft_merketplace)
+    - [nft_marketplace](/labels/nft_marketplace)
 - TBA: gamefi
 - TBA: mining_pool
 - TBA: dao

@@ -1,5 +1,5 @@
 ---
-title: Deposit address
+title: Deposit
 author: Alex
 date: 2023-03-22
 description: Deposit address label

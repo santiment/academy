@@ -7,7 +7,7 @@ description: Centralized exhange label
 
 ## Description
 
-`centralized_exchange` label denotes an address belonging to a centralized exchange (e.g. Binance, Coinbase, etc)
+_centralized_exchange_ label denotes an address belonging to a centralized exchange (e.g. Binance, Coinbase, etc)
 
 ## Limitations
 
