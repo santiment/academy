@@ -89,7 +89,7 @@ Below you can find labels which are attached to every group from above. Please n
 ### Domains
 
 - [defi](/labels/defi)
-    - [decentralized_exchange](/labels/dex)
+    - [decentralized_exchange](/labels/decentralized-exchange)
     - TBA: lending
     - TBA: yeild
     - TBA: liquid_staking
@@ -97,12 +97,12 @@ Below you can find labels which are attached to every group from above. Please n
     - TBA: stablecoin
     - TBA: derivative
 - [cefi](/labels/cefi)
-    - [centralized_exchange](/labels/centralized_exchange)
+    - [centralized_exchange](/labels/centralized-exchange)
     - [fund](/labels/fund)
-    - [market_maker](/labels/market_maker)
+    - [market_maker](/labels/market-maker)
 - [nft](/labels/nft)
-    - [nft_collection](/labels/nft_collection)
-    - [nft_marketplace](/labels/nft_marketplace)
+    - [nft_collection](/labels/nft-collection)
+    - [nft_marketplace](/labels/nft-marketplace)
 - TBA: gamefi
 - TBA: mining_pool
 - TBA: dao
@@ -120,9 +120,9 @@ Below you can find labels which are attached to every group from above. Please n
     - [erc721](/labels/erc721)
     - [erc1155](/labels/erc1155)
     - TBA: multisig
-- [hot_wallet](/labels/hot_wallet)
-- [cold_wallet](/labels/cold_wallet)
-- [dead_address](/labels/dead_address)
+- [hot_wallet](/labels/hot-wallet)
+- [cold_wallet](/labels/cold-wallet)
+- [dead_address](/labels/dead-address)
 - TBA: team_wallet
 - TBA: airdrop_sender
 
@@ -133,9 +133,9 @@ Below you can find labels which are attached to every group from above. Please n
  - [miner](/labels/miner)
  - [withdrawal](/labels/withdrawal)
  - [genesis](/labels/genesis)
- - [used_nft_marketplace](/labels/used_nft_marketplace)
- - [nft_trader_threshold](/labels/nft_trader_threshold)
- - [nft_trader](/labels/nft_trader)
+ - [used_nft_marketplace](/labels/used-nft-marketplace)
+ - [nft_trader_threshold](/labels/nft-trader-threshold)
+ - [nft_trader](/labels/nft-trader)
  - TBA: influencer
  - TBA: airdrop_receiver
 
