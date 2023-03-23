@@ -9,9 +9,13 @@ description: Dead address label
 
 Addresses that can not be owed by anyone and/or used for tokens burning. Also called as cemetary addresses.
 
+## API Name
+
+`dead_address`
+
 ## Label examples
 
-Fixed set of addresses:
+Fixed set of ETH addresses:
 
 ```
 0x0000000000000000000000000000000000000000
@@ -47,6 +51,6 @@ Fixed set of addresses:
 0xffffffffffffffffffffffffffffffffffffffff
 ```
 
-## Available Blockchains:
+## Available Blockchain:
 
 * ethereum

@@ -88,21 +88,21 @@ Below you can find labels which are attached to every group from above. Please n
 
 ### Domains
 
-- [defi](/labels/defi)
-    - [decentralized_exchange](/labels/decentralized-exchange)
+- [DeFi](/labels/defi)
+    - [Decentralized exchange](/labels/decentralized-exchange)
     - TBA: lending
     - TBA: yeild
     - TBA: liquid_staking
     - TBA: bridge
     - TBA: stablecoin
     - TBA: derivative
-- [cefi](/labels/cefi)
-    - [centralized_exchange](/labels/centralized-exchange)
-    - [fund](/labels/fund)
-    - [market_maker](/labels/market-maker)
-- [nft](/labels/nft)
-    - [nft_collection](/labels/nft-collection)
-    - [nft_marketplace](/labels/nft-marketplace)
+- [CeFi](/labels/cefi)
+    - [Centralized exchange](/labels/centralized-exchange)
+    - [Fund](/labels/fund)
+    - TBA: Market maker
+- [NFT](/labels/nft)
+    - [NFT collection](/labels/nft-collection)
+    - [NFT marketplace](/labels/nft-marketplace)
 - TBA: gamefi
 - TBA: mining_pool
 - TBA: dao
@@ -110,32 +110,31 @@ Below you can find labels which are attached to every group from above. Please n
 
 ### owner
 
-- [owner](/labels/owner)
+- [Owner](/labels/owner)
 
 
 ### infrastructure
 
-- [deposit](/labels/deposit)
-- [contract](/labels/contract)
-    - [erc721](/labels/erc721)
-    - [erc1155](/labels/erc1155)
-    - TBA: multisig
-- [hot_wallet](/labels/hot-wallet)
-- [cold_wallet](/labels/cold-wallet)
-- [dead_address](/labels/dead-address)
+- [Deposit](/labels/deposit)
+- [Contract](/labels/contract)
+    - [ERC721](/labels/erc721)
+    - [ERC1155](/labels/erc1155)
+- [Hot wallet](/labels/hot-wallet)
+- [Cold wallet](/labels/cold-wallet)
+- [Dead address](/labels/dead-address)
 - TBA: team_wallet
 - TBA: airdrop_sender
 
 
 ### activity
 
- - [whale](/labels/whale)
- - [miner](/labels/miner)
- - [withdrawal](/labels/withdrawal)
- - [genesis](/labels/genesis)
- - [used_nft_marketplace](/labels/used-nft-marketplace)
- - [nft_trader_threshold](/labels/nft-trader-threshold)
- - [nft_trader](/labels/nft-trader)
+ - [Whale](/labels/whale)
+ - [Miner](/labels/miner)
+ - [Withdrawal](/labels/withdrawal)
+ - [Genesis](/labels/genesis)
+ - [Used NFT marketplace](/labels/used-nft-marketplace)
+ - [NFT trader threshold](/labels/nft-trader-threshold)
+ - [NFT trader](/labels/nft-trader)
  - TBA: influencer
  - TBA: airdrop_receiver
 

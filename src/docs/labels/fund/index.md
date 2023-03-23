@@ -7,8 +7,8 @@ description: Fund label
 
 ## Description
 
+## API Name
 
-## Label examples
+## Label Examples
 
-
-## Available Blockchains:
+## Available Blockchains

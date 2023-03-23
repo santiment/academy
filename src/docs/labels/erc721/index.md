@@ -9,9 +9,13 @@ description: ERC721 contract standart label
 
 Denotes a smart contract that follows erc-721 standart.
 
-## Label examples
+## API Name
+
+`erc721`
+
+## Label Examples
 
 
-## Available Blockchains:
+## Available Blockchains
 
 * ethereum

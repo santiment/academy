@@ -11,12 +11,16 @@ _Owner_ is a standalone label which denotes the person or company which controls
 
 In most cases _owner_ label is connected with other labels (such as _centralized_exchange_).
 
-## Label examples
+## API Nane
+
+`owner`
+
+## Label Examples
 
 Binance: [0x28c6c06298d514db089934071355e5743bf21d60](https://etherscan.io/address/0x28c6c06298d514db089934071355e5743bf21d60)
 
 Aave: [0x625aE63000f46200499120B906716420bd059240](https://etherscan.io/address/0x625aE63000f46200499120B906716420bd059240)
 
-## Available Blockchains:
+## Available Blockchains
 
 Blockchain indifferent

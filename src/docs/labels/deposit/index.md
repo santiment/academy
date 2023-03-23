@@ -18,7 +18,13 @@ Most common case is a centralized exhcnage deposit. See the details on the pictu
 
 ![deposit_address](deposit-withdrawal.png)
 
-## Label examples
+## API Name
+
+`deposit`
+
+## Label Examples
 
 
-## Available Blockchains:
+## Available Blockchains
+
+* ethereum

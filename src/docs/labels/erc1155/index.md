@@ -9,9 +9,13 @@ description: ERC1155 standart contract label
 
 Denotes a smart contract that follows erc-1155 standart.
 
-## Label examples
+## API Name
+
+`erc1155`
+
+## Label Examples
 
 
-## Available Blockchains:
+## Available Blockchains
 
 * ethereum

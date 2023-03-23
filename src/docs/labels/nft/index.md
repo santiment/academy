@@ -9,9 +9,13 @@ description: NFT contract label
 
 Any smart contract which is an NFT contract should have the `nft` label assigned to it. NFT contracts follow one of two main standards: ERC721 and ERC1155. For each standard we assign a label as well.
 
-## Address examples
+## API Name
+
+`nft`
+
+## Address Examples
 
 
-## Available Blockchains:
+## Available Blockchains
 
 * ethereum

@@ -9,9 +9,10 @@ description: Miner label
 
 The label denotes the address mining blocks.
 
-## Label examples
+## API Name
 
+## Label Examples
 
-## Available Blockchains:
+## Available Blockchains
 
 * ethereum

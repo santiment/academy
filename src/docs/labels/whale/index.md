@@ -11,9 +11,12 @@ Whale is an address holding a substensial amount of tokens. We sort all addresse
 
 Note that the addresses labelled as whale yesterday might not be a whale any more tomorrow.
 
-## Label examples
+## API Name
 
+`whale`
 
-## Available Blockchains:
+## Label Examples
+
+## Available Blockchains
 
 * ethereum

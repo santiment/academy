@@ -9,9 +9,13 @@ description: NFT collection name label
 
 Name of the NFT collection
 
-## Label examples
+## API Name
+
+`nft_collection_name`
+
+## Label Examples
 
 
-## Available Blockchains:
+## Available Blockchains
 
 * ethereum

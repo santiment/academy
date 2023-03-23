@@ -7,11 +7,15 @@ description: Cold wallet label
 
 ## Description
 
-Denotes a cold wallet of a centralized exchanges or other entity. 
+Denotes a cold wallet of a centralized exchanges or other entity.
 
-## Label examples
+## API Name
+
+`cold_wallet`
+
+## Label Examples
 
 
-## Available Blockchains:
+## Available Blockchains
 
 * ethereum

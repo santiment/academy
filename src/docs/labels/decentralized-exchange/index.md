@@ -7,14 +7,15 @@ description: Decentralized exchange label
 
 ## Description
 
-_decentralized_exchange_ label denotes an address belonging to a decentralized exchange (including dex pools, dex factories, etc).
+Decentralized exchange label denotes an address belonging to a decentralized exchange (including dex pools, dex factories, etc).
 
-## Limitations
+## API Name
+
+`decentralized_exchange`
+
+## Label Examples
 
 
-## Label examples
-
-
-## Available Blockchains:
+## Available Blockchains
 
 * ethereum

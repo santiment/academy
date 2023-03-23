@@ -9,9 +9,13 @@ description: Smart contract label
 
 The label denotes any address which is a smart contract.
 
-## Label examples
+## API Name
+
+`contract`
+
+## Label Examples
 
 
-## Available Blockchains:
+## Available Blockchains
 
 * ethereum

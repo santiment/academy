@@ -9,10 +9,17 @@ description: Genesis address label
 
 Genesis is an address that got funds in the genesis block. Most of them are ETH ICO participants.
 
-## Label examples
+## API Name
 
-In ethereum blockchain there are around 8k genesis addresses.
+`genesis`
 
-## Available Blockchains:
+## Label Examples
+
+In ethereum blockchain there are 8893 genesis addresses.
+
+Genesis address: [0x144b19f1f66cbe318347e48d84b14039466c5909](https://etherscan.io/address/0x144b19f1f66cbe318347e48d84b14039466c5909)
+
+
+## Available Blockchains
 
 * ethereum

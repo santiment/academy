@@ -1,5 +1,5 @@
 ---
-title: 
+title: NFT Trader
 author: Alex
 date: 2023-03-22
 description: label
@@ -8,7 +8,10 @@ description: label
 ## Description
 
 
-## Label examples
+## API Name
 
 
-## Available Blockchains:
+## Label Examples
+
+
+## Available Blockchains

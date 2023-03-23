@@ -1,14 +1,14 @@
 ---
-title: 
+title: Hot wallet
 author: Alex
 date: 2023-03-22
-description: label
+description: Hot wallet label
 ---
 
 ## Description
 
+## API Name
 
-## Label examples
+## Label Examples
 
-
-## Available Blockchains:
+## Available Blockchains

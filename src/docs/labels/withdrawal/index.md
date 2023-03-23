@@ -1,5 +1,5 @@
 ---
-title: 
+title: Withdrawal
 author: Alex
 date: 2023-03-22
 description: label
@@ -7,8 +7,8 @@ description: label
 
 ## Description
 
+## API Name
 
-## Label examples
+## Label Examples
 
-
-## Available Blockchains:
+## Available Blockchains
