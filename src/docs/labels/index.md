@@ -7,58 +7,154 @@ date: 2023-03-21
 
 ## Labels overview
 
-what is label
+Generally speaking an **address label** is a piece of information attached to a wallet address.
 
-## Labels usecases
+Most common usecase is to denote the owner of the given address. E.g. address A belongs to Alice, address B belongs to Binance exchange. Another usecase would be marking (aka labelling) an address as a smart contract. E.g. address C is an erc721 standard contract. Or we might need to label an address according to how the address is used. For instance, address D is a cold storage.
 
-1. track activity
-2. market state
-3. metrics
+There are a lot of label types and usecases which are described below.
+
+
+<!-- ## Labels usecases
+
+In this section described some of usecases for labels.
+
+1. Track onchain activity [Top transfers](/metrics/top-transfers)
+2. Track aggregating onchain activity
+3. Follow protocol activity -->
 
 ## How we gather labels
 
-1. open sources
-2. algorythms
+Collecting labels is not a trivial task. To keep story short there are 3 main ways to gather a label:
 
-## Labels systematization
+1. **Open sources**
 
-1. the scheme
-2. how it works
-3. groups description
-    * domains
-    * owner
-    * infrastructure
-    * activity
-    * social_networks
-    * status
-    * chain
+    Some people or projects are willing to share their addresses. E.g. most DeFi projects post their smart contract addresses or some centralized exchanges reveal their addresses to prove that they hold a certain amount of funds.
+    We collect these addresses and store them in our database.
+
+2. **Manual label collection**
+
+    In order to collect some labels manual research is required. For instance we can manually deposit some ETH to a centralized exchange and track it's flow. The ETH will flow first to a deposit address and to the centralized exchange address next.
+
+3. **Algorithms**
+
+    The most powerful way if you need to label a lot of addresses. In Santiment we have a lot of manually developed algorithms labelling different types of addresses. Some of algorithms are naive (e.g. in order to find NFT traders just track trades on NFT trading platform), some are quite sophisticated (e.g. we developed an algorithm that tracks coinbase coldwallets that relies on some counterintuitive assumptions and filters the whole history of ETH transactions to find these cold wallets).
+
+    Very often we combine different ways. For instance we could manually collect some addresses, manually analyse its onchain behaviour and design an algorithm gathering all addresses of the initial type.
+
+
+## Labels limitations
+
+Although we constantly working on adding and improving labels there are 2 types of errors might occur:
+
+1. False positive error (wrong label was added to the address)
+
+    In Santiment we care a lot about false positive errors. We do not add labels without making sure the label is correct or mark the label as suspicious and exclude the address from further computations. Our goal is to build trustworthy labels so low false positive error rate is our priority.
+
+2. False negative error (address was not labelled properly)
+
+    It is not a trivial task to find all addresses that belong to a person. Let's say you decided to label all addresses belonging to your friend, Alice. Once you find some Alice addresses it's very hard to prove there are no other addresses that are controlled by Alice. Moreover, Alice might want to hide her funds or transactions so she might use different addresses or use mixers or design some sophisticated way to distribute her funds so no one can find it. So we always have to assume that there might be addresses that we missed and didn't label.
+
+In case you found any mistakes in our labelling please let us know (via discord or email). We appreciate any help a lot:)
+
+
+## Labels systematisation
+
+In Santiment we label millions of addresses with dozens of different labels. In order to keep it easy to work with labels we created a way to split all labels into logical groups. Here's a simplified description of how we handle labels.
+
+We split all labels into major groups. Each major group might consist of smaller groups. Here's a list of major groups:
+
+* Domains
+
+    The group includes legal entities (exchanges, platforms, mining pools, etc.), DAOs and smart contracts.
+
+* Owner
+
+    A standalone label which denotes the person or company which controls a given address. Note that the owner label is not a nickname. Owner is a broader term rather than nickname which is an owner's attribute (e.g. Vitalik Buterin might have several nicknames: 'Vitaliy', 'ETH_daddy', 'John Galt', etc)
+
+
+* Infrastructure
+
+    A group including addresses that are bound to any other group and serve any internal tasks.
+
+* Activity
+
+    A group including addresses which are actively or passively engaged in a certain type of activity (for example, trading, receiving airdrop, blogging, etc.)
+
+* Social_networks
+
+    A group including users’ nicknames on social networks, forums, platforms, etc.
+
+* Status
+
+    A group that includes the status of the project: blocked, hacked or associated with fraudulent activity (scam).
+
+
+Below you can find labels which are attached to every group from above. Please note that an address might have many labels. For example every `DEX` address is labelled as `DeFi` as well (`DeFi` is a parent group for `DEX` group) or `centralized_exchange` addresses most often owe a dedicated `owner` label.
 
 
 ### Domains
 
 - [defi](/labels/defi)
-    - [dex](/labels/dex)
-    - [lending](/labels/lending)
-    - [yeild](/labels/yeild)
-    - [liquid_staking](/labels/liquid_staking)
-    - [bridge](/labels/bridge)
-    - [stablecoin](/labels/stablecoin)
-    - [derivative](/labels/derivative)
+    - [decentralized_exchange](/labels/dex)
+    - TBA: lending
+    - TBA: yeild
+    - TBA: liquid_staking
+    - TBA: bridge
+    - TBA: stablecoin
+    - TBA: derivative
 - [cefi](/labels/cefi)
     - [centralized_exchange](/labels/centralized_exchange)
     - [fund](/labels/fund)
-    - [money_changer](/labels/money_changer)
     - [market_maker](/labels/market_maker)
 - [nft](/labels/nft)
     - [nft_collection](/labels/nft_collection)
     - [nft_merketplace](/labels/nft_merketplace)
-- [gamefi](/labels/gamefi)
-    - [gambling](/labels/gambling)
-- [iot](/labels/iot)
-- [mining_pool](/labels/mining_pool)
-- [wallet_app](/labels/wallet_app)
-- [portfolio_tracker](/labels/portfolio_tracker)
-- [decentralzied_identity](/labels/decentralzied_identity)
-- [dao](/labels/dao)
-- [mixer](/labels/mixer)
+- TBA: gamefi
+- TBA: mining_pool
+- TBA: dao
 
+
+### owner
+
+- [owner](/labels/owner)
+
+
+### infrastructure
+
+- [deposit](/labels/deposit)
+- [contract](/labels/contract)
+    - [erc721](/labels/erc721)
+    - [erc1155](/labels/erc1155)
+    - TBA: multisig
+- [hot_wallet](/labels/hot_wallet)
+- [cold_wallet](/labels/cold_wallet)
+- [dead_address](/labels/dead_address)
+- TBA: team_wallet
+- TBA: airdrop_sender
+
+
+### activity
+
+ - [whale](/labels/whale)
+ - [miner](/labels/miner)
+ - [withdrawal](/labels/withdrawal)
+ - [genesis](/labels/genesis)
+ - [used_nft_marketplace](/labels/used_nft_marketplace)
+ - [nft_trader_threshold](/labels/nft_trader_threshold)
+ - [nft_trader](/labels/nft_trader)
+ - TBA: influencer
+ - TBA: airdrop_receiver
+
+
+### social_networks
+
+- TBA: twitter
+- TBA: youtube
+- TBA: opensea_username
+
+
+### status
+
+- TBA: hacked
+- TBA: closed
+- TBA: scam
