@@ -17,6 +17,10 @@ Note that the addresses labelled as whale yesterday might not be a whale any mor
 
 ## Label Examples
 
+[0x1bd3fc5ac794e7af8e834a8a4d25b08acd9266ce](https://etherscan.io/address/0x1bd3fc5ac794e7af8e834a8a4d25b08acd9266ce)
+
+[0xe92d1a43df510f82c66382592a047d288f85226f](https://etherscan.io/address/0xe92d1a43df510f82c66382592a047d288f85226f)
+
 ## Available Blockchains
 
 * ethereum

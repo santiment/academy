@@ -24,6 +24,10 @@ Most common case is a centralized exhcnage deposit. See the details on the pictu
 
 ## Label Examples
 
+Kucoin deposit address: [0xb50a586be6a5542c0da84ff42de0ebdf8761203c](https://etherscan.io/address/0xb50a586be6a5542c0da84ff42de0ebdf8761203c)
+
+Gate.io deposit address: [0x11e67b9ca21ae5ab385a31d03929bd0cc1c96bec](https://etherscan.io/address/0x11e67b9ca21ae5ab385a31d03929bd0cc1c96bec)
+
 
 ## Available Blockchains
 

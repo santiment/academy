@@ -7,8 +7,16 @@ description: Fund label
 
 ## Description
 
+The fund label is used to identify wallet addresses that belong to investment funds operating in the cryptocurrency space.
+
 ## API Name
+
+`fund`
 
 ## Label Examples
 
+Alameda Fund address: [0x93c08a3168fc469f3fc165cd3a471d19a37ca19e](https://etherscan.io/address/0x93c08a3168fc469f3fc165cd3a471d19a37ca19e)
+
 ## Available Blockchains
+
+* ethereum
