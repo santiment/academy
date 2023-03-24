@@ -260,11 +260,13 @@ export const REFERENCES = [
     description: 'List and descriptions of all address labels on Santiment',
     icon: Labels,
     articles: [
+      'CeFi',
       'Centralized exchange',
       'Cold wallet',
       'Contract',
       'Dead address',
       'Decentralized exchange',
+      'DeFi',
       'Deposit',
       'ERC721',
       'ERC1155',

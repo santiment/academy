@@ -7,7 +7,9 @@ description: Centralized exhange label
 
 ## Description
 
-Centralized exchange label denotes an address belonging to a centralized exchange (e.g. Binance, Coinbase, etc)
+The centralized exchange label is used to identify wallet addresses that belong to centralized cryptocurrency exchanges (e.g. Binance, Coinbase, etc).
+
+Unlike DEXes, centralzied exchanges (CEX) are operated by a central authority or entity that manages the exchange, executes trades, and stores users' digital assets. CEXs typically have a user-friendly interface and offer high liquidity, faster transaction processing, and a wide range of trading pairs. However, CEXs are often vulnerable to security breaches and hacking attacks and may be subject to regulatory risks and restrictions.
 
 ## API Name
 
