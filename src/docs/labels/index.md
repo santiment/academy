@@ -108,12 +108,12 @@ Below you can find labels which are attached to every group from above. Please n
 - TBA: dao
 
 
-### owner
+### Owner
 
 - [Owner](/labels/owner)
 
 
-### infrastructure
+### Infrastructure
 
 - [Deposit](/labels/deposit)
 - [Contract](/labels/contract)
@@ -126,7 +126,7 @@ Below you can find labels which are attached to every group from above. Please n
 - TBA: airdrop_sender
 
 
-### activity
+### Activity
 
  - [Whale](/labels/whale)
  - [Miner](/labels/miner)
@@ -139,14 +139,14 @@ Below you can find labels which are attached to every group from above. Please n
  - TBA: airdrop_receiver
 
 
-### social_networks
+### Social_networks
 
 - TBA: twitter
 - TBA: youtube
 - TBA: opensea_username
 
 
-### status
+### Status
 
 - TBA: hacked
 - TBA: closed
