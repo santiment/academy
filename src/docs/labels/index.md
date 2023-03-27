@@ -73,7 +73,7 @@ We split all labels into major groups. Each major group might consist of smaller
 
     A group including addresses which are actively or passively engaged in a certain type of activity (for example, trading, receiving airdrop, blogging, etc.)
 
-* **Social_networks**
+* **Social networks**
 
     A group including users’ nicknames on social networks, forums, platforms, etc.
 
@@ -139,7 +139,7 @@ Below you can find labels which are attached to every group from above. Please n
  - TBA: airdrop_receiver
 
 
-### Social_networks
+### Social networks
 
 - TBA: twitter
 - TBA: youtube
