@@ -1,26 +1,31 @@
 import React from "react"
 import { renderToString } from "react-dom/server"
-import Markdown from "../Markdown/Markdown"
 import * as components from "./components"
 import { parseMarkdown } from "./parser"
+import Markdown from "../Markdown/Markdown"
 
 function renderJSX(node) {
-  return node.children.map((node, i) => {
-    const { type, name, data, attributes } = node
+  return node.children.reduce((acc, child) => {
+    const { type, name, data, attributes } = child
 
-    if (type == "text") {
-      return <Markdown key={i} markdown={data.trim()} />
+    if (type === "text") {
+      const text =
+        node.type !== "tag"
+          ? data
+          : renderToString(<Markdown markdown={data.trim()} />)
+      return acc + text
     }
 
     const Component = components[name]
-    if (!Component) return `⚠️[INCORRECT MARKUP]: \<${name} /\>⚠️`
+    if (!Component) return `\n⚠️[INCORRECT MARKUP]: \<${name} /\>⚠️\n`
 
-    return (
-      <Component key={i} {...attributes}>
-        {renderJSX(node)}
-      </Component>
+    const inject = "__CHILDREN__"
+    const parent = renderToString(
+      <Component {...attributes}>{inject}</Component>
     )
-  })
+
+    return acc + parent.replace(inject, renderJSX(child))
+  }, "")
 }
 
 function injectCustomMarkdownComponents(rawMarkdown) {
@@ -30,7 +35,7 @@ function injectCustomMarkdownComponents(rawMarkdown) {
     validTags: Object.keys(components),
   })
 
-  return renderToString(renderJSX(ast))
+  return renderJSX(ast)
 }
 
 export default injectCustomMarkdownComponents
