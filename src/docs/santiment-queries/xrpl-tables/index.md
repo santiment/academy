@@ -44,7 +44,7 @@ Balances is essential source data in later aggregate computations.
 - **currency** (*String*): Type of currency used in the transaction
 - **issuer** (*Nullable(String)*): The issuer of the currency
 - **issuerCurrency** (*String*): The type of the issued currency
-- **addressType** (*String*)
+- **addressType** (*String*): Enum(NORMAL | SPECIAL) is the address a valid XRPL address or a meta address used for metric purposes
 - **transactionIndex** (*UInt64*): Position of the transaction that caused the balance change inside the XRPL block
 - **transactionHash** (*String*): Hash value identifying the transaction that caused the balance change
 
@@ -63,7 +63,7 @@ Dex Volume is a source data which we use for computing the DEX volume metric.
 - **takerGetsAmount** (*Float64*): The amount of currency recieved by the taker
 - **transactionIndex** (*UInt64*): Position of the transaction that caused the balance change inside the XRPL block
 - **transactionHash** (*String*): Hash value identifying the transaction that caused the balance change
-- **xrpAmount** (*Nullable(Float64)*)
+- **xrpAmount** (*Nullable(Float64)*): The amount of XRP in the transaction
 
 
 ## xrp_ripple_state
