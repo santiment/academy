@@ -11,3 +11,4 @@ description: Database explorer & research tool
 - [Exploration](/santiment-queries/exploration) shows how to navigate the database and explore the tables structure 
 - [Writing SQL Queries](/santiment-queries/writing-sql-queries) is a comprehensive guide to your first steps in writing SQL queries using Clickhouse SQL and Santiment datasets
 - [NFT Tables Overview](/santiment-queries/nft-tables) gives information about the nft related tables in Santiment Queries
+- [XRPL Tables Overview](santiment-queries/xrpl-tables) gives information about the tables for the XRPL chain in Santiment Queries
