@@ -81,4 +81,4 @@ We use the ripple state source data to compute total number of trustlines.
 - **lowLimitIssuer** (*String*): Issuer of the low account
 - **lowLimitBalance** (*Float64*): Balance of the low account
 
-/* The "issuer" for the balance in a trust line depends on whether the balance is positive or negative. If a RippleState object shows a positive balance, the high account is the issuer. If the balance is negative, the low account is the issuer. Often, the issuer has its limit set to 0 and the other account has a positive limit, but this is not reliable because limits can change without affecting an existing balance.
+\* The "issuer" for the balance in a trust line depends on whether the balance is positive or negative. If a RippleState object shows a positive balance, the high account is the issuer. If the balance is negative, the low account is the issuer. Often, the issuer has its limit set to 0 and the other account has a positive limit, but this is not reliable because limits can change without affecting an existing balance.
