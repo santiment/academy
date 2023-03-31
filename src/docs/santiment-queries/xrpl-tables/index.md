@@ -31,7 +31,7 @@ SHOW TABLES LIKE '%xrp%'
 Below we have listed all the XRPL tables with thier columns and a brief descriptions of them.
 
 
-## xrp_balances
+## xrp\_balances
 Balances is essential source data in later aggregate computations.
 
 - **dt** (*DateTime*): The date time of the balance change
@@ -49,7 +49,7 @@ Balances is essential source data in later aggregate computations.
 - **transactionHash** (*String*): Hash value identifying the transaction that caused the balance change
 
 
-## xrp_dex_volume
+## xrp\_dex\_volume
 Dex Volume is a source data which we use for computing the DEX volume metric.
 
 - **dt** (*DateTime*): When the transaction happened.
@@ -66,7 +66,7 @@ Dex Volume is a source data which we use for computing the DEX volume metric.
 - **xrpAmount** (*Nullable(Float64)*): The amount of XRP in the transaction
 
 
-## xrp_ripple_state
+## xrp\_ripple\_state
 We use the ripple state source data to compute total number of trustlines.
 
 - **sign** (*Int8*): If sign is '1' it denotes creation and if it is '-1' deletion of trustline
