@@ -2,7 +2,7 @@
 title: XRPL tables overview
 author: Boris
 date: 2023-03-30
-description: Information about the XRP related tables
+description: Information about the XRPL related tables
 ---
 
 
@@ -32,7 +32,7 @@ Below we have listed all the XRPL tables with thier columns and a brief descript
 
 
 ## xrp\_balances
-Balances is essential source data in later aggregate computations.
+Represents balances changes per address per currency.
 
 - **dt** (*DateTime*): The date time of the balance change
 - **blockNumber** (*UInt64*): Unique identifier for the block in which the transaction was processed
@@ -50,12 +50,12 @@ Balances is essential source data in later aggregate computations.
 
 
 ## xrp\_dex\_volume
-Dex Volume is a source data which we use for computing the DEX volume metric.
+Represents trades on the XRPL DEX.
 
 - **dt** (*DateTime*): When the transaction happened.
 - **blockNumber** (*UInt64*): Unique identifier for the block in which the transaction was processed
 - **offerAddress** (*String*): The owner of the funds
-- **makerAddress** (*String*)
+- **makerAddress** (*String*): The address of the account that owns the Offer that resulted  in a DEX trade
 - **offerSequence** (*UInt32*) - The sequence number of the Offer transaction that resulted in a DEX trade
 - **takerPaysIssuerCurrency** (*String*): The currency type offered by the taker
 - **takerPaysAmount** (*Float64*): The amount of currency offered by the taker
@@ -63,11 +63,11 @@ Dex Volume is a source data which we use for computing the DEX volume metric.
 - **takerGetsAmount** (*Float64*): The amount of currency recieved by the taker
 - **transactionIndex** (*UInt64*): Position of the transaction that caused the balance change inside the XRPL block
 - **transactionHash** (*String*): Hash value identifying the transaction that caused the balance change
-- **xrpAmount** (*Nullable(Float64)*): The amount of XRP in the transaction
+- **xrpAmount** (*Nullable(Float64)*): The amount of the trade measured in XRP
 
 
 ## xrp\_ripple\_state
-We use the ripple state source data to compute total number of trustlines.
+Represents creation and destruction or XRPL trustlines.
 
 - **sign** (*Int8*): If sign is '1' it denotes creation and if it is '-1' deletion of trustline
 - **dt** (*DateTime*): When the transaction happened.
@@ -81,4 +81,44 @@ We use the ripple state source data to compute total number of trustlines.
 - **lowLimitIssuer** (*String*): Issuer of the low account
 - **lowLimitBalance** (*Float64*): Balance of the low account
 
-\* The "issuer" for the balance in a trust line depends on whether the balance is positive or negative. If a RippleState object shows a positive balance, the high account is the issuer. If the balance is negative, the low account is the issuer. Often, the issuer has its limit set to 0 and the other account has a positive limit, but this is not reliable because limits can change without affecting an existing balance.
+## Sample Queries
+
+---
+### DEX volume per asset pair, measured in XRP
+- DEX volume for a specific asset pair, per day, measured in XRP
+
+```sql
+WITH ('r3kmLJN5D28dHuH8vZNUZpMC43pEHpaocV/USD', 'rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B/BTC') AS issuer_pair
+SELECT
+    toDate(dt) AS day,
+    SUM(xrpAmount) AS count_final
+FROM xrp_dex_volume
+WHERE (takerPaysIssuerCurrency IN (issuer_pair)) OR (takerGetsIssuerCurrency IN (issuer_pair))
+GROUP BY day
+ORDER BY day DESC
+LIMIT 100
+```
+Test in [Queries](https://app.santiment.net/queries/dex-volume-per-asset-pari-in-xrp-509/071f9798-79f0-4369-9cb1-a8f4b7048a50)
+
+---
+
+---
+### DEX volume per asset pair, measured in USD
+- DEX volume for a specific asset pair, per day, measured in USD. To achive the result we need to join the onchain
+XRPL data with prices.
+
+```sql
+WITH ('r3kmLJN5D28dHuH8vZNUZpMC43pEHpaocV/USD', 'rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B/BTC') AS issuer_pair
+SELECT
+    toDate(dt) AS dt,
+    SUM(xrpAmount * value) AS volume_usd
+FROM xrp_dex_volume
+INNER JOIN daily_metrics_v2 USING (dt)
+WHERE (metric_id = dictGet('metrics_by_name', 'metric_id', 'daily_avg_price_usd')) AND (asset_id = dictGet('assets_by_name', 'asset_id', 'xrp')) AND ((takerPaysIssuerCurrency IN (issuer_pair)) OR (takerGetsIssuerCurrency IN (issuer_pair)))
+GROUP BY dt
+ORDER BY dt DESC
+LIMIT 100
+```
+Test in [Queries](https://app.santiment.net/queries/xrp-dex-volume-per-asset-pari-in-usd-510/a3fe5a05-d188-444f-86a3-df419a6cf910)
+
+
