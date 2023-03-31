@@ -1,10 +1,8 @@
 ---
-title: Onchain Data Functions we offer
+title: Onchain Data Functions
 author: Santiment Team
 date: 2023-03-31
 ---
-
-# Onchain Data Functions
 
 ## SAN_ACTIVE_ADDRESSES
 
