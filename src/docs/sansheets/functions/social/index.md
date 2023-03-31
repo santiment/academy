@@ -1,10 +1,8 @@
 ---
-title: Social Data Functions we offer
+title: Social Data Functions
 author: Santiment Team
 date: 2023-03-31
 ---
-
-# Social Data Functions
 
 ## SAN_PROJECT_SOCIAL_DATA
 

@@ -1,10 +1,8 @@
 ---
-title: XRPL-related Data Functions we offer
+title: XRPL-related Data Functions
 author: Santiment Team
 date: 2023-03-31
 ---
-
-# XRPL-related Data Functions
 
 ## SAN_ACTIVE_ADDRESSES_60D
 
