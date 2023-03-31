@@ -32,7 +32,7 @@ Below we have listed all the XRPL tables with thier columns and a brief descript
 
 
 ## xrp\_balances
-Represents balances changes per address per currency.
+Represents balance changes per address per currency.
 
 - **dt** (*DateTime*): The date time of the balance change
 - **blockNumber** (*UInt64*): Unique identifier for the block in which the transaction was processed
