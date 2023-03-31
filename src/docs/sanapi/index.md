@@ -7,17 +7,19 @@ description: This page contains a reference of all the APIs provided by Santimen
 
 ## Overview
 
+- [Overview](#overview)
 - [Available Metrics](#available-metrics)
 - [Access the API](#access-the-api)
   - [Live API Explorer](#live-api-explorer)
   - [curl](#curl)
-  - [sanpy - Santiment-provided Python library](#santiment-provided-python-library)
-  - [Programming langauge of your choice](#programming-language-of-your-choice)
+  - [Santiment-provided Python library](#santiment-provided-python-library)
+  - [Programming language of your choice](#programming-language-of-your-choice)
 - [Authentication](#authentication)
 - [Errors](#errors)
-- [Rate limits](#rate-limits)
+- [Rate Limits](#rate-limits)
+  - [Limits applied to the authenticated users](#limits-applied-to-the-authenticated-users)
+  - [Remaining API calls count for the authenticated user](#remaining-api-calls-count-for-the-authenticated-user)
 - [Glossary](#glossary)
-- [Start exploring the API](#start-exploring-the-api)
 
 Santiment API uses [GraphQL](https://graphql.org). From the beginning it was
 decided to use GraphQL instead of REST for a number of reasons:
