@@ -12,6 +12,8 @@ We track the issued assets under two metrics:
 - **Total assets issued** - total number of issued assets through time
 - **Number of new assets issued** - tracks only the new assets issued per day
 
+We would count an asset as part of this metric only if the issuer has more than 300 active trustlines at the time the asset is issued.
+
 ---
 
 ## Access
