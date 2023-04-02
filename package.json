@@ -50,7 +50,7 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-transition-group": "^4.3.0",
     "remark-math": "^2.0.0",
-    "san-webkit": "https://github.com/santiment/san-webkit#80babf8",
+    "san-webkit": "https://github.com/santiment/san-webkit#f459c21",
     "svelte": "^3.46.3",
     "svelte-loader": "^2.13.6"
   },

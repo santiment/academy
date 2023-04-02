@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { flatten, sluggify } from './utils'
+import { sluggify } from 'san-webkit/lib/utils/url'
+import { flatten } from './utils'
 import { usePageHash } from '../../utils/utils'
 import Icon from '@santiment-network/ui/Icon'
 import styles from './Markdown.module.scss'
