@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
-import { sluggify } from '../Markdown/utils'
+import { sluggify } from 'san-webkit/lib/utils/url'
 
 function getElements(tableOfContents, title) {
   const parsedHtml = new DOMParser().parseFromString(
-    `<ul><li><p>${title}</p>${tableOfContents}</li></ul>`,
+    `<ul><li><p>${title}</p>${
+      tableOfContents.replace(/<em>/g, '_').replace(/<\/em>/g, '_')
+    }</li></ul>`,
     'text/html'
   )
   const ul = parsedHtml.getElementsByTagName('ul')
