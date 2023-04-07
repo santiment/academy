@@ -72,11 +72,9 @@ activity.
 
 ## Other On-Chain
 
-- [Aave v2](/metrics/aave-v2)
 - [Age Consumed](/metrics/age-consumed)
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
 - [Circulation](/metrics/circulation)
-- [Compound](/metrics/compound)
 - [DeFi](/metrics/defi)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [ETH 2.0](/metrics/eth-2)
@@ -84,6 +82,7 @@ activity.
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
 - [Labeled Flow](/metrics/labeled-flow)
+- [Lending and Borrowing Protocols](/metrics/lending-borrowing-protocols)
 - [MakerDAO](/metrics/makerdao)
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
 - [Stock To Flow ratio](/metrics/stock-to-flow)
