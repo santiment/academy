@@ -18,6 +18,7 @@ and transparency than traditional finance and allow users to participate in the
 global financial system without the need for intermediaries or extensive paperwork. 
 However, they also carry additional risks such as smart contract vulnerabilities 
 and market volatility.
-- [Aave V2](/metrics/deposit-borrow-protocols/aave-v2)
-- [Compound](/metrics/deposit-borrow-protocols/compound)
-- [MakerDAO](/metrics/deposit-borrow-protocols/makerdao)
+
+- [Aave V2](/metrics/lending-and-borrowing-protocols/aave-v2)
+- [Compound](/metrics/lending-and-borrowing-protocols/compound)
+- [MakerDAO](/metrics/lending-and-borrowing-protocols/makerdao)
