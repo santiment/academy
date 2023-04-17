@@ -82,7 +82,7 @@ activity.
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
 - [Labeled Flow](/metrics/labeled-flow)
-- [Lending and Borrowing Protocols](/metrics/lending-borrowing-protocols)
+- [Lending and Borrowing Protocols](/metrics/lending-and-borrowing-protocols)
 - [MakerDAO](/metrics/makerdao)
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
 - [Stock To Flow ratio](/metrics/stock-to-flow)
