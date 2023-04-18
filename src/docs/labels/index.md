@@ -90,7 +90,7 @@ Below you can find labels which are attached to every group from above. Please n
     - TBA: lending
     - TBA: yeild
     - TBA: liquid_staking
-    - TBA: bridge
+    - [Bridge](/labels/bridge)
     - TBA: stablecoin
     - TBA: derivative
 - [CeFi](/labels/cefi)
@@ -145,6 +145,6 @@ Below you can find labels which are attached to every group from above. Please n
 
 ### Status
 
-- TBA: hacked
-- TBA: closed
-- TBA: scam
+- [Hacked](/labels/hacked)
+- [Closed](/labels/closed)
+- [Scam](/labels/scam)
