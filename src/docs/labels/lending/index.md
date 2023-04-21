@@ -9,7 +9,7 @@ description: Lending Labels
 
 Decentralized finance (DeFi) lending projects enable individuals to lend and borrow digital assets without intermediaries. 
 These platforms offer transparency, potentially higher interest rates, but also come with risks such as smart contract vulnerabilities and market volatility. 
-Lending label is a part of [defi](/labels/defi). Visit [this page](labels/#domains) to see full child labels list.
+Lending belongs to [defi](/labels/defi).
 
 ## API Name
 

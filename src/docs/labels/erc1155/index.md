@@ -14,7 +14,7 @@ Denotes a smart contract that follows erc-1155 standart.
 `erc1155`
 
 ## Label Examples
-
+[0x73242c671cf402152e3880af208071dadab0bc27](https://etherscan.io/address/0x73242c671cf402152e3880af208071dadab0bc27)
 
 ## Available Blockchains
 

@@ -7,11 +7,11 @@ description: Owner label
 
 ## Description
 
-_Owner_ is a standalone label which denotes the person or company which controls a given address. Note that owner label is not a nickname. Owner is a broader term rather than nickname which is an owner's attribute (e.g. Vitalik Buterin might have several nicknames: 'Vitaliy', 'ETH_daddy', 'Jogn Galt', etc).
+`Owner` is a standalone label which denotes the person or company which controls a given address. Note that owner label is not a nickname. Owner is a broader term rather than nickname which is an owner's attribute (e.g. Vitalik Buterin might have several nicknames: 'Vitaliy', 'ETH_daddy', 'Jogn Galt', etc).
 
-In most cases _owner_ label is connected with other labels (such as _centralized_exchange_).
+In most cases `owner` label is connected with other labels (such as [centralized_exchange](/labels/centralized-exchange)).
 
-## API Nane
+## API Name
 
 `owner`
 

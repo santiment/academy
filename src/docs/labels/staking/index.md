@@ -10,13 +10,11 @@ description: Liquid Staking Label
 DeFi liquid staking projects create tokenized versions of staked assets, allowing users to earn rewards while maintaining liquidity. 
 These projects provide increased flexibility and higher rewards compared to traditional staking.
 
-Lending group is a part of  [DeFi Group](/labels/defi). Visit [this page](labels/#domains) to see full child labels list.
+Liquid staking group is a part of  [DeFi Group](/labels/defi)
 
 ## API Name
 
-`staking`
-
-## Label Examples
+`liquid_staking`
 
 
 ## Available Blockchains

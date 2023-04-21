@@ -9,8 +9,6 @@ description: Closed label
 
 Label `closed` used to indicate that an address's owner has announced the end of their project or business operations.
 
-Visit [this page](labels/#domains) to see full child labels list.
-
 ## API Name
 
 `closed`

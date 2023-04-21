@@ -10,7 +10,8 @@ description: Bridge label
 Crypto bridges enable the exchange of cryptocurrencies across different blockchains, 
 allowing users to access assets that were previously inaccessible. 
 They increase liquidity and interoperability between blockchain networks. Examples include Wrapped Bitcoin and the Binance Smart Chain.
-Lending label is a part of [defi](/labels/defi). Visit [this page](labels/#domains) to see full child labels list.
+
+`Bridge` label is a part of [DeFi](/labels/defi) label. 
 
 ## API Name
 
