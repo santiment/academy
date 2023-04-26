@@ -7,55 +7,42 @@ description: How to execute queries using the API
 
 ## Overview
 
-Before you start, make sure you acquaint yourself with the Sanqueries product
-and the SQL queries you can write by reading the `Introduction`, `Exploration`
-and `Writing SQL Queries` articles that can be found on the [Sanqueries Oveview](/sanqueries/overview/) page.
+Before you start, make sure you acquaint yourself with the Sanqueries product and the SQL queries you can write by reading the `Introduction`, `Exploration`, and `Writing SQL Queries` articles found on the [Sanqueries Overview](/santiment-queries/) page.
 
-The [Santiment Queries Web Interface](https://app.santiment.net/queries) is only
-one of the ways to execute queries and access the data.
+The [Santiment Queries Web Interface](https://app.santiment.net/queries) is just one way to execute queries and access the data. 
 
-For those who want to automate the process of executing queries, we provide access
-access via our GraphQL API. You can query the API endpoint directly or use our
-[python library](https://github.com/santiment/sanpy).
+For those who want to automate the process of executing queries, we provide access via our GraphQL API. You can query the API endpoint directly or use our [Python library](https://github.com/santiment/sanpy).
 
 ## When to use it?
 
-If the data needs to be consumed by another system, that system can use the API
-to compute an SQL query and get the results as a JSON object.
+If the data needs to be consumed by another system, that system can use the API to execute an SQL query and receive the results as a JSON object.
 
-A few examples of when the API can be used:
+Here are a few examples of when the API can be used:
 
-- When the data needs to be consumed by another system at a regular interval
-  (e.g. every hour).
-- When the same query needs to be executed multiple times with different
-  arguments.
-- Any use case that requires automation is a good candidate for
-  using the API.
+- When the data needs to be consumed by another system at a regular interval (e.g. every hour).
+- When the same query needs to be executed multiple times with different arguments.
+- Any use case that requires automation is a good candidate for using the API.
 
-## How to use the Web interface to write queries for the API?
+## How to Use the Web Interface for Writing API Queries?
 
-The web interface is a powerful tool for exploring the data, writing queries,
-observing the results in real-time or explore prebuilt dashboards.
+The web interface is a powerful tool for exploring data, writing queries, observing real-time results, and exploring pre-built dashboards.
 
-Even when the data is consumed only through the API, it is recommended to use
-the web interface to write the SQL queries. The web interface
-facilitates the process of writing queries by providing syntax highlighting,
-auto-completion and a preview of the result in real-time, speeding up the
-development and debugging process. When the query is ready, it can be copied
-and used in the API.
+Even when data is consumed solely through the API, using the web interface for writing SQL queries is highly recommended.
+
+The web interface streamlines the query-writing process by providing syntax highlighting, auto-completion, and real-time result previews. This speeds up development and debugging. Once the query is ready, it can be copied and used in the API.
 
 ## API Endpoint
 
-On the [API Overview](/sanapi/#overview/) page one can find information how to access the API.
+On the [API Overview](/sanapi/#overview/) page, you can find information on how to access the API.
 
 There are two ways to execute queries using the API:
 
-- Directly execute the `computeRawClickhouseQuery` GraphQL query against the API graphql endpoint.
+- Directly execute the `computeRawClickhouseQuery` GraphQL query against the API GraphQL endpoint.
 - Use the [sanpy execute_sql function](https://github.com/santiment/sanpy#execute-sql-queries-and-get-the-result) to execute an SQL query and get the result as a Pandas DataFrame.
 
-### Direct API call
+### Direct API Call
 
-The direct API calls can be made using any HTTP client in any programming language.
+You can make direct API calls using any HTTP client in any programming language. 
 
 #### Request Example
 
@@ -72,15 +59,26 @@ The direct API calls can be made using any HTTP client in any programming langua
 }
 ```
 
-You can execute the above query in your terminal via the followign curl command `curl`:
+You can execute the above query in your terminal via the following curl command:
 
 ```bash
 curl \
--X POST \
--H "Content-Type: application/graphql" \
--H "Authorization: Apikey <YOUR_OWN_API_KEY>"\
---data '
-{ getMetric(metric: "dev_activity"){ timeseriesData( slug: "ethereum" from: "2020-02-10T07:00:00Z" to: "2020-03-10T07:00:00Z" interval: "1w"){ datetime value } } }' https://api.santiment.net/graphql
+  -X POST \
+  -H "Content-Type: application/graphql" \
+  -H "Authorization: Apikey <YOUR_OWN_API_KEY>"\
+  --data '{
+    getMetric(metric: "dev_activity"){
+      timeseriesData(
+        slug: "ethereum"
+        from: "2020-02-10T07:00:00Z"
+        to: "2020-03-10T07:00:00Z"
+        interval: "1w"
+      ){
+        datetime
+        value
+      }
+    }
+  }' https://api.santiment.net/graphql
 ```
 
 #### Result Example
@@ -122,45 +120,29 @@ The result is a JSON object:
 }
 ```
 
-#### Request arguments definition
+#### Request Arguments Definition
 
 The `computeRawClickhouseQuery` accepts two arguments:
 
-- `query` - The SQL query to execute. The query must be a valid SQL query that
-  can be executed against the Clickhouse database. The article [Writing SQL Queries](/sanqueries/writing-sql-queries/) is a recommended read.
-  The query allows for parametrization by using named parameters. Each parameter has a key and a value.
-  The query contains the parameter name surrounded in double curly braces: `{{key}}`.
-- `parameters` - A stringified JSON object that contains the key-value pairs. When the SQL query
-  is executed, the `{{key}}` templates are replaced with the corresponding values from the `parameters` object.
+- `query` - The SQL query to execute. The query must be a valid SQL query that can be executed against the Clickhouse database. We recommend reading the article [Writing SQL Queries](/sanqueries/writing-sql-queries/) for more information. The query allows for parameterization by using named parameters. Each parameter has a key and a value. The query contains the parameter name surrounded by double curly braces: `{{key}}`.
 
-#### Result fields interpretation
+- `parameters` - A stringified JSON object that contains the key-value pairs. When the SQL query is executed, the `{{key}}` templates are replaced with the corresponding values from the `parameters` object.
 
-The result of the GraphQL query contains the result of the executed SQL query.
-The selected fields in this example are: `columns`, `columnTypes` and `rows`.
+#### Result Fields Interpretation
+
+The result of the GraphQL query contains the result of the executed SQL query. The selected fields in this example are: `columns`, `columnTypes`, and `rows`.
 
 The meaning of the fields is:
 
-- `columns` is a list of the column names in the result. The order of the columns
-  is specified in the SQL query itself. The name of the column is the name of the column
-  in the database table or the alias specified with the `AS` keyword. If an aggregation
-  function is used, it is highly recommended to specify the alias for the column, otherwise
-  the name of the column will be the expression itself.
-- `columnTypes` is a list of the types of the columns in the result. The order of the
-- types is the same as in the `columns` field. The types are the raw Clickhouse type.
-  Example types are `UInt64`, `Date`, `Float64`, `DateTime`, `String`, etc. These type are mapped
-  to JSON types as JSON has a limited number of types. All integer and float types are
-  mapped to the JSON number type but with specified meaning (size, type and sign of the number).
-  A lot of the other types are transpored as JSON string - `String`, `Date`, `DateTime` and others
-  are JSON strings with specified meaning.
-- `rows` is a list of lists, each inner list is a row in the result. The order of the
-  rows is the same as in the result of the SQL query. The order of the columns in the
-  inner list is the same as in the `columns` field.
+- `columns` is a list of the column names in the result. The order of the columns is specified in the SQL query itself. The name of the column is the name of the column in the database table or the alias specified with the `AS` keyword. If an aggregation function is used, it is highly recommended to specify the alias for the column; otherwise, the name of the column will be the expression itself.
 
-### Using the Python library
+- `columnTypes` is a list of the types of the columns in the result. The order of the types is the same as in the `columns` field. The types are the raw Clickhouse type. Example types are `UInt64`, `Date`, `Float64`, `DateTime`, `String`, etc. These types are mapped to JSON types, as JSON has a limited number of types. All integer and float types are mapped to the JSON number type but with specified meaning (size, type, and sign of the number). Many other types are transported as JSON strings - `String`, `Date`, `DateTime`, and others are JSON strings with specified meaning.
 
-The [sanpy](https://github.com/santiment/sanpy) provides the `execute_sql` function, which
-interacts with the above described `computeRawClickhouseQuery` API. The function accepts two
-named parameters - `query` and `parameters`, runs the query and returns the result as a Pandas DataFrame.
+- `rows` is a list of lists, where each inner list is a row in the result. The order of the rows is the same as in the result of the SQL query. The order of the columns in the inner list is the same as in the `columns` field.
+
+### Using the Python Library
+
+The [sanpy](https://github.com/santiment/sanpy) library provides the `execute_sql` function, which interacts with the previously described `computeRawClickhouseQuery` API. The function accepts two named parameters - `query` and `parameters`, runs the query, and returns the result as a Pandas DataFrame.
 
 #### Request Example
 
@@ -196,7 +178,7 @@ parameters={
 set_index="dt")
 ```
 
-#### Result Example
+#### Example Result
 
 The result is a Pandas DataFrame:
 
@@ -211,20 +193,15 @@ dt                   metric    asset       value
 2023-03-29T00:00:00Z    nvt  bitcoin  376.403649
 ```
 
-#### Request parameters definition
+#### Request Parameters Definition
 
-The `execute_sql` function accepts three named parameters - one mandatory and two optinal:
+The `execute_sql` function accepts three named parameters - one mandatory and two optional:
 
-- `query` - The meaning is the same as in the `computeRawClickhouseQuery` API described. This parameter is mandatory/
-- `parameters` - The meaning is the same as in the `computeRawClickhouseQuery` API described above.
-  The format here is a Python dictionary that automatically gets converted to a JSON string when
-  executing the request. If the query does not have any parameters, this parameter can be omitted.
-- `set_index` - The name of the column to use as the index of the returned DataFrame. If not
-  specified, the index will be a range of integers. This parameter is optional.
+- `query` - This parameter has the same meaning as in the `computeRawClickhouseQuery` API described earlier. This parameter is mandatory.
+- `parameters` - This parameter has the same meaning as in the `computeRawClickhouseQuery` API described above. The format here is a Python dictionary that automatically gets converted to a JSON string when executing the request. If the query does not have any parameters, this parameter can be omitted.
+- `set_index` - The name of the column to use as the index of the returned DataFrame. If not specified, the index will be a range of integers. This parameter is optional.
 
-#### Result parameters definition
+#### Result Parameters Definition
 
-The `execute_sql` function returns a Pandas DataFrame with the result of the query.
-The name of each column is the name of the column in the database table or the alias
-specified with the `AS` keyword. If an aggregation function is used, it is highly recommended
-to specify the alias for the column, otherwise the name of the column will be the expression itself.
+The `execute_sql` function returns a Pandas DataFrame containing the results of the query. Each column in the DataFrame is named after the corresponding column in the database table or the alias specified using the `AS` keyword. When using an aggregation function, it is highly recommended to specify an alias for the column. Otherwise, the column name will be the expression itself.
+
