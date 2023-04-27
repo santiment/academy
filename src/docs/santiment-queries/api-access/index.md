@@ -7,7 +7,7 @@ description: How to execute queries using the API
 
 ## Overview
 
-Before you start, make sure you acquaint yourself with the Sanqueries product and the SQL queries you can write by reading the `Introduction`, `Exploration`, and `Writing SQL Queries` articles found on the [Sanqueries Overview](/santiment-queries/) page.
+Before you start, make sure you acquaint yourself with the Sanqueries product and the SQL queries you can write by reading the `Introduction`, `Exploration`, and `Writing SQL Queries` articles found on the [Santiment Queries Docs](/santiment-queries/) page.
 
 The [Santiment Queries Web Interface](https://app.santiment.net/queries) is just one way to execute queries and access the data. 
 
