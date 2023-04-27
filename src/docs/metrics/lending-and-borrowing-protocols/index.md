@@ -20,5 +20,6 @@ However, they also carry additional risks such as smart contract vulnerabilities
 and market volatility.
 
 - [Aave V2](/metrics/lending-and-borrowing-protocols/aave-v2)
+- [Aave V3](/metrics/lending-and-borrowing-protocols/aave-v3)
 - [Compound](/metrics/lending-and-borrowing-protocols/compound)
 - [MakerDAO](/metrics/lending-and-borrowing-protocols/makerdao)
