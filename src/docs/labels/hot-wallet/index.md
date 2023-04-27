@@ -8,6 +8,8 @@ description: Hot wallet label
 ## Description
 Denotes a hot wallet of a centralized exchanges or other entity.
 
+This label is the culmination of our in-depth analysis of both publicly available data and our own internal research, ensuring that our identification process is as comprehensive and accurate as possible.
+
 ## API Name
 `hot_wallet`
 ## Label Examples

@@ -9,6 +9,10 @@ description: Addresses that takes activity in eth2 staking
 
 Label `eth2_staking_address` added to adrresses that have already engaged in staking activities on the Ethereum 2.0 network.
 
+Staking on the Ethereum 2.0 network involves holding and locking up a minimum of 32 ETH to validate transactions and secure the network.
+Ethereum 2.0 network plays a crucial role in the transition 
+from proof-of-work (PoW) to proof-of-stake (PoS) consensus mechanism, which is more energy-efficient and scalable.
+
 ## API Name
 
 `eth2_staking_address`

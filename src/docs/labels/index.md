@@ -117,6 +117,9 @@ Below you can find labels which are attached to every group from above. Please n
     - [ERC721](/labels/erc721)
     - [ERC1155](/labels/erc1155)
     - TBA: Multisig
+    - TBA: Factory
+        - TBA: DSProxy
+    - TBA: Proxy
 - [Cold wallet](/labels/cold-wallet)
 - [Dead address](/labels/dead-address)
 - TBA: team_wallet

@@ -9,6 +9,9 @@ description: Genesis address label
 
 Genesis is an address that got funds in the genesis block. Most of them are ETH ICO participants. 
 
+Genesis Ethereum addresses are the original addresses that were created on the Ethereum network during its initial launch.
+These addresses were created during the Genesis block, which is the first block in the Ethereum blockchain. They are often used in Ethereum research and analysis to gain insights into the initial distribution of Ethereum tokens and the early activity on the network.
+
 In ethereum blockchain there are 8893 genesis addresses.
 
 ## API Name
