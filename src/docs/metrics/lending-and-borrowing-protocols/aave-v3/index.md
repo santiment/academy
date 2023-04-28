@@ -51,7 +51,6 @@ Protocol total supplied/borrowed metrics:
 
 APY (annual percentage yield) metrics:
 * `aave_v3_supply_apy` - Supply APY
-* `aave_v3_stable_borrow_apy` - Stable borrow APY (stable interest rate will stay the same for the duration of the loan)
 * `aave_v3_variable_borrow_apy` - Variable borrow APY (variable interest rate will fluctuate based on the market conditions)
 
 ---
@@ -180,7 +179,7 @@ Protocol total supplied/borrowed metrics: `aave_v3_protocol_total_supplied_usd` 
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v3_protocol_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 
-APY metrics: `aave_v3_supply_apy`, `aave_v3_stable_borrow_apy` and `aave_v3_variable_borrow_apy`
+APY metrics: `aave_v3_supply_apy` and `aave_v3_variable_borrow_apy`
 
 ```graphql
 {
