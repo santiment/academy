@@ -38,7 +38,7 @@ Supported blockchains:
 | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-| Avalanche          | Optimism           | Arbitrum           |
+| Avalanche (ERC20)  | Optimism           | Arbitrum           |
 | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
