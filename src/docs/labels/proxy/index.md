@@ -7,22 +7,19 @@ description: Proxy label
 
 ## Description
 
-A proxy contract is a special type of contract that serves as an intermediary between the user and the actual contract. 
-Instead of interacting directly with the target contract, all calls are directed through the proxy, which then delegates 
+A proxy entity is a special type of entity that serves as an intermediary between other entities. 
+
+For example: Instead of interacting directly with the target contract, all calls are directed through the proxy, which then delegates 
 the request to the intended target contract. This allows for a greater degree of control and flexibility over the 
 contract's behavior.
 
-The main advantage of using a proxy pattern is the ability to implement upgradability for your contracts. By keeping 
-the proxy contract immutable, you can easily upgrade the underlying target contract without having to redeploy the 
-entire system. This is a significant benefit as it saves time, resources, and reduces the risk of downtime during the 
-upgrade process.
 ## API Name
 
 `proxy`
 
 ## Label Examples
 
-MakerDAO Proxy Contract [0x00002c65ba1e64d2fd8c6ffb7160fd6bde9e17dd]
+MakerDAO DSProxy Contract [0x00002c65ba1e64d2fd8c6ffb7160fd6bde9e17dd]
 
 ## Available Blockchains
 

@@ -9,7 +9,6 @@ description: Cold wallet label
 
 Label `cold_wallet` refers to a type of wallet that is commonly used by centralized exchanges or other entities as a secure storage solution for cryptocurrency assets.
 
-This label is the culmination of our in-depth analysis of both publicly available data and our own internal research, ensuring that our identification process is as comprehensive and accurate as possible.
 ## API Name
 
 `cold_wallet`

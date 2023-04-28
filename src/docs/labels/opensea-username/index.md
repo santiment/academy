@@ -9,8 +9,6 @@ description: OpenSea Username
 
 This label provides valuable details about the connection between the user's profile on the OpenSea platform and addresses.
 
-Visit [this page](labels/#domains) to see full child labels list.
-
 ## API Name
 
 `opensea_username`

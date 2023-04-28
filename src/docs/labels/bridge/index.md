@@ -1,5 +1,5 @@
 ---
-title: Bridges
+title: Bridge
 author: Vladimir
 date: 2023-04-18
 description: Bridge label
@@ -11,7 +11,6 @@ Crypto bridges enable the exchange of cryptocurrencies across different blockcha
 allowing users to access assets that were previously inaccessible. 
 They increase liquidity and interoperability between blockchain networks. Examples include Wrapped Bitcoin and the Binance Smart Chain.
 
-`Bridge` label is a part of [DeFi](/labels/defi) label. 
 
 ## API Name
 

@@ -14,12 +14,10 @@ scratch. This saves time and effort, especially for contracts with similar funct
 
 A contract factory can also include custom parameters that can be used to personalize each new contract created from the factory. This allows for greater flexibility and customization in the contract creation process.
 
-Currently we support only [DSProxy](/labels/dsproxy)
-
 
 ## API Name
 
-`factory` -> `dsproxy`
+`factory`
 
 ## Available Blockchains
 
