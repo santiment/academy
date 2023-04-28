@@ -116,10 +116,10 @@ Below you can find labels which are attached to every group from above. Please n
 - [Contract](/labels/contract)
     - [ERC721](/labels/erc721)
     - [ERC1155](/labels/erc1155)
-    - TBA: Multisig
+    - [Proxy](labels/proxy)
     - TBA: Factory
         - TBA: DSProxy
-    - TBA: Proxy
+    - TBA: Multisig
 - [Cold wallet](/labels/cold-wallet)
 - [Dead address](/labels/dead-address)
 - TBA: team_wallet
@@ -135,7 +135,7 @@ Below you can find labels which are attached to every group from above. Please n
  - [Used NFT marketplace](/labels/used-nft-marketplace)
  - [NFT trader threshold](/labels/nft-trader-threshold)
  - [NFT trader](/labels/nft-trader)
- - [eth2_staking_address](/labels/eth2-staking-address)
+ - [ETH2 staking address](/labels/eth2-staking-address)
  - TBA: influencer
  - TBA: airdrop_receiver
 

@@ -22,6 +22,7 @@ upgrade process.
 
 ## Label Examples
 
+MakerDAO Proxy Contract [0x00002c65ba1e64d2fd8c6ffb7160fd6bde9e17dd]
 
 ## Available Blockchains
 
