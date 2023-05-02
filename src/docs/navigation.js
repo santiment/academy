@@ -261,6 +261,7 @@ export const REFERENCES = [
     description: 'List and descriptions of all address labels on Santiment',
     icon: Labels,
     articles: [
+      'Bridge',
       'CeFi',
       'Centralized exchange',
       'Cold wallet',
@@ -271,12 +272,15 @@ export const REFERENCES = [
       'Deposit',
       'ERC721',
       'ERC1155',
+      'ETH2 Staking Address',
       'Fund',
       'Genesis',
       'Miner',
       'NFT',
       'NFT collection name',
+      'NFT trader',
       'Owner',
+      'Proxy',
       'Whale'
     ],
   },

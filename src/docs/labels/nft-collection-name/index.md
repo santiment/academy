@@ -15,6 +15,8 @@ Name of the NFT collection
 
 ## Label Examples
 
+Azuki Nft collection [0xed5af388653567af2f388e6224dc7c4b3241c544](https://etherscan.io/address/0xed5af388653567af2f388e6224dc7c4b3241c544)
+
 
 ## Available Blockchains
 

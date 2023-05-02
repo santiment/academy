@@ -15,6 +15,8 @@ Any smart contract which is an NFT contract should have the `nft` label assigned
 
 ## Address Examples
 
+[0x580a29fa60b86aaff102743de5cba60bb5f9de75][https://etherscan.io/address/0x580a29fa60b86aaff102743de5cba60bb5f9de75]
+
 
 ## Available Blockchains
 
