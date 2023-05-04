@@ -7,16 +7,12 @@ description: label
 
 ## Description
 
-The label denotes an address that have traded at least one NFT.
+The label is attached to the group of addresses that actively traded NFTs recently. These labels can be attached and detached over time.
 
 ## API Name
 
 `nft_trader`
 
-
-## Label Examples
-
-[0x708c9d44eafac41fa7217bd8390fc2b18613e739](https://etherscan.io/address/0x708c9d44eafac41fa7217bd8390fc2b18613e739)
 
 ## Available Blockchains
 

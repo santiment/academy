@@ -97,7 +97,9 @@ Below you can find labels which are attached to every group from above. Please n
     - [Fund](/labels/fund)
     - TBA: Market maker
 - [NFT](/labels/nft)
+    - [NFT collection](/labels/nft-collection)
     - [NFT collection name](/labels/nft-collection-name)
+    - [NFT collection symbol](/labels/nft-collection-symbol)
 - TBA: gamefi
 - TBA: mining_pool
 - TBA: dao
@@ -130,8 +132,10 @@ Below you can find labels which are attached to every group from above. Please n
  - [Miner](/labels/miner)
  - TBA: Withdrawal
  - [Genesis](/labels/genesis)
+ - [NFT user](/labels/nft-user)
  - [NFT trader](/labels/nft-trader)
- - TBA: Used NFT marketplace
+ - [NFT trader threshold](/labels/nft-trader-threshold)
+ - [Used NFT marketplace](/labels/used-nft-marketplace)
  - [ETH2 staking address](/labels/eth2-staking-address)
  - TBA: influencer
  - TBA: airdrop_receiver

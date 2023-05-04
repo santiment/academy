@@ -2,12 +2,12 @@
 title: NFT
 author: Alex
 date: 2023-03-22
-description: NFT contract label
+description: NFT label
 ---
 
 ## Description
 
-Any smart contract which is an NFT contract should have the `nft` label assigned to it. NFT contracts follow one of two main standards: ERC721 and ERC1155. For each standard we assign a label as well.
+The NFT label is used for identifying addresses that are involved in NFT domain. This applies to NFT collections and marketplace contracts.
 
 ## API Name
 

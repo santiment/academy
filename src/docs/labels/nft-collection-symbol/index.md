@@ -1,17 +1,17 @@
 ---
-title: NFT collection name
-author: Alex
-date: 2023-03-22
-description: NFT collection name label
+title: NFT collection symbol
+author: Katsiaryna
+date: 2023-05-02
+description: NFT collection symbol label
 ---
 
 ## Description
 
-Name of the NFT collection.
+Symbol of the NFT collection.
 
 ## API Name
 
-`nft_collection_name`
+`nft_collection_symbol`
 
 ## Label Examples
 
