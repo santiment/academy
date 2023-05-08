@@ -7,7 +7,7 @@ description: NFT collection symbol label
 
 ## Description
 
-Symbol of the NFT collection.
+Symbol of the [NFT collection](/labels/nft-collection).
 
 ## API Name
 
@@ -15,8 +15,7 @@ Symbol of the NFT collection.
 
 ## Label Examples
 
-Azuki NFT collection [0xed5af388653567af2f388e6224dc7c4b3241c544](https://etherscan.io/address/0xed5af388653567af2f388e6224dc7c4b3241c544)
-
+CryptoPhunksV2 NFT collection has symbol PHUNK [0xf07468ead8cf26c752c676e43c814fee9c8cf402](https://etherscan.io/token/0xf07468ead8cf26c752c676e43c814fee9c8cf402)
 
 ## Available Blockchains
 

@@ -1,5 +1,5 @@
 ---
-title: NFT User
+title: NFT user
 author: Katsiaryna
 date: 2023-05-02
 description: label

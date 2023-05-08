@@ -7,7 +7,9 @@ description: NFT label
 
 ## Description
 
-The NFT label is used for identifying addresses that are involved in NFT domain. This applies to NFT collections and marketplace contracts.
+The NFT label is used to identify wallet addresses that are involved in any NFT (Non-Fungible Token) activities. By using the NFT label, you can quickly identify which wallets are involved in NFT activities and gain a better understanding of the NFT ecosystem.
+
+NFT group includes other labels such as [NFT User](/labels/nft-user), [NFT collection](/labels/nft-collection) and others. Visit this page to see the full child labels list.
 
 ## API Name
 
