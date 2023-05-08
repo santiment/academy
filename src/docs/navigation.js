@@ -270,6 +270,7 @@ export const REFERENCES = [
       'Decentralized exchange',
       'DeFi',
       'Deposit',
+      'DEX user',
       'ERC721',
       'ERC1155',
       'ETH2 Staking Address',

@@ -132,6 +132,7 @@ Below you can find labels which are attached to every group from above. Please n
  - [Miner](/labels/miner)
  - TBA: Withdrawal
  - [Genesis](/labels/genesis)
+ - [DEX user](/labels/dex-user)
  - [NFT user](/labels/nft-user)
  - [NFT trader](/labels/nft-trader)
  - [NFT trader threshold](/labels/nft-trader-threshold)
