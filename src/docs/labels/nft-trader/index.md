@@ -7,9 +7,9 @@ description: label
 
 ## Description
 
-The label is attached to the group of addresses that actively traded NFTs recently. These labels can be attached and detached over time.
+The NFT trader label is assigned to a group of wallet addresses that have been **actively** involved in NFT trading in recent times. These labels are not permanent and can be attached or detached from addresses over time, depending on their NFT trading activity.
 
-The address is characterized as an NFT trader, determined by a combination of their NFT trades count and volume compared to 97.5 percentile of the count and volume of all active addresses within a recent timeframe.
+To determine if an address qualifies as an NFT trader (i.e. if the address is active enough), we evaluate its NFT trades count and NFT trading volume against the 97.5 percentile of the NFT trades count and NFT trading volume of all addresses trading NFTs within a recent timeframe. This helps us identify the most active and significant NFT traders in the ecosystem.
 
 ## API Name
 
