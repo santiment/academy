@@ -92,14 +92,14 @@ Below you can find labels which are attached to every group from above. Please n
     - TBA: yeild
     - TBA: liquid_staking
     - TBA: stablecoin
-    - TBA: derivative
 - [CeFi](/labels/cefi)
     - [Centralized exchange](/labels/centralized-exchange)
     - [Fund](/labels/fund)
     - TBA: Market maker
 - [NFT](/labels/nft)
     - [NFT collection](/labels/nft-collection)
-    - [NFT marketplace](/labels/nft-marketplace)
+    - [NFT collection name](/labels/nft-collection-name)
+    - [NFT collection symbol](/labels/nft-collection-symbol)
 - TBA: gamefi
 - TBA: mining_pool
 - TBA: dao
@@ -130,11 +130,13 @@ Below you can find labels which are attached to every group from above. Please n
 
  - [Whale](/labels/whale)
  - [Miner](/labels/miner)
- - [Withdrawal](/labels/withdrawal)
+ - TBA: Withdrawal
  - [Genesis](/labels/genesis)
- - [Used NFT marketplace](/labels/used-nft-marketplace)
- - [NFT trader threshold](/labels/nft-trader-threshold)
+ - [DEX user](/labels/dex-user)
+ - [NFT user](/labels/nft-user)
  - [NFT trader](/labels/nft-trader)
+ - [NFT trader threshold](/labels/nft-trader-threshold)
+ - [Used NFT marketplace](/labels/used-nft-marketplace)
  - [ETH2 staking address](/labels/eth2-staking-address)
  - TBA: influencer
  - TBA: airdrop_receiver
@@ -150,6 +152,6 @@ Below you can find labels which are attached to every group from above. Please n
 
 ### Status
 
-- [Hacked](/labels/hacked)
-- [Closed](/labels/closed)
-- [Scam](/labels/scam)
+- TBA: Hacked
+- TBA: Closed
+- TBA: Scam

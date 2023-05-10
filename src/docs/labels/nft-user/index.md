@@ -1,17 +1,18 @@
 ---
-title: Used NFT marketplace
-author: Alex
-date: 2023-03-22
+title: NFT user
+author: Katsiaryna
+date: 2023-05-02
 description: label
 ---
 
 ## Description
 
-The `used_nft_marketplace` label denotes the marketplaces that NFT user traded on.
+The label denotes an address that traded at least one NFT.
 
 ## API Name
 
-`used_nft_marketplace`
+`nft_user`
+
 
 ## Label Examples
 
