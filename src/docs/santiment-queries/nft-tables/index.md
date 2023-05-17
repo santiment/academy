@@ -14,17 +14,17 @@ NFTs are created using blockchain technology, which provides a secure and transp
 In **Santiment Queries**, we collect data for all NFTs from exchanges on:
 
 ### Ethereum: 
-- Cryptopunks
+- CryptoPunks
 - Foundation
-- Looksrare
-- Opensea
+- LooksRare
+- OpenSea
 - Rarible
-- Superrare
+- SuperRare
 
 ### Polygon:
 - Opensea_polygon
 
-This information allows you to effortlessly track a specific NFT or an entire collection, as well as explore past prices and owners.
+This information allows you to effortlessly track a specific NFT or an entire collection, as well as investigate past prices and owners.
 
 ## List of NFT Tables
 
@@ -44,7 +44,7 @@ The result will display the NFT-related tables:
 └────────────────────────┘
 ```
 
-## Exploration of the Tables
+## Exploring the Tables
 
 We can inspect the tables using the commands we learned in [Exploration](/santiment-queries/exploration/).
 
@@ -159,6 +159,7 @@ FROM nft_trades
 WHERE (complete = 1) AND (dt >= (now() - toIntervalMonth(4))) AND (platform = 'opensea')
 GROUP BY month
 ```
+
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20toStartOfMonth(dt)%20AS%20month%2C%5Cn%20%20%20%20count(platform)%20AS%20sales%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalMonth(4)))%20AND%20(platform%20%3D%20%27opensea%27)%5CnGROUP%20BY%20month%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22month%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22sales%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20toStartOfMonth(dt)%20AS%20month%2C%5Cn%20%20%20%20count(platform)%20AS%20sales%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalMonth(4)))%20AND%20(platform%20%3D%20'opensea')%5CnGROUP%20BY%20month%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22month%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22sales%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
@@ -180,6 +181,7 @@ GROUP BY
 ORDER BY purchases DESC
 LIMIT 10
 ```
+
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20buyer_address%2C%5Cn%20%20%20%20platform%2C%5Cn%20%20%20%20count(platform)%20AS%20purchases%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalDay(4)))%5CnGROUP%20BY%5Cn%20%20%20%20buyer_address%2C%5Cn%20%20%20%20platform%5CnORDER%20BY%20purchases%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22buyer_address%22%7D%2C%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22purchases%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20buyer_address%2C%5Cn%20%20%20%20platform%2C%5Cn%20%20%20%20count(platform)%20AS%20purchases%5CnFROM%20nft_trades%5CnWHERE%20(complete%20%3D%201)%20AND%20(dt%20%3E%3D%20(now()%20-%20toIntervalDay(4)))%5CnGROUP%20BY%5Cn%20%20%20%20buyer_address%2C%5Cn%20%20%20%20platform%5CnORDER%20BY%20purchases%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22buyer_address%22%7D%2C%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22purchases%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
@@ -228,6 +230,7 @@ GROUP BY
 ORDER BY number_of_traded_nfts desc
 LIMIT 10
 ```
+
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20%5Cn%5Ctnft_contract_address%2C%5Cn%5Ctplatform%2C%5Cn%5Ctcount(token_ids)%20as%20number_of_traded_nfts%5CnFROM%20nft_trades%20%5CnWHERE%20(complete%20%3D%201)%20and%20(dt%20%3E%3D%20NOW()%20-%20toIntervalDay(4))%5CnGROUP%20BY%20%5Cn%5Ctnft_contract_address%2C%5Cn%5Ctplatform%5CnORDER%20BY%20number_of_traded_nfts%20desc%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22nft_contract_address%22%7D%2C%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22number_of_traded_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20%5Cn%5Ctnft_contract_address%2C%5Cn%5Ctplatform%2C%5Cn%5Ctcount(token_ids)%20as%20number_of_traded_nfts%5CnFROM%20nft_trades%20%5CnWHERE%20(complete%20%3D%201)%20and%20(dt%20%3E%3D%20NOW()%20-%20toIntervalDay(4))%5CnGROUP%20BY%20%5Cn%5Ctnft_contract_address%2C%5Cn%5Ctplatform%5CnORDER%20BY%20number_of_traded_nfts%20desc%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22nft_contract_address%22%7D%2C%7B%22title%22%3A%22platform%22%7D%2C%7B%22title%22%3A%22number_of_traded_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ---
@@ -250,7 +253,8 @@ ORDER BY
     number_of_nfts DESC
 LIMIT 10
 ```
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%2C%5Cn%5CtCOUNT(token_id)%20as%20number_of_nfts%5CnFROM%5Cn%5Ctnft_tokens_metadata%5CnGROUP%20BY%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%20%5CnORDER%20BY%20number_of_nfts%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22blockchain%22%7D%2C%7B%22title%22%3A%22address%22%7D%2C%7B%22title%22%3A%22number_of_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%2C%5Cn%5CtCOUNT(token_id)%20as%20number_of_nfts%5CnFROM%5Cn%5Ctnft_tokens_metadata%5CnGROUP%20BY%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%20%5CnORDER%20BY%20number_of_nfts%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22blockchain%22%7D%2C%7B%22title%22%3A%22address%22%7D%2C%7B%22title%22%3A%22number_of_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%2C%5Cn%5CtCOUNT(token_id)%20as%20number_of_nfts%5CnFROM%5Cn%5Ctnft_tokens_metadata%5CnGROUP%20BY%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%20%5CnORDER%20BY%20number_of_nfts%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22blockchain%22%7D%2C%7B%22title%22%3A%22address%22%7D%2C%7B%22title%22%3A%22number_of_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%2C%5Cn%5CtCOUNT(token_id)%20as%20number_of_nfts%5CnFROM%5Cn%5Ctnft_tokens_metadata%5CnGROUP%20BY%5Cn%5Ctblockchain%2C%5Cn%5Ctaddress%20%5CnORDER%20BY%20number_of_nfts%20DESC%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22blockchain%22%7D%2C%7B%22title%22%3A%22address%22%7D%2C%7B%22title%22%3A%22number_of_nfts%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0).
 
 ---
 
@@ -268,7 +272,8 @@ FROM nft_tokens_metadata
 WHERE address = '0x76be3b62873462d2142405439777e971754e8e77'
 ORDER BY token_id
 ```
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Cttoken_id%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20%27name%27)%20as%20token_name%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20%27description%27)%20as%20token_description%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20%27external_url%27)%20as%20external_url%5CnFROM%20nft_tokens_metadata%5CnWHERE%20address%20%3D%20%270x76be3b62873462d2142405439777e971754e8e77%27%5CnORDER%20BY%20token_id%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22token_id%22%7D%2C%7B%22title%22%3A%22token_name%22%7D%2C%7B%22title%22%3A%22token_description%22%7D%2C%7B%22title%22%3A%22external_url%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Cttoken_id%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20'name')%20as%20token_name%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20'description')%20as%20token_description%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20'external_url')%20as%20external_url%5CnFROM%20nft_tokens_metadata%5CnWHERE%20address%20%3D%20'0x76be3b62873462d2142405439777e971754e8e77'%5CnORDER%20BY%20token_id%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22token_id%22%7D%2C%7B%22title%22%3A%22token_name%22%7D%2C%7B%22title%22%3A%22token_description%22%7D%2C%7B%22title%22%3A%22external_url%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Cttoken_id%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20%27name%27)%20as%20token_name%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20%27description%27)%20as%20token_description%2C%5Cn%5CtsimpleJSONExtractString(data%2C%20%27external_url%27)%20as%20external_url%5CnFROM%20nft_tokens_metadata%5CnWHERE%20address%20%3D%20%270x76be3b62873462d2142405439777e971754e8e77%27%5CnORDER%20BY%20token_id%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22token_id%22%7D%2C%7B%22title%22%3A%22token_name%22%7D%2C%7B%22title%22%3A%22token_description%22%7D%2C%7B%22title%22%3A%22external_url%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0).
 
 ---
 
