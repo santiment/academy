@@ -1,32 +1,43 @@
 ---
-title: How to Buy SAN tokens
+title: How to Buy SAN Tokens
 author: Santiment Team
 date: 2019-12-18
-description: Instructions on how to acquire SAN token
+description: Instructions on how to acquire SAN tokens
 ---
-To use the SAN token with our platform, you need to have it in a MetaMask wallet or a wallet supported by MetaMask (like Trezor or Ledger). We'll describe the three steps necessary to achieve that.
 
-## Step 1: Install and set up MetaMask
+To use SAN tokens with our platform, you need to have them in a MetaMask wallet or a wallet supported by MetaMask (such as Trezor or Ledger). We will outline the three necessary steps to accomplish this.
 
-For instructions on how to install and set up MetaMask, see <https://metamask.io>. You will need an Ethereum address that will be used to hold SAN tokens, as well as to interact with the Santiment platform. You can either create a new wallet in MetaMask, import an already existing wallet, or connect MetaMask to a hardware wallet like __Ledger__ or __Trezor__.
+## Step 1: Install and Set Up MetaMask
+
+For instructions on how to install and set up MetaMask, visit [MetaMask.io](https://metamask.io). You will need an Ethereum address to hold SAN tokens and interact with the Santiment platform. You can create a new wallet in MetaMask, import an existing wallet, or connect MetaMask to a hardware wallet like **Ledger** or **Trezor**.
 
 <mark>__Result of Step 1:__ Installed and working Metamask</mark>
 
-## Step 2: Add funds to MetaMask wallet
+## Step 2: Add Funds to MetaMask Wallet
 
-To get SAN tokens, you will need to swap them for ETH or another ERC20 token. You may acquire ETH from a centralized exchange like [Bitfinex](https://bitfinex.com/t/ETH:USD) and then transfer it to your MetaMask wallet.
+To acquire SAN tokens, you will need to swap them for ETH or another ERC20 token. You can obtain ETH from a centralized exchange like [Bitfinex](https://bitfinex.com/t/ETH:USD) and then transfer it to your MetaMask wallet.
 
 <mark>__Result of Step 2:__ Metamask wallet with ETH or ERC-20 token balance</mark>
 
 ## Step 3: Swap ETH to SAN Tokens
 
-You can use decentralized exchanges or decentralized exchange aggregators to swap ETH or some other ERC20 token for SAN tokens. They all work very similarly. Connect your Metamask wallet first, and then swap ETH for SAN tokens.
+You can use decentralized exchanges or decentralized exchange aggregators to swap ETH or another ERC20 token for SAN tokens. These platforms operate in a similar manner. First, connect your Metamask wallet, and then proceed to swap ETH for SAN tokens.
 
-### Decentralized exchanges
+### Decentralized Exchanges
+
+Decentralized exchanges (DEX) are platforms that allow users to trade cryptocurrencies without relying on a centralized authority to manage their assets. Instead, transactions are executed directly between users through smart contracts on a blockchain network. This provides increased security, privacy, and control over one's funds.
+
+Some popular decentralized exchanges include Uniswap, Kyber, and Bancor. These platforms typically offer features such as liquidity provision, yield farming, and token swapping.
+
+To get started with using a decentralized exchange, you will need a cryptocurrency wallet that supports the blockchain network on which the DEX operates. For example, if you want to use Uniswap, you will need a wallet that supports Ethereum, such as MetaMask or Trust Wallet.
+
+Once you have set up your wallet, you can connect it to the DEX platform and start trading. Keep in mind that fees and transaction times may vary depending on the network congestion and the specific DEX you are using.
+
+In summary, decentralized exchanges offer a more secure and private way to trade cryptocurrencies compared to centralized exchanges. However, they may require a bit more technical knowledge to navigate and use effectively.
 
 #### Uniswap
 
-The SAN token is also available on [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098&inputCurrency=ETH) at the best rates. 
+The SAN token is also available on [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098&inputCurrency=ETH) at competitive rates.
 
 ![noborder](Uniswap.png)
 
@@ -38,21 +49,21 @@ San tokens are also available on [Kyber](https://kyber.network/) via [Kyber Swap
 
 #### Bancor
 
-The SAN token is available on [Bancor](https://app.bancor.network/trade?from=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&to=0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098). Once you connect your Metamask, you can [purchase ETH on Bancor](https://app.bancor.network/fiat) using your credit card to swap for SAN Tokens afterward.
+The SAN token is available on [Bancor](https://app.bancor.network/trade?from=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&to=0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098). Once you connect your Metamask, you can [purchase ETH on Bancor](https://app.bancor.network/fiat) using your credit card and then swap it for SAN Tokens.
 
 ![noborder](Bancor.png)
 
-### Decentralized exchange aggregators
+### Decentralized Exchange Aggregators
 
-You can use a decentralized exchange aggregator like [ParaSwap.io](http://app.paraswap.io/) or [1inch.exchange](https://1inch.exchange/) to get SAN tokens. Using an aggregator could sometimes give you a lower price than using an exchange directly.
+You can use a decentralized exchange aggregator like [ParaSwap.io](http://app.paraswap.io/) or [1inch.exchange](https://1inch.exchange/) to acquire SAN tokens. Using an aggregator may sometimes provide a better price than using an exchange directly.
 
 <mark>__Result of Step 3:__ Metamask wallet with SAN token balance</mark>
 
 ## What to do next?
 
-Now just [login with a MetaMask](https://app.santiment.net/login) account, which holds the SAN tokens. Alternatively, you can [connect your Sanbase](/san-tokens/how-to-stake-san/) account with your Metamask wallet in the settings.
+Now, simply [log in with a MetaMask](https://app.santiment.net/login) account that holds SAN tokens. Alternatively, you can [connect your Sanbase account](/san-tokens/how-to-stake-san/) with your MetaMask wallet in the settings.
 
-We'll detect the SAN you're holding and grant you access to our discounts, based on the amount of tokens you hold.
+We'll detect the SAN tokens you're holding and grant you access to our discounts, based on the amount of tokens you hold.
 
 <Resource title="Here are a few resources you can refer to:">
 🔮 [Connect a wallet to the Sanbase account](/san-tokens/connect-a-wallet-to-the-sanbase-account/)

@@ -2,25 +2,28 @@
 title: Access Plans
 author: Ivan
 date: 2020-05-28
-# REF sanbase2/lib/sanbase/billing/plan
-# REF sanbase2/lib/sanbase/clickhouse/metric/helper.ex
 ---
+
+# Sanbase Billing Plan Reference
+
+# Access Plans for Santiment Products
+
+Reference: `sanbase2/lib/sanbase/clickhouse/metric/helper.ex`
 
 Here are the access plans for the different Santiment products.
 
-## Sanbase
+## Sanbase Plans
 
-Sanbase plans give access both to [Sanbase](/sanbase) and
-[Sansheets](/sansheets)
+Sanbase plans provide access to both [Sanbase](/sanbase) and [Sansheets](/sansheets).
 
-Purchasing a plan is done from the [Sanbase pricing page](https://app.santiment.net/pricing)
+To purchase a plan, visit the [Sanbase pricing page](https://app.santiment.net/pricing).
 
-[Detailed description of plans](/products-and-plans/access-plans/sanbase)
+For a detailed description of the plans, check out our [Sanbase Access Plans](/products-and-plans/access-plans/sanbase) page.
 
 ## SanAPI
 
-SanAPI plans access the [API](/sanapi)
+SanAPI plans provide access to the [API](/sanapi).
 
-Purchasing a plan is done from the [SanAPI pricing page](https://api.santiment.net/#pricing)
+To purchase a plan, visit the [SanAPI pricing page](https://api.santiment.net/#pricing).
 
-[Detailed description of plans](/products-and-plans/access-plans/sanapi)
+For a detailed description of the available plans, check out our [SanAPI access plans](/products-and-plans/access-plans/sanapi) page.
