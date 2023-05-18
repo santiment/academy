@@ -1,38 +1,41 @@
-import React from 'react'
-import { renderToString } from 'react-dom/server'
-import { parseDocument } from 'htmlparser2'
-import Markdown from '../Markdown/Markdown'
-import * as components from './components'
+import React from "react"
+import { renderToString } from "react-dom/server"
+import * as components from "./components"
+import { parseMarkdown } from "./parser"
+import Markdown from "../Markdown/Markdown"
 
-const ucFirst = text =>
-  text.charAt(0).toUpperCase() + text.toLowerCase().slice(1)
+function renderJSX(node) {
+  return node.children.reduce((acc, child) => {
+    const { type, name, data, attributes } = child
 
-function injectCustomMarkdownComponents(rawMarkdownBody) {
-  if (rawMarkdownBody.length < 1) return
-  const rawTags = Array.from(
-    rawMarkdownBody.matchAll(
-      /(<[A-Z]{1}[a-zA-z]*?.*?>){1}[\s\S]*?(<\/[A-Z]{1}[a-zA-z]*?>){1}/g
-    ),
-    m => m[0]
-  )
-  if (rawTags.length === 0) return rawMarkdownBody
-  rawTags.map(rawTag => {
-    const parsedHtml = parseDocument(rawTag)
-    if (!parsedHtml.children || !parsedHtml.children[0]) return
-    const parsedElement = parsedHtml.children[0]
-    const DynamicComponent = components[ucFirst(parsedElement.tagName)]
-    if (!DynamicComponent) return
-    if (!parsedElement.children || !parsedElement.children[0] || !parsedElement.children[0].data) return
-    rawMarkdownBody = rawMarkdownBody.replace(
-      rawTag,
-      renderToString(
-        <DynamicComponent {...parsedElement.attribs}>
-          <Markdown markdown={parsedElement.children[0].data.trim()} />
-        </DynamicComponent>
-      )
+    if (type === "text") {
+      const text =
+        node.type !== "tag"
+          ? data
+          : renderToString(<Markdown markdown={data.trim()} />)
+      return acc + text
+    }
+
+    const Component = components[name]
+    if (!Component) return `\n⚠️[INCORRECT MARKUP]: \<${name} /\>⚠️\n`
+
+    const inject = "__CHILDREN__"
+    const parent = renderToString(
+      <Component {...attributes}>{inject}</Component>
     )
+
+    return acc + parent.replace(inject, renderJSX(child))
+  }, "")
+}
+
+function injectCustomMarkdownComponents(rawMarkdown) {
+  if (rawMarkdown.length < 1) return rawMarkdown
+
+  const ast = parseMarkdown(rawMarkdown, {
+    validTags: Object.keys(components),
   })
-  return rawMarkdownBody
+
+  return renderJSX(ast)
 }
 
 export default injectCustomMarkdownComponents

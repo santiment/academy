@@ -20,7 +20,7 @@ const Markdown = ({ markdown, ...rest }) => (
     renderers={{
       text: TextRenderer,
       link: LinkRenderer,
-      heading: HeadingRenderer,
+      heading: props => <HeadingRenderer {...rest} {...props} />,
       code: CodeBlockRenderer,
       math: MathBlockRenderer,
       inlineMath: MathRenderer,

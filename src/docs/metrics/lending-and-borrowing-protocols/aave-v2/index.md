@@ -1,12 +1,20 @@
 ---
-title: Aave v2
+title: Aave V2
 author: Filip
 date: 2022-12-05
 description: Aave V2 Metrics
 ---
 
 ## Description
-Metrics related to Aave v2 protocol.
+Aave V2 is the second version of the [Aave](https://aave.com/) protocol.
+
+One of the key new features of Aave V2 is "stable-rate borrowing," which allows 
+users to lock in a fixed interest rate for their loans rather than being subject 
+to the variable interest rates that are common in DeFi lending. 
+This makes borrowing more predictable and stable, reducing the risk of 
+sudden interest rate spikes that can make loans more expensive to repay.
+
+### Metrics related to Aave v2 protocol:
 
 Action metrics:
 * `aave_v2_action_deposits` - Amount of deposited tokens
@@ -29,6 +37,10 @@ Total supplied/borrowed metrics:
 * `aave_v2_total_borrowed` - Total borrowed tokens
 * `aave_v2_total_borrowed_usd` - Total borrowed tokens in usd
 
+Protocol total supplied/borrowed metrics:
+* `aave_v2_protocol_total_supplied_usd` - Total supplied on Aave V2 (for all assets in usd)
+* `aave_v2_protocol_total_borrowed_usd` - Total borrowed on Aave V2 (for all assets in usd)
+
 APY (annual percentage yield) metrics:
 * `aave_v2_supply_apy` - Supply APY
 * `aave_v2_stable_borrow_apy` - Stable borrow APY (stable interest rate will stay the same for the duration of the loan)
@@ -45,6 +57,8 @@ APY (annual percentage yield) metrics:
 ## Measuring Unit
 
 Amount in tokens/USD
+
+APY metric in percentages
 
 ---
 
@@ -136,6 +150,27 @@ Total supplied/borrowed metrics: `aave_v2_total_supplied<_usd>` and
 }
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v2_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
+
+Protocol total supplied/borrowed metrics: `aave_v2_protocol_total_supplied_usd` and 
+`aave_v2_protocol_total_borrowed_usd`
+
+```graphql
+{
+  getMetric(metric: "aave_v2_protocol_total_supplied_usd"){
+    timeseriesData(
+      slug: "aave"
+      from: "2022-11-01T00:00:00Z"
+      to: "2022-11-03T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m"){
+        datetime
+        value
+      }
+  }
+}
+```
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v2_protocol_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
 
 APY metrics: `aave_v2_supply_apy`, `aave_v2_stable_borrow_apy` and `aave_v2_variable_borrow_apy`
 

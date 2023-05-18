@@ -16,6 +16,7 @@ In order to get a list of all tables that are available execute
 ```sql
 SHOW TABLES
 ```
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SHOW%20TABLES%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22name%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SHOW%20TABLES%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22name%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 The list of tables can be filtered by a regex.
 
@@ -23,6 +24,8 @@ To get the list of all tables containing `price` in their name:
 ```sql
 SHOW TABLES LIKE '%price%'
 ```
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SHOW%20TABLES%20LIKE%20%27%25price%25%27%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22name%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SHOW%20TABLES%20LIKE%20'%25price%25'%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22name%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+
 ```
 ┌─name───────────────────┐
 │ asset_price_pairs_only │
@@ -41,6 +44,8 @@ In order to inspect the structure of a given table, one can execute the
 ```sql
 DESCRIBE intraday_metrics
 ```
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22DESCRIBE%20intraday_metrics%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22name%22%7D%2C%7B%22title%22%3A%22type%22%7D%2C%7B%22title%22%3A%22default_type%22%7D%2C%7B%22title%22%3A%22default_expression%22%7D%2C%7B%22title%22%3A%22comment%22%7D%2C%7B%22title%22%3A%22codec_expression%22%7D%2C%7B%22title%22%3A%22ttl_expression%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22DESCRIBE%20intraday_metrics%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22name%22%7D%2C%7B%22title%22%3A%22type%22%7D%2C%7B%22title%22%3A%22default_type%22%7D%2C%7B%22title%22%3A%22default_expression%22%7D%2C%7B%22title%22%3A%22comment%22%7D%2C%7B%22title%22%3A%22codec_expression%22%7D%2C%7B%22title%22%3A%22ttl_expression%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+
 ```
 ┌─name───────────────┬─type─────────────┬─default_type─┬─default_expression─────────────┬─comment─┬─codec_expression─┬─ttl_expression─┐
 │ asset_id           │ UInt64           │              │                                │         │                  │                │
@@ -63,6 +68,8 @@ faster queries.
 ```sql
 SHOW CREATE TABLE intraday_metrics
 ```
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SHOW%20CREATE%20TABLE%20intraday_metrics%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22statement%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SHOW%20CREATE%20TABLE%20intraday_metrics%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22statement%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+
 ```
 ┌─statement──────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 │ CREATE TABLE default.intraday_metrics                                                                                  │
@@ -100,6 +107,7 @@ FROM daily_metrics_v2
 WHERE dt >= (now() - toIntervalDay(2))
 LIMIT 10
 ```
+Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20get_asset_name(asset_id)%20AS%20slug%2C%5Cn%20%20%20%20get_metric_name(metric_id)%20AS%20metric%2C%5Cn%20%20%20%20*%5CnFROM%20daily_metrics_v2%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20toIntervalDay(2))%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22slug%22%7D%2C%7B%22title%22%3A%22metric%22%7D%2C%7B%22title%22%3A%22metric_id%22%7D%2C%7B%22title%22%3A%22asset_id%22%7D%2C%7B%22title%22%3A%22dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22value%22%7D%2C%7B%22title%22%3A%22computed_at%22%2C%22formatterId%22%3A1%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20get_asset_name(asset_id)%20AS%20slug%2C%5Cn%20%20%20%20get_metric_name(metric_id)%20AS%20metric%2C%5Cn%20%20%20%20*%5CnFROM%20daily_metrics_v2%5CnWHERE%20dt%20%3E%3D%20(now()%20-%20toIntervalDay(2))%5CnLIMIT%2010%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22slug%22%7D%2C%7B%22title%22%3A%22metric%22%7D%2C%7B%22title%22%3A%22metric_id%22%7D%2C%7B%22title%22%3A%22asset_id%22%7D%2C%7B%22title%22%3A%22dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22value%22%7D%2C%7B%22title%22%3A%22computed_at%22%2C%22formatterId%22%3A1%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ```sql
 ┌─slug──────────────────────┬─metric──────────────────┬─metric_id─┬─asset_id─┬─────────dt─┬───────────────value─┬─────────computed_at─┐

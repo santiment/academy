@@ -27,7 +27,6 @@
     "gatsby-transformer-remark": "^2.6.30",
     "gatsby-transformer-sharp": "^4.2.0",
     "graphql-tag": "^2.10.1",
-    "htmlparser2": "^6.1.0",
     "install": "^0.13.0",
     "isomorphic-fetch": "^2.2.1",
     "katex": "^0.11.1",
@@ -51,7 +50,7 @@
     "react-syntax-highlighter": "^11.0.2",
     "react-transition-group": "^4.3.0",
     "remark-math": "^2.0.0",
-    "san-webkit": "https://github.com/santiment/san-webkit#80babf8",
+    "san-webkit": "https://github.com/santiment/san-webkit#f459c21",
     "svelte": "^3.46.3",
     "svelte-loader": "^2.13.6"
   },

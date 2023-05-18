@@ -14,6 +14,7 @@ In **Santiment Queries**, we collect data for all NFTs from exchanges on:
 
 ### Ethereum:
 
+- Blur
 - Cryptopunks
 - Foundation
 - Looksrare

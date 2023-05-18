@@ -18,7 +18,8 @@ before fetching the data for a given block. Measured in time:
 - Ethereum - Around 5 minutes
 - Bitcoin Cash - Around 5 minutes
 - Litecoin - Around 5 minutes
-- Binance Chain - Around 5 inutes
+- Binance Chain - Around 5 minutes
+- XRPL Chain - Around 5 minutes
 
 After the block is considered confirmed and its data is fetched, the data
 processing can take anywhere from a few minutes to few hours. The upper limits

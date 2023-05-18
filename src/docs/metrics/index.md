@@ -72,11 +72,9 @@ activity.
 
 ## Other On-Chain
 
-- [Aave v2](/metrics/aave-v2)
 - [Age Consumed](/metrics/age-consumed)
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
 - [Circulation](/metrics/circulation)
-- [Compound](/metrics/compound)
 - [DeFi](/metrics/defi)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [ETH 2.0](/metrics/eth-2)
@@ -84,12 +82,14 @@ activity.
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
 - [Labeled Flow](/metrics/labeled-flow)
+- [Lending and Borrowing Protocols](/metrics/lending-and-borrowing-protocols)
 - [MakerDAO](/metrics/makerdao)
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
 - [Stock To Flow ratio](/metrics/stock-to-flow)
 - [Supply Distribution](/metrics/supply-distribution)
 - [Supply On Or Outside Exchanges](/metrics/supply-on-or-outside-exchanges)
 - [Top Holders](/metrics/top-holders)
+- [Transaction Count](/metrics/transaction-count)
 - [Transaction Volume](/metrics/transaction-volume)
 - [Transaction Volume In Profit Or Loss](/metrics/transaction-volume-in-profit-or-loss)
 - [Velocity](/metrics/velocity)
@@ -116,3 +116,19 @@ Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and ot
 - [Top Transfers](/metrics/top-transfers)
 - [Contract Transaction Count](/metrics/contract-transactions-count)
 - [Contract Interacting Address Count](/metrics/contract-interacting-address-count)
+
+## XRPL Metrics
+
+The [XRP Ledger (XRPL)] (https://xrpl.org/) is a decentralized, public blockchain led by a global developer community.
+
+Santiment provide key metrics about the XRPL Chain which are listed below:
+
+### Holder Metrics
+- [Number of accounts](/metrics/xrpl/number-of-accounts)
+- [Number of new accounts created](/metrics/network-growth/)
+
+### Activity Metrics
+- [DEX Volume in USD](/metrics/xrpl/dex-volume-in-usd)
+- [Number of transactions](/metrics/transaction-count)
+- [Number of assets issued](/metrics/xrpl/assets-issued)
+- [Number of active trustlines](/metrics/xrpl/trustline-count)
