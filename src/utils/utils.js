@@ -31,7 +31,7 @@ export const usePageHash = (elementIDs = []) => {
 
   function updateHash(hash) {
     if (hash && !isSSR) {
-      window.history.pushState({}, '', hash)
+      window.history.replaceState({}, '', hash)
       setPageHash(hash)
     }
   }
