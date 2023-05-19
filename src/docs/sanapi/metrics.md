@@ -6,16 +6,20 @@ date: 2020-04-06
 
 - [Overview](#overview)
 - [All available metrics](#all-available-metrics)
+- [Metrics Documentation](#metrics-documentation)
 - [All available assets](#all-available-assets)
 - [Available metrics per project](#available-metrics-per-project)
-- [Available projects per metrics](#available-projects-per-metric)
+- [Available projects per metric](#available-projects-per-metric)
 - [Queryable fields](#queryable-fields)
+  - [Aggregation](#aggregation)
   - [timeseriesData](#timeseriesdata)
-  - [aggregatedTimeseriesData](#aggregatedtimeseriesdata)
-  - [histogramData](#histogramdata)
-  - [metadata](#metadata)
-  - [availableSince](#availablesince)
-  - [lastDatetimeComputedAt](#lastdatetimecomputedat)
+- [aggregatedTimeseriesData](#aggregatedtimeseriesdata)
+- [histogramData](#histogramdata)
+  - [Example 1](#example-1)
+  - [Example 2](#example-2)
+- [metadata](#metadata)
+- [availableSince](#availablesince)
+- [lastDatetimeComputedAt](#lastdatetimecomputedat)
 
 ## Overview
 
@@ -64,6 +68,10 @@ argument with query like this:
 ```
 
 Documentation for those metrics can be found on the [metrics page](/metrics)
+
+## Metrics Documentation
+
+Documentation for most of the metrics can be found on [this page](/metrics).
 
 ## All available assets
 
