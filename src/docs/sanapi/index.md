@@ -17,8 +17,7 @@ description: This page contains a reference of all the APIs provided by Santimen
 - [Authentication](#authentication)
 - [Errors](#errors)
 - [Rate Limits](#rate-limits)
-  - [Limits applied to the authenticated users](#limits-applied-to-the-authenticated-users)
-  - [Remaining API calls count for the authenticated user](#remaining-api-calls-count-for-the-authenticated-user)
+- [Complexity](#complexity)
 - [Glossary](#glossary)
 
 Santiment API uses [GraphQL](https://graphql.org). From the beginning it was
@@ -33,7 +32,7 @@ decided to use GraphQL instead of REST for a number of reasons:
 
 ## Available Metrics
 
-Full list of metrics can be found [here](/metrics).
+Full list of metrics can be found [here](/sanapi/metrics).
 
 ## Access the API
 
@@ -259,43 +258,13 @@ happening. Here are some of the options:
 
 ## Rate Limits
 
-There are API call rate limits applied per minute, per hour, and per month. When
-the rate limit is reached, an error response with HTTP code 429 is returned. The
-content of the response body contains human-readable format of the error and how
-much time is left until a request can be made again. The remaining time, in
-seconds, is also returned as the value of the `x-ratelimit-reset` HTTP header.
+The [following article](./rate-limits) describes how are the API calls counted and the rate limits applied.
 
-The rate limits are reset every round minute, round hour and beginning of month.
-For all date and time value checks UTC timezone is used.
+## Complexity
 
-Additionally, every response contains two sets of headers:
-
-### Limits applied to the authenticated users
-
-These headers show the limits applied to the currently authenticated users.
-These values change only when the Sanapi subscription plan changes - whether when
-it changes or when it expires.
-
-- x-ratelimit-limit-month
-- x-ratelimit-limit-hour
-- x-ratelimit-limit-minute
-
-### Remaining API calls count for the authenticated user
-
-- x-ratelimit-remaining-month
-- x-ratelimit-remaining-hour
-- x-ratelimit-remaining-minute
+Each API query can fetch only a limited amount of data points. The [complexity](./complexity) analysis decides
+whether a given query will be executed or will be rejected.
 
 ## Glossary
 
-There are some terms used in this document like:
-
-- query
-- metric
-- asset
-- slug
-- interval
-- ISO8601
-- apikey
-
-Their meaning can be found in the dedicated [glossary page](../glossary)
+The meaning of some of the terms used on this page can be found in the dedicated [glossary page](/glossary)

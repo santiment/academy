@@ -96,7 +96,7 @@ export const GUIDES = [
         <br />& research tool
       </>
     ),
-    articles: ['Introduction', 'Exploration', 'Writing SQL Queries', 'API Access', 'DEX Pools', 'NFT Tables', 'XRPL Tables'],
+    articles: ['Introduction', 'Exploration', 'Writing SQL Queries', 'API Access', 'Queries Restrictions', 'DEX Pools', 'NFT Tables', 'XRPL Tables'],
   },
   {
     title: 'SanAPI',
@@ -107,7 +107,7 @@ export const GUIDES = [
         <br />& documentation
       </>
     ),
-    articles: ['Metrics', 'Queries', 'Common Queries'],
+    articles: ['Metrics', 'Queries', 'Common Queries', 'Rate Limits', 'Complexity'],
   },
   {
     title: 'Sansheets',
