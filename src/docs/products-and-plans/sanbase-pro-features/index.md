@@ -22,7 +22,7 @@ Here are a few examples of how to use our metrics:
 With Sanbase Pro, you also get access to our private Discord channel on the Santiment server, known as #sanbase-pro. This exclusive channel is for our paid members, where you can engage in discussions about the current state of the markets and the direction of our data with both our staff and top-tier traders who use our platform! Discussions include:
 
 - In-depth analysis of Santiment's key leading indicators, and whether they're pointing to buy, hold, or sell opportunities
-- Instant assistance with any aspect of the platform that is causing you trouble
+- Assistance with any aspect of the platform that is causing you trouble
 - Improvement suggestions for our staff, and how we can create a better experience for you as a VIP member of Santiment's community
 
 Enjoy discussing anything and everything beyond just the more generic content found in our #general channel on the Discord server. You'll be amazed by the high-level discussions we have there, and the insights uncovered from our most valued members!
@@ -51,7 +51,7 @@ Our plugin allows you to import Santiment data directly into Google Spreadsheets
 
 ## Full Access to Graphs
 
-Explore a wide range of new and experimental dashboards, featuring Crowd Sentiment metrics, ETH miner statistics, MVRV sandbox, comprehensive MakerDAO dashboards, and more. Stay updated as new metrics are constantly being added!
+Explore a wide range of new and experimental dashboards, featuring Crowd Sentiment metrics, ETH miner statistics, MVRV sandbox, comprehensive MakerDAO dashboards, and more.
 
 ## Unlimited Number of Signals 
 

@@ -2,13 +2,9 @@
 title: Access Plans
 author: Ivan
 date: 2020-05-28
+# REF sanbase2/lib/sanbase/billing/plan
+# REF sanbase2/lib/sanbase/clickhouse/metric/helper.ex
 ---
-
-# Sanbase Billing Plan Reference
-
-# Access Plans for Santiment Products
-
-Reference: `sanbase2/lib/sanbase/clickhouse/metric/helper.ex`
 
 Here are the access plans for the different Santiment products.
 
