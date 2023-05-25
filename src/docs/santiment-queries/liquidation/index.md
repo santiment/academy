@@ -1,15 +1,17 @@
 ---
-title: Liquidation Overview
+title: Lending Pools Overview
 author: Santiment Team
 date: 2023-04-03
-description: Information about the Liquidation project's tables stored in Santiment Queries.
+description: Information about the Lending Pools's table stored in Santiment Queries.
 ---
 
 ## Overview
 
-Liquidation is a project that aims to track deposits, borrows, repayments, withdrawals, and liquidation actions occurring on lending protocols.
+A lending pool is a collective source of funds or assets that individuals deposit into for lending purposes, typically facilitated by decentralized finance (DeFi) platforms. It allows lenders to earn interest on their deposited funds while borrowers can access these funds by providing collateral or meeting specific requirements set by the lending protocol.
 
-In **Santiment Queries**, we collect liquidation data from the following platforms:
+Lending Pools is a project that aims to track deposits, borrows, repayments, withdrawals, and liquidation actions occurring on lending protocols.
+
+In **Santiment Queries**, we record the platform from which the liquidation data was recorded under the `project_name` column. The platforms we collect data from are:
 
 - AAVE-v2/v3
 - Compound
@@ -18,7 +20,7 @@ In **Santiment Queries**, we collect liquidation data from the following platfor
 
 ## Usage
 
-The Liquidation project can be used for the following purposes:
+The Lending Pools project can be used for the following purposes:
 
 - Monitor the inflow and outflow of lending protocols
 - Observe liquidation actions occurring on each protocol
@@ -27,9 +29,9 @@ The Liquidation project can be used for the following purposes:
 
 ## Exploration of the Tables
 
-We can inspect the tables with the commands we learned in [Exploration](/santiment-queries/exploration/).
+We can inspect the table with the commands we learned in [Exploration](/santiment-queries/exploration/).
 
-Below, we have listed all the liquidation tables with their columns, brief descriptions, and some example queries that you can use to explore the tables.
+Below, we have listed the table containing the lending pools data with its columns, brief descriptions, and some example queries that you can use to explore the table.
 
 ### lending\_pools\_events
 
