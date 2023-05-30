@@ -12,6 +12,7 @@ description: Database explorer & research tool
 - [Writing SQL Queries](/santiment-queries/writing-sql-queries) is a comprehensive guide to your first steps in writing SQL queries using Clickhouse SQL and Santiment datasets.
 - [Rate Limiting and Credits Cost](/santiment-queries/rate-limitings-and-credits-cost) describes what limits are applied when you run queries.
 - [API Access](/santiment-queries/api-access) shows how to execute the queries using the API instead of the web interface.
+- [Prices](/santiment-queries/prices/) gives information about the tables related to prices, trading volume and marketcap
 - [DEX Pools Overview](/santiment-queries/dex-pools/) gives information about the dex pools tables in Santiment Queries.
 - [NFT Tables Overview](/santiment-queries/nft-tables) gives information about the nft related tables in Santiment Queries.
 - [XRPL Tables Overview](santiment-queries/xrpl-tables) gives information about the tables for the XRPL chain in Santiment Queries.
