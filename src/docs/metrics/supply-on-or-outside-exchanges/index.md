@@ -7,14 +7,15 @@ description: Amount and percent of the total supply of coins/tokens held by exch
 
 ## Definition
 
+Supply on or outside exchanges is a measure of the amount of a certain token or cryptocurrency being held on centralized exchanges (CEX) or decentralized exchanges (DEX), and outside exchanges. This metric tracks each part of the token's total supply that is either being circulated or hoarded by the market participants. To do this, we need to monitor and record wallet addresses for each CEX and DEX that holds the token, as well as the rest of the addresses not associated with any exchange.
+
+This metric showcases the distribution of a specific token or cryptocurrency, indicating its demand as well as the overall market sentiment. It is useful for identifying significant events, like whale accumulation or an increase in the ratio of tokens held on exchanges – which could signal potential sell-offs.
+
 The following metrics are provided:
 
-- `Percent of total supply on exchange` - What percent of the coin/token total
-  supply is stored in known exchange wallets.
-- `Supply on exchanges` - What amount of coins/tokens are stored in known exchange
-  wallets.
-- `Supply outside exchange` - What amount of coins/tokens are stored outside known
-  exchange wallets.
+- `Percent of total supply on exchange` - What percent of the coin/token total supply is stored in known centralized exchange (CEX) and decentralized exchange (DEX) wallets
+- `Supply on exchanges` - What amount of coins/tokens are stored in known CEX and DEX wallets
+- `Supply outside exchange` - What amount of coins/tokens are stored outside known CEX and DEX wallets
 
 > **Note:** The metrics are computed on the set of publicly known exchange wallets
 > and the exchange wallets that Santiment has found by doing analysis.
