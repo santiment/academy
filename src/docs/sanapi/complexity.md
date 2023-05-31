@@ -37,7 +37,11 @@ following:
   smaller complexity than the same query executed by a Free user.
 
 With the above-defined values, the complexity is computed by the following
-formula: $$ Complexity(Q) := \dfrac{N(Q) * F(Q) * W(Q) * Y(Q)}{S(Q)} $$ where Q
+formula: 
+$$
+Complexity(Q) := \dfrac{N(Q) * F(Q) * W(Q) * Y(Q)}{S(Q)}
+$$
+where Q
 is the query that is being analyzed, and N(Q)...S(Q) are the described values
 computed on that query.
 
