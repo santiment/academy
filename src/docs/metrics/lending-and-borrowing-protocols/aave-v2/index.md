@@ -46,6 +46,9 @@ APY (annual percentage yield) metrics:
 * `aave_v2_stable_borrow_apy` - Stable borrow APY (stable interest rate will stay the same for the duration of the loan)
 * `aave_v2_variable_borrow_apy` - Variable borrow APY (variable interest rate will fluctuate based on the market conditions)
 
+Daily active addresses:
+* `aave_v2_active_addresses` - Daily active addresses on Aave V2
+
 ---
 
 ## Access
@@ -171,7 +174,6 @@ Protocol total supplied/borrowed metrics: `aave_v2_protocol_total_supplied_usd` 
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v2_protocol_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-
 APY metrics: `aave_v2_supply_apy`, `aave_v2_stable_borrow_apy` and `aave_v2_variable_borrow_apy`
 
 ```graphql
@@ -190,3 +192,22 @@ APY metrics: `aave_v2_supply_apy`, `aave_v2_stable_borrow_apy` and `aave_v2_vari
 }
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v2_supply_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
+Daily active addresses: `aave_v2_active_addresses`
+
+```graphql
+{
+  getMetric(metric: "aave_v2_active_addresses"){
+    timeseriesData(
+      slug: "aave"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-01-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"){
+        datetime
+        value
+      }
+  }
+}
+```
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v2_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
