@@ -28,6 +28,23 @@ whole universe of supported assets. The query allows to get metadata,
 datetime availability and different metric representations - timeseries data,
 histogram data, aggregated timeseries data.
 
+An example GraphQL `getMetric` query looks like this:
+
+```graphql
+{
+  getMetric(metric: "active_addresses_24h") {
+    timeseriesData(
+      slug: "bitcoin"
+      from: "2023-05-01T08:00:00Z"
+      to: "2023-05-02T08:00:00Z"
+      interval: "30m") {
+        datetime
+        value
+    }
+  }
+}
+```
+
 ## Available metrics
 
 The list of all available metrics can be fetched with [this query](https://api.santiment.net/graphiql?query=%7B%0A++getAvailableMetrics%0A%7D%0A):
@@ -399,6 +416,69 @@ explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric
 
 ## Examples
 
+**Timeseries Data Example**
+
+```graphql
+{
+  getMetric(metric: "active_addresses_24h") {
+    timeseriesData(
+      slug: "bitcoin"
+      from: "2023-05-01T08:00:00Z"
+      to: "2023-05-02T08:00:00Z"
+      interval: "30m") {
+        datetime
+        value
+    }
+  }
+}
+```
+
+**[Run in Explorer](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A++getMetric%28metric%3A+%22active_addresses_24h%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22bitcoin%22%0A++++++from%3A+%222023-05-01T08%3A00%3A00Z%22%0A++++++to%3A+%222023-05-02T08%3A00%3A00Z%22%0A++++++interval%3A+%2230m%22%29+%7B%0A++++++++datetime%0A++++++++value%0A++++%7D%0A++%7D%0A%7D%0A)**
+
+**Timeseries Data Example**
+
+```graphql
+{
+  getMetric(metric: "twitter_followers") {
+    timeseriesData(
+      slug: "maker"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-02-01T00:00:00Z"
+      interval: "7d"
+      transform: {type: "consecutive_differences"}) {
+        datetime
+        value
+    }
+  }
+}
+```
+
+**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22twitter_followers%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22maker%22%0A++++++from%3A+%222023-01-01T00%3A00%3A00Z%22%0A++++++to%3A+%222023-02-01T00%3A00%3A00Z%22%0A++++++interval%3A+%227d%22%0A++++++transform%3A+%7Btype%3A+%22consecutive_differences%22%7D%29+%7B%0A++++++++datetime%0A++++++++value%0A++++%7D%0A++%7D%0A%7D)**
+
+**Aggregated Timeseries Data Example**
+
+```graphql
+{
+  getMetric(metric: "daily_active_addresses") {
+    highest_daa: aggregatedTimeseriesData(
+        slug: "ethereum"
+        from: "2022-01-01T00:00:00Z"
+        to: "2023-01-01T00:00:00Z"
+      	aggregation: MAX
+      )
+    lowest_daa: aggregatedTimeseriesData(
+        slug: "ethereum"
+        from: "2022-01-01T00:00:00Z"
+        to: "2023-01-01T00:00:00Z"
+      	aggregation: MIN
+      )
+  }
+}
+```
+
+
+**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22daily_active_addresses%22%29+%7B%0A++++highest_daa%3A+aggregatedTimeseriesData%28%0A++++++++slug%3A+%22ethereum%22%0A++++++++from%3A+%222022-01-01T00%3A00%3A00Z%22%0A++++++++to%3A+%222023-01-01T00%3A00%3A00Z%22%0A++++++%09aggregation%3A+MAX%0A++++++%29%0A++++lowest_daa%3A+aggregatedTimeseriesData%28%0A++++++++slug%3A+%22ethereum%22%0A++++++++from%3A+%222022-01-01T00%3A00%3A00Z%22%0A++++++++to%3A+%222023-01-01T00%3A00%3A00Z%22%0A++++++%09aggregation%3A+MIN%0A++++++%29%0A++%7D%0A%7D)**
+
 **Histogram Metric Example I**
 
 ```graphql
@@ -455,22 +535,3 @@ float value.
 
 The response result is a list that contains a 2-element range of float (prices)
 and a float value.
-
-**Timeseries Data Example**
-
-```graphql
-{
-  getMetric(metric: "active_addresses_24h") {
-    timeseriesData(
-      slug: "bitcoin"
-      from: "2023-05-01T08:00:00Z"
-      to: "2023-05-02T08:00:00Z"
-      interval: "30m") {
-        datetime
-        value
-    }
-  }
-}
-```
-
-**[Run in Explorer](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A++getMetric%28metric%3A+%22active_addresses_24h%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22bitcoin%22%0A++++++from%3A+%222023-05-01T08%3A00%3A00Z%22%0A++++++to%3A+%222023-05-02T08%3A00%3A00Z%22%0A++++++interval%3A+%2230m%22%29+%7B%0A++++++++datetime%0A++++++++value%0A++++%7D%0A++%7D%0A%7D%0A)**
