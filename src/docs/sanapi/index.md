@@ -34,7 +34,7 @@ The [following article](./rate-limits) describes how are the API calls counted a
 
 ## Complexity
 
-Each API query can fetch only a limited amount of data points. The [complexity](./complexity) analysis decides
+Each API query can fetch only a limited amount of data points. The [complexity](/sanapi/complexity) analysis decides
 whether a given query will be executed or will be rejected.
 
 ## Glossary

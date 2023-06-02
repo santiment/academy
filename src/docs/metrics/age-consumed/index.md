@@ -5,7 +5,7 @@ date: 2020-04-06
 description: Amount of coins/tokens moved multipled by their age
 ---
 
-_For a more in-depth technical explanation of `Age Consumed`, please click_
+_For a more in-depth technical explanation of Age Consumed, please click_
 [_here_](/metrics/age-consumed/age-consumed-technical)
 
 ---
@@ -69,18 +69,17 @@ Time passed × Token/Coin amount
 
 ## Available Assets
 
-Available for [these
-assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22age_destroyed%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+Available for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22age_destroyed%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 
 ## API
 
-Available under the `age_destroyed` name:
+Available under the `age_destroyed` and `age_consumed` names, one being an alias for the other:
 
 ```graphql
 {
-  getMetric(metric: "age_destroyed") {
+  getMetric(metric: "age_consumed") {
     timeseriesData(
       slug: "santiment"
       from: "2020-01-01T00:00:00Z"
@@ -94,5 +93,4 @@ Available under the `age_destroyed` name:
 }
 ```
 
-[**Run in
-explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22age_destroyed%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+[**Run in explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22age_consumed%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)

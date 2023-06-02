@@ -1,8 +1,8 @@
 ---
 title: Price Metrics
-author: Ivan
-date: 2020-04-07
-description: Price, Trading Volume and Marketcap data
+author: Santiment Team
+date: 2023-06-01
+description: Price in USD, BTC and USDT
 ---
 
 ## Definition
@@ -10,9 +10,8 @@ description: Price, Trading Volume and Marketcap data
 The following metrics are provided:
 
 - Price in USD
-- Price in USD
-- Volume in USD
-- Marketcap in USD
+- Price in USDT
+- Price in BTC
 - Open-High-Close-Low Price in USD
 
 ---
@@ -25,7 +24,7 @@ The following metrics are provided:
 
 ## Measuring Unit
 
-Amount in dollars/bitcoins
+Amount in dollars/usdt/bitcoins
 
 ---
 
@@ -55,10 +54,13 @@ Amount in dollars/bitcoins
 
 ## Available Assets
 
-Available for [these
-assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+Available assets for [price_usd](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usd%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
 
-> Note: All metrics are available for the same set of assets
+
+Available assets for [price_btc](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_btc%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
+
+
+Available assets for [price_usdt](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usdt%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
 
 ---
 
@@ -70,7 +72,7 @@ assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3
 {
   getMetric(metric: "price_usd") {
     timeseriesData(
-      slug: "santiment"
+      slug: "ethereum"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
       interval: "1d"
@@ -82,8 +84,7 @@ assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3
 }
 ```
 
-[**Run in
-Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)
+[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usd%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22ethereum%22%0A++++++from%3A+%222020-04-01T00%3A00%3A00Z%22%0A++++++to%3A+%222020-04-07T00%3A00%3A00Z%22%0A++++++interval%3A+%221d%22%0A++++%29+%7B%0A++++++datetime%0A++++++value%0A++++%7D%0A++%7D%0A%7D)
 
 ### Price BTC
 
@@ -91,7 +92,7 @@ Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metr
 {
   getMetric(metric: "price_btc") {
     timeseriesData(
-      slug: "santiment"
+      slug: "ethereum"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
       interval: "1d"
@@ -103,16 +104,15 @@ Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metr
 }
 ```
 
-[**Run in
-Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_btc%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)
+[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_btc%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22ethereum%22%0A++++++from%3A+%222020-04-01T00%3A00%3A00Z%22%0A++++++to%3A+%222020-04-07T00%3A00%3A00Z%22%0A++++++interval%3A+%221d%22%0A++++%29+%7B%0A++++++datetime%0A++++++value%0A++++%7D%0A++%7D%0A%7D)
 
-### Volume USD
+### Price USDT
 
 ```graphql
 {
-  getMetric(metric: "volume_usd") {
+  getMetric(metric: "price_usdt") {
     timeseriesData(
-      slug: "santiment"
+      slug: "ethereum"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
       interval: "1d"
@@ -124,47 +124,30 @@ Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metr
 }
 ```
 
-[**Run in
-Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22volume_usd%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)
+[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usdt%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22ethereum%22%0A++++++from%3A+%222020-04-01T00%3A00%3A00Z%22%0A++++++to%3A+%222020-04-07T00%3A00%3A00Z%22%0A++++++interval%3A+%221d%22%0A++++%29+%7B%0A++++++datetime%0A++++++value%0A++++%7D%0A++%7D%0A%7D)
 
-### Marketcap USD
-
-```graphql
-{
-  getMetric(metric: "marketcap_usd") {
-    timeseriesData(
-      slug: "santiment"
-      from: "2020-04-01T00:00:00Z"
-      to: "2020-04-07T00:00:00Z"
-      interval: "1d"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-
-[**Run in
-Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22marketcap_usd%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)
 
 ### OHLC
 
 ```graphql
 {
-  ohlc(
-    slug: "santiment"
-    from: "2020-04-01T00:00:00Z"
-    to: "2020-04-07T00:00:00Z"
-    interval: "1d"
-  ) {
-    openPriceUsd
-    highPriceUsd
-    lowPriceUsd
-    closePriceUsd
+  getMetric(metric: "price_usd") {
+    timeseriesData(
+      slug: "ethereum"
+      from: "2020-04-01T00:00:00Z"
+      to: "2020-04-07T00:00:00Z"
+      interval: "1d"
+      aggregation: OHLC) {
+        datetime
+        valueOhlc {
+          open
+          high
+          close
+          low
+        }
+    }
   }
 }
 ```
 
-[**Run in
-Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20ohlc(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20openPriceUsd%0A%20%20%20%20%09highPriceUsd%0A%20%20%20%20lowPriceUsd%0A%20%20%20%20closePriceUsd%0A%20%20%7D%0A%7D%0A&variables=>)
+[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usd%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22ethereum%22%0A++++++from%3A+%222020-04-01T00%3A00%3A00Z%22%0A++++++to%3A+%222020-04-07T00%3A00%3A00Z%22%0A++++++interval%3A+%221d%22%0A++++++aggregation%3A+OHLC%29+%7B%0A++++++++datetime%0A++++++++valueOhlc+%7B%0A++++++++++open%0A++++++++++high%0A++++++++++close%0A++++++++++low%0A++++++++%7D%0A++++%7D%0A++%7D%0A%7D%0A)
