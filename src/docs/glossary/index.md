@@ -5,20 +5,25 @@ author: Ivan
 
 Find the meaning of terms used throughout the documentation
 
-- [query](#query)
-- [metric](#metric)
-- [asset](#asset)
-- [slug](#slug)
-- [interval](#interval)
-- [ISO8601](#iso8601)
-- [API key](#api-key)
+
+- [GraphQL-related](#graphql-related)
+  - [query](#query)
+  - [field](#field)
+- [Santiment-related](#santiment-related)
+  - [metric](#metric)
+  - [asset](#asset)
+  - [slug](#slug)
+  - [interval](#interval)
+  - [ISO8601](#iso8601)
+  - [API key](#api-key)
+
+# GraphQL-related
+
+More about all the GraphQL-related terms can be found on the [GraphQL documentation] website.
 
 ## query
 
-The term refers to the [GraphQL query](https://graphql.org/learn/queries/) and
-means exactly that - a read operation. In the following example
-`getAccessRestrictions` is the query. Broadly speaking, in a GraphQL request the
-`query` is the "name of the function" invoked:
+The term refers to the [GraphQL query](https://graphql.org/learn/) and means a read operation. In the following example `getAccessRestrictions` is the query. Broadly speaking, in a GraphQL request the `query` is the "name of the function" invoked:
 
 ```graphql
 {
@@ -68,6 +73,45 @@ example the queries are `getMetric` and `currentUser`:
   }
 }
 ```
+
+One query can directly return the specified result or it can provide a set of fields that can be chosen by the user.
+
+## field
+
+The term refers to the [GraphQL field](https://graphql.org/learn/queries/#fields). When the query returns a complex object, the fields are used to specify which parts of that object need to be returned. In the following example a different set of fields is used on the same `getMetric` query. In the first example the `timeseriesData` field is used and in the second example the `aggregatedTimeseriesData` field is used.
+
+In the first example, `datetime` and `value` are also fields. This shows that fields can either have or not have arguments.
+
+```graphql
+{
+  getMetric(metric: "active_addresses_24h") {
+    timeseriesData(
+      slug: "ethereum"
+      from: "2019-01-01T00:00:00Z"
+      to: "2019-01-01T03:00:00Z"
+      interval: "30m"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
+```graphql
+{
+  getMetric(metric: "active_addresses_24h") {
+    aggregatedTimeseriesData(
+      slug: "ethereum"
+      from: "2019-01-01T00:00:00Z"
+      to: "2019-01-01T03:00:00Z"
+      aggregation: AVG
+    )
+  }
+}
+```
+
+# Santiment-related
 
 ## metric
 
@@ -184,5 +228,4 @@ The date time format used in the API. The format is
 
 ## API key
 
-Your API for accessing the premium features in the API. See the `Authentication`
-section for more details
+Your API for accessing the premium features in the API. See the [API Authentication](/sanapi/accessing-the-api/#authentication) section for more details.

@@ -44,8 +44,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const { createRedirect } = actions
   createRedirect({
-    fromPath: '/metrics/mvrv/',
-    toPath: '/metrics/mvrv-ratio/',
+    fromPath: '/metrics/mvrv-ratio/',
+    toPath: '/metrics/mvrv/',
     isPermanent: true,
     redirectInBrowser: true,
   })

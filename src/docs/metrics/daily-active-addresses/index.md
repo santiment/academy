@@ -19,7 +19,7 @@ description: Number of unique addresses participating in transactions during one
 ## Definition
 
 The number of distinct addresses that participated in a transfer for the given
-asset in any given day. Each address is counted only once for the day. Both the
+asset in any given day. Each address is counted only once for the day, regardless of the amount of transfers it participates in. Both the
 senders and the receivers of the asset are counted.
 
 ![Daily Active Addresses for Bitcoin](bitcoin-daa.png)

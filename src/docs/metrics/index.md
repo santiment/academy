@@ -12,18 +12,17 @@ time, to more easily spot how trends and events correlate with price action.
 ## Financial
 
 Traditional fundamentals including price, volume and market cap, mean coin age
-
+- [Price in USD, BTC and USDT](/metrics/price)
+- [Marketcap in USD](/metrics/marketcap)
+- [Trading Volume in USD](/metrics/trading-volume)
 - [DEX Trades](/metrics/dex)
 - [Ethereum Spent](/metrics/ethereum-spent)
-- [Marketcap in USD](/metrics/price/#marketcap-usd)
 - [Mean Coin Age](/metrics/mean-coin-age)
 - [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
 - [NFT Collection Price](/metrics/nft-collection-price)
 - [NFT Market Volume](/metrics/nft-market-volume)
 - [NFT Network Profit Loss](/metrics/nft-network-profit-loss)
 - [OHLC (Open-High-Low-Close)](/metrics/price/#ohlc)
-- [Price in BTC](/metrics/price/#price-btc)
-- [Price in USD](/metrics/price/#price-usd)
 - [Price Volatility](/metrics/price-volatility)
 - [Transacted Coin Acquisition Cost](/metrics/transacted-coin-acquisition-cost)
 - [Trading Volume in USD](/metrics/price/#volume-usd)

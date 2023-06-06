@@ -1,7 +1,7 @@
 ---
-title: BitMEX
-author: Anatoliy 
-date: 2020-06-26
+title: BitMEX Derivatives
+author: Santiment Team
+date: 2023-06-01
 ---
 
 [BitMEX](https://www.bitmex.com/) is a P2P crypto-products trading platform.  

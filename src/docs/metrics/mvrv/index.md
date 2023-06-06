@@ -83,7 +83,10 @@ profit/loss long-term and short-term holders can realize.
 
 ### MVRV Long/Short Difference
 
-MVRV Long/Short Difference is defined as `mvrv_usd_365d - mvrv_usd_60d`
+MVRV Long/Short Difference is defined as:
+$$
+\text{mvrv\_usd\_365d} - \text{mvrv\_usd\_60d}
+$$
 
 Negative values mean that short-term holders will realize higher profits
 than long-term holders if they sell at a price at this moment. Positive values

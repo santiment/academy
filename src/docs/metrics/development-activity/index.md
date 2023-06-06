@@ -1,43 +1,47 @@
 ---
-title: Developer Activity
+title: Development Activity Metrics
 author: Santiment Team
-date: 2022-04-18
-description: Development activity in public github repositories
+date: 2023-06-01
 ---
 
-## Definition
 
-The development activity of a project is done in its public GitHub repositories.
-The work done in private repositories is hidden from the public and cannot be
-tracked. In Crypto, a lot of the work is done in public repositories, so this
-metric is available for many projects.
+## Metrics
 
-A developer's time is a relatively expensive resource (especially in Crypto), so
+The development-related data allows the definition of different metrics.
+These metrics include: 
+- [Development Activity](/metrics/development-activity/development-activity/) - Ignore the non-development related events. Excluding this allows different projects' values to be compared. If this exclusion is not done, the projects that use Github for active issues tracking would have an unfair advantage.
+- [Development Activity Contributors Count](/metrics/development-activity/development-activity-contributors-count/) - Track the number of unique development activity contributors.
+- [Github Activity](/metrics/development-activity/github-activity/) - Count all events for a project.
+- [Github Activity Contributors Count](/metrics/development-activity/github-activity-contributors-count) - Track the number of unique github activity contributors.
+
+---
+
+## Why Development Acitivty matters?
+
+The development activity of a project that Santiment tracks is done in the project's public GitHub repositories.
+The work done in private repositories cannot be tracked. In crypto, a lot of the work is done in public repositories, so this metric is available for many projects.
+
+A developer's time is an expensive resource, so
 high development activity implies that:
 
-1. The project is serious about its business proposition
-2. The project will likely ship new features in the future
-3. It's less likely that the project is just an exit scam
+- The project is serious about its business proposition;
+- The project will likely ship new features in the future and address existing issues;
+- It's less likely that the project is just an exit scam.
 
-Simply put, Development Activity can be used to gauge a project's commitment to
+Simply put, development-related metrics can be used to gauge a project's commitment to
 creating a working product, and continuously polishing and upgrading its
 features.
 
 > **Note:** Only development work done in public github repositories can be tracked.
 > Work done in private/unknown repositories or public repositories outside
-> github won't be counted.
+> GitHub won't be counted.
 
 ---
 
-## Access
+## How development activity is tracked?
 
-[Free Access](/metrics/details/access#free-access)
 
----
-
-## Measuring Unit
-
-Development Activity metrics are measured in number of events.
+Development-related metrics are using the events emitted by Github. The metrics **do not** use the number of commits in a repository.
 
 When developers work they encapsulate their code changes in commits. When a
 repository page [like this](https://github.com/santiment/sanbase2) is opened in
@@ -53,13 +57,13 @@ Why skewed?
 
 There are a lot of projects that 'fork' (copy everything up until this moment)
 other blockchains' source code and make small changes on top of it. The process
-of forking inherits all commits, but that are other people's commits. This is
+of forking inherits all commits, but this is other people's work. This is
 not work done by the team that makes the fork. In this case pure commit counting
-would result in high dev activity of the forking party, too.
+would result in high activity of the forking party, too.
 
-We measure dev activity in a different way.
+We measure development in a different way.
 
-At Santiment, we implemented a more reliable approach -- tracking the number of
+At Santiment, we implemented a more reliable approach $-$ tracking the number of
 Github events that the project generates. Pushing a commit generates an event,
 but there are also many other activities that generate an event:
 
@@ -69,14 +73,11 @@ but there are also many other activities that generate an event:
 - Forking/starring/watching a repository
 - many others.
 
-Our custom method dramatically improves both accuracy and serviceability of
-Github data. The reason is that the process of forking a repository generates
-just a single `ForkEvent` instead creating an event for every commit that gets
-inherited.
+More importantly, when a project is forked, it does not inherit any of the already emitted events. Our custom method dramatically improves both accuracy and serviceability of Github data. The reason is that the process of forking a repository generates just a single `ForkEvent` instead creating an event for every commit that gets inherited.
 
 At the time of writing this the [bitcoin](https://github.com/bitcoin/bitcoin)
-repository has around 23.4k commits and [Bitoin
-SV](https://github.com/bitcoin-sv/bitcoin-sv) repository has around 15.8k
+repository has around 37.7k commits and [Bitoin
+SV](https://github.com/bitcoin-sv/bitcoin-sv) repository has around 18.6k
 commits. Let's take a look at the events counting approach:
 
 Bitcoin: ![bitcoin-dev-activity](bitcoin-dev-activity.png)
@@ -90,85 +91,14 @@ time with a spike of just 1.4.
 If you want to learn more about the difference - and the benefits of our bespoke
 approach - I highly suggest [this
 piece](https://medium.com/santiment/tracking-github-activity-of-crypto-projects-introducing-a-better-approach-9fb1af3f1c32)
-by Valentin, our CTO.
+by Valentin, our ex-CTO.
 
 ---
 
-## Data Type
-
-[Timeseries Data](/metrics/details/data-type#timeseries-data)
-
----
-
-## Change Metrics
-
-[Change Metrics](/metrics/details/change_metrics)
-
----
-
-## Frequency
-
-[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
-
----
-
-## Latency
-
-[Development Activity Data Latency](/metrics/details/latency#development-activity-latency)
-
----
-
-## Development Activity Metric
-
-The 'pure' development activity. It excludes events that are not development
-related like:
-
-- Comments on issues
-- Issues created and closed
-- Creating of forks
-- Comments on commits
-- People following an issue
-- Downloading releases
-- Watching a repository
-- Project management events
-
-This allows to better compare projects that use github for issue tracking and
-projects that do not use github for issue tracking. If such events are not
-excluded then the second project could have inflated activity just by discussion
-what they are going to build without actually building it.
-
-- Available For - [All assets with known github
-  organization](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-- Latency - From 1 to 6 hours
-- Min Interval - 5 minutes
-- Access - free
-
-[Run in
-Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
----
-
-## Github Activity Metric
-
-The total github activity - it counts all events. It is always equal or bigger
-than the dev activity.
-
-- Available For - [All assets with known github
-  organization](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22github_activity%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-- Latency - From 1 to 6 hours
-- Min Interval - 5 minutes
-- Access - free
-
-[Run in
-Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22github_activity%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
----
 
 ## As a Trading Strategy
 
-While not common, Dev Activity can also be used as a novel trading strategy. A
-few months back, we tested a portfolio of only the top ERC20 projects by dev
-activity, refreshed each month.
+While not common, Development-related metrics can also be used as a novel trading strategy. Some time ago, we tested a portfolio of only the top ERC20 projects by development activity, refreshed each month.
 
 We backtested the strategy from August 2017 to October 2018. [The portfolio
 1](https://santiment.net/blog/github-activity-portfolio/) turned a profit, but
@@ -184,54 +114,3 @@ As a custom metric, dev activity can help you understand a project's dedication
 to its product, and in turn - its end users.
 
 ---
-
-## Available Assets
-
-Available for [these
-assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
-
-> **Note**: All metrics are available for the same set of assets.
-
----
-
-## SanAPI
-
-The metrics are available under the `dev_activity` and `github_activity` names.
-
-```graphql
-{
-  getMetric(metric: "dev_activity") {
-    timeseriesData(
-      slug: "santiment"
-      from: "2020-01-13T00:00:00Z"
-      to: "2020-01-18T00:00:00Z"
-      interval: "1d"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)**
-
----
-
-```graphql
-{
-  getMetric(metric: "github_activity") {
-    timeseriesData(
-      slug: "santiment"
-      from: "2020-01-13T00:00:00Z"
-      to: "2020-01-18T00:00:00Z"
-      interval: "1d"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22github_activity%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)**
