@@ -77,12 +77,12 @@ social volume of a certain word increased over the last 24 hours in comparison
 to the past 2 weeks. This is done by comparing the current social volume change
 to the average social volume of the past 14 days.
 
-Additionally we multiply this factor by `log(unique_users)` - this way words
+Additionally we multiply this factor by $\log(\text{unique\_users})$ $-$ this way words
 with a high social volume and a relatively low amount of unique users, that
 mentioned it at least once, will have a smaller hype score. For example, if a
 given word was used many times by exactly one user (i.e. most probably it's
 heavy spam) this word will have a hype score of **0** thanks to the
-`log(unique_users)` component. On the other hand, words with 100 and 200 users
+$\log(\text{unique\_users})$ component. On the other hand, words with 100 and 200 users
 will have more or less the same chance to get a higher hype score.
 
 It's also worth noticing that we use the **normalized** social volume instead of
