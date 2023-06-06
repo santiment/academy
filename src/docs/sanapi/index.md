@@ -7,7 +7,9 @@ description: This page contains a reference of all the APIs provided by Santimen
 
 
 - [Overview](#overview)
+- [How to access the API](#how-to-access-the-api)
 - [Metrics](#metrics)
+- [Supported blockchains](#supported-blockchains)
 - [Rate Limits](#rate-limits)
 - [Complexity](#complexity)
 - [Glossary](#glossary)
@@ -46,19 +48,26 @@ Below is shown an example of a GraphQL query used to fetch timeseries price data
 
 **[Run the example in the GraphiQL Live Explorer](https://api.santiment.net/graphiql?variables=&query=%7B%0A++getMetric%28metric%3A+%22twitter_followers%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22ethereum%22%0A++++++from%3A+%222023-01-01T00%3A00%3A00Z%22%0A++++++to%3A+%222023-01-05T00%3A00%3A00Z%22%0A++++++interval%3A+%221d%22%0A++++%09aggregation%3A+LAST%29%7B%0A++++%09%09datetime%0A++++++++value%0A++++%7D%0A++%7D%0A%7D)**
 
+## How to access the API
+
+Information how to access the API can be found [here](/sanapi/accessing-the-api).
+
 ## Metrics
 
 Information how to explore and fetch the available metrics can be found [here](/sanapi/fetching-metrics).
 
+## Supported blockchains
+
+Information about the supported blockchains can be found on [this page](/sanapi/supported-blockchains) .
+
 ## Rate Limits
 
-The [following article](./rate-limits) describes how are the API calls counted and the rate limits applied.
+The [rate limits page](/sanapi/rate-limits) describes how are the API calls counted and the rate limits applied.
 
 ## Complexity
 
-Each API query can fetch only a limited amount of data points. The [complexity article](/sanapi/complexity) describe how complexity analysis decides
-whether a given query will be executed or will be rejected.
+Each API query can fetch only a limited amount of data points. The [complexity page](/sanapi/complexity) describe how complexity analysis decides whether a given query will be executed or will be rejected.
 
 ## Glossary
 
-The meaning of some of the terms used on this page can be found in the dedicated [glossary page](/glossary)
+The meaning of some of the terms used on this page can be found in the dedicated [glossary page](/glossary).

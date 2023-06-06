@@ -107,7 +107,7 @@ export const GUIDES = [
         <br />& documentation
       </>
     ),
-    articles: ['Accessing the API', 'Supported Blockchains', 'Fetching Metrics', 'Queries', 'Common Queries', 'Rate Limits', 'Complexity'],
+    articles: ['Accessing the API', 'Supported Blockchains', 'Fetching Metrics', 'Common Queries', 'Rate Limits', 'Complexity'],
   },
   {
     title: 'Sansheets',
