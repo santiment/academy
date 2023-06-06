@@ -80,6 +80,8 @@ One query can directly return the specified result or it can provide a set of fi
 
 The term refers to the [GraphQL field](https://graphql.org/learn/queries/#fields). When the query returns a complex object, the fields are used to specify which parts of that object need to be returned. In the following example a different set of fields is used on the same `getMetric` query. In the first example the `timeseriesData` field is used and in the second example the `aggregatedTimeseriesData` field is used.
 
+In the first example, `datetime` and `value` are also fields. This shows that fields can either have or not have arguments.
+
 ```graphql
 {
   getMetric(metric: "active_addresses_24h") {

@@ -215,7 +215,7 @@ export const REFERENCES = [
       'Lending and Borrowing Protocols',
       'MakerDAO',
       'Mean Coin Age',
-      'MVRV ratio',
+      'MVRV',
       'Network Growth',
       'Network Profit Loss',
       'NFT Collection Holders Balance',

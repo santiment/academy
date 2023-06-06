@@ -58,7 +58,7 @@ score** (or **trend score**). For any timestamp $t$ we define the hype score as
 follows:
 
 $$
-HypeScore(t) := \frac{(v_t^n - \frac{1}{14} \sum_{i=t-15}^{t-1} v_i^n) * v_t^n *
+HypeScore(t) := \frac{(v_t  ^n - \frac{1}{14} \sum_{i=t-15}^{t-1} v_i^n) * v_t^n *
 \log_{10} u_t}{1 + \frac{1}{14} \sum_{i=t-15}^{t-1} v_i^n}
 $$
 

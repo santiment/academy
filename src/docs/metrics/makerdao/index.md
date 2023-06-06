@@ -6,13 +6,15 @@ description: MakerDAO Metrics
 ---
 
 ## Description
+
 Metrics related to MakerDAO protocols.
 
-Single-Collateral DAI:
+**Single-Collateral DAI**:
+
 * `scd_locked_token` - The volume of WETH locked in Single-Collateral DAI contract.
 * `scd_collat_ratio` - Single-Collateral DAI Collateralization Ratio
 
-Multi-Collateral DAI:
+**Multi-Collateral DAI**:
 
 * `mcd_locked_token` - The volume of collateral locked in Multi-Collateral DAI contracts, measured by a token.
 * `mcd_erc20_supply` - DAI ERC20 token total supply
