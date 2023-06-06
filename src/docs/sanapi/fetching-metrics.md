@@ -11,8 +11,9 @@ date: 2020-04-06
 - [Available assets](#available-assets)
 - [Available metrics per project](#available-metrics-per-project)
 - [Available projects per metric](#available-projects-per-metric)
+- [Minimal Interval](#minimal-interval)
+- [Aggregation](#aggregation)
 - [Queryable fields](#queryable-fields)
-  - [Aggregation](#aggregation)
   - [timeseriesData](#timeseriesdata)
   - [aggregatedTimeseriesData](#aggregatedtimeseriesdata)
   - [histogramData](#histogramdata)
@@ -143,39 +144,43 @@ For a given metricthe list of available slugs can be fetched with this query:
 **[Run in
 explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
-## Queryable fields
 
-The fields that can be queried on `getMetric`:
+## Minimal Interval
 
-- `timeseriesData`
-- `timeseriesDataPerSlug`
-- `aggregatedTimeseriesData`
-- `histogramData`
-- `metadata`
-- `availableSince`
-- `lastDatetimeComputedAt`
+The metrics are stored as a datetime and value pairs.
+`minInterval` refers to the time interval between two adjacent data points and means that it is the minimal interval
+that can be used when querying the metric. The most common `minInterval`s are:
 
-### Aggregation
+- 1 day (`1d`). The metrics with such interval are commonly known as "daily" metrics.
+- 5 minutes (`5m`). The metrics with such interval are commonly known as "intraday" metrics.
 
-Some of the queryable fields accept an aggregation parameter.
+When querying the data, the `interval` argument is used to determine the resolution of the data. The interval can be
+much bigger compared to the `minInterval`. In such cases all the values inside that big interval need to be aggregated
+into a single value. How the data is aggregated is controlled by the `aggregation` parameter.
+
+## Aggregation
+
+The fields that return timeseries data accept an `aggregation` parameter.
 
 When an `interval` bigger than `minInterval` is provided for a given metric,
-more than 1 data point values will be aggregated into a single data point.
+more than 1 data point value will be aggregated into a single data point.
+
+> **Note**: Every metric has a manually picked default aggregation that will be used if the `aggregation` parameter is not provided. The default aggregation is set to be one that makes the most sense.
 
 The aggregations types are:
 
-- `SUM` - The sum of all the values
-- `AVG` - The average of the values
-- `MEDIAN` - The median of all the values
-- `FIRST` - The first value
-- `LAST` - The last value
-- `MAX` - The max value
-- `MIN` - The min value
-- `ANY` - Any value falling in the larger interval. This is usually used when
+- `SUM` - The sum of all the values;
+- `AVG` - The average of the values;
+- `MEDIAN` - The median of all the values;
+- `FIRST` - The first (with the smallest datetime) value;
+- `LAST` - The last (with latest datetime) value;
+- `MAX` - The max/biggest value;
+- `MIN` - The min/smallest value;
+- `ANY` - Any value falling in the interval. This is usually used when
   all values are expected to have the same result and you just want to take one
-  of them.
+  of them. None of the metrics have this as their default aggregation. This aggregation type has more widespread usage when the user writes their own SQL queries using the [Santiment Queries](/santiment-queries) product.
 
-> **Note:** The aggregation should be provided capitalized without quotes like this:
+> **Note:** The aggregation is of the [GraphQL enum type](https://graphql.org/learn/schema/#enumeration-types)a dn should be provided capitalized without quotes like this:
 > `aggregation: MAX`
 
 The following query fetches the default aggregation and all available
@@ -194,6 +199,18 @@ aggregations per metric:
 
 **[Run in
 explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20defaultAggregation%0A%20%20%20%20%20%20availableAggregations%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
+
+## Queryable fields
+
+The fields that can be queried on `getMetric`:
+
+- `timeseriesData`
+- `timeseriesDataPerSlug`
+- `aggregatedTimeseriesData`
+- `histogramData`
+- `metadata`
+- `availableSince`
+- `lastDatetimeComputedAt`
 
 ### timeseriesData
 
