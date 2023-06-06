@@ -34,7 +34,7 @@ Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variabl
 > Note if you want to get latest data you can use "utc_now"
 > as a value for ```to``` argument instead of using date methods.
 
-### Get 1 sec resolution
+### Get 1 second resolution prices
 
 If the price changed every 1 second in a given interval, then you can fetch it from our API
 
@@ -63,9 +63,18 @@ This one possible is the simplest solution.
 
 ```graphql
 {
-  allProjects(selector: {baseProjects: {slugs: ["ethereum", "bitcoin", "aave"]}}) {
-    slug
-    aggregatedTimeseriesData(metric: "mvrv_usd_intraday_365d", from: "utc_now-1d", to: "utc_now", aggregation: LAST)
+  allProjects(
+    selector: {
+      baseProjects: {
+        slugs: ["ethereum", "bitcoin", "aave"]
+      }
+    }) {
+      slug
+      aggregatedTimeseriesData(
+        metric: "mvrv_usd_intraday_365d"
+        from: "utc_now-1d"
+        to: "utc_now"
+        aggregation: LAST)
   }
 }
 ```
@@ -84,7 +93,7 @@ Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variabl
 ```
 Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22mcd_liquidation%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
 
-### Get current price for all available assets on Sanbase 
+### Get current price for all assets
 
 ```graphql
 {
@@ -104,12 +113,16 @@ Try it now in the [GraphiQL Explorer](https://api.santiment.net/graphiql?query=%
 
 ```graphql
 {
-  getTrendingWords(from: "utc_now-3h", to: "utc_now", size: 20, interval: "1h") {
-    datetime
-    topWords {
-      word
-      score
-    }
+  getTrendingWords(
+    from: "utc_now-3h"
+    to: "utc_now"
+    size: 20
+    interval: "1h") {
+      datetime
+      topWords {
+        word
+        score
+      }
   }
 }
 ```
