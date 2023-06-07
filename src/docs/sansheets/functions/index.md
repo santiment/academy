@@ -1,12 +1,12 @@
 ---
-title: Functions we offer
+title: Functions We Offer
 author: Santiment Team
 date: 2023-03-31
 ---
 
 # Content
 
-## [Onchain Data Functions](/sansheets/functions/onchain/)
+## [On-Chain Data Functions](/sansheets/functions/onchain/)
 
 ## [Social Data Functions](/sansheets/functions/social/)
 
