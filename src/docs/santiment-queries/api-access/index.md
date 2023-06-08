@@ -44,26 +44,54 @@ auto-completion and a preview of the result in real-time, speeding up the
 development and debugging process. When the query is ready, it can be copied
 and used in the API.
 
+
 ## API Endpoint
 
 On the [API Overview](/sanapi/#overview/) page one can find information how to access the API.
 
 There are two ways to execute queries using the API:
 
-- Directly execute the `computeRawClickhouseQuery` GraphQL query against the API graphql endpoint.
-- Use the [sanpy execute_sql function](https://github.com/santiment/sanpy#execute-sql-queries-and-get-the-result) to execute an SQL query and get the result as a Pandas DataFrame.
+- Directly execute the `computeRawClickhouseQuery` GraphQL query against the API graphql endpoint;
+- Use the [sanpy execute_sql function](https://github.com/santiment/sanpy#execute-sql-queries-and-get-the-result) to execute an SQL query and get the result as a Pandas DataFrame. The python library itself also uses the API, but provides functions that hide the details of the API.
+
+### The query
+
+The query that is used in the examples bellow is the following:
+
+```sql
+SELECT
+  get_metric_name(metric_id) AS metric,
+  get_asset_name(asset_id) AS asset,
+  dt,
+  argMax(value, computed_at) AS value
+FROM daily_metrics_v2
+WHERE
+  asset_id = get_asset_id('bitcoin') AND
+  metric_id = get_metric_id('nvt') AND
+  dt >= now() - INTERVAL 7 DAY
+GROUP BY dt, metric_id, asset_id
+ORDER BY dt ASC
+```
+
+This query fetches one value per day of the `nvt` metric for the last 7 days.
+
+The examples below show how to parameterize the query in order to provide some of the arguments separately, instead of hardcoding them.
+The following parameters are used:
+- `slug` - A string representing the slug of a project;
+- `metric` - A string representing the name of a metric;
+- `last_n_day` - An integer representing the number of days to be fetched.
 
 ### Direct API call
 
 The direct API calls can be made using any HTTP client in any programming language.
+What you need to do is send a POST request and put the query in the body.
 
-#### Request Example
-
+The query looks like this: 
 ```graphql
 {
   computeRawClickhouseQuery(
-    query: "SELECT get_metric_name(metric_id) AS metric, get_asset_name(asset_id) AS asset, dt, value FROM daily_metrics_v2 LIMIT {{limit}}",
-    parameters: "{\"limit\": 2}"
+    query: "SELECT\n    get_metric_name(metric_id) AS metric,\n    get_asset_name(asset_id) AS asset,\n    dt,\n    argMax(value, computed_at) AS value\n  FROM daily_metrics_v2\n  WHERE\n    asset_id = get_asset_id({{slug}}) AND\n    metric_id = get_metric_id({{metric}}) AND\n    dt >= now() - INTERVAL {{last_n_days}} DAY\n  GROUP BY dt, metric_id, asset_id\n  ORDER BY dt ASC",
+    parameters: "{\"slug\": \"bitcoin\", \"last_n_days\": 7, \"metric\": \"nvt\"}"
   ){
     columns
     columnTypes
@@ -72,20 +100,27 @@ The direct API calls can be made using any HTTP client in any programming langua
 }
 ```
 
-You can execute the above query in your terminal via the followign curl command `curl`:
+**[Run in GraphiQL Live Explorer](https://api.santiment.net/graphiql?variables=&query=%7B%0A++computeRawClickhouseQuery%28%0A++++query%3A+%22SELECT%5Cn++++get_metric_name%28metric_id%29+AS+metric%2C%5Cn++++get_asset_name%28asset_id%29+AS+asset%2C%5Cn++++dt%2C%5Cn++++argMax%28value%2C+computed_at%29+AS+value%5Cn++FROM+daily_metrics_v2%5Cn++WHERE%5Cn++++asset_id+%3D+get_asset_id%28%7B%7Bslug%7D%7D%29+AND%5Cn++++metric_id+%3D+get_metric_id%28%7B%7Bmetric%7D%7D%29+AND%5Cn++++dt+%3E%3D+now%28%29+-+INTERVAL+%7B%7Blast_n_days%7D%7D+DAY%5Cn++GROUP+BY+dt%2C+metric_id%2C+asset_id%5Cn++ORDER+BY+dt+ASC%22%2C%0A++++parameters%3A+%22%7B%5C%22slug%5C%22%3A+%5C%22bitcoin%5C%22%2C+%5C%22last_n_days%5C%22%3A+7%2C+%5C%22metric%5C%22%3A+%5C%22nvt%5C%22%7D%22%0A++%29%7B%0A++++columns%0A++++columnTypes%0A++++rows%0A++%7D%0A%7D)**
+
+> **Note**: In order to be able to run the query in the GraphiQL Explorer you need to login on [Sanbase](https://app.santiment.net) on the same browser.
+
+### curl
+
+You can execute the  query in your terminal via the following curl command:
 
 ```bash
-curl \
+curl 'https://api.santiment.net/graphql' \
 -X POST \
--H "Content-Type: application/graphql" \
--H "Authorization: Apikey <YOUR_OWN_API_KEY>"\
---data '
-{ getMetric(metric: "dev_activity"){ timeseriesData( slug: "ethereum" from: "2020-02-10T07:00:00Z" to: "2020-03-10T07:00:00Z" interval: "1w"){ datetime value } } }' https://api.santiment.net/graphql
+-H 'Content-Type: application/graphql' \
+-H 'Authorization: Apikey <YOUR_API_KEY>' \
+--data '{computeRawClickhouseQuery(query: "SELECT   get_metric_name(metric_id) AS metric,   get_asset_name(asset_id) AS asset,   dt,   argMax(value, computed_at) AS value FROM daily_metrics_v2 WHERE   asset_id = get_asset_id({{slug}}) AND   metric_id = get_metric_id({{metric}}) AND   dt >= now() - INTERVAL {{last_n_days}} DAY GROUP BY dt, metric_id, asset_id ORDER BY dt ASC", parameters: "{\"slug\": \"bitcoin\", \"metric\": \"nvt\", \"last_n_days\": 7}"){columns columnTypes rows}}' 
 ```
+
+> **Note**: If you have the `jq` tool installed, you can pipe the result into it to pretty print the result.
 
 #### Result Example
 
-The result is a JSON object:
+The result of both the direct API call and the curl command is a JSON. The dates and values will differ when you execute the query.
 
 ```json
 {
@@ -105,16 +140,46 @@ The result is a JSON object:
       ],
       "rows": [
         [
-          "stack_circulation_7d",
-          "0chain",
-          "2015-07-17T00:00:00Z",
-          0
+          "nvt",
+          "bitcoin",
+          "2023-06-02T00:00:00Z",
+          190.89299852757196
         ],
         [
-          "stack_circulation_7d",
-          "0chain",
-          "2015-07-18T00:00:00Z",
-          0
+          "nvt",
+          "bitcoin",
+          "2023-06-03T00:00:00Z",
+          356.60459422752217
+        ],
+        [
+          "nvt",
+          "bitcoin",
+          "2023-06-04T00:00:00Z",
+          368.2710836946752
+        ],
+        [
+          "nvt",
+          "bitcoin",
+          "2023-06-05T00:00:00Z",
+          169.76949862711646
+        ],
+        [
+          "nvt",
+          "bitcoin",
+          "2023-06-06T00:00:00Z",
+          174.47807857518634
+        ],
+        [
+          "nvt",
+          "bitcoin",
+          "2023-06-07T00:00:00Z",
+          186.78086702105898
+        ],
+        [
+          "nvt",
+          "bitcoin",
+          "2023-06-08T00:00:00Z",
+          912.7910441040465
         ]
       ]
     }
@@ -122,7 +187,7 @@ The result is a JSON object:
 }
 ```
 
-#### Request arguments definition
+#### API request arguments definition
 
 The `computeRawClickhouseQuery` accepts two arguments:
 
@@ -133,7 +198,7 @@ The `computeRawClickhouseQuery` accepts two arguments:
 - `parameters` - A stringified JSON object that contains the key-value pairs. When the SQL query
   is executed, the `{{key}}` templates are replaced with the corresponding values from the `parameters` object.
 
-#### Result fields interpretation
+#### API result fields interpretation
 
 The result of the GraphQL query contains the result of the executed SQL query.
 The selected fields in this example are: `columns`, `columnTypes` and `rows`.
@@ -162,7 +227,7 @@ The [sanpy](https://github.com/santiment/sanpy) provides the `execute_sql` funct
 interacts with the above described `computeRawClickhouseQuery` API. The function accepts two
 named parameters - `query` and `parameters`, runs the query and returns the result as a Pandas DataFrame.
 
-#### Request Example
+#### sanpy request example
 
 To run the code:
 
@@ -196,7 +261,7 @@ parameters={
 set_index="dt")
 ```
 
-#### Result Example
+#### sanpy result example
 
 The result is a Pandas DataFrame:
 
@@ -211,7 +276,7 @@ dt                   metric    asset       value
 2023-03-29T00:00:00Z    nvt  bitcoin  376.403649
 ```
 
-#### Request parameters definition
+#### sanpy request parameters definition
 
 The `execute_sql` function accepts three named parameters - one mandatory and two optinal:
 
@@ -222,7 +287,7 @@ The `execute_sql` function accepts three named parameters - one mandatory and tw
 - `set_index` - The name of the column to use as the index of the returned DataFrame. If not
   specified, the index will be a range of integers. This parameter is optional.
 
-#### Result parameters definition
+#### sanpy result parameters definition
 
 The `execute_sql` function returns a Pandas DataFrame with the result of the query.
 The name of each column is the name of the column in the database table or the alias
