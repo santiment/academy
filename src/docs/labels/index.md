@@ -86,12 +86,14 @@ Below you can find labels which are attached to every group from above. Please n
 ### Domains
 
 - [DeFi](/labels/defi)
-    - [Decentralized exchange](/labels/decentralized-exchange)
     - [Bridge](/labels/bridge)
-    - TBA: lending
-    - TBA: yeild
+    - [Decentralized exchange](/labels/decentralized-exchange)
+    - TBA: derivatives
+    - [Lending](/labels/lending)
+    - TBA: liquidity
     - TBA: liquid_staking
-    - TBA: stablecoin
+    - TBA: staking
+    - TBA: yeild
 - [CeFi](/labels/cefi)
     - [Centralized exchange](/labels/centralized-exchange)
     - [Fund](/labels/fund)
@@ -100,7 +102,10 @@ Below you can find labels which are attached to every group from above. Please n
     - [NFT collection](/labels/nft-collection)
     - [NFT collection name](/labels/nft-collection-name)
     - [NFT collection symbol](/labels/nft-collection-symbol)
-- TBA: gamefi
+    - [NFT marketplace](/labels/nft-marketplace)
+- [ETH2_Staking](/labels/eth2-staking)
+- [GameFi](/labels/gamefi)
+    - [Gambling](/labels/gambling)
 - TBA: mining_pool
 - TBA: dao
 
@@ -112,46 +117,49 @@ Below you can find labels which are attached to every group from above. Please n
 
 ### Infrastructure
 
+- [Airdrop Sender](/labels/airdrop-sender)
 - [Deposit](/labels/deposit)
 - [Contract](/labels/contract)
     - [ERC721](/labels/erc721)
     - [ERC1155](/labels/erc1155)
-    - [Proxy](labels/proxy)
-    - TBA: Factory
-        - TBA: DSProxy
+    - [Factory](/labels/factory)
+    - [Proxy](/labels/proxy)
     - TBA: Multisig
 - [Cold wallet](/labels/cold-wallet)
 - [Dead address](/labels/dead-address)
 - TBA: team_wallet
-- TBA: airdrop_sender
 
 
 ### Activity
 
- - [Whale](/labels/whale)
- - [Miner](/labels/miner)
- - TBA: Withdrawal
- - [Genesis](/labels/genesis)
+ - [Airdrop Receiver](/labels/airdrop-receiver)
+ - TBA: charity
  - [DEX user](/labels/dex-user)
- - [NFT user](/labels/nft-user)
+ - [ETH2 staking address](/labels/eth2-staking-address)
+ - [Genesis](/labels/genesis)
+ - [Miner](/labels/miner)
  - [NFT trader](/labels/nft-trader)
  - [NFT trader threshold](/labels/nft-trader-threshold)
+ - [NFT user](/labels/nft-user)
  - [Used NFT marketplace](/labels/used-nft-marketplace)
- - [ETH2 staking address](/labels/eth2-staking-address)
- - TBA: influencer
- - TBA: airdrop_receiver
-
+ - [Whale](/labels/whale)
+ - TBA: Withdrawal
 
 
 ### Social networks
 
 - TBA: twitter
-- TBA: youtube
 - TBA: opensea_username
 
 
 ### Status
 
+- TBA: Blocked
+- [Closed](/labels/closed)
 - TBA: Hacked
-- TBA: Closed
-- TBA: Scam
+- TBA: Santioned
+
+
+### Chain
+
+- TBA: L2
