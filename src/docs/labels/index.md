@@ -88,6 +88,7 @@ Below you can find labels which are attached to every group from above. Please n
 - [DeFi](/labels/defi)
     - [Decentralized exchange](/labels/decentralized-exchange)
     - [Bridge](/labels/bridge)
+    - [Liquidity Provider](/labels/liquidity)
     - TBA: lending
     - TBA: yeild
     - TBA: liquid_staking
@@ -118,10 +119,12 @@ Below you can find labels which are attached to every group from above. Please n
     - [ERC1155](/labels/erc1155)
     - [Proxy](labels/proxy)
     - TBA: Factory
-        - TBA: DSProxy
+        - DSProxy
     - TBA: Multisig
-- [Cold wallet](/labels/cold-wallet)
-- [Dead address](/labels/dead-address)
+- [Cold wallet](/labels/cold-wallet) 
+- [Hot wallet](/labels/hot-wallet)
+- [Dead address](/labels/dead-address) 
+- [Migration address](labels/migration-address)
 - TBA: team_wallet
 - TBA: airdrop_sender
 
@@ -135,9 +138,11 @@ Below you can find labels which are attached to every group from above. Please n
  - [DEX user](/labels/dex-user)
  - [NFT user](/labels/nft-user)
  - [NFT trader](/labels/nft-trader)
+ - [NFT influencer](/labels/nft-influencer)
  - [NFT trader threshold](/labels/nft-trader-threshold)
  - [Used NFT marketplace](/labels/used-nft-marketplace)
  - [ETH2 staking address](/labels/eth2-staking-address)
+ - [Lending user](/labels/lending-user)
  - TBA: influencer
  - TBA: airdrop_receiver
 
@@ -152,6 +157,7 @@ Below you can find labels which are attached to every group from above. Please n
 
 ### Status
 
+- [Closed](/labels/closed)
+- [Blocked](/labels/blocked)
 - TBA: Hacked
-- TBA: Closed
 - TBA: Scam
