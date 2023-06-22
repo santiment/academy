@@ -93,7 +93,7 @@ Below you can find labels which are attached to every group from above. Please n
     - [Liquidity](/labels/liquidity)
     - TBA: liquid_staking
     - TBA: staking
-    - TBA: yield
+    - [Yield Farming](/labels/yield)
 - [CeFi](/labels/cefi)
     - [Centralized exchange](/labels/centralized-exchange)
     - [Fund](/labels/fund)
