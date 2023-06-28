@@ -7,7 +7,7 @@ description: ETH2 Staking label
 
 ## Description
 
-The eth2_staking label is used to identify wallet addresses that are used to put eth on staking
+The eth2_staking label is used to identify wallet addresses that stake ETH
 
 ## API Name
 

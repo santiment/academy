@@ -107,7 +107,6 @@ Below you can find labels which are attached to every group from above. Please n
 - [GameFi](/labels/gamefi)
     - [Gambling](/labels/gambling)
 - TBA: mining_pool
-- [DAO](/labels/dao)
 
 
 ### Owner
@@ -134,9 +133,9 @@ Below you can find labels which are attached to every group from above. Please n
 ### Activity
 
  - [Airdrop Receiver](/labels/airdrop-receiver)
- - [charity](/labels/charity)
+ - [Charity](/labels/charity)
  - [DEX user](/labels/dex-user)
- - [ETH2 staking address](/labels/eth2-staking-address)
+ - [ETH2 Staking Address](/labels/eth2-staking-address)
  - [Genesis](/labels/genesis)
  - [Miner](/labels/miner)
  - [NFT trader](/labels/nft-trader)
