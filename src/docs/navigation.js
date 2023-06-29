@@ -96,7 +96,7 @@ export const GUIDES = [
         <br />& research tool
       </>
     ),
-    articles: ['Introduction', 'Exploration', 'Writing SQL Queries', 'API Access', 'Liquidation', 'NFT Tables', 'XRPL Tables'],
+    articles: ['Introduction', 'Exploration', 'Writing SQL Queries', 'API Access', 'Lending Pools', 'NFT Tables', 'XRPL Tables'],
   },
   {
     title: 'SanAPI',
