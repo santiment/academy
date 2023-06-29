@@ -37,7 +37,7 @@ On the [API Overview](/sanapi/#overview/) page, you can find information on how 
 
 There are two ways to execute queries using the API:
 
-- Directly execute the `computeRawClickhouseQuery` GraphQL query against the API GraphQL endpoint.
+- Directly execute the `computeRawClickhouseQuery` GraphQL request against the API GraphQL endpoint.
 - Use the [sanpy execute_sql function](https://github.com/santiment/sanpy#execute-sql-queries-and-get-the-result) to execute an SQL query and get the result as a Pandas DataFrame.
 
 ### Direct API Call
@@ -130,7 +130,7 @@ The `computeRawClickhouseQuery` accepts two arguments:
 
 #### Result Fields Interpretation
 
-The result of the GraphQL query contains the result of the executed SQL query. The selected fields in this example are: `columns`, `columnTypes`, and `rows`.
+The result of the GraphQL request contains the result of the executed SQL query. The selected fields in this example are: `columns`, `columnTypes`, and `rows`.
 
 The meaning of the fields is:
 
