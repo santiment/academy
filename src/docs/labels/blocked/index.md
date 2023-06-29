@@ -6,7 +6,7 @@ description: Blocked Label
 ---
 
 ## Description
-This address has been blocked by custodial stablecoin provider.
+This address has been blocked by an authorized entity.
 
 ## API Name
 `blocked`
