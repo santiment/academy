@@ -12,11 +12,11 @@ Returns social data for a specified project.
 
 - **Kind**: global function
 - **Returns**: <code>Array</code> - of project's social data.
-- **Parameters**:
+- **Customfunction**:
 
-| Param       | Type                | Description                                                                                                                                         |
-| ----------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (e.g., the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be 'santiment'). |
+| Param       | Type                | Description                                                                                                                                                                            |
+| ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| projectSlug | <code>string</code> | Name of the asset at sanbase, which can be found at the end of the URL (eg. the Santiment URL is https://app.santiment.net/projects/santiment, so the projectSlug would be santiment).                                                                                              |
 
 ## SAN_SOCIAL_DOMINANCE
 
@@ -26,15 +26,15 @@ Returns the social dominance for a slug.
 
 - **Kind**: global function
 - **Returns**: <code>Array</code> - of the slug's social dominance.
-- **Parameters**:
+- **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
 | ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                   |
-| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                       |
-| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                         |
-| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"         |
-| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                          |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"                                                                                                        |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
 
 ## SAN_SOCIAL_DOMINANCE_AGGREGATED
 
@@ -44,33 +44,34 @@ Returns the social dominance for a slug.
 
 - **Kind**: global function
 - **Returns**: <code>number</code> - of aggregated the slug's social dominance.
-- **Parameters**:
+- **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
 | ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                   |
-| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                       |
-| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                         |
-| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"         |
-| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                               |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"                                                                                                        |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
 
 ## SAN_SOCIAL_DOMINANCE_MULTIPLE_SLUGS
 
 ##### SAN_SOCIAL_DOMINANCE_MULTIPLE_SLUGS(projectSlugsList, from, to, source, interval) ⇒ <code>Array</code>
 
-Returns the social dominance for multiple slugs.
+Returns the social dominance for a slug.
 
 - **Kind**: global function
-- **Returns**: <code>Array</code> - of results for multiple slugs' social dominance.
-- **Parameters**:
+- **Returns**: <code>Array</code> - of results for multiple slugs
+the slug's social dominance.
+- **Customfunction**:
 
 | Param            | Type                | Description                                                                                                                                                                            |
 | ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlugsList | <code>string</code> | Comma-separated names of the assets, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment,bitcoin".                                                         |
-| from             | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                       |
-| to               | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                         |
-| source           | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"         |
-| interval         | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                          |
+| projectSlugsList | <code>string</code> | Comma-separated names of the assets, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment,bitcoin".                                                                                                                                                       |
+| from             | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to               | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| source           | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"                                                                                                        |
+| interval         | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
 
 ## SAN_SOCIAL_VOLUME
 
@@ -80,15 +81,15 @@ Returns the social volume for a slug.
 
 - **Kind**: global function
 - **Returns**: <code>Array</code> - of the slug's social volume.
-- **Parameters**:
+- **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
 | ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                   |
-| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                       |
-| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                         |
-| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"         |
-| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                          |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"                                                                                                        |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
 
 ## SAN_SOCIAL_VOLUME_AGGREGATED
 
@@ -98,26 +99,26 @@ Returns the social volume for a slug.
 
 - **Kind**: global function
 - **Returns**: <code>number</code> - of aggregated the slug's social volume.
-- **Parameters**:
+- **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
 | ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                   |
-| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                       |
-| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                         |
-| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"          |
-| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                               |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"                                                                                                        |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
 
 ## SAN_SOCIAL_VOLUME_MULTIPLE_SLUGS
 
 ##### SAN_SOCIAL_VOLUME_MULTIPLE_SLUGS(projectSlugsList, from, to, source, interval) ⇒ <code>Array</code>
 
-Returns the social volume for multiple slugs.
+Returns the social volume for a slug.
 
 - **Kind**: global function
 - **Returns**: <code>Array</code> - of results for multiple slugs
 the slug's social volume.
-- **Parameters**:
+- **Customfunction**:
 
 | Param            | Type                | Description                                                                                                                                                                            |
 | ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -135,7 +136,7 @@ Returns a list of project slugs for which there is social volume data.
 
 - **Kind**: global function
 - **Returns**: <code>Array</code> - of social volume projects.
-- **Parameters**: 
+- **Customfunction**:    
 
 
 ## SAN_WEIGHTED_SOCIAL_SENTIMENT
@@ -146,15 +147,15 @@ Returns the weighted social sentiment for a slug.
 
 - **Kind**: global function
 - **Returns**: <code>Array</code> - of the slug's weighted social sentiment.
-- **Parameters**:
+- **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
 | ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                   |
-| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                       |
-| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                         |
-| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"          |
-| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                          |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"                                                                                                        |
+| interval    | <code>string</code> | The resolution with which the data is fetched. Example: "5m"                                                                                                                                                                                                                        |
 
 ## SAN_WEIGHTED_SOCIAL_SENTIMENT_AGGREGATED
 
@@ -164,15 +165,15 @@ Returns the weighted social sentiment for a slug.
 
 - **Kind**: global function
 - **Returns**: <code>number</code> - of aggregated the slug's weighted social sentiment.
-- **Parameters**:
+- **Customfunction**:
 
 | Param       | Type                | Description                                                                                                                                                                            |
 | ----------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                   |
-| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                       |
-| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                         |
-| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"          |
-| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                               |
+| projectSlug | <code>string</code> | Name of the asset, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment".                                                                                                                                                                                 |
+| from        | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to          | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| source      | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"                                                                                                        |
+| aggregation | <code>string</code> | Aggregation for the timeseries metrics. Example: "LAST"                                                                                                                                                                                                                             |
 
 ## SAN_WEIGHTED_SOCIAL_SENTIMENT_MULTIPLE_SLUGS
 
@@ -181,13 +182,14 @@ Returns the weighted social sentiment for a slug.
 Returns the weighted social sentiment for a slug.
 
 - **Kind**: global function
-- **Returns**: <code>Array</code> - of results for multiple slugs the slug's weighted social sentiment.
-- **Parameters**:
+- **Returns**: <code>Array</code> - of results for multiple slugs
+the slug's weighted social sentiment.
+- **Customfunction**:
 
 | Param            | Type                | Description                                                                                                                                                                            |
 | ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectSlugsList | <code>string</code> | Comma-separated names of the assets, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment,bitcoin".                                                          |
-| from             | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                        |
-| to               | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                          |
-| source           | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"          |
+| projectSlugsList | <code>string</code> | Comma-separated names of the assets, more info at https://academy.santiment.net/glossary/#slug. Example: "santiment,bitcoin".                                                                                                                                                       |
+| from             | <code>date</code>   | The starting date to fetch the data. Example: DATE(2018, 9, 20)                                                                                                                                                                                                                     |
+| to               | <code>date</code>   | The ending date to fetch the data. Example: DATE(2018, 9, 21)                                                                                                                                                                                                                       |
+| source           | <code>string</code> | The source of mention counts, one of the following: "TELEGRAM_CHATS_OVERVIEW", "TELEGRAM_DISCUSSION_OVERVIEW", "TWITTER_CHATS_OVERVIEW", "REDDIT_COMMENTS_OVERVIEW", "TOTAL"                                                                                                        |
 | interval         | <code>string</code> | The resolution with which the data is fetched. Example: "5m"
