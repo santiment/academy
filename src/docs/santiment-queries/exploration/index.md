@@ -149,14 +149,14 @@ The complete table name is `default.intraday_metrics`, where `default` refers to
 
 The columns are represented by their names and corresponding data types. Data types may have modifiers that determine how the data is stored on disk (e.g., `CODEC(DoubleDelta, LZ4)`). These modifiers can be disregarded when examining a table.
 
+### ORDER BY
+
+This is a crucial field to understand and consider when writing a query. ClickHouse is a column-oriented database, meaning that the data for columns is stored continuously on-disk. This makes it more challenging and less efficient to use multiple indexes, so the column order in `ORDER BY` is essential for writing performant queries. If filters for the columns at the beginning of the list are present, the query will run faster.
+
 ### Engine
 
 The [Table Engine](https://clickhouse.com/docs/en/engines/table-engines/) controls how data is stored, updated, and accessed. If the engine is *MergeTree, then the `FINAL` keyword needs to be used. See the [Writing SQL Queries](link-to-writing-sql-queries-page) page for more detailed examples and reasoning.
 
 ### Partition
 The partitioning has little to no effect on performance, making it safe to ignore.
-
-### ORDER BY
-
-This is a crucial field to understand and consider when writing a query. ClickHouse is a column-oriented database, meaning that the data for columns is stored continuously on-disk. This makes it more challenging and less efficient to use multiple indexes, so the column order in `ORDER BY` is essential for writing performant queries. If filters for the columns at the beginning of the list are present, the query will run faster.
 
