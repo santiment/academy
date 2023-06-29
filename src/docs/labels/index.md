@@ -88,12 +88,12 @@ Below you can find labels which are attached to every group from above. Please n
 - [DeFi](/labels/defi)
     - [Bridge](/labels/bridge)
     - [Decentralized exchange](/labels/decentralized-exchange)
-    - TBA: derivatives
+    - [Derivatives](/labels/derivatives)
     - [Lending](/labels/lending)
-    - TBA: liquidity
+    - [Liquidity](/labels/liquidity)
     - TBA: liquid_staking
     - TBA: staking
-    - TBA: yeild
+    - [Yield Farming](/labels/yield)
 - [CeFi](/labels/cefi)
     - [Centralized exchange](/labels/centralized-exchange)
     - [Fund](/labels/fund)
@@ -107,7 +107,6 @@ Below you can find labels which are attached to every group from above. Please n
 - [GameFi](/labels/gamefi)
     - [Gambling](/labels/gambling)
 - TBA: mining_pool
-- TBA: dao
 
 
 ### Owner
@@ -127,22 +126,25 @@ Below you can find labels which are attached to every group from above. Please n
     - TBA: Multisig
 - [Cold wallet](/labels/cold-wallet)
 - [Dead address](/labels/dead-address)
+- [Migration Address](/labels/migration-address)
 - TBA: team_wallet
 
 
 ### Activity
 
  - [Airdrop Receiver](/labels/airdrop-receiver)
- - TBA: charity
+ - [Charity](/labels/charity)
  - [DEX user](/labels/dex-user)
- - [ETH2 staking address](/labels/eth2-staking-address)
+ - [ETH2 Staking Address](/labels/eth2-staking-address)
  - [Genesis](/labels/genesis)
  - [Miner](/labels/miner)
  - [NFT trader](/labels/nft-trader)
  - [NFT trader threshold](/labels/nft-trader-threshold)
  - [NFT user](/labels/nft-user)
+ - [NFT Influencer](/labels/nft-influencer)
  - [Used NFT marketplace](/labels/used-nft-marketplace)
  - [Whale](/labels/whale)
+ - [Lending User](/labels/lending-user)
  - TBA: Withdrawal
 
 
@@ -154,10 +156,10 @@ Below you can find labels which are attached to every group from above. Please n
 
 ### Status
 
-- TBA: Blocked
+- [Blocked](/labels/blocked)
 - [Closed](/labels/closed)
 - TBA: Hacked
-- TBA: Santioned
+- [Sanctioned](/labels/sanctioned)
 
 
 ### Chain
