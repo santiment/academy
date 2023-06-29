@@ -9,7 +9,7 @@ description: An overview of the Santiment Queries tool and its purpose
 
 At Santiment, we make extensive use of [Clickhouse](https://clickhouse.com/), a high-performance column-oriented database, to store on-chain, financial, social, and development activity data. In addition to storing data, Clickhouse is capable of performing complex calculations and aggregations on millions of rows of data, making it an ideal tool to power your research.
 
-Santiment Queries is an online web tool that provides access to a Clickhouse cluster containing our datasets. Basic SQL knowledge is required to use the tool. If you have no experience, you can follow this brief [Clickhouse Tutorial]() to get started.
+Santiment Queries is an online web tool that provides access to a Clickhouse cluster containing our datasets. Basic SQL knowledge is required to use the tool. If you have no experience, you can follow this brief [Clickhouse Tutorial](https://clickhouse.com/docs/en/guides/writing-queries) to get started.
 
 ## Accessing Santiment Queries
 
