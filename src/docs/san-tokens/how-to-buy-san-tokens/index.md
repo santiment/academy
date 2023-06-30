@@ -25,16 +25,6 @@ You can use decentralized exchanges or decentralized exchange aggregators to swa
 
 ### Decentralized Exchanges
 
-Decentralized exchanges (DEX) are platforms that allow users to trade cryptocurrencies without relying on a centralized authority to manage their assets. Instead, transactions are executed directly between users through smart contracts on a blockchain network. This provides increased security, privacy, and control over one's funds.
-
-Some popular decentralized exchanges include Uniswap, Kyber, and Bancor. These platforms typically offer features such as liquidity provision, yield farming, and token swapping.
-
-To get started with using a decentralized exchange, you will need a cryptocurrency wallet that supports the blockchain network on which the DEX operates. For example, if you want to use Uniswap, you will need a wallet that supports Ethereum, such as MetaMask or Trust Wallet.
-
-Once you have set up your wallet, you can connect it to the DEX platform and start trading. Keep in mind that fees and transaction times may vary depending on the network congestion and the specific DEX you are using.
-
-In summary, decentralized exchanges offer a more secure and private way to trade cryptocurrencies compared to centralized exchanges. However, they may require a bit more technical knowledge to navigate and use effectively.
-
 #### Uniswap
 
 The SAN token is also available on [Uniswap](https://app.uniswap.org/#/swap?outputCurrency=0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098&inputCurrency=ETH) at competitive rates.
