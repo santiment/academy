@@ -15,7 +15,7 @@ Multisig wallets are a type of cryptocurrency wallets for which at least two pri
 
 ## Label Examples
 
-TODO: add examples
+Multisig wallet: [0xcef700a5e522a731dd48f6ba746f418b1b85f593](https://etherscan.io/address/0xcef700a5e522a731dd48f6ba746f418b1b85f593)
 
 ## Available Blockchains
 
