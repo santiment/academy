@@ -1,8 +1,8 @@
 ---
-title: 
+title: Team wallet
 author:
 date: 2023-06-01
-description:
+description: Team wallet label
 ---
 
 ## Description
