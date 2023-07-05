@@ -1,29 +1,28 @@
 ---
-title: API Glossary
+title: Glossary of API Terms
 author: Ivan
 ---
 
-Find the meaning of terms used throughout the documentation
-
+This glossary provides definitions for terms frequently used throughout our documentation.
 
 - [GraphQL-related](#graphql-related)
-  - [query](#query)
-  - [field](#field)
+  - [Query](#query)
+  - [Field](#field)
 - [Santiment-related](#santiment-related)
-  - [metric](#metric)
-  - [asset](#asset)
-  - [slug](#slug)
-  - [interval](#interval)
+  - [Metric](#metric)
+  - [Asset](#asset)
+  - [Slug](#slug)
+  - [Interval](#interval)
   - [ISO8601](#iso8601)
-  - [API key](#api-key)
+  - [API Key](#api-key)
 
 # GraphQL-related
 
-More about all the GraphQL-related terms can be found on the [GraphQL documentation] website.
+More about all the GraphQL-related terms can be found on the [GraphQL documentation](https://graphql.org/learn/) website.
 
 ## query
 
-The term refers to the [GraphQL query](https://graphql.org/learn/) and means a read operation. In the following example `getAccessRestrictions` is the query. Broadly speaking, in a GraphQL request the `query` is the "name of the function" invoked:
+A "query" in the context of [GraphQL](https://graphql.org/learn/) refers to a read operation. For instance, in the example below, `getAccessRestrictions` is the query. Essentially, in a GraphQL request, the `query` is the function that is invoked.
 
 ```graphql
 {
@@ -37,9 +36,7 @@ The term refers to the [GraphQL query](https://graphql.org/learn/) and means a r
 }
 ```
 
-One GraphQL request can batch more than one query. The following example has two
-`getMetric` queries and they are given an alias name so name collision is
-avoided in the returned result:
+A single GraphQL request can accommodate multiple queries. In the following example, there are two `getMetric` queries. To avoid name collision in the returned result, each query is given an alias.
 
 ```graphql
 {
@@ -56,8 +53,7 @@ avoided in the returned result:
 }
 ```
 
-If only different queries are used the aliases can be avoided. In the next
-example the queries are `getMetric` and `currentUser`:
+If different queries are used, aliases can be omitted. In the next example, the queries are `getMetric` and `currentUser`.
 
 ```graphql
 {
@@ -74,13 +70,13 @@ example the queries are `getMetric` and `currentUser`:
 }
 ```
 
-One query can directly return the specified result or it can provide a set of fields that can be chosen by the user.
+A query can either return the specified result directly or provide a set of fields that the user can choose from.
 
-## field
+## Field
 
-The term refers to the [GraphQL field](https://graphql.org/learn/queries/#fields). When the query returns a complex object, the fields are used to specify which parts of that object need to be returned. In the following example a different set of fields is used on the same `getMetric` query. In the first example the `timeseriesData` field is used and in the second example the `aggregatedTimeseriesData` field is used.
+The term refers to a [GraphQL field](https://graphql.org/learn/queries/#fields). Fields are used to specify which parts of a complex object should be returned in a query. The following examples demonstrate the use of different fields in the same `getMetric` query.
 
-In the first example, `datetime` and `value` are also fields. This shows that fields can either have or not have arguments.
+In the first example, the `timeseriesData` field is used. The `datetime` and `value` are also fields. This illustrates that fields can either have arguments or not.
 
 ```graphql
 {
@@ -98,6 +94,8 @@ In the first example, `datetime` and `value` are also fields. This shows that fi
 }
 ```
 
+In the second example, the `aggregatedTimeseriesData` field is used.
+
 ```graphql
 {
   getMetric(metric: "active_addresses_24h") {
@@ -113,14 +111,11 @@ In the first example, `datetime` and `value` are also fields. This shows that fi
 
 # Santiment-related
 
-## metric
+## Metric
 
-A term with a specific meaning in the context of Santiment's API. A metric is a
-set of data points with a specific meaning. There are two types of metrics:
-[timeseries metrics](/metrics/details/data-type#timeseries-data) and [histogram
-metrics](/metric/details/data_type#histogram-data)
+In the context of Santiment's API, a metric is a term with a specific meaning. It refers to a set of data points that carry a particular significance. There are two types of metrics: [timeseries metrics](/metrics/details/data-type#timeseries-data) and [histogram metrics](/metric/details/data_type#histogram-data).
 
-In the following example `nvt` is the metric, `getMetric` is the query.
+Consider the following example where `nvt` is the metric and `getMetric` is the query.
 
 ```graphql
 {
@@ -139,11 +134,7 @@ In the following example `nvt` is the metric, `getMetric` is the query.
 }
 ```
 
-In some cases the query and the metric are the same. In the next example
-`historicalBalance` is the query, but the metric is also `historical balance`.
-This is the case where a query fetches exactly one metric (metric argument is
-implicit), which is not the case of `getMetric` where the metric argument is
-explicitly passed with the `metric` argument.
+In some instances, the query and the metric are identical. In the next example, `historicalBalance` is both the query and the metric. This scenario occurs when a query fetches exactly one metric (the metric argument is implicit), unlike `getMetric` where the metric argument is explicitly passed with the `metric` argument.
 
 ```graphql
 {
@@ -160,25 +151,19 @@ explicitly passed with the `metric` argument.
 }
 ```
 
-## asset
+## Asset  
 
-An asset is any cryptocurrency or crypto token which can be associated with a
-price. Example of assets are Bitcoin, Ethereum and Santiment tokens. More
-detailed info can be found [here](/glossary/asset)
+An asset refers to any cryptocurrency or crypto token that can be associated with a specific price. Examples of assets include Bitcoin, Ethereum, and Santiment tokens. For more detailed information, please visit our [glossary on assets](/glossary/asset). 
 
-## slug
+## Slug
 
-A string uniquely identifying identifying an [asset](/glossary/asset). You can
-find the slug of the projects, alongside their names, tickers (and much more
-data) by using the [allProjects
-API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20infrastructure%0A%20%20%20%20mainContractAddress%0A%20%20%7D%0A%7D%0A).
+A slug is a unique string that identifies an [asset](/glossary/asset). You can find the slug of various projects, along with their names, tickers, and other data, by using the [allProjects API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20infrastructure%0A%20%20%20%20mainContractAddress%0A%20%20%7D%0A%7D%0A).
 
-## interval
+## Interval
 
-A representation of time intervals like 5 minutes, 12 hours, 10 days, 4 weeks.
-The interval supports two distinctive representation types: fixed time interval
-and functions. The fixed interval is a string starting with a number and
-followed by one of the suffixes:
+An interval is a representation of time intervals such as 5 minutes, 12 hours, 10 days, or 4 weeks. There are two types of interval representations: fixed time intervals and functions.
+
+A fixed time interval is a string that begins with a number and is followed by one of these suffixes:
 
 - `s` - second
 - `m` - minute
@@ -186,24 +171,22 @@ followed by one of the suffixes:
 - `d` - day
 - `w` - week
 
-These are the intervals corresponding to the given examples:
+Here are examples of intervals:
 
 - 5 minutes - `5m`
 - 12 hours - `12h`
 - 10 days - `10d`
 - 4 weeks - `4w`
 
-> **Note** that there is no suffix for specifying months due to months not
-> containing a fixed amount of days.
+> **Note:** There is no suffix for specifying months because a month does not contain a fixed number of days.
 
-The second representation of intervals is by function names. The functions can
-achieve two main goals, that fixed intervals cannot:
-- The function can create not-fixed interval ranges like months - months have 
-  between 28 and 31 days.
-- The function can change the alignment. If the requirement is not just 7 days,
-  but also the time intervals to start on Monday or Sunday.
+The second type of interval representation is through function names. Functions can achieve two main objectives that fixed intervals cannot:
+
+- Functions can create non-fixed interval ranges, such as months, which can have between 28 and 31 days.
+- Functions can change the alignment. For example, if the requirement is not just 7 days, but also for the time intervals to start on Monday or Sunday.
 
 The following functions are supported:
+
 - toStartOfHour
 - toStartOfDay
 - toMonday
@@ -212,20 +195,15 @@ The following functions are supported:
 - toStartOfQuarter
 - toStartOfYear
 
-An interval is used when fetching timeseries data. If the raw data is available
-at 5 minute intervals but you want to fetch it daily, `interval: "1d"` should be
-provided as parameter. In this case the default aggregation will be applied on
-all 288 5-minute data points in a day to compute the value for the whole
-day. This aggregation varies based on the metric - in some cases taking the
-average or the last value is required (price), in other cases taking the sum of
-all values (transaction volume), etc.
+Intervals are used when fetching timeseries data. If the raw data is available at 5-minute intervals but you want to fetch it daily, you should provide `interval: "1d"` as a parameter. In this case, the default aggregation will be applied to all 288 5-minute data points in a day to compute the value for the entire day. The type of aggregation varies based on the metric. In some cases, taking the average or the last value is required (price), while in other cases, taking the sum of all values is necessary (transaction volume), and so on.
 
 ## ISO8601
 
-The date time format used in the API. The format is
-`<year>-<month>-<day>T<hour>:<minute>:<second>Z`. For example Jan 10th 2019
-12:34:56 is `2019-01-10T12:34:56Z`
+The API uses the ISO8601 format for date and time. The format is structured as follows: `<year>-<month>-<day>T<hour>:<minute>:<second>Z`. 
 
-## API key
+For instance, January 10th, 2019 at 12:34:56 would be represented as `2019-01-10T12:34:56Z`.
 
-Your API for accessing the premium features in the API. See the [API Authentication](/sanapi/accessing-the-api/#authentication) section for more details.
+## API Key
+
+Your API key is essential for accessing the premium features provided by our API. For more detailed information, please refer to the [API Authentication](/sanapi/accessing-the-api/#authentication) section. 
+
