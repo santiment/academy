@@ -2,9 +2,7 @@
 title: Accessing the API
 author: Santiment Team
 date: 2023-06-01
-
 ---
-
 
 - [Overview](#overview)
 - [Access the API](#access-the-api)
@@ -17,39 +15,29 @@ date: 2023-06-01
 
 ## Overview
 
-Santiment API uses [GraphQL](https://graphql.org). The benefits of GraphQL over REST that made
-Santiment choose it are:
+Santiment API utilizes [GraphQL](https://graphql.org). The reasons for choosing GraphQL over REST include:
 
-- You can request exactly the data you need and easily batch requests together.
-  This is effectively handling the issues with underfetching and overfetching
-  data. Why fetching all 20+ fields of a project when you only need its name?
-- The request describes the format of the response. You no longer need to wonder
-  what data the result contains and how to parse it.
-- Easy out-of-the-box way to explore our API via our Live Explorer.
+- It allows for precise data requests and easy batching of requests. This effectively addresses the problems of underfetching and overfetching data. For instance, why fetch all 20+ fields of a project when only its name is required?
+
+- The request outlines the format of the response. This eliminates the need to guess what data the result contains and how to parse it.
+
+- It provides an easy, ready-to-use method to explore our API via our Live Explorer.
 
 ## Access the API
 
-> Some of the metrics are not available for free or are restricted - historical
-> and realtime data is cut off. In order to explore them use slug `santiment` as
-> it has full access without any restrictions.
+Please note that some metrics may not be freely available or may have restrictions, such as limited historical and real-time data. To explore these metrics without restrictions, use the slug `santiment`.
 
-There are different ways to fetch data from Santiment's API:
+There are several methods to retrieve data from Santiment's API:
 
 ### Live API Explorer
 
-There is a live explorer, where you can run queries directly from the browser.
-The explorer is accessible here:
-[https://api.santiment.net/graphiql](https://api.santiment.net/graphiql)
+The Live API Explorer allows you to run queries directly from your browser. You can access the explorer at the following link: [https://api.santiment.net/graphiql](https://api.santiment.net/graphiql).
 
-Here is an example of running a query and seeing the results directly in the
-browser:
+Here's an example of how to run a query and view the results directly in your browser:
 
-[GraphQL Request fetching transaction
-volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)
+[GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)
 
-A version of the GraphiQL that is useful to API users is  https://api.santiment.net/graphiql_advanced 
-It allows adding HTTP headers, which can be used to add an API key, so the requests are authenticated.
-To achieve this, add a header `Authorization: Apikey <YOUR_OWN_API_KEY>`
+We also offer an advanced version of the GraphiQL that is particularly useful for API users: [https://api.santiment.net/graphiql_advanced](https://api.santiment.net/graphiql_advanced). This version allows you to add HTTP headers, which can be used to include an API key and authenticate your requests. To do this, simply add the following header: `Authorization: Apikey <YOUR_OWN_API_KEY>`.
 
 ### curl
 
@@ -71,8 +59,7 @@ The following GraphQL request will be passed as the body of the request:
 }
 ```
 
-Use the curl tool to get development activity of Ethereum. Copy and paste this
-curl request to your console:
+You can use the curl tool to retrieve the development activity of Ethereum. Copy and paste the following curl request into your console:
 
 ```bash
 curl \
@@ -82,14 +69,13 @@ curl \
 { getMetric(metric: "dev_activity"){ timeseriesData( slug: "ethereum" from: "2020-02-10T07:00:00Z" to: "2020-03-10T07:00:00Z" interval: "1w"){ datetime value } } }' https://api.santiment.net/graphql
 ```
 
-A similar response is returned:
+The response should look similar to this:
 
 ```bash
 {"data":{"getMetric":{"timeseriesData":[{"datetime":"2020-02-13T00:00:00Z","value":1281.0},{"datetime":"2020-02-20T00:00:00Z","value":1115.0},{"datetime":"2020-02-27T00:00:00Z","value":952.0},{"datetime":"2020-03-05T00:00:00Z","value":605.0}]}}}
 ```
 
-If you have the `jq` tool installed it could help visuallize this response even
-better:
+If you have the `jq` tool installed, you can use it to visualize the response more effectively:
 
 ```bash
 curl \
@@ -100,7 +86,7 @@ curl \
 | jq .data.getMetric.timeseriesData
 ```
 
-shows:
+The output should look like this:
 
 ```json
 [
@@ -125,19 +111,15 @@ shows:
 
 ### Santiment-provided Python library
 
-There is a Python wrapper for the graphql API.
+Santiment offers a Python wrapper for the GraphQL API, known as `sanpy`. You can find the documentation and installation instructions for this library [here](https://github.com/santiment/sanpy). 
 
-The library is called `sanpy` and documentation and instructions how to install
-can be found [here](https://github.com/santiment/sanpy)
-
-It can be installed via `pip`
+You can install `sanpy` using `pip` with the following command:
 
 ```bash
 pip install sanpy
 ```
 
-The same ethereum development activity data with this library can be fetched
-like this:
+To fetch Ethereum development activity data using this library, use the following code:
 
 ```python
 san.get(
@@ -148,7 +130,7 @@ san.get(
 )
 ```
 
-The result is a pandas dataframe:
+The result will be a pandas dataframe, as shown below:
 
 ```python
 datetime                    activity
@@ -162,26 +144,21 @@ datetime                    activity
 
 ### Programming language of your choice
 
-In the [san-sdk](https://github.com/santiment/san-sdk) repository there are
-examples how to query the API with:
+In the [san-sdk](https://github.com/santiment/san-sdk) repository, you can find examples of how to query the API using various programming languages. Here are some examples:
 
 - [R](https://github.com/santiment/san-sdk/tree/master/R-graphql)
 - [Ruby](https://github.com/santiment/san-sdk/blob/master/ruby-graphql/example.rb)
 - [Elixir](https://github.com/santiment/san-sdk/blob/master/elixir-graphql/san_graphql_ex/lib/san_graphql_ex.ex)
-- [Javascript #1](https://jsfiddle.net/Zatcepin/ngzc2rps/)
-  - Plot Daily Active Addresses with Highchart
-- [Javascript #2](https://jsfiddle.net/Zatcepin/1nLgc3m2/)
-  - Compute combined ETH balance of all projects
+- [Javascript Example #1](https://jsfiddle.net/Zatcepin/ngzc2rps/): This example shows how to plot Daily Active Addresses with Highchart.
+- [Javascript Example #2](https://jsfiddle.net/Zatcepin/1nLgc3m2/): This example demonstrates how to compute the combined ETH balance of all projects.
 
 ## Authentication
 
-Some of the APIs require a valid API key, belonging to an account with a paid
-subscription to access more data. The API key can be generated on your [Account
-Settings](https://app.santiment.net/account#api-keys) page.
+Certain APIs necessitate a valid API key, which must be linked to an account with a paid subscription to access additional data. You can generate your API key on your [Account Settings](https://app.santiment.net/account#api-keys) page.
 
-After that you need to pass the API key as an additional HTTP header
-`Authorization: Apikey <YOUR_OWN_API_KEY>`. An example how to do that using
-curl:
+After generating your API key, you need to include it as an additional HTTP header in the format `Authorization: Apikey <YOUR_OWN_API_KEY>`. 
+
+Here is an example of how to do this using curl:
 
 ```bash
 curl \
@@ -194,11 +171,9 @@ curl \
 
 ## Errors
 
-In case something is not correct with the request, the API will return an error.
-The API requests should always return status code 200, even if there was an
-error processing the request. An error response is going to include a
-description of the error that occured. For example here is what will happen if
-the query passed to the API is not valid:
+If there's an issue with your request, the API will return an error. Regardless of the error, the API should always return a status code of 200. The error response will include a description of the problem that occurred. 
+
+For instance, if an invalid query is passed to the API, the following will occur:
 
 ```bash
 $ curl \
@@ -216,8 +191,7 @@ $ curl \
 }
 ```
 
-If your query is missing some argument, that should be described in the error
-response:
+If your query is missing an argument, the error response will describe this:
 
 ```bash
 $ curl \
@@ -241,10 +215,8 @@ $ curl \
 }
 ```
 
-If the query does not return status code `200`, then something else is
-happening. Here are some of the options:
+If the query does not return a status code of `200`, it indicates a different issue. Here are some possibilities:
 
-- `429` - you are being rate limited. Reduce the amount of requests you are
-  doing
-- `5xx` - an internal server error has occured. Let us know in the support
-  channel in our [discord server](https://santiment.net/discord)
+- `429` - You're being rate-limited. Reduce the number of requests you're making.
+- `5xx` - An internal server error has occurred. Please let us know in the support channel on our [Discord server](https://santiment.net/discord).
+

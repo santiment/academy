@@ -2,33 +2,30 @@
 title: API Reference
 author: Santiment Team
 date: 2020-04-06
-description: This page contains a reference of all the APIs provided by Santiment.
+description: This page serves as a comprehensive guide to all the APIs provided by Santiment.
 ---
 
-
 - [Overview](#overview)
-- [How to access the API](#how-to-access-the-api)
+- [How to Access the API](#how-to-access-the-api)
 - [Metrics](#metrics)
-- [Supported blockchains](#supported-blockchains)
+- [Supported Blockchains](#supported-blockchains)
 - [Rate Limits](#rate-limits)
 - [Complexity](#complexity)
 - [Glossary](#glossary)
 
 ## Overview
 
-Santiment API uses [GraphQL](https://graphql.org). From the beginning it was
-decided to use GraphQL instead of REST for a number of reasons:
+Santiment API utilizes [GraphQL](https://graphql.org). The decision to use GraphQL over REST was made due to several reasons:
 
-- You can request exactly the data you need and easily batch requests together.
-  This is effectively handling the issues with underfetching and overfetching
-  data. Why fetching all 20+ fields of a project when you only need its name?
-- The request describes the format of the response. You no longer need to wonder
-  what data the result contains and how to parse it.
-- Easy out-of-the-box way to explore our API via our Live Explorer.
+- It allows you to request precisely the data you need and conveniently batch requests together. This effectively addresses the issues of underfetching and overfetching data. For instance, why fetch all 20+ fields of a project when you only need its name?
+
+- The request describes the format of the response. This eliminates the need to guess what data the result contains and how to parse it.
+
+- It provides an easy, out-of-the-box method to explore our API via our Live Explorer.
 
 **Example**
 
-Below is shown an example of a GraphQL query used to fetch timeseries price data. The parameters control the time range, the interval between data points and how all the values inside an interval are aggregated.
+The example below demonstrates a GraphQL query used to fetch timeseries price data. The parameters control the time range, the interval between data points, and how all the values within an interval are aggregated.
 
 ```graphql
 {
@@ -50,24 +47,25 @@ Below is shown an example of a GraphQL query used to fetch timeseries price data
 
 ## How to access the API
 
-Information how to access the API can be found [here](/sanapi/accessing-the-api).
+Instructions on how to access the API can be found [here](/sanapi/accessing-the-api).
 
 ## Metrics
 
-Information how to explore and fetch the available metrics can be found [here](/sanapi/fetching-metrics).
+You can find information on how to explore and fetch the available metrics [here](/sanapi/fetching-metrics).
 
-## Supported blockchains
+## Supported Blockchains
 
-Information about the supported blockchains can be found on [this page](/sanapi/supported-blockchains) .
+You can find information about the blockchains we support on our [Supported Blockchains page](/sanapi/supported-blockchains).
 
 ## Rate Limits
 
-The [rate limits page](/sanapi/rate-limits) describes how are the API calls counted and the rate limits applied.
+The [Rate Limits Page](/sanapi/rate-limits) provides detailed information on how API calls are counted and how rate limits are applied. 
 
 ## Complexity
 
-Each API query can fetch only a limited amount of data points. The [complexity page](/sanapi/complexity) describe how complexity analysis decides whether a given query will be executed or will be rejected.
+Each API query has a limit to the amount of data points it can fetch. The [Complexity Page](/sanapi/complexity) provides a detailed explanation on how complexity analysis determines whether a given query will be executed or rejected. 
 
 ## Glossary
 
-The meaning of some of the terms used on this page can be found in the dedicated [glossary page](/glossary).
+You can find the definitions of some terms used on this page in our dedicated [glossary page](/glossary).
+
