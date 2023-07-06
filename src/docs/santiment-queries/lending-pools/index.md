@@ -46,7 +46,7 @@ Below, we have listed the table containing the lending pools data with its colum
 - **token_out** (*Nullable(String)*): Address of token leaving the pool (in case of borrow/withdraw/liquidate actions)
 - **amount_in** (*UInt256*): The amount of the token received by the pool. 0 in case of borrow/withdraw
 - **amount_out** (*UInt256*): The amount of the token leaving the pool. 0 in case of deposit/repay
-- **project_name** (*String*): Name of the project, such as aave_v2, compound, maker, etc.
+- **project_name** (*String*): Name of the project, such as aave_v2, aave_v3, compound, liquity and makerdao.
 - **user** (*String*): Address performing the action
 - **computed_at** (*DateTime*): The timestamp when the event was inserted into the table.
 
