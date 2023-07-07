@@ -7,7 +7,7 @@ description: Smart contract label
 
 ## Description
 
-The label denotes any address which is a smart contract.
+The label `contract` denotes any address which is a smart contract.
 
 ## API Name
 

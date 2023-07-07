@@ -6,13 +6,15 @@ description: MakerDAO Metrics
 ---
 
 ## Description
+
 Metrics related to MakerDAO protocols.
 
-Single-Collateral DAI:
+**Single-Collateral DAI**:
+
 * `scd_locked_token` - The volume of WETH locked in Single-Collateral DAI contract.
 * `scd_collat_ratio` - Single-Collateral DAI Collateralization Ratio
 
-Multi-Collateral DAI:
+**Multi-Collateral DAI**:
 
 * `mcd_locked_token` - The volume of collateral locked in Multi-Collateral DAI contracts, measured by a token.
 * `mcd_erc20_supply` - DAI ERC20 token total supply
@@ -24,9 +26,17 @@ Multi-Collateral DAI:
 * `dai_repaid` - Amount of DAI destroyed in a given time interval, segmented by the underlying collateral
 
 ### Collateralization Ratio Calculation
+
+- `V_MCD` - the volume of collateral locked in MCD
+- `P_USD` - collateral price in USD
+- `Q_DAI` - the volume of DAI created by vault with this collateral
+- `MCD_CR` - MCD Collateralization Ratio
+
 MCD Collateralization Ratio is calculated by the formula:
 
- <img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{The\%20volume\%20of\%20collateral\%20locked\%20in\%20MCD*Collateral\%20USD\%20price}{The\%20volume\%20of\%20DAI\%20created\%20by\%20vault\%20with\%20this\%20collateral}" />
+$$
+MCD\_CR = \frac{V\_MCD * P\_USD}{Q\_DAI}
+$$
 
 ---
 
@@ -38,8 +48,16 @@ MCD Collateralization Ratio is calculated by the formula:
 
 ## Measuring Unit
 
-* `mcd_locked_token`, `scd_locked_token`, `mcd_erc20_supply`, `mcd_supply`, `dai_created`, `dai_repaid` - Amount of coins
-* Other - MakerDAO contract parameter values
+The following metrics' unit is amount of coins:
+- `mcd_locked_token`
+- `scd_locked_token`
+- `mcd_erc20_supply`
+- `mcd_supply`
+- `dai_created`
+- `dai_repaid` 
+
+The rest:
+- MakerDAO contract parameter values
 ---
 
 ## Data Type
@@ -50,8 +68,12 @@ MCD Collateralization Ratio is calculated by the formula:
 
 ## Frequency
 
-* `mcd_supply`, `dai_created`, `dai_repaid` - [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
-* Other - [Daily Intervals](/metrics/details/frequency#daily-frequency)
+The following metrics have [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
+- `mcd_supply`
+- `dai_created`
+-  `dai_repaid` - [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
+ 
+The rest of the metrics have [Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 

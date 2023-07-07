@@ -23,7 +23,10 @@ Given there are 100 tokens in existence:
 - 50 of them have age 10 days
 - 50 of them have age 20 days
 
-then the average coin age is: (10 × 50 + 20 × 50) / 100 = 15 (coin-days)
+then the average coin age is:
+$$
+\frac{10 × 50 + 20 × 50}{100} = 15\;\text{(coin-days)}
+$$
 
 ### Example (Mean Dollar Invested Age)
 
@@ -32,8 +35,10 @@ Given there 100 tokens in existence:
 - 50 of them have age 10 days and the token's price was \$1 at that time
 - 50 of them have age 20 days and the token's price was \$2 at that time
 
-then the mean dollar invested age is: (10 × 50 + 20 × 50) / (50 × $1 + 50 × $2)
-= 1500 / 150 = 10 (coin-dollar days)
+then the mean dollar invested age is: 
+$$
+\frac{10 × 50 + 20 × 50}{50 × \$1 + 50 × \$2} = \frac{1500}{150} = 10\;\text{(coin-dollar days)}
+$$
 
 > More technical definition and computation description can be found
 > [here](/metrics/mean-coin-age/mean-coin-age-technical)

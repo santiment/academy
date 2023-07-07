@@ -18,7 +18,7 @@ const SUGGESTIONS = [
   },
   {
     label: 'MVRV',
-    link: '/metrics/mvrv-ratio/',
+    link: '/metrics/mvrv/',
   },
   {
     label: 'Metrics',

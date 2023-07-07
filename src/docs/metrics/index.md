@@ -12,18 +12,17 @@ time, to more easily spot how trends and events correlate with price action.
 ## Financial
 
 Traditional fundamentals including price, volume and market cap, mean coin age
-
+- [Price in USD, BTC and USDT](/metrics/price)
+- [Marketcap in USD](/metrics/marketcap)
+- [Trading Volume in USD](/metrics/trading-volume)
 - [DEX Trades](/metrics/dex)
 - [Ethereum Spent](/metrics/ethereum-spent)
-- [Marketcap in USD](/metrics/price/#marketcap-usd)
 - [Mean Coin Age](/metrics/mean-coin-age)
 - [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
 - [NFT Collection Price](/metrics/nft-collection-price)
 - [NFT Market Volume](/metrics/nft-market-volume)
 - [NFT Network Profit Loss](/metrics/nft-network-profit-loss)
 - [OHLC (Open-High-Low-Close)](/metrics/price/#ohlc)
-- [Price in BTC](/metrics/price/#price-btc)
-- [Price in USD](/metrics/price/#price-usd)
 - [Price Volatility](/metrics/price-volatility)
 - [Transacted Coin Acquisition Cost](/metrics/transacted-coin-acquisition-cost)
 - [Trading Volume in USD](/metrics/price/#volume-usd)
@@ -72,11 +71,9 @@ activity.
 
 ## Other On-Chain
 
-- [Aave v2](/metrics/aave-v2)
 - [Age Consumed](/metrics/age-consumed)
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
 - [Circulation](/metrics/circulation)
-- [Compound](/metrics/compound)
 - [DeFi](/metrics/defi)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [ETH 2.0](/metrics/eth-2)
@@ -84,6 +81,7 @@ activity.
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
 - [Labeled Flow](/metrics/labeled-flow)
+- [Lending and Borrowing Protocols](/metrics/lending-and-borrowing-protocols)
 - [MakerDAO](/metrics/makerdao)
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
 - [Stock To Flow ratio](/metrics/stock-to-flow)

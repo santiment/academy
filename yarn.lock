@@ -1834,11 +1834,6 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
-"@types/gtag.js@0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@types/gtag.js/-/gtag.js-0.0.4.tgz#81427d703b5a889b4fd1c37eaae6f2a6db228e5a"
-  integrity sha512-rn4yaEfryXklAtsiai4xHNUgLjGD8AEPQBNSCTa5QrvccFYYBWJQRGwaHiv2U/wdIzcjOuyyBC23YgdQfq5u/Q==
-
 "@types/hast@^2.0.0":
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/@types/hast/-/hast-2.3.4.tgz#8aa5ef92c117d20d974a82bdfb6a648b08c0bafc"
@@ -1905,22 +1900,12 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.186.tgz#862e5514dd7bd66ada6c70ee5fce844b06c8ee97"
   integrity sha512-eHcVlLXP0c2FlMPm56ITode2AgLMSa6aJ05JTTbYbI+7EMkCEE5qk2E41d5g2lCVTqRe0GnnRFurmlCsDODrPw==
 
-"@types/marked@^4.0.2":
-  version "4.0.7"
-  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-4.0.7.tgz#400a76809fd08c2bbd9e25f3be06ea38c8e0a1d3"
-  integrity sha512-eEAhnz21CwvKVW+YvRvcTuFKNU9CV1qH+opcgVK3pIMI6YZzDm6gc8o2vHjldFk6MGKt5pueSB7IOpvpx5Qekw==
-
 "@types/mdast@^3.0.0", "@types/mdast@^3.0.3":
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/@types/mdast/-/mdast-3.0.10.tgz#4724244a82a4598884cbbe9bcfd73dff927ee8af"
   integrity sha512-W864tg/Osz1+9f4lrGTZpCSO5/z4608eUp19tbozkq2HJK6i3z1kT0H9tlADXuYIb1YYOBByU4Jsqkk75q48qA==
   dependencies:
     "@types/unist" "*"
-
-"@types/medium-editor@^5.0.5":
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/@types/medium-editor/-/medium-editor-5.0.5.tgz#5a982bb7288505f26e0290561d47b15e592c0989"
-  integrity sha512-iufODxGqPu78eZxOolGtc790n00LIZOeTVvdhX4ka+owG+/bdUnqcI59fTuW/JJavkIpYqCAFj7WKnJxJhQS6w==
 
 "@types/minimatch@*":
   version "5.1.2"
@@ -1961,11 +1946,6 @@
   version "14.18.32"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.32.tgz#8074f7106731f1a12ba993fe8bad86ee73905014"
   integrity sha512-Y6S38pFr04yb13qqHf8uk1nHE3lXgQ30WZbv1mLliV9pt0NjvqdWttLcrOYLnXbOafknVYRHZGoMSpR9UwfYow==
-
-"@types/node@^15.0.2":
-  version "15.14.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.14.9.tgz#bc43c990c3c9be7281868bbc7b8fdd6e2b57adfa"
-  integrity sha512-qjd88DrCxupx/kJD5yQgZdcYKZKSIGBVDIBE1/LTGcNm3d2Np/jxojkdePDdfnBHJc5W7vSMpbJ1aB7p/Py69A==
 
 "@types/node@^8.5.7":
   version "8.10.66"
@@ -2008,15 +1988,6 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^16.x.x":
-  version "16.14.32"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.32.tgz#d4e4fe5ece3c27fcb4608b1f4a614f7dec881392"
-  integrity sha512-hvEy4vGVADbtj/U6+CA5SRC5QFIjdxD7JslAie8EuAYZwhYY9bgforpXNyF1VFzhnkEOesDy1278t1wdjN74cw==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/scheduler" "*"
-    csstype "^3.0.2"
-
 "@types/responselike@*", "@types/responselike@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/responselike/-/responselike-1.0.0.tgz#251f4fe7d154d2bad125abe1b429b23afd262e29"
@@ -2049,20 +2020,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
   integrity sha512-l42BggppR6zLmpfU6fq9HEa2oGPEI8yrSPL3GITjfRInppYFahObbIQOQK3UGxEnyQpltZLaPe75046NOZQikw==
 
-"@types/stripe-v3@^3.1.26":
-  version "3.1.27"
-  resolved "https://registry.yarnpkg.com/@types/stripe-v3/-/stripe-v3-3.1.27.tgz#f0cc9af7edc67d90665224f726d6dead90465dc8"
-  integrity sha512-lsOXNRfYyzz45HW4FXXKWsx/6d2BpwDSYcmwLZOS81XarHFQFTqiqVq1bsLMebKgEz7+qQ2LLAPhmn8StQbi8w==
-
 "@types/tmp@^0.0.33":
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
   integrity sha512-gVC1InwyVrO326wbBZw+AO3u2vRXz/iRWq9jYhpG4W8LXyIgDv3ZmcLQ5Q4Gs+gFMyqx+viFoFT+l3p61QFCmQ==
-
-"@types/turndown@^5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@types/turndown/-/turndown-5.0.1.tgz#fcda7b02cda4c9d445be1440036df20f335b9387"
-  integrity sha512-N8Ad4e3oJxh9n9BiZx9cbe/0M3kqDpOTm2wzj13wdDUxDPjfjloWIJaquZzWE1cYTAHpjOH3rcTnXQdpEfS/SQ==
 
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2", "@types/unist@^2.0.3":
   version "2.0.6"
@@ -14193,17 +14154,10 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-"san-webkit@https://github.com/santiment/san-webkit#80babf8":
+"san-webkit@https://github.com/santiment/san-webkit#f459c21":
   version "0.0.1"
-  resolved "https://github.com/santiment/san-webkit#80babf8247542a7fbc64fbc7c78be9237d4ef55c"
+  resolved "https://github.com/santiment/san-webkit#f459c2128fbd6541ba3845af2b7752d0c8a987c0"
   dependencies:
-    "@types/gtag.js" "0.0.4"
-    "@types/marked" "^4.0.2"
-    "@types/medium-editor" "^5.0.5"
-    "@types/node" "^15.0.2"
-    "@types/react" "^16.x.x"
-    "@types/stripe-v3" "^3.1.26"
-    "@types/turndown" "^5.0.1"
     fast-glob "^3.2.5"
     patch-package "^6.4.7"
 

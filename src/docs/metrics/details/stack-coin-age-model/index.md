@@ -1,17 +1,20 @@
 ---
-title: Stack Coin Age Model
+title: Stack Coin Age model
 author: Santiment Team
 date: 2020-04-02
+description: Introducing the Stack Coin Age model. Extending metrics to Accound-based blockchains.
 ---
 
-## Overview
 
+- [Overview](#overview)
 - [Introduction](#introduction)
 - [Bitcoin UTXOs and coin age](#bitcoin-utxos-and-coin-age)
 - [Account-based blockchains](#account-based-blockchains)
 - [The stack coin age model](#the-stack-coin-age-model)
-- [Acknowledgements](#acknowledgements)
+- [Acknowledgments](#acknowledgments)
 - [References](#references)
+
+## Overview
 
 ## Introduction
 
@@ -20,9 +23,12 @@ research. There have been several metrics developed for Bitcoin that exploit the
 availability of onchain data and show us a picture of the Bitcoin economy which
 is impossible to get in the fiat world.
 
-These include _Bitcoin-days destroyed_ [@BDD], _age distribution_ (aka
-_HODL-waves_) [@BAD1], [@BAD2], and _realized capitalization_ [@RC1], [@RC2].
-Those metrics are Bitcoin specific, because they rely on the UTXO model and its
+These include:
+- Bitcoin-days destroyed;
+- Аge distribution (also known as HODL waves);
+- Realized capitalization.
+
+Those metrics are Bitcoin-specific, because they rely on the UTXO model and its
 natural way of defining the _age_ of a given coin.
 
 At Santiment we have managed to **extend these metrics to account-based
@@ -56,7 +62,7 @@ If you are not interested in nerd talk and just want to give our metrics a spin,
 feel free to [stake some
 SAN](/intercom-articles/getting-started/san-tokens-and-metamask/how-to-stake-san)
 tokens and jump right into our [dashboards](https://data.santiment.net).
-Otherwise -- read on.
+Otherwise $-$ read on.
 
 ## Bitcoin UTXOs and coin age
 
@@ -72,7 +78,7 @@ between the amounts is sent to the miner that creates the block.
 
 In a way, the UTXO model resembles paper money. You can think of your Bitcoin
 address as a wallet and of the unspent outputs as the coins and notes in the
-wallet. There is one small difference -- normal coins do not get destroyed in
+wallet. There is one small difference $-$ normal coins do not get destroyed in
 transactions.
 
 But imagine the following fantastical scenario. You have a \$5 note in your
@@ -137,10 +143,10 @@ your debit card.
 
 Let's say that your bank account has \$100, and the baker's bank account has
 $200. You give your debit card to the cashier, they swipe it and give it back.
-When the card gets swiped your account balance changes to \$98.90 and the baker's
+As the card gets swiped, your account balance changes to \$98.90 and the baker's 
 account balance changes to \$201. Again, 10 cents are paid as a transaction fee.
 
-Here's the question -- what is the age of the money currently sitting in your
+Here's the question $-$ what is the age of the money currently sitting in your
 bank account? Let's say that you received one transfer of \$50 on December 1st
 and another transfer of \$50 on January 1st. When you spent one dollar for bread
 (again on February 1st) which dollar did you spend? Did you take one of the
@@ -156,12 +162,11 @@ Let's think again about the Bitcoin coin age. We showed how we associate age to
 coins using unspent outputs and how we use that data to define various metrics.
 It turns out that those metrics can give us valuable information about the
 overall Bitcoin economy. But the coin age model that we used to derive those
-metrics has no intrinsic economic meaning! If you have several notes in your
-wallet, which one you choose to pay for bread doesn't really matter when we want
-to study the fiat economy.
+metrics has no intrinsic economic meaning! When studying the fiat economy, it doesn't
+really matter which note we choose to pay for bread, if we have several notes in our wallet.
 
-Similarly, when you make a Bitcoin transaction you -- or rather your Bitcoin
-wallet software -- choose which unspent outputs to use to make that transaction.
+Similarly, when you make a Bitcoin transaction you $-$ or rather your Bitcoin
+wallet software $-$ choose which unspent outputs to use to make that transaction.
 Your choice affects the coin ages, yes, but from an economic point of view --
 your choice is entirely irrelevant.
 
@@ -174,7 +179,7 @@ models will expose the same information about the assets' economy._
 ## The stack coin age model
 
 So let's invent a better model. Let's go back to the buying bread example and
-decide to abide by the following rule -- when I pay in cash I always **choose
+decide to abide by the following rule $-$ when I pay in cash I always **choose
 the most recent coins** and notes that I have in my wallet to pay the cashier.
 
 I can easily follow this rule with notes and coins, but I can also pretend to
@@ -185,15 +190,14 @@ and another \$50 on January 1st, I will pretend that when I buy bread on Februar
 This allows me to assign ages again. Before I bought the bread, I had \$50 whose
 age was 2 months and \$50 whose age was 1 month. In my transaction I spent \$1.1
 (one dollar to the cashier and a 10p fee) whose age was one month (which
-destroyed \$31\*1.1=34.1$ dollar-days). After that I am left with \$50 with an age
+destroyed \$31*1.1=34.1 dollar-days). After that I am left with \$50 with an age
 of 2 months and \$48.9 with an age of 1 month.
 
-When we make this choice we imagine that our account is like a _stack_ -- when
-money comes in, it is put on the top and when it goes out, it is taken from the
-top.
+By making this choice, we imagine that our account is like a _stack_ $-$ when money
+comes in, it is put on the top, and when it goes out, it is taken from the top.
 
 ![Stack coin age model](stack-coin-age-model.png) The stack model can be applied
-to all blockchains -- both UTXO and account-based. And unlike the canonical coin
+to all blockchains $-$ both UTXO and account-based. And unlike the canonical coin
 age model for UTXO-based blockchains, it actually has some economic meaning.
 
 In economics, money supply is split into different types: M0, M1, M2, M3 and M4,
@@ -211,17 +215,17 @@ and less liquid segments. The stack coin age model allows us to do just that.
 Let's see how our model compares to Bitcoin's canonical model. One simple way to
 compare the two is to compute a metric using both models and contrast the
 resulting values. Here is the comparison between our own stack-based realized
-cap and the original metric [@CMD]:
+cap and the original metric:
 
 ![utxo vs. stack-based realized cap](utxo-vs-stacks.svg)
 
 You can see that the values of the two metrics are almost the same.
 
-The reason for this uncanny similarity is actually quite simple -- most Bitcoin
+The reason for this uncanny similarity is actually quite simple $-$ most Bitcoin
 addresses are used only for a single output. More precisely at the time of
 writing there are around 473 million different addresses in the Bitcoin
 blockchain, and of those about 411 million (or about _87%_) are used for only
-two transactions -- one incoming and one outgoing. For these addresses any two
+two transactions $-$ one incoming and one outgoing. For these addresses any two
 reasonable coin age models would produce the same ages.
 
 There are however some areas of the chart where the stack-based realized cap is
