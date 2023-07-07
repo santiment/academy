@@ -1,66 +1,66 @@
 ---
-title: Sanbase Alerts Use Cases
+title: Sanbase Alerts Use Cases: Whale Alert
 author: Daria Karpova
 date: 2022-04-04
 ---
-Whale activity is one of the most intriguing metrics. Keeping a close eye on what the major players in the market are doing (depending on the asset could be addresses worth $1mn+) can be used for guiding your own crypto strategy.
 
-Most traders, predictably, are wary of making wrong decisions when the markets enter turbulent times. The risk of buying or selling at the wrong moment is too high: will the prices drop? Will they climb back up?
+Whale activity is a fascinating metric in the world of cryptocurrency. By closely monitoring the actions of major market players (which, depending on the asset, could be addresses worth $1mn or more), you can gain insights to guide your own crypto strategy.
 
-Sometimes the opposite could be the case: the market seems quiet but then a whale comes in and things start shifting quickly.
+Many traders, understandably, are cautious about making decisions during volatile market periods. The risk of buying or selling at an inopportune time is significant: will the prices fall? Will they rebound?
 
-Let’s take an example.
+At times, the market may appear calm, only for a whale to make a move and rapidly shift the landscape.
 
-In February-March 2021 we could see how at some point whale activity (pink+orange) for YFI was indicative of the price tops (green), always followed by significant drops. Starting from April the opposite seems to be the case - whale activity and price diverged.
+Consider the following example.
+
+Between February and March 2021, we observed that whale activity (represented in pink and orange) for YFI often signaled price peaks (shown in green), which were invariably followed by substantial drops. However, starting from April, whale activity and price began to diverge.
 
 ![whale-chart](image1.png)
 
-What happens next?
+So, what happened next?
 
-In May 2021, YFI’s price still seemed to be on the rise. Whale activity looked stable.
-
-Suddenly, on May 8, we see a sharp transaction growth which coincided with the price peak again and was followed by a spectacular price fall.
+In May 2021, YFI's price seemed to be steadily increasing, while whale activity remained stable. Then, on May 8, we noticed a sudden surge in transactions, which coincided with another price peak, followed by a dramatic price drop.
 
 ![whale-chart-2](image2.png)
 
-How to act on it is up to you. But knowledge is power, and timely knowledge is triple power.
+How you choose to act on this information is entirely up to you. However, remember that knowledge is power, and timely knowledge is even more powerful.
 
-## Setting up a Whale Transaction Alert
+## Setting Up a Whale Transaction Alert
 
-Let’s see how you can do this yourself. We suggest that you start with the most basic social trends alert first. It will only trigger if your keyword starts ranking in the TOP 10 social trending terms.
+In this guide, we will walk you through the process of setting up a Whale Transaction Alert. We recommend starting with the most basic social trends alert. This alert will only be triggered if your specified keyword begins to rank among the top 10 trending social terms. 
 
-## Step 1
+## Step 1: Navigate to Alerts and Choose an Asset to Monitor
 
-Go to Alerts and select an asset you want to track (alternatively, use your already existing watchlist)
+You can either select an asset you wish to monitor or use an asset from your existing watchlist. 
 
 ![alert-select-asset](image3.png)
 
-## Step 2
+## Step 2: Selecting Metrics
 
-Go to the metrics and select preferred Whale Transactions from the On-Chain set of metrics
+Navigate to the metrics section and choose your preferred 'Whale Transactions' from the On-Chain metrics set.
 
 ![alert-select-metrics-1](image4.png)
 
 ![alert-select-metrics-2](image5.png)
 
-Study the chart carefully. In the example the alert would have fired 79 times in 3 months. This looks like noise.
+Examine the chart thoroughly. In this example, the alert would have been triggered 79 times over a three-month period, which could be considered excessive. 
 
-## Step 3
+## Step 3: Fine-Tune Your Conditions
 
-Adjust the conditions until you are satisfied with the potential number of alerts. For instance, switch to the % metric moving up or down compared to the previous 7 days. Below we have found a solution that brings the total number of alerts to 21 in 3 months.
+Adjust your conditions until you're satisfied with the potential number of alerts. For example, you might want to switch to the percentage metric that moves up or down compared to the previous 7 days. 
+
+In the example below, we've adjusted the conditions to yield a total of 21 alerts over a 3-month period. 
 
 ![alert-select-condition](image6.png)
 
-## Step 4
-
-Select preferred notification methods and frequency.
+## Step 4: Choose Your Preferred Notification Methods and Frequency
 
 ![alert-select-notifications](image7.png)
 
-## Step 5
+## Step 5: Confirm Alert Name and Create Alert
 
-Confirm you are happy with the Alert’s name. Hit Create Alert.
+Ensure you are satisfied with the name of your alert. Once confirmed, click on the 'Create Alert' button. 
 
 ![alert-select-condition](image8.png)
 
-You are done!
+Congratulations, you have successfully created an alert!
+

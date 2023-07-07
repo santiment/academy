@@ -4,29 +4,28 @@ author: Dino Ibisbegovic
 date: 2020-02-05
 ---
 
-Two of our metrics that are great at highlighting network activity trends are:
+Two key metrics that effectively highlight network activity trends are:
 
-1. **Daily Active Addresses (DAA)** - the total number of unique network addresses involved in daily transactions
-2. **Network Growth** - the number of new addresses created on the network each day
+1. **Daily Active Addresses (DAA)** - This represents the total number of unique network addresses involved in transactions each day.
+2. **Network Growth** - This refers to the number of new addresses created on the network daily.
 
-If these indicators spike during a pump - signalling a rise in speculative interest - but begin to decline shortly after, it can often signal an incoming correction.
+These indicators can be particularly useful in identifying market tops. If there is a spike in these metrics during a price increase - indicating a rise in speculative interest - but they begin to decline shortly after, this often signals an impending market correction.
 
-Take ENJ for example, which had a giant spike in active addresses at the beginning of December, coinciding with the price rally:
+Consider the case of ENJ, which experienced a significant spike in active addresses at the beginning of December, coinciding with a price rally:
 
 ![enj-active-addresses-and-network-growth](image1.png)
 
-As soon as the on-chain activity reverted back to its pre-pump levels, ENJ was unable to sustain the uptrend and began correcting.
+As soon as the on-chain activity returned to its pre-rally levels, ENJ was unable to maintain the upward trend and began a correction. 
 
-### On-chain Activity as Long-term Health Indicator
+### Using On-chain Activity as a Long-term Health Indicator
 
 ![maker-active-addresses-and-network-growth](image2.png)
 
-MKR’s Daily Active Address and Network Growth, all time
+Before entering any trade, it's crucial to conduct thorough due diligence. Both Daily Active Addresses (DAA) and Network Growth serve as excellent indicators of a project's adoption over time. Here are some questions you might consider:
 
-Before you enter any trade, proper due diligence is key. Both DAA and Network Growth are great proxies for project adoption over time:
+- Is the network consistently adding new addresses daily, or has the growth stagnated?
+- Does network activity persist even when the price is down?
+- How engaged is the community during significant governance events or on-chain voting sessions?
 
-- Does the network continue to add new addresses daily, or has the growth stopped?
-- Is there activity on the network even when the price is down?
-- How active is the community during major governance events, or on-chain voting sessions?
+By analyzing a project's long-term network activity, you can answer many vital questions about its health. While this analysis won't predict when to buy a specific token, it can certainly help determine if purchasing it is a wise decision in the first place.
 
-You can answer many important questions about a project’s health by analyzing its long-term network activity. While it won’t tell you when, it can very well tell you if buying a certain token is a good idea in the first place.
