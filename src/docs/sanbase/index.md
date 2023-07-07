@@ -2,18 +2,18 @@
 title: Sanbase
 author: Santiment Team
 date: 2021-05-27
-description: Platform for in-depth coin analysis, low-latency signals, asset watchlists
+description: A platform for comprehensive coin analysis, low-latency signals, and asset watchlists
 ---
 
-Platform for in-depth coin analysis, low-latency signals, asset watchlists
+Sanbase is a platform designed for in-depth coin analysis, low-latency signals, and asset watchlists. Here are some of the key features you can explore:
 
-- [Watchlists page](/sanbase/assets-page) shows a overview on your watchlists, screeners and common categories
-- [Insights](/sanbase/insights) allow create your own note-like posts, share them with the community or browse existing.
-- [Alerts](/sanbase/alerts-page)
-  Here you can create and manage your own alerts or subscribe to existing from other users
-- [Social Trends](/sanbase/emerging-trends-page) contain `Top 10` trending words in crypto and give you a quick overview of the top developing topics in crypto at the moment
-- [Social Tool](/sanbase/social-trends-search/) Monitor the interest in any topic on dedicated cryptocurrency social channels, including 1000+ Telegram groups, Discord servers, crypto subreddits, Twitter accounts and more.
-- [Keyboard shortcuts](/sanbase/keyboard-shortcuts/)
-- [Account settings](/sanbase/account-settings)
-- [Logging into Sanbase](/sanbase/logging-into-sanbase)
-- [Requesting display new project](/sanbase/requesting-display-new-project)
+- [Watchlists Page](/sanbase/assets-page): This page provides an overview of your watchlists, screeners, and common categories.
+- [Insights](/sanbase/insights): This feature allows you to create note-like posts, share them with the community, or browse existing posts.
+- [Alerts](/sanbase/alerts-page): Here, you can create and manage your own alerts or subscribe to existing alerts from other users.
+- [Social Trends](/sanbase/emerging-trends-page): This feature contains the `Top 10` trending words in crypto, providing a quick overview of the top developing topics in the crypto world at the moment.
+- [Social Tool](/sanbase/social-trends-search/): This tool allows you to monitor interest in any topic across dedicated cryptocurrency social channels, including over 1000 Telegram groups, Discord servers, crypto subreddits, Twitter accounts, and more.
+- [Keyboard Shortcuts](/sanbase/keyboard-shortcuts/): Learn the keyboard shortcuts to navigate Sanbase more efficiently.
+- [Account Settings](/sanbase/account-settings): Manage your account settings here.
+- [Logging into Sanbase](/sanbase/logging-into-sanbase): Find out how to log into your Sanbase account.
+- [Requesting Display New Project](/sanbase/requesting-display-new-project): Learn how to request a new project display on Sanbase.
+

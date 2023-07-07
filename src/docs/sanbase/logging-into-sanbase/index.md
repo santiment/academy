@@ -1,77 +1,61 @@
 ---
-title: Logging into Sanbase
+title: How to Log into Sanbase
 author: Santiment Team
 ---
 
 > **ORANGE_TYPE**
-> There are two ways to log into Sanbase, by
-> [**MetaMask**](https://metamask.io/) and by **email**, but both can (and
-> should be) connected to the same account for ease of use.
+> 
+> There are two methods to log into Sanbase: through [**MetaMask**](https://metamask.io/) and via **email**. For convenience, both methods can and should be linked to the same account. 
 
-## First Login using MetaMask
+## Logging in to Sanbase Using MetaMask
 
-When you first visit Sanbase at <https://app.santiment.net>, you will
-find the login option in the upper right corner of the screen when
-hovering your mouse over the last symbol:
+When you first visit Sanbase at [https://app.santiment.net](https://app.santiment.net), you can find the login option in the upper right corner of the screen. Simply hover your mouse over the last symbol to see it:
 
 ![](13_login.png)
 
-Selecting `Log in` will lead you to the choice of either using
-MetaMask or email for your login. Select the MetaMask option for now.
+Click on `Log in`. This will present you with two options for logging in: using MetaMask or your email. For this guide, choose the MetaMask option.
 
 ![](25_login_choice.png)
 
-The MetaMask plugin will now ask you for permission to display your
-currently selected account\`s public data to the Sanbase website. Click
-`Connect` to let the plugin and the website talk to each other.
+At this point, the MetaMask plugin will request permission to display your currently selected account's public data on the Sanbase website. Click `Connect` to allow the plugin and the website to communicate.
 
 ![](26_metamask_seperate.png)
 
-In case you are missing this window, please note the MetaMask icon in
-the upper right corner of the screen shows little message indicator:
+If you don't see this window, look for the MetaMask icon in the upper right corner of the screen. It should display a small message indicator:
 
 ![](14_mm.png)
 
 Clicking the MetaMask icon will bring the missing window to the front.
 
-As soon as MetaMask and Sanbase are connected, you should see the
-following screen:
+Once MetaMask and Sanbase are connected, you should see the following screen:
 
 ![](28_metamask_connected.png)
 
-Click `Sign in with Metamask`. Another prompt should appear:
+Click `Sign in with Metamask`. Another prompt will appear:
 
 ![](29_metamask_signin.png)
 
-Click `SIGN` to securely sign a message with your private key, hereby
-proving that you are the owner of the connected account. You are now
-logged into Sanbase.
+Click `SIGN` to securely sign a message with your private key. This action verifies that you are the owner of the connected account. Congratulations, you are now logged into Sanbase.
 
-#### Adding your email
+#### Adding Your Email 
 
-When hovering over the account symbol in the upper right corner, you
-will now see additional options, including account settings. Fill in
-your email address there.
+To add your email, hover over the account icon located at the top right corner of the screen. This action will reveal additional options, including 'Account Settings'. 
 
-![](09_account_menu.png)
+![](09_account_menu.png) 
 
-From now on you can log in by either MetaMask or email, you will end up
-in the same account. You can find out more about the Account settings
-page by reading [this
-article](/sanbase/account-settings).
+In the 'Account Settings', enter your email address. Once this is done, you can log in using either MetaMask or your email. Regardless of the method you choose, you will be directed to the same account. 
 
-## Login by email
+For more information about the 'Account Settings' page, please refer to [this article](/sanbase/account-settings).
 
-Logging into Sanbase by email is pretty straight forward. You enter your
-email address and get sent a link to a logged in Sanbase session. In
-case you logged in by email the first time, you can add an ETH address
-using MetaMask through the Account settings page mentioned above.
+## Logging in via Email
 
-### Buying and staking SAN
+Logging into Sanbase via email is a straightforward process. Simply enter your email address, and you will receive a link that directs you to a logged-in Sanbase session. 
 
-You are now ready to stake SAN to get access to discounts for your access plan. You can learn how to stake
-SAN tokens by reading [this
-article](/san-tokens/connect-a-wallet-to-the-sanbase-account).
-For guidance on how to buy SAN tokens in the first place, please check
-[this
-article](/san-tokens/how-to-buy-san).
+If this is your first time logging in via email, you have the option to add an Ethereum (ETH) address. This can be done using MetaMask through the Account Settings page, as mentioned above. 
+
+### Purchasing and Staking SAN Tokens
+
+You are now prepared to stake SAN tokens in order to avail discounts on your access plan. To learn how to stake SAN tokens, please refer to [this article](/san-tokens/connect-a-wallet-to-the-sanbase-account). 
+
+If you need assistance on how to purchase SAN tokens initially, you can find guidance in [this article](/san-tokens/how-to-buy-san).
+

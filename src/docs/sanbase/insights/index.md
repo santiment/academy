@@ -1,42 +1,32 @@
 ---
 title: Sanbase Insights
 author: Santiment Team
-description: You can use "Sanbase Insights" to create your own note-like posts, share them with the community or browse existing.
+description: Learn how to create, share, and browse note-like posts using "Sanbase Insights".
 ---
 
-Start exploring **Insights** here: https://insights.santiment.net/
+Begin your journey with **Sanbase Insights** here: [https://insights.santiment.net/](https://insights.santiment.net/)
 
-
-Insights allow you to create your own note-like posts,
-share them with the community or browse already existing insights.
+Sanbase Insights enables you to create your own note-like posts, share them with the Santiment community, or browse through existing insights.
 
 ![](page.png)
 
+## Creating a New Insight
 
-## Create a new insight
+To begin creating a new insight, click on `New Insight` located in the profile dropdown menu.
 
-Click `New insight` in profile dropdown to start the process of
-creating a new one.
-
-When creating an Insight you will be prompted to enter the title and the
-body of it:
+During the creation process, you will be asked to provide a title and body for your insight:
 
 ![](new.png)
 
-As soon as title and body of insight are filled, Sanbase will start saving your
-progress as a draft.
+Once you've filled in the title and body, Sanbase will automatically begin saving your progress as a draft.
 
-Also, you can add tags to your idea. Insights can have up to five
-tags, which should correspond to the tickers of the crypto assets your
-Insight is talking about.
+You also have the option to add tags to your insight. Each insight can have up to five tags, which should correspond to the tickers of the crypto assets your insight is discussing.
 
 ![](prepublish.png)
 
-As you can see, you also have the option to straight up share your
-Insight with the public.
+Additionally, you have the option to immediately share your insight with the public.
 
-## Publish or delete drafts insight
+## Publishing or Deleting Draft Insights
 
-Under `My drafts` you will find insights you started but did not
-publish to other users yet. They can be deleted or edited (and then shared) with the
-buttons on the right.
+Under the `My drafts` section, you will find insights that you have initiated but have not yet published for other users. These drafts can be deleted or edited. Once edited, they can be shared using the buttons located on the right side of the screen. 
+
