@@ -315,6 +315,7 @@ export const REFERENCES = [
       'DAI Mint',
       'DEX Trades',
       'Large Exchange Transactions',
+      'Large Exchange Transactions 1M',
       'Large Transactions',
       'MCD ART Liquidation',
       'Old Coins Moved',
