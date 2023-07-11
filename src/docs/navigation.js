@@ -84,7 +84,7 @@ export const GUIDES = [
         title:
           'Request to Display New Project',
       },
-      { slug: 'Social trends search', title: 'Social Tool' },
+      'Social Tool',
       { slug: 'Emerging trends page', title: 'Social Trends page' },
     ],
   },
