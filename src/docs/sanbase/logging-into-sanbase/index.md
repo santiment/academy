@@ -1,5 +1,5 @@
 ---
-title: How to Log into Sanbase
+title: How to Log in Sanbase
 author: Santiment Team
 ---
 

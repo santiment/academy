@@ -28,9 +28,9 @@ This method helps identify topics that have recently sparked high interest, desp
 
 The data for these results is sourced from over 1000 crypto-specific social media channels, including:
 
-- 300+ Telegram groups
-- 350+ crypto subreddits
-- 500+ Twitter accounts
+- 500+ Telegram groups
+- 520+ crypto subreddits
+- 5000+ Twitter accounts
 - BitcoinTalk
 
 ## How to use it

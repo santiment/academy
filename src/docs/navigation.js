@@ -82,7 +82,7 @@ export const GUIDES = [
       {
         slug: 'Requesting display new project',
         title:
-          'Requesting new projects and their tokens to be displayed on Sanbase',
+          'Request to Display New Project',
       },
       { slug: 'Social trends search', title: 'Social Tool' },
       { slug: 'Emerging trends page', title: 'Social Trends page' },

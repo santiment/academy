@@ -2,7 +2,7 @@
 title: Social Tool
 author: Santiment Team
 date: 2021-05-27
-description: This feature allows you to track the frequency of your search term's mentions in a specific medium, such as Telegram.
+description: This feature allows you to track the frequency of your search term's mentions in a specific media, such as Telegram.
 ---
 
 Begin your exploration of trend contexts at [https://app.santiment.net/labs/trends/explore/](https://app.santiment.net/labs/trends/explore/)
