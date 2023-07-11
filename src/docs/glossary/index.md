@@ -36,6 +36,8 @@ A "query" in the context of [GraphQL](https://graphql.org/learn/) refers to a re
 }
 ```
 
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D)**
+
 A single GraphQL request can accommodate multiple queries. In the following example, there are two `getMetric` queries. To avoid name collision in the returned result, each query is given an alias.
 
 ```graphql
@@ -53,6 +55,8 @@ A single GraphQL request can accommodate multiple queries. In the following exam
 }
 ```
 
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20price_usd_min_interval%3A%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20nvt_min_interval%3A%20getMetric(metric%3A%20%22nvt%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)**
+
 If different queries are used, aliases can be omitted. In the next example, the queries are `getMetric` and `currentUser`.
 
 ```graphql
@@ -69,6 +73,8 @@ If different queries are used, aliases can be omitted. In the next example, the 
   }
 }
 ```
+
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20currentUser%20%7B%0A%20%20%20%20id%0A%20%20%20%20username%0A%20%20%20%20email%0A%20%20%7D%0A%7D)**
 
 A query can either return the specified result directly or provide a set of fields that the user can choose from.
 
@@ -94,6 +100,8 @@ In the first example, the `timeseriesData` field is used. The `datetime` and `va
 }
 ```
 
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-01-01T03%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%2230m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)**
+
 In the second example, the `aggregatedTimeseriesData` field is used.
 
 ```graphql
@@ -108,6 +116,8 @@ In the second example, the `aggregatedTimeseriesData` field is used.
   }
 }
 ```
+
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-01-01T03%3A00%3A00Z%22%0A%20%20%20%20%20%20aggregation%3A%20AVG%0A%20%20%20%20)%0A%20%20%7D%0A%7D)**
 
 # Santiment-related
 
@@ -134,6 +144,8 @@ Consider the following example where `nvt` is the metric and `getMetric` is the 
 }
 ```
 
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nvt%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)**
+
 In some instances, the query and the metric are identical. In the next example, `historicalBalance` is both the query and the metric. This scenario occurs when a query fetches exactly one metric (the metric argument is implicit), unlike `getMetric` where the metric argument is explicitly passed with the `metric` argument.
 
 ```graphql
@@ -150,6 +162,8 @@ In some instances, the query and the metric are identical. In the next example, 
   }
 }
 ```
+
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20historicalBalance(%0A%20%20%20%20selector%3A%20%7B%20slug%3A%20%22santiment%22%2C%20infrastructure%3A%20%22ETH%22%20%7D%0A%20%20%20%20address%3A%20%220xA0D8F33Ef9B44DaAE522531DD5E7252962b09207%22%0A%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20interval%3A%20%2230d%22%0A%20%20)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20balance%0A%20%20%7D%0A%7D)**
 
 ## Asset  
 
