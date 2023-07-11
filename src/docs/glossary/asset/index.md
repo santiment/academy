@@ -33,6 +33,8 @@ The GraphQL request below retrieves a list of all assets:
 }
 ```
 
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20name%0A%20%20%20%20slug%0A%20%20%7D%0A%7D)**
+
 You can execute this query using `curl` as shown below:
 
 ```sh
