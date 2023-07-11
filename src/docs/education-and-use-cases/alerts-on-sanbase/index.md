@@ -1,5 +1,5 @@
 ---
-title: Sanbase Alerts Use Cases: Age Consumed
+title: Sanbase Alerts Use Cases - Age Consumed
 author: Daria Karpova
 date: 2022-03-22
 ---
