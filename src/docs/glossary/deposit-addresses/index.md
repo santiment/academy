@@ -22,10 +22,7 @@ Analyzing deposit addresses can be beneficial in several ways:
 
 3. Monitoring the activity of deposit addresses can help us examine and predict market movements with a **new level of awareness**.
 
-Our current metrics for deposit addresses include:
+Our metric for deposit addresses:
 
-1. [Daily Active Deposits (DAD)](/metrics/metrics-for-deposit-addresses/#daily-active-deposits)
-2. [Share of Daily Active Deposits in Total Daily Active Addresses (SDD)](/metrics//metrics-for-deposit-addresses/#share-of-daily-active-deposits-in-total-daily-active-addresses)
-3. [Deposit-related Transactions](/metrics//metrics-for-deposit-addresses/#deposit-related-transactions)
-4. [Share of Deposit-related Transactions on Total Transactions (SDT)](/metrics//metrics-for-deposit-addresses/#share-of-deposit-transactions-in-total-transactions)
+[Daily Active Deposits (DAD)](/metrics/daily-active-deposits/)
 
