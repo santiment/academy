@@ -1,5 +1,5 @@
 ---
-title: Sanbase Alerts Use Cases: Whale Alert
+title: Sanbase Alerts Use Cases - Whale Alert
 author: Daria Karpova
 date: 2022-04-04
 ---

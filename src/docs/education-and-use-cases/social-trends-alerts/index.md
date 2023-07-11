@@ -1,5 +1,5 @@
 ---
-title: Sanbase Alerts Use Cases: Social Trends
+title: Sanbase Alerts Use Cases - Social Trends
 author: Daria Karpova
 date: 2022-04-04
 ---
