@@ -3,9 +3,7 @@ title: How to Log in Sanbase
 author: Santiment Team
 ---
 
-> **ORANGE_TYPE**
-> 
-> There are two methods to log into Sanbase: through [**MetaMask**](https://metamask.io/) and via **email**. For convenience, both methods can and should be linked to the same account. 
+There are two methods to log into Sanbase: through [**MetaMask**](https://metamask.io/) and via **email**. For convenience, both methods can and should be linked to the same account. 
 
 ## Logging in to Sanbase Using MetaMask
 
