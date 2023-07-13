@@ -3,18 +3,17 @@ title: Asset
 author: Santiment Team
 ---
 
-An **asset** is any cryptocurrency or crypto token which can be
-associated with a price. Example of assets are Bitcoin, Ethereum and
-Santiment.
+An **asset** refers to any cryptocurrency or crypto token that can be associated with a price. Examples of assets include Bitcoin, Ethereum, and Santiment.
 
-The terms asset and project are used as synonims in most cases.
+The terms 'asset' and 'project' are often used interchangeably in most contexts.
 
 ## Availability
 
-There are different ways to check which assets are supported by the
-products in Santiment's platform.
+There are several methods to determine which assets are supported by the products within the Santiment platform. 
 
 ### [Sanpy](https://github.com/santiment/sanpy)
+
+To use Sanpy, you need to import the `san` module. After importing the module, you can use the `get` method to retrieve data. Here's how you can do it:
 
 ```python
 import san
@@ -23,7 +22,7 @@ san.get("projects/all")
 
 ### [SanAPI](https://api.santiment.net)
 
-The following GraphQL query gives a list of all assets
+The GraphQL request below retrieves a list of all assets:
 
 ```graphql
 {
@@ -34,7 +33,9 @@ The following GraphQL query gives a list of all assets
 }
 ```
 
-You can call it with `curl` like that:
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20name%0A%20%20%20%20slug%0A%20%20%7D%0A%7D)**
+
+You can execute this query using `curl` as shown below:
 
 ```sh
 curl \
@@ -46,5 +47,5 @@ curl \
 
 ### [Sansheets](https://sheets.santiment.net/)
 
-Once you have intalled the plugin use function `=SAN_ALL_PROJECTS()`
-to fetch the list of all projects.
+After installing the plugin, you can utilize the `=SAN_ALL_PROJECTS()` function to retrieve a comprehensive list of all projects.
+

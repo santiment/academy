@@ -165,7 +165,7 @@ export const GUIDES = [
         terms and concepts
       </>
     ),
-    articles: [],
+    articles: ['Asset', 'Deposit Addresses'],
   },
   {
     title: 'Youtube videos',
