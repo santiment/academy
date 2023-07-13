@@ -4,7 +4,7 @@ author: Daria Karpova
 date: 2022-04-04
 ---
 
-Whale activity is a fascinating metric in the world of cryptocurrency. By closely monitoring the actions of major market players (which, depending on the asset, could be addresses worth $1mn or more), you can gain insights to guide your own crypto strategy.
+Whale activity is a fascinating metric in the world of cryptocurrency. By closely monitoring the actions of major market players (which, depending on the asset, could be addresses worth $1M or more), you can gain insights to guide your own crypto strategy.
 
 Many traders, understandably, are cautious about making decisions during volatile market periods. The risk of buying or selling at an inopportune time is significant: will the prices fall? Will they rebound?
 
