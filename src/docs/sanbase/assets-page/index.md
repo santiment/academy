@@ -1,41 +1,36 @@
 ---
 title: Assets Overview page
 author: Santiment Team
-description: This page shows a fast overview on your watchlists and common categories
+description: This page provides a quick overview of your watchlists and common categories.
 ---
 
 ## Structure
 
-This page contain two sections:
+This page is divided into two main sections:
 
 1. **`Categories`**
-   These topics are specific asset lists that the
-   Santiment Team created based on a certain aspect of the assets, e.g.
-   `Stablecoins`. In case you have any feedback on these or you think we
-   might be missing tokens in one of them, please consider getting in
-   touch.
 
-2. **`Watchlists`** basically the same as **Categories**, but can be created by
-   anyone.
+   These are specific asset lists curated by the Santiment Team based on various aspects of the assets, such as `Stablecoins`. If you have any feedback or believe we might be missing tokens in any of these categories, please feel free to get in touch with us.
 
-![](assets.png)
+2. **`Watchlists`**
 
-## Categories what we have
+   These are similar to **Categories**, but the key difference is that they can be created by any user.
 
-- **`All Assets`** - contains all tokens we track across different blockchains.
-- **`ERC 20`** - shows Ethereum-based ERC20 tokens only
-- **`Top 50 ERC20`** - dynamic category, shows the 50 most prominent ERC20 projects
-  we track.
-- **`Stablecoins`** - a curated list of assets that are supposed to
-  have a fixed value
-- **`Decentralized Exchanges`** - a curated list of decentralized
-  exchanges and their utility tokens
-- **`Centralized Exchanges`** - a curated list of regular exchanges
-  and their utility tokens
-- **`Emerging trending assets`** - dynamic category with assets that in our [**_Emerging trends_**](/sanbase/emerging-trends-page) today.
+   ![](assets.png)
 
-Each category page inside have the similar table as in the **_Watchlist page_**, but you can't modify the list of assets
+## Available Categories 
 
-## How to create a watchlist
+- **`All Assets`**: This category contains all tokens we track across various blockchains. 
+- **`ERC 20`**: This category exclusively displays Ethereum-based ERC20 tokens. 
+- **`Top 50 ERC20`**: This is a dynamic category that showcases the 50 most prominent ERC20 projects we track. 
+- **`Stablecoins`**: This is a curated list of assets that are intended to maintain a fixed value. 
+- **`Decentralized Exchanges`**: This category contains a curated list of decentralized exchanges and their utility tokens. 
+- **`Centralized Exchanges`**: This category features a curated list of regular exchanges and their utility tokens. 
+- **`Emerging Trending Assets`**: This is a dynamic category with assets that are currently trending in our [**_Emerging Trends_**](/sanbase/emerging-trends-page). 
+
+Each category page contains a table similar to the one found on the **_Watchlist page_**, but the list of assets cannot be modified. 
+
+## How to Create a Watchlist
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yzo1gxoTFsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

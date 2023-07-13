@@ -73,18 +73,19 @@ export const GUIDES = [
       </>
     ),
     articles: [
+      'Account settings',
+      'Alerts page',
       { slug: 'Assets page', title: 'Assets Overview page' },
       'Insights',
-      'Alerts page',
-      { slug: 'Emerging trends page', title: 'Social Trends page' },
-      { slug: 'Social trends search', title: 'Social Tool' },
-      'Account settings',
+      'Keyboard Shortcuts',
       'Logging into Sanbase',
       {
         slug: 'Requesting display new project',
         title:
-          'Requesting new projects and their tokens to be displayed on Sanbase',
+          'Request to Display New Project',
       },
+      'Social Tool',
+      { slug: 'Emerging trends page', title: 'Social Trends page' },
     ],
   },
   {
