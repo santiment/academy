@@ -1,60 +1,60 @@
 ---
-title: Sanbase Alerts Use Cases
+title: Sanbase Alerts Use Cases - Age Consumed
 author: Daria Karpova
 date: 2022-03-22
 ---
 
-Alerts are a powerful tool that will help you keep your attention where it is most important.
-With an overwhelming number of metrics available on Sanbase and an even bigger number of crypto assets on the market, it may become troublesome to keep track of every single daily change, which however may be essential if you want to not only watch the market but to be ahead of the game.
+Sanbase Alerts are a powerful tool designed to help you focus on what's most crucial in the ever-changing crypto market. With a plethora of metrics available on Sanbase and a vast array of crypto assets in the market, keeping track of every single daily fluctuation can be challenging. However, this vigilance is vital if you aim to not just observe the market, but also stay ahead of the curve.
 
-Creating a very specific alert based on your own vision will guarantee you will stay in charge of your crypto strategy.
+Creating a tailored alert based on your unique perspective ensures that you remain in control of your crypto strategy.
 
-Let’s take a look at some of the possible ways for you to work with Alerts. 
+Let's explore some of the potential ways you can leverage Sanbase Alerts.
 
-## Setting up an Age Consumed Alert
+## Setting Up an Age Consumed Alert
 
-Token Age Consumed metric tracks the activity of coins based on how long they’ve stayed in their current wallets. Spikes on the chart indicate the movement of previously idle coins, i.e. those owned by long term HODLers or even ICO investors.
+The Token Age Consumed metric monitors the activity of coins based on the duration they have remained in their current wallets. Spikes on the chart represent the movement of previously idle coins, which could be owned by long-term HODLers or even ICO investors.
 
-As usual, an unusual spike In itself may not lead to any imminent change, however in some cases it may be seen as a short term indicator that the market is acting differently. A user is therefore alerted to manually check if this is dangerous/relevant to their position using all tools available.  
+An unusual spike may not necessarily indicate an imminent change. However, in certain instances, it could serve as a short-term indicator that the market is behaving differently. Users are thus alerted to manually verify whether this is potentially harmful or relevant to their position using all available tools.
 
-Take a look at the chart below. If AAVE is an asset you are interested in, then - potentially - you could have been triggered on multiple occasions in the past 6 months. It appears that the spikes have been followed by a steady price decrease.
+Consider the chart below. If AAVE is an asset you are interested in, you could have been alerted on multiple occasions in the past six months. It seems that the spikes have been followed by a steady decrease in price.
 
 ![aave-age-consumed-chart](image07.png)
 
-Let’s see how you could set this alert up. 
+Let's explore how you could set up this alert.
 
 ## Step 1
 
 ![alert-select-asset](image01.png)
 
-## Step 2
+## Step 2: Selecting a Metric
 
 ![alert-select-metric](image02.png)
 
-## Step 3
+## Step 3: Selecting the Appropriate Conditions
 
 ![alert-select-conditions1](image03.png)
 
-Choosing the right conditions. Now this part is tricky and is the most important step in the set up. To ensure you don't get too much noise or even false triggers it is highly advised that you carefully explore which change in the market is crucial for YOU.
+Choosing the right conditions is a crucial step in the setup process. This part can be complex, but it's essential to ensure that you don't receive excessive noise or false triggers. It's highly recommended to carefully identify which market changes are significant for YOU. 
 
-Let’s see how we could do it for AAVE Age Consumed alerts. 
+Let's explore how to do this for AAVE Age Consumed alerts.
 
-### Step 3b
+### Step 3b: Understanding Percentage Increases
 
-Even though a 100% increase may seem like a strong change - take a look at the chart. It happened almost every week in the past 6 months. You probably dont want to be notified about something that appears to be a regular occurrence.
+While a 100% increase might initially appear significant, it's important to examine the context. Refer to the chart below. As you can see, such increases have occurred almost weekly over the past six months. This frequency suggests that a 100% increase is a regular occurrence for this data set. Therefore, you may not want to set up notifications for such a common event. 
 
 ![alert-select-conditions2](image04.png)
 
-### Step 3c
+### Step 3c: Adjusting the Metric
 
 ![alert-select-conditions3](image05.png)
 
-If you keep on adjusting the metric you will see how now it makes more sense. Only a few significant spikes in the given period, indicating something must have really been up. 
+By continuously fine-tuning the metric, you'll notice that the data becomes more meaningful. Only a few significant spikes occur within the given period, suggesting that something noteworthy must have happened. 
 
-These activities really stand out and are likely to be worth your attention.
+These activities are prominent and likely warrant your attention. 
 
-## Step 4
+## Step 4: Set Up Your Preferred Notification Method
 
-Set up your notifications preferred method and you are done!
+Once you've completed the previous steps, the final step is to set up your preferred method of receiving notifications. After this, your setup process is complete! 
 
 ![alert-final-screen](image06.png)
+

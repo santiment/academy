@@ -1,106 +1,94 @@
 ---
-title: Sanbase Alerts Use Cases
+title: Sanbase Alerts Use Cases - Social Trends
 author: Daria Karpova
 date: 2022-04-04
 ---
-Santiment is proud to be the only tool in the industry that developed its proprietary method of looking at the crypto market.
-Social dynamics can be a strong indicator of turbulence approaching.
-You are probably already following some Twitter accounts or getting your latest updates from Telegram chats, however there is a problem:
-You cannot physically read every channel, and therefore your attention is limited to a certain amount of select news sources.
 
-They say there is no smoke without a fire. If you are watching several coins you could have noticed that some of them get more buzz in the social media than others. Occasionally, an asset gets way too much attention, like it was with Dogecoin.
+Santiment stands out in the industry as the only tool that has developed its unique approach to analyzing the cryptocurrency market. Social dynamics can serve as a powerful indicator of impending market volatility.
 
-Take a look at the Chart below. You can easily see an extreme spike (in blue) in the social volume that occurred at the end of November 2021.
+While you may already be following certain Twitter accounts or receiving updates from Telegram chats, there's a challenge: It's impossible to read every channel, which means your attention is confined to a select number of news sources.
+
+As the saying goes, "where there's smoke, there's fire." If you're monitoring multiple coins, you might have noticed that some generate more social media buzz than others. Occasionally, an asset garners excessive attention, as was the case with Dogecoin.
+
+Consider the chart below. It clearly shows a significant spike (highlighted in blue) in social volume towards the end of November 2021.
 
 ![social-volume-chart](image1.png)
 
-You don’t need many analytical skills to notice that the price, which was already on the decline, shortly dropped completely after the social media spike.
+Even without advanced analytical skills, it's easy to see that the price, which was already falling, plummeted further following the social media spike.
 
-As usual, we insist that there is no one specific metric that can indicate such drastic change, but it is advisable to observe them all to identify which ones ‘talk’ to you more than others.
+We always emphasize that no single metric can predict such drastic changes. However, it's beneficial to monitor all of them to identify which ones resonate with you the most.
 
-Seeing this spike back in November 2021 could have been a strong informational signal about Dogecoin.
+Noticing this spike in November 2021 could have served as a potent informational signal about Dogecoin.
 
-## Setting up Alerts for Social Trends
+## Setting Up Alerts for Social Trends
 
-Let’s see how you can do this yourself. We suggest that you start with the most basic social trends alert first. It will only trigger if your keyword starts ranking in the TOP 10 social trending terms.
+Let's explore how you can set up these alerts on your own. We recommend beginning with the most basic social trends alert. This alert will only be activated if your specified keyword begins to rank among the top 10 trending social terms. 
 
-## Step 1
+## Step 1: Selecting Social Trends Alert
 
-Select Social Trends alert from the Alerts menu. Go to the Trending assets tab.
-
-Pick those coins that you would like to watch (alternatively, use your already existing watchlist)
+From the Alerts menu, select the Social Trends alert. Next, navigate to the Trending Assets tab. Here, you can choose the coins you wish to monitor. Alternatively, you can use your pre-existing watchlist. 
 
 ![alert-select-asset](image2.png)
 
-## Step 2
+## Step 2: Choose Your Preferred Notification Method and Frequency
 
-Specify preferred notification method and frequency for when the alert goes off.
+Specify your preferred method and frequency for receiving notifications when the alert is triggered. 
 
 ![alert-select-notifications](image3.png)
 
-## Step 3
+## Step 3: Assign a Name to Your Alert
 
-Give your alert a name or it will be created automatically based on the terms you picked for watching.
+Assign a name to your alert. If you don't, a name will be automatically generated based on the terms you've selected to monitor. 
 
 ![alert-select-title](image4.png)
 
-You are done!
-
-This is a very solid alert. Getting into TOP 10 is fairly rare, so if you do get notified, then it’s really worth checking out.
+Congratulations! You've successfully created a robust alert. Reaching the TOP 10 is quite an achievement, so if you receive a notification, it's definitely worth investigating. 
 
 ---
 
+## Setting Up a Social Volume Alert
 
+Another scenario where a social alert can be beneficial involves obtaining more sensitive data. This is similar to the Dogecoin example provided at the beginning of this article. 
 
-## Setting up a Social Volume Alert
+There might be instances where a significant spike in Social Media Volume for a specific coin may not be reflected in the overall Social Trends. In such cases, you could potentially miss an important signal. 
 
-Another social alert scenario can provide you with much more sensitive data - just like in the Dogecoin example at the beginning of this article.
+To help you understand better, let's use Dogecoin as an example to walk you through the process of setting up a Social Volume alert.
 
-It may well be the case that a significant Social Media Volume spike for a particular coin will not be reflected in the overall Social Trends. In this case you can miss an important signal.
-
-Using Dogecoin, let us walk you through the Social Volume alert set up.
-
-## Step 1.1
-
-Go to the Assets tile.
+## Step 1.1: Navigate to the "Assets" Tile
 
 ![alert-select-type](image5.png)
 
-## Step 1.2
-
-Select Dogecoin from the list.
+## Step 1.2: Select Dogecoin from the List
 
 ![alert-select-asset-2](image6.png)
 
-## Step 1.3
+## Step 1.3: Selecting the Metric
 
-In the Choose Metric space go to the Social and find Social Volume.
+In the "Choose Metric" section, navigate to the "Social" category and select "Social Volume". 
 
 ![alert-select-metric](image7.png)
 
-Now you will see this:
-The red dots on the chart indicate every time the alert would have gone off in the past 3 months (90 times).
-This is plain noise.
+Upon selection, you will see a chart with red dots. Each dot represents an instance when the alert would have been triggered in the past three months. There are 90 such instances, which can be considered as noise. 
 
 ![alert-select-conditions](image8.png)
 
-## Step 1.4
+## Step 1.4: Adjusting Your Alert
 
-To adjust your alert click on the dropdown menu under condition and select “Moving up %”
-Play with the numerical field on the right to discover which increase seems to provide most value. In this particular case we set it to 113% increase compared to the previous 1 day,  and that would have triggered our alert only 5 times in 3 months. The other bars on the chart appear to be more or less equal indeed.
+To modify your alert, navigate to the dropdown menu located under the 'Condition' section and select the "Moving up %" option. Experiment with the numerical field on the right to determine the percentage increase that offers the most value. 
+
+In this specific instance, we've set it to a 113% increase compared to the previous day. This setting would have triggered our alert only five times in the past three months. As you can see from the chart, the other bars appear to be more or less equal. 
 
 ![alert-select-conditions-2](image9.png)
 
-## Step 1.5
-
-Select preferred notification methods and frequency.
+## Step 1.5: Choose Your Preferred Notification Methods and Frequency
 
 ![alert-select-notifications-2](image10.png)
 
-## Step 1.6
+## Step 1.6: Confirm and Create Your Alert
 
-Confirm you are happy with the Alert’s name. Hit Create Alert.
+Ensure that you are satisfied with the name of your Alert. Once you've confirmed, click on 'Create Alert'. 
 
 ![alert-select-title-2](image11.png)
 
-You are done!
+Congratulations, you have successfully created your Alert! 
+
