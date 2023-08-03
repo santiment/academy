@@ -14,6 +14,58 @@ Santiment API Rate Limiting is a mechanism that restricts the number of requests
 
 3. **Protection Against Malicious Activities:** API Rate Limits serve as a basic security measure to protect against malicious activities such as DoS (Denial of Service) attacks. By limiting the number of requests from a single source, Santiment can mitigate potential harm.
 
+## How are API calls counted?
+
+Each [GraphQL Query](https://academy.santiment.net/glossary/#query) is counted as one API call.
+One GraphQL request can contain any number of GraphQL queries inside of it. This means that one GraphQL request can count as multiple API calls.
+In most cases, a single GraphQL request will contain only one GraphQL query.
+
+Executing the following GraphQL request will count as 1 API calls:
+```graphql
+{
+  getMetric(metric: "active_addresses_24h") {
+    timeseriesData(
+      slug: "ethereum"
+      from: "2019-01-01T00:00:00Z"
+      to: "2019-01-01T03:00:00Z"
+      interval: "30m"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
+Executing the following GraphQL request will count as 2 API calls:
+```graphql
+{
+  activeAddresses: getMetric(metric: "active_addresses_24h") {
+    timeseriesData(
+      slug: "ethereum"
+      from: "2019-01-01T00:00:00Z"
+      to: "2019-01-01T03:00:00Z"
+      interval: "30m"
+    ) {
+      datetime
+      value
+    }
+  }
+
+  transactionVolume: getMetric(metric: "transaction_volume") {
+    timeseriesData(
+      slug: "ethereum"
+      from: "2019-01-01T00:00:00Z"
+      to: "2019-01-01T03:00:00Z"
+      interval: "30m"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
 ## How are rate limits applied and refreshed?
 
 API Rate Limits are applied on a **per account** basis. This means that all API keys associated with a single account share the same limits. It's important to note that API keys used for testing or development purposes can impact the rate limits of the API key used for production. 
