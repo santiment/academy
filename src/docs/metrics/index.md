@@ -123,11 +123,11 @@ The [XRP Ledger (XRPL)] (https://xrpl.org/) is a decentralized, public blockchai
 Santiment provide key metrics about the XRPL Chain which are listed below:
 
 ### Holder Metrics
-- [Number of accounts](/metrics/xrpl/number-of-accounts)
+- [Number of accounts](/metrics/xrpl-metrics/number-of-accounts)
 - [Number of new accounts created](/metrics/network-growth/)
 
 ### Activity Metrics
-- [DEX Volume in USD](/metrics/xrpl/dex-volume-in-usd)
+- [DEX Volume in USD](/metrics/xrpl-metrics/dex-volume-in-usd)
 - [Number of transactions](/metrics/transaction-count)
-- [Number of assets issued](/metrics/xrpl/assets-issued)
-- [Number of active trustlines](/metrics/xrpl/trustline-count)
+- [Number of assets issued](/metrics/xrpl-metrics/assets-issued)
+- [Number of active trustlines](/metrics/xrpl-metrics/trustline-count)
