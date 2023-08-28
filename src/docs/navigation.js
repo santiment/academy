@@ -314,7 +314,6 @@ export const REFERENCES = [
       'Anomalies',
       'ATH price USD',
       'DAI Mint',
-      'DEX Trades',
       'Large Exchange Transactions',
       'Large Exchange Transactions 1M',
       'Large Transactions',
