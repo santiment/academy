@@ -14,7 +14,7 @@ Lending Pools is a project that aims to track deposits, borrows, repayments, wit
 In **Santiment Queries**, we record the platform from which the liquidation data was recorded under the `project_name` column. The platforms we collect data from are:
 
 - AAVE-v2/v3
-- Compound
+- Compound/v3
 - Liquity
 - MakerDAO
 
@@ -46,7 +46,7 @@ Below, we have listed the table containing the lending pools data with its colum
 - **token_out** (*Nullable(String)*): Address of token leaving the pool (in case of borrow/withdraw/liquidate actions)
 - **amount_in** (*UInt256*): The amount of the token received by the pool. 0 in case of borrow/withdraw
 - **amount_out** (*UInt256*): The amount of the token leaving the pool. 0 in case of deposit/repay
-- **project_name** (*String*): Name of the project, such as aave_v2, aave_v3, compound, liquity and makerdao.
+- **project_name** (*String*): Name of the project, such as aave_v2, aave_v3, compound, compound_v3, liquity and makerdao.
 - **user** (*String*): Address performing the action
 - **computed_at** (*DateTime*): The timestamp when the event was inserted into the table.
 
