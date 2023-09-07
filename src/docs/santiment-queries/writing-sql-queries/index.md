@@ -7,45 +7,31 @@ description: First steps in using SQL combined with Santiment's datasets
 
 ## Overview
 
-This document introduces the reader to the basics of Clickhouse SQL and
-Santiment's datasets.
+This document introduces the reader to the basics of Clickhouse SQL and Santiment's datasets.
 
 The available datasets contain two types of data:
-- Precomputed metrics - Using the raw data and preprocessing, pre-computed
-  metrics like `mvrv_usd` or `daily_active_addresses` are computed and stored.
-- Raw data - Transfers, balances, labels, events, etc.
+
+- Precomputed metrics: These are calculated and stored using raw data and preprocessing, such as `mvrv_usd` or `daily_active_addresses`.
+- Raw data: This includes information like transfers, balances, labels, events, and more.
 
 ## Clickhouse Overview
 
-[Clickhouse](https://clickhouse.com/) is a true Column-Oriented Database Management System that, among
-other things, makes it extremely fast and suitable for storing and working with
-metrics and crypto-related data.
+[Clickhouse](https://clickhouse.com/) is a true Column-Oriented Database Management System that excels in storing and working with metrics and crypto-related data due to its exceptional speed. Clickhouse SQL is similar to ANSI SQL with some unique features. It supports `SELECT`, `GROUP BY`, `JOIN`, `ORDER BY`, subqueries in `FROM`, `IN` operator and subqueries in `IN` operator, window functions, numerous aggregate functions (avg, max, min, last, first, etc.), scalar subqueries, and more.
 
-Clickhouse SQL is identical to ANSI SQL in many ways with some distinctive
-features. It supports `SELECT`, `GROUP BY`, `JOIN`, `ORDER BY`, subqueries in
-`FROM`, `IN` operator and subqueries in `IN` operator, window functions, many
-aggregate functions (avg, max, min, last, first, etc.), scalar subqueries, and so on.
+To achieve the highest possible performance, some features are not present:
 
-To provide the highest possible performance, some features are not present:
-- No support for foreign keys, but they are simulated in some of the existing
-  tables (holding pre-computed metrics mostly). For example, there is `asset_id`
-  column in the `intraday_metrics` table, and `asset_metadata` table to which
-  the `asset_id` refers. The lack of foreign key support means that the database
-  cannot guarantee referential integrity, so it is enforced by application-level
-  code. 
-- No full-fledged transactions. The SQL Editor has read-only access, and
-  Clickhouse is used mainly as append-only storage, so the lack of transactions
-  does not cause any issues
-  for this use case.
+- No support for foreign keys, but they are simulated in some existing tables (holding pre-computed metrics mostly). For example, there is an `asset_id` column in the `intraday_metrics` table, and an `asset_metadata` table to which the `asset_id` refers. The lack of foreign key support means that the database cannot guarantee referential integrity, so it is enforced by application-level code.
+- No full-fledged transactions. The SQL Editor has read-only access, and Clickhouse is used mainly as append-only storage, so the lack of transactions does not cause any issues for this use case.
 
 Official [Clickhouse SQL Reference](https://clickhouse.com/docs/en/sql-reference/)
 
-Some of the important pages that contain useful information:
-- https://clickhouse.com/docs/en/sql-reference/syntax/
-- https://clickhouse.com/docs/en/sql-reference/statements/select/
-- https://clickhouse.com/docs/en/sql-reference/functions/
-- https://clickhouse.com/docs/en/sql-reference/operators/
-- https://clickhouse.com/docs/en/sql-reference/aggregate-functions/
+Some important pages containing useful information:
+
+- [Syntax](https://clickhouse.com/docs/en/sql-reference/syntax/)
+- [SELECT Statements](https://clickhouse.com/docs/en/sql-reference/statements/select/)
+- [Functions](https://clickhouse.com/docs/en/sql-reference/functions/)
+- [Operators](https://clickhouse.com/docs/en/sql-reference/operators/)
+- [Aggregate Functions](https://clickhouse.com/docs/en/sql-reference/aggregate-functions/)
 
 ## The FINAL keyword
 
@@ -90,40 +76,28 @@ LIMIT 2
 ```
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20dt%2C%20argMax(value%2C%20computed_at)%5CnFROM%20daily_metrics_v2%5CnWHERE%20asset_id%20%3D%20get_asset_id(%27bitcoin%27)%20AND%20%20metric_id%20%3D%20get_metric_id(%27daily_active_addresses%27)%5CnGROUP%20BY%20dt%2C%20asset_id%2C%20metric_id%5CnORDER%20BY%20dt%20DESC%5CnLIMIT%202%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22argMax(value%2C%20computed_at)%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20dt%2C%20argMax(value%2C%20computed_at)%5CnFROM%20daily_metrics_v2%5CnWHERE%20asset_id%20%3D%20get_asset_id('bitcoin')%20AND%20%20metric_id%20%3D%20get_metric_id('daily_active_addresses')%5CnGROUP%20BY%20dt%2C%20asset_id%2C%20metric_id%5CnORDER%20BY%20dt%20DESC%5CnLIMIT%202%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22argMax(value%2C%20computed_at)%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
-## The PREWHERE clause
+## The PREWHERE Clause
 
-In addition to the standard [WHERE](https://clickhouse.com/docs/en/sql-reference/statements/select/where) clause, Clickhouse also supports [PREWHERE](https://clickhouse.com/docs/en/sql-reference/statements/select/prewhere/).
-This is an optimization to apply filtering more efficiently. The effect is that,
-at first only the columns necessary for executing the filtering expression are
-read.
+In addition to the standard [WHERE](https://clickhouse.com/docs/en/sql-reference/statements/select/where) clause, Clickhouse also supports the [PREWHERE](https://clickhouse.com/docs/en/sql-reference/statements/select/prewhere/) clause. This optimization allows for more efficient filtering by initially reading only the columns necessary for executing the filtering expression.
 
-In case `FINAL` keyword is not used, `WHERE` is automatically transformed into
-`PREWHERE`. In case `FINAL` keyword is used, `WHERE` is not automatically
-transformed into `PREWHERE`. Such transformation in the latter case can lead to
-different results in case columns that are not part of the primary key are used
-in the filtering.
+When the `FINAL` keyword is not used, the `WHERE` clause is automatically transformed into a `PREWHERE` clause. However, when the `FINAL` keyword is used, the `WHERE` clause does not automatically transform into a `PREWHERE` clause. This transformation in the latter case can lead to different results if columns that are not part of the primary key are used in the filtering.
 
-Do not use `PREWHERE` unless you are sure what you are doing.
+It is recommended not to use the `PREWHERE` clause unless you are certain of its implications and effects on your query.
 
-## Using pre-computed metrics
+## Using Pre-computed Metrics
 
 The pre-computed metrics are located in the following tables:
-- `intraday_metrics` - metrics with more than one value per day. In most
-  cases, these metrics have a new value every 5 minutes. Example:
-  `active_addresses_24h`
-- `daily_metrics_v2` - metrics that have exactly 1 value per day. Example:
-  `daily_active_addresses`
 
-All tables storing pre-computed data have a common set of columns.
-- `dt` - A `DateTime`  field storing the corresponding date and time.
-- `asset_id` - An `UInt64` unique identifier for an asset. The data for that id
-  is stored in the `asset_metadata` table.
-- `metric_id` - An `UInt64` unique identifier for metric. The data for that id
-  is stored in the `metric_metadata` table.
-- `value` - A `Float` column holding the metric's value for the given
-  asset/metric pair.
-- `computed_at` - A `DateTime` column storing the date and time when the
-  given row was computed.
+- `intraday_metrics` - Metrics with more than one value per day. In most cases, these metrics have a new value every 5 minutes. Example: `active_addresses_24h`
+- `daily_metrics_v2` - Metrics that have exactly 1 value per day. Example: `daily_active_addresses`
+
+All tables storing pre-computed data have a common set of columns:
+
+- `dt` - A `DateTime` field storing the corresponding date and time.
+- `asset_id` - An `UInt64` unique identifier for an asset. The data for that ID is stored in the `asset_metadata` table.
+- `metric_id` - An `UInt64` unique identifier for a metric. The data for that ID is stored in the `metric_metadata` table.
+- `value` - A `Float` column holding the metric's value for the given asset/metric pair.
+- `computed_at` - A `DateTime` column storing the date and time when the given row was computed.
 
 ### Fetch data for asset bitcoin and metric **daily_active_addresses**
 
@@ -377,16 +351,13 @@ argument:
 argMaxIf(value, (dt, computed_at), metric_id=get_metric_id('price_usd')) AS price_usd,
 ```
 
-## Using raw data
+## Using Raw Data
 
-### Example for top transfers
+### Example: Top Transfers
 
-Find the 5 biggest ETH transactions to the graveyard address 0x0000000000000000000000000000000000000000
+Find the 5 biggest ETH transactions to the graveyard address 0x0000000000000000000000000000000000000000.
 
-> There are some duplicated tables with different `ORDER BY`. In the case of
-> transfer tables there are tables with the `_to` suffix. This indicates that
-> the `to` address is to the front of the `ORDER BY` key. This table has bigger
-> performance when only filtering of `to` address is applied.
+> Note: Some tables are duplicated with different `ORDER BY` clauses. In the case of transfer tables, there are tables with the `_to` suffix. This indicates that the `to` address is at the front of the `ORDER BY` key. This table has better performance when only filtering by the `to` address.
 
 ```sql
 SELECT
@@ -399,6 +370,7 @@ WHERE to = '0x0000000000000000000000000000000000000000'
 ORDER BY value DESC
 LIMIT 5
 ```
+
 Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20dt%2C%5Cn%20%20%20%20from%2C%5Cn%20%20%20%20transactionHash%2C%5Cn%20%20%20%20value%20%2F%20pow(10%2C%2018)%20--%20transform%20from%20gwei%20to%20ETH%5CnFROM%20eth_transfers_to%20FINAL%5CnWHERE%20to%20%3D%20%270x0000000000000000000000000000000000000000%27%5CnORDER%20BY%20value%20DESC%5CnLIMIT%205%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22from%22%7D%2C%7B%22title%22%3A%22transactionHash%22%7D%2C%7B%22title%22%3A%22divide(value%2C%20pow(10%2C%2018))%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%20%20%20%20dt%2C%5Cn%20%20%20%20from%2C%5Cn%20%20%20%20transactionHash%2C%5Cn%20%20%20%20value%20%2F%20pow(10%2C%2018)%20--%20transform%20from%20gwei%20to%20ETH%5CnFROM%20eth_transfers_to%20FINAL%5CnWHERE%20to%20%3D%20'0x0000000000000000000000000000000000000000'%5CnORDER%20BY%20value%20DESC%5CnLIMIT%205%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22dt%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22from%22%7D%2C%7B%22title%22%3A%22transactionHash%22%7D%2C%7B%22title%22%3A%22divide(value%2C%20pow(10%2C%2018))%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
 
 ```sql
