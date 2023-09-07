@@ -4,7 +4,7 @@ author: Ivan
 date: 2021-03-22
 ---
 
-The plans apply to all metrics, except for those with [special restrictions](/products-and-plans/access-plans/special-restrictions).
+The plans apply to all metrics, except for those with [special restrictions](/products-and-plans/special-restrictions).
 
 ## Overview
 

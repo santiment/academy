@@ -133,6 +133,18 @@ export const GUIDES = [
     ),
     articles: [
       'Access Plans',
+      {
+        slug: 'sanbase-plans',
+        title: 'Access Plans - Sanbase'
+      },
+      {
+        slug: 'sanapi-plans',
+        title: 'Access Plans - SanAPI'
+      },
+      {
+        slug: 'special-restrictions',
+        title: 'Access Plans - Special Restrictions'
+      },
       'Santiment Products',
       'How to pay with crypto',
       'Create an API key',

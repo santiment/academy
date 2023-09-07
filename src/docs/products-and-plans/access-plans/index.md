@@ -14,7 +14,7 @@ Sanbase plans provide access to both [Sanbase](/sanbase) and [Sansheets](/sanshe
 
 To purchase a plan, visit the [Sanbase pricing page](https://app.santiment.net/pricing).
 
-For a detailed description of the plans, check out our [Sanbase Access Plans](/products-and-plans/access-plans/sanbase) page.
+For a detailed description of the plans, check out our [Sanbase Access Plans](/products-and-plans/sanbase-plans) page.
 
 ## SanAPI
 
@@ -22,4 +22,4 @@ SanAPI plans provide access to the [API](/sanapi).
 
 To purchase a plan, visit the [SanAPI pricing page](https://api.santiment.net/#pricing).
 
-For a detailed description of the available plans, check out our [SanAPI access plans](/products-and-plans/access-plans/sanapi) page.
+For a detailed description of the available plans, check out our [SanAPI access plans](/products-and-plans/sanapi-plans) page.
