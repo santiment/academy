@@ -101,7 +101,7 @@ In the observed time frame (2018-present), MKR HODLers lost approximately 35% of
 
 While the aforementioned strategy demonstrates potential, it should not be followed blindly. As observed, relying solely on this model could have caused you to miss the entire 2017 bull run. No strategy is foolproof, hence it is crucial to **always** use it in combination with other metrics, signals, and indicators. 
 
-This brings to mind that Sanbase and Sangraphs collectively offer over 120 different on-chain, social, and development indicators. If you're seeking additional tools to complement the Price-DAA strategy, these platforms would be an excellent starting point. 
+This brings to mind that Sanbase offers over 120 different on-chain, social, and development indicators. If you're seeking additional tools to complement the Price-DAA strategy, these platforms would be an excellent starting point. 
 
 
 
