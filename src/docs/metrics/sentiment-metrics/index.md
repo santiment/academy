@@ -80,7 +80,6 @@ interval** [on request](products-and-plans/access-plans/). Currently the time
 intervals we use are the following:
 
 - In [Sanbase](https://app.santiment.net/s/OA3Fxisq): [Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
-- In [Sanbase Graphs](https://graphs.santiment.net/social): `6h`, `12h`, `1d`.
 
 #### Latency
 
@@ -97,7 +96,6 @@ this can be found [here](/metrics/social-volume-metrics/#available-assets).
 #### How to Access
 
 ##### [Sanbase](https://app.santiment.net/s/OA3Fxisq)
-##### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -135,7 +133,6 @@ Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 #### How to Access
 
 ##### [Sanbase](https://app.santiment.net/s/lL05ManV)
-##### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 
@@ -198,7 +195,6 @@ Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 #### How to Access
 
 ##### [Sanbase](https://app.santiment.net/s/p_5roQjX)
-##### [Sanbase Graphs](https://graphs.santiment.net/social)
 
 The metric is available **for any selected asset**.
 

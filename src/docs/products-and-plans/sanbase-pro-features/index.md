@@ -54,10 +54,6 @@ Our plugin for importing Santiment data directly into Google Spreadsheets. To ge
 - Set up a [dynamic portfolio manager](https://docs.google.com/spreadsheets/d/1itY_q3KvC-KhOpY21wtmeAj5lL4qT8gbMvilgt8avZw/edit?usp=sharing)
 - [Track the NVT](https://docs.google.com/spreadsheets/d/1WHf2CqD-pppmxO8Wt5eyU6p4I9q1A2kJ7MlNkQe_pC0/edit?usp=sharing) of any coin
 
-## Full access to Graphs
-
-Home to a growing list of new and experimental dashboards, including our Crowd Sentiment metrics, ETH miner stats, MVRV sandbox, comprehensive MakerDAO dashboards, and more. New metrics are constantly being added!
-
 ## Unlimited number of Signals
 
 and access to all future signals added to Sanbase (coming soon!). Here are a few pre-made Signals to get you started:

@@ -19,7 +19,6 @@ is treated as made with [Sanapi Free plan](/products-and-plans/access-plans/sana
   - 2 years of historical data
   - Last 30 days of the data is cut-off
 - Up to 10 signals definitions allowed
-- No access to [Sanbase Graphs](https://graphs.santiment.net)
 - Detailed metrics access restrictions can be found [here](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(plan%3A%20FREE%2C%20product%3A%20SANBASE)%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A)
 
 ## Pro plan
@@ -29,7 +28,6 @@ is treated as made with [Sanapi Free plan](/products-and-plans/access-plans/sana
   - 5 years of historical data
   - Realtime data is not cut-off
 - No limit to Signals
-- Access to [Sanbase Graphs](https://graphs.santiment.net)
 - Full access to [Sansheets](https://sheets.santiment.net)
 - Detailed metrics access restrictions can be found [here](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(plan%3A%20PRO%2C%20product%3A%20SANBASE)%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A)
 

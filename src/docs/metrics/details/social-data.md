@@ -69,8 +69,6 @@ them is usually very low).
 
     **Availability**: Data is currently only included in parts of Sanbase
     ([https://app.santiment.net/labs/trends/explore/bullrun](https://app.santiment.net/labs/trends/explore/bullrun)),
-    as well as our experimental platform
-    [https://graphs.santiment.net/social](https://graphs.santiment.net/social).
 
 4. **Bitcointalk**
 
