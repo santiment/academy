@@ -5,38 +5,29 @@ author: Santiment Team
 
 ## Sanbase
 
-Sanbase is our main blockchain-enabled web app, which is also accessible
-on mobile. It provides financial, development, on-chain and
-social/sentiment data for the general crypto market plus more than 1500
-crypto assets across a growing number of blockchains.
+Sanbase is our primary blockchain-enabled web app, also accessible on mobile devices. It offers financial, development, on-chain, and social/sentiment data for the overall cryptocurrency market and over 1500 crypto assets across an expanding number of blockchains.
 
-Much of the data is available anonymously, for free. Get more in-depth
-features with a simple email login.
+A significant portion of the data is available anonymously and free of charge. Gain access to more in-depth features by simply logging in with your email.
 
-<https://app.santiment.net>
+[https://app.santiment.net](https://app.santiment.net)
 
 ![](sanbase.png)
 
 ## SanAPI
 
-SanAPI is the GraphQL API which powers Sanbase. Together with the API
-we offer a Python library [Sanpy](https://github.com/santiment/sanpy)
-which offers easy access to the data for data scientists knowledgable
-in Python.
+SanAPI is the GraphQL API that powers Sanbase. Along with the API, we provide a Python library called [Sanpy](https://github.com/santiment/sanpy), which offers easy access to the data for data scientists proficient in Python.
 
 <https://api.santiment.net>
-
 
 ![](neuro.png)
 
 ## Sansheets
 
-Sansheets is a Google Sheets plugin that gives access to our data using
-simple functions directly from your spreadsheet.
+Sansheets is a Google Sheets plugin that provides access to our data using simple functions directly within your spreadsheet.
 
-<https://sheets.santiment.net/>
-
+[https://sheets.santiment.net/](https://sheets.santiment.net/)
 
 ![](sheets.png)
 
 ![](sheets2.png)
+
