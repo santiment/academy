@@ -1,5 +1,5 @@
 ---
-title: How to create an API key
+title: How to Create an API Key
 author: Santiment Team
 ---
 
@@ -8,26 +8,23 @@ account as reference. You cannot use Sanbase as a login
 option for the API or for Sansheets. This is
 where an API key comes in.
 
-When you make a Sanbase account you are able to create an API key that
-carries the same access rights, to use with these other products. The
-access rights that are assigned to this key depend on your
-subscription plan.
+When you create a Sanbase account, you have the ability to generate an API key that carries the same access rights for use with our other products. The access rights assigned to this key depend on your subscription plan.
 
-## Creating an API key
+## Creating an API Key
 
-Creating API keys is done in the account settings of
-[Sanbase](https://app.santiment.net/account),
-[SanAPI](https://api.santiment.net/account) or
-[Sansheets](https://sheets.santiment.net/account).
+To create an API key, visit the account settings of [Sanbase](https://app.santiment.net/account), [SanAPI](https://api.santiment.net/account), or [Sansheets](https://sheets.santiment.net/account).
 
-In accounts settings you should click on the **`Generate`** button to
-create the new key.
+In the account settings, click on the **`Generate`** button to create a new key.
+
 ![generate apikey button](generate-apikey-button.png)
-The key will be shown as a string. You can copy it
-and use it wherever you need.
+
+The key will be displayed as a string. You can copy it and use it wherever needed.
+
 ![revoke apikey button](revoke-apikey-button.png)
-The key can be revoked from the same place anytime.
 
-## Using an API key
+You can revoke the key at any time from the same location.
 
-The [authentication section](/sanapi#authentication) shows how to include an API key in your requests.
+## Using an API Key
+
+The [Authentication Section](/sanapi#authentication) demonstrates how to include an API key in your requests.
+
