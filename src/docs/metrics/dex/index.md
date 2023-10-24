@@ -42,6 +42,8 @@ Tether, USD coin, DAI, Binance USD, TrueUSD and etc.
 
 * `total_trade_amount_by_dex`, `eth_based_trade_amount_by_dex`, `stablecoin_trade_amount_by_dex`, 
   `other_trade_amount_by_dex` - Number of trades
+* `eth_trade_volume_by_token` - Amount of ETH
+* `stablecoin_trade_volume_by_token` - Amount of stablecoins
 * `token_eth_price_by_dex_5m` - Amount of ETH per coin 
 * Other - Amount of coins
 ---
