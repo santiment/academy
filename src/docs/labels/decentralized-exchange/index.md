@@ -26,7 +26,7 @@ Uniswap v2 DEX (UniswapV2Pair) [0x2c5050a646a36fb22f1a1137665e64393b486139](http
 
 * ethereum
 
-**List of centralized exchanges we label addresses for:**
+**List of decentralized exchanges we label addresses for:**
 
 ```
 1Inch
