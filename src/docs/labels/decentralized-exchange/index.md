@@ -25,3 +25,41 @@ Uniswap v2 DEX (UniswapV2Pair) [0x2c5050a646a36fb22f1a1137665e64393b486139](http
 ## Available Blockchains
 
 * ethereum
+
+**List of centralized exchanges we label addresses for:**
+
+```
+1Inch
+Allbit
+Ariswap
+Balancer
+Balancer_v1
+Bamboodefi
+Bancor
+Bancor_v1
+Bancor_v2
+Chickenswap
+Curve
+Defiswap
+Dodo
+Dydx
+Elk
+Empiredex
+Jpegd
+Kwikswap
+Kyberswap
+Lido
+Maker
+Mooniswap
+Radioshack
+Shibaswap
+Standardtech
+Sumswap_v2
+Sushi
+Sushiswap_v2
+Uniswap
+Uniswap_v1
+Uniswap_v2
+Uniswap_v3
+Youswap
+```
