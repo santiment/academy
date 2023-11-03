@@ -1,9 +1,11 @@
 ---
-title: Decentralized Exchanges
+title: \[deprecated\] Decentralized Exchanges
 author: Maksim Razhev, Serge Nedashkovsky
 date: 2021-01-25
 description: DEX Metrics
 ---
+
+> DEX metrics described on that page are deprecated. Even though DEX metrics are still available throgh API we do not recommend using it.
 
 ## Description
 Metrics related to Decentralized Exchanges (DEX) trades of ERC20 tokens and ETH.
