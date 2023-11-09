@@ -7,7 +7,7 @@ description: DEX Metrics
 
 > DEX metrics have been migrated to a new framework, with new data starting from May 5, 2022. 
 > Data between February 9, 2017 and May 5, 2022, is sourced from the old 
-> framework ([Available DEXs for old framework](/metrics/dex/old_dex_list)). 
+> framework ([Available DEXs for old framework](/metrics/decentralized-exchange-metrics/old_dex_list)). 
 > **Although older data remains accessible through the API, we do not recommend its use.**
 
 ## Description
@@ -16,7 +16,7 @@ a central authority. Operating on blockchain technology, these exchanges empower
 peer-to-peer transactions, enhancing security and control over funds. DEXs embody the principles of 
 transparency and trustlessness, offering users a more resilient and inclusive financial ecosystem.
 
-List of decentralized exchanges: [Available Decentralized Exchanges](/metrics/dex/dex_list). 
+List of decentralized exchanges: [Available Decentralized Exchanges](/metrics/decentralized-exchange-metrics/dex_list). 
 Additionally, there is a label `unknown` for DEXs that haven't been labeled.
 
 Metrics are divided into four groups:
