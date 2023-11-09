@@ -1,38 +1,53 @@
 ---
-title: \[deprecated\] Decentralized Exchanges
-author: Maksim Razhev, Serge Nedashkovsky
+title: Decentralized Exchange Metrics
+author: Maksim Razhev, Serge Nedashkovsky, Filip
 date: 2021-01-25
 description: DEX Metrics
 ---
 
-> DEX metrics described on that page are deprecated. Even though DEX metrics are still available throgh API we do not recommend using it.
+> DEX metrics have been migrated to a new framework, with new data starting from May 5, 2022. 
+> Data between February 9, 2017 and May 5, 2022, is sourced from the old 
+> framework ([Available DEXs for old framework](/metrics/dex/old_dex_list)). 
+> **Although older data remains accessible through the API, we do not recommend its use.**
 
 ## Description
-Metrics related to Decentralized Exchanges (DEX) trades of ERC20 tokens and ETH.
+Decentralized exchanges, or DEXs, revolutionize cryptocurrency trading by eliminating the need for 
+a central authority. Operating on blockchain technology, these exchanges empower users with direct 
+peer-to-peer transactions, enhancing security and control over funds. DEXs embody the principles of 
+transparency and trustlessness, offering users a more resilient and inclusive financial ecosystem.
 
-Segmented by DEX:
-* `total_trade_volume_by_dex` - Volume of all trades
-* `eth_based_trade_volume_by_dex` - Volume of trades that involve ETH-Based tokens<sup>[1](#eth-based-tokens)</sup>
-* `stablecoin_trade_volume_by_dex` - Volume of trades that involve Stablecoins<sup>[2](#usd-based-stablecoins)</sup>
-* `other_trade_volume_by_dex` - Volume of trades that involve tokens that don't fall in any of the above categories 
-  (e.g. BAT)
-* `total_trade_amount_by_dex` - Amount of all trades
-* `eth_based_trade_amount_by_dex` - Amount of trades that involve ETH-Based tokens<sup>[1](#eth-based-tokens)</sup>
-* `stablecoin_trade_amount_by_dex` - Amount of trades that involve Stablecoins<sup>[2](#usd-based-stablecoins)</sup>
-* `other_trade_amount_by_dex` - Amount of trades that involve tokens that don't fall in any of the above categories 
-  (e.g. BAT)  
+List of decentralized exchanges: [Available Decentralized Exchanges](/metrics/dex/dex_list). 
+Additionally, there is a label `unknown` for DEXs that haven't been labeled.
 
-Segmented by DEX and asset:
-* `eth_trade_volume_by_token` - Volume of trades between ETH-Based tokens and a given ERC20 token
-* `stablecoin_trade_volume_by_token` - Volume of trades between Stablecoins<sup>[2](#usd-based-stablecoins)</sup> and a given ERC20 token
-* `token_eth_price_by_dex_5m` - Token ETH price segmented by DEX for trades between ETH-Based tokens<sup>[1](#eth-based-tokens)</sup> and a given 
-  ERC20 token
+Metrics are divided into four groups:
+
+#### Trade volume in USD segmented by DEX:
+* `total_trade_volume_by_dex` - Total trading volume in USD
+* `eth_based_trade_volume_by_dex` - Trading volume in USD involving ETH-based tokens<sup>[1](#eth-based-tokens)</sup>
+* `stablecoin_trade_volume_by_dex` - Trading volume in USD involving Stablecoins<sup>[2](#usd-based-stablecoins)</sup>
+* `other_trade_volume_by_dex` - The trading volume in USD involving tokens not falling into 
+any of the above categories
+
+#### Number of trades segmented by DEX:
+* `total_trade_amount_by_dex` - Number of all trades
+* `eth_based_trade_amount_by_dex` - Number of trades involving ETH-Based tokens<sup>[1](#eth-based-tokens)</sup>
+* `stablecoin_trade_amount_by_dex` - Number of trades involving Stablecoins<sup>[2](#usd-based-stablecoins)</sup>
+* `other_trade_amount_by_dex` - Number of trades involving tokens not falling into 
+any of the above categories
+
+#### Trade volume segmented by DEX and asset:
+* `eth_trade_volume_by_token` - Trading volume in ETH between ERC20 token and ETH-Based tokens<sup>[1](#eth-based-tokens)</sup>
+* `stablecoin_trade_volume_by_token` - Trading volume in USD between ERC20 token and Stablecoins<sup>[2](#usd-based-stablecoins)</sup>
+
+#### Token price in ETH segmented by DEX and asset:
+* `token_eth_price_by_dex_5m` - Token price in ETH segmented by DEX for trades between given ERC20 token 
+and ETH-based tokens <sup>[1](#eth-based-tokens)</sup>
 
 ---
 ### ETH Based Tokens
-ETH, ETH Kyber, WETH, ETHWrapped and Bancor ETH.
+ETH, WETH, ETH Kyber, ETHWrapped and Bancor ETH.
 ### USD-based Stablecoins
-Tether, USD coin, DAI, Binance USD, TrueUSD and etc.
+Tether, USD coin, DAI, Binance USD, TrueUSD and other stablecoins.
 
 ## Access
 
@@ -42,12 +57,14 @@ Tether, USD coin, DAI, Binance USD, TrueUSD and etc.
 
 ## Measuring Unit
 
+* `total_trade_volume_by_dex`, `eth_based_trade_volume_by_dex`, `stablecoin_trade_volume_by_dex`, 
+`other_trade_volume_by_dex` - Amount in USD
 * `total_trade_amount_by_dex`, `eth_based_trade_amount_by_dex`, `stablecoin_trade_amount_by_dex`, 
-  `other_trade_amount_by_dex` - Number of trades
-* `eth_trade_volume_by_token` - Amount of ETH
-* `stablecoin_trade_volume_by_token` - Amount of stablecoins
-* `token_eth_price_by_dex_5m` - Amount of ETH per coin 
-* Other - Amount of coins
+`other_trade_amount_by_dex` - Number of trades
+* `eth_trade_volume_by_token` - Amount in ETH
+* `stablecoin_trade_volume_by_token` - Amount in stablecoins
+* `token_eth_price_by_dex_5m` - Amount in ETH
+
 ---
 
 ## Data Type
@@ -71,19 +88,20 @@ Tether, USD coin, DAI, Binance USD, TrueUSD and etc.
 ## Available Assets
 
 * `total_trade_volume_by_dex`, `eth_based_trade_volume_by_dex`, `stablecoin_trade_volume_by_dex`, 
-  `other_trade_volume_by_dex` -  
-  `ethereum`, `multi-collateral-dai`, `bitcoin`
+  `other_trade_volume_by_dex`: multi-collateral-dai
 * `total_trade_amount_by_dex`, `eth_based_trade_amount_by_dex`, `stablecoin_trade_amount_by_dex`, 
-  `other_trade_amount_by_dex` -  
-  `multi-collateral-dai`
-* `eth_trade_volume_by_token`, `stablecoin_trade_volume_by_token`, `token_eth_price_by_dex_5m` -  
-  All ERC20 assets
+  `other_trade_amount_by_dex`: multi-collateral-dai
+* `eth_trade_volume_by_token`, `stablecoin_trade_volume_by_token`, `token_eth_price_by_dex_5m`: [ERC20 assets](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22token_eth_price_by_dex_5m%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
+> **Note:** `<>_trade_volume_by_dex` and `<>_trade_amount_by_dex` metrics are not asset-based.
+> They are related to DEX data and `multi-collateral-dai` is placeholder for the data.
 
 ---
 
 ### SanAPI
 
-Total Trade Volume by DEX:
+Trade volume metrics: `total_trade_volume_by_dex`, `eth_based_trade_volume_by_dex`, 
+`stablecoin_trade_volume_by_dex` and `other_trade_volume_by_dex`
 
 ```graphql
 {
@@ -91,11 +109,11 @@ Total Trade Volume by DEX:
     timeseriesData(
       selector: {
         slug: "multi-collateral-dai"
-      	owner: "UniswapV2"
+      	owner: "bancor_v3"
       	label: "decentralized_exchange"
       }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-01-07T00:00:00Z"
       interval: "5m"
     ) {
       datetime
@@ -104,88 +122,22 @@ Total Trade Volume by DEX:
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22total_trade_volume_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22UniswapV2%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22total_trade_volume_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22bancor_v3%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-ETH-Based Tokens Trade Volume by DEX:
+Number of trades metrics: `total_trade_amount_by_dex`, `eth_based_trade_amount_by_dex`, 
+`stablecoin_trade_amount_by_dex` and `other_trade_amount_by_dex`
 
-```graphql
-{
-  getMetric(metric: "eth_based_trade_volume_by_dex") {
-    timeseriesData(
-      selector: {
-        slug: "multi-collateral-dai"
-      	owner: "balancer"
-      	label: "decentralized_exchange"
-      }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
-      interval: "5m"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth_based_trade_volume_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22balancer%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
-Stablecoin Trade Volume by DEX:
-
-```graphql
-{
-  getMetric(metric: "stablecoin_trade_volume_by_dex") {
-    timeseriesData(
-      selector: {
-        slug: "multi-collateral-dai"
-      	owner: "balancer"
-      	label: "decentralized_exchange"
-      }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
-      interval: "5m"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22stablecoin_trade_volume_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22balancer%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
-Other Token Trade Volume by DEX:
-```graphql
-{
-  getMetric(metric: "other_trade_volume_by_dex") {
-    timeseriesData(
-      selector: {
-        slug: "multi-collateral-dai"
-      	owner: "balancer"
-      	label: "decentralized_exchange"
-      }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
-      interval: "5m"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22other_trade_volume_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22balancer%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
-Total Trade Amount by DEX:
 ```graphql
 {
   getMetric(metric: "total_trade_amount_by_dex") {
     timeseriesData(
       selector: {
         slug: "multi-collateral-dai"
-      	owner: "balancer"
+      	owner: "sushi_v2"
       	label: "decentralized_exchange"
       }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-01-07T00:00:00Z"
       interval: "5m"
     ) {
       datetime
@@ -194,86 +146,21 @@ Total Trade Amount by DEX:
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22total_trade_amount_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22balancer%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22total_trade_amount_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22sushi_v2%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-ETH-based Tokens Trade Amount by DEX:
-```graphql
-{
-  getMetric(metric: "eth_based_trade_amount_by_dex") {
-    timeseriesData(
-      selector: {
-        slug: "multi-collateral-dai"
-      	owner: "balancer"
-      	label: "decentralized_exchange"
-      }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
-      interval: "5m"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth_based_trade_amount_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22balancer%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+Trade volume between ERC20 token and ETH-based tokens: `eth_trade_volume_by_token`
 
-Stablecoin Trade Amount by DEX:
-```graphql
-{
-  getMetric(metric: "stablecoin_trade_amount_by_dex") {
-    timeseriesData(
-      selector: {
-        slug: "multi-collateral-dai"
-      	owner: "balancer"
-      	label: "decentralized_exchange"
-      }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
-      interval: "5m"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22stablecoin_trade_amount_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22balancer%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
-Other Trade Amount by DEX:
-```graphql
-{
-  getMetric(metric: "other_trade_amount_by_dex") {
-    timeseriesData(
-      selector: {
-        slug: "multi-collateral-dai"
-      	owner: "balancer"
-      	label: "decentralized_exchange"
-      }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
-      interval: "5m"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22other_trade_amount_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22balancer%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
-ETH-Based Token Trade Volume by DEX and Token:
 ```graphql
 {
   getMetric(metric: "eth_trade_volume_by_token") {
     timeseriesData(
       selector: {
-        slug: "basic-attention-token"
-      	owner: "UniswapV2"
+        slug: "chainlink"
+      	owner: "uniswap_v2"
       	label: "decentralized_exchange"
       }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-01-07T00:00:00Z"
       interval: "5m"
     ) {
       datetime
@@ -282,20 +169,21 @@ ETH-Based Token Trade Volume by DEX and Token:
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth_trade_volume_by_token%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22basic-attention-token%22%0A%20%20%20%20%20%20%09owner%3A%20%22UniswapV2%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth_trade_volume_by_token%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22chainlink%22%0A%20%20%20%20%20%20%09owner%3A%20%22uniswap_v2%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-Stablecoin Trade Volume by DEX and Token:
+Trade volume between ERC20 token and stablecoins: `stablecoin_trade_volume_by_token`
+
 ```graphql
 {
   getMetric(metric: "stablecoin_trade_volume_by_token") {
     timeseriesData(
       selector: {
-        slug: "tether"
-      	owner: "curve"
+        slug: "wrapped-bitcoin"
+      	owner: "uniswap_v3"
       	label: "decentralized_exchange"
       }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-01-07T00:00:00Z"
       interval: "5m"
     ) {
       datetime
@@ -304,20 +192,21 @@ Stablecoin Trade Volume by DEX and Token:
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22stablecoin_trade_volume_by_token%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22tether%22%0A%20%20%20%20%20%20%09owner%3A%20%22curve%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22stablecoin_trade_volume_by_token%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20%09owner%3A%20%22uniswap_v3%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-Token ETH Price by DEX
+Token ETH Price by DEX: `token_eth_price_by_dex_5m`
+
 ```graphql
 {
   getMetric(metric: "token_eth_price_by_dex_5m") {
     timeseriesData(
       selector: {
-        slug: "basic-attention-token"
-      	owner: "UniswapV2"
+        slug: "usd-coin"
+      	owner: "uniswap_v3"
       	label: "decentralized_exchange"
       }
-      from: "2021-01-01T00:00:00Z"
-      to: "2021-01-07T00:00:00Z"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-01-07T00:00:00Z"
       interval: "5m"
     ) {
       datetime
@@ -326,4 +215,4 @@ Token ETH Price by DEX
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22token_eth_price_by_dex_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22basic-attention-token%22%0A%20%20%20%20%20%20%09owner%3A%20%22UniswapV2%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222021-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222021-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22token_eth_price_by_dex_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22usd-coin%22%0A%20%20%20%20%20%20%09owner%3A%20%22uniswap_v3%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
