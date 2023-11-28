@@ -96,6 +96,8 @@ activity.
 
 ## Derivatives
 
+- [Funding Rates Aggregated](/metrics/funding-rates-aggregated)
+- [Open Interest](/metrics/open-interest)
 - [BitMEX](/metrics/bitmex)
 - [Binance](/metrics/binance)
 - [Bitfinex](/metrics/bitfinex)
