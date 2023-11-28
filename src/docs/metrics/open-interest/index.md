@@ -6,17 +6,17 @@ description: Total number of outstanding or open contracts in the market.
 ---
 
 ## Definition
-Open Interest represents the total number of outstanding contracts that have not been settled by an offsetting trade. For example, if trader A buys a futures contract from trader B, and neither has closed out their position, the open interest is one.
-Traders can close out their positions by taking an opposing position (if they were long, they can sell; if they were short, they can buy). Changes in open interest can reflect whether traders are initiating new positions or closing existing ones.
-There are three types of Open Interest metrics:
-- Open Interest per exchange - represents the sum of open interests of all contracts on given exchange for a given asset
-- Open Interest per settlement currency - represents the sum of open interests of all contracts for given settlement currency and asset
-- Total Open Interest - represents the sum of open interests of all contracts for a given asset
+Open interest represents the total number of outstanding contracts that have not been settled by an offsetting trade. For example, if trader A buys a futures contract from trader B, and neither has closed out their position, the open interest is one.
+Traders can close out their positions by taking an opposing position (sell if they were long or buy if they were short). Changes in open interest can reflect whether traders are initiating new positions or closing existing ones.
+There are three types of open interest metrics:
+- Open interest per exchange - represents the sum of open interests of all contracts on given exchange for a given asset
+- Open interest per settlement currency - represents the sum of open interests of all contracts for given settlement currency and asset
+- Total open interest - represents the sum of open interests of all contracts for a given asset
 ---
 
 ## Access
 
-[Restricted Access](/metrics/details/access#restricted-access).
+[Restricted Access](/metrics/details/access#restricted-access)
 
 ---
 
@@ -34,7 +34,7 @@ Dollars
 
 ## Frequency
 
-[Daily Intervals](/metrics/details/frequency#five-minute-freqency)
+[Five-minute Intervals](/metrics/details/frequency#five-minute-freqency)
 
 ---
 
@@ -46,21 +46,21 @@ Dollars
 
 ## Available Assets
 
-- Open Interest per exchange is available for [these
+- Open interest per exchange is available for [these
   assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22exchange_open_interest%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-- Open Interest per settlement currency is available for [these
+- Open interest per settlement currency is available for [these
   assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22open_interest_per_settlement_currency%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-- Total Open Interest is available for [these
+- Total open interest is available for [these
   assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22total_open_interest%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 ---
 
 ## SanAPI
 
-- Open Interest per exchange is available under the `exchange_open_interest` name.
-- Open Interest per settlement currency is available under the  `open_interest_per_settlement_currency` name.
-- Total Open Interest is available under the  `total_open_interest` name.
+- Open interest per exchange is available under the `exchange_open_interest` name.
+- Open interest per settlement currency is available under the  `open_interest_per_settlement_currency` name.
+- Total open interest is available under the  `total_open_interest` name.
 
 ```graphql
 {

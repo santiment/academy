@@ -296,7 +296,6 @@ export const REFERENCES = [
       'ETH2 Staking Address',
       'Factory',
       'Fund',
-      'Funding Rates Aggregated',
       'Gambling',
       'GameFi',
       'Genesis',

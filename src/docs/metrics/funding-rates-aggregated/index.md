@@ -9,22 +9,22 @@ description: Total number of outstanding or open contracts in the market.
 The funding rate is a recurring fee that long positions pay to short positions, or vice versa, at predetermined intervals (usually every 8 hours). The goal is to ensure that the price of the perpetual contract stays close to the spot price of the underlying asset.
 Perpetual futures contracts are a type of derivative that tracks the price of an underlying asset and is designed to closely mimic the spot market.
 
-Funding Rates Aggregated metrics use Open Interest for aggregation. Meaning the contract  with the biggest open interest will have the biggest impact on the final funding rate aggregated value.
-There are three types of Funding Rates Aggregated metrics:
-- Funding Rates Aggregated by Exchange - represents the aggregation of all funding rates by open interest on given exchange for a given asset
-- Funding Rates Aggregated by Settlement Currency - represents the aggregation of all funding rates by open interest per settlement currency for a given asset
-- Total Funding Rates Aggregated by Asset - represents the aggregation of all funding rates by open interest for a given asset
+Funding rates aggregated metrics use [Open Interest](/metrics/open-interest) for aggregation. Meaning the contract with the biggest open interest will have the biggest impact on the final funding rate aggregated value.
+There are three types of funding rates aggregated metrics:
+- Funding rates aggregated by exchange - represents the aggregation of all funding rates by open interest on given exchange for a given asset
+- Funding rates aggregated by settlement currency - represents the aggregation of all funding rates by open interest per settlement currency for a given asset
+- Total funding rates aggregated by asset - represents the aggregation of all funding rates by open interest for a given asset
 ---
 
 ## Access
 
-[Restricted Access](/metrics/details/access#restricted-access).
+[Restricted Access](/metrics/details/access#restricted-access)
 
 ---
 
 ## Measuring Unit
 
-Percentage
+Decimal percentage
 
 ---
 
@@ -36,7 +36,7 @@ Percentage
 
 ## Frequency
 
-[Daily Intervals](/metrics/details/frequency#five-minute-freqency)
+[Five-minute Intervals](/metrics/details/frequency#five-minute-freqency)
 
 ---
 
@@ -48,21 +48,21 @@ Percentage
 
 ## Available Assets
 
-- Funding Rates aggregated by exchange is available for [these
+- Funding rates aggregated by exchange is available for [these
   assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22funding_rates_aggregated_by_exchange%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-- Funding Rates aggregated by settlement currency is available for [these
+- Funding rates aggregated by settlement currency is available for [these
   assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22funding_rates_aggregated_by_settlement_currency%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-- Total Funding Rates aggregated by asset is available for [these
+- Total funding rates aggregated by asset is available for [these
   assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22total_funding_rates_aggregated_per_asset%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 ---
 
 ## SanAPI
 
-- Funding Rates aggregated by exchange available under the `funding_rates_aggregated_by_exchange` name.
-- Funding Rates aggregated by settlement currency is available for  `funding_rates_aggregated_by_settlement_currency` name.
-- Total Funding Rates aggregated by asset is available for `total_funding_rates_aggregated_per_asset` name.
+- Funding rates aggregated by exchange available under the `funding_rates_aggregated_by_exchange` name.
+- Funding rates aggregated by settlement currency is available for  `funding_rates_aggregated_by_settlement_currency` name.
+- Total funding rates aggregated by asset is available for `total_funding_rates_aggregated_per_asset` name.
 
 ```graphql
 {

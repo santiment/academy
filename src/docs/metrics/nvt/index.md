@@ -105,8 +105,8 @@ Ratio
 
 ## SanAPI
 
-- NVT using 1-day Circulation is availale under the `nvt` name.
-- NVT using Transaction volume is availale under the `nvt_transaction_volume` name.
+- NVT using 1-day Circulation is available under the `nvt` name.
+- NVT using Transaction volume is available under the `nvt_transaction_volume` name.
 
 ```graphql
 {
