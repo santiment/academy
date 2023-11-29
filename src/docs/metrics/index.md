@@ -24,6 +24,7 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [NFT Network Profit Loss](/metrics/nft-network-profit-loss)
 - [OHLC (Open-High-Low-Close)](/metrics/price/#ohlc)
 - [Price Volatility](/metrics/price-volatility)
+- [RSI](/metrics/rsi)
 - [Transacted Coin Acquisition Cost](/metrics/transacted-coin-acquisition-cost)
 - [Trading Volume in USD](/metrics/price/#volume-usd)
 
