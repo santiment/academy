@@ -250,6 +250,7 @@ export const REFERENCES = [
       'Spent Coins Age Band',
       'Stock To Flow',
       'Supply Distribution',
+      'Supply in Profit',
       'Supply On Or Outside Exchanges',
       'Top Holders',
       'Top Social Gainers Losers',
