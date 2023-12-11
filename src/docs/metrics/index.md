@@ -87,6 +87,7 @@ activity.
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
 - [Stock To Flow ratio](/metrics/stock-to-flow)
 - [Supply Distribution](/metrics/supply-distribution)
+- [Supply in Profit](/metrics/supply-in-profit)
 - [Supply On Or Outside Exchanges](/metrics/supply-on-or-outside-exchanges)
 - [Top Holders](/metrics/top-holders)
 - [Transaction Count](/metrics/transaction-count)
