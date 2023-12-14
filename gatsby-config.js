@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Academy - Santiment Technical Documentation`,
-    description: `Collected wisdom about the Santiment products, tools, metrics.`,
+    title: `Crypto Academy: Learn How to Analyze Cryptocurrency Market`,
+    description: `Utilize our crypto academy as a comprehensive resource for knowledge about the crypto market, our products, tools, and metrics. Learn how to use these insights to enhance your market decisions.`,
     author: `Santiment Team`,
-    siteUrl: 'https://academy.santiment.net',
+    siteUrl: "https://academy.santiment.net",
   },
   plugins: [
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        whitelist: ['BACKEND_URL'],
+        whitelist: ["BACKEND_URL"],
       },
     },
     {
@@ -19,8 +19,8 @@ module.exports = {
         apiKey: "ad83a9a7b30fda58f4c61a55a73d9338", // Search API key
         indexName: "santiment_academy", // required
         inputSelector: "#search", // required
-        debug: true
-      }
+        debug: true,
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
@@ -53,12 +53,10 @@ module.exports = {
       },
     },
     {
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [
-          `gatsby-remark-copy-images`,
-        ]
-      }
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-copy-images`],
+      },
     },
     {
       resolve: `gatsby-plugin-breadcrumb`,
@@ -72,7 +70,7 @@ module.exports = {
           `/offline-plugin-app-shell-fallback`,
         ],
         useClassNames: true,
-      }
-    }
+      },
+    },
   ],
 }
