@@ -1,5 +1,7 @@
 ---
 title: Metrics Overview
+headline: "Crypto Metrics: Explore our Set of Onchain Social & Dev Metrics"
+description: "Crypto metrics to delve into key on-chain, social, financial and development data to better understand and navigate the ever-evolving cryptocurrency landscape"
 author: Santiment Team
 date: 2022-04-21
 ---
@@ -12,6 +14,7 @@ time, to more easily spot how trends and events correlate with price action.
 ## Financial
 
 Traditional fundamentals including price, volume and market cap, mean coin age
+
 - [Price in USD, BTC and USDT](/metrics/price)
 - [Marketcap in USD](/metrics/marketcap)
 - [Trading Volume in USD](/metrics/trading-volume)
@@ -122,15 +125,17 @@ Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and ot
 
 ## XRPL Metrics
 
-The [XRP Ledger (XRPL)] (https://xrpl.org/) is a decentralized, public blockchain led by a global developer community.
+The [XRP Ledger (XRPL)](https://xrpl.org/) is a decentralized, public blockchain led by a global developer community.
 
 Santiment provide key metrics about the XRPL Chain which are listed below:
 
 ### Holder Metrics
+
 - [Number of accounts](/metrics/xrpl-metrics/number-of-accounts)
 - [Number of new accounts created](/metrics/network-growth/)
 
 ### Activity Metrics
+
 - [DEX Volume in USD](/metrics/xrpl-metrics/dex-volume-in-usd)
 - [Number of transactions](/metrics/transaction-count)
 - [Number of assets issued](/metrics/xrpl-metrics/assets-issued)

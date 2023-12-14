@@ -1,28 +1,30 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import cx from 'classnames'
-import { dateDifferenceInWords } from 'webkit/utils/dates'
-import { sluggify } from 'san-webkit/lib/utils/url'
-import SEO from '../components/seo'
-import Layout from '../components/layout'
-import Markdown from '../components/Markdown/Markdown'
-import ArticleHeadings from '../components/ArticleHeadings/ArticleHeadings'
-import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
-import ArticleFooter from '../components/ArticleFooter'
-import injectCustomMarkdownComponents from '../components/MarkdownCustomComponents'
+import React from "react"
+import { graphql } from "gatsby"
+import cx from "classnames"
+import { dateDifferenceInWords } from "webkit/utils/dates"
+import { sluggify } from "san-webkit/lib/utils/url"
+import SEO from "../components/seo"
+import Layout from "../components/layout"
+import Markdown from "../components/Markdown/Markdown"
+import ArticleHeadings from "../components/ArticleHeadings/ArticleHeadings"
+import Breadcrumb from "../components/Breadcrumb/Breadcrumb"
+import ArticleFooter from "../components/ArticleFooter"
+import injectCustomMarkdownComponents from "../components/MarkdownCustomComponents"
 import { usePageHash } from "../utils/utils"
-import styles from './article.module.scss'
-
+import styles from "./article.module.scss"
 
 const Template = ({ data, pageContext }) => {
   const { scrollToTargetAdjusted } = usePageHash()
   const { markdownRemark: article } = data
+
   const {
     breadcrumb: { crumbs },
   } = pageContext
   const meta = {
-    title: `${article.frontmatter.title} | Santiment Academy`,
-    description: `${article.frontmatter.description || ''}`,
+    title:
+      article.frontmatter.headline ||
+      `${article.frontmatter.title} | Santiment Academy`,
+    description: `${article.frontmatter.description || ""}`,
   }
   const lastUpdatedAt = dateDifferenceInWords(
     new Date(article.fields.lastUpdatedAt)
@@ -33,7 +35,13 @@ const Template = ({ data, pageContext }) => {
   return (
     <Layout isShowSidebar={true}>
       <SEO {...meta} />
-      <div className={cx(styles.wrapper, 'container', sluggify(article.frontmatter.title))}>
+      <div
+        className={cx(
+          styles.wrapper,
+          "container",
+          sluggify(article.frontmatter.title)
+        )}
+      >
         <Breadcrumb crumbs={crumbs} crumbLabel={article.frontmatter.title} />
         <ArticleHeadings
           crumbs={crumbs}
@@ -61,6 +69,7 @@ export const query = graphql`
         date
         author
         description
+        headline
       }
       fields {
         lastUpdatedAt
