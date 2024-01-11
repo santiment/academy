@@ -8,6 +8,34 @@ date: 2022-04-20
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
+## December 2023
+
+**Sanbase**
+
+- The explorer page now has more advanced filtering capabilities, including recently viewed items, likes, and your own creations.
+- The feed can be filtered by the projects you specify 
+- A more comprehensive explorer page, backed by robust filtering options, is now fully supported on our mobile version. 
+- We are constantly looking to enhance our analytics. We invite you to suggest a Twitter account at https://app.santiment.net/social-trends
+- Our updated Social Trends feature now includes an AI-generated summary of a chosen trend. 
+- Additional Social Trends updates include Trending Tokens and Alpha Narratives
+- We have added support for Apple Pay and Google Pay
+- The issue with the profile picture upload has been fixed
+
+**Charts**
+
+- We have expanded the metrics interval setting by adding more intervals
+- We have added these new chart metrics: Total Supply in profit, Percent of Total Supply in profit, RSI 4h, RSI 1d, and RSI 7d
+
+**New assets**
+
+- On Arbitrum: arb-arbdoge-ai, arb-frax, arb-magic-internet-money, arb-pendle
+- On BNB Chain: bnb-asta, bnb-binance-idr, bnb-cyberconnect, bnb-first-digital-usd, bnb-planettoken, bnb-tokpie, bnb-altura, bnb-avalanche, bnb-benft-solutions, bnb-chaingpt, bnb-cheelee, Bnb-open-campus, bnb-floki-inu, bnb-frax, bnb-hello-labs, bnb-lovely-inu, bnb-magic-internet-money, bnb-milc-platform, bnb-paxos-standard, bnb-strikecoin, bnb-trueusd, bnb-usdd
+- On Ethereum: katana-inu, gho, lootbot, moonbot, paypal-usd, wagie-bot, turbo, grok-erc, symbiosis-finance, leisuremeta, across-protocol, propchain, wagmi-game-2, cere-network, crustnetwork, cyberconnect, elysia, planettoken, echelon-prime, pointpay, radworks, harrypotterobamapacman8inu, maverick-protocol, mantle, pendle, quiztok, rollbit-coin, render, stader, unibot-eth, worldcoin-org, mongcoin, 0x0-ai-ai-smart-contract, adreward, arkham, airtor-protocol, bad-idea-ai, harrypotterobamasonic10inu-eth, combo-network, crvusd, coinweb, dacxi, dione-protocol, first-digital-usd, hippocrat, l, milady-meme-coin, lybra-finance, doge-killer, smardex, shib-original-vision, tamadoge, wall-street-bet, delysium, akita-inu, ava, big-time, dora-factory-new, fasttoken, havah, izumi-finance, myria, rektcoin, wall-street-memes
+- On Optimism: o-cyberconnect, o-frax, o-worldcoin-org, o-kwenta
+- On Polygon: p-orbcity, p-binance-usd, p-frax, p-dust-protocol, p-nakamoto-games, p-sportx, p-dimo, p-rebel-bots, p-carrieverse
+- On Avalanche: a-binance-usd, a-multi-collateral-dai, a-frax, a-magic-internet-money, a-trueusd, a-usd-coin, a-tether
+- Other: statter-network, pip, gari, defi-kingdoms, access-protocol, as-roma-fan-token, atletico-de-madrid-fan-token, galatasaray-fan-token, gleec, bald, bricks, lukso-network, moon, xdc-network, alex-lab, aleph-zero, dynex, neon, cannation, finschia, memetic, onomy-protocol, neutron-ntrn, ordinals, oxbt, planetwatch, snek, sui, alephium, bonk1, comtech-gold, evadore, superwalk, indigo-protocol, inter-milan-fan-token, minswap, ordi, roa-core, celestia
+
 ## April 2022
 
 `06.04.22 - 20.04.22`
