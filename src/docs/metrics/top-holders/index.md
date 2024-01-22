@@ -1,6 +1,9 @@
 ---
 title: Top Holders
 author: Santiment Team
+
+headline: "Top Token Holders: Track 100 Addresses With the Highest Balances"
+description: "Top token holders metric tracks the accumulated balance of the biggest holders of a certain asset, indicating potential market shifts based on their transactions."
 ---
 
 `Top Holders` describes a set of up to 100 Ethereum addresses which
