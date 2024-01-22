@@ -2,7 +2,11 @@
 title: Daily Active Deposits
 author: Santiment Team
 date: 2020-04-06
-description: Number of unique deposit addresses participating in transactions during one day
+
+headline: "Crypto Daily Active Addresses: Metric to Track Blockchain Activity"
+description: "The daily active addresses metric is the number of unique addresses participating in transactions during one day. Learn more about how we calculate it."
+---
+
 ---
 
 ## Definition
