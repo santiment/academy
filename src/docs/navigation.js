@@ -247,6 +247,7 @@ export const REFERENCES = [
       'Sentiment Metrics',
       'Social Dominance',
       'Social Volume',
+      'Social Volume AI',
       'Spent Coins Age Band',
       'Stock To Flow',
       'Supply Distribution',
