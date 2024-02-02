@@ -39,7 +39,7 @@ Sanapi Plans provide access to various metrics through the API endpoint: https:/
 
 - Rate limits:
   - 600,000 API calls per month
-  - 30,000 API calls per month
+  - 30,000 API calls per hour
   - 600 API calls per minute
 - Full access to free metrics
 - Full access to restricted metrics
