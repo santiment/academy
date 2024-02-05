@@ -1,5 +1,5 @@
 ---
-title: Development Activity Metrics
+title: Development Activity Metric
 author: Santiment Team
 date: 2023-06-01
 
