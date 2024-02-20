@@ -144,7 +144,7 @@ Below you can find labels which are attached to every group from above. Please n
  - [NFT Influencer](/labels/nft-influencer)
  - [Used NFT marketplace](/labels/used-nft-marketplace)
  - [Whale](/labels/whale)
- - [Whale USD Balance](/labels/whale_usd_balance)
+ - [Whale USD Balance](/labels/whale-usd-balance)
  - [Lending User](/labels/lending-user)
  - TBA: Withdrawal
 
