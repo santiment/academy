@@ -320,7 +320,7 @@ export const REFERENCES = [
       'Proxy',
       'Used NFT marketplace',
       'Whale',
-      'Whale by USD Balance',
+      'Whale USD Balance',
       'Yield Farming'
     ],
   },
