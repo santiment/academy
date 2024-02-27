@@ -8,6 +8,30 @@ date: 2022-04-20
 Keep track of development updates, new product features and other items from our changelog.
 We update this page every two weeks or more frequently.
 
+## February 2024
+
+**General**
+
+- The winners of the New Year Campaign had a chance to learn alpha in private calls with Santiment founder and market analysts.
+- Affiliate program is relaunched, https://medium.com/santiment/santiment-is-proud-to-announce-the-relaunch-of-our-referral-program-now-with-increased-commission-e8b7feb5606c
+- BTC ETF volumes dashboard is live, https://queries.santiment.net/dashboard/etf-volumes-728
+- Gini Index and Annual Inflation Rate dashboard is live, https://queries.santiment.net/dashboard/gini-index-and-annual-inflation-rate-738
+- Santiment daily metrics framework gets 10x faster.
+- BNB-chain-based tokens data pipeline is fixed, Santiment is providing BNB chain data again. Limitations apply.
+- Santiment Feed expands to Google News: https://news.google.com/publications/CAAqBwgKMNLDqQww5MO2BA?ceid=US:en&oc=3&hl=en-US&gl=US
+- Active SanR validator nodes count increased to 30, https://nodes.sanr.network/
+- An application for creating manual signals for buying and selling, SanR, has been upgraded to a completely new version. SanR v2 is live on https://sanr.app/battle/
+
+**New assets**
+
+- On Arbitrum: KUJI, SPA, XAI.
+- On Avalanche: COQ, HEC.
+- On BNB Chain: AI, BABYBONK, ELDA, GTAI, KICKS, MF, NFP, OFN, PALM, SQR, TLC.
+- On Ethereum: ALT, BANANA, BBANK, BEAM, BOTTO, CAH, CHEQ, DEL, DMTR, FLIP, GHX, IMPT, KUJI, LMWR, MAVIA, MEME, ML, OGV, ONDO, OVR, PAAL, PEPE2.0, POL, PORK, SAVM, SHRAP, STFX, TET, TLOS, TOKEN, TRVL, VIC, ZKB.
+- On Polygon: ASK, CPR, FAR, FYN, KASTA, WIFI.
+- Other: 1000SATS, AFC, ANALOS, CETUS, CLEG, DYM, ERG, EXFI, FEVR, FLIX, GMMT, GRUM, IOT, ISLM, JOY, JTO, JUP, KLEVA, KMA, KYVE, LING, MANTA, MNDE, MOBILE, MPLX, MYRO, NAP, OMAX, PROP, PYTH, PZP, SEI, SILLY, SSWP, STIK, TRA, UX, WEN, WIF, WLKN, ZETA.
+
+
 ## December 2023
 
 **Sanbase**
