@@ -39,7 +39,7 @@ Here, we've provided the Bridge Transactions table along with its columns, conci
 
 ### bridge\_transactions
 
-The `bridge_transactions` table is designed to store information about liquidity pool creation events on DEX protocols. It has the following columns:
+The `bridge_transactions` table is designed to capture and store detailed information about transactions occurring on a bridge between different blockchain networks. Each row in this table represents a single transaction, and the table includes various attributes to provide comprehensive insights into the transaction process. It has the following columns:
 
 - **tx_hash** (*String*): Hash of the transaction.
 - **log_index** (*UInt32*): Log index of the   event.
