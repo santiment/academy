@@ -28,6 +28,8 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [OHLC (Open-High-Low-Close)](/metrics/price/#ohlc)
 - [Price Volatility](/metrics/price-volatility)
 - [RSI](/metrics/rsi)
+- [Annual Inflation Rate](/metrics/annual-inflation-rate)
+- [Gini Index](/metrics/gini-index)
 - [Transacted Coin Acquisition Cost](/metrics/transacted-coin-acquisition-cost)
 - [Trading Volume in USD](/metrics/price/#volume-usd)
 
