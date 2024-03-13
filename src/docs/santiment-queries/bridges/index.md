@@ -44,11 +44,11 @@ The `bridge_transactions` table is designed to capture and store detailed inform
 - **tx_hash** (*String*): Hash of the transaction.
 - **log_index** (*UInt32*): Log index of the   event.
 - **dt** (*DateTime*): Date and time of the transaction
-- **chain_in** (*String*): The Blockchain from where the transaction was initiated
-- **chain_out** (*String*): The target blockchain to recieve the funds.
+- **chain_in** (*String*): The target blockchain to recieve the funds.
+- **chain_out** (*String*): The Blockchain from where the transaction was initiated
 - **contract_addr** (*String*): Address of the involved smart contract.
-- **token_in** (*Nullable(String)*): Type of token sent into the bridge.
-- **token_out** (*Nullable(String)*): Type of token received from the bridge.
+- **token_in** (*Nullable(String)*): Type of token received from the bridge.
+- **token_out** (*Nullable(String)*): Type of token sent into the bridge.
 - **amount_in** (*UInt256*): Quantity of token_in.
 - **amount_out** (*UInt256*): Quantity of token_out.
 - **project_name** (*String*): Name or identifier of the associated project.
@@ -60,42 +60,6 @@ The `bridge_transactions` table is designed to capture and store detailed inform
 
 ## Sample Queries
 
-### Get all WBTC mint transactions
+We've put together a dashboard with several queries to assist you in monitoring transaction volume and count, as well as the top 10 transactions or bridge flows. You can utilize our queries for a quick data check, or dive deeper by clicking on each query's name within the dashboard to customize them to your preferences.
 
-```sql
-SELECT *
-FROM bridge_transactions
-WHERE project_name = 'wbtc' AND action = 'mint'
-```
-Test in [Queries](https://queries.santiment.net/query/get-all-wbtc-mint-transactions-330)
-
-### Get all WBTC burn transactions
-
-```sql
-SELECT *
-FROM bridge_transactions
-WHERE project_name = 'wbtc' AND action = 'burn'
-```
-Test in [Queries](https://queries.santiment.net/query/get-all-wbtc-burn-transactions-329)
-
-### Get the total amount of WBTC minted and burned in a specific time range
-
-```sql
-SELECT action, SUM(amount_in) as total_amount
-FROM bridge_transactions
-WHERE project_name = 'wbtc' AND dt BETWEEN '2022-01-01' AND '2022-01-31'
-GROUP BY action
-```
-Test in [Queries](https://queries.santiment.net/query/get-the-total-amount-of-wbtc-minted-and-burned-in-a-specific-time-range-329)
-
-### Get the top 10 users with the highest WBTC mint transactions:
-
-```sql
-SELECT user, SUM(amount_in) as total_amount
-FROM bridge_transactions
-WHERE project_name = 'wbtc' AND action = 'mint'
-GROUP BY user
-ORDER BY total_amount DESC
-LIMIT 10
-```
-Test in [Queries](https://queries.santiment.net/query/get-the-top-10-users-with-the-highest-wbtc-mint-transactions-333)
+[Bridge Dashboard](https://queries.santiment.net/dashboard/bridges-710)

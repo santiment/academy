@@ -225,7 +225,6 @@ export const REFERENCES = [
       'Exchange Funds Flow',
       'Labeled Balance',
       'Labeled Exchange',
-      'Labeled Flow',
       'Lending and Borrowing Protocols',
       'MakerDAO',
       'Mean Coin Age',
