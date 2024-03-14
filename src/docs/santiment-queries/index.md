@@ -13,6 +13,7 @@ description: Database explorer & research tool
 - [Rate Limiting and Credits Cost](/santiment-queries/rate-limits-and-credits-cost) describes what limits are applied when you run queries.
 - [API Access](/santiment-queries/api-access) shows how to execute the queries using the API instead of the web interface.
 - [Prices Tables Overview](/santiment-queries/prices-tables/) gives information about the tables related to prices, trading volume and marketcap
+- [Bridge Transactions Table Overview](/santiment-queries/bridges/) show how to gather data on cryptocurrency exchanges across various blockchain networks.
 - [Lending Pools Overview](/santiment-queries/lending-pools/) tracks the deposits, borrows, repayments, withdraws and liquidate actions happened on lending protocols. 
 - [DEX Pools Overview](/santiment-queries/dex-pools/) gives information about the dex pools tables in Santiment Queries.
 - [NFT Tables Overview](/santiment-queries/nft-tables) gives information about the nft related tables in Santiment Queries.

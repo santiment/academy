@@ -121,7 +121,7 @@ WHERE
     AND dpt.token_in = LOWER('0xdAC17F958D2ee523a2206206994597C13D831ec7') --USDT
     AND dt >= now() - interval 30 DAY
 ```
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtSUM(dpt.amount_in)%2F1e6%20as%20total_amount%5CnFROM%20%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5Cn%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20%27uniswap_v3%27%5Cn%5CtAND%20dpt.token_in%20%3D%20LOWER(%270xdAC17F958D2ee523a2206206994597C13D831ec7%27)%20--USDT%5Cn%5CtAND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22total_amount%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtSUM(dpt.amount_in)%2F1e6%20as%20total_amount%5CnFROM%20%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5Cn%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20'uniswap_v3'%5Cn%5CtAND%20dpt.token_in%20%3D%20LOWER('0xdAC17F958D2ee523a2206206994597C13D831ec7')%20--USDT%5Cn%5CtAND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22total_amount%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+Test in [Queries](https://queries.santiment.net/query/volume-of-a-specific-token-on-a-specific-exchange-for-the-last-30-days-383)
 
 ### Number of trades that occurred in the past 30 days on a specific exchange
 
@@ -137,7 +137,7 @@ WHERE
     AND dt >= now() - interval 30 DAY
 ```
 
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(*)%20AS%20trade_count%5CnFROM%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20%27curve%27%5Cn%20%20AND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22trade_count%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+Test in [Queries](https://queries.santiment.net/query/number-of-trades-that-occurred-in-the-past-30-days-on-a-specific-exchange-385)
 
 ### Unique Traders in the Past 30 Days on DODO Exchange
 
@@ -153,7 +153,7 @@ WHERE
     AND dt >= now() - interval 30 DAY
 ```
 
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(DISTINCT%20from)%20AS%20unique_trader%5CnFROM%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20%27dodo%27%5Cn%20%20AND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22unique_trader%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(DISTINCT%20from)%20AS%20unique_trader%5CnFROM%5Cn%5Ctdex_pools_trades%20dpt%20%5Cn%5CtINNER%20JOIN%20dex_pools%20dp%5Cn%5CtON%20dp.pool_address%20%3D%20dpt.pool_address%5CnWHERE%5Cn%5Ctdp.project_name%20%3D%20%27dodo%27%5Cn%20%20AND%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22unique_trader%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+Test in [Queries](https://queries.santiment.net/query/unique-traders-in-the-past-30-days-on-dodo-exchange-386)
 
 ### Number of Pools on a Specific Exchange
 
@@ -166,7 +166,7 @@ WHERE
     project_name = 'sushi_v2'
 ```
 
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(DISTINCT%20pool_address)%20AS%20pool_count%5CnFROM%5Cn%5Ctdex_pools%5CnWHERE%5Cn%5Ctproject_name%20%3D%20%27sushi_v2%27%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22pool_count%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5CtCOUNT(DISTINCT%20pool_address)%20AS%20pool_count%5CnFROM%5Cn%5Ctdex_pools%5CnWHERE%5Cn%5Ctproject_name%20%3D%20'sushi_v2'%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22pool_count%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+Test in [Queries](https://queries.santiment.net/query/number-of-pools-on-a-specific-exchange-387)
 
 ---
 
@@ -181,7 +181,7 @@ ORDER BY fee DESC, project_name DESC
 LIMIT 50
 ```
 
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctpool_address%2C%20project_name%2C%20fee%5CnFROM%20%5Cn%5Ctdex_pools%5CnORDER%20BY%20fee%20DESC%2C%20project_name%20DESC%5CnLIMIT%2050%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22pool_address%22%7D%2C%7B%22title%22%3A%22project_name%22%7D%2C%7B%22title%22%3A%22fee%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctpool_address%2C%20project_name%2C%20fee%5CnFROM%20%5Cn%5Ctdex_pools%5CnORDER%20BY%20fee%20DESC%2C%20project_name%20DESC%5CnLIMIT%2050%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22pool_address%22%7D%2C%7B%22title%22%3A%22project_name%22%7D%2C%7B%22title%22%3A%22fee%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+Test in [Queries](https://queries.santiment.net/query/pool-fees-ranked-descending-388)
 
 ### Projects Ranked by Number of Pools
 
@@ -196,5 +196,5 @@ GROUP BY project_name
 ORDER BY pool_count DESC
 ```
 
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctproject_name%2C%5Cn%5CtMIN(dt)%20as%20start_date%2C%5Cn%5CtCOUNT(DISTINCT%20pool_address)%20AS%20pool_count%5CnFROM%20%5Cn%5Ctdex_pools%5CnGROUP%20BY%20project_name%5CnORDER%20BY%20pool_count%20DESC%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22project_name%22%7D%2C%7B%22title%22%3A%22start_date%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22pool_count%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%5Cn%5Ctproject_name%2C%5Cn%5CtMIN(dt)%20as%20start_date%2C%5Cn%5CtCOUNT(DISTINCT%20pool_address)%20AS%20pool_count%5CnFROM%20%5Cn%5Ctdex_pools%5CnGROUP%20BY%20project_name%5CnORDER%20BY%20pool_count%20DESC%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22project_name%22%7D%2C%7B%22title%22%3A%22start_date%22%2C%22formatterId%22%3A1%7D%2C%7B%22title%22%3A%22pool_count%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+Test in [Queries](https://queries.santiment.net/query/projects-ranked-by-number-of-pools-389)
 

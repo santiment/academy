@@ -98,7 +98,7 @@ ORDER BY day DESC
 LIMIT 100
 ```
 
-Test in [Queries](https://app.santiment.net/queries/dex-volume-per-asset-pari-in-xrp-509/071f9798-79f0-4369-9cb1-a8f4b7048a50)
+Test in [Queries](https://queries.santiment.net/query/dex-volume-per-asset-pair-measured-in-xrp-422)
 
 ---
 
@@ -121,4 +121,4 @@ ORDER BY dt DESC
 LIMIT 100
 ```
 
-Test in [Queries](https://app.santiment.net/queries/xrp-dex-volume-per-asset-pari-in-usd-510/a3fe5a05-d188-444f-86a3-df419a6cf910)
+Test in [Queries](https://queries.santiment.net/query/dex-volume-per-asset-pair-measured-in-usd-423)

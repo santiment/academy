@@ -44,6 +44,8 @@ ORDER BY
     date DESC
 ```
 
+Test in [Queries](https://queries.santiment.net/query/fetch-the-daily-closing-price-of-bitcoin-for-the-past-week-406)
+
 ### Query 2: Identify the Top Projects by USD Trading Volume in the Past 24 Hours
 
 To retrieve the top 20 cryptocurrency projects ranked by their average trading volume in USD over the last 24 hours, use the following SQL query.
@@ -62,3 +64,5 @@ ORDER BY
     avg_volume DESC
 LIMIT 20;
 ```
+
+Test in [Queries](https://queries.santiment.net/query/identify-the-top-projects-by-usd-trading-volume-in-the-past-24-hours-407)
