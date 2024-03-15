@@ -13,6 +13,7 @@ In **Santiment Queries**, we collect data from platforms or protocols which are 
 
 - Across
 - Arbitrum_bridge
+- Avalanche
 - Manta_pacific
 - Multichain
 - Op_bridge
