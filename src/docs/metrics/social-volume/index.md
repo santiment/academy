@@ -119,10 +119,12 @@ search term](social-volume-search-term.png)
 Available under the `social_volume_total` and `social_volume_total_<source>`
 names, where the available sources are:
 
+- 4chan
 - telegram
 - reddit
 - twitter
 - bitcointalk
+- youtube_videos
 - total (combines all sources)
 
 ### Social Volume for an asset

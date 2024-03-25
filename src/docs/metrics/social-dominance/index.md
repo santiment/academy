@@ -96,10 +96,12 @@ The combined social dominance from all sources is displayed
 Available under the `social_dominance_total` and `social_dominance_total_<source>`
 names, where the available sources are:
 
+- 4chan
 - telegram
 - reddit
 - twitter
 - bitcointalk
+- youtube_videos
 - total (combines all sources)
 
 ### Social Dominance for an asset

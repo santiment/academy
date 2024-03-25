@@ -42,6 +42,19 @@ channels, plus custom sentiment measurements analyzing crowd behavior. Includes
 emerging trend words and projects, word clouds to display related words and the
 possibility to enter custom search terms.
 
+All social/sentiment metrics contain <source> or total in the name.
+For example:
+- social_volume_total
+- social_volume_telegram
+- unique_social_volume_total_1d
+Available sources are:
+- 4chan
+- telegram
+- reddit
+- twitter
+- bitcointalk
+- total (combines all sources)
+
 - [Community Messages Count](/metrics/community-messages-count)
 - [Emerging Trends](/metrics/emerging-trends)
 - [Sentiment Metrics](/metrics/sentiment-metrics)
