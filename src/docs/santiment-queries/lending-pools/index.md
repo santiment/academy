@@ -64,7 +64,7 @@ AND action = 'deposit'
 AND token_in = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
 AND dt >= now() - interval 30 DAY
 ```
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20SUM(amount_in)%5CnFROM%20lending_pools_events%5CnWHERE%20project_name%20%3D%20%27aave_v2%27%20%5CnAND%20action%20%3D%20%27deposit%27%5Cnand%20token_in%20%3D%20%270xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2%27%5Cnand%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22sum(amount_in)%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+Test in [Queries](https://queries.santiment.net/query/total-deposits-for-a-certain-platform-394)
 
 ---
 
@@ -79,7 +79,7 @@ WHERE project_name = 'makerdao'
 AND action = 'liquidate'
 AND dt >= now() - interval 30 DAY
 ```
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20COUNT(*)%5CnFROM%20lending_pools_events%5CnWHERE%20project_name%20%3D%20%27makerdao%27%20%5CnAND%20action%20%3D%20%27liquidate%27%5Cnand%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22count()%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+Test in [Queries](https://queries.santiment.net/query/number-of-liquidations-for-a-certain-platform-395)
 
 ---
 
@@ -93,5 +93,5 @@ AND action = 'borrow'
 AND dt >= now() - interval 30 DAY
 ```
 
-Test in [Queries](https://app.santiment.net/queries/?panels=%5B%7B%22name%22%3A%22Default%20panel%20title%22%2C%22sql%22%3A%7B%22query%22%3A%22SELECT%20DISTINCT%20user%5CnFROM%20lending_pools_events%5CnWHERE%20project_name%20%3D%20%27compound%27%20%5CnAND%20action%20%3D%20%27borrow%27%5Cnand%20dt%20%3E%3D%20now()%20-%20interval%2030%20DAY%22%2C%22parameters%22%3A%7B%7D%7D%2C%22settings%22%3A%7B%22type%22%3A%22TABLE%22%2C%22layout%22%3A%5B0%2C0%2C6%2C3%5D%2C%22columns%22%3A%5B%7B%22title%22%3A%22user%22%7D%5D%2C%22parameters%22%3A%5B%5D%7D%7D%5D&selected=0)
+Test in [Queries](https://queries.santiment.net/query/unique-borrowers-for-a-certain-platform-unique-borrowers-on-compound-in-the-past-30-days-396)
 
