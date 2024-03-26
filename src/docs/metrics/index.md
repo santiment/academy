@@ -88,6 +88,7 @@ activity.
 - [Labeled Exchange](/metrics/labeled-exchange)
 - [Lending and Borrowing Protocols](/metrics/lending-and-borrowing-protocols)
 - [MakerDAO](/metrics/makerdao)
+- [MakerDAO DSR](/metrics/makerdao-dsr)
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
 - [Stock To Flow ratio](/metrics/stock-to-flow)
 - [Supply Distribution](/metrics/supply-distribution)
