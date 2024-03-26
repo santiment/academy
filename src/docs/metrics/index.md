@@ -20,6 +20,7 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [Trading Volume in USD](/metrics/trading-volume)
 - [Decentralized Exchange Metrics](/metrics/decentralized-exchange-metrics)
 - [Ethereum Spent](/metrics/ethereum-spent)
+- [Ethereum Fees](/metrics/ethereum-fees)
 - [Mean Coin Age](/metrics/mean-coin-age)
 - [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
 - [NFT Collection Price](/metrics/nft-collection-price)
