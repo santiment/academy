@@ -222,6 +222,7 @@ export const REFERENCES = [
       'Dormant Circulation',
       'Emerging Trends',
       'ETH 2',
+      'Ethereum Fees',
       'Ethereum Spent',
       'Exchange Funds Flow',
       'Gini Index',

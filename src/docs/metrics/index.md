@@ -18,6 +18,7 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [Price in USD, BTC and USDT](/metrics/price)
 - [Marketcap in USD](/metrics/marketcap)
 - [Trading Volume in USD](/metrics/trading-volume)
+- [Ethereum Fees](/metrics/ethereum-fees)
 - [Decentralized Exchange Metrics](/metrics/decentralized-exchange-metrics)
 - [Ethereum Spent](/metrics/ethereum-spent)
 - [Mean Coin Age](/metrics/mean-coin-age)
