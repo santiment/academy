@@ -39,7 +39,7 @@ Fees burnt metrics:
 
 Fees to network circulation metric:
 - `fees_to_network_circulation_usd_1d`: Calculated using the formula: $\frac{\text{fees} * \text{daily\_avg\_price\_usd}}{\text{network\_circulation\_usd\_1d}}$
-where networkCirculationUsdDay represents the total value in USD of all coins moved on Ethereum
+where network_circulation_usd_1d represents the total value in USD of all coins moved on Ethereum
 
 ---
 
