@@ -27,20 +27,20 @@ Ethereum fees metrics:
 - `fees_usd`:  Total fees paid in USD over a daily interval
 - `fees_usd_intraday`: Total fees paid in USD over 5-minute time intervals
 
-
+Aggregated fees metrics:
 - `average_fees_usd`: Average fees paid in USD over a daily interval
 - `average_fees_usd_5m`: Average fees paid in USD over 5-minute time intervals
 - `median_fees_usd`: Median fees paid in USD over a daily interval
 - `median_fees_usd_5m`: Median fees paid in USD over 5-minute time intervals
 
-
+Fees burnt metrics:
 - `fees_burnt_5m`: Fees burnt (removed from circulation) in ETH within a 5-minute interval
 - `fees_burnt_usd_5m`: Fees burnt (removed from circulation) in USD within a 5-minute interval
 
-
+Fees to network circulation metric:
 - `fees_to_network_circulation_usd_1d`: Calculated using the formula:
-`fees * daily_avg_price_usd / network_circulation_usd_1d` where network_circulation_usd_1d represents 
-the total value in USD of all coins moved on Ethereum
+$$\frac{\text{(fees)} * \text{(daily_avg_price_usd)}}{\text{(network_circulation_usd_1d)}}$$ where 
+network_circulation_usd_1d represents the total value in USD of all coins moved on Ethereum
 
 ---
 
