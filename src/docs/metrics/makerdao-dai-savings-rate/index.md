@@ -1,8 +1,8 @@
 ---
-title: MakerDAO DSR (DAI Savings Rate)
+title: MakerDAO DAI Savings Rate
 author: Filip
 date: 2024-03-01
-description: MakerDAO DSR (DAI Savings Rate)
+description: MakerDAO DAI Savings Rate
 ---
 
 ## Description
