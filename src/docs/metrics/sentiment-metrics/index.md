@@ -1,7 +1,7 @@
 ---
 title: Sentiment Metrics
 author: Ivan Klimuk, Santiment authors
-date: 2021-08-24
+date: 2024-03-27
 # REF metrics-hub/metricshub/sentiment_positive.py
 # REF metrics-hub/metricshub/sentiment_negative.py
 # REF metrics-hub/metricshub/sentiment_balance.py

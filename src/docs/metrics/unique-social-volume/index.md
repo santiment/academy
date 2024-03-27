@@ -1,7 +1,7 @@
 ---
 title: Unique Social Volume
 author: Ivan
-date: 2021-07-14
+date: 2024-03-27
 description: The amount of messages/documents containing a given search term without spam
 # REF metrics-hub/metricshub/unique_social_volume.py
 ---
