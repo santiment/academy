@@ -1,7 +1,7 @@
 ---
 title: Unique Social Volume
 author: Ivan
-date: 2021-07-14
+date: 2024-03-27
 description: The amount of messages/documents containing a given search term without spam
 # REF metrics-hub/metricshub/unique_social_volume.py
 ---
@@ -20,8 +20,9 @@ There are two separate metrics for the unique social volume:
 
 - unique_social_volume_total_5m
 - unique_social_volume_total_1h
+- unique_social_volume_total_1d
 
-The `5m` and `1h` control what range of data is used. If some spam messages are
+The `5m`, `1h` and `1d` control what range of data is used. If some spam messages are
 posted in the span of 30 minutes, then every one of the six  5-minute buckets would have
 one copy of that message. In the case of `1h` all these messages would be reduced
 to a single one, thus providing more aggresive spam filtering.

@@ -1,7 +1,7 @@
 ---
 title: Social Dominance
 author: Santiment Team
-date: 2022-10-18
+date: 2024-03-27
 description: Share of the crypto discussions that refer to an asset/phrase
 # REF metrics-hub/metricshub/social_dominance.py
 ---
@@ -96,10 +96,12 @@ The combined social dominance from all sources is displayed
 Available under the `social_dominance_total` and `social_dominance_total_<source>`
 names, where the available sources are:
 
+- 4chan
 - telegram
 - reddit
 - twitter
 - bitcointalk
+- youtube_videos
 - total (combines all sources)
 
 ### Social Dominance for an asset

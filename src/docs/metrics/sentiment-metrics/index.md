@@ -1,7 +1,7 @@
 ---
 title: Sentiment Metrics
 author: Ivan Klimuk, Santiment authors
-date: 2021-08-24
+date: 2024-03-27
 # REF metrics-hub/metricshub/sentiment_positive.py
 # REF metrics-hub/metricshub/sentiment_negative.py
 # REF metrics-hub/metricshub/sentiment_balance.py
@@ -99,6 +99,17 @@ this can be found [here](/metrics/social-volume-metrics/#available-assets).
 
 The metric is available **for any selected asset**.
 
+##### SanAPI
+
+Available under the `sentiment_positive_total` `sentiment_positive_<source>`
+- 4chan
+- telegram
+- reddit
+- twitter
+- bitcointalk
+- youtube_videos
+- total (combines all sources)
+
 #### Availability
 
 |           | Free | Basic | Pro                | Pro+               | Enterprise         |
@@ -136,6 +147,18 @@ Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 The metric is available **for any selected asset**.
 
+
+##### SanAPI
+
+Available under the `sentiment_balance_total` and `sentiment_balance_<source>`
+- 4chan
+- telegram
+- reddit
+- twitter
+- bitcointalk
+- youtube_videos
+- total (combines all sources)
+
 #### Availability
 
 |           | Free | Basic | Pro                | Pro+               | Enterprise         |
@@ -144,7 +167,7 @@ The metric is available **for any selected asset**.
 | SanAPI    | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Sansheets | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-### 3. Sentiment Weighted
+### 3. Sentiment Weighted / Sentiment Volume Consumed
 
 #### Definition
 
@@ -193,6 +216,17 @@ Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### How to Access
+
+#### SanAPI
+
+Available under the `sentiment_volume_consumed_total` `sentiment_volume_consumed_<source>`
+- 4chan
+- telegram
+- reddit
+- twitter
+- bitcointalk
+- youtube_videos
+- total (combines all sources)
 
 ##### [Sanbase](https://app.santiment.net/s/p_5roQjX)
 
