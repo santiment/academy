@@ -20,13 +20,6 @@ the past 24 hours. Example: The value of the metric at 17:30pm on March 22
 contains the active addresses in the interval [17:30pm March 21, 17:30pm March
 22].
 
-There are multiple metrics that are similar to this one, but use a different time span:
-- active_addresses_1h
-- active_addresses_24h
-- active_addresses_7d
-- active_addresses_30d
-- active_addresses_60d
-- active_addresses_90d
 
 ## Access
 
@@ -93,3 +86,20 @@ Available under the `active_addresses_24h` name.
 
 [Run in
 explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
+
+## Full list of metrics
+
+The full list of Active Addresses metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+- active_addresses_1h
+- active_addresses_24h
+- active_addresses_7d
+- active_addresses_30d
+- active_addresses_60d
+- active_addresses_90d
+
+</Details>
