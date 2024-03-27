@@ -44,10 +44,12 @@ emerging trend words and projects, word clouds to display related words and the
 possibility to enter custom search terms.
 
 All social/sentiment metrics contain <source> or total in the name.
+
 For example:
 - social_volume_total
 - social_volume_telegram
 - unique_social_volume_total_1d
+
 Available sources are:
 - 4chan
 - telegram
