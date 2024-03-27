@@ -38,8 +38,11 @@ Fees burnt metrics:
 - `fees_burnt_usd_5m`: Fees burnt (removed from circulation) in USD within a 5-minute interval
 
 Fees to network circulation metric:
-- `fees_to_network_circulation_usd_1d`: Calculated using the formula: $\frac{\text{fees} * \text{daily\_avg\_price\_usd}}{\text{network\_circulation\_usd\_1d}}$
-where network_circulation_usd_1d represents the total value in USD of all coins moved on Ethereum
+- `fees_to_network_circulation_usd_1d`: Calculated using the formula: 
+$$
+\frac{\text{fees} * \text{daily\_avg\_price\_usd}}{\text{network\_circulation\_usd\_1d}}
+$$
+where $\text{network\_circulation\_usd\_1d}$ represents the total value in USD of all coins moved on Ethereum
 
 ---
 
