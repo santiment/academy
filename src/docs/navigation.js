@@ -81,8 +81,7 @@ export const GUIDES = [
       'Logging into Sanbase',
       {
         slug: 'Requesting display new project',
-        title:
-          'Request to Display New Project',
+        title: 'Request to Display New Project',
       },
       'Social Tool',
       { slug: 'Emerging trends page', title: 'Social Trends page' },
@@ -97,7 +96,19 @@ export const GUIDES = [
         <br />& research tool
       </>
     ),
-    articles: ['Introduction', 'Exploration', 'Writing SQL Queries', 'API Access', 'Rate Limits and Credits Cost', 'Prices Tables', { slug: 'bridges', title: 'Bridge Transactions' }, 'Lending Pools', 'DEX Pools', 'NFT Tables', 'XRPL Tables'],
+    articles: [
+      'Introduction',
+      'Exploration',
+      'Writing SQL Queries',
+      'API Access',
+      'Rate Limits and Credits Cost',
+      'Prices Tables',
+      { slug: 'bridges', title: 'Bridge Transactions' },
+      'Lending Pools',
+      'DEX Pools',
+      'NFT Tables',
+      'XRPL Tables',
+    ],
   },
   {
     title: 'SanAPI',
@@ -108,7 +119,14 @@ export const GUIDES = [
         <br />& documentation
       </>
     ),
-    articles: ['Accessing the API', 'Supported Blockchains', 'Fetching Metrics', 'Common Queries', 'Rate Limits', 'Complexity'],
+    articles: [
+      'Accessing the API',
+      'Supported Blockchains',
+      'Fetching Metrics',
+      'Common Queries',
+      'Rate Limits',
+      'Complexity',
+    ],
   },
   {
     title: 'Sansheets',
@@ -136,15 +154,15 @@ export const GUIDES = [
       'Access Plans',
       {
         slug: 'sanbase-plans',
-        title: 'Access Plans - Sanbase'
+        title: 'Access Plans - Sanbase',
       },
       {
         slug: 'sanapi-plans',
-        title: 'Access Plans - SanAPI'
+        title: 'Access Plans - SanAPI',
       },
       {
         slug: 'special-restrictions',
-        title: 'Access Plans - Special Restrictions'
+        title: 'Access Plans - Special Restrictions',
       },
       'Santiment Products',
       'How to pay with crypto',
@@ -208,7 +226,6 @@ export const REFERENCES = [
       'Bitfinex Derivatives',
       'BitMEX Derivatives',
       'Deribit Derivatives',
-      'Daily Aggregated Financial Metrics',
       'FTX Derivatives',
       'Funding Rates Aggregated',
       'Huobi Derivatives',
@@ -217,6 +234,7 @@ export const REFERENCES = [
       'Community Messages Count',
       'Daily Active Addresses',
       'Daily Active Deposits',
+      'Daily Aggregated Financial Metrics',
       'DeFi',
       'Development Activity',
       'Decentralized Exchange Metrics',
@@ -325,7 +343,7 @@ export const REFERENCES = [
       'Used NFT marketplace',
       'Whale',
       'Whale USD Balance',
-      'Yield Farming'
+      'Yield Farming',
     ],
   },
   {
