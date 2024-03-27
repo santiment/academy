@@ -32,7 +32,7 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [Annual Inflation Rate](/metrics/annual-inflation-rate)
 - [Gini Index](/metrics/gini-index)
 - [Transacted Coin Acquisition Cost](/metrics/transacted-coin-acquisition-cost)
-- [Trading Volume in USD](/metrics/price/#volume-usd)
+- [Daily Aggregated Financial Metrics in USD](/metrics/daily-aggregated-financial-metrics)
 
 ## Social/Sentiment
 
