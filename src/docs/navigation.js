@@ -230,6 +230,7 @@ export const REFERENCES = [
       'Labeled Exchange',
       'Lending and Borrowing Protocols',
       'MakerDAO',
+      'MakerDAO DSR (DAI Savings Rate)',
       'Mean Coin Age',
       'MVRV',
       'Network Growth',
