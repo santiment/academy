@@ -237,3 +237,107 @@ Example of query for **MVRV long-short difference**:
 
 **[Run in
 explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22mvrv_long_short_diff_usd%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
+
+## Full list of metrics
+
+The full list of MVRV metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+
+- mvrv_long_short_diff_usd
+- mvrv_usd
+- mvrv_usd_10y
+- mvrv_usd_180d
+- mvrv_usd_180d_change_1d
+- mvrv_usd_180d_change_30d
+- mvrv_usd_180d_change_7d
+- mvrv_usd_1d
+- mvrv_usd_2y
+- mvrv_usd_30d
+- mvrv_usd_30d_change_1d
+- mvrv_usd_30d_change_30d
+- mvrv_usd_30d_change_7d
+- mvrv_usd_365d
+- mvrv_usd_365d_change_1d
+- mvrv_usd_365d_change_30d
+- mvrv_usd_365d_change_7d
+- mvrv_usd_3y
+- mvrv_usd_5y
+- mvrv_usd_60d
+- mvrv_usd_60d_change_1d
+- mvrv_usd_60d_change_30d
+- mvrv_usd_60d_change_7d
+- mvrv_usd_7d
+- mvrv_usd_7d_change_1d
+- mvrv_usd_7d_change_30d
+- mvrv_usd_7d_change_7d
+- mvrv_usd_90d
+- mvrv_usd_90d_change_1d
+- mvrv_usd_90d_change_30d
+- mvrv_usd_90d_change_7d
+- mvrv_usd_change_1d
+- mvrv_usd_change_30d
+- mvrv_usd_change_7d
+- mvrv_usd_intraday
+- mvrv_usd_intraday_10y
+- mvrv_usd_intraday_180d
+- mvrv_usd_intraday_1d
+- mvrv_usd_intraday_2y
+- mvrv_usd_intraday_30d
+- mvrv_usd_intraday_365d
+- mvrv_usd_intraday_3y
+- mvrv_usd_intraday_5y
+- mvrv_usd_intraday_60d
+- mvrv_usd_intraday_7d
+- mvrv_usd_intraday_90d
+- mvrv_usd_z_score
+- mvrv_usd
+- mvrv_usd_10y
+- mvrv_usd_180d
+- mvrv_usd_180d_change_1d
+- mvrv_usd_180d_change_30d
+- mvrv_usd_180d_change_7d
+- mvrv_usd_1d
+- mvrv_usd_2y
+- mvrv_usd_30d
+- mvrv_usd_30d_change_1d
+- mvrv_usd_30d_change_30d
+- mvrv_usd_30d_change_7d
+- mvrv_usd_365d
+- mvrv_usd_365d_change_1d
+- mvrv_usd_365d_change_30d
+- mvrv_usd_365d_change_7d
+- mvrv_usd_3y
+- mvrv_usd_5y
+- mvrv_usd_60d
+- mvrv_usd_60d_change_1d
+- mvrv_usd_60d_change_30d
+- mvrv_usd_60d_change_7d
+- mvrv_usd_7d
+- mvrv_usd_7d_change_1d
+- mvrv_usd_7d_change_30d
+- mvrv_usd_7d_change_7d
+- mvrv_usd_90d
+- mvrv_usd_90d_change_1d
+- mvrv_usd_90d_change_30d
+- mvrv_usd_90d_change_7d
+- mvrv_usd_change_1d
+- mvrv_usd_change_30d
+- mvrv_usd_change_7d
+- mvrv_usd_intraday
+- mvrv_usd_intraday_10y
+- mvrv_usd_intraday_180d
+- mvrv_usd_intraday_1d
+- mvrv_usd_intraday_2y
+- mvrv_usd_intraday_30d
+- mvrv_usd_intraday_365d
+- mvrv_usd_intraday_3y
+- mvrv_usd_intraday_5y
+- mvrv_usd_intraday_60d
+- mvrv_usd_intraday_7d
+- mvrv_usd_intraday_90d
+- mvrv_usd_z_score
+
+</Details>
