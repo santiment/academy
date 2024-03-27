@@ -99,6 +99,17 @@ this can be found [here](/metrics/social-volume-metrics/#available-assets).
 
 The metric is available **for any selected asset**.
 
+##### SanAPI
+
+Available under the `sentiment_positive_total` `sentiment_positive_<source>`
+- 4chan
+- telegram
+- reddit
+- twitter
+- bitcointalk
+- youtube_videos
+- total (combines all sources)
+
 #### Availability
 
 |           | Free | Basic | Pro                | Pro+               | Enterprise         |
@@ -135,6 +146,18 @@ Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 ##### [Sanbase](https://app.santiment.net/s/lL05ManV)
 
 The metric is available **for any selected asset**.
+
+
+##### SanAPI
+
+Available under the `sentiment_balance_total` and `sentiment_balance_<source>`
+- 4chan
+- telegram
+- reddit
+- twitter
+- bitcointalk
+- youtube_videos
+- total (combines all sources)
 
 #### Availability
 
@@ -196,7 +219,7 @@ Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
 
 #### SanAPI
 
-Available under the `sentiment_volume_consumed_total` `sentiment_balance_total` and `sentiment_balance_<source>`
+Available under the `sentiment_volume_consumed_total` `sentiment_volume_consumed_<source>`
 - 4chan
 - telegram
 - reddit
