@@ -10,15 +10,23 @@ description: Number of unique addresses participating in transactions for the la
 
 The number of distinct addresses that participated in a transfer for the given
 asset in the past 24 hours window. Each address is counted only once for the
-window. Both the senders and the receivers of the asset are counted.
+window. Both the senders and the receivers are counted.
 
 This metric is similar to the Daily Active Addresses. The difference is that the
 daily active addresses is computed on whole days only - it counts the active
 addresses for every day (between 00:00:00 and 23:59:59). The active addresses
-24h is computed for every 5 minute bucket and counts the active addresses for
+24h is computed every 5 minutes and counts the active addresses for
 the past 24 hours. Example: The value of the metric at 17:30pm on March 22
 contains the active addresses in the interval [17:30pm March 21, 17:30pm March
 22].
+
+There are multiple metrics that are similar to this one, but use a different time span:
+- active_addresses_1h
+- active_addresses_24h
+- active_addresses_7d
+- active_addresses_30d
+- active_addresses_60d
+- active_addresses_90d
 
 ## Access
 
