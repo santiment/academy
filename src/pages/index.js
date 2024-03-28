@@ -1,13 +1,13 @@
-import React from "react"
-import cx from "classnames"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Search from "../components/Search/Search"
-import Category from "../components/Category/Category"
-import SocialBanner from "../components/Banner/SocialBanner"
-import { REFERENCES, GUIDES } from "../docs/navigation"
-import GettingStarted from "../components/GettingStarted/GettingStarted"
-import styles from "./index.module.scss"
+import React from 'react'
+import cx from 'classnames'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Search from '../components/Search/Search'
+import Category from '../components/Category/Category'
+import SocialBanner from '../components/Banner/SocialBanner'
+import { REFERENCES, GUIDES } from '../docs/navigation'
+import GettingStarted from '../components/GettingStarted/GettingStarted'
+import styles from './index.module.scss'
 
 const IndexPage = ({ pageContext }) => (
   <Layout pageContext={pageContext} fixedHeader={false}>

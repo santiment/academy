@@ -1,17 +1,17 @@
-import React from "react"
-import { graphql } from "gatsby"
-import cx from "classnames"
-import { dateDifferenceInWords } from "webkit/utils/dates"
-import { sluggify } from "san-webkit/lib/utils/url"
-import SEO from "../components/seo"
-import Layout from "../components/layout"
-import Markdown from "../components/Markdown/Markdown"
-import ArticleHeadings from "../components/ArticleHeadings/ArticleHeadings"
-import Breadcrumb from "../components/Breadcrumb/Breadcrumb"
-import ArticleFooter from "../components/ArticleFooter"
-import injectCustomMarkdownComponents from "../components/MarkdownCustomComponents"
-import { usePageHash } from "../utils/utils"
-import styles from "./article.module.scss"
+import React from 'react'
+import { graphql } from 'gatsby'
+import cx from 'classnames'
+import { dateDifferenceInWords } from 'webkit/utils/dates'
+import { sluggify } from 'san-webkit/lib/utils/url'
+import SEO from '../components/seo'
+import Layout from '../components/layout'
+import Markdown from '../components/Markdown/Markdown'
+import ArticleHeadings from '../components/ArticleHeadings/ArticleHeadings'
+import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
+import ArticleFooter from '../components/ArticleFooter'
+import injectCustomMarkdownComponents from '../components/MarkdownCustomComponents'
+import { usePageHash } from '../utils/utils'
+import styles from './article.module.scss'
 
 const Template = ({ data, pageContext }) => {
   const { scrollToTargetAdjusted } = usePageHash()
@@ -24,7 +24,7 @@ const Template = ({ data, pageContext }) => {
     title:
       article.frontmatter.headline ||
       `${article.frontmatter.title} | Santiment Academy`,
-    description: `${article.frontmatter.description || ""}`,
+    description: `${article.frontmatter.description || ''}`,
   }
   const lastUpdatedAt = dateDifferenceInWords(
     new Date(article.fields.lastUpdatedAt)
@@ -38,7 +38,7 @@ const Template = ({ data, pageContext }) => {
       <div
         className={cx(
           styles.wrapper,
-          "container",
+          'container',
           sluggify(article.frontmatter.title)
         )}
       >

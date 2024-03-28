@@ -55,3 +55,8 @@ The prices are updated every 5 minutes
 
 The development activity metrics are updated every 1 hour with max delays of 6
 hours
+
+## Daily Metrics Latency
+
+The daily metrics have one value per day. The value is finalized at least 1 hour
+after the day is over, using the UTC timezone.

@@ -1,13 +1,13 @@
 ---
-title: Price Metrics
+title: Trading Volume
 author: Ivan
 date: 2020-04-07
-description: Price, Trading Volume and Marketcap data
+description: Trading Volume in USD 
 ---
 
 ## Definition
 
-The Trading Volume is the volume traded on exchanges.
+The Trading Volume is the volume in USD traded on exchanges.
 
 ---
 
