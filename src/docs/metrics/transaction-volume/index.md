@@ -7,8 +7,10 @@ description: Amount of coin/tokens moved on-chain.
 
 ## Description
 
-This metric shows the aggregate amount of coins/tokens across all transactions
-that happened on the network for a given asset in an interval.
+The `transaction_volume` metric shows total on-chain amount of coins/tokens transacted for a given asset in a given time interval.
+
+The `transaction_volume_usd` metric shows the total on-chain amount of coins/tokens in USD transacted for a given asset in a given time interval.
+To compute it, the amount of coins/tokens in each transaction is multiplied by the price in USD of the asset at that moment.
 
 ---
 
