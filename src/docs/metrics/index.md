@@ -43,6 +43,16 @@ channels, plus custom sentiment measurements analyzing crowd behavior. Includes
 emerging trend words and projects, word clouds to display related words and the
 possibility to enter custom search terms.
 
+- [Community Messages Count](/metrics/community-messages-count)
+- [Emerging Trends](/metrics/emerging-trends)
+- [Sentiment Metrics](/metrics/sentiment-metrics)
+- [Social Dominance](/metrics/social-dominance)
+- [Social Volume](/metrics/social-volume)
+- [Unique Social Volume](/metrics/unique-social-volume)
+- [Top Social Gainers/Losers](/metrics/top-social-gainers-losers)
+- [Trending Words Rank](/metrics/trending-words-rank)
+- [NFT Social Volume](/metrics/nft-social-volume)
+
 All social/sentiment metrics contain <source> or total in the name.
 
 For example:
@@ -58,15 +68,6 @@ Available sources are:
 - bitcointalk
 - total (combines all sources)
 
-- [Community Messages Count](/metrics/community-messages-count)
-- [Emerging Trends](/metrics/emerging-trends)
-- [Sentiment Metrics](/metrics/sentiment-metrics)
-- [Social Dominance](/metrics/social-dominance)
-- [Social Volume](/metrics/social-volume)
-- [Unique Social Volume](/metrics/unique-social-volume)
-- [Top Social Gainers/Losers](/metrics/top-social-gainers-losers)
-- [Trending Words Rank](/metrics/trending-words-rank)
-- [NFT Social Volume](/metrics/nft-social-volume)
 
 ## Development
 
