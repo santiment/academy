@@ -160,10 +160,6 @@ export const GUIDES = [
         slug: 'sanapi-plans',
         title: 'Access Plans - SanAPI',
       },
-      {
-        slug: 'special-restrictions',
-        title: 'Access Plans - Special Restrictions',
-      },
       'Santiment Products',
       'How to pay with crypto',
       'Create an API key',

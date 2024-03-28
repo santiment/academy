@@ -102,7 +102,7 @@ and the short term holders manage to realize profits
 
 ## Access
 
-[Special Restrictions](/products-and-plans/access-plans/special-restrictions#realized-value-and-mvrv-metrics).
+[Restricted Access](/metrics/details/access#restricted-access)
 
 ---
 

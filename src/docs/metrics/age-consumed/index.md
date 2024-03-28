@@ -33,7 +33,7 @@ decline.
 
 ## Access
 
-[Special Restrictions](/products-and-plans/access-plans/special-restrictions#age-consumed-metrics)
+[Restricted Access](/metrics/details/access#restricted-access)
 
 ---
 
