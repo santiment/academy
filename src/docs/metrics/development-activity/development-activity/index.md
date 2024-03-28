@@ -17,13 +17,14 @@ Development Activity metric shows the 'pure' development activity. It excludes e
 - Downloading releases;
 - Watching a repository;
 - Project management events;
-- Others.
+- Other.
 
 This allows to better compare projects that use GitHub for issue tracking and
 projects that use an external tool for issue tracking. If such events are not
 excluded then some projects could have inflated activity just by discussion
 what they are going to build without actually building it. Inactive projects
-might have non-zero activity caused by people creating issues and asking the team to fix something, without any actual work being done.
+might have non-zero activity caused by people creating issues and asking the 
+team to fix something, without any actual work being done.
 
 ---
 
