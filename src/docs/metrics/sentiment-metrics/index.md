@@ -118,7 +118,7 @@ Available under the `sentiment_positive_total` `sentiment_positive_<source>`
 | SanAPI    | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 | Sansheets | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-### 2. Average Sentiment
+### 2. Average Sentiment / Sentiment Balance
 
 #### Definition
 
