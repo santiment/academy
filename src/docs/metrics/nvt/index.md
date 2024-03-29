@@ -83,7 +83,7 @@ Ratio
 
 ## Frequency
 
-[Daily Intervals](/metrics/details/frequency#daily-frequency)
+[Five Minute Intervals](/metrics/details/frequency#five-minute-frequency) and [Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
@@ -105,8 +105,9 @@ Ratio
 
 ## SanAPI
 
-- NVT using 1-day Circulation is available under the `nvt` name.
-- NVT using Transaction volume is available under the `nvt_transaction_volume` name.
+- `nvt` - NVT using 1 day Circulation. Computed with daily frequency.
+- `nvt_5min` - Same as `nvt`, but computed with 5-minute frequency.
+- `nvt_transaction_volume` - NVT using Transaction Volume. Computed with daily frequency.
 
 ```graphql
 {
