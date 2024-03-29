@@ -19,6 +19,9 @@ Examples:
   for more than 90 days were transacted during a day. This is the smallest interval
   supported for that metric.
 
+There are also dormant circulation metrics `dormant_circulation_usd_*` that represent the USD value of all 
+unique coins or tokens that were transacted within a single day that have not been moved for some time.
+
 ---
 
 ## Access
@@ -97,3 +100,28 @@ The biggest supported interval is 10 years.
 
 **[Run in
 Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dormant_circulation_90d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
+
+## Full list of metrics
+
+The full list of Dormant Circulation metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+
+- dormant_circulation_10y
+- dormant_circulation_180d
+- dormant_circulation_2y
+- dormant_circulation_365d
+- dormant_circulation_365d_change_1d
+- dormant_circulation_365d_change_30d
+- dormant_circulation_365d_change_7d
+- dormant_circulation_3y
+- dormant_circulation_5y
+- dormant_circulation_90d
+- dormant_circulation_usd_180d
+- dormant_circulation_usd_180d_change_1d
+- dormant_circulation_usd_180d_change_30d
+- dormant_circulation_usd_180d_change_7d
+
+</Details>
