@@ -1,5 +1,5 @@
 ---
-title: Trading Volume
+title: Trading Volume in USD
 author: Ivan
 date: 2020-04-07
 description: Trading Volume in USD 
@@ -8,6 +8,8 @@ description: Trading Volume in USD
 ## Definition
 
 The Trading Volume is the volume in USD traded on exchanges.
+The metric is taking into consideration all the trading pairs. The trading pairs that
+are not pegged to USD are multiplied by the USD price of the asset.
 
 ---
 
