@@ -54,7 +54,14 @@ NFT token.
 
 ## SanAPI
 
-NFT collection price - `nft_collection_<min,max,avg>_price<_usd>`:
+The following metrics are available:
+- nft_collection_min_price
+- nft_collection_max_price
+- nft_collection_avg_price
+- nft_collection_min_price_usd
+- nft_collection_max_price_usd
+- nft_collection_avg_price_usd
+- nft_collection_trades_count
 
 ```graphql
 {
