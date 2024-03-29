@@ -2,6 +2,20 @@
 title: BitMEX Perpetual Contract Price
 author: Anatoliy
 date: 2020-06-03
+description: BitMEX Perpetual Contract Price
+---
+
+## Description
+The BitMEX Perpetual Contract Price metric refers to the current trading price of perpetual 
+contracts offered on the BitMEX cryptocurrency exchange. Perpetual contracts are derivative 
+financial instruments that closely track the underlying asset's price without an expiry date, 
+allowing traders to speculate on price movements without actually owning the asset. The BitMEX 
+Perpetual Contract Price provides insight into market sentiment and liquidity for the corresponding 
+cryptocurrency pair on [BitMEX's](https://www.bitmex.com/) trading platform.
+
+BitMEX Perpetual Contract Price metric:
+* `bitmex_perpetual_price` - BitMEX Perpetual Contract Price
+
 ---
 
 ## Access
@@ -12,7 +26,7 @@ date: 2020-06-03
 
 ## Measuring Unit
 
-Dollars
+Amount in USD
 
 ---
 
