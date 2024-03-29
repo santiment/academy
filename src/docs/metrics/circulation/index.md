@@ -15,7 +15,12 @@ Examples:
   day. If one token/coin changes hands 5 times on a given day, it will be
   counted once by the token circulation, but 5 times by the transaction volume.
 - `circulation_1y` - Shows how many unique coins/tokens were transacted for the
-  past 1 year
+  past 1 year.
+
+There are also circulation metrics `circulation_usd_*` that represent the USD value of all 
+unique coins or tokens that were transacted within a single day. Unlike simple circulation
+metrics that count the unique cryptocurrencies moved, `circulation_usd_*` metrics convert
+the quantity of these coins or tokens into their equivalent value in USD.
 
 ![circulation for bitcoin](circulation-bitcoin.png)
 
@@ -122,3 +127,36 @@ ever seen up until now, which is equal to the total supply at that datetime.
 
 **[Run in
 Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22circulation%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
+
+## Full list of metrics
+
+The full list of Circulation metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+
+- circulation
+- circulation_10y
+- circulation_180d
+- circulation_1d
+- circulation_2y
+- circulation_30d
+- circulation_365d
+- circulation_3y
+- circulation_5y
+- circulation_60d
+- circulation_7d
+- circulation_90d
+- circulation_change_1d
+- circulation_change_30d
+- circulation_change_7d
+- circulation_180d_change_1d
+- circulation_180d_change_30d
+- circulation_180d_change_7d
+- circulation_usd_180d
+- circulation_usd_180d_change_1d
+- circulation_usd_180d_change_30d
+- circulation_usd_180d_change_7d
+
+</Details>
