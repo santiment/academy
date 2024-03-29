@@ -1,8 +1,8 @@
 ---
-title: Price Metrics
+title: Marketcap in USD
 author: Ivan
-date: 2020-04-07
-description: Price, Trading Volume and Marketcap data
+date: 2024-03-29
+description: Marketcap in USD
 ---
 
 ## Definition
@@ -19,7 +19,7 @@ The marketcap in USD is derived as the price of an asset in USD multiplied by th
 
 ## Measuring Unit
 
-Amount in dollars/usdt/bitcoins
+USD
 
 ---
 
