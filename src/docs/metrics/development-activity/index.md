@@ -9,17 +9,25 @@ date: 2023-06-01
 
 The development-related data allows the definition of different metrics.
 These metrics include: 
-- [Development Activity](/metrics/development-activity/development-activity/) - Ignore the non-development related events. Excluding this allows different projects' values to be compared. If this exclusion is not done, the projects that use Github for active issues tracking would have an unfair advantage.
-- [Development Activity Contributors Count](/metrics/development-activity/development-activity-contributors-count/) - Track the number of unique development activity contributors.
-- [Github Activity](/metrics/development-activity/github-activity/) - Count all events for a project.
-- [Github Activity Contributors Count](/metrics/development-activity/github-activity-contributors-count) - Track the number of unique github activity contributors.
+- [Development Activity](/metrics/development-activity/development-activity/) -
+  Ignore the non-development related events. Excluding this allows values of
+  projects who use Github for issue tracking and projects who do not use Github
+  for issue tracking to be faily compared
+- [Development Activity Contributors Count](/metrics/development-activity/development-activity-contributors-count/)
+  - Track the number of unique development activity contributors.
+- [Github Activity](/metrics/development-activity/github-activity/) - Count all
+  events for a project.
+- [Github Activity Contributors Count](/metrics/development-activity/github-activity-contributors-count) -
+  Track the number of unique github activity contributors.
 
 ---
 
 ## Why Development Acitivty matters?
 
-The development activity of a project that Santiment tracks is done in the project's public GitHub repositories.
-The work done in private repositories cannot be tracked. In crypto, a lot of the work is done in public repositories, so this metric is available for many projects.
+The development activity of a project that Santiment tracks is done in the
+project's public GitHub repositories. The work done in private repositories
+cannot be tracked. In crypto, a lot of the work is done in public repositories,
+so this metric is available for many projects.
 
 A developer's time is an expensive resource, so
 high development activity implies that:
@@ -41,7 +49,8 @@ features.
 ## How development activity is tracked?
 
 
-Development-related metrics are using the events emitted by Github. The metrics **do not** use the number of commits in a repository.
+Development-related metrics are using the events emitted by Github. The metrics
+**do not** use the number of commits in a repository.
 
 When developers work they encapsulate their code changes in commits. When a
 repository page [like this](https://github.com/santiment/sanbase2) is opened in
@@ -73,7 +82,11 @@ but there are also many other activities that generate an event:
 - Forking/starring/watching a repository
 - many others.
 
-More importantly, when a project is forked, it does not inherit any of the already emitted events. Our custom method dramatically improves both accuracy and serviceability of Github data. The reason is that the process of forking a repository generates just a single `ForkEvent` instead creating an event for every commit that gets inherited.
+More importantly, when a project is forked, it does not inherit any of the
+already emitted events. Our custom method dramatically improves both accuracy
+and serviceability of Github data. The reason is that the process of forking a
+repository generates just a single `ForkEvent` instead creating an event for
+every commit that gets inherited.
 
 At the time of writing this the [bitcoin](https://github.com/bitcoin/bitcoin)
 repository has around 37.7k commits and [Bitoin
