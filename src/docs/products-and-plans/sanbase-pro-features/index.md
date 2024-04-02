@@ -47,7 +47,7 @@ Our plugin allows you to import Santiment data directly into Google Spreadsheets
 - [Analyze any coin's risk-adjusted returns](https://docs.google.com/spreadsheets/d/1mHLRlP2H3hFvomO1fVDlxdmpWWZcQcUx-eT6WUDMgqs/edit?usp=sharing) (Sharpe and Sortino ratios)
 - [Backtest a 'moving average' strategy](https://docs.google.com/spreadsheets/d/1YEm8qdqJvkHCTUwEmOyQLfkZqtQ0ndwo0GWxGsCRnSQ/edit?usp=sharing) for any coin
 - Set up a [dynamic portfolio manager](https://docs.google.com/spreadsheets/d/1itY_q3KvC-KhOpY21wtmeAj5lL4qT8gbMvilgt8avZw/edit?usp=sharing)
-- [Track the NVT](https://docs.google.com/spreadsheets/d/1WHf2CqD-pppmxO8Wt5eyU6p4I9q1A2kJ7MlNkQe_pC0/edit?usp=sharing) of any coin
+- [Track the NVT](https://docs.google.com/spreadsheets/d/1Sb8SjyvJYdRTvxZZtFRfLnLrEssF6Uq2feCmK8VSgF8/view) of any coin
 
 ## Unlimited number of Signals
 
