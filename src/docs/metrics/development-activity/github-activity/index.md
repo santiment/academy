@@ -15,7 +15,7 @@ There are 3 development activity metrics available:
 - `github_activity` - Computed on-the-fly using the Github data. Because of this the metric can compute data for any 
   asset or any random Github organization that has public repositories like Google, Facebook, or any other organization.
 - `github_activity_1d` - Precomputed daily metric for each asset that is available on Santiment. This allows the metric
-  to be aggregated faster when the value is needed for all assets at once.
+  to be aggregated when the value is needed for all assets at once.
 - `ecosystem_github_activity` - Precomputed for each ecosystem. An ecosystem dev activity is defined as
   the sum of the dev activities of all assets that belong to it. For example the `ethereum` ecosystem
   contains all the project that build on the Ethereum blockchain or contribute to the blockchain in any other way.

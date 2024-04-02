@@ -42,17 +42,17 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Social Dominance](/metrics/social-dominance)
 - [Social Volume](/metrics/social-volume)
 - [Unique Social Volume](/metrics/unique-social-volume)
-- [Top Social Gainers/Losers](/metrics/top-social-gainers-losers)
 - [Trending Words Rank](/metrics/trending-words-rank)
 - [NFT Social Volume](/metrics/nft-social-volume)
 
 ## Development
 
-Development Activity metrics created to accurately measure a team’s development
-activity.
+[Development Activity Metrics](/metrics/development-activity) are used to measure a team’s development activity.
 
-- [Development Activity](/metrics/development-activity#development-activity-metric)
-- [Github Activity](/metrics/development-activity#github-activity-metric)
+- [Development Activity](/metrics/development-activity/development-activity)
+- [Github Activity](/metrics/development-activity/github-activity-metric)
+- [Development Activity Contributors Count](/metrics/development-activity/development-activity-contributors-count)
+- [Development Activity](/metrics/development-activity/development-activity-contributors-count)
 
 ## Network Value (On-Chain)
 

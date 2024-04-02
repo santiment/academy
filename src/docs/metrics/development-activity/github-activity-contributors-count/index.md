@@ -7,7 +7,30 @@ description: Development activity contributors count in public Github repositori
 
 ## Definition
 
-The Github Activity Contributors Count metric shows the unique number of people (represented as Github accounts) that have contributed to the public repositories of a project. The author of all events are considered.
+The Github Activity Contributors Count metrics show the unique number of
+people (represented as Github accounts) that have contributed to a public
+Github repository in an organization that is followed. 
+
+There are 3 development activity contributors count metrics available:
+- `dev_activity_contributors_count` - Computed on-the-fly using the Github
+  data. Because of this the metric can compute data for any asset or just any
+  random Github organization that has public repositories like Google,
+  Facebook, or any other organization.
+- `dev_activity_contributors_count_7d` - Precomputed weekly metric for each
+  asset that is available on Santiment. This allows the metric to be aggregated
+  when the value is needed for all assets at once.
+- `ecosystem_dev_activity_contributors_count_7d` - Precomputed for each
+  ecosystem. The metric is defined as the total count of unique contributors
+  that contributed to the github organization of at least one of assets that
+  belong to it.
+
+> Note: The precomputed metrics `github_activity_contributors_count_7d` and
+> `ecosystem_github_activty_contributors_count_7d` cannot be aggregated using the
+> `SUM` aggregation, i.e. you cannot obtain the number of monthly contributors
+> by taking the sum of 4 weekly values. This is because the same contributors
+> may or may not make up the separate values, so the `SUM` operation can count
+> some contributors multiple times. To achieve monthly contributors, use the
+> `github_activity_contributors_count` metric with `interval: "30d"`
 
 ---
 
@@ -19,7 +42,7 @@ The Github Activity Contributors Count metric shows the unique number of people 
 
 ## Measuring Unit
 
-Number of people
+Number of github accounts
 
 ---
 

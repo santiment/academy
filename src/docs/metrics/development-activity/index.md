@@ -29,8 +29,8 @@ project's public GitHub repositories. The work done in private repositories
 cannot be tracked. In crypto, a lot of the work is done in public repositories,
 so this metric is available for many projects.
 
-A developer's time is an expensive resource, so
-high development activity implies that:
+A developer's time is an expensive resource, so high development activity
+implies that:
 
 - The project is serious about its business proposition;
 - The project will likely ship new features in the future and address existing issues;
@@ -42,11 +42,13 @@ features.
 
 > **Note:** Only development work done in public github repositories can be tracked.
 > Work done in private/unknown repositories or public repositories outside
-> GitHub won't be counted.
+> GitHub won't be counted. In Github, switching a repository from private to public does
+> not emit events for past actions, so the development activity will track only the work
+> done after making the repository public.
 
 ---
 
-## How development activity is tracked?
+## How is development activity tracked?
 
 
 Development-related metrics are using the events emitted by Github. The metrics
@@ -62,18 +64,24 @@ One naturally would think that counting commits is an accurate approximation of
 development activity. A lot of the data aggregators track the number of Github
 commits, an unfortunate solution that returns skewed data.
 
-Why skewed?
+### Why is counting commits not optimal?
 
-There are a lot of projects that 'fork' (copy everything up until this moment)
-other blockchains' source code and make small changes on top of it. The process
-of forking inherits all commits, but this is other people's work. This is
-not work done by the team that makes the fork. In this case pure commit counting
-would result in high activity of the forking party, too.
+There are a lot of projects that fork (copy everything up until this moment)
+other blockchains' source code and make small changes on top of it, without the
+intent of proposing these changes back to the original repository. The process
+of forking inherits all commits, but this is other people's work -- this is
+not work done by the team that makes the fork. 
 
-We measure development in a different way.
+#### Example 
+For example, if a person forks the [Bitcoin Github
+repository](https://github.com/bitcoin/bitcoin) they will inherit all 40,000+
+commits, while performing just one action of forking.
+
+### How Santiment measures development activity?
 
 At Santiment, we implemented a more reliable approach $-$ tracking the number of
-Github events that the project generates. Pushing a commit generates an event,
+[Github events](https://docs.github.com/en/rest/using-the-rest-api/github-event-types?apiVersion=2022-11-28)
+that the project generates. Pushing a commit generates an event,
 but there are also many other activities that generate an event:
 
 - Creating an Issue
@@ -89,17 +97,16 @@ repository generates just a single `ForkEvent` instead creating an event for
 every commit that gets inherited.
 
 At the time of writing this the [bitcoin](https://github.com/bitcoin/bitcoin)
-repository has around 37.7k commits and [Bitoin
-SV](https://github.com/bitcoin-sv/bitcoin-sv) repository has around 18.6k
+repository has around 40k commits and [Bitoin
+SV](https://github.com/bitcoin-sv/bitcoin-sv) repository has around 18.9k
 commits. Let's take a look at the events counting approach:
 
 Bitcoin: ![bitcoin-dev-activity](bitcoin-dev-activity.png)
 
 Bitcoin SV: ![bitcoin-sv-dev-activity](bitcoin-sv-dev-activity.png)
 
-We observe that Bitcoin has a high development activity all the time with the
-highest value reaching 98. Meanwhile Bitcoin SV has 0 dev activity most of the
-time with a spike of just 1.4.
+We observe that Bitcoin has a high development activity all the time.
+Meanwhile, Bitcoin SV has 0 dev activity most of the time.
 
 If you want to learn more about the difference - and the benefits of our bespoke
 approach - I highly suggest [this
@@ -111,7 +118,9 @@ by Valentin, our ex-CTO.
 
 ## As a Trading Strategy
 
-While not common, Development-related metrics can also be used as a novel trading strategy. Some time ago, we tested a portfolio of only the top ERC20 projects by development activity, refreshed each month.
+While not common, Development-related metrics can also be used as a novel
+trading strategy. Some time ago, we tested a portfolio of only the top ERC20
+projects by development activity, refreshed each month.
 
 We backtested the strategy from August 2017 to October 2018. [The portfolio
 1](https://santiment.net/blog/github-activity-portfolio/) turned a profit, but
