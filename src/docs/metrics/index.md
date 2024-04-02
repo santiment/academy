@@ -6,11 +6,6 @@ author: Santiment Team
 date: 2022-04-21
 ---
 
-Santiment brings a comprehensive set of metrics together in one place so you can
-get a better picture of what’s happening with your favorite crypto assets and/or
-crypto markets in general. We emphasize plotting metrics against price over
-time, to more easily spot how trends and events correlate with price action.
-
 ## Financial
 
 Traditional fundamentals including price, volume and market cap, mean coin age
@@ -39,9 +34,7 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 Metrics build on top of [Social Data](/metrics/details/social-data)
 
 They are taken from measuring social activity on crypto-related forums and
-channels, plus custom sentiment measurements analyzing crowd behavior. Includes
-emerging trend words and projects, word clouds to display related words and the
-possibility to enter custom search terms.
+channels, plus custom sentiment measurements analyzing crowd behavior.
 
 - [Community Messages Count](/metrics/community-messages-count)
 - [Emerging Trends](/metrics/emerging-trends)
@@ -49,33 +42,17 @@ possibility to enter custom search terms.
 - [Social Dominance](/metrics/social-dominance)
 - [Social Volume](/metrics/social-volume)
 - [Unique Social Volume](/metrics/unique-social-volume)
-- [Top Social Gainers/Losers](/metrics/top-social-gainers-losers)
 - [Trending Words Rank](/metrics/trending-words-rank)
 - [NFT Social Volume](/metrics/nft-social-volume)
 
-All social/sentiment metrics contain <source> or total in the name.
-
-For example:
-- social_volume_total
-- social_volume_telegram
-- unique_social_volume_total_1d
-
-Available sources are:
-- 4chan
-- telegram
-- reddit
-- twitter
-- bitcointalk
-- total (combines all sources)
-
-
 ## Development
 
-Custom Development Activity metrics created to accurately measure a team’s development
-activity.
+[Development Activity Metrics](/metrics/development-activity) are used to measure a team’s development activity.
 
-- [Development Activity](/metrics/development-activity#development-activity-metric)
-- [Github Activity](/metrics/development-activity#github-activity-metric)
+- [Development Activity](/metrics/development-activity/development-activity)
+- [Github Activity](/metrics/development-activity/github-activity-metric)
+- [Development Activity Contributors Count](/metrics/development-activity/development-activity-contributors-count)
+- [Development Activity](/metrics/development-activity/development-activity-contributors-count)
 
 ## Network Value (On-Chain)
 
@@ -130,7 +107,7 @@ activity.
 - [dYdX](/metrics/dydx)
 - [Huobi](/metrics/huobi)
 
-## Chain Address Metrics
+## Blockchain Address Metrics
 
 We have a bunch of API methods related to a chain address.
 We support [many chains](/sanapi/metrics/#overview).

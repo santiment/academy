@@ -57,10 +57,6 @@ export const GUIDES = [
         slug: 'santiment pro reports samples',
         title: 'Santiment PRO Reports Samples',
       },
-      {
-        slug: 'santiment testimonials',
-        title: 'Santiment Testimonials',
-      },
     ],
   },
   {
