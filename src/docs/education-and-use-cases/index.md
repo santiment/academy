@@ -26,7 +26,3 @@ author: Dino Ibisbegovic
 <Resource title="Pro Reports">
 - [Santiment Pro Reports Samples](/education-and-use-cases/santiment-pro-reports-samples/)
 </Resource>
-
-<Resource title="Testimonials">
-- [Santiment Testimonials](/education-and-use-cases/santiment-testimonials/)
-</Resource>
