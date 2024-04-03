@@ -13,11 +13,11 @@ description: "The active addresses metric is the number of unique addresses part
 ### Active Deposits
 
 Shows the **number of unique deposit addresses** that have been active on a
-particular day for a given asset.
+particular day for a given asset. Refer to a [deposit address explanation here](/labels/deposit)
 
 ![ethereum daily active deposits](daily-active-deposits-ethereum.png)
 
-### Deposit-related Transactions
+### Deposit Transactions
 
 Deposit transactions metric shows the total number of all **incoming and outcoming transactions** involving
 deposit addresses on a particular day.
@@ -59,7 +59,16 @@ Non-negative number of addresses
 
 ## Frequency
 
-Daily Active Deposits is available at [daily intervals](/metrics/details/frequency#daily-frequency)
+[Daily intervals:](/metrics/details/frequency#daily-frequency)
+
+* `active_deposits`
+* `deposit_transactions`
+
+[Five-Minute Intervals:](/metrics/details/frequency#five-minute-frequency)
+
+* `active_deposits_5m`
+* `deposit_transactions_5m`
+
 
 ---
 
@@ -71,8 +80,14 @@ Daily Active Deposits has [on-chain Latency](/metrics/details/latency#on-chain-l
 
 ## Available Assets
 
-This metric is computed for [these
-assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22active_deposits%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+[active_deposits](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22active_deposits%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+[deposit_transactions](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22deposit_transactions%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+[active_deposits_5m](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22active_deposits_5m%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+[deposit_transactions_5m](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22deposit_transactions_5m%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
 
 ---
 
