@@ -50,7 +50,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 [Development Activity Metrics](/metrics/development-activity) are used to measure a team’s development activity.
 
 - [Development Activity](/metrics/development-activity/development-activity)
-- [Github Activity](/metrics/development-activity/github-activity-metric)
+- [Github Activity](/metrics/development-activity/github-activity)
 - [Development Activity Contributors Count](/metrics/development-activity/development-activity-contributors-count)
 - [Development Activity](/metrics/development-activity/development-activity-contributors-count)
 
