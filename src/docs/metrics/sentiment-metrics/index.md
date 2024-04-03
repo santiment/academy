@@ -24,6 +24,8 @@ accurate and requires a lot of manual work. The amount of documents in our
 analyze them manually. That's why we use machine learning to approach the
 sentiment analysis problem.
 
+Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Additionally, adjustments to labels automatically trigger recalculation of labeled balances.
+
 ### Sentiment Score
 
 We trained a machine learning model on a large Twitter dataset, that contains
