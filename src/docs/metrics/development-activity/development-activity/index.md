@@ -27,13 +27,18 @@ might have non-zero activity caused by people creating issues and asking the
 team to fix something, without any actual work being done.
 
 There are 3 development activity metrics available:
-- `dev_activity` - Computed on-the-fly using the Github data. Because of this the metric can compute data for any
-  asset or just any random Github organization that has public repositories like Google, Facebook, or any other organization.
-- `dev_activity_1d` - Precomputed daily metric for each asset that is available on Santiment. This allows the metric
-  to be aggregated when the value is needed for all assets at once.
-- `ecosystem_dev_activity` - Precomputed for each ecosystem. An ecosystem dev activity is defined as
-  the sum of the dev activities of all assets that belong to it. For example the `ethereum` ecosystem
-  contains all the project that build on the Ethereum blockchain or contribute to the blockchain in any other way.
+- `dev_activity` - Computed on-the-fly using the Github data. Because of this
+  the metric can compute data for any asset or just any random Github
+  organization that has public repositories like Google, Facebook, or any other
+  organization.
+- `dev_activity_1d` - Precomputed daily metric for each asset that is available
+  on Santiment. This allows the metric to be aggregated when the value is
+  needed for all assets at once.
+- `ecosystem_dev_activity` - Precomputed for each ecosystem. An ecosystem dev
+  activity is defined as the sum of the dev activities of all assets that
+  belong to it. For example the `ethereum` ecosystem contains all the project
+  that build on the Ethereum blockchain or contribute to the blockchain in any
+  other way.
 
 ---
 
@@ -69,9 +74,9 @@ There are 3 development activity metrics available:
 
 ## Available Assets
 
-Available for [these assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22dev_activity%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
-
-> **Note**: All metrics are available for the same set of assets.
+`dev_activity` $-$ [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22dev_activity%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+`dev_activity_1d` $-$ [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22dev_activity_1d%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+`ecosystem-dev_activity` $-$ [available ecosystems](https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems%20%7B%0A%20%20%20%20name%0A%20%20%7D%0A%7D%0A)
 
 ---
 
