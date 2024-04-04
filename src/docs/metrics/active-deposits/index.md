@@ -37,6 +37,8 @@ deposit-related transactions** means that more coins are entering the exchanges,
 although the number of transactions to the exchanges stayed the same. In other
 words, **the average deposit size has increased.**
 
+For an exchange-specific data please refer to [that page](/metrics/labeled-exchange)
+
 ---
 
 ## Access

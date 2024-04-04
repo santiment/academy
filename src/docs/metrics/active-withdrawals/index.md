@@ -20,6 +20,8 @@ particular day for a given asset. Refer to a [withdrawal address explanation her
 Withdrawal transactions metric shows the total number of all **outgoing transactions** involving
 withdrawal addresses on a particular day. Basically, this metric accounts for exchange-to-user transactions.
 
+For an exchange-specific data please refer to [that page](/metrics/labeled-exchange)
+
 ---
 
 ## Access
