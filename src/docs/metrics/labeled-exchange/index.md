@@ -26,6 +26,8 @@ Supported_metrics:
 * `exchange_outflow_per_exchange` - The volume of coins/tokens transferred from wallets associated with a given exchange to non-exchange wallets.
 * `exchange_balance_per_exchange` - The net balance resulting from the difference between inflow and outflow (inflow minus outflow) for a particular exchange.
 
+Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Additionally, adjustments to labels automatically trigger recalculation of labeled balances.
+
 ---
 
 ## Access
