@@ -4,6 +4,8 @@ author: Maksim Razhev, Serge Nedashkovsky, Filip
 date: 2021-01-28
 description: Deprecated MakerDAO metrics
 ---
+> Note: MakerDAO metrics have been migrated to a new framework. 
+> Although older data remains accessible through the API, we do not recommend its use.
 
 ## Description
 
