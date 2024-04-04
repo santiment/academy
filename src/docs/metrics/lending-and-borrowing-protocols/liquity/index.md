@@ -20,18 +20,19 @@ by other borrowers collectively serving as a safety net.
 
 Action metrics:
 * `liquity_action_deposits` - Amount of deposited tokens
+* `liquity_action_deposits_usd` - Amount of deposited tokens in USD
 * `liquity_action_liquidations` - Amount of liquidated tokens
+* `liquity_action_liquidations_usd` - Amount of liquidated tokens in USD
 * `liquity_action_new_debt` - Amount of borrowed tokens
+* `liquity_action_new_debt_usd` - Amount of borrowed tokens in USD
 * `liquity_action_repayments` - Amount of repaid tokens
-
-> Note: All of the above metrics are also available in USD using the `_usd` 
-suffix (for example: `liquity_action_deposits_usd`).
+* `liquity_action_repayments_usd` - Amount of repaid tokens in USD
 
 Total supplied/borrowed metrics:
 * `liquity_total_supplied` - Total supplied tokens
-* `liquity_total_supplied_usd` - Total supplied tokens in usd
+* `liquity_total_supplied_usd` - Total supplied tokens in USD
 * `liquity_total_borrowed` - Total borrowed tokens
-* `liquity_total_borrowed_usd` - Total borrowed tokens in usd
+* `liquity_total_borrowed_usd` - Total borrowed tokens in USD
 
 APY (annual percentage yield) metrics:
 * `liquity_borrow_fee` - Liquity borrow fee
@@ -49,9 +50,8 @@ Daily active addresses:
 
 ## Measuring Unit
 
-Amount in tokens/USD
-
-Borrow fee metric in percentages
+* Amount in tokens/USD
+* `liquity_borrow_fee` in percentages
 
 ---
 
