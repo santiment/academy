@@ -1,7 +1,8 @@
 ---
 title: Development Activity Metric
 author: Santiment Team
-date: 2023-06-01
+description: The development activity metrics provide data and insight about the amount of work done in Github public repositories.
+date: 2024-04-04
 
 ---
 
@@ -62,7 +63,9 @@ There are 3 development activity metrics available:
 
 ## Frequency
 
-[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+- `dev_activity` - [Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+- `dev_activity_1d` - [Daily Intervals](/metrics/details/frequency#daily-frequency)
+- `ecosystem_dev_activity` - [Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
@@ -74,15 +77,15 @@ There are 3 development activity metrics available:
 
 ## Available Assets
 
-`dev_activity` $-$ [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22dev_activity%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
-`dev_activity_1d` $-$ [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22dev_activity_1d%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
-`ecosystem-dev_activity` $-$ [available ecosystems](https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems%20%7B%0A%20%20%20%20name%0A%20%20%7D%0A%7D%0A)
+- `dev_activity` $-$ [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22dev_activity%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+- `dev_activity_1d` $-$ [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22dev_activity_1d%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+- `ecosystem_dev_activity` $-$ [available ecosystems](https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems%20%7B%0A%20%20%20%20name%0A%20%20%7D%0A%7D%0A)
 
 ---
 
 ## SanAPI
 
-The metric is available under the `dev_activity`  names.
+Fetch the dev activity for an asset:
 
 ```graphql
 {
@@ -102,6 +105,10 @@ The metric is available under the `dev_activity`  names.
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)**
 
+---
+
+Fetch the `dev_activity` for an arbitrary organization. You  need to provide only the organization name
+to the parameter, not the whole URL. Github links look like this: `https://github.com/<organization>/<repository>`.
 
 ```graphql
 {
@@ -121,6 +128,10 @@ The metric is available under the `dev_activity`  names.
 
 **[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7Borganization%3A%20%22google%22%7D%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
 
+---
+
+Fetch the `ecosystem_dev_activity`, combining the dev activities of all assets
+that contribute to that ecosystem:
 
 ```graphql
 {
@@ -140,3 +151,22 @@ The metric is available under the `dev_activity`  names.
 **[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems(ecosystems%3A%20%5B%22ethereum%22%5D)%20%7B%0A%20%20%20%20timeseriesData(metric%3A%20%22ecosystem_dev_activity%22%2C%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%2C%20to%3A%20%222024-03-10T00%3A00%3A00Z%22%2C%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
 
 ---
+
+To check what assets are part of the ecosystem and what are their github links:
+
+```graphql
+{
+  getEcosystems(ecosystems: ["ethereum"]){
+    name
+    projects{
+      slug
+      githubLinks
+    }
+  }
+}
+```
+
+**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems(ecosystems%3A%20%5B%22ethereum%22%5D)%7B%0A%20%20%20%20name%0A%20%20%20%20projects%7B%0A%20%20%20%20%20%20slug%0A%20%20%20%20%20%20githubLinks%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
+
+---
+
