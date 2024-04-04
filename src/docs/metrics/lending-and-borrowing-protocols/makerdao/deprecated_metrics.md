@@ -5,7 +5,7 @@ date: 2021-01-28
 description: Deprecated MakerDAO metrics
 ---
 > Note: MakerDAO metrics have been migrated to a new framework. 
-> Although older data remains accessible through the API, we do not recommend its use.
+> **Although older data remains accessible through the API, we do not recommend its use.**
 
 ## Description
 
@@ -25,7 +25,7 @@ measured by a token<sup>[1]
 * `mcd_supply` - The total amount of Multi-Collareral DAI tokens: DAI ERC20 Supply plus  DAI in DSR
 * `mcd_collat_ratio_weth` - These metrics show the collateralization ratio of MCD collateral tokens.
 
-> [1]: Please switch to the new metric `makerdao_total_supplied_usd`
+> [1]: Please switch to the new metric `makerdao_total_supplied_usd`,
 > [2]: Please switch to the new metric `makerdao_action_liquidations_usd`
 
 ---

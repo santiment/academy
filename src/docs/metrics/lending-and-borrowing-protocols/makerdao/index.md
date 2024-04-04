@@ -61,7 +61,8 @@ Daily active addresses:
 
 > MakerDAO metrics have been migrated to a new framework; old metrics can be accessed via their 
 > previous names, listed here: [Deprecated MakerDAO metrics](/metrics/lending-and-borrowing-protocols/makerdao/deprecated_metrics). 
-> Although older data remains accessible through the API, we do not recommend its use.
+> **Although older data remains accessible through the API, we do not recommend its use.**
+
 ---
 
 ## Access
