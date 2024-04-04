@@ -16,32 +16,33 @@ borrowers can obtain loans by using their assets as collateral.
 
 Action metrics:
 * `compound_action_deposits` - Amount of deposited tokens
+* `compound_action_deposits_usd` - Amount of deposited tokens in USD
 * `compound_action_liquidations` - Amount of liquidated tokens
+* `compound_action_liquidations_usd` - Amount of liquidated tokens in USD
 * `compound_action_new_debt` - Amount of borrowed tokens
+* `compound_action_new_debt_usd` - Amount of borrowed tokens in USD
 * `compound_action_repayments` - Amount of repaid tokens
-
-> Note: All of the above metrics are also available in USD using the `_usd` 
-suffix (for example: `compound_action_deposits_usd`). 
-
-Total action metrics:
-* `compound_total_deposits_usd` - Amount of all deposits in usd
-* `compound_total_liquidations_usd` - Amount of all liquidations in usd
-* `compound_total_new_debt_usd` - Amount of all borrowings in usd
-* `compound_total_repayments_usd` - Amount of all repayments in usd
+* `compound_action_repayments_usd` - Amount of repaid tokens in USD
 
 Total supplied/borrowed metrics:
 * `compound_total_supplied` - Total supplied tokens
-* `compound_total_supplied_usd` - Total supplied tokens in usd
+* `compound_total_supplied_usd` - Total supplied tokens in USD
 * `compound_total_borrowed` - Total borrowed tokens
-* `compound_total_borrowed_usd` - Total borrowed tokens in usd
-
-Protocol total supplied/borrowed metrics:
-* `compound_protocol_total_supplied_usd` - Total supplied on Compound (for all assets in usd)
-* `compound_protocol_total_borrowed_usd` - Total borrowed on Compound (for all assets in usd)
+* `compound_total_borrowed_usd` - Total borrowed tokens in USD
 
 APY (annual percentage yield) metrics:
 * `compound_supply_apy` - Supply APY
 * `compound_borrow_apy` - Borrow APY 
+
+Protocol total action metrics:
+* `compound_total_deposits_usd` - Total amount of deposits on Compound (combining all assets in USD)
+* `compound_total_liquidations_usd` - Total amount of liquidations on Compound (combining all assets in USD)
+* `compound_total_new_debt_usd` - Total amount of borrowings on Compound (combining all assets in USD)
+* `compound_total_repayments_usd` - Total amount of repayments on Compound (combining all assets in USD)
+
+Protocol total supplied/borrowed metrics:
+* `compound_protocol_total_supplied_usd` - Total amount supplied on Compound (combining all assets in USD)
+* `compound_protocol_total_borrowed_usd` - Total amount borrowed on Compound (combining all assets in USD)
 
 Daily active addresses:
 * `compound_active_addresses` - Daily active addresses on Compound
@@ -56,9 +57,8 @@ Daily active addresses:
 
 ## Measuring Unit
 
-Amount in tokens/USD
-
-APY metric in percentages
+* Amount in tokens/USD
+* APY metrics in percentages
 
 ---
 
@@ -82,7 +82,7 @@ APY metric in percentages
 
 ## Available Assets
 
-Total action metrics: available for `compound`
+Metrics related to the entire protocol available for `compound`
 
 Other metrics: 
 available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22compound_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

@@ -20,6 +20,8 @@ and cleaning the data. Once this number is calculated, the words are ranked
 according to the corresponding scores in a descending order. The top 10 words in
 the resulting list are the top emerging trends.
 
+Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Additionally, adjustments to labels automatically trigger recalculation of labeled balances.
+
 ---
 
 ## Access

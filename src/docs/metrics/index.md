@@ -82,7 +82,6 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
 - [Lending and Borrowing Protocols](/metrics/lending-and-borrowing-protocols)
-- [MakerDAO](/metrics/makerdao)
 - [MakerDAO DAI Savings Rate](/metrics/makerdao-dai-savings-rate)
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
 - [Stock To Flow ratio](/metrics/stock-to-flow)

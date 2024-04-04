@@ -26,32 +26,33 @@ it more cost-efficient for users to interact with the platform.
 
 Action metrics:
 * `aave_v3_action_deposits` - Amount of deposited tokens
+* `aave_v3_action_deposits_usd` - Amount of deposited tokens in USD
 * `aave_v3_action_liquidations` - Amount of liquidated tokens
+* `aave_v3_action_liquidations_usd` - Amount of liquidated tokens in USD
 * `aave_v3_action_new_debt` - Amount of borrowed tokens
+* `aave_v3_action_new_debt_usd` - Amount of borrowed tokens in USD
 * `aave_v3_action_repayments` - Amount of repaid tokens
-
-> Note: All of the above metrics are also available in USD using the `_usd` 
-suffix (for example: `aave_v3_action_deposits_usd`). 
-
-Total action metrics:
-* `aave_v3_total_deposits_usd` - Amount of all deposits in usd
-* `aave_v3_total_liquidations_usd` - Amount of all liquidations in usd
-* `aave_v3_total_new_debt_usd` - Amount of all borrowings in usd
-* `aave_v3_total_repayments_usd` - Amount of all repayments in usd
+* `aave_v3_action_repayments_usd` - Amount of repaid tokens in USD
 
 Total supplied/borrowed metrics:
 * `aave_v3_total_supplied` - Total supplied tokens
-* `aave_v3_total_supplied_usd` - Total supplied tokens in usd
+* `aave_v3_total_supplied_usd` - Total supplied tokens in USD
 * `aave_v3_total_borrowed` - Total borrowed tokens
-* `aave_v3_total_borrowed_usd` - Total borrowed tokens in usd
-
-Protocol total supplied/borrowed metrics:
-* `aave_v3_protocol_total_supplied_usd` - Total supplied on Aave V3 (for all assets in usd)
-* `aave_v3_protocol_total_borrowed_usd` - Total borrowed on Aave V3 (for all assets in usd)
+* `aave_v3_total_borrowed_usd` - Total borrowed tokens in USD
 
 APY (annual percentage yield) metrics:
 * `aave_v3_supply_apy` - Supply APY
 * `aave_v3_variable_borrow_apy` - Variable borrow APY (variable interest rate will fluctuate based on the market conditions)
+
+Protocol total action metrics:
+* `aave_v3_total_deposits_usd` - Total amount of deposits on Aave V3 (combining all assets in USD)
+* `aave_v3_total_liquidations_usd` - Total amount of liquidations on Aave V3 (combining all assets in USD)
+* `aave_v3_total_new_debt_usd` - Total amount of borrowings on Aave V3 (combining all assets in USD)
+* `aave_v3_total_repayments_usd` - Total amount of repayments on Aave V3 (combining all assets in USD)
+
+Protocol total supplied/borrowed metrics:
+* `aave_v3_protocol_total_supplied_usd` - Total amount supplied on Aave V3 (combining all assets in USD)
+* `aave_v3_protocol_total_borrowed_usd` - Total amount borrowed on Aave V3 (combining all assets in USD)
 
 Daily active addresses:
 * `aave_v3_active_addresses` - Daily active addresses on Aave V3
@@ -66,9 +67,8 @@ Daily active addresses:
 
 ## Measuring Unit
 
-Amount in tokens/USD
-
-APY metric in percentages
+* Amount in tokens/USD
+* APY metrics in percentages
 
 ---
 
@@ -92,7 +92,7 @@ APY metric in percentages
 
 ## Available Assets
 
-Total action metrics: available for `aave`
+Metrics related to the entire protocol available for `aave`
 
 Other metrics: 
 available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v3_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
