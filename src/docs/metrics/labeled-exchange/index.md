@@ -13,7 +13,7 @@ Metrics that show various stats of labeled addresses
 * `deposit_transactions_per_exchange` - number of transactions sent to deposit addresses over all exchange names
 * `withdrawal_transactions_per_exchange` - number of withdrawal transactions from centralized exchanges over all exchange names
 
-Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Additionally, adjustments to labels automatically trigger recalculation of labeled balances.
+Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data. Additionally, adjustments to labels automatically trigger recalculation of labeled balances.
 
 Available [labels](/labels):
 * `centralized_exchange`
