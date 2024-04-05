@@ -1,8 +1,8 @@
 ---
-title: Aave V3
+title: Aave V3 Protocol
 author: Filip
 date: 2023-04-27
-description: Aave V3 Metrics
+description: Aave V3 Protocol Metrics
 ---
 
 ## Description

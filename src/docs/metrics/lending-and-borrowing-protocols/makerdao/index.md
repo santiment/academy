@@ -1,8 +1,8 @@
 ---
-title: MakerDAO
+title: MakerDAO Protocol
 author: Filip
 date: 2023-01-01
-description: MakerDAO Metrics
+description: MakerDAO Protocol Metrics
 ---
 
 ## Description

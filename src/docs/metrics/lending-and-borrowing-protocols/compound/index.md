@@ -1,8 +1,8 @@
 ---
-title: Compound
+title: Compound Protocol
 author: Filip
 date: 2022-12-05
-description: Compound Metrics
+description: Compound Protocol Metrics
 ---
 
 ## Description

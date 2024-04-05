@@ -1,8 +1,8 @@
 ---
-title: Liquity
+title: Liquity Protocol
 author: Filip
 date: 2024-03-01
-description: Liquity Metrics
+description: Liquity Protocol Metrics
 ---
 
 ## Description
