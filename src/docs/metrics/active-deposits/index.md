@@ -17,10 +17,13 @@ particular day for a given asset. Refer to a [deposit address explanation here](
 
 ![ethereum daily active deposits](daily-active-deposits-ethereum.png)
 
+`active_deposits` metric shows the number of **daily** active deposits. `active_deposits_5m` shows the amount of active deposits for a given **5 minutes** interval.
+
+
 ### Deposit Transactions
 
 Deposit transactions metric shows the total number of all **incoming and outcoming transactions** involving
-deposit addresses on a particular day.
+deposit addresses on a particular day for `deposit_transactions` and for a particlar 5 minutes interval for `deposit_transactions_5m`.
 
 As such, this metric accounts for both user-to-exchange transactions:
 
@@ -94,8 +97,6 @@ Daily Active Deposits has [on-chain Latency](/metrics/details/latency#on-chain-l
 ---
 
 ## SanAPI
-
-The metric is available under the `active_deposits` name for daily resolution and `active_deposits_5m` for intraday resolution.
 
 ```graphql
 {
