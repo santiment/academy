@@ -1,8 +1,8 @@
 ---
-title: Aave V2
+title: Aave V2 Protocol
 author: Filip
 date: 2022-12-05
-description: Aave V2 Metrics
+description: Aave V2 Protocol Metrics
 ---
 
 ## Description
