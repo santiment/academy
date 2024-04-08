@@ -41,6 +41,16 @@ The following metrics are provided:
 
 ---
 
+## Change Metrics
+
+[Change Metrics:](/metrics/details/change_metrics)
+
+* `percent_of_total_supply_on_exchanges_change_1d`
+* `percent_of_total_supply_on_exchanges_change_7d`
+* `percent_of_total_supply_on_exchanges_change_30d`
+
+---
+
 ## Frequency
 
 [Daily Intervals](/metrics/details/frequency#daily-frequency)
