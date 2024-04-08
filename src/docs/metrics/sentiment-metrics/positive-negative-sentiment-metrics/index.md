@@ -127,37 +127,66 @@ Fetch timeseries data for `sentiment_negative_telegram` for multiple assets at t
 
 ---
 
+Fetch aggregated daily values for many assets:
+
+```graphql
+{
+  allProjects(page: 1 pageSize: 50){
+    slug
+    sentimentPositive: aggregatedTimeseriesData(
+      metric: "sentiment_positive_total"
+      from: "utc_now-7d"
+      to: "utc_now")
+    sentimentNegative: aggregatedTimeseriesData(
+      metric: "sentiment_negative_total"
+      from: "utc_now-7d"
+      to: "utc_now")
+    sentimentBalance: aggregatedTimeseriesData(
+      metric: "sentiment_balance_total"
+      from: "utc_now-7d"
+      to: "utc_now")
+  }
+}
+```
+
+**[Run in Explorer](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20allProjects(page%3A%201%20pageSize%3A%2050)%7B%0A%20%20%20%20slug%0A%20%20%20%20sentimentPositive%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_positive_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%20%20sentimentNegative%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_negative_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%20%20sentimentBalance%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_balance_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%7D%0A%7D)**
+
+---
+
 ## Full list of metrics
 
 The full list of Postive/Negative/Balance sentiment metrics is:
 
 <Details>
 <Summary>Open Positive Sentiment Metrics List</Summary>
+- sentiment_positive_4chan
 - sentiment_positive_bitcointalk
 - sentiment_positive_reddit
 - sentiment_positive_telegram
-- sentiment_positive_total
 - sentiment_positive_twitter
 - sentiment_positive_youtube_videos
+- sentiment_positive_total
 </Details>
 
 
 <Details>
 <Summary>Open Negative Sentiment Metrics List</Summary>
+- sentiment_negative_4chan
 - sentiment_negative_bitcointalk
 - sentiment_negative_reddit
 - sentiment_negative_telegram
-- sentiment_negative_total
 - sentiment_negative_twitter
 - sentiment_negative_youtube_videos
+- sentiment_negative_total
 </Details>
 
 <Details>
 <Summary>Open Balance Sentiment Metrics List</Summary>
+- sentiment_balance_4chan
 - sentiment_balance_bitcointalk
 - sentiment_balance_reddit
 - sentiment_balance_telegram
-- sentiment_balance_total
 - sentiment_balance_twitter
 - sentiment_balance_youtube_videos
+- sentiment_balance_total
 </Details>
