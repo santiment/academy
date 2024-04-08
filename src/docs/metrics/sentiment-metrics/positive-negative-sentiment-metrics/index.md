@@ -37,7 +37,7 @@ Using this data we can compute:
 
 ### Positive and Negative Sentiment Bitcoin Chart
 
-<iframe title="Santiment Chart: Price (BTC), Positive sentiment (Total) (BTC), Negative sentiment (Total) (BTC)" width="100%" height="300" src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&df=2023-12-29T16%3A00%3A00.000Z&dt=2024-02-25T12%3A00%3A00.000Z&emcg=1&wm=price_usd%3Bsentiment_positive_total%3Bsentiment_negative_total&wax=0%3B1&wc=%2326C953%3B%23665bff%3B%23FF5B5B&ws=%3B%7B%22interval%22%3A%226h%22%2C%22node%22%3A%22filledLine%22%7D%3B%7B%22interval%22%3A%226h%22%2C%22node%22%3A%22filledLine%22%7D" scrolling="no"></iframe>
+<iframe title="Santiment Chart: Price (BTC), Positive sentiment (Total) (BTC), Negative sentiment (Total) (BTC)" width="100%" height="300" src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&df=utc_now-90d&dt=utc_now-30d&emcg=1&wm=price_usd%3Bsentiment_positive_total%3Bsentiment_negative_total&wax=0%3B1&wc=%2326C953%3B%23665bff%3B%23FF5B5B&ws=%3B%7B%22interval%22%3A%226h%22%2C%22node%22%3A%22filledLine%22%7D%3B%7B%22interval%22%3A%226h%22%2C%22node%22%3A%22filledLine%22%7D" scrolling="no"></iframe>
 
 ---
 

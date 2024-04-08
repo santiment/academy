@@ -8,10 +8,10 @@ date: 2024-04-05
 ## Our Sentiment Metrics
 
 <Resource>
-- [Positive/Negative Sentiment](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) $-$ Shows how many mentions of a term/asset are expressed in a
+- [Positive/Negative Sentiment](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) - Shows how many mentions of a term/asset are expressed in a
 positive/negative manner.
-- [Sentiment Balance] $-$ The difference between Positive Sentiment and Negative Sentiment 
-- [Sentiment Weighted] $-$ An improved version of the Sentiment Balance metric that takes into account the [Unique Social Volume](/metrics/unique-social-volume).
+- [Sentiment Balance](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) - The difference between Positive Sentiment and Negative Sentiment 
+- [Sentiment Weighted](/metrics/sentiment-metrics/weighted-sentiment-metrics) - An improved version of the Sentiment Balance that adjusts the values by considering the number of mentions, standardizing data to make diverse asset sentiments comparable. 
 </Resource>
 
 ## What is Sentiment?

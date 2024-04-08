@@ -1,0 +1,182 @@
+---
+title: Weighted Sentiment Metrics 
+author: Santiment Team
+date: 2024-04-08
+description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment 
+---
+
+## Definition
+
+The **Sentiment Weighted** is an improved version of the [Sentiment
+Balance](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) that also takes into account the [Unique Social Volume](/metrics/unique-social-volume).
+
+### Why Sentiment Balance needs improvement?
+
+Sentiment Positive/Negative/Balance metrics' values are in the interval `[-social_volume; +social_volume]`
+where `social_volume` is the number of messages that mention a given coin.
+
+This makes the values of different assets hard to compare, as the mentions of Bitcoin are magnitutes higher compared to the mentions of a small token.
+
+### Sentiment Weighted Intuitive Definition
+
+**Sentiment Weighted** adjusts the values by considering the number of mentions, standardizing data to make diverse asset sentiments comparable. 
+
+This means that spikes/dips in the metric will be seen when there is:
+- a lot of mentions for a coin
+- most of the mentions are expressing the same sentiment -- most are positive or most are negative
+
+If the sentiment is mixed, or the asset is not mentioned a lot, there will be no spikes/dips.
+
+### Sentiment Weighted Technical Definition
+
+The metric is defined as a rolling Z-score of the term X, where:
+$$
+X = \mathrm{Unique Social Volume} \times \mathrm{Average Sentiment}
+$$
+
+More precisely we choose a duration $d$ which will be the length of our sliding
+window. Then for any timestamp $t$ we consider the population $X(t,d)$
+consisting of all values of $X(t')$ for all timestamps $t'$ between $t-d$ and
+$t$. If we use $\mu$ and $\sigma$ to denote mean and standard deviation, then we
+define **Sentiment Weighted** as:
+
+$$
+Sentiment Weighted(t,d) = \frac{X(t) - \mu(X(t,d))}{\sigma(X(t,d))}
+$$
+
+This score can be explained as a _social-volume-weighted sentiment
+balance_ $-$ it spikes when the social volume is really high and
+the vast majority of the messages in it are very positive at the same time. Dips
+will occur when the social volume again is high, but the overall sentiment is
+negative. In case the volume is high but the sentiment is mixed, or the
+sentiment has a strong positive (negative) polarity but with a low volume, the
+**Sentiment Weighted** metric won't have significant changes and will
+stay around 0.
+
+### Available Sources
+
+[List of available sources](/metrics/details/social-data/#available-data-sources)
+
+### Weighted Sentiment Bitcoin Chart
+
+<iframe title="Santiment Chart: Price (BTC), Weighted sentiment (Total) (BTC)" width="100%" height="300" src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&df=utc_now-90d&dt=utc_now-30d&emcg=1&wm=price_usd%3Bsentiment_volume_consumed_total&wax=0%3B1&wc=%2326C953%3B%23FF5B5B&ws=%3B%7B%22interval%22%3A%221d%22%7D" scrolling="no"></iframe>
+---
+
+## Access
+
+[Restricted Access](/metrics/details/access#restricted-access)
+
+---
+
+
+## Measuring Unit
+
+Sum of sentiment scores
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Frequency
+
+[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+
+---
+
+## Latency
+
+[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+
+---
+
+## Available Assets
+
+All metrics have the same set of [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+
+---
+
+## SanAPI
+
+Fetch timeseries data for `sentiment_weighted_total` for a single asset:
+
+```graphql
+{
+  getMetric(metric: "sentiment_weighted_total") {
+    timeseriesData(
+      slug: "ethereum"
+      from: "utc_now-90d"
+      to: "utc_now-30d"
+      interval: "7d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_weighted_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-90d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-30d%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)**
+
+---
+
+Fetch timeseries data for `sentiment_weighted_telegram` for multiple assets at the same time:
+
+```graphql
+{
+  getMetric(metric: "sentiment_weighted_telegram") {
+    timeseriesDataPerSlug(
+      from: "utc_now-60d"
+      to: "utc_now-55d"
+      interval: "1d"
+      selector: {slugs: ["ethereum","bitcoin"]})
+      {
+        data {
+          slug
+          value
+        }
+        datetime
+      }
+  }
+}
+```
+
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_weighted_telegram%22)%20%7B%0A%20%20%20%20timeseriesDataPerSlug(%0A%20%20%20%20%20%20from%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-55d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20selector%3A%20%7Bslugs%3A%20%5B%22ethereum%22%2C%22bitcoin%22%5D%7D)%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
+
+---
+
+Fetch aggregated daily values for many assets:
+
+```graphql
+{
+  allProjects(page: 1 pageSize: 50){
+    slug
+    sentimentWeighted: aggregatedTimeseriesData(
+      metric: "sentiment_weighted_total"
+      from: "utc_now-7d"
+      to: "utc_now")
+  }
+}
+```
+
+**[Run in Explorer](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20allProjects(page%3A%201%20pageSize%3A%2050)%7B%0A%20%20%20%20slug%0A%20%20%20%20sentimentWeighted%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_weighted_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%7D%0A%7D%0A)**
+
+---
+
+## Full list of metrics
+
+The full list of weighted sentiment metrics is:
+
+<Details>
+<Summary>Open Weighted Sentiment Metrics List</Summary>
+- sentiment_weighted_4chan
+- sentiment_weighted_bitcointalk
+- sentiment_weighted_reddit
+- sentiment_weighted_telegram
+- sentiment_weighted_twitter
+- sentiment_weighted_youtube_videos
+- sentiment_weighted_total
+</Details>
