@@ -337,6 +337,7 @@ export const REFERENCES = [
       'Whale',
       'Whale USD Balance',
       'Yield Farming',
+      'Withdrawal',
     ],
   },
   {
