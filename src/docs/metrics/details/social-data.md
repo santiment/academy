@@ -37,12 +37,12 @@ them is usually very low).
     We track a curated list with over 400 crypto-related Telegram chats. For each
     of them, we have the entire history of the chat.
 
+    In the metric name this source is available as `telegram`. Example: `social_volume_telegram`.
+
     **Latency**. We collect the messages in real-time (1-2s delay max.)
 
     **History**. Each chat has its complete historical data; the oldest discussion starts
     at `2016-03-29`.
-
-    **Availability**: Used in all of our social metrics.
 
 2. **Twitter**
 
@@ -50,11 +50,11 @@ them is usually very low).
     each of them, we collect their tweets, their retweets, and all the replies to
     their tweets.
 
+    In the metric name this source is typed as `twitter`. Example: `social_volume_twitter`.
+
     **Latency**: We collect all the tweets in real-time. 
 
     **History**: The historical data starts at `2018-02-13`.
-
-    **Availability**: Used in all of our social metrics.
 
 3. **Reddit**
 
@@ -62,13 +62,12 @@ them is usually very low).
     them we collect the posts themselves, as well as all the comments to these
     posts.
 
+    In the metric name this source is typed as `reddit`. Example: `social_volume_reddit`.
+
     **Latency**: All the posts and comments are collected in real-time (1-2s delay
     max.)
 
     **History**: The historical data starts at `2016-01-01`.
-
-    **Availability**: Data is currently only included in parts of Sanbase
-    ([https://app.santiment.net/labs/trends/explore/bullrun](https://app.santiment.net/labs/trends/explore/bullrun)),
 
 4. **Bitcointalk**
 
@@ -76,9 +75,37 @@ them is usually very low).
     [bitcointalk.org](https://bitcointalk.org). We also have the full historical
     data for the whole forum.
 
+    In the metric name this source is typed as `bitcointalk`. Example: `social_volume_bitcointalk`.
+
     **Latency**: The scraper goes through all the new messages once per 10 seconds.
 
     **History**: we have collected the entire forum history, starting from
     `2009-11-22`.
 
-    **Availability**: Used in all of our social metrics.
+5. **Youtube Videos**
+
+    We collect the transcribed text from youtube videos from a manually curated list of channels.
+
+    In the metric name this source is typed as `youtube_videos`. Example: `social_volume_youtube_videos`
+
+    **Latency**: TODO:
+
+    **History**: The historical data starts at TODO:
+
+
+6. **4chan**
+
+    We collect ... TODO
+
+    In the metric name this source is typed as `4chan`. Example: `social_volume_4chan`
+
+    **Latency**: TODO
+
+    **History**: TODO
+
+7. **Total**
+
+    A combination of all available sources.
+
+    In the metric name this source is typed as `total`. Example: `social_voolume_total`.
+
