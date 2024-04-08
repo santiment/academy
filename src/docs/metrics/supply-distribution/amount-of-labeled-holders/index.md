@@ -20,10 +20,10 @@ metrics. Holders labeled distribution metrics encompass all addresses with a spe
 labeled negative distribution metrics exclude all addresses with a specific label.
 
 Amount of Labeled Holders Metrics:
-- `holders_labeled_distribution_<interval>` - The number of addresses with a specific [label](details/supply_distribution_parameters#available-labels) 
-holding tokens within a specified balance [interval](details/supply_distribution_parameters#available-intervals)
+- `holders_labeled_distribution_<interval>` - The number of addresses with a specific [label](/metrics/details/supply_distribution_parameters#available-labels) 
+holding tokens within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
 - `holders_labeled_negative_distribution_<interval>` - The number of addresses that do not contain a specific 
-[negative label](details/supply_distribution_parameters#available-negative-labels), holding tokens within a specified balance [interval](details/supply_distribution_parameters#available-intervals)
+[negative label](/metrics/details/supply_distribution_parameters#available-negative-labels), holding tokens within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
 
 ---
 

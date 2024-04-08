@@ -10,11 +10,11 @@ date: 2024-04-01
 - [Amount of Holders](/metrics/supply-distribution/amount-of-holders) $-$ The number of unique 
 addresses holding tokens within predefined balance intervals
 - [Combined Balance of Holders](/metrics/supply-distribution/combined-balance-of-holders) $-$ The sum 
-of tokens held across all addresses within a specified interval
+of tokens held across all addresses within a specified balance interval
 - [Amount of Labeled Holders](/metrics/supply-distribution/amount-of-labeled-holders) $-$ The number of unique 
 addresses with a specific label, holding tokens within predefined balance intervals
 - [Combined Balance of Labeled Holders](/metrics/supply-distribution/combined-balance-of-labeled-holders) $-$ The sum 
-of tokens held across all addresses with a specific label within a specified interval
+of tokens held across all addresses with a specific label within a specified balance interval
 </Resource>
 
 ## Description

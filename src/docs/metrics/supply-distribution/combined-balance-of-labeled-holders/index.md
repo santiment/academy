@@ -20,10 +20,10 @@ metrics. Holders labeled distribution combined balance metrics encompass all add
 holders labeled negative distribution combined balance metrics exclude all addresses with a specific label.
 
 Combined Balance of Labeled Holders Metrics:
-- `holders_labeled_distribution_combined_balance_<interval>` - Total tokens held by all addresses with a specific [label](details/supply_distribution_parameters#available-labels) 
-within a specified balance [interval](details/supply_distribution_parameters#available-intervals)
+- `holders_labeled_distribution_combined_balance_<interval>` - Total tokens held by all addresses with a specific [label](/metrics/details/supply_distribution_parameters#available-labels) 
+within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
 - `holders_labeled_negative_distribution_combined_balance_<interval>` - Total tokens held by all addresses that do not contain a specific 
-[negative label](details/supply_distribution_parameters#available-negative-labels), within a specified balance [interval](details/supply_distribution_parameters#available-intervals)
+[negative label](/metrics/details/supply_distribution_parameters#available-negative-labels), within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
 
 ---
 
