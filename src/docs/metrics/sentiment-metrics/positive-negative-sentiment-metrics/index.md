@@ -9,8 +9,31 @@ description: The postive and negative sentiment metrics show the part of the tot
 
 The Sentiment Positive  and Sentiment Negative metrics represnt the sum of [Sentiment Score](/metrics/sentiment-metrics/#sentiment-score) values.
 
-The `sentiment_positive_<source>` metrics are computed by taking the sum of the positive sentiment scores that are over 0.7.
-The `sentiment_negative_<source>` metrics are computed by taking the sum of the negative sentiment scores that are over 0.7.
+- `sentiment_positive_<source>` metrics are computed by taking the sum of the positive sentiment scores that are over 0.7.
+- `sentiment_negative_<source>` metrics are computed by taking the sum of the negative sentiment scores that are over 0.7.
+- `sentiment_balance_<source>` metrics show the difference between `sentiment_positive_<source>` and `sentiment_negative_<source>`.
+
+### Available Sources
+
+[List of available sources](/metrics/details/social-data/#available-data-sources)
+
+### Example
+
+Thare are 10 messages in telegram that mention `bitcoin`. Below is a table that shows
+the sentiment scores of those 10 messages. The messages with the same sentiment score
+are grouped together (messages count bigger than 1).
+
+| Messages count | Positive Sentiment Score | Negative Sentiment Score |
+| -------------- | ------------------------ | ------------------------ |
+| 3              | 0.7                      |                    0.3   |
+| 2              | 1.0                      |                    0.0   |
+| 3              | 0.7                      |                    0.8   |
+| 2              | 0.55                     |                    0.45  |
+
+Using this data we can compute:
+- `sentiment_positive_telegram`: $3 * 0.7 + 2 * 1.0 = 4.1$
+- `sentiment_negative_telegram`: $3 * 0.8 = 2.4$
+- `sentiment_balance_telegram`: $4.1 - 2.4 = 1.7$
 
 ### Positive and Negative Sentiment Bitcoin Chart
 
@@ -27,7 +50,7 @@ The `sentiment_negative_<source>` metrics are computed by taking the sum of the 
 
 ## Measuring Unit
 
-Number of mentions
+Sum of sentiment scores
 
 ---
 
@@ -57,57 +80,15 @@ All metrics have the same set of [available assets](https://api.santiment.net/gr
 
 ## SanAPI
 
-```graphql
-{
-  getMetric(metric: "mvrv_usd") {
-    timeseriesData(
-      slug: "santiment"
-      from: "2019-01-01T00:00:00Z"
-      to: "2019-09-01T00:00:00Z"
-      interval: "7d"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22mvrv_usd%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
-
-
-Example of query for **mvrv_usd_intraday**:
+Fetch timeseries data for `sentiment_positive_total` for a single asset:
 
 ```graphql
 {
-  getMetric(metric: "mvrv_usd_intraday") {
+  getMetric(metric: "sentiment_positive_total") {
     timeseriesData(
-      slug: "bitcoin"
+      slug: "ethereum"
       from: "utc_now-90d"
       to: "utc_now-30d"
-      interval: "3d"
-    ) {
-      datetime
-      value
-    }
-  }
-}
-```
-
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd_intraday%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-90d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-30d%22%0A%20%20%20%20%20%20interval%3A%20%223d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
-
-Example of query for **timebound MVRV**:
-
-```graphql
-{
-  getMetric(metric: "mvrv_usd_7d") {
-    timeseriesData(
-      slug: "santiment"
-      from: "2019-01-01T00:00:00Z"
-      to: "2019-09-01T00:00:00Z"
       interval: "7d"
     ) {
       datetime
@@ -117,33 +98,38 @@ Example of query for **timebound MVRV**:
 }
 ```
 
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22mvrv_usd_7d%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-90d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-30d%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
 
-Example of query for **MVRV long-short difference**:
+---
+
+Fetch timeseries data for `sentiment_negative_telegram` for multiple assets at the same time:
 
 ```graphql
 {
-  getMetric(metric: "mvrv_long_short_diff_usd") {
-    timeseriesData(
-      slug: "santiment"
-      from: "2019-01-01T00:00:00Z"
-      to: "2019-09-01T00:00:00Z"
-      interval: "7d"
-    ) {
-      datetime
-      value
-    }
+  getMetric(metric: "sentiment_negative_telegram") {
+    timeseriesDataPerSlug(
+      from: "utc_now-60d"
+      to: "utc_now-55d"
+      interval: "1d"
+      selector: {slugs: ["ethereum","bitcoin"]})
+      {
+        data {
+          slug
+          value
+        }
+        datetime
+      }
   }
 }
 ```
 
-**[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22mvrv_long_short_diff_usd%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
+**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_telegram%22)%20%7B%0A%20%20%20%20timeseriesDataPerSlug(%0A%20%20%20%20%20%20from%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-55d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20selector%3A%20%7Bslugs%3A%20%5B%22ethereum%22%2C%22bitcoin%22%5D%7D)%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
+
+---
 
 ## Full list of metrics
 
-The full list of Postive/Negative sentiment metrics is:
+The full list of Postive/Negative/Balance sentiment metrics is:
 
 <Details>
 <Summary>Open Positive Sentiment Metrics List</Summary>
@@ -152,9 +138,6 @@ The full list of Postive/Negative sentiment metrics is:
 - sentiment_positive_telegram
 - sentiment_positive_total
 - sentiment_positive_twitter
-- sentiment_positive_twitter_crypto
-- sentiment_positive_twitter_news
-- sentiment_positive_twitter_nft
 - sentiment_positive_youtube_videos
 </Details>
 
@@ -166,9 +149,6 @@ The full list of Postive/Negative sentiment metrics is:
 - sentiment_negative_telegram
 - sentiment_negative_total
 - sentiment_negative_twitter
-- sentiment_negative_twitter_crypto
-- sentiment_negative_twitter_news
-- sentiment_negative_twitter_nft
 - sentiment_negative_youtube_videos
 </Details>
 
@@ -179,8 +159,5 @@ The full list of Postive/Negative sentiment metrics is:
 - sentiment_balance_telegram
 - sentiment_balance_total
 - sentiment_balance_twitter
-- sentiment_balance_twitter_crypto
-- sentiment_balance_twitter_news
-- sentiment_balance_twitter_nft
 - sentiment_balance_youtube_videos
 </Details>
