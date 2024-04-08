@@ -66,7 +66,8 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 
 - [Daily Active Addresses](/metrics/daily-active-addresses)
 - [Active Addresses 24h](/metrics/active-addresses-24h)
-- [Daily Active Deposits](/metrics/daily-active-deposits)
+- [Active Deposits](/metrics/active-deposits)
+- [Active Withdrawals](/metrics/active-withdrawals)
 - [Network Growth](/metrics/network-growth)
 
 ## Other On-Chain

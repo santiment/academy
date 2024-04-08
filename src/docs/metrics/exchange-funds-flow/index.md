@@ -25,6 +25,8 @@ price of the coin/token at the given date. The available USD metrics are
 ![bitcoin funds in/outflow](bitcoin-funds-inflow-outflow.png)
 ![bitcoin funds balance](bitcoin-funds-flow-balance.png)
 
+For an exchange-specific data please refer to [that page](/metrics/labeled-exchange)
+
 ---
 
 ## Access
@@ -47,7 +49,27 @@ Amount of coins/tokens
 
 ## Change Metrics
 
-[Change Metrics](/metrics/details/change_metrics)
+[Change Metrics:](/metrics/details/change_metrics)
+
+* `exchange_inflow_change_1d`
+* `exchange_inflow_change_7d`
+* `exchange_inflow_change_30d`
+
+* `exchange_outflow_change_1d`
+* `exchange_outflow_change_7d`
+* `exchange_outflow_change_30d`
+
+* `exchange_balance_change_1d`
+* `exchange_balance_change_7d`
+* `exchange_balance_change_30d`
+
+* `exchange_inflow_usd_change_1d`
+* `exchange_inflow_usd_change_7d`
+* `exchange_inflow_usd_change_30d`
+
+* `exchange_outflow_usd_change_1d`
+* `exchange_outflow_usd_change_7d`
+* `exchange_outflow_usd_change_30d`
 
 ---
 
@@ -84,7 +106,7 @@ hand, the price is likely to fall soon thereafter.
 ## Available Assets
 
 Available for [these
-assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22exchange_balanced%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22exchange_balance%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 > Note: All of the metrics are available for the same set of assets.
 
