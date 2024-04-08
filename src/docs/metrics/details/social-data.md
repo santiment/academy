@@ -88,24 +88,24 @@ them is usually very low).
 
     In the metric name this source is typed as `youtube_videos`. Example: `social_volume_youtube_videos`
 
-    **Latency**: TODO:
+    **Latency**: The scraper goes through all the new videos once per day.
 
-    **History**: The historical data starts at TODO:
+    **History**: The historical data starts at `2021-06-02`
 
 
 6. **4chan**
 
-    We collect ... TODO
+    We collect posts from [4chan.org/biz](https://boards.4chan.org/biz/)
 
     In the metric name this source is typed as `4chan`. Example: `social_volume_4chan`
 
-    **Latency**: TODO
+    **Latency**: The scraper goes though all the new posts once per 5 minute.
 
-    **History**: TODO
+    **History**: The historical data starts at `2023-02-05`
 
 7. **Total**
 
     A combination of all available sources.
 
-    In the metric name this source is typed as `total`. Example: `social_voolume_total`.
+    In the metric name this source is typed as `total`. Example: `social_volume_total`.
 
