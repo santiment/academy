@@ -10,9 +10,9 @@ Metrics that show stats related to the ETH 2.0 Staking Contract
 
 * `eth2_stakers_count` - amount of addresses that sent ETH to the ETH 2.0 Staking Contract
 * `eth2_top_stakers` - top addresses by staked amount
-* `eth2_stakers_realized_value_usd_<timebound>` - [Realized value](/metrics/realized-value) of stakers' addresses.
+* `eth2_stakers_realized_value_usd_<timebound>` - [Realized value](/metrics/realized-value) of stakers addresses.
 Metric is available for different [time bounds](/metrics/details/timebound).
-* `eth2_stakers_mvrv_usd_<timebound>` - [MVRV](/metrics/mvrv) of stakers' addresses.
+* `eth2_stakers_mvrv_usd_<timebound>` - [MVRV](/metrics/mvrv) of stakers addresses.
 Metric is available for different [time bounds](/metrics/details/timebound).
 * `eth2_roi` - the annual return on staking in the ETH 2.0 contract
 * `eth2_staked_amount_per_label` - total staked amount by label
