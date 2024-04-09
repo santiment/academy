@@ -12,6 +12,9 @@ multiplying all coins/tokens by the last price, every coin/token is assigned the
 price at which it was last moved. Assigning age to coin/tokens is done
 according to the [coin-age model](/metrics/details/stack-coin-age-model).
 
+Realized Value metric is also available for different [time bounds](/metrics/details/timebound), which 
+computes realized value for tokens moved at least once no longer than a specific number of days or years ago.
+
 ---
 
 ## Access
@@ -81,3 +84,21 @@ Available under the `realized_value_usd` and `realized_value_usd_<timebound>` na
 ```
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22realized_value_usd%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
+
+## Full list of metrics
+
+<Details>
+<Summary>Realized value metrics</Summary>
+- realized_value_usd
+- realized_value_usd_1d
+- realized_value_usd_7d
+- realized_value_usd_30d
+- realized_value_usd_60d
+- realized_value_usd_90d
+- realized_value_usd_180d
+- realized_value_usd_365d
+- realized_value_usd_2y
+- realized_value_usd_3y
+- realized_value_usd_5y
+- realized_value_usd_10y
+</Details>
