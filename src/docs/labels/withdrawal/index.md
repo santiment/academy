@@ -6,10 +6,10 @@ description: label
 ---
 
 ## Description
-A withdrawal address is and address that belongs to a user and used by a user in order to withdraw funds from a third-party, e.g CEX.
-The address is considered as a withdrawal address if it received funds from CEX (withdraw).
+A withdrawal address is an address that belongs to a user and is used by a user in order to withdraw funds from a third-party (e.g CEX).
+The address is considered as a withdrawal address if it has received funds from a CEX (withdraw).
 
-Most common case is a centralized exchange withdrawal. See the details on the picture below.
+The most common case is a centralized exchange (CEX) withdrawal. See the details in the image below.
 
 ![deposit_address](deposit-withdrawal.png)
 
