@@ -32,80 +32,92 @@ them is usually very low).
 
 ## Available data sources
 
-1. **Telegram**
+### Telegram
 
-    We track a curated list with over 400 crypto-related Telegram chats. For each
-    of them, we have the entire history of the chat.
+We track a curated list with over 400 crypto-related Telegram chats. For each
+of them, we have the entire history of the chat.
 
-    In the metric name this source is available as `telegram`. Example: `social_volume_telegram`.
+In the metric name this source is available as `telegram`. Example: `social_volume_telegram`.
 
-    **Latency**. We collect the messages in real-time (1-2s delay max.)
+**Latency**. We collect the messages in real-time (1-2s delay max.)
 
-    **History**. Each chat has its complete historical data; the oldest discussion starts
-    at `2016-03-29`.
+**History**. Each chat has its complete historical data; the oldest discussion starts
+at `2016-03-29`.
 
-2. **Twitter**
+---
 
-    We track a curated list with over 4000 crypto-related and NFT-related Twitter accounts. For
-    each of them, we collect their tweets, their retweets, and all the replies to
-    their tweets.
+### Twitter
 
-    In the metric name this source is typed as `twitter`. Example: `social_volume_twitter`.
+We track a curated list with over 4000 crypto-related and NFT-related Twitter accounts. For
+each of them, we collect their tweets, their retweets, and all the replies to
+their tweets.
 
-    **Latency**: We collect all the tweets in real-time. 
+In the metric name this source is typed as `twitter`. Example: `social_volume_twitter`.
 
-    **History**: The historical data starts at `2018-02-13`.
+**Latency**: We collect all the tweets in real-time. 
 
-3. **Reddit**
+**History**: The historical data starts at `2018-02-13`.
 
-    We track a curated list with over 350 crypto-related subreddits. For each of
-    them we collect the posts themselves, as well as all the comments to these
-    posts.
+---
 
-    In the metric name this source is typed as `reddit`. Example: `social_volume_reddit`.
+### Reddit
 
-    **Latency**: All the posts and comments are collected in real-time (1-2s delay
-    max.)
+We track a curated list with over 350 crypto-related subreddits. For each of
+them we collect the posts themselves, as well as all the comments to these
+posts.
 
-    **History**: The historical data starts at `2016-01-01`.
+In the metric name this source is typed as `reddit`. Example: `social_volume_reddit`.
 
-4. **Bitcointalk**
+**Latency**: All the posts and comments are collected in real-time (1-2s delay
+max.)
 
-    We collect all the new public posts from
-    [bitcointalk.org](https://bitcointalk.org). We also have the full historical
-    data for the whole forum.
+**History**: The historical data starts at `2016-01-01`.
 
-    In the metric name this source is typed as `bitcointalk`. Example: `social_volume_bitcointalk`.
+---
 
-    **Latency**: The scraper goes through all the new messages once per 10 seconds.
+### Bitcointalk
 
-    **History**: we have collected the entire forum history, starting from
-    `2009-11-22`.
+We collect all the new public posts from
+[bitcointalk.org](https://bitcointalk.org). We also have the full historical
+data for the whole forum.
 
-5. **Youtube Videos**
+In the metric name this source is typed as `bitcointalk`. Example: `social_volume_bitcointalk`.
 
-    We collect the transcribed text from youtube videos from a manually curated list of channels.
+**Latency**: The scraper goes through all the new messages once per 10 seconds.
 
-    In the metric name this source is typed as `youtube_videos`. Example: `social_volume_youtube_videos`
+**History**: we have collected the entire forum history, starting from
+`2009-11-22`.
 
-    **Latency**: The scraper goes through all the new videos once per day.
+---
 
-    **History**: The historical data starts at `2021-06-02`
+### Youtube Videos
 
+We collect the transcribed text from youtube videos from a manually curated list of channels.
 
-6. **4chan**
+In the metric name this source is typed as `youtube_videos`. Example: `social_volume_youtube_videos`
 
-    We collect posts from [4chan.org/biz](https://boards.4chan.org/biz/)
+**Latency**: The scraper goes through all the new videos once per day.
 
-    In the metric name this source is typed as `4chan`. Example: `social_volume_4chan`
+**History**: The historical data starts at `2021-06-02`
 
-    **Latency**: The scraper goes though all the new posts once per 5 minute.
+---
 
-    **History**: The historical data starts at `2023-02-05`
+### 4chan
 
-7. **Total**
+We collect posts from [4chan.org/biz](https://boards.4chan.org/biz/)
 
-    A combination of all available sources.
+In the metric name this source is typed as `4chan`. Example:
+`social_volume_4chan`
 
-    In the metric name this source is typed as `total`. Example: `social_volume_total`.
+**Latency**: The scraper goes though all the new posts once per 5 minute.
+
+**History**: The historical data starts at `2023-02-05`
+
+---
+
+### Total
+
+A combination of all available sources.
+
+In the metric name this source is typed as `total`. Example: `social_volume_total`.
 
