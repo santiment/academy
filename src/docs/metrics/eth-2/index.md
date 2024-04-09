@@ -8,16 +8,21 @@ description: ETH 2.0 Metrics
 ## Description
 Metrics that show stats related to the ETH 2.0 Staking Contract
 
-* `eth2_stakers_count` - amount of addresses that sent ETH to the ETH 2.0 Staking Contract
-* `eth2_top_stakers` - top addresses by staked amount
+* `eth2_stakers_count` - Amount of addresses that sent ETH to the ETH 2.0 Staking Contract
+* `eth2_top_stakers` - Top addresses by staked amount
 * `eth2_stakers_realized_value_usd_<timebound>` - [Realized value](/metrics/realized-value) of stakers addresses.
 Metric is available for different [time bounds](/metrics/details/timebound).
 * `eth2_stakers_mvrv_usd_<timebound>` - [MVRV](/metrics/mvrv) of stakers addresses.
 Metric is available for different [time bounds](/metrics/details/timebound).
-* `eth2_roi` - the annual return on staking in the ETH 2.0 contract
-* `eth2_staked_amount_per_label` - total staked amount by label
-* `eth2_staked_address_count_per_label` - amount of addresses that staked ETH by label
-* `eth2_unlabeled_staker_inflow_sources` - shows sources from which unlabeled stakers received ETH
+* `eth2_roi` - The annual return on staking in the ETH 2.0 contract
+* `eth2_staked_amount_per_label` - Total staked amount by label
+* `eth2_staked_address_count_per_label` - Amount of addresses that staked ETH by label
+* `eth2_unlabeled_staker_inflow_sources` - Shows sources from which unlabeled stakers received ETH
+
+Beacon chain metrics:
+* `eth_beacon_deposits` - Amount of ETH deposited into the Beacon Chain contract
+* `eth_beacon_validator_withdrawals` - Withdrawals made by validators from the Ethereum Beacon Chain contract 
+* `eth_beacon_reward_withdrawals` - Withdrawals of rewards by validators from the Ethereum Beacon Chain contract
 
 ---
 
@@ -31,6 +36,8 @@ Metric is available for different [time bounds](/metrics/details/timebound).
 * `eth2_stakers_count` - Amount of addresses
 * `eth2_roi` - Percents
 * `eth2_stakers_realized_value_usd_<timebound>` and `eth2_stakers_mvrv_usd_<timebound>` - USD
+* `eth_beacon_deposits`, `eth_beacon_validator_withdrawals` and 
+`eth_beacon_reward_withdrawals` - Amount in ETH
 
 ---
 
@@ -236,10 +243,34 @@ and `eth2_stakers_mvrv_usd_<timebound>` names.
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth2_stakers_realized_value_usd_365d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
+Available under the `eth_beacon_deposits`, `eth_beacon_validator_withdrawals` and 
+`eth_beacon_reward_withdrawals` names.
+
+```graphql
+{
+  getMetric(metric: "eth_beacon_deposits") {
+    timeseriesData(
+      slug: "ethereum"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-01-07T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
+**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth_beacon_deposits%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
+
 ## Full list of metrics
 
 <Details>
 <Summary>ETH 2.0 metrics</Summary>
+- eth_beacon_deposits
+- eth_beacon_validator_withdrawals
+- eth_beacon_reward_withdrawals
 - eth2_stakers_count
 - eth2_top_stakers
 - eth2_roi
