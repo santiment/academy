@@ -88,7 +88,8 @@ Available under the `realized_value_usd` and `realized_value_usd_<timebound>` na
 ## Full list of metrics
 
 <Details>
-<Summary>Realized Value metrics</Summary>
+<Summary>Realized value metrics</Summary>
+- realized_value_usd
 - realized_value_usd_1d
 - realized_value_usd_7d
 - realized_value_usd_30d
