@@ -89,13 +89,13 @@ Sum of sentiment scores
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+[Social Data Latency](/metrics/details/latency#social-data-latency)
 
 ---
 
 ## Available Assets
 
-All metrics have the same set of [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+All metrics have the same set of [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_weighted_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
 
 ---
 
