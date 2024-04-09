@@ -27,7 +27,7 @@ are grouped together (messages count bigger than 1).
 | -------------- | ------------------------ | ------------------------ |
 | 3              | 0.7                      |                    0.3   |
 | 2              | 1.0                      |                    0.0   |
-| 3              | 0.7                      |                    0.8   |
+| 3              | 0.2                      |                    0.8   |
 | 2              | 0.55                     |                    0.45  |
 
 Using this data we can compute:
