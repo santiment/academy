@@ -8,6 +8,7 @@
   font-style: normal;
   font-weight: normal;
   color: var(--rhino);
+  word-break: break-word;
 
   @include text('body-1');
   line-height: 28px;

@@ -270,7 +270,7 @@ export const REFERENCES = [
       'Supply On Or Outside Exchanges',
       'Top Holders',
       'Top Social Gainers Losers',
-      'Traidng Volume',
+      'Trading Volume',
       'Transacted Coin Acquisition Cost',
       'Transaction Volume In Profit Or Loss',
       'Transaction Volume',
