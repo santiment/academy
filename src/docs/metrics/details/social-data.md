@@ -32,53 +32,92 @@ them is usually very low).
 
 ## Available data sources
 
-1. **Telegram**
+### Telegram
 
-    We track a curated list with over 400 crypto-related Telegram chats. For each
-    of them, we have the entire history of the chat.
+We track a curated list with over 400 crypto-related Telegram chats. For each
+of them, we have the entire history of the chat.
 
-    **Latency**. We collect the messages in real-time (1-2s delay max.)
+In the metric name this source is available as `telegram`. Example: `social_volume_telegram`.
 
-    **History**. Each chat has its complete historical data; the oldest discussion starts
-    at `2016-03-29`.
+**Latency**. We collect the messages in real-time (1-2s delay max.)
 
-    **Availability**: Used in all of our social metrics.
+**History**. Each chat has its complete historical data; the oldest discussion starts
+at `2016-03-29`.
 
-2. **Twitter**
+---
 
-    We track a curated list with over 4000 crypto-related and NFT-related Twitter accounts. For
-    each of them, we collect their tweets, their retweets, and all the replies to
-    their tweets.
+### Twitter
 
-    **Latency**: We collect all the tweets in real-time. 
+We track a curated list with over 4000 crypto-related and NFT-related Twitter accounts. For
+each of them, we collect their tweets, their retweets, and all the replies to
+their tweets.
 
-    **History**: The historical data starts at `2018-02-13`.
+In the metric name this source is typed as `twitter`. Example: `social_volume_twitter`.
 
-    **Availability**: Used in all of our social metrics.
+**Latency**: We collect all the tweets in real-time. 
 
-3. **Reddit**
+**History**: The historical data starts at `2018-02-13`.
 
-    We track a curated list with over 350 crypto-related subreddits. For each of
-    them we collect the posts themselves, as well as all the comments to these
-    posts.
+---
 
-    **Latency**: All the posts and comments are collected in real-time (1-2s delay
-    max.)
+### Reddit
 
-    **History**: The historical data starts at `2016-01-01`.
+We track a curated list with over 350 crypto-related subreddits. For each of
+them we collect the posts themselves, as well as all the comments to these
+posts.
 
-    **Availability**: Data is currently only included in parts of Sanbase
-    ([https://app.santiment.net/labs/trends/explore/bullrun](https://app.santiment.net/labs/trends/explore/bullrun)),
+In the metric name this source is typed as `reddit`. Example: `social_volume_reddit`.
 
-4. **Bitcointalk**
+**Latency**: All the posts and comments are collected in real-time (1-2s delay
+max.)
 
-    We collect all the new public posts from
-    [bitcointalk.org](https://bitcointalk.org). We also have the full historical
-    data for the whole forum.
+**History**: The historical data starts at `2016-01-01`.
 
-    **Latency**: The scraper goes through all the new messages once per 10 seconds.
+---
 
-    **History**: we have collected the entire forum history, starting from
-    `2009-11-22`.
+### Bitcointalk
 
-    **Availability**: Used in all of our social metrics.
+We collect all the new public posts from
+[bitcointalk.org](https://bitcointalk.org). We also have the full historical
+data for the whole forum.
+
+In the metric name this source is typed as `bitcointalk`. Example: `social_volume_bitcointalk`.
+
+**Latency**: The scraper goes through all the new messages once per 10 seconds.
+
+**History**: we have collected the entire forum history, starting from
+`2009-11-22`.
+
+---
+
+### Youtube Videos
+
+We collect the transcribed text from youtube videos from a manually curated list of channels.
+
+In the metric name this source is typed as `youtube_videos`. Example: `social_volume_youtube_videos`
+
+**Latency**: The scraper goes through all the new videos once per day.
+
+**History**: The historical data starts at `2021-06-02`
+
+---
+
+### 4chan
+
+We collect posts from [4chan.org/biz](https://boards.4chan.org/biz/)
+
+In the metric name this source is typed as `4chan`. Example:
+`social_volume_4chan`
+
+**Latency**: The scraper goes though all the new posts once per 5 minute.
+
+**History**: The historical data starts at `2023-02-05`
+
+---
+
+### Total
+
+A combination of all available sources.
+
+In the metric name this source is typed as `total`. Example: `social_volume_total`.
+
