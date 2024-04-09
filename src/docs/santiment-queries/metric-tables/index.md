@@ -110,14 +110,14 @@ Table `intraday_metrics` also has `label` and `owner` columns so that metrics st
 
 > Note that this table uses old way to filter labels (plain label/owner instead of label_fqn).
 
-This table could be used to retrieve [labelled exchange](/metric/labeled-exchange) metrics under names: 
+This table could be used to retrieve [labelled exchange](/metrics/labeled-exchange) metrics under names: 
 
 * `labelled_active_deposits`
 * `labelled_deposit_transactions`
 * `labelled_active_withdrawals`
 * `labelled_withdrawal_transactions` 
 
-or [NFT trading related metrics](/).
+or NFT [trading volume](metrics/nft-trade-volume-usd) and [trades count](metrics/nft-trades-count) metrics.
 
 Here's an example to get Binance active deposits:
 
@@ -201,8 +201,39 @@ Test in [Queries](https://queries.santiment.net/query/intraday-nft-metrics-examp
 
 ---
 
-
 ## Use Cases and Other tables
+
+### Metadata tables
+
+There are few metadata tables storing data about metrics, assets and label_fqns:
+
+* `metric_metadata` stores metric name, ID, metric version, etc.
+* `asset_metadata` stores asset name, ID, decimals, contract_addresses, ticker and slug, etc.
+* `label_metadata` stores label fqn, ID and other label related info.
+
+Using these table you can navigate through a wide range of Santiment datasets. For instance, you're able to 
+find all price-related metrics with a simple query:
+
+```SQL
+SELECT DISTINCT name, metric_id
+FROM metric_metadata
+WHERE name LIKE '%price%'
+```
+
+Test in [Queries](https://queries.santiment.net/query/price-related-metrics-example-488)
+
+Also you're able to find deciamals and contract addresses for a particular asset, e.g. uniswap:
+
+```SQL
+SELECT DISTINCT name, asset_id, decimals, contract_addresses
+FROM asset_metadata
+WHERE name = 'uniswap'
+```
+```
+┌───────name─┬──asset_id─┬──deciamls─┬──────────contract_addresses───────────────────────────┐
+│ 'uniswap'       2825         18   ['0x1f9840a85d5af5bf1d1762f925bdaddc4201f984']  │ 
+└─────────────┴────────────┴─────────────┴───────────────────────────────────────────────────────────┘
+```
 
 
 ### Using precomputed metrics to build new metrics
