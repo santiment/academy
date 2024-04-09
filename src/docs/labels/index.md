@@ -146,7 +146,8 @@ Below you can find labels which are attached to every group from above. Please n
  - [Whale](/labels/whale)
  - [Whale USD Balance](/labels/whale-usd-balance)
  - [Lending User](/labels/lending-user)
- - TBA: Withdrawal
+ - [Withdrawal](/labels/withdrawal)
+ - [Withdrawn From](/labels/withdrawn-from)
 
 
 ### Social networks
