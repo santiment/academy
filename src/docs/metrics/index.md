@@ -59,6 +59,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [MVRV](/metrics/mvrv)
 - [NVT](/metrics/nvt)
 - [Realized Value](/metrics/realized-value)
+- [Mean Realized Price](/metrics/mean-realized-price)
 - [Network Profit Loss](/metrics/network-profit-loss)
 - [Realized Market Capitalization Hodl Waves](/metrics/realized-market-capitalization-hodl-waves)
 
