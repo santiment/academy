@@ -1,6 +1,6 @@
 ---
 title: ETH 2.0 Metrics
-author: Maksim Razhev
+author: Maksim Razhev, Filip
 date: 2021-01-28
 description: ETH 2.0 Metrics
 ---
@@ -9,12 +9,14 @@ description: ETH 2.0 Metrics
 Metrics that show stats related to the ETH 2.0 Staking Contract
 
 * `eth2_stakers_count` - Amount of addresses that sent ETH to the ETH 2.0 Staking Contract
-* `eth2_top_stakers` - Top addresses by staked amount
 * `eth2_stakers_realized_value_usd_<timebound>` - [Realized value](/metrics/realized-value) of stakers addresses.
 Metric is available for different [time bounds](/metrics/details/timebound).
 * `eth2_stakers_mvrv_usd_<timebound>` - [MVRV](/metrics/mvrv) of stakers addresses.
 Metric is available for different [time bounds](/metrics/details/timebound).
 * `eth2_roi` - The annual return on staking in the ETH 2.0 contract
+
+ETH 2.0 histogram metrics - see [examples](#SanAPI) for details how to query it:
+* `eth2_top_stakers` - Top addresses by staked amount
 * `eth2_staked_amount_per_label` - Total staked amount by label
 * `eth2_staked_address_count_per_label` - Amount of addresses that staked ETH by label
 * `eth2_unlabeled_staker_inflow_sources` - Shows sources from which unlabeled stakers received ETH
@@ -151,14 +153,13 @@ Staked amount per label:
 Count of addresses that staked:
 ```graphql
 {
-	getMetric(metric: "eth2_staked_address_count_per_label"){
-          histogramData(
-            selector: {slug: "ethereum"}
-            from: "utc_now-10d"
-            to: "utc_now"
-          ){
-			values{
-         
+  getMetric(metric: "eth2_staked_address_count_per_label"){
+    histogramData(
+      selector: {slug: "ethereum"}
+      from: "utc_now-10d"
+      to: "utc_now"
+    ){
+      values{
         ... on StringLabelFloatValueList{
           data{
             label
@@ -175,14 +176,13 @@ Count of addresses that staked:
 Sources for the unlabelled stakes source:
 ```graphql
 {
-	getMetric(metric: "eth2_unlabeled_staker_inflow_sources"){
+  getMetric(metric: "eth2_unlabeled_staker_inflow_sources"){
     histogramData(
       selector: {slug: "ethereum"}
       from: "utc_now-10d"
       to: "utc_now"
     ){
-			values{
-         
+      values{ 
         ... on StringLabelFloatValueList{
           data{
             label
@@ -199,15 +199,14 @@ Sources for the unlabelled stakes source:
 Top stakers:
 ```graphql
 {
-	getMetric(metric: "eth2_top_stakers"){
+  getMetric(metric: "eth2_top_stakers"){
     histogramData(
       selector: {slug: "ethereum"}
       from: "utc_now-10d"
       to: "utc_now"
       limit: 2
     ){
-			values{
-         
+      values{
         ... on StringAddressStringLabelFloatValueList{
           data{
             address
