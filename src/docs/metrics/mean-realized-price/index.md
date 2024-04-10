@@ -7,11 +7,10 @@ description: Mean Realized Price Metrics
 
 ## Definition
 
-The Mean Realized Price metric calculates the average price at which tokens have been transacted 
-relative to their current circulating supply. It provides insights into the average profitability 
-of token transactions by considering the [realized value](/metrics/realized-value) against the 
-[total circulating](/metrics/circulation) tokens, offering a valuable perspective on market 
-sentiment and investor behavior.
+The Mean Realized Price metric calculates the average price at which tokens were obtained.
+It provides insights into the average profitability of token transactions by considering the 
+[Realized Value](/metrics/realized-value) against the [Total Circulating](/metrics/circulation) 
+tokens. It can be understood as the price level that acts as support or resistance.
 
 $$
 \text{mean\_realized\_price\_usd} = \frac{\text{realized\_value\_usd}}{\text{circulation}}
@@ -20,6 +19,15 @@ $$
 Mean Realized Price metric is also available for different [time bounds](/metrics/details/timebound), which 
 computes the mean realized price for tokens moved at least once no longer than a specific number of days or years ago.
 
+
+### Bottom Indicator Use Case
+
+![Mean Realized Price](mean-realized-price.png)
+
+The Mean Realized Price carries considerable weight for crypto investors. In times of market instability, 
+it serves as a crucial indicator. If the price falls below the Mean Realized Price, it suggests that, 
+on average, token holders are facing unrealized losses. These periods are highlighted on the chart 
+above (red rectangles), and investors view them as opportunities to accumulate more tokens.
 
 ---
 
@@ -93,7 +101,7 @@ Available under the `mean_realized_price_usd` and `mean_realized_price_usd_<time
 ## Full list of metrics
 
 <Details>
-<Summary>Mean realized price metrics</Summary>
+<Summary>Mean Realized Price metrics</Summary>
 - mean_realized_price_usd
 - mean_realized_price_usd_1d
 - mean_realized_price_usd_7d
