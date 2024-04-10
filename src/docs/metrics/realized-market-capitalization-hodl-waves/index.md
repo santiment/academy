@@ -81,3 +81,21 @@ Available under `realized_cap_hodl_waves_<interval>` names.
 ```
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22realized_cap_hodl_waves_1d_to_7d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222022-05-25T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-06-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
+
+## Full list of metrics
+
+<Details>
+<Summary>Realized Market Capitalization Hodl Waves Metrics</Summary>
+- realized_cap_hodl_waves_0d_to_1d
+- realized_cap_hodl_waves_1d_to_7d
+- realized_cap_hodl_waves_7d_to_30d
+- realized_cap_hodl_waves_30d_to_60d
+- realized_cap_hodl_waves_60d_to_90d
+- realized_cap_hodl_waves_90d_to_180d
+- realized_cap_hodl_waves_180d_to_365d
+- realized_cap_hodl_waves_365d_to_2y
+- realized_cap_hodl_waves_2y_to_3y
+- realized_cap_hodl_waves_3y_to_5y
+- realized_cap_hodl_waves_5y_to_10y
+- realized_cap_hodl_waves_10y_to_20y
+</Details>
