@@ -19,7 +19,6 @@ ETH 2.0 histogram metrics - see [examples](#SanAPI) for details how to query it:
 * `eth2_top_stakers` - Top addresses by staked amount
 * `eth2_staked_amount_per_label` - Total staked amount by label
 * `eth2_staked_address_count_per_label` - Amount of addresses that staked ETH by label
-* `eth2_unlabeled_staker_inflow_sources` - Shows sources from which unlabeled stakers received ETH
 
 Beacon chain metrics:
 * `eth_beacon_deposits` - Amount of ETH deposited into the Beacon Chain contract
@@ -173,29 +172,6 @@ Count of addresses that staked:
 ```
 [**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%20%22eth2_staked_address_count_per_label%22)%7B%0A%20%20%20%20%20%20%20%20%20%20histogramData(%0A%20%20%20%20%20%20%20%20%20%20%20%20selector%3A%20%7Bslug%3A%20%22ethereum%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3A%20%22utc_now-10d%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20%20%20%20%20)%7B%0A%09%09%09values%7B%0A%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20...%20on%20StringLabelFloatValueList%7B%0A%20%20%20%20%20%20%20%20%20%20data%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20label%0A%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-Sources for the unlabelled stakes source:
-```graphql
-{
-  getMetric(metric: "eth2_unlabeled_staker_inflow_sources"){
-    histogramData(
-      selector: {slug: "ethereum"}
-      from: "utc_now-10d"
-      to: "utc_now"
-    ){
-      values{ 
-        ... on StringLabelFloatValueList{
-          data{
-            label
-            value
-          }
-        }
-      }
-    }
-  }
-}
-```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%20%22eth2_unlabeled_staker_inflow_sources%22)%7B%0A%20%20%20%20histogramData(%0A%20%20%20%20%20%20selector%3A%20%7Bslug%3A%20%22ethereum%22%7D%0A%20%20%20%20%20%20from%3A%20%22utc_now-10d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20)%7B%0A%09%09%09values%7B%0A%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20...%20on%20StringLabelFloatValueList%7B%0A%20%20%20%20%20%20%20%20%20%20data%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20label%0A%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
 Top stakers:
 ```graphql
 {
@@ -275,7 +251,6 @@ Available under the `eth_beacon_deposits`, `eth_beacon_validator_withdrawals` an
 - eth2_roi
 - eth2_staked_amount_per_label
 - eth2_staked_address_count_per_label
-- eth2_unlabeled_staker_inflow_sources
 - eth2_stakers_realized_value_usd_365d
 - eth2_stakers_realized_value_usd_2y
 - eth2_stakers_realized_value_usd_3y
