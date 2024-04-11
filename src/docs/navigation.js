@@ -275,6 +275,7 @@ export const REFERENCES = [
       'Transaction Volume In Profit Or Loss',
       'Transaction Volume',
       'Transaction Count',
+      'Transaction Size',
       'Trending Words Rank',
       'Unique Social Volume',
       'Velocity',
