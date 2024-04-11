@@ -20,6 +20,9 @@ The base fee is computed independently of the current block and instead relies o
 enhancing predictability for users regarding transaction fees. Upon block creation, this base fee 
 is burned, effectively removing it from circulation.
 
+The gas units consumed per transaction represent the amount of gas used during the transaction, 
+essentially reflecting the complexity of the transaction.
+
 
 Ethereum fees metrics:
 - `fees`: Total fees paid in ETH over a daily interval
@@ -43,6 +46,9 @@ $$
 \frac{\text{fees} * \text{daily\_avg\_price\_usd}}{\text{network\_circulation\_usd\_1d}}
 $$
 where $\text{network\_circulation\_usd\_1d}$ represents the total value in USD of all coins moved on Ethereum
+
+Gas used metric:
+- `avg_gas_used` - Average amount of gas consumed per transaction over 5-minute time intervals
 
 ---
 
@@ -179,3 +185,22 @@ Fees to network circulation metric: `fees_to_network_circulation_usd_1d`
 }
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fees_to_network_circulation_usd_1d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
+Gas used metric: `avg_gas_used`
+
+```graphql
+{
+  getMetric(metric: "avg_gas_used") {
+    timeseriesData(
+      slug: "ethereum"
+      from: "2024-03-01T00:00:00Z"
+      to: "2024-03-07T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22avg_gas_used%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
