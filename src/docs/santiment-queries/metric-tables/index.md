@@ -33,7 +33,7 @@ Metrics are located in different tables, depending on some different parameters.
 
 ### daily_metrics_v2
 
-Table `daily_metrics_v2` is the most basic table. It stores a signle metric value for each asset for each day. I.e. in that tables stored metrics that have exactly 1 value per day.
+The `daily_metrics_v2` table stores a single metric value for each asset for each day. I.e. in that tables stored metrics that have exactly 1 value per day.
 
 Here's an example how to fetch `daily_active_addresses` for `bitcoin` using `daily_metrics_v2`
 
