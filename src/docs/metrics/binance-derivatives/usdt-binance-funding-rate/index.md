@@ -52,7 +52,10 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### SanAPI
 
-Available under the `usdt_binance_funding_rate` and `usdt_bnb_funding_rates` names.
+Available under the `usdt_binance_funding_rate` name.
+
+> Note: The metric is also accessible under the old name `usdt_bnb_funding_rates`. 
+> Please start using the new name.
 
 ```graphql
 {

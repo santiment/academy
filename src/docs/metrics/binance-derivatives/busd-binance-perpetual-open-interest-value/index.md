@@ -52,7 +52,10 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### SanAPI - Open Interest
 
-Available under the `busd_binance_open_interest` and `busd_bnb_open_interest` names.
+Available under the `busd_binance_open_interest`.
+
+> Note: The metric is also accessible under the old name `busd_bnb_open_interest`. 
+> Please start using the new name.
 
 ```graphql
 {
@@ -77,7 +80,10 @@ Available under the `busd_binance_open_interest` and `busd_bnb_open_interest` na
 
 ### SanAPI - Open Value
 
-Available under the `busd_binance_open_value` and `busd_bnb_open_value` names.
+Available under the `busd_binance_open_value` name.
+
+> Note: The metric is also accessible under the old name `busd_bnb_open_value`. 
+> Please start using the new name.
 
 ```graphql
 {

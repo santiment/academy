@@ -11,6 +11,7 @@ Funding rates are periodic payments made to either long or short traders, calcul
 
 More details on Binance [web-site](https://www.binance.com/en/support/faq/360033525031).
 
+
 ---
 
 ## Access
@@ -52,7 +53,10 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### SanAPI
 
-Available under the `busd_binance_funding_rate` and `busd_bnb_funding_rates` names.
+Available under the `busd_binance_funding_rate` name.
+
+> Note: The metric is also accessible under the old name `busd_bnb_funding_rates`. 
+> Please start using the new name.
 
 ```graphql
 {
