@@ -12,10 +12,10 @@ This document introduces Santiment's precomputed metrics datasets.
 You can filter all metric tables as:
 
 ```sql
-SHOW TABLES LIKE '%metric%'
+SHOW TABLES LIKE '%metrics%'
 ```
 
-Test in [Queries](https://queries.santiment.net/query/list-of-tables-390)
+Test in [Queries](https://queries.santiment.net/query/metrics-tables-example-494)
 
 Usually, tables storing pre-computed data have a common set of columns:
 
