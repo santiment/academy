@@ -52,7 +52,7 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### SanAPI
 
-Available under the `busd_binance_funding_rate` name.
+Available under the `busd_binance_funding_rate` and `busd_bnb_funding_rates` names.
 
 ```graphql
 {
