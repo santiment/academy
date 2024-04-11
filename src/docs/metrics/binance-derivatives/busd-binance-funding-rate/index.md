@@ -11,7 +11,6 @@ Funding rates are periodic payments made to either long or short traders, calcul
 
 More details on Binance [web-site](https://www.binance.com/en/support/faq/360033525031).
 
-
 ---
 
 ## Access

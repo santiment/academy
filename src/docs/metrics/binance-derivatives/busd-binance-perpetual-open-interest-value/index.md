@@ -52,7 +52,7 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### SanAPI - Open Interest
 
-Available under the `busd_binance_open_interest`.
+Available under the `busd_binance_open_interest` name.
 
 > Note: The metric is also accessible under the old name `busd_bnb_open_interest`. 
 > Please start using the new name.
