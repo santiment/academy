@@ -99,6 +99,7 @@ export const GUIDES = [
       'API Access',
       'Rate Limits and Credits Cost',
       'Prices Tables',
+      'Metric Tables',
       { slug: 'bridges', title: 'Bridge Transactions' },
       'Lending Pools',
       'DEX Pools',
