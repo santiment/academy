@@ -242,15 +242,20 @@ Available under the `eth_beacon_deposits`, `eth_beacon_validator_withdrawals` an
 ## Full list of metrics
 
 <Details>
+<Details>
+<Summary>ETH 2.0 histogram metrics</Summary>
+- eth2_top_stakers
+- eth2_staked_amount_per_label
+- eth2_staked_address_count_per_label
+</Details>
+
+<Details>
 <Summary>ETH 2.0 metrics</Summary>
 - eth_beacon_deposits
 - eth_beacon_validator_withdrawals
 - eth_beacon_reward_withdrawals
 - eth2_stakers_count
-- eth2_top_stakers
 - eth2_roi
-- eth2_staked_amount_per_label
-- eth2_staked_address_count_per_label
 - eth2_stakers_realized_value_usd_365d
 - eth2_stakers_realized_value_usd_2y
 - eth2_stakers_realized_value_usd_3y
