@@ -25,7 +25,7 @@ Usually, tables storing pre-computed data have a common set of columns:
 - `value` - A `Float` column holding the metric's value for the given asset/metric pair.
 - `computed_at` - A `DateTime` column storing the date and time when the given row was computed.
 
-Metrics are located in a different tables based on different parameters. All tables are similar to each other and described below.
+Metrics are located in different tables, depending on some different parameters. All tables are similar to each other and described below.
 
 ## Tables
 
