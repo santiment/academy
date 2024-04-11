@@ -7,7 +7,7 @@ description: Transaction Size Metrics
 
 ## Description
 
-The Transaction Size Metric calculates the average or median size of transactions over a specific 
+The Transaction Size Metric calculates the average size and the median size of transactions over a specific 
 time period. If the average transfer size is increasing, it could suggest that whales are beginning 
 to move their tokens, either buying or selling.
 
