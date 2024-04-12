@@ -216,6 +216,7 @@ export const REFERENCES = [
       'Amount in Top Holders',
       'Annual Inflation Rate',
       'Binance Derivatives',
+      'Bitcoin ETF Volume',
       'Bitfinex Derivatives',
       'BitMEX Derivatives',
       'Deribit Derivatives',
