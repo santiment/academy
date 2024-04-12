@@ -72,6 +72,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 
 - [Age Consumed](/metrics/age-consumed)
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
+- [Bitcoin ETF Volume](/metrics/bitcoin-etf-volume)
 - [Circulation](/metrics/circulation)
 - [DeFi](/metrics/defi)
 - [Dormant Circulation](/metrics/dormant-circulation)
