@@ -18,10 +18,6 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [Ethereum Fees](/metrics/ethereum-fees)
 - [Ethereum Spent](/metrics/ethereum-spent)
 - [Mean Coin Age](/metrics/mean-coin-age)
-- [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
-- [NFT Collection Price](/metrics/nft-collection-price)
-- [NFT Market Volume](/metrics/nft-market-volume)
-- [NFT Network Profit Loss](/metrics/nft-network-profit-loss)
 - [OHLC (Open-High-Low-Close)](/metrics/price/#ohlc)
 - [Price Volatility](/metrics/price-volatility)
 - [RSI](/metrics/rsi)
@@ -107,6 +103,15 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [FTX](/metrics/ftx)
 - [dYdX](/metrics/dydx)
 - [Huobi](/metrics/huobi)
+
+## NFT
+
+- [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
+- [NFT Collection Price](/metrics/nft-collection-price)
+- [NFT Market Volume](/metrics/nft-market-volume)
+- [NFT Network Profit Loss](/metrics/nft-network-profit-loss)
+- [NFT Trades Count](/metrics/nft-trades-count)
+- [NFT Trade Volume USD](/metrics/nft-trade-volume-usd)
 
 ## Blockchain Address Metrics
 

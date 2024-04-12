@@ -253,6 +253,8 @@ export const REFERENCES = [
       'NFT Market Volume',
       'NFT Network Profit Loss',
       'NFT Social Volume',
+      'NFT Trades Count',
+      'NFT Trade Volume USD',
       'NVT',
       'Open Interest',
       'Price Volatility',
