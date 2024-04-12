@@ -72,3 +72,4 @@ package-lock.json
 .idea/
 
 .tool-versions
+.aider*

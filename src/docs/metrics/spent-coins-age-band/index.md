@@ -79,3 +79,39 @@ Available under `spent_coins_age_band_<interval>` and `percent_of_spent_coins_ag
 ```
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spent_coins_age_band_0d_to_1d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222022-05-25T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-06-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
+
+## Full list of metrics
+
+<Details>
+<Summary>Spent Coins Age Band Metrics</Summary>
+- spent_coins_age_band_0d_to_1d
+- spent_coins_age_band_1d_to_7d
+- spent_coins_age_band_7d_to_30d
+- spent_coins_age_band_30d_to_60d
+- spent_coins_age_band_60d_to_90d
+- spent_coins_age_band_90d_to_180d
+- spent_coins_age_band_180d_to_365d
+- spent_coins_age_band_365d_to_2y
+- spent_coins_age_band_2y_to_3y
+- spent_coins_age_band_3y_to_5y
+- spent_coins_age_band_5y_to_7y
+- spent_coins_age_band_7y_to_10y
+- spent_coins_age_band_10y_to_inf
+</Details>
+
+<Details>
+<Summary>Percent of Spent Coins Age Band Metrics</Summary>
+- percent_of_spent_coins_age_band_0d_to_1d
+- percent_of_spent_coins_age_band_1d_to_7d
+- percent_of_spent_coins_age_band_7d_to_30d
+- percent_of_spent_coins_age_band_30d_to_60d
+- percent_of_spent_coins_age_band_60d_to_90d
+- percent_of_spent_coins_age_band_90d_to_180d
+- percent_of_spent_coins_age_band_180d_to_365d
+- percent_of_spent_coins_age_band_365d_to_2y
+- percent_of_spent_coins_age_band_2y_to_3y
+- percent_of_spent_coins_age_band_3y_to_5y
+- percent_of_spent_coins_age_band_5y_to_7y
+- percent_of_spent_coins_age_band_7y_to_10y
+- percent_of_spent_coins_age_band_10y_to_inf
+</Details>

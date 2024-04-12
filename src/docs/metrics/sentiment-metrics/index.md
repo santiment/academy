@@ -1,243 +1,84 @@
 ---
-title: Sentiment Metrics
-author: Ivan Klimuk, Santiment authors
-date: 2024-03-27
-# REF metrics-hub/metricshub/sentiment_positive.py
-# REF metrics-hub/metricshub/sentiment_negative.py
-# REF metrics-hub/metricshub/sentiment_balance.py
-# REF metrics-hub/metricshub/sentiment_volume_consumed.py
+title: Sentiment metrics 
+author: Santiment Team 
+date: 2024-04-05
 ---
 
-## Sentiment Analysis
 
-### Definition
+## Our Sentiment Metrics
 
-The sentiment metrics are build on top of the [Social Data](/metrics/details/social-data)
+<Resource>
+- [Positive/Negative Sentiment](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) - Shows how many mentions of a term/asset are expressed in a
+positive/negative manner.
+- [Sentiment Balance](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) - The difference between Positive Sentiment and Negative Sentiment 
+- [Sentiment Weighted](/metrics/sentiment-metrics/weighted-sentiment-metrics) - An improved version of the Sentiment Balance that adjusts the values by considering the number of mentions, standardizing data to make diverse asset sentiments comparable. 
+</Resource>
+
+## What is Sentiment?
+
+**Sentiment** is the attitude, thought or judgement that people have which is
+based on their feelings.
+
+**Positive sentiment** is an attitude that is hopeful, confident, and considering
+of the good aspects of a situation or a subject. In the context of cryptocurrencies
+this can manifest as optimism about the future of a coin, hope that the price will
+increase, belief in the success of a token, and many more.
+
+**Negative sentiment** is an attitude that is critical, disapproving, and
+considering of the bad aspects of a situation or a subject. In the context of
+cryptocurrencies this can manifest as expressing the opinion that a token is a scam,
+belief that a coin will fail, and many more.
 
 **Sentiment Analysis** is the problem of computationally identifying and
 categorizing emotions, opinions and subjective information in a given piece of
-text. This problem can be solved using different techniques: rule-based or
-machine learning. The first one represents a set of predefined rules that are
-used to estimate the sentiment of the input text. This approach is often less
-accurate and requires a lot of manual work. The amount of documents in our
-[Social Data](/metrics/details/social-data) storage makes it barely impossible to
-analyze them manually. That's why we use machine learning to approach the
-sentiment analysis problem.
+text.
 
-Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
 
-### Sentiment Score
+<Notebox type="note">
+Please note that metrics may undergo changes in historical values due to
+automated recalculations triggered monthly. We constantly update our labels
+which helps us to keep labels as fresh as possible but result historical data
+changes. Any modifications to labels, social sources, or relevant jobs will
+prompt recalculation for the previous month's data. Within a 12 hour period,
+metric can be supplemented with new data.
+</Notebox>
 
-We trained a machine learning model on a large Twitter dataset, that contains
-over 1.6 million tweets, each labelled as either _positive_ or _negative_. This
-model is then used to evaluate the sentiment of each single document in the
-[Social Data](/metrics/details/social-data) set, i.e. it assigns a positive and negative
-_sentiment score_ to each message/post/comment/etc. These scores are
-probabilities that the content of the text being analyzed is positive or
-negative respectively. Therefore both the _positive_ and _negative_ sentiment
+## Sentiment Score
+
+We trained a machine learning model on a large Twitter dataset that contains
+over 1.6 million tweets, each labelled as either **positive** or **negative**. 
+The model is then used to evaluate the sentiment of each single document in the
+[Social Data](/metrics/details/social-data) set $-$ it assigns a positive and negative
+**sentiment score** to each message/post/comment/etc. 
+
+The score is the probability that the content of the text is positive or
+negative respectively. Therefore both the **positive** and **negative** sentiment
 scores fall in a range between 0 (not positive/negative at all) and 1 (extremely
 positive/negative). Moreover, the sum of these two scores always equals 1.
 
 Example:
 
-```
-I'm really excited about the new Libra currency!
-```
+> I'm really excited about the new Libra currency!
 
-This message has a _positive_ score of **0.75** and a _negative_ score of
+This message has a **positive** score of **0.75** and a **negative** score of
 **0.25**.
 
 We use this approach for messages and comments from social networks
 conversations because the structure of the text there is usually more or less
-the same: short messages with a single and/or simple idea behind them. But this
-is not the case for all the messages: some of them might be long and
+the same: short messages with a single and/or simple idea behind them.
+
+But this is not the case for all the messages: some of them might be long and
 complicated, some might be just neutral or contain spam or other irrelevant
 information. These kind of messages usually have a pretty vanished pair of
-sentiment scores: both _positive_ and _negative_ scores are close to 0.5. We
-don't include these kind of messages while calculating the **Sentiment
+sentiment scores: both **positive** and **negative** scores are close to 0.5.
+We don't include these kind of messages while calculating the **Sentiment
 Metrics**: they are filtered out by a certain threshold.
 
-## Sentiment Metrics
+## Metrics Calculation
 
-### 1. Positive (Negative) Sentiment
+To ensure relevance and accuracy, only text with a sentiment score above a
+certain threshold is considered in our sentiment metrics. This approach filters
+out neutral, spam, or irrelevant messages, focusing on the most impactful data.
+Our sentiment metrics are recalculated monthly to account for any changes in
+our models or data sources, providing you with the most up-to-date insights.
 
-#### Definition
-
-The total sum of _positive_ (_negative_) [sentiment scores](#sentiment-score) of
-a given set of documents over time. Only scores that are equal or higher than
-0.7 are taken into account. Can be calculated for a certain asset or for any
-given search term, similar to the [social
-volume](/social-volume-metrics/#social-volume).
-
-#### Measuring Unit
-
-Relative number, less or equal than the corresponding social volume.
-
-#### Frequency
-
-We store each of the [social
-data](/metrics/details/social-data) documents with its
-absolute timestamp. I.e. it is possible to aggregate the data with **any desired
-interval** [on request](products-and-plans/access-plans/). Currently the time
-intervals we use are the following:
-
-- In [Sanbase](https://app.santiment.net/s/OA3Fxisq): [Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
-
-#### Latency
-
-The [sentiment scores](#sentiment-score) are calculated every 5 minutes. Taking
-into account that the [social data](/metrics/details/social-data) itself is
-quasi-realtime, the maximal latency is 5 minutes.
-
-#### Available Assets
-
-We do not separate or filter the [social data](/metrics/details/social-data/) being
-collected by assets. I.e. we can calculate this metric for any asset. More on
-this can be found [here](/metrics/social-volume-metrics/#available-assets).
-
-#### How to Access
-
-##### [Sanbase](https://app.santiment.net/s/OA3Fxisq)
-
-The metric is available **for any selected asset**.
-
-##### SanAPI
-
-Available under the `sentiment_positive_total` `sentiment_positive_<source>`
-- 4chan
-- telegram
-- reddit
-- twitter
-- bitcointalk
-- youtube_videos
-- total (combines all sources)
-
-#### Availability
-
-|           | Free | Basic | Pro                | Pro+               | Enterprise         |
-| --------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
-| Sanbase   | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI    | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-
-### 2. Average Sentiment / Sentiment Balance
-
-#### Definition
-
-The difference between the **Positive** and **Negative Sentiment**
-[metrics](#positive-negative-sentiment).
-
-#### Measuring Unit
-
-Relative number. This metric falls in the range `[-social_volume, +social_volume]` where `social_volume` is the corresponding social volume.
-
-#### Frequency
-
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
-
-#### Latency
-
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
-
-#### Available Assets
-
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
-
-#### How to Access
-
-##### [Sanbase](https://app.santiment.net/s/lL05ManV)
-
-The metric is available **for any selected asset**.
-
-
-##### SanAPI
-
-Available under the `sentiment_balance_total` and `sentiment_balance_<source>`
-- 4chan
-- telegram
-- reddit
-- twitter
-- bitcointalk
-- youtube_videos
-- total (combines all sources)
-
-#### Availability
-
-|           | Free | Basic | Pro                | Pro+               | Enterprise         |
-| --------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
-| Sanbase   | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI    | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-
-### 3. Sentiment Weighted / Sentiment Volume Consumed
-
-#### Definition
-
-The **Sentiment Weighted** is an improved version of the [Sentiment
-Balance](#sentiment-balance) that also takes into account the [Unique Social
-Volume](/metrics/unique-social-volume).
-
-**Sentiment Weighted** is defined as a rolling Z-score of $X =
-\mathrm{Unique Social Volume} \times \mathrm{Average Sentiment}$.
-
-More precisely we choose a duration $d$ which will be the length of our sliding
-window. Then for any timestamp $t$ we consider the population $X(t,d)$
-consisting of all values of $X(t')$ for all timestamps $t'$ between $t-d$ and
-$t$. If we use $\mu$ and $\sigma$ to denote mean and standard deviation, then we
-define **Sentiment Weighted** as:
-
-$$
-Sentiment Weighted(t,d) = \frac{X(t) - \mu(X(t,d))}{\sigma(X(t,d))}
-$$
-
-Intuitively this score can be explained as a _social-volume-weighted sentiment
-balance_. I.e. this metric will spike when the social volume is really high and
-the vast majority of the messages in it are very positive at the same time. Dips
-will occur when the social volume again is high, but the overall sentiment is
-negative. In case the volume is high but the sentiment is mixed, or the
-sentiment has a strong positive (negative) polarity but with a low volume, the
-**Sentiment Weighted** metric won't have significant changes and will
-stay around 0.
-
-#### Measuring Unit
-
-Relative number. Theoretically this metric has no lower or upper limit, but
-normally it lies in the range of `[-3, 3]`. Values from outside this range
-indicate that something abnormal is happening.
-
-#### Frequency
-
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
-
-#### Latency
-
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
-
-#### Available Assets
-
-Same as [**Positive (Negative) Sentiment**](#positive-negative-sentiment).
-
-#### How to Access
-
-#### SanAPI
-
-Available under the `sentiment_volume_consumed_total` `sentiment_volume_consumed_<source>`
-- 4chan
-- telegram
-- reddit
-- twitter
-- bitcointalk
-- youtube_videos
-- total (combines all sources)
-
-##### [Sanbase](https://app.santiment.net/s/p_5roQjX)
-
-The metric is available **for any selected asset**.
-
-#### Availability
-
-|           | Free | Basic | Pro                | Pro+               | Enterprise         |
-| --------- | ---- | ----- | ------------------ | ------------------ | ------------------ |
-| Sanbase   | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| SanAPI    | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Sansheets | :x:  | :x:   | :white_check_mark: | :white_check_mark: | :white_check_mark: |

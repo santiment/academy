@@ -16,6 +16,9 @@ There are two coin age defined metrics:
 - Mean Dollar Invested Age - The average age of all coins/tokens on the
   blockchain weighted by the purchase price.
 
+Mean Coin Age metrics are also available for different [time bounds](/metrics/details/timebound), which 
+compute the mean coin age for tokens moved at least once no longer than a specific number of days or years ago.
+
 ### Example (Mean Coin age)
 
 Given there are 100 tokens in existence:
@@ -143,3 +146,30 @@ Available under the `mean_dollar_invested_age` and
 ```
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_dollar_invested_age%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)**
+
+## Full list of metrics
+
+<Details>
+<Summary>Mean coin age metrics</Summary>
+- mean_age
+- mean_age_90d
+- mean_age_180d
+- mean_age_365d
+- mean_age_2y
+- mean_age_3y
+- mean_age_5y
+</Details>
+
+<Details>
+<Summary>Mean dollar invested age metrics</Summary>
+- mean_dollar_invested_age
+- mean_dollar_invested_age_90d
+- mean_dollar_invested_age_180d
+- mean_dollar_invested_age_365d
+- mean_dollar_invested_age_2y
+- mean_dollar_invested_age_3y
+- mean_dollar_invested_age_5y
+- mean_dollar_invested_age_change_1d
+- mean_dollar_invested_age_change_7d
+- mean_dollar_invested_age_change_30d
+</Details>

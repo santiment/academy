@@ -87,12 +87,9 @@ It is recommended not to use the `PREWHERE` clause unless you are certain of its
 
 ## Using Pre-computed Metrics
 
-The pre-computed metrics are located in the following tables:
+We store pre-computed metrics in tables that are described on [this page](/santiment-queries/metric-tables).
 
-- `intraday_metrics` - Metrics with more than one value per day. In most cases, these metrics have a new value every 5 minutes. Example: `active_addresses_24h`
-- `daily_metrics_v2` - Metrics that have exactly 1 value per day. Example: `daily_active_addresses`
-
-All tables storing pre-computed data have a common set of columns:
+Let's use `daily_metrics_v2` table as an example. Here's a schema for this table:
 
 - `dt` - A `DateTime` field storing the corresponding date and time.
 - `asset_id` - An `UInt64` unique identifier for an asset. The data for that ID is stored in the `asset_metadata` table.
@@ -226,133 +223,7 @@ Test in [Queries](https://queries.santiment.net/query/group-by-example-414)
 
 ### Using precomputed metrics to build new metrics
 
-Not all metrics are build from the raw data only. Some of the metrics are
-computed by combining a set of pre-computed metrics.
-
-The MVRV is defined as the ratio between the Market Value and Realized Value.
-The total supply is part of the numerator and the denominator, so it can be
-eliminated. The result is that the numerator is just `price_usd` and the
-denominator is `realized_price_usd`. There are precomputed metrics for both, so
-we can use them to compute the MVRV (and that's how we do it for the official
-MVRV metric!). Depending on the load on the database, the query duration can
-vary. At the moment of writing this, running the query takes 0.13 seconds.
-
-In the query `anyIf` is used as there is filtering by `asset_id` and
-`metric_id`, so there is only one value per metric for each `dt`. The example
-after that discusses how to handle more complex `GROUP BY` clauses.
-
-```sql
-SELECT
-  dt,
-  get_asset_name(any(asset_id)) AS asset,
-  anyIf(value, metric_id=get_metric_id('price_usd')) AS numerator,
-  anyIf(value, metric_id=get_metric_id('mean_realized_price_usd_intraday_20y')) AS denominator,
-  numerator / denominator AS mvrv_usd_ratio,
-  floor((mvrv_usd_ratio - 1) * 100, 2) AS mvrv_usd_percent
-FROM intraday_metrics FINAL
-WHERE
-  asset_id = get_asset_id('bitcoin') AND
-  metric_id IN (get_metric_id('price_usd'), get_metric_id('mean_realized_price_usd_intraday_20y')) AND
-  dt >= toDateTime('2022-01-01 00:00:00')
-GROUP BY dt
-ORDER BY dt ASC
-LIMIT 10
-```
-Test in [Queries](https://queries.santiment.net/query/usage-of-precomputed-metrics-example-415)
-
-```
-┌──────────────────dt─┬─asset───┬──────────numerator─┬────────denominator─┬─────mvrv_usd_ratio─┬─mvrv_usd_percent─┐
-│ 2022-01-01 00:00:00 │ bitcoin │  46378.15778582922 │ 23002.992048445383 │ 2.0161793599786777 │           101.61 │
-│ 2022-01-01 00:05:00 │ bitcoin │  46394.94838737312 │ 23002.992048445383 │  2.016909291176695 │           101.69 │
-│ 2022-01-01 00:10:00 │ bitcoin │  46376.92099283003 │ 23002.997373190537 │ 2.0161251266707207 │           101.61 │
-│ 2022-01-01 00:15:00 │ bitcoin │ 46342.625905845896 │ 23002.997373190537 │   2.01463423022676 │           101.46 │
-│ 2022-01-01 00:20:00 │ bitcoin │ 46349.908441099375 │  23002.95114246238 │  2.014954870531355 │           101.49 │
-│ 2022-01-01 00:25:00 │ bitcoin │ 46419.391208461006 │ 23002.920905515144 │ 2.0179781254358686 │           101.79 │
-│ 2022-01-01 00:30:00 │ bitcoin │ 46423.024145185496 │  23002.93075048584 │ 2.0181351954122198 │           101.81 │
-│ 2022-01-01 00:35:00 │ bitcoin │ 46499.005410722944 │ 23002.948585722002 │  2.021436740487479 │           102.14 │
-│ 2022-01-01 00:40:00 │ bitcoin │ 46573.474600493675 │  23002.95629498449 │  2.024673437763669 │           102.46 │
-│ 2022-01-01 00:45:00 │ bitcoin │  46647.52193392966 │ 23003.039167275976 │ 2.0278851674647504 │           102.78 │
-└─────────────────────┴─────────┴────────────────────┴────────────────────┴────────────────────┴──────────────────┘
-```
-
-To return only some of the columns, the query can be provided as a FROM subquery. This does not induce any
-performence degradation. This example also shows how the [WITH Clause](https://clickhouse.com/docs/en/sql-reference/statements/select/with/)
-can be used to avoid string literals repetition.
-
-```sql
-WITH
-    get_metric_id('price_usd') AS price_usd_metric_id,
-    get_metric_id('mean_realized_price_usd_intraday_20y') AS realized_price_usd_metric_id
-SELECT
-    dt, 
-    price_usd / realized_price_usd AS mvrv_usd_ratio,
-    floor((mvrv_usd_ratio - 1) * 100, 2) AS mvrv_usd_percent
-FROM (
-  SELECT
-    dt,
-    get_asset_name(any(asset_id)) AS asset,
-    anyIf(value, metric_id=price_usd_metric_id) AS price_usd,
-    anyIf(value, metric_id=realized_price_usd_metric_id) AS realized_price_usd
-  FROM intraday_metrics FINAL
-  WHERE
-    asset_id = get_asset_id('bitcoin') AND
-    metric_id IN (price_usd_metric_id, realized_price_usd_metric_id) AND
-    dt >= toDateTime('2022-01-01 00:00:00')
-  GROUP BY dt
-)
-ORDER BY dt ASC
-LIMIT 10
-```
-Test in [Queries](https://queries.santiment.net/query/with-example-416)
-
-The next query demonstrates what needs to be done if there is a need to
-aggregate the datetime instead of getting a value for each `dt`:
-
-```sql
-WITH
-    get_metric_id('price_usd') AS price_usd_metric_id,
-    get_metric_id('mean_realized_price_usd_intraday_20y') AS realized_price_usd_metric_id
-SELECT
-    month, 
-    price_usd / realized_price_usd AS mvrv_usd_ratio,
-    floor((mvrv_usd_ratio - 1) * 100, 2) AS mvrv_usd_percent
-FROM (
-  SELECT
-    toStartOfMonth(dt) AS month,
-    get_asset_name(any(asset_id)) AS asset,
-    argMaxIf(value, dt, metric_id=price_usd_metric_id) AS price_usd,
-    argMaxIf(value, dt, metric_id=realized_price_usd_metric_id) AS realized_price_usd
-  FROM intraday_metrics FINAL
-  WHERE
-    asset_id = get_asset_id('bitcoin') AND
-    metric_id IN (price_usd_metric_id, realized_price_usd_metric_id) AND
-    dt >= toDateTime('2022-01-01 00:00:00')
-  GROUP BY month
-)
-ORDER BY month ASC
-LIMIT 10
-```
-Test in [Queries](https://queries.santiment.net/query/with-example-with-aggregated-dt-417)
-
-The following row needs some explanation:
-```sql
-argMaxIf(value, dt, metric_id=get_metric_id('price_usd')) AS price_usd,
-```
-
-This function call has three parameters:
-- `value` - This is the column that is returned
-- `dt` - This is the column that `max` is performed upon. Of all columns
-  matching the filter, the one with the max `dt` is returned.
-- `metric_id=get_metric_id('price_usd')` - This a boolean expression. Look only
-  at the rows for which the expression evaluates to true.
-
-If the `FINAL` keyword is not used, taking the row with biggest `computed_at`
-among those with the same `dt` can be achieved by using a tuple as a second
-argument:
-
-```sql
-argMaxIf(value, (dt, computed_at), metric_id=get_metric_id('price_usd')) AS price_usd,
-```
+[This section was moved here](/santiment-queries/metric-tables/#using-precomputed-metrics-to-build-new-metrics)
 
 ## Using Raw Data
 

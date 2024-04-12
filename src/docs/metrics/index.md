@@ -5,6 +5,7 @@ description: "Crypto metrics to delve into key on-chain, social, financial and d
 author: Santiment Team
 date: 2022-04-21
 ---
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FFJB48Z8tfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Financial
 
@@ -17,10 +18,6 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [Ethereum Fees](/metrics/ethereum-fees)
 - [Ethereum Spent](/metrics/ethereum-spent)
 - [Mean Coin Age](/metrics/mean-coin-age)
-- [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
-- [NFT Collection Price](/metrics/nft-collection-price)
-- [NFT Market Volume](/metrics/nft-market-volume)
-- [NFT Network Profit Loss](/metrics/nft-network-profit-loss)
 - [OHLC (Open-High-Low-Close)](/metrics/price/#ohlc)
 - [Price Volatility](/metrics/price-volatility)
 - [RSI](/metrics/rsi)
@@ -59,6 +56,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [MVRV](/metrics/mvrv)
 - [NVT](/metrics/nvt)
 - [Realized Value](/metrics/realized-value)
+- [Mean Realized Price](/metrics/mean-realized-price)
 - [Network Profit Loss](/metrics/network-profit-loss)
 - [Realized Market Capitalization Hodl Waves](/metrics/realized-market-capitalization-hodl-waves)
 
@@ -74,6 +72,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 
 - [Age Consumed](/metrics/age-consumed)
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
+- [Bitcoin ETF Volume](/metrics/bitcoin-etf-volume)
 - [Circulation](/metrics/circulation)
 - [DeFi](/metrics/defi)
 - [Dormant Circulation](/metrics/dormant-circulation)
@@ -86,10 +85,11 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
 - [Stock To Flow ratio](/metrics/stock-to-flow)
 - [Supply Distribution](/metrics/supply-distribution)
-- [Supply in Profit](/metrics/supply-in-profit)
 - [Supply On Or Outside Exchanges](/metrics/supply-on-or-outside-exchanges)
 - [Top Holders](/metrics/top-holders)
+- [Total Supply](/metrics/total-supply)
 - [Transaction Count](/metrics/transaction-count)
+- [Transaction Size](/metrics/transaction-size)
 - [Transaction Volume](/metrics/transaction-volume)
 - [Transaction Volume In Profit Or Loss](/metrics/transaction-volume-in-profit-or-loss)
 - [Velocity](/metrics/velocity)
@@ -106,6 +106,15 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [FTX](/metrics/ftx)
 - [dYdX](/metrics/dydx)
 - [Huobi](/metrics/huobi)
+
+## NFT
+
+- [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
+- [NFT Collection Price](/metrics/nft-collection-price)
+- [NFT Market Volume](/metrics/nft-market-volume)
+- [NFT Network Profit Loss](/metrics/nft-network-profit-loss)
+- [NFT Trades Count](/metrics/nft-trades-count)
+- [NFT Trade Volume USD](/metrics/nft-trade-volume-usd)
 
 ## Blockchain Address Metrics
 
