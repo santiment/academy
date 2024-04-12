@@ -9,8 +9,9 @@ description: Price in USD, BTC and USDT
 
 The following metrics are provided:
 
-* `price_usd` - Price in USD
-* `price_usd_5m` - Average price in USD over five-minute intervals
+* `price_usd` - Price in USD, directly sourced from `CoinMarketCap` or `CryptoCompare`
+* `price_usd_5m` - Average price in USD calculated over five-minute intervals (any missing data points 
+are filled in with the last known value)
 * `price_btc` - Price in BTC
 * `price_usdt` - Price in USDT
 * Open-High-Close-Low Price in USD
