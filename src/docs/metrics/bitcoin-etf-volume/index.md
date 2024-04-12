@@ -7,7 +7,7 @@ description: Bitcoin ETF Volume Metric
 
 ## Description
 
-The Bitcoin ETF Volume metric tracks the total number of shares traded for a Bitcoin Exchange-Traded Fund 
+The Bitcoin ETF Volume metric tracks the total volume in USD traded for a Bitcoin Exchange-Traded Fund 
 (ETF) within a specified period. This metric provides insight into the level of investor activity and 
 interest in trading Bitcoin through ETFs on traditional stock exchanges. Analyzing Bitcoin ETF volume 
 can help investors gauge market sentiment, liquidity, and the overall demand for Bitcoin exposure within 
