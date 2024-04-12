@@ -54,6 +54,9 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 Available under the `busd_binance_funding_rate` name.
 
+> Note: The metric is also accessible under the old name `busd_bnb_funding_rates`. 
+> Please start using the new name.
+
 ```graphql
 {
   getMetric(metric: "busd_binance_funding_rate") {
