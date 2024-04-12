@@ -245,6 +245,7 @@ export const REFERENCES = [
       'Marketcap',
       'MakerDAO DAI Savings Rate',
       'Mean Coin Age',
+      'Mean Realized Price',
       'MVRV',
       'Network Growth',
       'Network Profit Loss',
