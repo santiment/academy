@@ -5,6 +5,7 @@ description: "Crypto metrics to delve into key on-chain, social, financial and d
 author: Santiment Team
 date: 2022-04-21
 ---
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FFJB48Z8tfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Financial
 

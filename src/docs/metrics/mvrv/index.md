@@ -5,6 +5,8 @@ date: 2022-06-07
 description: MVRV (Market Value to Realized Value) ratio shows the average profit/loss of all the coins currently in circulation according to the current price.
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vbYQLNJ40yw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Definition
 
 MVRV (Market Value to Realized Value) ratio is defined as an asset's market capitalization divided by realized capitalization.
@@ -13,9 +15,6 @@ MVRV (Market Value to Realized Value) ratio is defined as an asset's market capi
 
 MVRV shows the ratio between the current price and the average price of every coin/token acquired. The more the ratio increases, the more people will be willing to sell as the potential profits increase. The value of MVRV gives an idea of how much overvalued or undervalued an asset is.
 
-### MVRV Indicator Explainer Video
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vbYQLNJ40yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## How MVRV Measured
 
