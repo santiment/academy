@@ -88,6 +88,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Top Holders](/metrics/top-holders)
 - [Total Supply](/metrics/total-supply)
 - [Transaction Count](/metrics/transaction-count)
+- [Transaction Size](/metrics/transaction-size)
 - [Transaction Volume](/metrics/transaction-volume)
 - [Transaction Volume In Profit Or Loss](/metrics/transaction-volume-in-profit-or-loss)
 - [Velocity](/metrics/velocity)
