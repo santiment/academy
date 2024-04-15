@@ -5,31 +5,31 @@ date: 2024-04-01
 ---
 
 <Notebox type="note">
-Note: The Airdrop occurred in September 2020, and there are no more claims. 
+Note: The Airdrop occurred in September 2020, but there are no more claims.
 **Although data remains accessible through the API, we do not recommend its use.**
 </Notebox>
 
 ## Definition
 
-The Uniswap Airdrop Metrics provide insights into the distribution of tokens resulting from the Uniswap 
-protocol's decentralized exchange activity. This airdrop, which took place in September 2020, allocated 
+The Uniswap Airdrop Metrics provide insights into the distribution of tokens resulting from the Uniswap
+protocol's decentralized exchange activity. This airdrop, which took place in September 2020, allocated
 tokens to users based on their past interactions with the Uniswap platform.
 
 Uniswap Airdrop Metrics:
-- `uniswap_total_lp_claims_amount` - write_description
-- `uniswap_user_claims_count` - write_description
-- `uniswap_user_claims_amount` - write_description
-- `uniswap_lp_claims_amount` - write_description
-- `uniswap_total_claims_percent` - write_description
-- `uniswap_total_claims_amount` - write_description
-- `uniswap_top_claimers` - write_description
-- `uniswap_claims_amount` - write_description
-- `uniswap_claims_count` - write_description
-- `uniswap_total_user_claims_amount` - write_description
-- `uniswap_lp_claims_count` - write_description
-- `uniswap_total_claims_count` - write_description
-- `uniswap_total_user_claims_count` - write_description
-- `uniswap_total_lp_claims_count` - write_description
+- `uniswap_total_lp_claims_amount` - The amount of tokens claimed by both users and liquidity providers up to that point in time
+- `uniswap_user_claims_count` - The amount of claims by users
+- `uniswap_user_claims_amount` - The amount of tokens claimed given to users
+- `uniswap_lp_claims_amount` - The amount of tokens claimed given to liquidity providers
+- `uniswap_total_claims_percent` - The percentage of claimed tokens
+- `uniswap_total_claims_amount` - The amount of tokens claimed by both users and liquidity providers up to that point in time
+- `uniswap_top_claimers` - The biggest claimers sorted by amount they claimed in a given period
+- `uniswap_claims_amount` - The amount of tokens claimed by both users and liquidity providers
+- `uniswap_claims_count` - The amount of claims claimed by both users and liquidity providers
+- `uniswap_total_user_claims_amount` - The amount of tokens claimed by users up to that point in time
+- `uniswap_lp_claims_count` - The amount of claims by liquidity providers
+- `uniswap_total_claims_count` - The total amount of claims by both users and liquidity providers up to that point in time
+- `uniswap_total_user_claims_count` - The total amount of claims by users up to that point in time
+- `uniswap_total_lp_claims_count` - The total amount of claims by liquidity providers up to that point in time
 
 ---
 
@@ -41,7 +41,9 @@ Uniswap Airdrop Metrics:
 
 ## Measuring Unit
 
-write_description
+Metrics that have `amount` in name represent the number of tokens.
+Metrics that have `count` in name represent the number of claims.
+Metrics that have `percent` in name represent the percentage.
 
 ---
 
