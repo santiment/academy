@@ -286,6 +286,7 @@ export const REFERENCES = [
       'Velocity',
       'Whale Transaction Count',
       'XRPL Metrics',
+      'Deprecated Metrics',
     ],
   },
   {
