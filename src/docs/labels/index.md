@@ -9,9 +9,9 @@ date: 2023-03-21
 
 Generally speaking, an **address label** is a piece of information attached to a wallet address.
 
-The most common use case of one is to denote the owner of the given address. E.g. address “A” belongs to Alice, and address “B” belongs to Binance exchange. Another use-case would be marking (aka labeling) an address as a smart contract. E.g. address “C” is an ERC-721 standard contract. Or we might need to label an address according to how the address is used. For instance, address “D” is a cold storage address.
+The most common use case of one is to denote the owner of the given address. E.g. address “A” belongs to Alice, and address “B” belongs to Binance exchange. Another use-case would be marking (aka labeling) an address as a smart contract. E.g. address “C” is an ERC-721 standard contract.
 
-There are a lot of label types and use-cases which are described below.
+In the context of market analysis we are interested in the market participants' addresses mostly. Information about excanhges, whales, traders, DeFi protocols, etc gives a lot of insights on what's going on on the market. There are a lot of label types and use-cases which are described below.
 
 
 ## How we gather labels
@@ -33,7 +33,7 @@ Collecting labels is not a trivial task. To keep our explanation concise, there 
 Very often, we combine different methods. For instance, we could manually collect some addresses, manually analyze its on-chain behavior, and design an algorithm gathering all addresses of the initial type.
 
 
-## Labels limitations
+## Limitations
 
 Although we are constantly working on adding and improving labels, there are two types of errors that may occur:
 
@@ -47,8 +47,11 @@ Although we are constantly working on adding and improving labels, there are two
 
 In case you found any mistakes in our labeling, please let us know (via discord or email). We appreciate your help a great deal :)
 
+## Naming
 
-## Labels systematisation
+Each label has it's own name, so called label FQN (Fully Qualified Name). [Read about label FQNs here](/labels/label-fqn)
+
+## Label Groups
 
 At Santiment, we label millions of addresses with dozens of different labels. In order to keep it easy to work with labels, we created a way to split all labels into logical groups. Here's a simplified description of how we handle labels.
 
