@@ -76,3 +76,17 @@ Example of query for **network_profit_loss**:
 
 [Run in
 explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22network_profit_loss%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222021-01-01T00%3A00%3A00Z%22%2C%20to%3A%222021-02-01T00%3A00%3A00Z%22%2C%20interval%3A%221d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+## Full list of metrics
+
+The full list of Network Profit Loss metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+
+- network_profit_loss_change_1d
+- network_profit_loss_change_30d
+- network_profit_loss_change_7d
+
+</Details>
