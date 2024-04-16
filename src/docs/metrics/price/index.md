@@ -9,9 +9,9 @@ description: Price in USD, BTC and USDT
 
 The following metrics are provided:
 
-* `price_usd` - Price in USD, directly sourced from exchanges
-* `price_usd_5m` - Average price in USD calculated over five-minute intervals (any missing data points 
-are filled in with the last known value)
+* `price_usd` - Price in USD, sourced from a 3rd party provider
+* `price_usd_5m` - The same as `price_usd`, but the data points are aligned at 5 minute intervals and 
+any gaps are filled with the last known value
 * `price_btc` - Price in BTC
 * `price_usdt` - Price in USDT
 * Open-High-Close-Low Price in USD
