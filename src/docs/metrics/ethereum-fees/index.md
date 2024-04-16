@@ -47,8 +47,9 @@ $$
 $$
 where $\text{network\_circulation\_usd\_1d}$ represents the total value in USD of all coins moved on Ethereum
 
-Gas used metric:
-- `avg_gas_used` - Average amount of gas consumed per transaction over 5-minute time intervals
+Gas used metrics:
+- `avg_gas_used` - Average amount of gas consumed per transaction over 5-minute time intervals in Gwei
+- `total_gas_used` - Total amount of gas used over 5-minute time intervals
 
 ---
 
@@ -60,7 +61,9 @@ Gas used metric:
 
 ## Measuring Unit
 
-Amount in ETH or USD
+- Fees metrics - amount in ETH or USD
+- `avg_gas_used` - amount in Gwei
+- `total_gas_used` - gas units
 
 ---
 
@@ -186,7 +189,7 @@ Fees to network circulation metric: `fees_to_network_circulation_usd_1d`
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fees_to_network_circulation_usd_1d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-Gas used metric: `avg_gas_used`
+Gas used metrics: `avg_gas_used` and `total_gas_used`
 
 ```graphql
 {
