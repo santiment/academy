@@ -9,10 +9,9 @@ description: label
 
 The label denotes an address that traded at least one NFT.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`nft_user`
-
+`santiment/nft_user:v1`
 
 ## Label Examples
 

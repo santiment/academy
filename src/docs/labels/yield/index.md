@@ -8,9 +8,9 @@ description: Yield Farming Label
 ## Description
 Label used to mark addresses that are used in Yield Farming activities
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`yield`
+`santiment/yield:v1`
 
 ## Label Examples
 YFV.finance: Link Pool: [0x196CF719251579cBc850dED0e47e972b3d7810Cd](https://etherscan.io/address/0x196cf719251579cbc850ded0e47e972b3d7810cd)

@@ -11,9 +11,9 @@ The NFT label is used to identify wallet addresses that are involved in any NFT 
 
 NFT group includes other labels such as [NFT User](/labels/nft-user), [NFT collection](/labels/nft-collection) and others. Visit this page to see the full child labels list.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`nft`
+`santiment/nft:v1`
 
 ## Address Examples
 

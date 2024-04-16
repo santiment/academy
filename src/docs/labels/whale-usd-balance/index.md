@@ -58,9 +58,11 @@ $50M|$81k
 $10M|$30k
 $1M|$7.3k
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`whale_usd_balance`
+`santiment/whale_usd_balance({asset_name}):v1`
+
+* E.g. `santiment/whale_usd_balance(ethereum):v1`
 
 ## Label Examples
 

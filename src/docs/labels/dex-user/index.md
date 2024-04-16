@@ -9,9 +9,9 @@ description: label
 
 The label denotes an address that traded on at least one DEX.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`dex_user`
+`santiment/dex_user:v1`
 
 
 ## Label Examples

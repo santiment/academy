@@ -11,9 +11,9 @@ Decentralized exchange label denotes an address belonging to a decentralized exc
 
 Decentralzied exhcnage (DEX) is a decentralized platform that operate on a peer-to-peer (P2P) network, without a central authority or entity. DEXs allow users to trade cryptocurrencies directly with each other, using smart contracts and blockchain technology. Unlike centralzied exchanges (CEX), DEXs offer greater privacy, security, and transparency, as users have full control over their assets and do not need to trust a third party to execute trades. However, DEXs may have lower liquidity, slower transaction processing, and fewer trading pairs compared to CEXs.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`decentralized_exchange`
+`santiment/decentralized_exchange:v1`
 
 ## Label Examples
 

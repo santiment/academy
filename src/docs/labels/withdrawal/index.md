@@ -13,8 +13,9 @@ The most common case is a centralized exchange (CEX) withdrawal. See the details
 
 ![deposit_address](deposit-withdrawal.png)
 
-## API Name
-`cex_withdrawal`
+## [Label fqn](/label-fqn)
+
+`santiment/cex_withdrawal:v1`
 
 ## Label Examples
 Withdrawal address from Binance: [0xd026c38bb75bac49b1f4a97b861915c669e95a71](https://etherscan.io/address/0xd026c38bb75bac49b1f4a97b861915c669e95a71)

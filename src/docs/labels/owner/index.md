@@ -11,9 +11,12 @@ Owner is a standalone label which denotes the person or company which controls a
 
 In most cases Owner label is connected with other labels (such as [centralized_exchange](/labels/centralized-exchange)).
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`owner`
+`santiment/owner->{your_value}:v1`
+
+- E.g. `santiment/owner->binance:v1`
+- E.g. `santiment/owner->aave_v3:v1`
 
 ## Label Examples
 

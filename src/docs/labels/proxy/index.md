@@ -13,9 +13,9 @@ For example: Instead of interacting directly with the target contract, all calls
 the request to the intended target contract. This allows for a greater degree of control and flexibility over the 
 contract's behavior.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`proxy`
+`santiment/proxy:v1`
 
 ## Label Examples
 

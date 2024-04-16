@@ -11,9 +11,9 @@ The DeFi label is used to identify wallet addresses that are involved in decentr
 
 DeFi group includes other labels such as [decentralized exchange](/labels/decentralized-exchange), [stablecoin](/labels/stablecoin) and others. Visit [this page](labels/#domains) to see full child labels list.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`defi`
+`santiment/defi:v1`
 
 ## Label Examples
 

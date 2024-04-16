@@ -9,9 +9,18 @@ description: label
 
 The `used_nft_marketplace` label denotes the marketplaces that NFT user traded on.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`used_nft_marketplace`
+`santiment/used_nft_marketplace->{your_value}:v1`
+
+* E.g. `santiment/used_nft_marketplace->blur:v1`
+* E.g. `santiment/used_nft_marketplace->superrare:v1`
+* E.g. `santiment/used_nft_marketplace->cryptopunks:v1`
+* E.g. `santiment/used_nft_marketplace->opensea:v1`
+* E.g. `santiment/used_nft_marketplace->looksrare:v1`
+* E.g. `santiment/used_nft_marketplace->rarible:v1`
+* E.g. `santiment/used_nft_marketplace->foundation:v1`
+* E.g. `santiment/used_nft_marketplace->x2y2:v1`
 
 ## Label Examples
 

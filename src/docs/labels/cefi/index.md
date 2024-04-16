@@ -13,9 +13,9 @@ CeFi platforms typically offer higher speed, liquidity, and convenience compared
 
 CeFi group includes other labels such as [centralized exchange](/labels/centralized-exchange), [fund](/labels/fund) and others. Visit [this page](labels/#domains) to see full child labels list.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`cefi`
+`santiment/cefi:v1`
 
 ## Label Examples
 

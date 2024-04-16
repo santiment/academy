@@ -13,9 +13,13 @@ While the NFT trader label is based on percentiles, the NFT trader threshold use
 The labels are calculated for two N-threshold values: 1000 and 5000.
 
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`nft_trader_threshold`
+`santiment/nft_trader_threshold->{your_value}:v1`
+
+Currently only 2 thresholds are supported:
+- `santiment/nft_trader_threshold->1000:v1`
+- `santiment/nft_trader_threshold->5000:v1`
 
 
 ## Label Examples

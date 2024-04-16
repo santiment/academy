@@ -11,9 +11,11 @@ Whale is an address holding a substensial amount of tokens. We sort all addresse
 
 Note that the addresses labelled as whale yesterday might not be a whale any more tomorrow.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`whale`
+`santiment/whale({asset_name}):v1`
+
+* E.g. `santiment/whale(ethereum):v1`
 
 ## Label Examples
 

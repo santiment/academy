@@ -9,9 +9,9 @@ description: ETH2 Staking label
 
 The eth2_staking label is used to identify wallet addresses that stake ETH
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`eth2_staking`
+`santiment/eth2_staking:v1`
 
 ## Label Examples
 RockerDAO Deposit Pool [0xdd3f50f8a6cafbe9b31a427582963f465e745af8](https://etherscan.io/address/0xdd3f50f8a6cafbe9b31a427582963f465e745af8)

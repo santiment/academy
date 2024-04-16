@@ -12,9 +12,9 @@ allowing users to access assets that were previously inaccessible.
 They increase liquidity and interoperability between blockchain networks. Examples include Wrapped Bitcoin and the Binance Smart Chain.
 
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`bridge`
+`santiment/bridge:v1`
 
 ## Label Examples
 Celer Bridge "ethereum: polygon" address: [0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820](https://etherscan.io/address/0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820)
