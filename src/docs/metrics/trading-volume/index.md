@@ -12,7 +12,7 @@ The metric is taking into consideration all the trading pairs. The trading pairs
 are not pegged to USD are multiplied by the USD price of the asset.
 
 Trading Volume in USD metrics:
-- `volume_usd` - 24h sliding window trading volume in USD, directly sourced from `CoinMarketCap` or `CryptoCompare`
+- `volume_usd` - 24h sliding window trading volume in USD, directly sourced from exchanges
 - `volume_usd_5m` - Average trading volume in USD calculated over five-minute intervals (any missing 
 data points are filled in with the last known value)
 
