@@ -18,9 +18,9 @@ Most common case is a centralized exhcnage deposit. See the details on the pictu
 
 ![deposit_address](deposit-withdrawal.png)
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`deposit`
+`santiment/deposit:v1`
 
 ## Label Examples
 

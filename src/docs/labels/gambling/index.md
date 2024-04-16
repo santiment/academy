@@ -9,9 +9,9 @@ description: Gambling label
 
 The gambling label is used to identify wallet addresses that are involved in gambling activities. This label helps quickly identify addresses associated with online gambling and related transactions.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`Gambling`
+`santiment/gambling:v1`
 
 ## Label Examples
 

@@ -9,9 +9,12 @@ description: NFT collection symbol label
 
 Symbol of the [NFT collection](/labels/nft-collection).
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`nft_collection_symbol`
+`santiment/nft_collection_symbol->{your_value}:v1`
+
+- E.g. `santiment/nft_collection_symbol->phunks:v1`
+
 
 ## Label Examples
 

@@ -8,9 +8,9 @@ description: Sanctioned Label
 ## Description
 Label used to mark addresses that were added into sanction list. For example - OFAC Sanction list.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`sanctioned`
+`santiment/sanctioned:v1`
 
 ## Label Examples
 Tornado cash [0x03893a7c7463ae47d46bc7f091665f1893656003](https://etherscan.io/address/0x03893a7c7463ae47d46bc7f091665f1893656003)

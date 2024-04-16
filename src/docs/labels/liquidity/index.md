@@ -6,12 +6,18 @@ description: Liquidity provider label
 ---
 
 ## Description
+
 Liquidity providers are entities that offer both buy and sell-side liquidity to cryptocurrency.
-## API Name
-`liquidity`
+
+## [Label fqn](/label-fqn)
+
+`santiment/liquidity:v1`
+
 ## Label Examples
+
 Liquidity provider: [0x00cd2388c86c960a646d640be44fc8f83b78cec9](https://etherscan.io/address/0x00cd2388c86c960a646d640be44fc8f83b78cec9)
 
 Liquidity provider: [0x0232ba609782cea145ec3663f52cf7aeb4ac773c](https://etherscan.io/address/0x0232ba609782cea145ec3663f52cf7aeb4ac773c)
+
 ## Available Blockchains
 - ethereum

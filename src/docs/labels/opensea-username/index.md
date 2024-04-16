@@ -7,12 +7,15 @@ description: OpenSea Username
 
 ## Description
 
+> label under maintaince
+
 This label provides valuable details about the connection between the user's profile on the OpenSea platform and addresses.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`opensea_username`
+`santiment/opensea_username->erwwer:v1`
 
+* E.g. `santiment/opensea_username->erwwer:v1`
 
 ## Available Blockchains
 

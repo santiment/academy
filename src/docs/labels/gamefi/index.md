@@ -9,9 +9,9 @@ description: GameFi label
 
 The gamefi label is used to identify wallet addresses that are actively involved in GameFi activities. GameFi refers to the intersection of gaming and decentralized finance (DeFi), where players can earn, trade, and invest in virtual assets within gaming ecosystems.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`gamefi`
+`santiment/gamefi:v1`
 
 ## Label Examples
 

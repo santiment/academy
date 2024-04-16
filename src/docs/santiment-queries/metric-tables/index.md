@@ -81,7 +81,7 @@ Test in [Queries](https://queries.santiment.net/query/price-example-478)
 
 ### labeled_intraday_metrics_v2
 
-Table `labeled_intraday_metrics_v2` stores metrics for a given `blockchain` and `label_id`. The data for that ID is stored in the `label_metadata` table. Blockchain column contains the string for blockchain name, e.g. `bictoin`, `ethereum`, etc.
+Table `labeled_intraday_metrics_v2` stores metrics for a given `blockchain` and `label_id`. Each `label_id` corresponds to a certain [label FQN.](/labels/label-fqn) The data for that ID is stored in the `label_metadata` table. Blockchain column contains the string for blockchain name, e.g. `bictoin`, `ethereum`, etc.
 
 For instance, you can retrieve ethereum balance of all centralized exchange addresses with the query:
 

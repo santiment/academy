@@ -9,9 +9,9 @@ description: Smart contract label
 
 The label `contract` denotes any address which is a smart contract.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`contract`
+`santiment/contract:v1`
 
 ## Label Examples
 

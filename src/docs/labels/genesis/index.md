@@ -14,9 +14,9 @@ These addresses were created during the Genesis block, which is the first block 
 
 In ethereum blockchain there are 8893 genesis addresses.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`genesis`
+`santiment/genesis:v1`
 
 ## Label Examples
 

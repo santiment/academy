@@ -11,8 +11,11 @@ A`withdrawn_from` label is used to identify the entity involved in a withdrawal 
 The most common case is a centralized exchange (CEX) withdrawal. See the details in the image below.
 
 
-## API Name
-`withdrawn_from`
+## [Label fqn](/label-fqn)
+
+`santiment/withdrawn_from->{your_value}:v1`
+
+* E.g. `santiment/withdrawn_from->binance:v1`
 
 ## Label Examples
 Withdrawn from Binance: [0xd026c38bb75bac49b1f4a97b861915c669e95a71](https://etherscan.io/address/0xd026c38bb75bac49b1f4a97b861915c669e95a71)

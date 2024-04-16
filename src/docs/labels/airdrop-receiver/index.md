@@ -9,9 +9,9 @@ description: Airdrop Receiver Label
 
 The airdrop_receiver label is assigned to wallet addresses that have received any airdrops.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`airdrop_receiver`
+`santiment/airdrop_receiver:v1`
 
 ## Label Examples
 

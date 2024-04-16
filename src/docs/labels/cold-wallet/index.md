@@ -9,9 +9,9 @@ description: Cold wallet label
 
 Label `cold_wallet` refers to a type of wallet that is commonly used by centralized exchanges or other entities as a secure storage solution for cryptocurrency assets.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`cold_wallet`
+`santiment/cold_wallet:v1`
 
 ## Label Examples
 Bitfinex Cold Wallet Address: [0x742d35Cc6634C0532925a3b844Bc454e4438f44e](https://etherscan.io/address/0x742d35Cc6634C0532925a3b844Bc454e4438f44e)

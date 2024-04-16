@@ -8,9 +8,9 @@ description: Team wallet label
 ## Description
 
 
-## API Name
+## [Label fqn](/label-fqn)
 
-``
+`santiment/team_wallet:v1`
 
 ## Label Examples
 

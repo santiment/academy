@@ -9,9 +9,11 @@ description: NFT collection name label
 
 Name of the [NFT collection](/labels/nft-collection).
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`nft_collection_name`
+`santiment/nft_collection_name->{your_value}:v1`
+
+- E.g. `santiment/nft_collection_name->cryptophunksv2:v1`
 
 ## Label Examples
 

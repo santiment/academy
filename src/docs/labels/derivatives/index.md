@@ -13,9 +13,9 @@ where a buyer and a seller engage in a contractual agreement to trade an underly
 These assets are sold at a prearranged time and price. 
 
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`derivatives`
+`santiment/derivatives:v1`
 
 ## Label Examples
 Synthetix Exchange State [0x545973f28950f50fc6c7f52aab4ad214a27c0564](https://etherscan.io/address/0x545973f28950f50fc6c7f52aab4ad214a27c0564)

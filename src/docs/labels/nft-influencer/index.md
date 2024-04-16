@@ -6,11 +6,17 @@ description: NFT Influencer
 ---
 
 ## Description
-This label connects nft influencer name with onchain address.
-## API Name
-`nft_influencer`
+
+This label denotes an onchain address of some nft influencer.
+
+## [Label fqn](/label-fqn)
+
+`santiment/nft_influencer:v1`
+
 ## Label Examples
+
 NFT Influencer "BokkyPooBah": [0x000001f568875F378Bf6d170B790967FE429C81A](https://etherscan.io/address/0x000001f568875F378Bf6d170B790967FE429C81A)
 
 ## Available Blockchains
+
 - ethereum

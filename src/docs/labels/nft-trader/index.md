@@ -11,9 +11,9 @@ The NFT trader label is assigned to a group of wallet addresses that have been *
 
 To determine if an address qualifies as an NFT trader (i.e. if the address is active enough), we evaluate its NFT trades count and NFT trading volume against the 97.5 percentile of the NFT trades count and NFT trading volume of all addresses trading NFTs within a recent timeframe. This helps us identify the most active and significant NFT traders in the ecosystem.
 
-## API Name
+## [Label fqn](/label-fqn)
 
-`nft_trader`
+`santiment/nft_trader:v1`
 
 
 ## Label Examples
