@@ -1,11 +1,14 @@
 ---
-title: Deprecated MakerDAO metrics
+title: Deprecated MakerDAO Metrics
 author: Maksim Razhev, Serge Nedashkovsky, Filip
 date: 2021-01-28
-description: Deprecated MakerDAO metrics
+description: Deprecated MakerDAO Metrics
 ---
-> Note: MakerDAO metrics have been migrated to a new framework. 
-> **Although older data remains accessible through the API, we do not recommend its use.**
+
+<Notebox type="note">
+Note: MakerDAO metrics have been migrated to a new framework. 
+**Although older data remains accessible through the API, we do not recommend its use.**
+</Notebox>
 
 ## Description
 
