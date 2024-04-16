@@ -11,6 +11,12 @@ The Trading Volume is the volume in USD traded on exchanges.
 The metric is taking into consideration all the trading pairs. The trading pairs that
 are not pegged to USD are multiplied by the USD price of the asset.
 
+Trading Volume in USD metrics:
+- `volume_usd` - 24-hour sliding window trading volume across centralized and decentralized exchanges. 
+All transactions are converted to USD. The data is sourced from a 3rd party provider.
+- `volume_usd_5m` - The same as `volume_usd`, but the data points are aligned at 5 minute intervals and 
+any gaps are filled with the last known value 
+
 ---
 
 ## Access
@@ -58,6 +64,8 @@ Available assets for [volume_usd](https://api.santiment.net/graphiql?query=%7B%0
 ## SanAPI
 
 ### Volume USD
+
+Available under `volume_usd` and `volume_usd_5m` names
 
 ```graphql
 {
