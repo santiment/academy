@@ -19,7 +19,7 @@ Santiment provide key metrics about the XRPL Chain which are listed below:
 
 ### Activity Metrics
 
-- [DEX Volume in USD](/metrics/xrpl-metrics/dex-volume-in-usd)
+- [DEX Volume](/metrics/xrpl-metrics/dex-volume)
 - [Number of transactions](/metrics/transaction-count)
 - [Number of assets issued](/metrics/xrpl-metrics/assets-issued)
 - [Number of active trustlines](/metrics/xrpl-metrics/trustline-count)
