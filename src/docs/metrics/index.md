@@ -1,13 +1,22 @@
 ---
-title: Metrics Overview
+title: Santiment Crypto Metrics Overview
 headline: "Crypto Metrics: Explore our Set of Onchain Social & Dev Metrics"
 description: "Crypto metrics to delve into key on-chain, social, financial and development data to better understand and navigate the ever-evolving cryptocurrency landscape"
 author: Santiment Team
-date: 2022-04-21
+date: 2024-04-17
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FFJB48Z8tfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Financial
+<Resource title="Deprecated Metrics">
+
+There are metrics that are deprecated, scheduled for deprecation, or the
+metrics are available under a new name and the old name should be not used.
+
+- [Deprecated Metrics](/metrics/deprecated-metrics)
+
+</Resource>
+
+<Resource title="Financial">
 
 Traditional fundamentals including price, volume and market cap, mean coin age
 
@@ -26,7 +35,9 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [Transacted Coin Acquisition Cost](/metrics/transacted-coin-acquisition-cost)
 - [Daily Aggregated Financial Metrics in USD](/metrics/daily-aggregated-financial-metrics)
 
-## Social/Sentiment
+</Resource>
+
+<Resource title="Social/Sentiment">
 
 Metrics build on top of [Social Data](/metrics/details/social-data)
 
@@ -42,7 +53,10 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Trending Words Rank](/metrics/trending-words-rank)
 - [NFT Social Volume](/metrics/nft-social-volume)
 
-## Development
+
+</Resource>
+
+<Resource title="Development">
 
 [Development Activity Metrics](/metrics/development-activity) are used to measure a team’s development activity.
 
@@ -51,7 +65,9 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Development Activity Contributors Count](/metrics/development-activity/development-activity-contributors-count)
 - [Development Activity](/metrics/development-activity/development-activity-contributors-count)
 
-## Network Value (On-Chain)
+</Resource>
+
+<Resource title="Network Value (On-Chain)">
 
 - [MVRV](/metrics/mvrv)
 - [NVT](/metrics/nvt)
@@ -60,7 +76,9 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Network Profit Loss](/metrics/network-profit-loss)
 - [Realized Market Capitalization Hodl Waves](/metrics/realized-market-capitalization-hodl-waves)
 
-## Network Activity (On-Chain)
+</Resource>
+
+<Resource title="Network Activity (On-Chain)">
 
 - [Daily Active Addresses](/metrics/daily-active-addresses)
 - [Active Addresses 24h](/metrics/active-addresses-24h)
@@ -68,7 +86,9 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Active Withdrawals](/metrics/active-withdrawals)
 - [Network Growth](/metrics/network-growth)
 
-## Other On-Chain
+</Resource>
+
+<Resource title="Other On-Chain">
 
 - [Age Consumed](/metrics/age-consumed)
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
@@ -95,7 +115,9 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Velocity](/metrics/velocity)
 - [Whale Transaction Count](/metrics/whale-transaction-count)
 
-## Derivatives
+</Resource>
+
+<Resource title="Derivatives">
 
 - [Funding Rates Aggregated](/metrics/funding-rates-aggregated)
 - [Open Interest](/metrics/open-interest)
@@ -107,7 +129,9 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [dYdX](/metrics/dydx)
 - [Huobi](/metrics/huobi)
 
-## NFT
+</Resource>
+
+<Resource title="NFT">
 
 - [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
 - [NFT Collection Price](/metrics/nft-collection-price)
@@ -116,7 +140,9 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [NFT Trades Count](/metrics/nft-trades-count)
 - [NFT Trade Volume USD](/metrics/nft-trade-volume-usd)
 
-## Blockchain Address Metrics
+</Resource>
+
+<Resource title="Blockchain Address Metrics">
 
 We have a bunch of API methods related to a chain address.
 We support [many chains](/sanapi/metrics/#overview).
@@ -128,22 +154,24 @@ Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and ot
 - [Contract Transaction Count](/metrics/contract-transactions-count)
 - [Contract Interacting Address Count](/metrics/contract-interacting-address-count)
 
-## XRPL Metrics
+</Resource>
 
-The [XRP Ledger (XRPL)](https://xrpl.org/) is a decentralized, public blockchain led by a global developer community.
+<Resource title="XRPL Metrics">
 
-Santiment provide key metrics about the XRPL Chain which are listed below:
+[XRP Ledger (XRPL)](https://xrpl.org/) is a decentralized, public blockchain led by a global developer community.
 
-### Holder Metrics
+Santiment provides key metrics about the XRPL Chain which are listed below. 
+The rest of metrics are also available for XRP.
 
+The XRP-specific metrics are:
+
+#### Holders metrics
 - [Number of accounts](/metrics/xrpl-metrics/number-of-accounts)
-- [Number of new accounts created](/metrics/network-growth/)
 
-### Activity Metrics
-
+#### Activity metrics
 - [DEX Volume in USD](/metrics/xrpl-metrics/dex-volume-in-usd)
-- [Number of transactions](/metrics/transaction-count)
 - [Number of assets issued](/metrics/xrpl-metrics/assets-issued)
 - [Number of active trustlines](/metrics/xrpl-metrics/trustline-count)
 
-### [Deprecated Metrics](/metrics/deprecated-metrics)
+</Resource>
+
