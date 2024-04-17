@@ -16,6 +16,17 @@ metrics are available under a new name and the old name should be not used.
 
 </Resource>
 
+<Resource title="Video explanations of some metrics">
+
+- [Breakdown of Santiment's Top 15 Metrics](https://www.youtube.com/watch?v=FFJB48Z8tfM)
+- [Top metrics for new users](https://www.youtube.com/watch?v=c6q4RsQvA58)
+- [Finding future crypto pumps](https://www.youtube.com/watch?v=2UpK0CnzzuE)
+- [Social Trends metrics](https://www.youtube.com/watch?v=p60ZlNes8WEo)
+- [Using Top Stakeholders metrics](https://www.youtube.com/watch?v=lLyd8GzPixY)
+- [How to use MVRV](https://www.youtube.com/watch?v=vbYQLNJ40yw)
+
+</Resource>
+
 <Resource title="Financial">
 
 Traditional fundamentals including price, volume and market cap, mean coin age
