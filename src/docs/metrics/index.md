@@ -123,6 +123,7 @@ We support [many chains](/sanapi/metrics/#overview).
 Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and other return tables, eg "Top Trasfres Table".
 
 - [Historical Balance](/metrics/historical-balance)
+- [Labelled Historical Balance](/metrics/labelled-historical-balance)
 - [Latest Transactions](/metrics/latest-transactions)
 - [Top Transfers](/metrics/top-transfers)
 - [Contract Transaction Count](/metrics/contract-transactions-count)
