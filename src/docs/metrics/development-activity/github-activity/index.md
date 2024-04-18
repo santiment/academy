@@ -149,3 +149,14 @@ To check what assets are part of the ecosystem and what are their github links:
 
 ---
 
+## Full list of metrics
+
+The full list of GitHub Activity metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+
+- github_activity_change_30d
+
+</Details>
