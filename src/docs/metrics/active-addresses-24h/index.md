@@ -97,6 +97,9 @@ The full list of Active Addresses metrics is:
 <Summary>Open Metrics List</Summary>
 - active_addresses_1h
 - active_addresses_24h
+- active_addresses_24h_change_1d
+- active_addresses_24h_change_30d
+- active_addresses_24h_change_7d
 - active_addresses_7d
 - active_addresses_30d
 - active_addresses_60d
