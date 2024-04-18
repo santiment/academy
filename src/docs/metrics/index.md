@@ -132,13 +132,13 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 
 - [Funding Rates Aggregated](/metrics/funding-rates-aggregated)
 - [Open Interest](/metrics/open-interest)
-- [BitMEX](/metrics/bitmex)
-- [Binance](/metrics/binance)
-- [Bitfinex](/metrics/bitfinex)
-- [Deribit](/metrics/deribit)
-- [FTX](/metrics/ftx)
-- [dYdX](/metrics/dydx)
-- [Huobi](/metrics/huobi)
+- [BitMEX](/metrics/bitmex-derivatives)
+- [Binance](/metrics/binance-derivatives)
+- [Bitfinex](/metrics/bitfinex-derivatives)
+- [Deribit](/metrics/deribit-derivatives)
+- [FTX](/metrics/ftx-derivatives)
+- [dYdX](/metrics/dydx-derivatives)
+- [Huobi](/metrics/huobi-derivatives)
 
 </Resource>
 
