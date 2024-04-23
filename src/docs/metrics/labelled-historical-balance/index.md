@@ -53,7 +53,7 @@ Available for [these assets](https://api.santiment.net/graphiql?variables=&query
 
 ## API
 
-`labelled_historical_balance`
+Available under `labelled_historical_balance`. The query below fetches a total `ethereum` balance of all `centralized_exchange` addresses.
 
 ```graphql
 {

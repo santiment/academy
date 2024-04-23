@@ -13,6 +13,7 @@ DEX volume tracks the exchange volume at the XRPL Decentralized Exchange. The vo
 
 `dex_volume_in_xrp_5m` measures volume in XRP coins.
 
+Availalbe only for `xrp` asset.
 
 ---
 
@@ -48,7 +49,7 @@ USD
 
 ## Available Assets
 
-Available for [these assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dex_volume_in_usd_5m%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+Available for [xrp only](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dex_volume_in_usd_5m%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
 
 ---
 
