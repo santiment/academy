@@ -13,7 +13,7 @@ DEX volume tracks the exchange volume at the XRPL Decentralized Exchange. The vo
 
 `dex_volume_in_xrp_5m` measures volume in XRP coins.
 
-Availalbe only for `xrp` asset.
+Both `dex_volume_in_usd_5m` and `dex_volume_in_xrp_5m` are available only for the `xrp` asset.
 
 ---
 
