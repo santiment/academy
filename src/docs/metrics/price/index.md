@@ -180,7 +180,13 @@ The full list of Price USD metrics is:
 
 <Summary>Open Metrics List</Summary>
 
-- price_usd_change_1d
+- price_btc_change_1d
+- price_btc_change_30d
+- price_btc_change_7d
+- price_eth_change_1d
+- price_eth_change_30d
+- price_eth_change_7d
+- price_usd_change_1d 
 - price_usd_change_30d
 - price_usd_change_7d
 
