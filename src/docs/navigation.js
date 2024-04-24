@@ -242,6 +242,7 @@ export const REFERENCES = [
       'Gini Index',
       'Labeled Balance',
       'Labeled Exchange',
+      'Labelled Historical Balance',
       'Lending and Borrowing Protocols',
       'Marketcap',
       'MakerDAO DAI Savings Rate',

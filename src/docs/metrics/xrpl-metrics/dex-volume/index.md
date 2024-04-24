@@ -1,13 +1,19 @@
 ---
-title: DEX volume in USD
+title: DEX volume
 author: Boris
 date: 2023-03-13
-description:
+description: XRPL DEX trading volume
 ---
 
 ## Description
 
-DEX volume in USD tracks the exchange volume at the XRPL Decentralized Exchange. The volume includes all trades where at least one of the assets in the pair have recently traded against XRP.
+DEX volume tracks the exchange volume at the XRPL Decentralized Exchange. The volume includes all trades where at least one of the assets in the pair have recently traded against XRP.
+
+`dex_volume_in_usd_5m` measures volume in USD equivalent.
+
+`dex_volume_in_xrp_5m` measures volume in XRP coins.
+
+Both `dex_volume_in_usd_5m` and `dex_volume_in_xrp_5m` are available only for the `xrp` asset.
 
 ---
 
@@ -43,13 +49,13 @@ USD
 
 ## Available Assets
 
-Available for [these assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dex_volume_in_usd_5m%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+Available for [xrp only](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dex_volume_in_usd_5m%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
 
 ---
 
 ### SanAPI
 
-Available under the `dex_volume_in_usd_5m` name.
+Available under the `dex_volume_in_usd_5m` and `dex_volume_in_xrp_5m` names.
 
 ```graphql
 {
