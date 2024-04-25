@@ -9,12 +9,14 @@ We consider signal as some specific event happening at some point of time. Usual
 Signals belong to nonequidistant timeseries data type (the sequence taken at successive non-equally spaced points in time).
 
 - [Anomalies](/signals/anomalies)
-- [ATH Price USD](/signals/ath-price-usd)
-- [DAI Mint](/signals/dai-mint)
-- [DEX Trades](/signals/dex-trades)
-- [Large Exchange Transactions](/signals/large-exchange-transactions)
-- [Large Transactions](/signals/large-transactions)
-- [MCD ART Liquidation](/signals/mcd-art-liquidation)
-- [Old Coins Moved](/signals/old-coins-moved)
-- [Project in Trending Words](/signals/project-in-trending-words)
-- [UniswapV3 PoolCreated](/signals/uniswapv3-poolcreated)
+- [Large Exchange Transactions 1M](/signals/large-exchange-transactions-1m)
+
+<Resource>
+
+Deprecated Signals
+
+There are signals that have been deprecated, are scheduled for deprecation, or are now available under a new name. Please refrain from using the old signals and migrate to the updated versions as necessary.
+
+- [Deprecated Signals](signals/deprecated)
+
+</Resource>
