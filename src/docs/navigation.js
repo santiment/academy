@@ -355,15 +355,11 @@ export const REFERENCES = [
     icon: Signals,
     articles: [
       'Anomalies',
-      'ATH price USD',
-      'DAI Mint',
-      'Large Exchange Transactions',
       'Large Exchange Transactions 1M',
-      'Large Transactions',
-      'MCD ART Liquidation',
-      'Old Coins Moved',
-      'Project in Trending Words',
-      'UniswapV3 PoolCreated',
+      {
+        slug: 'deprecated',
+        title: 'Deprecated Signals',
+      },
     ],
   },
 ]
