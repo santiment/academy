@@ -37,7 +37,7 @@ There are 3 development activity metrics available:
   needed for all assets at once.
 - `ecosystem_dev_activity` - Precomputed for each ecosystem. An ecosystem dev
   activity is defined as the sum of the dev activities of all assets that
-  belong to it. For example the `ethereum` ecosystem contains all the project
+  belong to it. For example the `ethereum` ecosystem contains all the projects
   that build on the Ethereum blockchain or contribute to the blockchain in any
   other way.
 
