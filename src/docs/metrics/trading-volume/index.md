@@ -93,6 +93,9 @@ The full list of GitHub Activity metrics is:
 
 <Summary>Open Metrics List</Summary>
 
+- volume_usd
+- volume_usd_5m
+- volume_usd_change_1d
 - volume_usd_change_30d
 - volume_usd_change_7d
 
