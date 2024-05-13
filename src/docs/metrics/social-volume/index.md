@@ -183,7 +183,6 @@ The full list of Social Volume metrics is:
 
 - social_volume_4chan
 - social_volume_bitcointalk
-- social_volume_newsapi_crypto
 - social_volume_reddit
 - social_volume_telegram
 - social_volume_total

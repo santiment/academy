@@ -161,7 +161,6 @@ The full list of Social Dominance metrics is:
 - social_dominance_4chan
 - social_dominance_ai_total
 - social_dominance_bitcointalk
-- social_dominance_newsapi_crypto
 - social_dominance_reddit
 - social_dominance_telegram
 - social_dominance_total
