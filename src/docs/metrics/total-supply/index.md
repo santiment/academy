@@ -139,7 +139,6 @@ The full list of Total Supply metrics is:
 
 <Summary>Open Metrics List</Summary>
 
-- top_holders_percent_of_total_supply
 - percent_of_whale_stablecoin_total_supply
 
 </Details>
