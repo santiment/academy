@@ -182,7 +182,5 @@ The full list of Dev Activity metrics is:
 - dev_activity
 - dev_activity_1d
 - dev_activity_change_1d
-- dev_activity_change_30d
-- dev_activity_change_7d
 
 </Details>
