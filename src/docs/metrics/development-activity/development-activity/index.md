@@ -179,6 +179,8 @@ The full list of Dev Activity metrics is:
 <Summary>Open Metrics List</Summary>
 
 - 30d_moving_avg_dev_activity_change_1d
+- dev_activity
+- dev_activity_1d
 - dev_activity_change_1d
 - dev_activity_change_30d
 - dev_activity_change_7d
