@@ -8,6 +8,7 @@ description: Deprecated MakerDAO Metrics
 <Notebox type="note">
 Note: MakerDAO metrics have been migrated to a new framework. 
 **Although older data remains accessible through the API, we do not recommend its use.**
+The old metrics will stop being computed and they will be removed.
 </Notebox>
 
 ## Description
