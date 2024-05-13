@@ -149,6 +149,28 @@ To check what assets are part of the ecosystem and what are their github links:
 
 ---
 
+GitHub Activity Change for Ethereum Repository Over 7 Days
+
+```graphql
+{
+  getMetric(metric: "github_activity_change_30d") {
+    timeseriesData(
+      selector: {slug: "ethereum"}
+      from: "2024-01-01T00:00:00Z"
+      to: "2024-01-07T00:00:00Z"
+      interval: "1d"
+    ) {
+      datetime
+      value
+    }
+  }
+}
+```
+
+**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22github_activity_change_30d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7Bslug%3A%20%22ethereum%22%7D%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)**
+
+---
+
 ## Full list of metrics
 
 The full list of GitHub Activity metrics is:
