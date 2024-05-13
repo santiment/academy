@@ -87,11 +87,29 @@ The full list of Transaction Volume metrics is:
 
 <Summary>Open Metrics List</Summary>
 
+- transaction_volume
+- transaction_volume_in_loss
+- transaction_volume_in_profit
+- transaction_volume_profit_loss_ratio
+- transaction_volume_usd
+
+</Details>
+
+<Details>
+
+<Summary>Open Change Metrics List</Summary>
+
+- transaction_volume
 - transaction_volume_change_1d
 - transaction_volume_change_30d
 - transaction_volume_change_7d
+- transaction_volume_in_loss
+- transaction_volume_in_profit
+- transaction_volume_profit_loss_ratio
+- transaction_volume_usd
 - transaction_volume_usd_change_1d
 - transaction_volume_usd_change_30d
 - transaction_volume_usd_change_7d
 
 </Details>
+

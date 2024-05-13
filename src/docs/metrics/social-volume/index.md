@@ -179,20 +179,24 @@ Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric
 The full list of Social Volume metrics is:
 
 <Details>
-
 <Summary>Open Metrics List</Summary>
 
 - social_volume_4chan
 - social_volume_bitcointalk
 - social_volume_newsapi_crypto
 - social_volume_reddit
+- social_volume_telegram
+- social_volume_total
+- social_volume_twitter
+- social_volume_youtube_videos
+
+</Details>
+
+<Details>
+<Summary>Open Change Metrics List</Summary>
+
 - social_volume_total_change_1d
 - social_volume_total_change_30d
 - social_volume_total_change_7d
-- social_volume_twitter
-- social_volume_twitter_crypto
-- social_volume_twitter_news
-- social_volume_twitter_nft
-- social_volume_youtube_videos
 
 </Details>

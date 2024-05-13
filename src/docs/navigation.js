@@ -288,6 +288,7 @@ export const REFERENCES = [
       'Whale Transaction Count',
       'XRPL Metrics',
       'Deprecated Metrics',
+      'Renamed Metrics'
     ],
   },
   {

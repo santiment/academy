@@ -85,6 +85,7 @@ The full list of Network Profit Loss metrics is:
 
 <Summary>Open Metrics List</Summary>
 
+- network_profit_loss
 - network_profit_loss_change_1d
 - network_profit_loss_change_30d
 - network_profit_loss_change_7d

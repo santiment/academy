@@ -60,7 +60,7 @@ Amount in dollars/usdt/bitcoins
 - Available assets for [price_usd_5m](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usd_5m%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
 - Available assets for [price_btc](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_btc%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
 - Available assets for [price_usdt](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usdt%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
-
+- Available assets for [price_eth](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_eth%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
 ---
 
 ## SanAPI
@@ -174,11 +174,22 @@ Amount in dollars/usdt/bitcoins
 
 ## Full list of metrics
 
-The full list of Price USD metrics is:
+The full list of Price metrics is:
 
 <Details>
 
 <Summary>Open Metrics List</Summary>
+
+- price_btc
+- price_eth
+- price_usd
+- price_usd_5m
+
+</Details>
+
+<Details>
+
+<Summary>Open Change Metrics List</Summary>
 
 - price_btc_change_1d
 - price_btc_change_30d
@@ -186,7 +197,8 @@ The full list of Price USD metrics is:
 - price_eth_change_1d
 - price_eth_change_30d
 - price_eth_change_7d
-- price_usd_change_1d 
+- price_usd_change_1d
+- price_usd_change_1h
 - price_usd_change_30d
 - price_usd_change_7d
 

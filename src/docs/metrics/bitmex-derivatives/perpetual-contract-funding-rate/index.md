@@ -86,6 +86,7 @@ The full list of Bitmex Perpetual Funding Rate metrics is:
 
 <Summary>Open Metrics List</Summary>
 
+- bitmex_perpetual_funding_rate
 - bitmex_perpetual_funding_rate_change_1d
 - bitmex_perpetual_funding_rate_change_30d
 - bitmex_perpetual_funding_rate_change_7d

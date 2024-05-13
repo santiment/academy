@@ -68,16 +68,3 @@ Query variables:
 ```
 
 [**Run in explorer**](https://api.santiment.net/graphiql?query=query%20historicalBalance(%24from%3A%20DateTime!%2C%20%24to%3A%20DateTime!%2C%20%24address%3A%20String!%2C%20%24interval%3A%20interval!%2C%20%24slug%3A%20String!%2C%20%24infrastructure%3A%20String)%20%7B%0A%20%20historicalBalance(%0A%20%20%20%20address%3A%20%24address%0A%20%20%20%20interval%3A%20%24interval%0A%20%20%20%20from%3A%20%24from%0A%20%20%20%20to%3A%20%24to%0A%20%20%20%20selector%3A%20%7Bslug%3A%20%24slug%2C%20infrastructure%3A%20%24infrastructure%7D%0A%20%20)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20balance%0A%20%20%7D%0A%7D%0A&variables=%20%7B%0A%09%09%22address%22%3A%20%220xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d%22%2C%0A%09%09%22from%22%3A%20%222021-10-17T21%3A00%3A00.000Z%22%2C%0A%09%09%22interval%22%3A%20%224h%22%2C%0A%09%09%22metric%22%3A%20%22historicalBalance%22%2C%0A%09%09%22slug%22%3A%20%22weth%22%2C%0A%09%09%22to%22%3A%20%222022-04-18T20%3A59%3A59.999Z%22%0A%09%7D)
-
-## Full list of metrics
-
-The full list of Historical Balance metrics is:
-
-<Details>
-
-<Summary>Open Metrics List</Summary>
-
-- historical_balance
-- historical_balance_changes
-
-</Details>

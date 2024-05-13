@@ -159,38 +159,59 @@ The full list of Social Dominance metrics is:
 <Summary>Open Metrics List</Summary>
 
 - social_dominance_4chan
-- social_dominance_4chan_1h_moving_average
-- social_dominance_4chan_24h_moving_average
 - social_dominance_ai_total
-- social_dominance_ai_total_1h_moving_average
 - social_dominance_bitcointalk
-- social_dominance_bitcointalk_1h_moving_average
-- social_dominance_bitcointalk_24h_moving_average
 - social_dominance_newsapi_crypto
 - social_dominance_reddit
+- social_dominance_telegram
+- social_dominance_total
+- social_dominance_twitter
+- social_dominance_youtube_videos
+
+</Details>
+
+<Details>
+
+<Summary>Open Change Metrics List</Summary>
+
+- social_dominance_total_change_1d
+- social_dominance_total_change_30d
+- social_dominance_total_change_7d
+
+</Details>
+
+<Details>
+
+<Summary>Open Moving Average Metrics List</Summary>
+
+- social_dominance_4chan_1h_moving_average
+- social_dominance_4chan_24h_moving_average
+- social_dominance_ai_total_1h_moving_average
+- social_dominance_ai_total_24h_moving_average
+- social_dominance_bitcointalk_1h_moving_average
+- social_dominance_bitcointalk_24h_moving_average
 - social_dominance_reddit_1h_moving_average
 - social_dominance_reddit_24h_moving_average
 - social_dominance_telegram_1h_moving_average
 - social_dominance_telegram_24h_moving_average
-- social_dominance_total_24h_moving_average
-- social_dominance_total_24h_moving_average_change_1d
-- social_dominance_total_24h_moving_average_change_30d
-- social_dominance_total_24h_moving_average_change_7d
 - social_dominance_total_1h_moving_average
+- social_dominance_total_24h_moving_average
+- social_dominance_twitter_1h_moving_average
+- social_dominance_twitter_24h_moving_average
+- social_dominance_youtube_videos_1h_moving_average
+- social_dominance_youtube_videos_24h_moving_average
+
+</Details>
+
+<Details>
+
+<Summary>Open Moving Average Change Metrics List</Summary>
+
 - social_dominance_total_1h_moving_average_change_1d
 - social_dominance_total_1h_moving_average_change_30d
 - social_dominance_total_1h_moving_average_change_7d
-- social_dominance_total_change_1d
-- social_dominance_total_change_30d
-- social_dominance_total_change_7d
-- social_dominance_twitter
-- social_dominance_twitter_1h_moving_average
-- social_dominance_twitter_24h_moving_average
-- social_dominance_twitter_crypto
-- social_dominance_twitter_news
-- social_dominance_twitter_nft
-- social_dominance_youtube_videos
-- social_dominance_youtube_videos_1h_moving_average
-- social_dominance_youtube_videos_24h_moving_average
+- social_dominance_total_24h_moving_average_change_1d
+- social_dominance_total_24h_moving_average_change_30d
+- social_dominance_total_24h_moving_average_change_7d
 
 </Details>

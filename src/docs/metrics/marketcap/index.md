@@ -77,12 +77,13 @@ Available assets for [marketcap_usd](https://api.santiment.net/graphiql?query=%7
 
 ## Full list of metrics
 
-The full list of Price USD metrics is:
+The full list of Marketcap in USD metrics is:
 
 <Details>
 
 <Summary>Open Metrics List</Summary>
 
+- marketcap_usd
 - marketcap_usd_change_1d
 - marketcap_usd_change_30d
 - marketcap_usd_change_7d

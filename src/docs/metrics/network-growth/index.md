@@ -104,6 +104,7 @@ The full list of Network Growth metrics is:
 
 <Summary>Open Metrics List</Summary>
 
+- network_growth
 - network_growth_change_1d
 - network_growth_change_30d
 - network_growth_change_7d

@@ -103,11 +103,9 @@ The full list of Age Consumed metrics is:
 
 <Summary>Open Metrics List</Summary>
 
+- age_consumed
 - age_consumed_change_1d
 - age_consumed_change_30d
 - age_consumed_change_7d
-- age_destroyed_change_1d
-- age_destroyed_change_30d
-- age_destroyed_change_7d
 
 </Details>
