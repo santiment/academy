@@ -179,6 +179,7 @@ The full list of GitHub Activity metrics is:
 
 <Summary>Open Metrics List</Summary>
 
+- ecosystem_github_activity
 - github_activity_change_30d
 
 </Details>

@@ -184,6 +184,7 @@ The full list of Price metrics is:
 - price_eth
 - price_usd
 - price_usd_5m
+- price_usdt
 
 </Details>
 
