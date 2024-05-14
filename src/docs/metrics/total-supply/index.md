@@ -130,3 +130,15 @@ Percent of Supply in Profit is available for  `percent_of_total_supply_in_profit
 
 [Run in
 explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22percent_of_total_supply_in_profit%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-12-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
+## Full list of metrics
+
+The full list of Total Supply metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+
+- percent_of_whale_stablecoin_total_supply
+
+</Details>

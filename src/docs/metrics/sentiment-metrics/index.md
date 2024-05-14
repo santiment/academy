@@ -81,4 +81,3 @@ certain threshold is considered in our sentiment metrics. This approach filters
 out neutral, spam, or irrelevant messages, focusing on the most impactful data.
 Our sentiment metrics are recalculated monthly to account for any changes in
 our models or data sources, providing you with the most up-to-date insights.
-

@@ -7,12 +7,13 @@ date: 2024-04-17
 ---
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FFJB48Z8tfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<Resource title="Deprecated Metrics">
+<Resource title="Deprecated and Renamed Metrics">
 
 There are metrics that are deprecated, scheduled for deprecation, or the
 metrics are available under a new name and the old name should be not used.
 
 - [Deprecated Metrics](/metrics/deprecated-metrics)
+- [Renamed Metrics](/metrics/renamed-metrics)
 
 </Resource>
 
@@ -132,13 +133,13 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 
 - [Funding Rates Aggregated](/metrics/funding-rates-aggregated)
 - [Open Interest](/metrics/open-interest)
-- [BitMEX](/metrics/bitmex)
-- [Binance](/metrics/binance)
-- [Bitfinex](/metrics/bitfinex)
-- [Deribit](/metrics/deribit)
-- [FTX](/metrics/ftx)
-- [dYdX](/metrics/dydx)
-- [Huobi](/metrics/huobi)
+- [BitMEX](/metrics/bitmex-derivatives)
+- [Binance](/metrics/binance-derivatives)
+- [Bitfinex](/metrics/bitfinex-derivatives)
+- [Deribit](/metrics/deribit-derivatives)
+- [FTX](/metrics/ftx-derivatives)
+- [dYdX](/metrics/dydx-derivatives)
+- [Huobi](/metrics/huobi-derivatives)
 
 </Resource>
 

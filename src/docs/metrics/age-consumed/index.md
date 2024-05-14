@@ -94,3 +94,18 @@ Available under the `age_destroyed` and `age_consumed` names, one being an alias
 ```
 
 [**Run in explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22age_consumed%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+## Full list of metrics
+
+The full list of Age Consumed metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+
+- age_consumed
+- age_consumed_change_1d
+- age_consumed_change_30d
+- age_consumed_change_7d
+
+</Details>

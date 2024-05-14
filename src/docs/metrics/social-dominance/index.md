@@ -149,3 +149,68 @@ Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric
 
 **[Run in
 Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22social_dominance_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%20text%3A%20%22btc%20AND%201%3Fk%22%20%7D%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
+
+## Full list of metrics
+
+The full list of Social Dominance metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+
+- social_dominance_4chan
+- social_dominance_ai_total
+- social_dominance_bitcointalk
+- social_dominance_reddit
+- social_dominance_telegram
+- social_dominance_total
+- social_dominance_twitter
+- social_dominance_youtube_videos
+
+</Details>
+
+<Details>
+
+<Summary>Open Change Metrics List</Summary>
+
+- social_dominance_total_change_1d
+- social_dominance_total_change_30d
+- social_dominance_total_change_7d
+
+</Details>
+
+<Details>
+
+<Summary>Open Moving Average Metrics List</Summary>
+
+- social_dominance_4chan_1h_moving_average
+- social_dominance_4chan_24h_moving_average
+- social_dominance_ai_total_1h_moving_average
+- social_dominance_ai_total_24h_moving_average
+- social_dominance_bitcointalk_1h_moving_average
+- social_dominance_bitcointalk_24h_moving_average
+- social_dominance_reddit_1h_moving_average
+- social_dominance_reddit_24h_moving_average
+- social_dominance_telegram_1h_moving_average
+- social_dominance_telegram_24h_moving_average
+- social_dominance_total_1h_moving_average
+- social_dominance_total_24h_moving_average
+- social_dominance_twitter_1h_moving_average
+- social_dominance_twitter_24h_moving_average
+- social_dominance_youtube_videos_1h_moving_average
+- social_dominance_youtube_videos_24h_moving_average
+
+</Details>
+
+<Details>
+
+<Summary>Open Moving Average Change Metrics List</Summary>
+
+- social_dominance_total_1h_moving_average_change_1d
+- social_dominance_total_1h_moving_average_change_30d
+- social_dominance_total_1h_moving_average_change_7d
+- social_dominance_total_24h_moving_average_change_1d
+- social_dominance_total_24h_moving_average_change_30d
+- social_dominance_total_24h_moving_average_change_7d
+
+</Details>

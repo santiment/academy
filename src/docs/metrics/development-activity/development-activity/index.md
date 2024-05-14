@@ -170,3 +170,18 @@ To check what assets are part of the ecosystem and what are their github links:
 
 ---
 
+## Full list of metrics
+
+The full list of Dev Activity metrics is:
+
+<Details>
+
+<Summary>Open Metrics List</Summary>
+
+- 30d_moving_avg_dev_activity_change_1d
+- dev_activity
+- dev_activity_1d
+- dev_activity_change_1d
+- ecosystem_dev_activity
+
+</Details>

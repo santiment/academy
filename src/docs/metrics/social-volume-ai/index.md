@@ -79,3 +79,14 @@ Available under the `social_volume_ai_total` name.
 ```
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22social_volume_ai_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector:%20%7B%20slug:%20%22santiment%22%20%7D%0A%20%20%20%20%20%20from:%20%222020-01-01T00:00:00Z%22%0A%20%20%20%20%20%20to:%20%222020-01-07T00:00:00Z%22%0A%20%20%20%20%20%20interval:%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
+
+## Full list of metrics
+
+The full list of Social Volume metrics is:
+
+<Details>
+<Summary>Open Change Metrics List</Summary>
+
+- social_volume_ai_total
+
+</Details>
