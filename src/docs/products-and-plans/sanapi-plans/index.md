@@ -10,7 +10,7 @@ Santiment API Plans provide access to various metrics through the API endpoint: 
 
 ## Free Plan
 
-API access:
+### API access:
 - Full access to free metrics
 - Partial access to restricted metrics:
   - 2 years of historical data
@@ -20,7 +20,7 @@ API access:
   - 500 API calls per hour
   - 100 API calls per minute
 
-Sanbase access:
+### Sanbase access:
 - Full access to free metrics
 - Partial access to restricted metrics on the Sanbase website:
   - 2 years of historical data
@@ -28,7 +28,7 @@ Sanbase access:
 - Allowed number of alerts: 3
 - Limited access to insights
 
-Santiment Queries access:
+### Santiment Queries access:
 - Overall credits: 500
 - Rate limits:
   - 500 credits per day
@@ -37,7 +37,7 @@ Santiment Queries access:
 
 ## Business Pro Plan
 
-API access:
+### API access:
 - Full access to free metrics
 - Partial access to restricted metrics:
   - 2 years of historical data
@@ -47,10 +47,10 @@ API access:
   - 30,000 API calls per hour
   - 600 API calls per minute
 
-Sanbase access:
+### Sanbase access:
 - Full access at [Sanbase website](https://app.santiment.net)
 
-Santiment Queries access:
+### Santiment Queries access:
 - Overall credits: 50K
 - Rate limits: 
   - 15K credits per day
@@ -59,6 +59,7 @@ Santiment Queries access:
 
 ## Business Max Plan
 
+### API access:
 - Full access to free metrics
 - Full access to restricted metrics
 - Rate limits:
@@ -66,10 +67,10 @@ Santiment Queries access:
   - 60,000 API calls per hour
   - 1200 API calls per minute
 
-Sanbase access:
+### Sanbase access:
 - Full access at [Sanbase website](https://app.santiment.net)
 
-Santiment Queries access:
+### Santiment Queries access:
 - Overall credits: 500K
 - Rate limits: 
   - 15K credits per day
