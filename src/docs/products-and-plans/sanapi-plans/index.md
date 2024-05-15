@@ -1,44 +1,79 @@
 ---
-title: SanAPI Plans
+title: Santiment API Plans
 author: Ivan
 date: 2021-03-22
 ---
 
 ## Overview
 
-Sanapi Plans provide access to various metrics through the API endpoint: https://api.santiment.net. When a user attempts to access the [Sanbase website](https://app.santiment.net), the restrictions applied correspond to the [Sanbase Free](/products-and-plans/access-plans/sanbase#free-plan) plan.
+Santiment API Plans provide access to various metrics through the API endpoint: https://api.santiment.net. 
 
 ## Free Plan
 
+API access:
+- Full access to free metrics
+- Partial access to restricted metrics:
+  - 2 years of historical data
+  - The last 30 days of data are cut off
 - Rate limits:
   - 1000 API calls per month
   - 500 API calls per hour
   - 100 API calls per minute
+
+Sanbase access:
 - Full access to free metrics
-- Partial access to restricted metrics:
+- Partial access to restricted metrics on the Sanbase website:
   - 2 years of historical data
-  - Last 30 days of data are cut off
+  - Last 30 days of data are cut-off
+- Allowed number of alerts: 3
+- Limited access to insights
 
-- Detailed metrics access restrictions can be found [here](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(plan%3A%20FREE%2C%20product%3A%20SANAPI)%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A)
-
-## Basic Plan
-
+Santiment Queries access:
+- Overall credits: 500
 - Rate limits:
-  - 300,000 API calls per month
-  - 20,000 API calls per hour
-  - 400 API calls per minute
+  - 500 credits per day
+  - 200 credits per hour
+  - 20 credits per minute
+
+## Business Pro Plan
+
+API access:
 - Full access to free metrics
 - Partial access to restricted metrics:
   - 2 years of historical data
-  - Real-time data is not cut-off
-- Detailed metrics access restrictions can be found [here](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(plan%3A%20BASIC%2C%20product%3A%20SANAPI)%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A)
-
-## Pro Plan
-
+  - No realtime restriction
 - Rate limits:
   - 600,000 API calls per month
   - 30,000 API calls per hour
   - 600 API calls per minute
+
+Sanbase access:
+- Full access at [Sanbase website](https://app.santiment.net)
+
+Santiment Queries access:
+- Overall credits: 50K
+- Rate limits: 
+  - 15K credits per day
+  - 3K credits per hour
+  - 100 credits per minute
+
+## Business Max Plan
+
 - Full access to free metrics
 - Full access to restricted metrics
-- Detailed metrics access restrictions can be found [here](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(plan%3A%20PRO%2C%20product%3A%20SANAPI)%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A)
+- Rate limits:
+  - 1,200,000 API calls per month
+  - 60,000 API calls per hour
+  - 1200 API calls per minute
+
+Sanbase access:
+- Full access at [Sanbase website](https://app.santiment.net)
+
+Santiment Queries access:
+- Overall credits: 500K
+- Rate limits: 
+  - 15K credits per day
+  - 3K credits per hour
+  - 100 credits per minute
+
+
