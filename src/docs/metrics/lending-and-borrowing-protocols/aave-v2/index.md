@@ -50,6 +50,12 @@ Protocol total supplied/borrowed metrics:
 Daily active addresses:
 * `aave_v2_active_addresses` - Daily active addresses on Aave V2
 
+Revenue metrics:
+* `aave_v2_revenue` - Aave V2 Revenue per asset
+* `aave_v2_revenue_usd` - Aave V2 Revenue in USD per asset
+* `aave_v2_total_protocol_revenue_usd` - Aave V2 Total Protocol Revenue
+* `aave_v2_total_protocol_cumulative_revenue_usd` - Daily Aave V2 Total Protocol Cumulative Revenue
+
 ---
 
 ## Access
@@ -73,7 +79,8 @@ Daily active addresses:
 
 ## Frequency
 
-[Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
+* [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency) - Actions, supply, borrow, and APY metrics
+* [Daily Intervals](/metrics/details/frequency#daily-frequency) - Revenue and active addresses metrics
 
 ---
 
@@ -211,3 +218,23 @@ Daily active addresses: `aave_v2_active_addresses`
 }
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v2_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
+Revenue metrics: `aave_v2_revenue`, `aave_v2_revenue_usd`, `aave_v2_total_protocol_revenue_usd`
+and `aave_v2_total_protocol_cumulative_revenue_usd`
+
+```graphql
+{
+  getMetric(metric: "aave_v2_revenue"){
+    timeseriesData(
+      slug: "usd-coin"
+      from: "2023-01-01T00:00:00Z"
+      to: "2023-01-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"){
+        datetime
+        value
+      }
+  }
+}
+```
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v2_revenue%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22usd-coin%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
