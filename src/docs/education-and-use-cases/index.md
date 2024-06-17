@@ -3,6 +3,10 @@ title: Education and Use Cases
 author: Dino Ibisbegovic
 ---
 
+<Resource title="Metrics Spotlight">
+- [Trading and Transaction Volume](/education-and-use-cases/trading-and-transaction-volume/)
+</Resource>
+
 <Resource title="Alerts">
 - [Age Consumed Example](/education-and-use-cases/alerts-on-sanbase/)
 - [Social Trends/Trending Words Example](/education-and-use-cases/social-trends-alerts/)

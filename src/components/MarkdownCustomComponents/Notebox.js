@@ -6,6 +6,8 @@ const ICONS = {
   hand: '👋',
   pin: '📌',
   note: '⚠️',
+  none: '',
+  exclamation: '❗'
 }
 
 const Notebox = ({ type = 'note', children }) => {
