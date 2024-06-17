@@ -3,8 +3,6 @@ title: Trading and Transaction Volume
 author: Santiment Team
 ---
 
-## Volume
-
 ### Trading Volume
 
 - Includes only transactions related to trading. Consists of data from decentralized exchanges (DEX) and centralized exchanges (CEX).
