@@ -57,6 +57,10 @@ export const GUIDES = [
         slug: 'santiment pro reports samples',
         title: 'Santiment PRO Reports Samples',
       },
+      {
+        slug: 'trading and transaction volume',
+        title: 'Trading and Transaction Volume'
+      }
     ],
   },
   {
