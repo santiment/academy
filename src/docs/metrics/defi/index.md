@@ -10,7 +10,7 @@ description: DeFi Metrics
 Some of the DeFi-related metrics have their own pages:
 
 **MakerDAO Special Metrics**:
-[MakerDAO metrics](/metrics/makerdao)
+[MakerDAO metrics](/metrics/lending-and-borrowing-protocols/makerdao/)
 
 **Metrics related to DeFi protocols**:
 [Flow and balance metrics](/metrics/labeled-balance)
