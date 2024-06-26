@@ -118,7 +118,7 @@ In the metric name this source is typed as `4chan`. Example:
 
 We collect posts from [Farcaster](https://www.farcaster.xyz/)
 
-In the metric name this source is typed as `Farcaster`. Example:
+In the metrics' names this source is typed as `farcaster`. Example:
 `social_volume_farcaster`
 
 **Latency**: The scraper goes though all the new posts once per 5 minute.
