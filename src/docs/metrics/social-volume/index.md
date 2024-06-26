@@ -10,7 +10,7 @@ description: The amount of messages/documents containing a given search term
 
 Social Volume is build on top of the [Social Data](/metrics/details/social-data).
 
-The total number of [text documents](/metrics/details/text-document) that
+The total number of [social data text documents](/metrics/details/social-data) that
 contain the given search term at least once. Examples of documents are telegram
 messages and reddit posts. If a single short telegram message includes the word
 `crypto` more than once, this message will increase the social volume of the

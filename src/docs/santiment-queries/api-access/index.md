@@ -9,7 +9,7 @@ description: How to execute queries using the API
 
 Before you start, make sure you acquaint yourself with the Sanqueries product
 and the SQL queries you can write by reading the `Introduction`, `Exploration`
-and `Writing SQL Queries` articles that can be found on the [Sanqueries Oveview](/sanqueries/overview/) page.
+and `Writing SQL Queries` articles that can be found on the [Sanqueries Oveview](/santiment-queries/introduction/) page.
 
 The [Santiment Queries Web Interface](https://app.santiment.net/queries) is only
 one of the ways to execute queries and access the data.
@@ -192,7 +192,7 @@ The result of both the direct API call and the curl command is a JSON. The dates
 The `computeRawClickhouseQuery` accepts two arguments:
 
 - `query` - The SQL query to execute. The query must be a valid SQL query that
-  can be executed against the Clickhouse database. The article [Writing SQL Queries](/sanqueries/writing-sql-queries/) is a recommended read.
+  can be executed against the Clickhouse database. The article [Writing SQL Queries](/santiment-queries/writing-sql-queries/) is a recommended read.
   The query allows for parametrization by using named parameters. Each parameter has a key and a value.
   The query contains the parameter name surrounded in double curly braces: `{{key}}`.
 - `parameters` - A stringified JSON object that contains the key-value pairs. When the SQL query

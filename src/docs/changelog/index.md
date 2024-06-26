@@ -906,7 +906,7 @@ Charts
 - Cursor mode toggle
 - New share flow
 
-![](how-to-draw.gif)
+![](./how-to-draw.gif)
 
 ---
 

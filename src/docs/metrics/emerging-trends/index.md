@@ -67,7 +67,7 @@ $$
 where:
 
 - $v_i^n$ is the _normalized_ social volume of the word at the moment $i$ (i.e.
-  the usual [social volume](/metrics/social-volume-metrics/#social-volume)
+  the usual [social volume](/metrics/social-volume)
   divided by the total amount of messages in that particular [data
   source](/metrics/details/social-data/)),
 
@@ -127,7 +127,7 @@ Emerging Trends are available at [hourly intervals](/metrics/details/frequency#h
 
 ## Latency
 
-Emerging Trends has [social data Latency](/metrics/details/latency#social-data-latency)
+Emerging Trends have [social data Latency](/metrics/details/latency#social-data-latency)
 
 ---
 
