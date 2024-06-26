@@ -392,7 +392,7 @@ We've enhanced our Charts layout. It is more compact, clean and powerful.
 
 ``29.07.21 - 04.08.21``
 
-Migrated [neuro.santiment.net](http://neuro.santiment.net) —> [api.santiment.net](http://api.santiment.net) 
+Migrated [neuro.santiment.net](https://neuro.santiment.net) —> [api.santiment.net](https://api.santiment.net) 
 
 **Sanbase**
 

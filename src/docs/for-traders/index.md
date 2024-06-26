@@ -9,7 +9,7 @@ All Santiment tools and products serve a singular purpose - to help users unders
 
 Instead of relying on pricing data, which is notoriously prone to manipulation in crypto, our indicators and custom trading strategies leverage on-chain data, as well as custom social and development information collected and processed by Santiment. This also means that many of our metrics are entirely custom-built and unavailable anywhere else.
 
-You can find out more about our data feeds on [SanAPI page](http://api.santiment.net).
+You can find out more about our data feeds on [SanAPI page](https://api.santiment.net).
 
 ## Use cases
 
