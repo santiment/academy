@@ -1,7 +1,7 @@
 ---
 title: Social Volume
 author: Ivan
-date: 2024-03-27
+date: 2024-06-26
 description: The amount of messages/documents containing a given search term
 # REF metrics-hub/metricshub/social_volume.py
 ---

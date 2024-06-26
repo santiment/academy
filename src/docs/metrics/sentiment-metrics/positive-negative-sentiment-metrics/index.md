@@ -1,7 +1,7 @@
 ---
 title: Positive/Negative Sentiment Metrics 
 author: Santiment Team
-date: 2024-04-05
+date: 2024-06-26
 description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment 
 ---
 

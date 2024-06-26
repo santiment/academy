@@ -1,7 +1,7 @@
 ---
 title: Social Data
-author: Ivan Ivanov, Ivan Klimuk
-date: 2021-11-2
+author: Ivan Ivanov, Ivan Klimuk, Vladislav Volynets
+date: 2024-06-26
 ---
 
 ## Definition

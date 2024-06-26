@@ -1,7 +1,7 @@
 ---
 title: Social Dominance
 author: Santiment Team
-date: 2024-03-27
+date: 2024-06-26
 description: Share of the crypto discussions that refer to an asset/phrase
 # REF metrics-hub/metricshub/social_dominance.py
 ---
