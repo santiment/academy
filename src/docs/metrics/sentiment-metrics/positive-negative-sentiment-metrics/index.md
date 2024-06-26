@@ -165,6 +165,7 @@ The full list of Postive/Negative/Balance sentiment metrics is:
 - sentiment_positive_telegram
 - sentiment_positive_twitter
 - sentiment_positive_youtube_videos
+- sentiment_positive_farcaster
 - sentiment_positive_total
 </Details>
 
@@ -177,6 +178,7 @@ The full list of Postive/Negative/Balance sentiment metrics is:
 - sentiment_negative_telegram
 - sentiment_negative_twitter
 - sentiment_negative_youtube_videos
+- sentiment_negative_farcaster
 - sentiment_negative_total
 </Details>
 
@@ -188,5 +190,6 @@ The full list of Postive/Negative/Balance sentiment metrics is:
 - sentiment_balance_telegram
 - sentiment_balance_twitter
 - sentiment_balance_youtube_videos
+- sentiment_balance_farcaster
 - sentiment_balance_total
 </Details>

@@ -178,5 +178,6 @@ The full list of weighted sentiment metrics is:
 - sentiment_weighted_telegram
 - sentiment_weighted_twitter
 - sentiment_weighted_youtube_videos
+- sentiment_weighted_farcaster
 - sentiment_weighted_total
 </Details>

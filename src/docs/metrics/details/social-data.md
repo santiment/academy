@@ -113,6 +113,18 @@ In the metric name this source is typed as `4chan`. Example:
 
 **History**: The historical data starts at `2023-02-05`
 
+
+### Farcaster
+
+We collect posts from [Farcaster](https://www.farcaster.xyz/)
+
+In the metric name this source is typed as `Farcaster`. Example:
+`social_volume_farcaster`
+
+**Latency**: The scraper goes though all the new posts once per 5 minute.
+
+**History**: The historical data starts at `2024-04-01`
+
 ---
 
 ### Total

@@ -104,6 +104,7 @@ names, where the available sources are:
 - twitter
 - bitcointalk
 - youtube_videos
+- farcaster
 - total (combines all sources)
 
 ### Social Dominance for an asset
@@ -166,6 +167,7 @@ The full list of Social Dominance metrics is:
 - social_dominance_total
 - social_dominance_twitter
 - social_dominance_youtube_videos
+- social_dominance_farcaster
 
 </Details>
 
@@ -199,6 +201,8 @@ The full list of Social Dominance metrics is:
 - social_dominance_twitter_24h_moving_average
 - social_dominance_youtube_videos_1h_moving_average
 - social_dominance_youtube_videos_24h_moving_average
+- social_dominance_farcaster_1h_moving_average
+- social_dominance_farcaster_24h_moving_average
 
 </Details>
 
