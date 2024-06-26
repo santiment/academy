@@ -58,7 +58,7 @@ When developers work they encapsulate their code changes in commits. When a
 repository page [like this](https://github.com/santiment/sanbase2) is opened in
 github one of the first things shown is the number of commits.
 
-![github-status-bar](github-status-bar.png)
+![github-status-bar](./github-status-bar.png)
 
 One naturally would think that counting commits is an accurate approximation of
 development activity. A lot of the data aggregators track the number of Github
@@ -101,9 +101,9 @@ repository has around 40k commits and [Bitoin
 SV](https://github.com/bitcoin-sv/bitcoin-sv) repository has around 18.9k
 commits. Let's take a look at the events counting approach:
 
-Bitcoin: ![bitcoin-dev-activity](bitcoin-dev-activity.png)
+Bitcoin: ![bitcoin-dev-activity](./bitcoin-dev-activity.png)
 
-Bitcoin SV: ![bitcoin-sv-dev-activity](bitcoin-sv-dev-activity.png)
+Bitcoin SV: ![bitcoin-sv-dev-activity](./bitcoin-sv-dev-activity.png)
 
 We observe that Bitcoin has a high development activity all the time.
 Meanwhile, Bitcoin SV has 0 dev activity most of the time.
@@ -125,7 +125,7 @@ projects by development activity, refreshed each month.
 We backtested the strategy from August 2017 to October 2018. [The portfolio
 1](https://santiment.net/blog/github-activity-portfolio/) turned a profit, but
 didn't beat hodling BTC overall.
-![dev-activity-backtest](dev-activity-backtest.png)
+![dev-activity-backtest](./dev-activity-backtest.png)
 
 However, our portfolio was also more volatile than hodling over time,
 registering significantly larger tops in January and May of 2018. If you were to

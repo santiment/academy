@@ -156,8 +156,8 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 
 <Resource title="Blockchain Address Metrics">
 
-We have a bunch of API methods related to a chain address.
-We support [many chains](/sanapi/metrics/#overview).
+We have a bunch of API methods related to blockchain addresses.
+The list of supported blockchains [can be found here](/sanapi/supported-blockchains/).
 Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and other return tables, eg "Top Trasfres Table".
 
 - [Historical Balance](/metrics/historical-balance)
