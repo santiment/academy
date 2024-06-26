@@ -1,7 +1,7 @@
 ---
 title: Unique Social Volume
 author: Ivan
-date: 2024-03-27
+date: 2024-06-26
 description: The amount of messages/documents containing a given search term without spam
 # REF metrics-hub/metricshub/unique_social_volume.py
 ---
@@ -76,8 +76,29 @@ Available for [these assets](<https://api.santiment.net/graphiql?variables=&quer
 
 ## SanAPI
 
-Available under the `unique_social_volume_total_5m` and `unique_social_volume_total_1h`
-names.
+Available under the:
+- unique_social_volume_total_5m
+- unique_social_volume_total_1h
+- unique_social_volume_total_1d
+- unique_social_volume_telegram_5m
+- unique_social_volume_telegram_1h
+- unique_social_volume_telegram_1d
+- unique_social_volume_reddit_5m
+- unique_social_volume_reddit_1h
+- unique_social_volume_reddit_1d
+- unique_social_volume_twitter_5m
+- unique_social_volume_twitter_1h
+- unique_social_volume_twitter_1d
+- unique_social_volume_bitcointalk_5m
+- unique_social_volume_bitcointalk_1h
+- unique_social_volume_bitcointalk_1d
+- unique_social_volume_4chan_5m
+- unique_social_volume_4chan_1h
+- unique_social_volume_4chan_1d
+- unique_social_volume_farcaster_5m
+- unique_social_volume_farcaster_1h
+- unique_social_volume_farcaster_1d
+
 
 ### Unique Social Volume computed on 5 minute intervals
 

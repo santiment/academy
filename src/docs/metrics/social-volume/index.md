@@ -1,7 +1,7 @@
 ---
 title: Social Volume
 author: Ivan
-date: 2024-03-27
+date: 2024-06-26
 description: The amount of messages/documents containing a given search term
 # REF metrics-hub/metricshub/social_volume.py
 ---
@@ -127,6 +127,7 @@ names, where the available sources are:
 - twitter
 - bitcointalk
 - youtube_videos
+- farcaster
 - total (combines all sources)
 
 ### Social Volume for an asset
@@ -188,6 +189,7 @@ The full list of Social Volume metrics is:
 - social_volume_total
 - social_volume_twitter
 - social_volume_youtube_videos
+- social_volume_farcaster
 
 </Details>
 

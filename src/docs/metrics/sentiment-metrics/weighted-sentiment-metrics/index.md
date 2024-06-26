@@ -1,7 +1,7 @@
 ---
 title: Weighted Sentiment Metrics 
 author: Santiment Team
-date: 2024-04-08
+date: 2024-06-26
 description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment 
 ---
 
@@ -178,5 +178,6 @@ The full list of weighted sentiment metrics is:
 - sentiment_weighted_telegram
 - sentiment_weighted_twitter
 - sentiment_weighted_youtube_videos
+- sentiment_weighted_farcaster
 - sentiment_weighted_total
 </Details>

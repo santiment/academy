@@ -1,7 +1,7 @@
 ---
 title: Positive/Negative Sentiment Metrics 
 author: Santiment Team
-date: 2024-04-05
+date: 2024-06-26
 description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment 
 ---
 
@@ -165,6 +165,7 @@ The full list of Postive/Negative/Balance sentiment metrics is:
 - sentiment_positive_telegram
 - sentiment_positive_twitter
 - sentiment_positive_youtube_videos
+- sentiment_positive_farcaster
 - sentiment_positive_total
 </Details>
 
@@ -177,6 +178,7 @@ The full list of Postive/Negative/Balance sentiment metrics is:
 - sentiment_negative_telegram
 - sentiment_negative_twitter
 - sentiment_negative_youtube_videos
+- sentiment_negative_farcaster
 - sentiment_negative_total
 </Details>
 
@@ -188,5 +190,6 @@ The full list of Postive/Negative/Balance sentiment metrics is:
 - sentiment_balance_telegram
 - sentiment_balance_twitter
 - sentiment_balance_youtube_videos
+- sentiment_balance_farcaster
 - sentiment_balance_total
 </Details>

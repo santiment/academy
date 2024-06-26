@@ -1,7 +1,7 @@
 ---
 title: Social Data
-author: Ivan Ivanov, Ivan Klimuk
-date: 2021-11-2
+author: Ivan Ivanov, Ivan Klimuk, Vladislav Volynets
+date: 2024-06-26
 ---
 
 ## Definition
@@ -112,6 +112,18 @@ In the metric name this source is typed as `4chan`. Example:
 **Latency**: The scraper goes though all the new posts once per 5 minute.
 
 **History**: The historical data starts at `2023-02-05`
+
+
+### Farcaster
+
+We collect posts from [Farcaster](https://www.farcaster.xyz/)
+
+In the metrics' names this source is typed as `farcaster`. Example:
+`social_volume_farcaster`
+
+**Latency**: The scraper goes though all the new posts once per 5 minute.
+
+**History**: The historical data starts at `2024-04-01`
 
 ---
 
