@@ -6,7 +6,7 @@ date: 2023-05-09
 
 ## Overview
 
-API queries for metrics, such as [this NVT example](/metrics/nvt/index.md#sanapi), can potentially yield extensive results (ranging from hundreds of thousands to millions of data points). They may also generate queries that scan the entire database, thereby consuming substantial resources. This could potentially expose the system to DoS attacks. 
+API queries for metrics, such as [this NVT example](/metrics/nvt#sanapi), can potentially yield extensive results (ranging from hundreds of thousands to millions of data points). They may also generate queries that scan the entire database, thereby consuming substantial resources. This could potentially expose the system to DoS attacks. 
 
 To prevent such scenarios, every GraphQL request is analyzed before execution. The **complexity** of each query is calculated, and if it exceeds a certain threshold, the API server rejects it and returns an error without executing the query. Generally, the complexity is proportional to the number of data points and the size of the time interval included in the result. 
 

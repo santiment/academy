@@ -156,14 +156,15 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 
 <Resource title="Blockchain Address Metrics">
 
-We have a bunch of API methods related to a chain address.
-We support [many chains](/sanapi/metrics/#overview).
+We have a bunch of API methods related to blockchain addresses.
+The list of supported blockchains [can be found here](/sanapi/supported-blockchains/).
 Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and other return tables, eg "Top Trasfres Table".
 
 - [Historical Balance](/metrics/historical-balance)
 - [Labelled Historical Balance](/metrics/labelled-historical-balance)
 - [Latest Transactions](/metrics/latest-transactions)
-- [Top Transfers](/metrics/top-transfers)
+<!-- re-add after rework -->
+<!-- - [Top Transfers](/metrics/top-transfers) -->
 - [Contract Transaction Count](/metrics/contract-transactions-count)
 - [Contract Interacting Address Count](/metrics/contract-interacting-address-count)
 
@@ -182,7 +183,7 @@ The XRP-specific metrics are:
 - [Number of accounts](/metrics/xrpl-metrics/number-of-accounts)
 
 #### Activity metrics
-- [DEX Volume in USD](/metrics/xrpl-metrics/dex-volume-in-usd)
+- [DEX Volume in USD](/metrics/xrpl-metrics/dex-volume)
 - [Number of assets issued](/metrics/xrpl-metrics/assets-issued)
 - [Number of active trustlines](/metrics/xrpl-metrics/trustline-count)
 

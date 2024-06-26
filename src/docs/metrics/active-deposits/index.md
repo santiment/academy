@@ -32,7 +32,7 @@ As such, this metric accounts for both user-to-exchange transactions:
 
 Deposit-related Transactions is often valuable when used in conjunction with
 **Exchange Inflow** -- [another one of our
-metrics](/metrics/exchange-flow-metrics) -- which shows the total amount of
+metrics](/metrics/exchange-funds-flow/) -- which shows the total amount of
 coins moving to exchange wallets on a particular day.
 
 So, for example, an **increase in exchange inflow** but a **plateauing number of

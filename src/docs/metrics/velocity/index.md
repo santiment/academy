@@ -21,7 +21,7 @@ more often within a set time frame.
 Velocity can be used to explain various noteworthy events in the life of a
 project. For example, here's Ethereum:
 
-![ethereum-velocity](ethereum-velocity.png)
+![ethereum-velocity](./ethereum-velocity.png)
 
 Notice the steep drop off?
 

@@ -6,12 +6,11 @@ date: 2024-04-23
 
 Currently deprecated signals:
 
-- [ATH Price USD](/signals/ath-price-usd)
-- [DAI Mint](/signals/dai-mint)
-- [DEX Trades](/signals/dex-trades)
-- [Large Exchange Transactions](/signals/large-exchange-transactions)
-- [Large Transactions](/signals/large-transactions)
-- [MCD ART Liquidation](/signals/mcd-art-liquidation)
-- [Old Coins Moved](/signals/old-coins-moved)
-- [Project in Trending Words](/signals/project-in-trending-words)
-- [UniswapV3 PoolCreated](/signals/uniswapv3-poolcreated)
+- [ATH Price USD](/signals/deprecated/ath-price-usd)
+- [DAI Mint](/signals/deprecated/dai-mint)
+- [Large Exchange Transactions](/signals/deprecated/large-exchange-transactions)
+- [Large Transactions](/signals/deprecated/large-transactions)
+- [MCD ART Liquidation](/signals/deprecated/mcd-art-liquidation)
+- [Old Coins Moved](/signals/deprecated/old-coins-moved)
+- [Project in Trending Words](/signals/deprecated/project-in-trending-words)
+- [UniswapV3 PoolCreated](/signals/deprecated/uniswapv3-poolcreated)

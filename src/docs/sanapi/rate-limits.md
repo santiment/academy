@@ -70,7 +70,7 @@ Executing the following GraphQL request will count as 2 API calls:
 
 API Rate Limits are applied on a **per account** basis. This means that all API keys associated with a single account share the same limits. It's important to note that API keys used for testing or development purposes can impact the rate limits of the API key used for production. 
 
-The rate limits vary based on the subscription plan. You can find the details for each plan in [this article](/products-and-plans/access-plans/sanapi/). 
+The rate limits vary based on the subscription plan. You can find the details for each plan in [this article](products-and-plans/sanapi-plans). 
 
 Rate limits are applied on a **per minute**, **per hour** and **per month** basis, with all dates and times set to the UTC timezone. 
 

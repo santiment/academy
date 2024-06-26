@@ -51,7 +51,7 @@ You can use a decentralized exchange aggregator like [ParaSwap.io](http://app.pa
 
 ## What to do next?
 
-Now, simply [log in with a MetaMask](https://app.santiment.net/login) account that holds SAN tokens. Alternatively, you can [connect your Sanbase account](/san-tokens/how-to-stake-san/) with your MetaMask wallet in the settings.
+Now, simply [log in with a MetaMask](https://app.santiment.net/login) account that holds SAN tokens. Alternatively, you can [connect your Sanbase account](/san-tokens/connect-a-wallet-to-the-sanbase-account) with your MetaMask wallet in the settings.
 
 We'll detect the SAN tokens you're holding and grant you access to our discounts, based on the amount of tokens you hold.
 

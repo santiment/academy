@@ -155,7 +155,7 @@ This is a crucial field to understand and consider when writing a query. ClickHo
 
 ### Engine
 
-The [Table Engine](https://clickhouse.com/docs/en/engines/table-engines/) controls how data is stored, updated, and accessed. If the engine is *MergeTree, then the `FINAL` keyword needs to be used. See the [Writing SQL Queries](link-to-writing-sql-queries-page) page for more detailed examples and reasoning.
+The [Table Engine](https://clickhouse.com/docs/en/engines/table-engines/) controls how data is stored, updated, and accessed. If the engine is *MergeTree, then the `FINAL` keyword needs to be used. See the [Writing SQL Queries](/santiment-queries/writing-sql-queries) page for more detailed examples and reasoning.
 
 ### Partition
 The partitioning has little to no effect on performance, making it safe to ignore.

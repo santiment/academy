@@ -123,7 +123,7 @@ In the second example, the `aggregatedTimeseriesData` field is used.
 
 ## Metric
 
-In the context of Santiment's API, a metric is a term with a specific meaning. It refers to a set of data points that carry a particular significance. There are two types of metrics: [timeseries metrics](/metrics/details/data-type#timeseries-data) and [histogram metrics](/metric/details/data_type#histogram-data).
+In the context of Santiment's API, a metric is a term with a specific meaning. It refers to a set of data points that carry a particular significance. There are two types of metrics: [timeseries metrics](/metrics/details/data-type#timeseries-data) and [histogram metrics](/metric/details/data-type#histogram-data).
 
 Consider the following example where `nvt` is the metric and `getMetric` is the query.
 
