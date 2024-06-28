@@ -13,8 +13,7 @@ allows us at each given point in time to assign age to each coin/token.
 There are two coin age defined metrics:
 
 - Mean Coin Age - The average age of all coins/tokens on the blockchain.
-- Mean Dollar Invested Age - The average age of all coins/tokens on the
-  blockchain weighted by the purchase price.
+- Mean Dollar Invested Age - The average age of every dollar invested into the market cap of a coin.
 
 Mean Coin Age metrics are also available for different [time bounds](/metrics/details/timebound), which 
 compute the mean coin age for tokens moved at least once no longer than a specific number of days or years ago.
