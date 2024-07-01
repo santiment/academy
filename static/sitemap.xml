@@ -1,1506 +1,1552 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-	<loc>https://academy.santiment.net/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/emerging-trends/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/social-volume/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/mvrv/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/for-traders/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/for-developers/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanapi/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/products-and-plans/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/san-tokens/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/glossary/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/youtube-videos/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/changelog/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/san-tokens/how-to-buy-san-tokens/</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/changelog</loc>
-	<lastmod>2024-06-24T13:52:40+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics</loc>
-	<lastmod>2024-06-24T13:52:41+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/details/social-data/</loc>
-	<lastmod>2024-06-24T13:52:41+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/details/access</loc>
-	<lastmod>2024-06-24T13:52:41+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
-	<loc>https://academy.santiment.net/metrics/details/frequency</loc>
-	<lastmod>2024-06-24T13:52:41+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://academy.santiment.net/</loc>
+  <lastmod>2024-06-26T11:01:10+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-	<loc>https://academy.santiment.net/metrics/details/latency</loc>
-	<lastmod>2024-06-24T13:52:41+01:00</lastmod>
-	<priority>0.6</priority>
+  <loc>https://academy.santiment.net/metrics/emerging-trends/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/social-volume/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/mvrv/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/for-traders/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/for-developers/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanapi/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/products-and-plans/</loc>
+  <lastmod>2024-06-26T11:01:05+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/san-tokens/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/glossary/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/youtube-videos/</loc>
+  <lastmod>2024-06-26T11:01:09+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/changelog/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/san-tokens/how-to-buy-san-tokens/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/changelog</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/social-data/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/access</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/data-type</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/frequency</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/latency</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/glossary</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/change_metrics/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/realized-value/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/timebound/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/deprecated-metrics/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/renamed-metrics/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/price/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/marketcap/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/trading-volume/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/decentralized-exchange-metrics/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/ethereum-fees/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/ethereum-spent/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/mean-coin-age/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/price-volatility/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/rsi/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/annual-inflation-rate/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/gini-index/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/transacted-coin-acquisition-cost/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/daily-aggregated-financial-metrics/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/community-messages-count/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/sentiment-metrics/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/social-dominance/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/unique-social-volume/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/trending-words-rank/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/nft-social-volume/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/development-activity/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/development-activity/development-activity/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/development-activity/github-activity/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/development-activity/development-activity-contributors-count/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/nvt/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/mean-realized-price/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/network-profit-loss/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/realized-market-capitalization-hodl-waves/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/daily-active-addresses/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/active-addresses-24h/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/active-deposits/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/active-withdrawals/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/network-growth/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/age-consumed/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/amount-in-top-holders/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitcoin-etf-volume/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/circulation/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/defi/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/dormant-circulation/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/eth-2/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/exchange-funds-flow/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/labeled-balance/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/labeled-exchange/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/makerdao-dai-savings-rate/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/spent-coins-age-band/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/stock-to-flow/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/supply-distribution/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/supply-on-or-outside-exchanges/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/top-holders/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/total-supply/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/transaction-count/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/transaction-size/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/transaction-volume/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/transaction-volume-in-profit-or-loss/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/velocity/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/whale-transaction-count/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/funding-rates-aggregated/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/open-interest/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitmex-derivatives/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/binance-derivatives/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitfinex-derivatives/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/deribit-derivatives/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/ftx-derivatives/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/dydx-derivatives/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/huobi-derivatives/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/nft-collection-holders-balance/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/nft-collection-price/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/nft-market-volume/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/nft-network-profit-loss/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/nft-trades-count/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/nft-trade-volume-usd/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanapi/supported-blockchains/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanapi/metrics/</loc>
+  <lastmod>2024-06-26T11:00:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/historical-balance/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/labelled-historical-balance/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/latest-transactions/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/contract-transactions-count/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/contract-interacting-address-count/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/xrpl-metrics/number-of-accounts/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/xrpl-metrics/dex-volume/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/xrpl-metrics/assets-issued/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/xrpl-metrics/trustline-count/</loc>
+  <lastmod>2024-06-26T11:01:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/trading-and-transaction-volume/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/alerts-on-sanbase/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/social-trends-alerts/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/whale-alert/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/how-to-spot-tops-with-price---network-activity-divergences/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/timing-market-volatility-with-token-age-consumed/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/investigate-speculative-activity-with-santiment%E2%80%99s-exchange-metrics/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases/santiment-pro-reports-samples/</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/account-settings/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/alerts-page/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/assets-page/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/insights/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/keyboard-shortcuts/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/logging-into-sanbase/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/requesting-display-new-project/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/social-tool/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase/emerging-trends-page/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/introduction/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/exploration/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/writing-sql-queries/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/rate-limits-and-credits-cost/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/api-access/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/prices-tables/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/metric-tables/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/bridges/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/lending-pools/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/dex-pools/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/nft-tables/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries/xrpl-tables/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanapi/accessing-the-api/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanapi/fetching-metrics/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanapi/rate-limits/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanapi/complexity/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/setting-up/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/adding-an-api-key/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/assets-correlation-matrix-google-sheets/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/functions/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/pro-templates/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/products-and-plans/access-plans/</loc>
+  <lastmod>2024-06-26T11:01:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/products-and-plans/sanbase-plans/</loc>
+  <lastmod>2024-06-26T11:01:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/products-and-plans/sanapi-plans/</loc>
+  <lastmod>2024-06-26T11:01:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/products-and-plans/santiment-products/</loc>
+  <lastmod>2024-06-26T11:01:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/products-and-plans/how-to-pay-with-crypto/</loc>
+  <lastmod>2024-06-26T11:01:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/products-and-plans/create-an-api-key/</loc>
+  <lastmod>2024-06-26T11:01:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/products-and-plans/sanbase-pro-features/</loc>
+  <lastmod>2024-06-26T11:01:05+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/san-tokens/connect-a-wallet-to-the-sanbase-account/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/san-tokens/san-tokens-holding-benefits/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metric/details/data-type</loc>
+  <lastmod>2024-06-26T11:00:59+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/glossary/asset/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/youtube-videos/walkthroughs/</loc>
+  <lastmod>2024-06-26T11:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/youtube-videos/webinars/</loc>
+  <lastmod>2024-06-26T11:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/youtube-videos/tutorials/</loc>
+  <lastmod>2024-06-26T11:01:09+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/label-fqn/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/defi/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/bridge/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/decentralized-exchange/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/derivatives/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/lending/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/liquidity/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/yield/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/cefi/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/centralized-exchange/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/fund/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/nft/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/nft-collection/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/nft-collection-name/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/nft-collection-symbol/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/nft-marketplace/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/eth2-staking/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/gamefi/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/gambling/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/owner/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/airdrop-sender/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/deposit/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/contract/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/erc721/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/erc1155/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/factory/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/proxy/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/cold-wallet/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/dead-address/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/migration-address/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/airdrop-receiver/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/charity/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/dex-user/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/eth2-staking-address/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/genesis/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/miner/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/nft-trader/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/nft-trader-threshold/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/nft-user/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/nft-influencer/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/used-nft-marketplace/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/whale/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/whale-usd-balance/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/lending-user/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/withdrawal/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/withdrawn-from/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/blocked/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/closed/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/sanctioned/</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/anomalies/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/large-exchange-transactions-1m/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/san-tokens</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details</loc>
+  <lastmod>2024-06-26T11:00:59+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/stack-coin-age-model/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/deprecated-metrics/deprecated-makerdao-metrics/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/deprecated-metrics/deprecated-uniswap-metrics/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/deprecated-metrics/deprecated-social-metrics/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/sentiment-metrics/weighted-sentiment-metrics/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/decentralized-exchange-metrics/old_dex_list/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/decentralized-exchange-metrics/dex_list/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/mean-coin-age/mean-coin-age-technical/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/sentiment-metrics/positive-negative-sentiment-metrics/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/text-document/</loc>
+  <lastmod>2024-06-26T11:00:59+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/development-activity/github-activity-contributors-count/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/development-activity</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/interval_timebound/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/age-consumed/age-consumed-technical/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/makerdao/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/aave-v2/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/aave-v3/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/compound/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/compound-v3/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/liquity/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/fraxlend/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/supply-distribution/amount-of-holders/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/supply-distribution/combined-balance-of-holders/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/supply-distribution/amount-of-labeled-holders/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/supply-distribution/combined-balance-of-labeled-holders/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/velocity/velocity-technical/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitmex-derivatives/perpetual-contract-funding-rate/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitmex-derivatives/perpetual-contract-price/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitmex-derivatives/price-index/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitmex-derivatives/perpetual-contract-basis/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitmex-derivatives/perpetual-contracts-open-interest-value/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/binance-derivatives/usdt-binance-funding-rate/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/binance-derivatives/busd-binance-funding-rate/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/binance-derivatives/usdt-binance-perpetual-open-interest-value/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/binance-derivatives/busd-binance-perpetual-open-interest-value/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitfinex-derivatives/bitfinex-perpetual-funding-rate/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/deribit-derivatives/deribit-perpetual-funding-rate/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/ftx-derivatives/ftx-perpetual-funding-rate/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/dydx-derivatives/dydx-perpetual-funding-rate/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/huobi-derivatives/huobi-perpetual-funding-rate/</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanapi</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/xrpl-metrics</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/frequency/</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/education-and-use-cases</loc>
+  <lastmod>2024-06-26T11:01:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sanbase</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/san-tokens/buy-san-tokens-using-bancor/</loc>
+  <lastmod>2024-06-26T11:00:59+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/san-tokens/how-to-buy-san/</loc>
+  <lastmod>2024-06-26T11:00:59+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/santiment-queries</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/nvt</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/functions/onchain/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/functions/social/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/functions/xrp/</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/products-and-plans</loc>
+  <lastmod>2024-06-26T11:01:05+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/san-tokens/how-to-stake-san/</loc>
+  <lastmod>2024-06-26T11:00:59+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/youtube-videos</loc>
+  <lastmod>2024-06-26T11:01:09+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels</loc>
+  <lastmod>2024-06-26T11:01:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/labels/stablecoin/</loc>
+  <lastmod>2024-06-26T11:00:59+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/label-fqn/</loc>
+  <lastmod>2024-06-26T11:00:59+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated/ath-price-usd/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated/dai-mint/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated/large-exchange-transactions/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated/large-transactions/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated/mcd-art-liquidation/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated/old-coins-moved/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated/project-in-trending-words/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated/uniswapv3-poolcreated/</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/deprecated-metrics</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/sentiment-metrics</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/decentralized-exchange-metrics</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/mean-coin-age</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/age-consumed</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/supply-distribution</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/details/supply_distribution_parameters</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/velocity</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitmex-derivatives</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/binance-derivatives</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/bitfinex-derivatives</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/deribit-derivatives</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/ftx-derivatives</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/dydx-derivatives</loc>
+  <lastmod>2024-06-26T11:01:02+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/metrics/huobi-derivatives</loc>
+  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/sansheets/functions</loc>
+  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://academy.santiment.net/signals/deprecated</loc>
+  <lastmod>2024-06-26T11:01:07+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 
-<url>
-	<loc>https://academy.santiment.net/glossary</loc>
-	<lastmod>2024-06-24T13:52:43+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/details/change_metrics/</loc>
-	<lastmod>2024-06-24T13:52:43+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/realized-value/</loc>
-	<lastmod>2024-06-24T13:52:43+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/details/timebound/</loc>
-	<lastmod>2024-06-24T13:52:43+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/deprecated-metrics/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/renamed-metrics/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/price/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/marketcap/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/trading-volume/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/decentralized-exchange-metrics/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/ethereum-fees/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/ethereum-spent/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/mean-coin-age/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/price-volatility/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/rsi/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/annual-inflation-rate/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/gini-index/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/transacted-coin-acquisition-cost/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/daily-aggregated-financial-metrics/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/community-messages-count/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/sentiment-metrics/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/social-dominance/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/unique-social-volume/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/trending-words-rank/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/nft-social-volume/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/development-activity/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/development-activity/development-activity/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/development-activity/github-activity/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/development-activity/development-activity-contributors-count/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/nvt/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/mean-realized-price/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/network-profit-loss/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/realized-market-capitalization-hodl-waves/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/daily-active-addresses/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/active-addresses-24h/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/active-deposits/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/active-withdrawals/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/network-growth/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/age-consumed/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/amount-in-top-holders/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitcoin-etf-volume/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/circulation/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/defi/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/dormant-circulation/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/eth-2/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/exchange-funds-flow/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/labeled-balance/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/labeled-exchange/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/makerdao-dai-savings-rate/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/spent-coins-age-band/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/stock-to-flow/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/supply-distribution/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/supply-on-or-outside-exchanges/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/top-holders/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/total-supply/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/transaction-count/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/transaction-size/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/transaction-volume/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/transaction-volume-in-profit-or-loss/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/velocity/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/whale-transaction-count/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/funding-rates-aggregated/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/open-interest/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitmex-derivatives/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/binance-derivatives/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitfinex-derivatives/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/deribit-derivatives/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/ftx-derivatives/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/dydx-derivatives/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/huobi-derivatives/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/nft-collection-holders-balance/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/nft-collection-price/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/nft-market-volume/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/nft-network-profit-loss/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/nft-trades-count/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/nft-trade-volume-usd/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanapi/metrics/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/historical-balance/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/labelled-historical-balance/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/latest-transactions/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
 
-<url>
-	<loc>https://academy.santiment.net/metrics/contract-transactions-count/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/contract-interacting-address-count/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/xrpl-metrics/number-of-accounts/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-
-<url>
-	<loc>https://academy.santiment.net/metrics/xrpl-metrics/assets-issued/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/xrpl-metrics/trustline-count/</loc>
-	<lastmod>2024-06-24T13:52:44+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/account-settings/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/alerts-page/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/assets-page/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/insights/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/keyboard-shortcuts/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/logging-into-sanbase/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/requesting-display-new-project/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/social-tool/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase/emerging-trends-page/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/trading-and-transaction-volume/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/alerts-on-sanbase/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/social-trends-alerts/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/whale-alert/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/how-to-spot-tops-with-price---network-activity-divergences/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/timing-market-volatility-with-token-age-consumed/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/investigate-speculative-activity-with-santiment%E2%80%99s-exchange-metrics/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases/santiment-pro-reports-samples/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/introduction/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/exploration/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/writing-sql-queries/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/rate-limits-and-credits-cost/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/api-access/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/prices-tables/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/metric-tables/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/bridges/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/lending-pools/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/dex-pools/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/nft-tables/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries/xrpl-tables/</loc>
-	<lastmod>2024-06-24T13:52:46+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanapi/accessing-the-api/</loc>
-	<lastmod>2024-06-24T13:52:47+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanapi/fetching-metrics/</loc>
-	<lastmod>2024-06-24T13:52:47+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanapi/supported-blockchains/</loc>
-	<lastmod>2024-06-24T13:52:47+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanapi/rate-limits/</loc>
-	<lastmod>2024-06-24T13:52:47+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanapi/complexity/</loc>
-	<lastmod>2024-06-24T13:52:47+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/setting-up/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/adding-an-api-key/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/assets-correlation-matrix-google-sheets/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/functions/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/pro-templates/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/products-and-plans/access-plans/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/products-and-plans/sanbase-plans/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/products-and-plans/sanapi-plans/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/products-and-plans/santiment-products/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/products-and-plans/how-to-pay-with-crypto/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/products-and-plans/create-an-api-key/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/products-and-plans/sanbase-pro-features/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/san-tokens/connect-a-wallet-to-the-sanbase-account/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/san-tokens/san-tokens-holding-benefits/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-
-<url>
-	<loc>https://academy.santiment.net/glossary/asset/</loc>
-	<lastmod>2024-06-24T13:52:48+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/label-fqn/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/defi/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/bridge/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/decentralized-exchange/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/derivatives/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/lending/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/liquidity/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/yield/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/cefi/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/centralized-exchange/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/fund/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/nft/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/nft-collection/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/nft-collection-name/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/nft-collection-symbol/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/nft-marketplace/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/eth2-staking/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/gamefi/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/gambling/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/owner/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/airdrop-sender/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/deposit/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/contract/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/erc721/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/erc1155/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/factory/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/proxy/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/cold-wallet/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/dead-address/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/migration-address/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/airdrop-receiver/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/charity/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/dex-user/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/eth2-staking-address/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/genesis/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/miner/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/nft-trader/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/nft-trader-threshold/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/nft-user/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/nft-influencer/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/used-nft-marketplace/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/whale/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/whale-usd-balance/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/lending-user/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/withdrawal/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/withdrawn-from/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/blocked/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/closed/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels/sanctioned/</loc>
-	<lastmod>2024-06-24T13:52:49+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals/anomalies/</loc>
-	<lastmod>2024-06-24T13:52:50+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals/large-exchange-transactions-1m/</loc>
-	<lastmod>2024-06-24T13:52:50+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals/deprecated/</loc>
-	<lastmod>2024-06-24T13:52:50+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/youtube-videos/walkthroughs/</loc>
-	<lastmod>2024-06-24T13:52:50+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/youtube-videos/webinars/</loc>
-	<lastmod>2024-06-24T13:52:50+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/youtube-videos/tutorials/</loc>
-	<lastmod>2024-06-24T13:52:50+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/san-tokens</loc>
-	<lastmod>2024-06-24T13:52:50+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-
-
-<url>
-	<loc>https://academy.santiment.net/metrics/details/stack-coin-age-model/</loc>
-	<lastmod>2024-06-24T13:52:53+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/deprecated-metrics/deprecated-makerdao-metrics/</loc>
-	<lastmod>2024-06-24T13:52:53+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/deprecated-metrics/deprecated-uniswap-metrics/</loc>
-	<lastmod>2024-06-24T13:52:53+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/deprecated-metrics/deprecated-social-metrics/</loc>
-	<lastmod>2024-06-24T13:52:53+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/sentiment-metrics/weighted-sentiment-metrics/</loc>
-	<lastmod>2024-06-24T13:52:54+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/decentralized-exchange-metrics/old_dex_list/</loc>
-	<lastmod>2024-06-24T13:52:54+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/decentralized-exchange-metrics/dex_list/</loc>
-	<lastmod>2024-06-24T13:52:54+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/mean-coin-age/mean-coin-age-technical/</loc>
-	<lastmod>2024-06-24T13:52:55+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/sentiment-metrics/positive-negative-sentiment-metrics/</loc>
-	<lastmod>2024-06-24T13:52:57+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/development-activity/github-activity-contributors-count/</loc>
-	<lastmod>2024-06-24T13:52:58+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/development-activity</loc>
-	<lastmod>2024-06-24T13:52:58+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/details/interval_timebound/</loc>
-	<lastmod>2024-06-24T13:53:00+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-
-<url>
-	<loc>https://academy.santiment.net/metrics/age-consumed/age-consumed-technical/</loc>
-	<lastmod>2024-06-24T13:53:01+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-
-<url>
-	<loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/aave-v2/</loc>
-	<lastmod>2024-06-24T13:53:03+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/aave-v3/</loc>
-	<lastmod>2024-06-24T13:53:03+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/compound/</loc>
-	<lastmod>2024-06-24T13:53:03+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/compound-v3/</loc>
-	<lastmod>2024-06-24T13:53:03+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/makerdao/</loc>
-	<lastmod>2024-06-24T13:53:03+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols/liquity/</loc>
-	<lastmod>2024-06-24T13:53:03+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/supply-distribution/amount-of-holders/</loc>
-	<lastmod>2024-06-24T13:53:04+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/supply-distribution/combined-balance-of-holders/</loc>
-	<lastmod>2024-06-24T13:53:04+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/supply-distribution/amount-of-labeled-holders/</loc>
-	<lastmod>2024-06-24T13:53:04+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/supply-distribution/combined-balance-of-labeled-holders/</loc>
-	<lastmod>2024-06-24T13:53:04+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/velocity/velocity-technical/</loc>
-	<lastmod>2024-06-24T13:53:06+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitmex-derivatives/perpetual-contract-funding-rate/</loc>
-	<lastmod>2024-06-24T13:53:06+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitmex-derivatives/perpetual-contract-price/</loc>
-	<lastmod>2024-06-24T13:53:06+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitmex-derivatives/price-index/</loc>
-	<lastmod>2024-06-24T13:53:06+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitmex-derivatives/perpetual-contract-basis/</loc>
-	<lastmod>2024-06-24T13:53:06+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitmex-derivatives/perpetual-contracts-open-interest-value/</loc>
-	<lastmod>2024-06-24T13:53:06+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/binance-derivatives/usdt-binance-funding-rate/</loc>
-	<lastmod>2024-06-24T13:53:07+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/binance-derivatives/busd-binance-funding-rate/</loc>
-	<lastmod>2024-06-24T13:53:07+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/binance-derivatives/usdt-binance-perpetual-open-interest-value/</loc>
-	<lastmod>2024-06-24T13:53:07+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/binance-derivatives/busd-binance-perpetual-open-interest-value/</loc>
-	<lastmod>2024-06-24T13:53:07+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitfinex-derivatives/bitfinex-perpetual-funding-rate/</loc>
-	<lastmod>2024-06-24T13:53:07+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/deribit-derivatives/deribit-perpetual-funding-rate/</loc>
-	<lastmod>2024-06-24T13:53:07+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/ftx-derivatives/ftx-perpetual-funding-rate/</loc>
-	<lastmod>2024-06-24T13:53:08+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/dydx-derivatives/dydx-perpetual-funding-rate/</loc>
-	<lastmod>2024-06-24T13:53:08+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/huobi-derivatives/huobi-perpetual-funding-rate/</loc>
-	<lastmod>2024-06-24T13:53:08+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/xrpl-metrics</loc>
-	<lastmod>2024-06-24T13:53:11+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/details/frequency/</loc>
-	<lastmod>2024-06-24T13:53:11+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sanbase</loc>
-	<lastmod>2024-06-24T13:53:12+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/san-tokens/buy-san-tokens-using-bancor/</loc>
-	<lastmod>2024-06-24T13:53:12+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/san-tokens/how-to-buy-san/</loc>
-	<lastmod>2024-06-24T13:53:13+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/education-and-use-cases</loc>
-	<lastmod>2024-06-24T13:53:14+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/santiment-queries</loc>
-	<lastmod>2024-06-24T13:53:16+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-
-
-
-<url>
-	<loc>https://academy.santiment.net/sanapi</loc>
-	<lastmod>2024-06-24T13:53:19+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-
-
-<url>
-	<loc>https://academy.santiment.net/sansheets</loc>
-	<lastmod>2024-06-24T13:53:20+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/functions/onchain/</loc>
-	<lastmod>2024-06-24T13:53:21+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/functions/social/</loc>
-	<lastmod>2024-06-24T13:53:21+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/functions/xrp/</loc>
-	<lastmod>2024-06-24T13:53:21+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/products-and-plans</loc>
-	<lastmod>2024-06-24T13:53:21+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/labels</loc>
-	<lastmod>2024-06-24T13:53:24+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-
-<url>
-	<loc>https://academy.santiment.net/label-fqn/</loc>
-	<lastmod>2024-06-24T13:53:24+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals</loc>
-	<lastmod>2024-06-24T13:53:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-
-
-<url>
-	<loc>https://academy.santiment.net/signals/large-exchange-transactions/</loc>
-	<lastmod>2024-06-24T13:53:35+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals/large-transactions/</loc>
-	<lastmod>2024-06-24T13:53:35+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals/mcd-art-liquidation/</loc>
-	<lastmod>2024-06-24T13:53:35+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals/old-coins-moved/</loc>
-	<lastmod>2024-06-24T13:53:35+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals/project-in-trending-words/</loc>
-	<lastmod>2024-06-24T13:53:35+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/signals/uniswapv3-poolcreated/</loc>
-	<lastmod>2024-06-24T13:53:35+01:00</lastmod>
-	<priority>0.6</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/youtube-videos</loc>
-	<lastmod>2024-06-24T13:53:35+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/deprecated-metrics</loc>
-	<lastmod>2024-06-24T13:53:37+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/sentiment-metrics</loc>
-	<lastmod>2024-06-24T13:53:38+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/decentralized-exchange-metrics</loc>
-	<lastmod>2024-06-24T13:53:38+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/mean-coin-age</loc>
-	<lastmod>2024-06-24T13:53:38+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/age-consumed</loc>
-	<lastmod>2024-06-24T13:53:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/lending-and-borrowing-protocols</loc>
-	<lastmod>2024-06-24T13:53:40+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-
-<url>
-	<loc>https://academy.santiment.net/metrics/supply-distribution</loc>
-	<lastmod>2024-06-24T13:53:42+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-
-<url>
-	<loc>https://academy.santiment.net/metrics/velocity</loc>
-	<lastmod>2024-06-24T13:53:43+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/bitmex-derivatives</loc>
-	<lastmod>2024-06-24T13:53:43+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/binance-derivatives</loc>
-	<lastmod>2024-06-24T13:53:44+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-
-
-<url>
-	<loc>https://academy.santiment.net/metrics/bitfinex-derivatives</loc>
-	<lastmod>2024-06-24T13:53:46+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/deribit-derivatives</loc>
-	<lastmod>2024-06-24T13:53:46+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/ftx-derivatives</loc>
-	<lastmod>2024-06-24T13:53:46+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/dydx-derivatives</loc>
-	<lastmod>2024-06-24T13:53:46+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/huobi-derivatives</loc>
-	<lastmod>2024-06-24T13:53:46+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/metrics/xrpl-metrics/dex-volume/</loc>
-	<lastmod>2024-06-24T13:53:47+01:00</lastmod>
-	<priority>0.4</priority>
-</url>
-<url>
-	<loc>https://academy.santiment.net/sansheets/functions</loc>
-	<lastmod>2024-06-24T13:53:50+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
 </urlset>
