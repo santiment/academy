@@ -109,6 +109,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [DeFi](/metrics/defi)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [ETH 2.0](/metrics/eth-2)
+- [Ethena Protocol](/metrics/ethena-protocol)
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
