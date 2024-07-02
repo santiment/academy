@@ -24,7 +24,10 @@ date: 2020-04-06
 
 ## Overview
 
-The `getMetric` GraphQL query provides a unified method for accessing a variety of metrics across all supported assets. This query enables you to retrieve metadata, datetime availability, and various metric representations, including timeseries data, histogram data, and aggregated timeseries data.
+The `getMetric` GraphQL query provides a unified method for accessing a variety
+of metrics for all supported assets. This query enables you to retrieve
+metadata, datetime availability, assets availability, and various metric representations, including
+timeseries data, histogram data, and aggregated timeseries data.
 
 Here is an example of a GraphQL `getMetric` query:
 
@@ -42,7 +45,11 @@ Here is an example of a GraphQL `getMetric` query:
   }
 }
 ```
-This query retrieves the timeseries data for the metric "active_addresses_24h" for Bitcoin, from 8:00 on May 1, 2023, to 8:00 on May 2, 2023, with a 30-minute interval between data points.
+This query retrieves the timeseries data for the metric "active_addresses_24h"
+for Bitcoin, from 8:00 on May 1, 2023, to 8:00 on May 2, 2023, with a 30-minute
+interval between data points.
+
+**[Run the query in the GraphiQL Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222023-05-01T08%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-05-02T08%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%2230m%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
 
 ## Available Metrics
 
@@ -54,11 +61,13 @@ You can fetch the list of all available metrics using the following [query](http
 }
 ```
 
-To fetch the list of available metrics for a specific plan and product, provide the `plan` and `product` arguments in the [query](https://api.santiment.net/graphiql?query=%7B%0A++getAvailableMetrics%28product%3A+SANAPI+plan%3A+PRO%29%0A%7D):
+To fetch the list of available metrics for a specific plan and product, provide
+the `plan` and `product` arguments in the
+[query](https://api.santiment.net/graphiql?query=%7B%0A++getAvailableMetrics%28product%3A+SANAPI+plan%3A+BUSINESS_PRO%29%0A%7D):
 
 ```graphql
 {
-  getAvailableMetrics(product: SANAPI plan: PRO)
+  getAvailableMetrics(product: SANAPI plan: BUSINESS_PRO)
 }
 ```
 
@@ -67,25 +76,36 @@ To fetch the list of available metrics for a specific plan and product, provide 
 Access to certain metrics may be limited in various ways based on your subscription plan:
 
 - Some metrics may not be accessible to users on lower-tier subscription plans.
-- Lower-tier subscription plans may have limited access to certain metrics, excluding access to historical and real-time data.
+- Lower-tier subscription plans may have limited access to certain metrics,
+  excluding access to historical and real-time data, or no access at all.
 
-You can obtain detailed information about the restrictions on all metrics for a specific subscription plan using [this query](https://api.santiment.net/graphiql?query=%7B%0A++getAccessRestrictions%28product%3A+SANAPI+plan%3A+PRO%29%7B%0A%09%09name%0A++++type%0A++++minInterval%0A++++isAccessible%0A++++isRestricted%0A++++restrictedFrom%0A++++restrictedTo%0A++%7D%0A%7D).
-
-Here is an example of a GraphQL query:
+You can obtain detailed information about the restrictions on all metrics for a specific subscription plan using [this query](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(product%3A%20SANAPI%2C%20plan%3A%20BUSINESS_PRO%2C%20filter%3A%20METRIC)%20%7B%0A%20%20%20%20name%0A%20%20%20%20minInterval%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20isDeprecated%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%20%20docs%20%7B%0A%20%20%20%20%20%20link%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A):
 
 ```graphql
 {
-  getAccessRestrictions(product: SANAPI plan: PRO){
+  getAccessRestrictions(product: SANAPI plan: BUSINESS_PRO filter: METRIC) {
     name
-    type
     minInterval
     isAccessible
     isRestricted
+    isDeprecated
     restrictedFrom
     restrictedTo
+    docs {
+      link
+    }
   }
 }
 ```
+
+The following fields are selected:
+- `name` - the name of the metric
+- `minInterval` - what is the minimal interval between two data points (5 minutes or 1 day in most cases)
+- `isDeprecated` - is the deprecated. If true, you must stop using this metric as it will be removed in the future.
+- `isAccessible` - is the metric accessible with the selected subscription plan.
+- `restrictedFrom` - what is the earliest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
+- `restrictedTo` - what is the latest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
+- `docs` - link to the documentation of the metric.
 
 ## Metrics Documentation
 
@@ -94,20 +114,23 @@ You can find the documentation for most of the metrics on [this page](/metrics).
 ## Available Assets
 
 Each metric is retrieved for a specific asset, which is identified by its `slug`.
-
-Instructions on how to fetch all available assets can be found in our [Glossary](/glossary/#asset). You can obtain a list of all slugs using [this query](https://api.santiment.net/graphiql?query=%7B%0A++allProjects%7B%0A++++slug%0A++%7D%0A%7D):
+You can obtain a list of all slugs using [this
+query](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%7D%0A%7D%0A):
 
 ```graphql
 {
   allProjects{
     slug
+    name
+    ticker
   }
 }
 ```
 
 ## Available metrics per project
 
-The range of available metrics varies for each asset. The query below demonstrates three distinct lists:
+The range of available metrics varies for each asset. The query below
+demonstrates three distinct lists:
 
 - All accessible metrics
 - A subset of all accessible metrics that are timeseries metrics
@@ -127,49 +150,66 @@ You can retrieve these lists of metrics using [this query](https://api.santiment
 
 ## Available projects per metric
 
-The `getMetric` API supports a comprehensive list of assets, each identified by a unique slug. To fetch the list of available slugs for a specific metric, use the following query:
+To fetch the list of available slugs for a specific metric, use
+[the query](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableProjects%7B%20slug%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A):
 
 ```graphql
 {
   getMetric(metric: "mvrv_usd"){
     metadata{
-      availableSlugs
+      availableProjects{ slug }
     }
   }
 }
 ```
 
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
-
 ## Minimal Interval
 
-Metrics are stored as pairs of datetime and value. The term `minInterval` refers to the time interval between two consecutive data points. It signifies the smallest interval that can be utilized when querying the metric.
+Metrics are stored as pairs of datetime and value. The term `minInterval`
+refers to the time interval between two consecutive data points. It signifies
+the smallest interval that can be utilized when querying the metric.
 
 The most frequently used `minInterval`s include:
 
-- 1 day (`1d`): Metrics with this interval are typically referred to as "daily" metrics.
-- 5 minutes (`5m`): Metrics with this interval are often called "intraday" metrics.
+- 1 day (`1d`): Metrics with this interval are typically referred to as "daily"
+  metrics.
+- 5 minutes (`5m`): Metrics with this interval are often called "intraday"
+  metrics.
 
-When querying data, the `interval` argument is used to determine the resolution of the data. This interval can be significantly larger than the `minInterval`. In such instances, all the values within that larger interval must be aggregated into a single value. The `aggregation` parameter controls how this data is aggregated.
+When querying data, the `interval` argument is used to determine the resolution
+of the data. This interval can be significantly larger than the `minInterval`.
+In such instances, all the values within that larger interval must be
+aggregated into a single value. The `aggregation` parameter controls how this
+data is aggregated.
 
 ## Aggregation
 
-Fields that return timeseries data accept an `aggregation` parameter. When an `interval` larger than `minInterval` is provided for a specific metric, multiple data point values will be consolidated into a single data point. 
+Fields that return timeseries data accept an `aggregation` parameter. When an
+`interval` larger than `minInterval` is provided for a specific metric,
+multiple data point values will be consolidated into a single data point. 
 
-> **Note**: Each metric has a manually selected default aggregation that is used if the `aggregation` parameter is not specified. The default aggregation is chosen to be the most logical one. 
+> **Note**: Each metric has a manually selected default aggregation that is
+> used if the `aggregation` parameter is not specified. The default aggregation
+> is chosen to be the most logical one. 
 
-The types of aggregations are: 
+The types of aggregations are:
 
-- `SUM` - The total of all values.
+- `SUM` - The sum of all values.
 - `AVG` - The average of the values.
 - `MEDIAN` - The median of all values.
 - `FIRST` - The earliest value (with the smallest datetime).
 - `LAST` - The most recent value (with the latest datetime).
 - `MAX` - The largest value.
 - `MIN` - The smallest value.
-- `ANY` - Any value within the interval. This is typically used when all values are expected to be the same, and you just want to select one of them. No metrics use this as their default aggregation. This type of aggregation is more commonly used when users write their own SQL queries using the [Santiment Queries](/santiment-queries) product. 
+- `ANY` - Any value within the interval. This is typically used when all values
+  are expected to be the same, and you just want to select one of them. No
+  metrics use this as their default aggregation. This type of aggregation is
+  more commonly used when users write their own SQL queries using the
+  [Santiment Queries](/santiment-queries) product. 
 
-> **Note:** The aggregation is of the [GraphQL enum type](https://graphql.org/learn/schema/#enumeration-types) and should be provided in uppercase without quotes, like this: `aggregation: MAX`. 
+> **Note:** The aggregation is of the [GraphQL enum
+> type](https://graphql.org/learn/schema/#enumeration-types) and should be
+> provided in uppercase without quotes, like this: `aggregation: MAX`. 
 
 The following query retrieves the default aggregation and all available aggregations for each metric: 
 
@@ -200,9 +240,12 @@ In the `getMetric` function, you can query the following fields:
 
 ### timeseriesData
 
-Timeseries data is a sequence of data points collected at consistent intervals over time. Each data point provided by the API includes a `datetime` and a `value` field. 
+Timeseries data is a sequence of data points collected at consistent intervals
+over time. Each data point provided by the API includes a `datetime` and a
+`value` field. 
 
-To retrieve the values for a specific metric, slug, and time range, you can use the `timeseriesData` subquery of the `getMetric` API. 
+To retrieve the values for a specific metric, slug, and time range, you can use
+the `timeseriesData` subquery of the `getMetric` API. 
 
 #### Parameters:
 
@@ -216,10 +259,13 @@ To retrieve the values for a specific metric, slug, and time range, you can use 
 | includeIncompleteData | Exclude the last incomplete day (today) if it could lead to misleading data. Default is `false`. This is optional |
 | transform             | Apply a transformation to the result. Default is `none`. This is optional                            |
 
-- `aggregation`: This parameter is optional. If not provided, each metric has a default aggregation that is most suitable. You can view the default aggregation function using the [metadata](#metadata) query. 
-
-- `includeIncompleteData`: In some cases, if the day is not yet complete, the current value can be misleading. For instance, fetching daily active addresses at 12pm would include only half a day's data, potentially making the data for that day appear too low. 
-
+- `aggregation`: This parameter is optional. If not provided, each metric has a
+  default aggregation that is most suitable. You can view the default
+  aggregation function using the [metadata](#metadata) query. 
+- `includeIncompleteData`: In some cases, if the day is not yet complete, the
+  current value can be misleading. For instance, fetching daily active
+  addresses at 12pm would include only half a day's data, potentially making
+  the data for that day appear too low. 
 - `transform`: Apply a transformation to the timeseries data result. Available transformations include: 
   - `{type: "none"}`: Do not apply any transformation 
   - `{type: "moving_average", moving_average_base: base}`: Apply a simple moving average. Each data point value is calculated as the average of the last `base` intervals. To compute this, it fetches enough data before `from` so it can be computed. 
@@ -243,12 +289,14 @@ To retrieve the values for a specific metric, slug, and time range, you can use 
   }
 }
 ```
-
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20%20%20aggregation%3A%20SUM%0A%20%20%20%20%20%20transform%3A%20%7Btype%3A%20%22moving_average%22%2C%20moving_average_base%3A%203%7D)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**  
 
 ### aggregatedTimeseriesData
 
-Aggregated timeseries data is useful when you require a single value instead of multiple values separated by an even interval. This can be utilized to fetch the All-Time High (ATH) price or the highest number of daily active addresses, among other examples.
+Aggregated timeseries data is useful when you require a single value instead of
+multiple values separated by an even interval. This can be utilized to fetch
+the All-Time High (ATH) price or the highest number of daily active addresses,
+among other examples.
 
 #### Parameters:
 
@@ -278,11 +326,34 @@ The following query fetches the all-time highest price for Santiment:
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20highest_price%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222017-07-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20aggregation%3A%20MAX%0A%20%20%20%20)%0A%20%20%7D%0A%7D>)**
 
+### aggregatedTimeseriesData on the project type
+
+Queries like `allProject` or `projectBySlug` also have `aggregatedTimeseriesData` field that works the same way.
+The only difference is that when using `getMetric` the `metric` is already pinned and the `slug` needs to be provided, while
+for `allProjects` and `projectBySlug` it is vice versa.
+Using aliases, the `aggregatedTimeseriesData` can be selected multiple times.
+
+```graphql
+{
+  allProjects(page: 1 pageSize: 20){
+    slug
+    devActivity: aggregatedTimeseriesData(metric: "dev_activity_1d" from: "utc_now-30d" to: "utc_now" aggregation: SUM)
+    priceUsd: aggregatedTimeseriesData(metric: "price_usd" from: "utc_now-1d" to: "utc_now" aggregation: LAST)
+  }
+}
+```
+
+**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects(page%3A%201%20pageSize%3A%2020)%7B%0A%20%20%20%20slug%0A%20%20%20%20devActivity%3A%20aggregatedTimeseriesData(metric%3A%20%22dev_activity_1d%22%20from%3A%20%22utc_now-30d%22%20to%3A%20%22utc_now%22%20aggregation%3A%20SUM)%0A%20%20%20%20priceUsd%3A%20aggregatedTimeseriesData(metric%3A%20%22price_usd%22%20from%3A%20%22utc_now-1d%22%20to%3A%20%22utc_now%22%20aggregation%3A%20LAST)%0A%20%20%7D%0A%7D%0A)**
+
 ### histogramData
 
-A histogram is a graphical representation that organizes a group of data points into a specified range. For instance, if we consider the period from January 2018 to January 2019, we can fetch the amount of Ether that was bought in every 100-dollar price range: $0-$100, $100-$200, ..., $1300-$1400.
+A histogram is a graphical representation that organizes a group of data points
+into a specified range. For instance, if we consider the period from January
+2018 to January 2019, we can fetch the amount of Ether that was bought in every
+100-dollar price range: $0-$100, $100-$200, ..., $1300-$1400.
 
-To fetch the values for a given histogram metric, slug, and time interval, you can use the `histogramData` subquery of the `getMetric` API.
+To fetch the values for a given histogram metric, slug, and time interval, you
+can use the `histogramData` subquery of the `getMetric` API.
 
 #### Parameters:
 
@@ -299,8 +370,10 @@ Different histogram metrics may have different response types or formats.
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22age_distribution%22)%20%7B%0A%20%20%20%20histogramData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-06T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20limit%3A%2020)%7B%0A%20%20%20%20%20%20%20%20labels%0A%20%20%20%20%20%20%20%20values%7B%0A%20%20%20%20%20%20%20%20%20%20...%20on%20FloatList%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20data%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 - `availableMetrics` - The list of all metrics.
-- `availableTimeseriesMetrics` - The subset of the available metrics that can be fetched via the `timeseriesData` field.
-- `availableHistogramMetrics` - The subset of the available metrics that can be fetched via the `histogramData` field.
+- `availableTimeseriesMetrics` - The subset of the available metrics that can
+  be fetched via the `timeseriesData` field.
+- `availableHistogramMetrics` - The subset of the available metrics that can be
+  fetched via the `histogramData` field.
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20projectBySlug(slug%3A%20%22santiment%22)%20%7B%0A%20%20%20%20availableMetrics%0A%20%20%20%20availableTimeseriesMetrics%0A%20%20%20%20availableHistogramMetrics%0A%20%20%7D%0A%7D>)**
 
@@ -308,8 +381,10 @@ Different histogram metrics may have different response types or formats.
 
 Each metric is accompanied by metadata that describes the following:
 
-- The minimum interval for which it can be fetched. Different metrics are available at varying granularities.
-- The default aggregation that will be used when retrieving the metric at a higher resolution.
+- The minimum interval for which it can be fetched. Different metrics are
+  available at varying granularities.
+- The default aggregation that will be used when retrieving the metric at a
+  higher resolution.
 - The supported aggregations for the metric.
 - The existing selectors for the metric.
 - The projects for which the metric is available.
@@ -344,17 +419,25 @@ You can fetch the date from which a specific metric is available for an asset us
 }
 ```
 
-Typically, a metric is available for a given asset from the moment the contract or blockchain is created. However, there are exceptions. For instance, if the calculation of a metric requires pricing data that is not available, the metric will only be available from the date the pricing data becomes available.
+Typically, a metric is available for a given asset from the moment the contract
+or blockchain is created. However, there are exceptions. For instance, if the
+calculation of a metric requires pricing data that is not available, the metric
+will only be available from the date the pricing data becomes available.
 
-For example, Bitcoin has been operational since early 2009, but there were no exchanges or markets for over a year. Therefore, the pricing data only starts from July 2010. As a result, the MVRV metric, which requires market capitalization, is also only available since July 2010.
+For example, Bitcoin has been operational since early 2009, but there were no
+exchanges or markets for over a year. Therefore, the pricing data only starts
+from July 2010. As a result, the MVRV metric, which requires market
+capitalization, is also only available since July 2010.
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22transaction_volume%22)%20%7B%0A%20%20%20%20availableSince(slug%3A%22santiment%22)%0A%20%20%7D%0A%7D%0A>)**
 
 ### lastDatetimeComputedAt
 
-> **Note:** This field may be complex to understand. However, in most scenarios, it's not necessary to comprehend its value.
+> **Note:** This field may be complex to understand. However, in the general
+> case, this field is not used.
 
-The `lastDatetimeComputedAt` field is utilized to retrieve the datetime for which the last data point for the metric/slug pair was computed:
+The `lastDatetimeComputedAt` shows the when the latest
+data point was computed.
 
 ```graphql
 {
@@ -363,10 +446,6 @@ The `lastDatetimeComputedAt` field is utilized to retrieve the datetime for whic
   }
 }
 ```
-
-Understanding the last datetime computed can be crucial in certain situations. Daily metrics (metrics that have one value per day) are recalculated multiple times throughout the day. Each recalculation includes more data than the previous one.
-
-> **Note:** In many instances, such incomplete days can result in misleading data. For example, the Daily Active Address might appear significantly lower than usual. This discrepancy could be due to the fact that only half a day's data is included. By default, the `includeIncompleteData` flag in `timeseriesData` is set to false. Therefore, the current day's data will only be visible once the day has ended.
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20lastDatetimeComputedAt(slug%3A%20%22santiment%22)%0A%20%20%7D%0A%7D%0A>)**
 
@@ -488,5 +567,9 @@ The response result is a list that contains a 2-element range of datetimes and a
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_histogram%22)%20%7B%0A%20%20%20%20histogramData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-30T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20values%20%7B%0A%20%20%20%20%20%20%20%20...%20on%20FloatRangeFloatValueList%20%7B%0A%20%20%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20range%0A%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)**
 
-The response result is a list that contains a 2-element range of float (prices) and a float value.
+The response is a list that contains a 2-element range of float (prices) and a float value.
 
+
+<Notebox type="none">
+**Read next: [Common GraphQL Queries](/sanapi/common-queries)**
+</Notebox>
