@@ -133,7 +133,7 @@ Rate limits can be reached for various different reasons:
 
 In case of a temporary issue or error, you can go to you [Account page](https://app.santiment.net/account#api-keys)
 and press the `Reset`. The self-reset of API rate limits is available once per 90 days:
-![](../reset_api_rate_limits.png)
+![](./reset_api_rate_limits.png)
 
 Contact Santiment support if additional issues are encountered.
 

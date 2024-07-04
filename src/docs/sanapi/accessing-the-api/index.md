@@ -172,7 +172,7 @@ This version allows users to add HTTP headers, which can be used to include an
 API key and authenticate your requests. To do this, simply add the following
 header: `Authorization: Apikey YOUR_OWN_API_KEY`.
 
-![](../graphiql_header.png)
+![](./graphiql_header.png)
 
 ### Authentication with curl
 
