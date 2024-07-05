@@ -48,7 +48,7 @@ liquidity.
 
 ### How to interpret Volume metrics
 
-Both volume metrics act in a relatively similar ways, hence in the examples we
+Both volume metrics act in relatively similar ways, hence in the examples we
 will refer only to trading volume. 
 
 
