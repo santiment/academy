@@ -17,32 +17,46 @@ date: 2023-06-01
 
 ## Overview
 
-Santiment API utilizes [GraphQL](https://graphql.org). The reasons for choosing GraphQL over REST include:
+Santiment API utilizes [GraphQL](https://graphql.org). The reasons for choosing
+GraphQL over REST include:
 
-- It allows for precise data requests and easy batching of requests. This effectively addresses the problems of underfetching and overfetching data. For instance, why fetch all 20+ fields of a project when only its name is required?
+- It allows for precise data requests and easy batching of requests. This
+  effectively addresses the problems of underfetching and overfetching data.
+  For instance, why fetch all 20+ fields of a project when only its name is
+  required?
 
-- The request outlines the format of the response. This eliminates the need to guess what data the result contains and how to parse it.
+- The request outlines the format of the response. This eliminates the need to
+  guess what data the result contains and how to parse it.
 
-- It provides an easy, ready-to-use method to explore our API via our Live Explorer.
+- It provides an easy, ready-to-use method to explore our API via our Live
+  Explorer.
 
 ## Access the API
 
-Please note that some metrics may not be freely available or may have restrictions, such as limited historical and real-time data. To explore these metrics without restrictions, use the slug `santiment`.
+Please note that some metrics may not be freely available or may have
+restrictions, such as limited historical and real-time data. To explore these
+metrics without restrictions, use the slug `santiment`.
 
 There are several methods to retrieve data from Santiment's API:
 
 ### GraphiQL API Explorer
 
-The Graph**i**QL (graphical interactive in-browser GraphQL IDE) allows you to run queries directly from your browser. You can access the explorer at the following link: [https://api.santiment.net/graphiql](https://api.santiment.net/graphiql).
+The Graph**i**QL (graphical interactive in-browser GraphQL IDE) allows you to
+run queries directly from your browser. You can access the explorer at the
+following link:
+[https://api.santiment.net/graphiql](https://api.santiment.net/graphiql).
 
-Here's an example of how to run a query and view the results directly in your browser:
+Here's an example of how to run a query and view the results directly in your
+browser:
 
 [GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)
 
 
 ### Python library
 
-Santiment offers a Python wrapper for the GraphQL API, known as `sanpy`. You can find the documentation and installation instructions for this library [here](https://github.com/santiment/sanpy). 
+Santiment offers a Python wrapper for the GraphQL API, known as `sanpy`. You
+can find the documentation and installation instructions for this library
+[here](https://github.com/santiment/sanpy). 
 
 You can install `sanpy` using `pip` with the following command:
 
