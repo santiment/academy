@@ -3,16 +3,17 @@ title: Trading and Transaction Volume
 author: Santiment Team
 ---
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XV_P4er849Y?si=6l7bhhw-AS7aLBHV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Trading Volume
 
 - Includes only transactions related to trading. Consists of data from decentralized exchanges (DEX) and centralized exchanges (CEX).
-
 
 ### Transaction Volume
 
 - Includes all movements of tokens on the blockchain
 - Covers transfers between wallets (e.g., for securing funds or managing investment portfolios)
-- Includes payments for goods and services (real-world utility of cryptocurrencies)
+- Includes payments for goods and services (real-world utilityof cryptocurrencies)
 - Includes interactions with smart contracts (DeFi activities such as staking, lending, and swapping tokens)
 
 ### What is the difference between Trading Volume and Transaction Volume?
@@ -23,10 +24,10 @@ and off-chain).
 
 ![](./difference.png)
 
-The transaction volume metric is quite expansive and includes a variety of
-on-chain activities that go beyond just trading-related transactions. It
+The transaction volume metric is quite expansive and includes a varietyof
+on-chain activities that go beyond just trading-related transactions.It
 captures transfers between wallets, which could be for reasons like securing
-funds or managing different investment portfolios. Additionally, it includes
+funds or managing different investment portfolios. Additionally,it includes
 payments for goods and services, showcasing the real-world utility of
 cryptocurrencies. On top of these, the metric also encompasses interactions
 with smart contracts, which are pivotal in decentralized finance (DeFi)
@@ -34,7 +35,7 @@ activities like staking, lending, and swapping tokens.
 
 
 Another difference to note is that transaction volume is purely on-chain data,
-while trading volume is combination of on-chain data (from DEXs) and off-chain
+while trading volume is combination of on-chain data (from DEXs)and off-chain
 data (which is self-reported from CEXs). 
 
 <Notebox type="none">
@@ -50,11 +51,11 @@ Both volume metrics act in a relatively similar ways, hence in the examples we
 will refer only to trading volume. 
 
 
-An increase in trading volume is generally considered a precursor to a big price move. 
+An increase in trading volume is generally considered a precursorto a big price move. 
 
 
-For example, if Bitcoin's trading volume dramatically increases without a
-corresponding price change, it might suggest that something significant is
+For example, if Bitcoin's trading volume dramatically increases withouta
+corresponding price change, it might suggest that something significantis
 happening beneath the surface that hasn't yet affected the price. **Savvy traders
 might interpret this as an early warning signal of a potential price movement
 and adjust their strategies accordingly**, either by securing their current
