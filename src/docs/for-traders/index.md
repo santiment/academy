@@ -11,7 +11,7 @@ Instead of relying on pricing data, which is notoriously prone to manipulation i
 
 You can find out more about our data feeds on [SanAPI page](https://api.santiment.net).
 
-## Use cases and education
+## Use cases
 
 As a general overview, Santiment tools can enhance and complement your trading in several principal ways:
 
