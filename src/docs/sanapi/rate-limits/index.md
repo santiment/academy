@@ -140,7 +140,6 @@ Contact Santiment support if additional issues are encountered.
 In case the need for more API calls is long-term, please consider upgrading to a higher subscription plan.
 If the highest subscription plan does not cover your needs, contact Santiment support.
 
-
 <Notebox type="none">
 **Read next: [Historical and Realtime data restrictions](/sanapi/historical-and-realtime-data-restrictions)**
 </Notebox>
