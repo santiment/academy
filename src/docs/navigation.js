@@ -122,11 +122,12 @@ export const GUIDES = [
     ),
     articles: [
       'Accessing the API',
-      'Supported Blockchains',
       'Fetching Metrics',
       'Common Queries',
       'Rate Limits',
+      'Historical and Realtime data restrictions',
       'Complexity',
+      'Supported Blockchains',
     ],
   },
   {

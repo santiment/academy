@@ -5,49 +5,111 @@ date: 2023-05-10
 description: Santiment overview for Developers
 ---
 
-## Overview
 
-The main questions that are being answered here are: `How to fetch data?` and
-`What to do with the data?`.
+## Introduction
 
-- [Overview](#overview)
-- [Different ways of obtaining data](#different-ways-of-obtaining-data)
-- [GraphQL API](#graphql-api)
-- [Download CSV from Sanbase](#download-csv-from-sanbase)
-- [Analyzing Santiment Data](#analyzing-santiment-data)
+The Santiment API is a powerful tool designed to provide crucial data for your
+financial models. By leveraging this API, you can gain comprehensive insights
+into the cryptocurrency market, encompassing social trends, developmental
+metrics, and on-chain activities—all consolidated into a single platform.
 
-## Different ways of obtaining data
+## What does Santiment offer to developers?
 
-Consuming Santiment data can be done in two main ways:
+Santiment offers a robust [GraphQL](https://graphql.org/) API, empowering
+developers with advanced capabilities to fetch essential crypto market data.
+GraphQL provides a highly flexible query language for APIs
+that enables more intuitive and descriptive queries compared to traditional
+REST API methods. With GraphQL, users can request exactly the data they need,
+minimizing the number of API calls and reducing bandwidth usage.
 
-1. By using the **Sanbase Web Application**. Sanbase allows exploring the data through charts, research in written form of reports and insights and other visual tools.
-2. By using the **Santiment API**. The API allows obtaining the data in a JSON format, which will be more suitable for developers.
+Apart from precomputed metrics, Santiment has the [Santiment Queries](/santiment-queries)
+product, which allows developers to write custom SQL to obtain the data from the
+database directly. These SQL queries can be executed from the [Queries web page](https://queries.santiment.net/)
+or [execute the queries through the API](/santiment-queries/api-access)
 
-## GraphQL API
+### GraphQL API 
 
-If the desired metric is available in the API, using the API is the preferred way to
-fetch the data. Detailed description and examples can be found on the [SanAPI page](/sanapi)
+In this example, the query fetches the daily active addresses for Bitcoin. The
+query is self-descriptive and easy to maintain. New members to your team can
+intuitively understand the query without the need to consult the documentation.
 
-The API can be consumed in a few different ways:
+```graphql
+{
+  getMetric(metric: "daily_active_addresses"){
+    timeseriesData(
+      selector: {slug: "bitcoin"}
+      from: "2024-01-01T00:00:00Z"
+      to: "2024-01-31T23:59:59Z"
+      interval: "1d"){
+        datetime
+        value
+    }
+  }
+}
+```
+[Run the example](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7Bslug%3A%20%22bitcoin%22%7D%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-31T23%3A59%3A59Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
 
-- Using the [GraphiQL Live Explorer](https://api.santiment.net/graphiql) and
-  explore the API with included autocmplete and nice response formatting.
-- Using the `/graphql` API endpoint with `curl` directly from your terminal.
-- Using the `/graphql` API endpoint and construct requests in your preferred
-  programming language.
-- Using the `sanpy` Python library that wraps the GraphQL API. It is easy to use
-  and hides all GraphQL-related details.
+Find more GraphQL query examples on the [Common
+Queries](/sanapi/common-queries) page, or read [How to access the
+API](sanapi/accessing-the-api) article
 
-## Download CSV from Sanbase
+### Python API-wrapper library
 
-On [Sanbase](/sanbase) the data from charts can be exported as a CSV file. ![sanbase-csv-export](sanbase-csv-export.png)
+Santiment provides a [Python API wrapper library](https://github.com/santiment/sanpy)
+that allows you to fetch metrics with a simple function call. The code shows
+how to translate the GraphQL query from above. The data is returned in a Pandas
+dataframe.
 
-## Analyzing Santiment Data
+```python
+import san
+san.get("daily_active_addresses",
+    slug="bitcoin",
+    from_date="2024-01-01",
+    to_date="2024-01-31",
+    interval="1d")
+```
 
-Examples for different analysis based on Santiment data can be found on the
-[Education and use cases page](/education-and-use-cases)
+### Santiment Queries
 
-The are two types of examples included:
+There is also [Santiment Queries](/santiment-queries), which gives direct access to the
+database where custom SQL queries can be run.
 
-- Code examples showing how to analyze the data and plot the results.
-- Descriptions how to use the tools provided by the Sanbase web application and interpret the results.
+The query below shows how to obtain the same data as the GraphQL query and the python code above.
+```sql
+SELECT
+    dt,
+    value
+FROM daily_metrics_v2
+WHERE 
+    asset_id = get_asset_id('bitcoin') AND
+    metric_id = get_metric_id('daily_active_addresses') AND 
+    dt >= toDate('2024-01-01') AND 
+    dt <= toDate('2024-01-31')
+ORDER BY dt ASC
+```
+
+Visit the [Santiment Queries web page](https://queries.santiment.net), log in
+to your account and execute the query.
+
+<Notebox type="note">
+Similar to the API subscription plans, historical and realtime in SQL is also
+restricted based on the subscription plan.
+</Notebox>
+
+
+## Metrics Catalog
+
+There are a few different ways to explore the available metrics.
+- Visit the [metrics' docs articles page](/metrics) where you can find links to
+  the documentation articles of the metrics.
+- Open the [Metrics Catalog](https://api.santiment.net/available_metrics)
+  webpage that list all the metrics with information about the available
+  assets. This page allows you to filter the metrics supported by a given asset
+  and download the data as CSV.
+- Open any [chart page on Sanbase](https://app.santiment.net/charts?slug=ethereum) and explore the metrics on the sidebar.
+- Use the [GraphQL API](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(filter%3A%20METRIC%2C%20product%3A%20SANAPI%2C%20plan%3A%20BUSINESS_PRO)%20%7B%0A%20%20%20%20name%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20isDeprecated%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%20%20docs%20%7B%0A%20%20%20%20%20%20link%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A) 
+that shows the restrictions for each subscription product -- which metrics are accessible and what are the time range restrictions for them.
+
+<Notebox type="none">
+**Read next: [How to Access the API](/sanapi/accessing-the-api/)**
+</Notebox>
