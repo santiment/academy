@@ -5,6 +5,7 @@ author: Dino Ibisbegovic
 
 <Resource title="Metrics Spotlight">
 - [Trading and Transaction Volume](/education-and-use-cases/trading-and-transaction-volume/)
+- [Daily Active Addresses](/education-and-use-cases/daily-active-addresses/)
 </Resource>
 
 <Resource title="Alerts">

@@ -1,6 +1,7 @@
 ---
 title: Trading and Transaction Volume
 author: Santiment Team
+date: 2024-06-17
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XV_P4er849Y?si=6l7bhhw-AS7aLBHV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

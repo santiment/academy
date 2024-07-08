@@ -7,7 +7,9 @@ const ICONS = {
   pin: '📌',
   note: '⚠️',
   none: '',
-  exclamation: '❗'
+  openBook: '📖 ',
+  exclamation: '❗',
+  pointRight: '👉'
 }
 
 const Notebox = ({ type = 'note', children }) => {
