@@ -30,11 +30,11 @@ Sanbase Plans provide access to various metrics through the [Sanbase website](ht
 - Detailed metrics access restrictions can be found [here](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(plan%3A%20FREE%2C%20product%3A%20SANBASE)%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A)
 
 ### Santiment Queries access:
-- Overall credits: 500
+- Credits: 500 credits per month
 - Rate limits:
-  - 500 credits per day
-  - 200 credits per hour
-  - 20 credits per minute
+  - 500 queries per day
+  - 200 queries per hour
+  - 20 queries per minute
 
 ## Pro Plan
 
@@ -57,11 +57,11 @@ The Pro Plan includes everything in the Free Plan, plus:
 - Detailed metrics access restrictions can be found [here](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(plan%3A%20PRO%2C%20product%3A%20SANBASE)%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A)
 
 ### Santiment Queries access:
-- Overall credits: 10K
+- Credits: 10,000 credits per month
 - Rate limits: 
-  - 5000 credits per day
-  - 1000 credits per hour
-  - 50 credits per minute
+  - 5000 queries per day
+  - 1000 queries per hour
+  - 50 queries per minute
 
 ## Max Plan
 
@@ -80,10 +80,10 @@ The Max Plan includes everything in the Pro Plan, plus:
   - 100 API calls per minute
 
 ### Santiment Queries access:
-- Overall credits: 20K
+- Credits: 20,000 credits per month
 - Rate limits: 
-  - 10K credits per day
-  - 2K credits per hour
-  - 50 credits per minute
+  - 10K queries per day
+  - 2K queries per hour
+  - 50 queries per minute
 
 

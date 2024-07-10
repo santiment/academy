@@ -29,11 +29,11 @@ Santiment API Plans provide access to various metrics through the API endpoint: 
 - Limited access to insights
 
 ### Santiment Queries access:
-- Overall credits: 500
+- Credits: 500 credits per month
 - Rate limits:
-  - 500 credits per day
-  - 200 credits per hour
-  - 20 credits per minute
+  - 500 queries per day
+  - 200 queries per hour
+  - 20 queries per minute
 
 ## Business Pro Plan
 
@@ -51,11 +51,11 @@ Santiment API Plans provide access to various metrics through the API endpoint: 
 - Full access at [Sanbase website](https://app.santiment.net)
 
 ### Santiment Queries access:
-- Overall credits: 50K
+- Credits: 50,000 credits per month
 - Rate limits: 
-  - 15K credits per day
-  - 3K credits per hour
-  - 100 credits per minute
+  - 15K queries per day
+  - 3K queries per hour
+  - 100 queries per minute
 
 ## Business Max Plan
 
@@ -71,10 +71,10 @@ Santiment API Plans provide access to various metrics through the API endpoint: 
 - Full access at [Sanbase website](https://app.santiment.net)
 
 ### Santiment Queries access:
-- Overall credits: 500K
+- Credits: 500,000 credits per month
 - Rate limits: 
-  - 15K credits per day
-  - 3K credits per hour
-  - 100 credits per minute
+  - 15K queries per day
+  - 3K queries per hour
+  - 100 queries per minute
 
 
