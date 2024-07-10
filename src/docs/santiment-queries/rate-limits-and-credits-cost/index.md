@@ -28,8 +28,14 @@ The execution of a query spends RAM, CPU and IO (disk) resources. The combinatio
 
 The available credits per month are determined by the subscription plan.
 
-Check the plans for Sanbase subscriptions on the [pricing page](https://app.santiment.net/pricing?plans=individual) and [Academy page](/products-and-plans/sanbase-plans/)
-Check teh plans for Business subscriptions on the [pricing page](https://app.santiment.net/pricing?plans=business) and [Academy page](/products-and-plans/sanapi-plans/)
+
+Check the plans and restrictions for **Sanbase** subscriptions on the:
+- [Sanbase pricing page](https://app.santiment.net/pricing?plans=individual)
+- [Sanbase plans academy page](/products-and-plans/sanbase-plans/)
+
+Check the plans and restrictions for **API** subscriptions on the:
+- [API pricing page](https://app.santiment.net/pricing?plans=business)
+- [API plans academy page](/products-and-plans/sanapi-plans/)
 
 ### Example
 
