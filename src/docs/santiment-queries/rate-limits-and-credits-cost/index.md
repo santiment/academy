@@ -26,7 +26,10 @@ When executing a query there are two main restrictions that are applied which, i
 
 The execution of a query spends RAM, CPU and IO (disk) resources. The combination of all resources spent with the size of the result is used to compute the cost of the query. The bigger the result and the more resources are spent, the higher the cost of the query.
 
-Each account has 1 million credits per month. If those credits are 
+The available credits per month are determined by the subscription plan.
+
+Check the plans for Sanbase subscriptions on the [pricing page](https://app.santiment.net/pricing?plans=individual) and [Academy page](/products-and-plans/sanbase-plans/)
+Check teh plans for Business subscriptions on the [pricing page](https://app.santiment.net/pricing?plans=business) and [Academy page](/products-and-plans/sanapi-plans/)
 
 ### Example
 
