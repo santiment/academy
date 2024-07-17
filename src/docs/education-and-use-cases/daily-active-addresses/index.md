@@ -5,7 +5,7 @@ date: 2024-07-08
 ---
 
 <iframe width="560" height="315"
-src="https://www.youtube.com/embed/XV_P4er849Y?si=6l7bhhw-AS7aLBHV"
+src="https://www.youtube.com/embed/qcy7ZTne-h8?si=DV_O-5Crkqx1FQYx"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
 clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -55,7 +55,7 @@ solely on this metric. Use a combination of metrics that will help you make a
 more informed decision.
 </Notebox>
 
-## How to monitor DAA with Sanbase
+## How to monitor DAA using Sanbase
 
 Here is a ready-to-be-copied Layout with Trading and Transaction volume for
 your convenience: [Sanbase Daily Active Addresses Chart](https://app.santiment.net/charts/daily-active-addresses-25309)
