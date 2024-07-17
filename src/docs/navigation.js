@@ -61,6 +61,10 @@ export const GUIDES = [
         slug: 'trading and transaction volume',
         title: 'Trading and Transaction Volume'
       }
+      {
+        slug: 'daily active addresses',
+        title: 'Daily Active Addresses'
+      }
     ],
   },
   {
