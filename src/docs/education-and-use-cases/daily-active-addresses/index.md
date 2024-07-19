@@ -18,15 +18,6 @@ usage. High DAA suggests strong user engagement and network utility. DAA can be
 influenced by various factors like market trends, network upgrades, or major
 events.
 
-Accounted tokens in DAA are unique, meaning that if the same token is moved
-multiple times per day via a wash trade* it is counted only once.
-
-<Notebox type="openBook">
-A "wash trade" is a type of market manipulation where a trader buys and sells
-the same financial instruments simultaneously through different brokers,
-creating misleading activity in the marketplace without any change in position.
-</Notebox>
-
 ## How to interpret the Daily Active Addresses metric
 
 Generally, there's a correlation between DAA and price. For instance:
