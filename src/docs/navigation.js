@@ -68,6 +68,10 @@ export const GUIDES = [
       {
         slug: 'circulation',
         title: 'Circulation'
+      },
+      {
+        slug: 'sanr practice makes perfect',
+        title: 'SanR - Practice Makes Perfect'
       }
     ],
   },
@@ -392,3 +396,5 @@ export const GETTING_STARTED = {
   title: 'Getting started',
   articles: ['For Traders', 'For Developers'],
 }
+
+
