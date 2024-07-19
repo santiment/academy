@@ -33,3 +33,7 @@ author: Dino Ibisbegovic
 <Resource title="Pro Reports">
 - [Santiment Pro Reports Samples](/education-and-use-cases/santiment-pro-reports-samples/)
 </Resource>
+
+<Resource title="Other Sources Of Knowledge">
+- [SanR - Practice Makes Perfect](/education-and-use-cases/sanr-practice-makes-perfect/)
+</Resource>
