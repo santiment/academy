@@ -9,11 +9,15 @@ description: XRPL DEX trading volume
 
 DEX volume tracks the exchange volume at the XRPL Decentralized Exchange. The volume includes all trades where at least one of the assets in the pair have recently traded against XRP.
 
-`dex_volume_in_usd_5m` measures volume in USD equivalent.
+`dex_volume_in_usd_5m` measures CLOB volume in USD equivalent.
 
-`dex_volume_in_xrp_5m` measures volume in XRP coins.
+`dex_volume_in_xrp_5m` measures CLOB volume in XRP coins.
 
-Both `dex_volume_in_usd_5m` and `dex_volume_in_xrp_5m` are available only for the `xrp` asset.
+`dex_amm_volume_in_xrp_5min` measures AMM volume in XRP coins.
+
+`dex_amm_volume_in_usd_5min` measures AMM volume in XRP coins.
+
+All four metrics are available only for the `xrp` asset.
 
 ---
 
@@ -25,7 +29,7 @@ Both `dex_volume_in_usd_5m` and `dex_volume_in_xrp_5m` are available only for th
 
 ## Measuring Unit
 
-USD
+XRP tokens and USD
 
 ---
 
@@ -55,15 +59,15 @@ Available for [xrp only](https://api.santiment.net/graphiql?variables=&query=%7B
 
 ### SanAPI
 
-Available under the `dex_volume_in_usd_5m` and `dex_volume_in_xrp_5m` names.
+Available under the `dex_volume_in_usd_5m`, `dex_volume_in_xrp_5m`, `dex_amm_volume_in_xrp_5min` and `dex_amm_volume_in_usd_5min` names.
 
 ```graphql
 {
   getMetric(metric: "dex_volume_in_usd_5m") {
     timeseriesData(
       slug: "xrp"
-      from: "2023-01-01T00:00:00Z"
-      to: "2023-01-07T00:00:00Z"
+      from: "2024-07-01T00:00:00Z"
+      to: "2024-07-07T00:00:00Z"
     ) {
       datetime
       value
@@ -72,4 +76,4 @@ Available under the `dex_volume_in_usd_5m` and `dex_volume_in_xrp_5m` names.
 }
 ```
 
-[**Run in Explorer**](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dex_volume_in_usd_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22xrp%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
+[**Run in Explorer**](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dex_volume_in_usd_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22xrp%22%0A%20%20%20%20%20%20from%3A%20%222024-07-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-07-07T00%3A00%3A00Z%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
