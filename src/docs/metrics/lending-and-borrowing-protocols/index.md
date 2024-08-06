@@ -24,5 +24,6 @@ and market volatility.
 - [Compound](/metrics/lending-and-borrowing-protocols/compound)
 - [Compound V3](/metrics/lending-and-borrowing-protocols/compound-v3)
 - [MakerDAO](/metrics/lending-and-borrowing-protocols/makerdao)
+- [Spark](/metrics/lending-and-borrowing-protocols/spark)
 - [Liquity](/metrics/lending-and-borrowing-protocols/liquity)
 - [Fraxlend](/metrics/lending-and-borrowing-protocols/fraxlend)
