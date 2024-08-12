@@ -46,6 +46,7 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 - [Gini Index](/metrics/gini-index)
 - [Transacted Coin Acquisition Cost](/metrics/transacted-coin-acquisition-cost)
 - [Daily Aggregated Financial Metrics in USD](/metrics/daily-aggregated-financial-metrics)
+- [M2 Money Supply](/metrics/m2-money-supply)
 
 </Resource>
 
