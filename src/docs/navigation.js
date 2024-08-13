@@ -263,6 +263,7 @@ export const REFERENCES = [
       'Labelled Historical Balance',
       'Lending and Borrowing Protocols',
       'MVRV',
+      'M2 Money Supply',
       'MakerDAO DAI Savings Rate',
       'Marketcap',
       'Mean Coin Age',
