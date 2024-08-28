@@ -28,6 +28,7 @@ author: Dino Ibisbegovic
 - [Investigate Speculative Activity with Santiment’s Exchange Metrics](/education-and-use-cases/investigate-speculative-activity-with-santiment’s-exchange-metrics/)
 - [Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies](/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/)
 - [Trading and Transaction Volume](/education-and-use-cases/trading-and-transaction-volume)
+- [Understanding Long-Term Market Trends and Cycles](/education-and-use-cases/understanding-long-term-market-trends-and-cycles)
 </Resource>
 
 <Resource title="Pro Reports">

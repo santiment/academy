@@ -9,11 +9,14 @@ const ICONS = {
   none: '',
   openBook: '📖 ',
   exclamation: '❗',
-  pointRight: '👉'
+  pointRight: '👉',
+  arrowRight: '➡️ ',
+  dart: '🎯',
+  brain: '🧠'
 }
 
 const Notebox = ({ type = 'note', children }) => {
-  const icon = ICONS[type] ?? '⚠️'
+  const icon = ICONS[type] ?? '⚠️ '
   const style = styles[type] ?? styles.note
 
   return (
