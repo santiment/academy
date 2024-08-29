@@ -72,6 +72,10 @@ export const GUIDES = [
       {
         slug: 'sanr practice makes perfect',
         title: 'SanR - Practice Makes Perfect'
+      },
+      {
+        slug: 'understanding long-term market trends and cycles',
+        title: 'Understanding Long-term Market Trends and Cycles'
       }
     ],
   },
