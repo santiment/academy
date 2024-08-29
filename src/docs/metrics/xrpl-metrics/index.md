@@ -23,3 +23,4 @@ Santiment provide key metrics about the XRPL Chain which are listed below:
 - [Number of transactions](/metrics/transaction-count)
 - [Number of assets issued](/metrics/xrpl-metrics/assets-issued)
 - [Number of active trustlines](/metrics/xrpl-metrics/trustline-count)
+- [Liquidty in XRPL AMM Pools](/metrics/xrpl-metrics/liquidity-amm-pools)
