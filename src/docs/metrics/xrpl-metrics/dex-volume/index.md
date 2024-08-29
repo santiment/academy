@@ -15,7 +15,7 @@ DEX volume tracks the exchange volume at the XRPL Decentralized Exchange. The vo
 
 `dex_amm_volume_in_xrp_5min` measures AMM volume in XRP coins.
 
-`dex_amm_volume_in_usd_5min` measures AMM volume in XRP coins.
+`dex_amm_volume_in_usd_5min` measures AMM volume in USD coins.
 
 All four metrics are available only for the `xrp` asset.
 

@@ -1,8 +1,8 @@
 ---
-title: Liquidity in XRPL AMM Pools"
+title: Liquidity in XRPL AMM Pools
 author: Ante
-date: 2023-03-13
-description: Descriptions about the trustline count metrics
+date: 2024-08-01
+description: XRPL AMM liquidity metrics
 ---
 
 ## Description
