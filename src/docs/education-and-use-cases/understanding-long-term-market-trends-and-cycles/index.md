@@ -25,7 +25,7 @@ Open this layout with five charts and let’s dive in:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7UJIjj4uUPs?si=fyfKFHWSUO7_XdgV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Age Consumed
+## [Age Consumed](/metrics/age-consumed)
 
 Key metric on chart 1 of the layout is age consumed, which represents amounts
 of coins that moved multiplied by the time that they spent in the last address.
@@ -48,7 +48,7 @@ Spikes indicate long-term holders moving their funds, often signalling major
 market shifts.
 </Notebox>
 
-## Mean Dollar Invested Age (MDIA)
+## [Mean Dollar Invested Age (MDIA)](/metrics/mean-coin-age)
 
 On chart 2 of the layout, you can see mean dollar age metrics, one of which is
 measuring this value for all coins, while the other one is only looking at
@@ -77,7 +77,7 @@ Dropping Values show inflow of new money, typically post-bull market midpoint, c
 Rising Values show lack of new money, often predicting major market tops.
 </Notebox>
 
-## MVRV Ratio
+## [MVRV Ratio](/metrics/mvrv)
 
 Chart 3 of the layout has MVRV ratios  (Market Value to Realized Value) with
 different timeframes. Here, the same idea of coins moved within specific time
@@ -108,7 +108,7 @@ Dropping Realized Value indicates losses, causing MVRV to diverge upwards.
 Divergences reveal market sentiment and potential price movements.
 </Notebox>
 
-## Network Realized Profit and Loss
+## [Network Realized Profit and Loss](/metrics/network-profit-loss)
 
 Network Realized Profit/Loss on chart 4 of the layout measures the collective
 PnL of all holders. Big negative spikes are usually the best long-term buy
@@ -134,7 +134,7 @@ Mid-Bull Market Spikes signify significant profit-taking.
 Price rising with NRPL Near 0 suggests an approaching market top.
 </Notebox>
 
-## Social Volume
+## [Social Volume](/metrics/social-volume)
 
 Social volume on panel 5 indicates the amount of discussion in crypto social
 media. You generally want to get in when the amount of chatter is low, and the
