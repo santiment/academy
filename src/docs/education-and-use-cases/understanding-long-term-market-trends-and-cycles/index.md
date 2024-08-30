@@ -5,11 +5,15 @@ author: Santiment Team
 
 ## Overview
 
-This framework aims to help traders and investors identify the current stage in
+This handbook aims to help traders and investors identify the current stage in
 a long-term market cycle. 
+
+&nbsp;
 
 For the purpose, we will use a layout with five charts with key indicators. We
 will use BTC as a proxy.
+
+&nbsp;
 
 Key indicators are:
 
@@ -19,9 +23,13 @@ Key indicators are:
 - Profit and loss levels
 - Social volume trends
 
+&nbsp;
+
 Open this layout with five charts and let’s dive in:
 
 [Sanbase Charts | Long-term market cycle](https://app.santiment.net/charts/long-term-market-cycle-24503)
+
+&nbsp;
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7UJIjj4uUPs?si=fyfKFHWSUO7_XdgV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -159,6 +167,8 @@ High chatter signals that it’s time to consider your exit strategy as interest
 
 All of these metrics will help you better understand the crypto market trends
 on a macro level and make more informed decisions.
+
+&nbsp;
 
 [Sanbase Charts | Long-term market cycle](https://app.santiment.net/charts/long-term-market-cycle-24503)
 
