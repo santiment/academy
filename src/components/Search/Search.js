@@ -30,10 +30,10 @@ const Search = ({ small }) => {
   useEffect(() => {
     if (isSSR) return
 
-    if(window.docsearch) {
+    if (window.docsearch) {
       window.docsearch({
         appId: 'ZVVHPHW3IV',
-        apiKey: 'ad83a9a7b30fda58f4c61a55a73d9338', // required
+        apiKey: '712c7a00cdc130f6828b671dac8ad35f', // required
         indexName: 'santiment_academy', // required
         inputSelector: '#search', // required
       })
