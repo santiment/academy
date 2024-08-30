@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-plugin-algolia-docsearch`,
       options: {
         appId: "ZVVHPHW3IV", // App ID
-        apiKey: "ad83a9a7b30fda58f4c61a55a73d9338", // Search API key
+        apiKey: "712c7a00cdc130f6828b671dac8ad35f", // Search API key
         indexName: "santiment_academy", // required
         inputSelector: "#search", // required
         debug: true,
