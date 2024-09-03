@@ -259,6 +259,7 @@ export const REFERENCES = [
       'Ethereum Spent',
       'Exchange Funds Flow',
       'FTX Derivatives',
+      'Fully Diluted Valuation',
       'Funding Rates Aggregated',
       'Gini Index',
       'Huobi Derivatives',
@@ -401,5 +402,3 @@ export const GETTING_STARTED = {
   title: 'Getting started',
   articles: ['For Traders', 'For Developers'],
 }
-
-
