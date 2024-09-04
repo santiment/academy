@@ -178,6 +178,7 @@ export const GUIDES = [
         slug: 'sanapi-plans',
         title: 'Access Plans - SanAPI',
       },
+      'Sanbase subscription via SanR NFT',
       'Santiment Products',
       'How to pay with crypto',
       'Create an API key',
