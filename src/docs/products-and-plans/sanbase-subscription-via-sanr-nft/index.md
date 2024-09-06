@@ -15,20 +15,21 @@ The key to success is simple: post high-quality signals and stay consistent—wh
 
 ![SanR League Rewards](https://github.com/user-attachments/assets/80e20f57-0126-452a-94ba-b5d42f70016f)
 
-
-SanR League Rewards
-
 **Minting the SanR NFT**: When a user has collected 10,000 points, they can exchange their points to mint an NFT via SanR.app, granting them 12-month access to the Sanbase Pro plan.
 
 ![Minting NFT](minting-nft.png)
 
-### Important notes:
+
+<Details>
+<Summary>### Important notes:</Summary>
 
 - The Sanbase Pro subscription obtained via the SanR NFT is valid for **12 months**.
 - Each user is allowed to mint the NFT and claim the free Sanbase subscription **only once**.
 - The same MetaMask address used to mint the NFT must also be connected to the **Sanbase** account.
 - Users with an existing Sanbase Pro plan **cannot activate** the free plan from the NFT.
 - After the free NFT subscription expires, users must [pay](https://app.santiment.net/pricing) to continue accessing Sanbase Pro features.
+
+</Details>
 
 ## Step-by-step process to claim your NFT
 
@@ -44,8 +45,6 @@ Once you’ve accumulated 10,000 SanR points, head to the **Reward History** sec
     
     ![image](https://github.com/user-attachments/assets/2b7fcb78-9f3d-4b58-9946-b7f39ad44c9f)
     
-    Sanbase Account Settings Page
-    
 4. **Connect your MetaMask wallet to your Sanbase account in Account Settings**
     
     In your [Sanbase Account Settings](https://app.santiment.net/account), connect the **same MetaMask address** that was used to mint your NFT. This step is crucial to access the Sanbase Pro features.
@@ -56,4 +55,5 @@ Once you’ve accumulated 10,000 SanR points, head to the **Reward History** sec
     
     Scroll down to the subscription section of your [Account Settings](https://app.santiment.net/account) page and click the **“Check NFT access”** button. If your MetaMask wallet holds the SanR NFT, your Sanbase Pro plan will be activated automatically.
     
-    If you encounter any issues, feel free to reach out via the [Santiment Discord](https://santiment.net/discord) for support.
+
+  If you encounter any issues, feel free to reach out via the [Santiment Discord](https://santiment.net/discord) for support.
