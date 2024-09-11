@@ -11,9 +11,9 @@ New version represents a significant shift in the DeFi landscape by introducing
 a unified borrowing market model. In this model, the base asset can be borrowed 
 against other assets.
 
-Currently, there are two markets: the USDC market and the ETH market. 
-In the USDC market, users can supply WBTC, WETH, COMP, UNI, and LINK to borrow USDC. 
-In the ETH market, users can supply wstETH and cbETH to borrow WETH.
+Currently, there are three markets: the ETH market, the USDC market, and the USDT market. 
+In each market, users can provide different assets as collateral and borrow the market's 
+asset (WETH, USDC, or USDT).
 
 This transformation carries several advantages. First, it enhances security 
 for users across all assets within the Compound ecosystem. Second, it allows 
@@ -34,10 +34,16 @@ Action metrics:
 * `compound_v3_action_repayments_usd` - Amount of repaid tokens in USD
 
 Total supplied/borrowed metrics:
-* `compound_v3_total_supplied` - Total supplied tokens
-* `compound_v3_total_supplied_usd` - Total supplied tokens in USD
+* `compound_v3_collateral_total_supplied` - Total supplied tokens for the collateral asset
+* `compound_v3_collateral_total_supplied_usd` - Total supplied tokens in USD for the collateral asset
+* `compound_v3_total_supplied` - Total supplied tokens for the market asset
+* `compound_v3_total_supplied_usd` - Total supplied tokens in USD for the market asset
 * `compound_v3_total_borrowed` - Total borrowed tokens
 * `compound_v3_total_borrowed_usd` - Total borrowed tokens in USD
+
+APY (annual percentage yield) metrics:
+* `compound_v3_supply_apy` - Supply APY
+* `compound_v3_borrow_apy` - Borrow APY
 
 Protocol total action metrics:
 * `compound_v3_total_deposits_usd` - Total amount of deposits on Compound V3 (combining all assets in USD)
@@ -48,12 +54,6 @@ Protocol total action metrics:
 Protocol total supplied/borrowed metrics:
 * `compound_v3_protocol_total_supplied_usd` - Total amount supplied on Compound V3 (combining all assets in USD)
 * `compound_v3_protocol_total_borrowed_usd` - Total amount borrowed on Compound V3 (combining all assets in USD)
-
-APY (annual percentage yield) metrics:
-* `compound_v3_eth_market_supply_apy` - ETH market supply APY
-* `compound_v3_eth_market_borrow_apy` - ETH market borrow APY
-* `compound_v3_usdc_market_supply_apy` - USDC market supply APY
-* `compound_v3_usdc_market_borrow_apy` - USDC market borrow APY 
 
 Daily active addresses:
 * `compound_v3_active_addresses` - Daily active addresses on Compound V3
@@ -142,12 +142,12 @@ Total action metrics: `compound_v3_total_deposits_usd`, `compound_v3_total_liqui
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22compound_v3_total_new_debt_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22compound%22%0A%20%20%20%20%20%20from%3A%20%222023-08-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-08-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-Total supplied/borrowed metrics: `compound_v3_total_supplied<_usd>` and 
-`compound_v3_total_borrowed<_usd>`
+Total supplied/borrowed metrics: `compound_v3_collateral_total_supplied<_usd>`, 
+`compound_v3_total_supplied<_usd>` and `compound_v3_total_borrowed<_usd>`
 
 ```graphql
 {
-  getMetric(metric: "compound_v3_total_supplied"){
+  getMetric(metric: "compound_v3_collateral_total_supplied"){
     timeseriesData(
       slug: "wrapped-bitcoin"
       from: "2023-08-01T00:00:00Z"
@@ -160,7 +160,7 @@ Total supplied/borrowed metrics: `compound_v3_total_supplied<_usd>` and
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22compound_v3_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222023-08-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-08-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22compound_v3_collateral_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222023-08-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-08-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Protocol total supplied/borrowed metrics: `compound_v3_protocol_total_supplied_usd` and 
 `compound_v3_protocol_total_borrowed_usd`
@@ -182,14 +182,13 @@ Protocol total supplied/borrowed metrics: `compound_v3_protocol_total_supplied_u
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22compound_v3_protocol_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22compound%22%0A%20%20%20%20%20%20from%3A%20%222023-08-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-08-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
-APY metrics: `compound_v3_eth_market_supply_apy`, `compound_v3_eth_market_borrow_apy`, 
-`compound_v3_usdc_market_supply_apy` and `compound_v3_usdc_market_borrow_apy`
+APY metrics: `compound_v3_supply_apy` and `compound_v3_borrow_apy`
 
 ```graphql
 {
-  getMetric(metric: "compound_v3_usdc_market_supply_apy"){
+  getMetric(metric: "compound_v3_supply_apy"){
     timeseriesData(
-      slug: "compound"
+      slug: "usd-coin"
       from: "2023-08-01T00:00:00Z"
       to: "2023-08-07T00:00:00Z"
       includeIncompleteData: true
@@ -200,7 +199,7 @@ APY metrics: `compound_v3_eth_market_supply_apy`, `compound_v3_eth_market_borrow
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22compound_v3_usdc_market_supply_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22compound%22%0A%20%20%20%20%20%20from%3A%20%222023-08-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-08-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22compound_v3_supply_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22usd-coin%22%0A%20%20%20%20%20%20from%3A%20%222023-08-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-08-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Daily active addresses: `compound_v3_active_addresses`
 
