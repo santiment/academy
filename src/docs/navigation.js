@@ -76,6 +76,10 @@ export const GUIDES = [
       {
         slug: 'understanding long-term market trends and cycles',
         title: 'Understanding Long-term Market Trends and Cycles'
+      },
+      {
+        slug: 'understanding short-term market trends',
+        title: 'Understanding Short-term Market Trends'
       }
     ],
   },
