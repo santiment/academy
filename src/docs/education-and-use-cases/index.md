@@ -29,6 +29,7 @@ author: Dino Ibisbegovic
 - [Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies](/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/)
 - [Trading and Transaction Volume](/education-and-use-cases/trading-and-transaction-volume)
 - [Understanding Long-Term Market Trends and Cycles](/education-and-use-cases/understanding-long-term-market-trends-and-cycles)
+- [Understanding Short-Term Market Trends](/education-and-use-cases/understanding-short-term-market-trends)
 </Resource>
 
 <Resource title="Pro Reports">
