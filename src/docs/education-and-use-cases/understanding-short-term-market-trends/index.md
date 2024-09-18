@@ -6,7 +6,7 @@ date: 2024-09-16
 
 ## Overview
 
-This framework aims to help traders and investors identify market tops. It’s
+This handbook aims to help traders and investors identify market tops. It’s
 most useful for small to mid-cap coins driven by momentum and social
 narratives.
 
@@ -15,6 +15,8 @@ narratives.
 For the purpose, we will use a layout with four charts with key indicators. We
 will use SHIB as a proxy.
 
+&nbsp;
+
 Key indicators are:
 
 - Network activity (address activity and network growth)
@@ -22,8 +24,9 @@ Key indicators are:
 - Valuation metrics (MVRV)
 - Derivative metrics (funding rate and open interest)
 
-Open this layout with four charts and let’s dive in.
+&nbsp;
 
+Open this layout with four charts and let’s dive in.
 
 [Sanbase Charts | Short-term market cycle]( https://app.santiment.net/charts/short-term-over-under-valued-coins-24504)
 
