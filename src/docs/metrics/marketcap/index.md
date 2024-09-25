@@ -7,7 +7,7 @@ description: Marketcap in USD
 
 ## Definition
 
-The marketcap in USD is derived as the price of an asset in USD multiplied by the total supply of the same asset.
+The marketcap in USD is derived as the price of an asset in USD multiplied by the circulating supply of the same asset.
 
 ---
 
