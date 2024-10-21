@@ -25,6 +25,12 @@ Action metrics:
 * `spark_action_repayments` - Amount of repaid tokens
 * `spark_action_repayments_usd` - Amount of repaid tokens in USD
 
+Total supplied/borrowed metrics:
+* `spark_total_supplied` - Total supplied tokens
+* `spark_total_supplied_usd` - Total supplied tokens in USD
+* `spark_total_borrowed` - Total borrowed tokens
+* `spark_total_borrowed_usd` - Total borrowed tokens in USD
+
 APY (annual percentage yield) metric:
 * `spark_supply_apy` - Supply APY
 * `spark_borrow_apy` - Variable borrow APY (variable interest rate will fluctuate based on the market conditions)
@@ -34,6 +40,10 @@ Protocol total action metrics:
 * `spark_total_liquidations_usd` - Total amount of liquidations on Spark protocol (combining all assets in USD)
 * `spark_total_new_debt_usd` - Total amount of borrowings on Spark protocol (combining all assets in USD)
 * `spark_total_repayments_usd` - Total amount of repayments on Spark protocol (combining all assets in USD)
+
+Protocol total supplied/borrowed metrics:
+* `spark_protocol_total_supplied_usd` - Total amount supplied on Spark (combining all assets in USD)
+* `spark_protocol_total_borrowed_usd` - Total amount borrowed on Spark (combining all assets in USD)
 
 Daily active addresses:
 * `spark_active_addresses` - Daily active addresses on Spark protocol
@@ -122,6 +132,46 @@ Total action metrics: `spark_total_deposits_usd`, `spark_total_liquidations_usd`
 }
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_total_new_debt_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20from%3A%20%222024-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-12T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221h%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
+Total supplied/borrowed metrics: `spark_total_supplied<_usd>` and 
+`spark_total_borrowed<_usd>`
+
+```graphql
+{
+  getMetric(metric: "spark_total_supplied"){
+    timeseriesData(
+      slug: "wrapped-bitcoin"
+      from: "2023-04-01T00:00:00Z"
+      to: "2023-04-07T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m"){
+        datetime
+        value
+      }
+  }
+}
+```
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
+
+Protocol total supplied/borrowed metrics: `spark_protocol_total_supplied_usd` and 
+`spark_protocol_total_borrowed_usd`
+
+```graphql
+{
+  getMetric(metric: "spark_protocol_total_supplied_usd"){
+    timeseriesData(
+      slug: "maker"
+      from: "2023-04-01T00:00:00Z"
+      to: "2023-04-07T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m"){
+        datetime
+        value
+      }
+  }
+}
+```
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_protocol_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22maker%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 APY metric: `spark_supply_apy` and `spark_borrow_apy`
 
