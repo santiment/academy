@@ -295,6 +295,7 @@ export const REFERENCES = [
       'Realized Market Capitalization Hodl Waves',
       'Realized Value',
       'Sentiment Metrics',
+      'Sky Savings',
       'Social Dominance',
       'Social Volume AI',
       'Social Volume',
