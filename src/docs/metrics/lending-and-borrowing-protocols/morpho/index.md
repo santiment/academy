@@ -31,6 +31,9 @@ Protocol total action metrics:
 * `morpho_total_new_debt_usd` - Total amount of borrowings on Morpho protocol (combining all assets in USD)
 * `morpho_total_repayments_usd` - Total amount of repayments on Morpho protocol (combining all assets in USD)
 
+Morpho vaults total supplied metric:
+* `morpho_vaults_total_supplied_usd` - [Morpho vault](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_vaults_total_supplied_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D) total supplied in USD
+
 Daily active addresses:
 * `morpho_active_addresses` - Daily active addresses on Morpho protocol
 
@@ -117,6 +120,29 @@ Total action metrics: `morpho_total_deposits_usd`, `morpho_total_liquidations_us
 }
 ```
 [Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_total_new_debt_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22morpho-token%22%0A%20%20%20%20%20%20from%3A%20%222024-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-12T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221h%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
+Morpho vaults total supplied metric: `morpho_vaults_total_supplied_usd`
+
+```graphql
+{
+  getMetric(metric: "morpho_vaults_total_supplied_usd"){
+    timeseriesData(
+      selector:{
+        slug:"morpho-token" 
+        labelFqn: "santiment/morpho_vault->steakhouse usdc:v1"
+      }
+      from: "2024-10-01T00:00:00Z"
+      to: "2024-10-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1h"){
+        datetime
+        value
+      }
+  }
+}
+```
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_vaults_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%7B%0A%20%20%20%20%20%20%20%20slug%3A%22morpho-token%22%20%0A%20%20%20%20%20%20%20%20labelFqn%3A%20%22santiment%2Fmorpho_vault-%3Esteakhouse%20usdc%3Av1%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222024-10-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-10-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221h%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
 
 Daily active addresses: `morpho_active_addresses`
 
