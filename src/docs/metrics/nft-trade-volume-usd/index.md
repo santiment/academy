@@ -64,7 +64,10 @@ Amount of USD
 `rarible`
 `superrare`
 `x2y2`
-`opensea_polygon`
+
+<Notebox type="note">
+The Polygon chain has been deprecated as of October 28th 2024 and is no longer supported.
+</Notebox>
 
 ## SanAPI
 

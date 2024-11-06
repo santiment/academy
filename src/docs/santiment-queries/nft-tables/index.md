@@ -21,8 +21,9 @@ In **Santiment Queries**, we collect data for all NFTs from exchanges on:
 - Rarible
 - SuperRare
 
-### Polygon:
-- Opensea_polygon
+<Notebox type="note">
+The Polygon chain has been deprecated as of October 28th 2024 and is no longer supported.
+</Notebox>
 
 This information allows you to effortlessly track a specific NFT or an entire collection, as well as investigate past prices and owners.
 
