@@ -65,6 +65,11 @@ Amount of trades
 `superrare`
 `x2y2`
 
+<Notebox type="note">
+The Polygon chain has been deprecated as of October 28th 2024 and is no longer supported.
+</Notebox>
+
+
 ## SanAPI
 
 The following metrics are available:
