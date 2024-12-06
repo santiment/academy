@@ -21,19 +21,13 @@ There are two metrics available:
 
 ## Measuring Unit
 
-Count of transactions
+USD
 
 ---
 
 ## Data Type
 
 [Timeseries Data](/metrics/details/data-type#timeseries-data)
-
----
-
-## Change Metrics
-
-[Change Metrics](/metrics/details/change_metrics)
 
 ---
 
