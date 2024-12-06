@@ -2,7 +2,7 @@
 title: Whale Transaction Count
 author: Santiment Team
 date: 2022-07-27
-description: Amount of coin/tokens moved on-chain.
+description: Amount of coin/tokens moved on-chain by whales.
 ---
 
 ## Description

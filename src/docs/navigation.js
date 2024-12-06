@@ -318,6 +318,7 @@ export const REFERENCES = [
       'Unique Social Volume',
       'Velocity',
       'Whale Transaction Count',
+      'Whale Transaction Volume',
       'XRPL Metrics',
       'dYdX Derivatives',
     ],

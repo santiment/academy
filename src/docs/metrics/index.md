@@ -130,6 +130,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Transaction Volume In Profit Or Loss](/metrics/transaction-volume-in-profit-or-loss)
 - [Velocity](/metrics/velocity)
 - [Whale Transaction Count](/metrics/whale-transaction-count)
+- [Whale Transaction Volume](/metrics/whale-transaction-volume)
 
 </Resource>
 
