@@ -12,14 +12,14 @@ people (represented as Github accounts) that have contributed to a public
 Github repository in an organization that is followed. 
 
 There are 3 development activity contributors count metrics available:
-- `dev_activity_contributors_count` - Computed on-the-fly using the Github
+- `github_activity_contributors_count` - Computed on-the-fly using the Github
   data. Because of this the metric can compute data for any asset or just any
   random Github organization that has public repositories like Google,
   Facebook, or any other organization.
-- `dev_activity_contributors_count_7d` - Precomputed weekly metric for each
+- `github_activity_contributors_count_7d` - Precomputed weekly metric for each
   asset that is available on Santiment. This allows the metric to be aggregated
   when the value is needed for all assets at once.
-- `ecosystem_dev_activity_contributors_count_7d` - Precomputed for each
+- `ecosystem_github_activity_contributors_count_7d` - Precomputed for each
   ecosystem. The metric is defined as the total count of unique contributors
   that contributed to the github organization of at least one of assets that
   belong to it.
