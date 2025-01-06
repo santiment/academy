@@ -39,7 +39,7 @@ Amount of transactions
 
 ## Frequency
 
-[Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
+[Daily Interval](/metrics/details/frequency#daily-frequency)
 
 ---
 
