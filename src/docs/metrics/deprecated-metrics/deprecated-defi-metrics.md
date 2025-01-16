@@ -1,9 +1,14 @@
 ---
-title: DeFi
+title: Deprecated DeFi
 author: Serge Nedashkovsky, Maksim Razhev, Anatoliy
 date: 2020-12-24
 description: DeFi Metrics
 ---
+
+<Notebox type="note">
+Note: The underlying data for metrics is no longer supported.
+**Although data remains accessible through the API, we do not recommend its use.**
+</Notebox>
 
 ### Description
 
