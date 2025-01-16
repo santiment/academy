@@ -108,7 +108,6 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Amount in Top Holders](/metrics/amount-in-top-holders)
 - [Bitcoin ETF Volume](/metrics/bitcoin-etf-volume)
 - [Circulation](/metrics/circulation)
-- [DeFi](/metrics/defi)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [ETH 2.0](/metrics/eth-2)
 - [Ethena Protocol](/metrics/ethena-protocol)

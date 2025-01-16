@@ -49,6 +49,8 @@ processes.
 <Resource>
 - [Deprecated MakerDAO Metrics](/metrics/deprecated-metrics/deprecated-makerdao-metrics) -
 MakerDAO metrics have been migrated to a new framework
+- [Deprecated Defi Metrics](/metrics/deprecated-metrics/deprecated-defi-metrics) - The underlying data for metrics is 
+no longer supported
 - [Deprecated Uniswap Airdrop Metrics](/metrics/deprecated-metrics/deprecated-uniswap-metrics) - The Airdrop
 occurred in September 2020, but there are no more claims
 - [Deprecated Social Metrics](/metrics/deprecated-metrics/deprecated-social-metrics) - Some of the socual sources were combined into one.
