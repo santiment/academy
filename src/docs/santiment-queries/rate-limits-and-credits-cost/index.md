@@ -42,16 +42,35 @@ Check the plans and restrictions for **API** subscriptions on the:
 The example below shows how you can check the credits cost of your query.
 ```graphql
 {
-  computeRawClickhouseQuery(query: "SELECT * FROM intraday_metrics limit 5", parameters: "{}") {
+  runRawSqlQuery(sqlQueryText: "SELECT * FROM intraday_metrics limit 5", sqlQueryParameters: "{}") {
     clickhouseQueryId
+    rows
+    columns
   }
 }
 ```
 ```json
 {
   "data": {
-    "computeRawClickhouseQuery": {
-      "clickhouseQueryId": "175F9502835E975E"
+    "runRawSqlQuery": {
+      "clickhouseQueryId": "2d579859-c098-44b8-88ea-c7ebb45c9ee3",
+      "columns": [
+        "asset_id",
+        "metric_id",
+        "dt",
+        "value",
+        "computed_at",
+        "block_number",
+        "is_finalized",
+        "seq_num"
+      ],
+      "rows": [
+        [ 1369, 1175, "2024-04-01T00:00:00Z", 0, "2024-10-01T17:50:01Z", 0, true, 0 ],
+        [ 1369, 1175, "2024-04-02T00:00:00Z", 0, "2024-10-01T17:50:01Z", 0, true, 0 ],
+        [ 1369, 1175, "2024-04-03T00:00:00Z", 0, "2024-10-01T17:50:01Z", 0, true, 0 ],
+        [ 1369, 1175, "2024-04-04T00:00:00Z", 0, "2024-10-01T17:50:01Z", 0, true, 0 ],
+        [ 1369, 1175, "2024-04-05T00:00:00Z", 0, "2024-10-01T17:50:01Z", 0, true, 0 ]
+      ]
     }
   }
 }

@@ -51,7 +51,7 @@ On the [API Overview](/sanapi/#overview/) page one can find information how to a
 
 There are two ways to execute queries using the API:
 
-- Directly execute the `computeRawClickhouseQuery` GraphQL query against the API graphql endpoint;
+- Directly execute the `runRawSqlQuery` GraphQL query against the API graphql endpoint;
 - Use the [sanpy execute_sql function](https://github.com/santiment/sanpy#execute-sql-queries-and-get-the-result) to execute an SQL query and get the result as a Pandas DataFrame. The python library itself also uses the API, but provides functions that hide the details of the API.
 
 ### The query
@@ -89,9 +89,9 @@ What you need to do is send a POST request and put the query in the body.
 The query looks like this: 
 ```graphql
 {
-  computeRawClickhouseQuery(
-    query: "SELECT\n    get_metric_name(metric_id) AS metric,\n    get_asset_name(asset_id) AS asset,\n    dt,\n    argMax(value, computed_at) AS value\n  FROM daily_metrics_v2\n  WHERE\n    asset_id = get_asset_id({{slug}}) AND\n    metric_id = get_metric_id({{metric}}) AND\n    dt >= now() - INTERVAL {{last_n_days}} DAY\n  GROUP BY dt, metric_id, asset_id\n  ORDER BY dt ASC",
-    parameters: "{\"slug\": \"bitcoin\", \"last_n_days\": 7, \"metric\": \"nvt\"}"
+  runRawSqlQuery(
+    sqlQueryText: "SELECT\n    get_metric_name(metric_id) AS metric,\n    get_asset_name(asset_id) AS asset,\n    dt,\n    argMax(value, computed_at) AS value\n  FROM daily_metrics_v2\n  WHERE\n    asset_id = get_asset_id({{slug}}) AND\n    metric_id = get_metric_id({{metric}}) AND\n    dt >= now() - INTERVAL {{last_n_days}} DAY\n  GROUP BY dt, metric_id, asset_id\n  ORDER BY dt ASC",
+    sqlQueryParameters: "{\"slug\": \"bitcoin\", \"last_n_days\": 7, \"metric\": \"nvt\"}"
   ){
     columns
     columnTypes
@@ -100,7 +100,7 @@ The query looks like this:
 }
 ```
 
-**[Run in GraphiQL Live Explorer](https://api.santiment.net/graphiql?variables=&query=%7B%0A++computeRawClickhouseQuery%28%0A++++query%3A+%22SELECT%5Cn++++get_metric_name%28metric_id%29+AS+metric%2C%5Cn++++get_asset_name%28asset_id%29+AS+asset%2C%5Cn++++dt%2C%5Cn++++argMax%28value%2C+computed_at%29+AS+value%5Cn++FROM+daily_metrics_v2%5Cn++WHERE%5Cn++++asset_id+%3D+get_asset_id%28%7B%7Bslug%7D%7D%29+AND%5Cn++++metric_id+%3D+get_metric_id%28%7B%7Bmetric%7D%7D%29+AND%5Cn++++dt+%3E%3D+now%28%29+-+INTERVAL+%7B%7Blast_n_days%7D%7D+DAY%5Cn++GROUP+BY+dt%2C+metric_id%2C+asset_id%5Cn++ORDER+BY+dt+ASC%22%2C%0A++++parameters%3A+%22%7B%5C%22slug%5C%22%3A+%5C%22bitcoin%5C%22%2C+%5C%22last_n_days%5C%22%3A+7%2C+%5C%22metric%5C%22%3A+%5C%22nvt%5C%22%7D%22%0A++%29%7B%0A++++columns%0A++++columnTypes%0A++++rows%0A++%7D%0A%7D)**
+**[Run in GraphiQL Live Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20runRawSqlQuery(%0A%20%20%20%20sqlQueryText%3A%20%22SELECT%5Cn%20%20%20%20get_metric_name(metric_id)%20AS%20metric%2C%5Cn%20%20%20%20get_asset_name(asset_id)%20AS%20asset%2C%5Cn%20%20%20%20dt%2C%5Cn%20%20%20%20argMax(value%2C%20computed_at)%20AS%20value%5Cn%20%20FROM%20daily_metrics_v2%5Cn%20%20WHERE%5Cn%20%20%20%20asset_id%20%3D%20get_asset_id(%7B%7Bslug%7D%7D)%20AND%5Cn%20%20%20%20metric_id%20%3D%20get_metric_id(%7B%7Bmetric%7D%7D)%20AND%5Cn%20%20%20%20dt%20%3E%3D%20now()%20-%20INTERVAL%20%7B%7Blast_n_days%7D%7D%20DAY%5Cn%20%20GROUP%20BY%20dt%2C%20metric_id%2C%20asset_id%5Cn%20%20ORDER%20BY%20dt%20ASC%22%2C%0A%20%20%20%20sqlQueryParameters%3A%20%22%7B%5C%22slug%5C%22%3A%20%5C%22bitcoin%5C%22%2C%20%5C%22last_n_days%5C%22%3A%207%2C%20%5C%22metric%5C%22%3A%20%5C%22nvt%5C%22%7D%22%0A%20%20)%7B%0A%20%20%20%20columns%0A%20%20%20%20columnTypes%0A%20%20%20%20rows%0A%20%20%7D%0A%7D%0A)**
 
 > **Note**: In order to be able to run the query in the GraphiQL Explorer you need to login on [Sanbase](https://app.santiment.net) on the same browser.
 
@@ -113,7 +113,7 @@ curl 'https://api.santiment.net/graphql' \
 -X POST \
 -H 'Content-Type: application/graphql' \
 -H 'Authorization: Apikey <YOUR_API_KEY>' \
---data '{computeRawClickhouseQuery(query: "SELECT   get_metric_name(metric_id) AS metric,   get_asset_name(asset_id) AS asset,   dt,   argMax(value, computed_at) AS value FROM daily_metrics_v2 WHERE   asset_id = get_asset_id({{slug}}) AND   metric_id = get_metric_id({{metric}}) AND   dt >= now() - INTERVAL {{last_n_days}} DAY GROUP BY dt, metric_id, asset_id ORDER BY dt ASC", parameters: "{\"slug\": \"bitcoin\", \"metric\": \"nvt\", \"last_n_days\": 7}"){columns columnTypes rows}}' 
+--data '{runRawSqlQuery(sqlQueryText: "SELECT   get_metric_name(metric_id) AS metric,   get_asset_name(asset_id) AS asset,   dt,   argMax(value, computed_at) AS value FROM daily_metrics_v2 WHERE   asset_id = get_asset_id({{slug}}) AND   metric_id = get_metric_id({{metric}}) AND   dt >= now() - INTERVAL {{last_n_days}} DAY GROUP BY dt, metric_id, asset_id ORDER BY dt ASC", sqlQueryParameters: "{\"slug\": \"bitcoin\", \"metric\": \"nvt\", \"last_n_days\": 7}"){columns columnTypes rows}}' 
 ```
 
 > **Note**: If you have the `jq` tool installed, you can pipe the result into it to pretty print the result.
@@ -125,7 +125,7 @@ The result of both the direct API call and the curl command is a JSON. The dates
 ```json
 {
   "data": {
-    "computeRawClickhouseQuery": {
+    "runRawSqlQuery": {
       "columnTypes": [
         "String",
         "String",
@@ -142,44 +142,44 @@ The result of both the direct API call and the curl command is a JSON. The dates
         [
           "nvt",
           "bitcoin",
-          "2023-06-02T00:00:00Z",
-          190.89299852757196
+          "2025-01-10T00:00:00Z",
+          175.20088476942317
         ],
         [
           "nvt",
           "bitcoin",
-          "2023-06-03T00:00:00Z",
-          356.60459422752217
+          "2025-01-11T00:00:00Z",
+          471.06125719541876
         ],
         [
           "nvt",
           "bitcoin",
-          "2023-06-04T00:00:00Z",
-          368.2710836946752
+          "2025-01-12T00:00:00Z",
+          588.6754853340366
         ],
         [
           "nvt",
           "bitcoin",
-          "2023-06-05T00:00:00Z",
-          169.76949862711646
+          "2025-01-13T00:00:00Z",
+          306.4015448498733
         ],
         [
           "nvt",
           "bitcoin",
-          "2023-06-06T00:00:00Z",
-          174.47807857518634
+          "2025-01-14T00:00:00Z",
+          272.04406973516427
         ],
         [
           "nvt",
           "bitcoin",
-          "2023-06-07T00:00:00Z",
-          186.78086702105898
+          "2025-01-15T00:00:00Z",
+          223.79467244976001
         ],
         [
           "nvt",
           "bitcoin",
-          "2023-06-08T00:00:00Z",
-          912.7910441040465
+          "2025-01-16T00:00:00Z",
+          811.1304231153288
         ]
       ]
     }
@@ -189,14 +189,14 @@ The result of both the direct API call and the curl command is a JSON. The dates
 
 #### API request arguments definition
 
-The `computeRawClickhouseQuery` accepts two arguments:
+The `runRawSqlQuery` accepts two arguments:
 
-- `query` - The SQL query to execute. The query must be a valid SQL query that
+- `sqlQueryText` - The SQL query to execute. The query must be a valid SQL query that
   can be executed against the Clickhouse database. The article [Writing SQL Queries](/santiment-queries/writing-sql-queries/) is a recommended read.
   The query allows for parametrization by using named parameters. Each parameter has a key and a value.
   The query contains the parameter name surrounded in double curly braces: `{{key}}`.
-- `parameters` - A stringified JSON object that contains the key-value pairs. When the SQL query
-  is executed, the `{{key}}` templates are replaced with the corresponding values from the `parameters` object.
+- `sqlQueryParameters` - A stringified JSON object that contains the key-value pairs. When the SQL query
+  is executed, the `{{key}}` templates are replaced with the corresponding values from the `sqlQueryParameters` map.
 
 #### API result fields interpretation
 
@@ -224,7 +224,7 @@ The meaning of the fields is:
 ### Using the Python library
 
 The [sanpy](https://github.com/santiment/sanpy) provides the `execute_sql` function, which
-interacts with the above described `computeRawClickhouseQuery` API. The function accepts two
+interacts with the above described `runRawSqlQuery` API. The function accepts two
 named parameters - `query` and `parameters`, runs the query and returns the result as a Pandas DataFrame.
 
 #### sanpy request example
@@ -280,8 +280,8 @@ dt                   metric    asset       value
 
 The `execute_sql` function accepts three named parameters - one mandatory and two optinal:
 
-- `query` - The meaning is the same as in the `computeRawClickhouseQuery` API described. This parameter is mandatory/
-- `parameters` - The meaning is the same as in the `computeRawClickhouseQuery` API described above.
+- `query` - The meaning is the same as in the `runRawSqlQuery` API described. This parameter is mandatory/
+- `parameters` - The meaning is the same as in the `runRawSqlQuery` API described above.
   The format here is a Python dictionary that automatically gets converted to a JSON string when
   executing the request. If the query does not have any parameters, this parameter can be omitted.
 - `set_index` - The name of the column to use as the index of the returned DataFrame. If not
