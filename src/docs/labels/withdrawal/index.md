@@ -13,7 +13,7 @@ The most common case is a centralized exchange (CEX) withdrawal. See the details
 
 ![deposit_address](deposit-withdrawal.png)
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/cex_withdrawal:v1`
 

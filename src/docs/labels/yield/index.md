@@ -8,7 +8,7 @@ description: Yield Farming Label
 ## Description
 Label used to mark addresses that are used in Yield Farming activities
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/yield:v1`
 

@@ -12,7 +12,7 @@ contract calls in a single transaction. In contrast to vanilla externally owned 
 to interacting with just one contract per transaction, DSProxy provides greater functionality and flexibility for 
 executing complex actions on the Ethereum blockchain.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/dsproxy:v1`
 

@@ -11,7 +11,7 @@ Whale is an address holding a substensial amount of tokens. We sort all addresse
 
 Note that the addresses labelled as whale yesterday might not be a whale any more tomorrow.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/whale({asset_name}):v1`
 

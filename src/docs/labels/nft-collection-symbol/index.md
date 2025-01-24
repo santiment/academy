@@ -9,7 +9,7 @@ description: NFT collection symbol label
 
 Symbol of the [NFT collection](/labels/nft-collection).
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/nft_collection_symbol->{your_value}:v1`
 

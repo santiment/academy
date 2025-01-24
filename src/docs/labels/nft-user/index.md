@@ -9,7 +9,7 @@ description: label
 
 The label denotes an address that traded at least one NFT.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/nft_user:v1`
 

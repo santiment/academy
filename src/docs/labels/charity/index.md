@@ -9,7 +9,7 @@ description: Charity label
 
 This label is assigned for project addresses that are involved in charitable or nonprofit endeavors.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/charity:v1`
 

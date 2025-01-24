@@ -9,7 +9,7 @@ description: Blocked Label
 
 This address has been blocked by an authorized entity.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/blocked:v1`
 

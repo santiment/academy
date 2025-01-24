@@ -9,7 +9,7 @@ description: Fund label
 
 The fund label is used to identify wallet addresses that belong to investment funds operating in the cryptocurrency space.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/fund:v1`
 

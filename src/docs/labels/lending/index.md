@@ -12,7 +12,7 @@ Lending labels denotes a crypto lending platforms like aave, compound, etc and a
 Decentralized finance (DeFi) lending projects enable individuals to lend and borrow digital assets without intermediaries. 
 These platforms offer transparency, potentially higher interest rates, but also come with risks such as smart contract vulnerabilities and market volatility. 
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/lending:v1`
 

@@ -9,7 +9,7 @@ description: Migration Address
 The migration address is utilized for transferring funds between wallets. 
 It is presumed that the migration address is owned by the same individual or entity as the addresses that are associated with it.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/migration_address:v1`
 

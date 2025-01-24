@@ -9,7 +9,7 @@ description: Hot wallet label
 
 Denotes a hot wallet of a centralized exchanges or other entity.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/hot_wallet:v1`
 

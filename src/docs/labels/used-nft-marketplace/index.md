@@ -9,7 +9,7 @@ description: label
 
 The `used_nft_marketplace` label denotes the marketplaces that NFT user traded on.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/used_nft_marketplace->{your_value}:v1`
 

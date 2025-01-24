@@ -9,6 +9,6 @@ description: Scam label
 
 Label `scam` means that address has been linked to scam activity and this information has been publicly disclosed.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/scam:v1`

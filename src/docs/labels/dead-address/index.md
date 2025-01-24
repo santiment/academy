@@ -9,7 +9,7 @@ description: Dead address label
 
 Addresses that can not be owed by anyone and/or used for tokens burning. Also called as cemetary addresses.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/dead_address:v1`
 

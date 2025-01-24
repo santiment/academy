@@ -11,7 +11,7 @@ The airdrop_sender label is used to identify wallet addresses that are associate
 
 By applying the airdrop_sender label to specific addresses, you can quickly identify wallets that have been involved in initiating and sending airdrops. This label helps provide insights into the participation of wallets in airdrop campaigns and token distributions.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/airdrop_sender:v1`
 

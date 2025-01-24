@@ -11,7 +11,7 @@ Owner is a standalone label which denotes the person or company which controls a
 
 In most cases Owner label is connected with other labels (such as [centralized_exchange](/labels/centralized-exchange)).
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/owner->{your_value}:v1`
 

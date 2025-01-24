@@ -13,7 +13,7 @@ where a buyer and a seller engage in a contractual agreement to trade an underly
 These assets are sold at a prearranged time and price. 
 
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/derivatives:v1`
 

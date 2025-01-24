@@ -9,7 +9,7 @@ description: MultiSig Label
 
 Multisig wallets are a type of cryptocurrency wallets for which at least two private keys are needed to sign a transaction. Very often a multisig is a smart contract that requires several addresses to initiate a transaction.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/multisig:v1`
 
