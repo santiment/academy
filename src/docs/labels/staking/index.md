@@ -11,7 +11,7 @@ DeFi liquid staking projects create tokenized versions of staked assets, allowin
 These projects provide increased flexibility and higher rewards compared to traditional staking.
 
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/liquid_staking:v1`
 

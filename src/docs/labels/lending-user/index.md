@@ -9,7 +9,7 @@ description: Lending User
 
 These addresses were engaged in lending activities, where they facilitated the process  lending funds.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/lending_user:v1`
 

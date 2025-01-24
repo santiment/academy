@@ -13,7 +13,7 @@ Staking on the Ethereum 2.0 network involves holding and locking up a minimum of
 Ethereum 2.0 network plays a crucial role in the transition 
 from proof-of-work (PoW) to proof-of-stake (PoS) consensus mechanism, which is more energy-efficient and scalable.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/eth2_staking_address:v1`
 

@@ -11,7 +11,7 @@ The label denotes the address mining blocks. Address should produce at least 1 b
 
 In ethereum network only PoW miners are considered. There are 8331 miners labels in ethereum blockchain and new labels are not added after the Merge (September 15, 2022).
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/miner:v1`
 

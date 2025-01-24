@@ -13,7 +13,7 @@ For example: Instead of interacting directly with the target contract, all calls
 the request to the intended target contract. This allows for a greater degree of control and flexibility over the 
 contract's behavior.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/proxy:v1`
 

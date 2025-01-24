@@ -58,7 +58,7 @@ $50M|$81k
 $10M|$30k
 $1M|$7.3k
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/whale_usd_balance({asset_name}):v1`
 

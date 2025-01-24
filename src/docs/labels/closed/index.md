@@ -9,7 +9,7 @@ description: Closed label
 
 Label `closed` used to indicate that an address's owner has announced the end of their project or business operations.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/closed:v1`
 

@@ -11,7 +11,7 @@ Any smart contract which is an NFT collection contract should have the `nft-coll
 
 NFT collections are usually identified by their [nft collection name](/labels/nft-collection-name) and [nft collection symbol](/labels/nft-collection-symbol). If the collection has a name or/and symbol that's easily accessible, we create labels for those too.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/nft_collection:v1`
 

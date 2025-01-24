@@ -9,7 +9,7 @@ description: ETH2 Staking label
 
 The eth2_staking label is used to identify wallet addresses that stake ETH
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/eth2_staking:v1`
 

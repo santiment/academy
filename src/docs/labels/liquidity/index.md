@@ -9,7 +9,7 @@ description: Liquidity provider label
 
 Liquidity providers are entities that offer both buy and sell-side liquidity to cryptocurrency.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/liquidity:v1`
 

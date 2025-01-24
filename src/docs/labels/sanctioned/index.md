@@ -8,7 +8,7 @@ description: Sanctioned Label
 ## Description
 Label used to mark addresses that were added into sanction list. For example - OFAC Sanction list.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/sanctioned:v1`
 

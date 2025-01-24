@@ -8,7 +8,7 @@ description: Team wallet label
 ## Description
 
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/team_wallet:v1`
 

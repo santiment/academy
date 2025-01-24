@@ -12,7 +12,7 @@ allowing users to access assets that were previously inaccessible.
 They increase liquidity and interoperability between blockchain networks. Examples include Wrapped Bitcoin and the Binance Smart Chain.
 
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/bridge:v1`
 

@@ -9,7 +9,7 @@ description: NFT collection name label
 
 Name of the [NFT collection](/labels/nft-collection).
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/nft_collection_name->{your_value}:v1`
 

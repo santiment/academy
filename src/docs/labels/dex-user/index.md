@@ -9,7 +9,7 @@ description: label
 
 The label denotes an address that traded on at least one DEX.
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/dex_user:v1`
 

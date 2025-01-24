@@ -11,7 +11,7 @@ The centralized exchange label is used to identify wallet addresses that belong 
 
 Centralzied exchanges (CEX) are operated by a central authority or entity that manages the exchange, executes trades, and stores users' digital assets. CEXs typically have a user-friendly interface and offer high liquidity, faster transaction processing, and a wide range of trading pairs. 
 
-## [Label fqn](/label-fqn)
+## [Label fqn](/labels/label-fqn)
 
 `santiment/centralized_exchange:v1`
 
