@@ -7,7 +7,7 @@
 }
 
 .blocks {
-	@include grid-wrap(2);
+	@include grid-wrap(3);
 }
 
 .block {
@@ -37,17 +37,20 @@
 }
 
 .traders {
-	background-color: var(--jungle-green);
-
-	& .description {
-		color: var(--athens);
-	}
+	background-color: $rhino;
 }
 
 .developers {
 	background-color: $rhino;
 }
 
+.introduction {
+	background-color: var(--jungle-green);
+
+	& .description {
+		color: var(--athens);
+	}
+}
 .block {
 	height: 100%;
 	border-radius: 4px;
