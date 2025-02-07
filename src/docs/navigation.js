@@ -288,6 +288,7 @@ export const REFERENCES = [
       'Network Growth',
       'Network Profit Loss',
       'Open Interest',
+      'Pendle Markets',
       'Price Volatility',
       'Price',
       'RSI',
