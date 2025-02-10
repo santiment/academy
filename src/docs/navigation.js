@@ -405,5 +405,5 @@ export const RESOURCES = [
 
 export const GETTING_STARTED = {
   title: 'Getting started',
-  articles: ['For Traders', 'For Developers'],
+  articles: ['Santiment Introduction', 'For Traders', 'For Developers'],
 }
