@@ -21,6 +21,7 @@ and market volatility.
 
 - [Aave V2](/metrics/lending-and-borrowing-protocols/aave-v2)
 - [Aave V3](/metrics/lending-and-borrowing-protocols/aave-v3)
+- [Aave Safety Module](/metrics/lending-and-borrowing-protocols/aave-safety-module)
 - [Compound](/metrics/lending-and-borrowing-protocols/compound)
 - [Compound V3](/metrics/lending-and-borrowing-protocols/compound-v3)
 - [MakerDAO](/metrics/lending-and-borrowing-protocols/makerdao)
