@@ -246,6 +246,7 @@ export const REFERENCES = [
       'Binance Derivatives',
       'BitMEX Derivatives',
       'Bitcoin ETF Volume',
+      'BTC and S&P 500 Price Divergence',
       'Bitfinex Derivatives',
       'Circulation',
       'Community Messages Count',
