@@ -133,18 +133,18 @@ APY metrics: `fluid_supply_apy`
 {
   getMetric(metric: "fluid_supply_apy"){
     timeseriesData(
-      slug: "wrapped-bitcoin"
+      slug: "ethereum"
       from: "2025-01-10T00:00:00Z"
       to: "2025-01-12T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
+      interval: "1h"){
         datetime
         value
       }
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fluid_supply_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-12T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fluid_supply_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-12T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221h%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total supplied/borrowed metrics: `fluid_total_supplied<_usd>`
 
@@ -152,18 +152,18 @@ Total supplied/borrowed metrics: `fluid_total_supplied<_usd>`
 {
   getMetric(metric: "fluid_total_supplied"){
     timeseriesData(
-      slug: "wrapped-bitcoin"
+      slug: "ethereum"
       from: "2025-01-10T00:00:00Z"
-      to: "2025-01-12T00:00:00Z"
+      to: "2025-01-15T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
+      interval: "1d"){
         datetime
         value
       }
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fluid_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-12T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fluid_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-15T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 
 Daily active addresses: `fluid_active_addresses`
