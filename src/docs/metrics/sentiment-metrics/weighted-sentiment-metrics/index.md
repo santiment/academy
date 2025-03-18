@@ -1,8 +1,8 @@
 ---
-title: Weighted Sentiment Metrics 
+title: Weighted Sentiment Metrics
 author: Santiment Team
-date: 2024-06-26
-description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment 
+date: 2025-03-18
+description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment
 ---
 
 ## Definition
@@ -19,7 +19,7 @@ This makes the values of different assets hard to compare, as the mentions of Bi
 
 ### Sentiment Weighted Intuitive Definition
 
-**Sentiment Weighted** adjusts the values by considering the number of mentions, standardizing data to make diverse asset sentiments comparable. 
+**Sentiment Weighted** adjusts the values by considering the number of mentions, standardizing data to make diverse asset sentiments comparable.
 
 This means that spikes/dips in the metric will be seen when there is:
 - a lot of mentions for a coin
@@ -52,6 +52,18 @@ negative. In case the volume is high but the sentiment is mixed, or the
 sentiment has a strong positive (negative) polarity but with a low volume, the
 **Sentiment Weighted** metric won't have significant changes and will
 stay around 0.
+
+We have `5m`, `1h`, and `1d` weighted sentiment metrics. The difference between them is in the metrics that we use to calculate them.
+- for sentiment_weighted (5m) we use sentiment_balance (5m) and unique_social_volume (5m)
+- for sentiment_weighted_1h we use sentiment_balance (1h) and unique_social_volume_1h
+- for sentiment_weighted_1d we use sentiment_balance (1d) and unique_social_volume_1d
+
+The difference between base metrics lies in the interval on which we aggregate these metrics.
+In case of `5m` aggregated metrics when we calculate standard deviation and average for a window $d$ we take $d$ 5m's datapoints.
+
+In case of `1h` aggregated metrics -- we take $d$ 1h's datapoints.
+
+In case of `1d` aggregated metrics -- we take $d$ 1d's datapoints.
 
 ### Available Sources
 
@@ -180,4 +192,20 @@ The full list of weighted sentiment metrics is:
 - sentiment_weighted_youtube_videos
 - sentiment_weighted_farcaster
 - sentiment_weighted_total
+- sentiment_weighted_4chan_1h
+- sentiment_weighted_bitcointalk_1h
+- sentiment_weighted_reddit_1h
+- sentiment_weighted_telegram_1h
+- sentiment_weighted_twitter_1h
+- sentiment_weighted_youtube_videos_1h
+- sentiment_weighted_farcaster_1h
+- sentiment_weighted_total_1d
+- sentiment_weighted_4chan_1d
+- sentiment_weighted_bitcointalk_1d
+- sentiment_weighted_reddit_1d
+- sentiment_weighted_telegram_1d
+- sentiment_weighted_twitter_1d
+- sentiment_weighted_youtube_videos_1d
+- sentiment_weighted_farcaster_1d
+- sentiment_weighted_total_1d
 </Details>
