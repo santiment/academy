@@ -192,4 +192,20 @@ The full list of weighted sentiment metrics is:
 - sentiment_weighted_youtube_videos
 - sentiment_weighted_farcaster
 - sentiment_weighted_total
+- sentiment_weighted_4chan_1h
+- sentiment_weighted_bitcointalk_1h
+- sentiment_weighted_reddit_1h
+- sentiment_weighted_telegram_1h
+- sentiment_weighted_twitter_1h
+- sentiment_weighted_youtube_videos_1h
+- sentiment_weighted_farcaster_1h
+- sentiment_weighted_total_1d
+- sentiment_weighted_4chan_1d
+- sentiment_weighted_bitcointalk_1d
+- sentiment_weighted_reddit_1d
+- sentiment_weighted_telegram_1d
+- sentiment_weighted_twitter_1d
+- sentiment_weighted_youtube_videos_1d
+- sentiment_weighted_farcaster_1d
+- sentiment_weighted_total_1d
 </Details>
