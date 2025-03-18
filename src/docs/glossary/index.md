@@ -55,7 +55,7 @@ A single GraphQL request can accommodate multiple queries. In the following exam
 }
 ```
 
-**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20price_usd_min_interval%3A%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20nvt_min_interval%3A%20getMetric(metric%3A%20%22nvt%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)**
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20price_usd_min_interval%3A%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20nvt_min_interval%3A%20getMetric(metric%3A%20%22nvt%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 If different queries are used, aliases can be omitted. In the next example, the queries are `getMetric` and `currentUser`.
 
@@ -74,7 +74,7 @@ If different queries are used, aliases can be omitted. In the next example, the 
 }
 ```
 
-**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20currentUser%20%7B%0A%20%20%20%20id%0A%20%20%20%20username%0A%20%20%20%20email%0A%20%20%7D%0A%7D)**
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20currentUser%20%7B%0A%20%20%20%20id%0A%20%20%20%20username%0A%20%20%20%20email%0A%20%20%7D%0A%7D>)**
 
 A query can either return the specified result directly or provide a set of fields that the user can choose from.
 
@@ -100,7 +100,7 @@ In the first example, the `timeseriesData` field is used. The `datetime` and `va
 }
 ```
 
-**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-01-01T03%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%2230m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)**
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-01-01T03%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%2230m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 In the second example, the `aggregatedTimeseriesData` field is used.
 
@@ -117,13 +117,13 @@ In the second example, the `aggregatedTimeseriesData` field is used.
 }
 ```
 
-**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-01-01T03%3A00%3A00Z%22%0A%20%20%20%20%20%20aggregation%3A%20AVG%0A%20%20%20%20)%0A%20%20%7D%0A%7D)**
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-01-01T03%3A00%3A00Z%22%0A%20%20%20%20%20%20aggregation%3A%20AVG%0A%20%20%20%20)%0A%20%20%7D%0A%7D>)**
 
 # Santiment-related
 
 ## Metric
 
-In the context of Santiment's API, a metric is a term with a specific meaning. It refers to a set of data points that carry a particular significance. There are two types of metrics: [timeseries metrics](/metrics/details/data-type#timeseries-data) and [histogram metrics](/metric/details/data-type#histogram-data).
+In the context of Santiment's API, a metric is a term with a specific meaning. It refers to a set of data points that carry a particular significance. There are two types of metrics: [timeseries metrics](/metrics/details/data-type#timeseries-data) and [histogram metrics](/metrics/details/data-type#histogram-data).
 
 Consider the following example where `nvt` is the metric and `getMetric` is the query.
 
@@ -144,7 +144,7 @@ Consider the following example where `nvt` is the metric and `getMetric` is the 
 }
 ```
 
-**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nvt%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)**
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nvt%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 In some instances, the query and the metric are identical. In the next example, `historicalBalance` is both the query and the metric. This scenario occurs when a query fetches exactly one metric (the metric argument is implicit), unlike `getMetric` where the metric argument is explicitly passed with the `metric` argument.
 
@@ -163,11 +163,11 @@ In some instances, the query and the metric are identical. In the next example, 
 }
 ```
 
-**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20historicalBalance(%0A%20%20%20%20selector%3A%20%7B%20slug%3A%20%22santiment%22%2C%20infrastructure%3A%20%22ETH%22%20%7D%0A%20%20%20%20address%3A%20%220xA0D8F33Ef9B44DaAE522531DD5E7252962b09207%22%0A%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20interval%3A%20%2230d%22%0A%20%20)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20balance%0A%20%20%7D%0A%7D)**
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20historicalBalance(%0A%20%20%20%20selector%3A%20%7B%20slug%3A%20%22santiment%22%2C%20infrastructure%3A%20%22ETH%22%20%7D%0A%20%20%20%20address%3A%20%220xA0D8F33Ef9B44DaAE522531DD5E7252962b09207%22%0A%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20interval%3A%20%2230d%22%0A%20%20)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20balance%0A%20%20%7D%0A%7D>)**
 
-## Asset  
+## Asset
 
-An asset refers to any cryptocurrency or crypto token that can be associated with a specific price. Examples of assets include Bitcoin, Ethereum, and Santiment tokens. For more detailed information, please visit our [glossary on assets](/glossary/asset). 
+An asset refers to any cryptocurrency or crypto token that can be associated with a specific price. Examples of assets include Bitcoin, Ethereum, and Santiment tokens. For more detailed information, please visit our [glossary on assets](/glossary/asset).
 
 ## Slug
 
@@ -213,11 +213,10 @@ Intervals are used when fetching timeseries data. If the raw data is available a
 
 ## ISO8601
 
-The API uses the ISO8601 format for date and time. The format is structured as follows: `<year>-<month>-<day>T<hour>:<minute>:<second>Z`. 
+The API uses the ISO8601 format for date and time. The format is structured as follows: `<year>-<month>-<day>T<hour>:<minute>:<second>Z`.
 
 For instance, January 10th, 2019 at 12:34:56 would be represented as `2019-01-10T12:34:56Z`.
 
 ## API Key
 
-Your API key is essential for accessing the premium features provided by our API. For more detailed information, please refer to the [API Authentication](/sanapi/accessing-the-api/#authentication) section. 
-
+Your API key is essential for accessing the premium features provided by our API. For more detailed information, please refer to the [API Authentication](/sanapi/accessing-the-api/#authentication) section.
