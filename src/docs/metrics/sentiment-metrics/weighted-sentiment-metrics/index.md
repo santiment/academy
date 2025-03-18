@@ -59,7 +59,7 @@ We have `5m`, `1h`, and `1d` weighted sentiment metrics. The difference between 
 - for sentiment_weighted_1d we use sentiment_balance (1d) and unique_social_volume_1d
 
 The difference between base metrics lies in the interval on which we aggregate these metrics.
-In case of `5m` aggregated metrics when we calculate standard devIation and average for a window $d$ we take $d$ 5m's datapoints.
+In case of `5m` aggregated metrics when we calculate standard deviation and average for a window $d$ we take $d$ 5m's datapoints.
 
 In case of `1h` aggregated metrics -- we take $d$ 1h's datapoints.
 
