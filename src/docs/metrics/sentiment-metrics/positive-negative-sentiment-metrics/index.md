@@ -1,13 +1,13 @@
 ---
-title: Positive/Negative Sentiment Metrics 
+title: Positive/Negative Sentiment Metrics
 author: Santiment Team
 date: 2024-06-26
-description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment 
+description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment
 ---
 
 ## Definition
 
-The Sentiment Positive  and Sentiment Negative metrics represnt the sum of [Sentiment Score](/metrics/sentiment-metrics/#sentiment-score) values.
+The Sentiment Positive and Sentiment Negative metrics represnt the sum of [Sentiment Score](/metrics/sentiment-metrics/#sentiment-score) values.
 
 - `sentiment_positive_<source>` metrics are computed by taking the sum of the positive sentiment scores that are over 0.7.
 - `sentiment_negative_<source>` metrics are computed by taking the sum of the negative sentiment scores that are over 0.7.
@@ -25,12 +25,13 @@ are grouped together (messages count bigger than 1).
 
 | Messages count | Positive Sentiment Score | Negative Sentiment Score |
 | -------------- | ------------------------ | ------------------------ |
-| 3              | 0.7                      |                    0.3   |
-| 2              | 1.0                      |                    0.0   |
-| 3              | 0.2                      |                    0.8   |
-| 2              | 0.55                     |                    0.45  |
+| 3              | 0.7                      | 0.3                      |
+| 2              | 1.0                      | 0.0                      |
+| 3              | 0.2                      | 0.8                      |
+| 2              | 0.55                     | 0.45                     |
 
 Using this data we can compute:
+
 - `sentiment_positive_telegram`: $3 * 0.7 + 2 * 1.0 = 4.1$
 - `sentiment_negative_telegram`: $3 * 0.8 = 2.4$
 - `sentiment_balance_telegram`: $4.1 - 2.4 = 1.7$
@@ -46,7 +47,6 @@ Using this data we can compute:
 [Restricted Access](/metrics/details/access#restricted-access)
 
 ---
-
 
 ## Measuring Unit
 
@@ -72,9 +72,19 @@ Sum of sentiment scores
 
 ---
 
+## Change Metrics
+
+[Change Metrics:](/metrics/details/change_metrics)
+
+- sentiment_balance_total_change_1d
+- sentiment_balance_total_change_7d
+- sentiment_balance_total_change_30d
+
+---
+
 ## Available Assets
 
-All metrics have the same set of [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+All metrics have the same set of [available assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 
@@ -98,7 +108,7 @@ Fetch timeseries data for `sentiment_positive_total` for a single asset:
 }
 ```
 
-**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-90d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-30d%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-90d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-30d%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 ---
 
@@ -111,19 +121,19 @@ Fetch timeseries data for `sentiment_negative_telegram` for multiple assets at t
       from: "utc_now-60d"
       to: "utc_now-55d"
       interval: "1d"
-      selector: {slugs: ["ethereum","bitcoin"]})
-      {
-        data {
-          slug
-          value
-        }
-        datetime
+      selector: { slugs: ["ethereum", "bitcoin"] }
+    ) {
+      data {
+        slug
+        value
       }
+      datetime
+    }
   }
 }
 ```
 
-**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_telegram%22)%20%7B%0A%20%20%20%20timeseriesDataPerSlug(%0A%20%20%20%20%20%20from%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-55d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20selector%3A%20%7Bslugs%3A%20%5B%22ethereum%22%2C%22bitcoin%22%5D%7D)%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_telegram%22)%20%7B%0A%20%20%20%20timeseriesDataPerSlug(%0A%20%20%20%20%20%20from%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-55d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20selector%3A%20%7Bslugs%3A%20%5B%22ethereum%22%2C%22bitcoin%22%5D%7D)%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 ---
 
@@ -131,25 +141,28 @@ Fetch aggregated daily values for many assets:
 
 ```graphql
 {
-  allProjects(page: 1 pageSize: 50){
+  allProjects(page: 1, pageSize: 50) {
     slug
     sentimentPositive: aggregatedTimeseriesData(
       metric: "sentiment_positive_total"
       from: "utc_now-7d"
-      to: "utc_now")
+      to: "utc_now"
+    )
     sentimentNegative: aggregatedTimeseriesData(
       metric: "sentiment_negative_total"
       from: "utc_now-7d"
-      to: "utc_now")
+      to: "utc_now"
+    )
     sentimentBalance: aggregatedTimeseriesData(
       metric: "sentiment_balance_total"
       from: "utc_now-7d"
-      to: "utc_now")
+      to: "utc_now"
+    )
   }
 }
 ```
 
-**[Run in Explorer](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20allProjects(page%3A%201%20pageSize%3A%2050)%7B%0A%20%20%20%20slug%0A%20%20%20%20sentimentPositive%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_positive_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%20%20sentimentNegative%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_negative_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%20%20sentimentBalance%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_balance_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%7D%0A%7D)**
+**[Run in Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20allProjects(page%3A%201%20pageSize%3A%2050)%7B%0A%20%20%20%20slug%0A%20%20%20%20sentimentPositive%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_positive_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%20%20sentimentNegative%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_negative_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%20%20sentimentBalance%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_balance_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%7D%0A%7D>)**
 
 ---
 
@@ -168,7 +181,6 @@ The full list of Postive/Negative/Balance sentiment metrics is:
 - sentiment_positive_farcaster
 - sentiment_positive_total
 </Details>
-
 
 <Details>
 <Summary>Open Negative Sentiment Metrics List</Summary>
@@ -192,4 +204,7 @@ The full list of Postive/Negative/Balance sentiment metrics is:
 - sentiment_balance_youtube_videos
 - sentiment_balance_farcaster
 - sentiment_balance_total
+- sentiment_balance_total_change_1d
+- sentiment_balance_total_change_7d
+- sentiment_balance_total_change_30d
 </Details>
