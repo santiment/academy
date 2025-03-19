@@ -6,10 +6,16 @@ date: 2025-03-19
 
 ## Description
 
-TODO
+The DAA Divergence metric measures the difference between the number of daily active 
+addresses (DAA) and an asset's price movement. It helps identify whether network activity 
+is supporting the price trend or if there's a mismatch that could signal a potential 
+reversal. A positive divergence (higher DAA, lower price) might indicate undervaluation, 
+while a negative divergence (lower DAA, higher price) could suggest overvaluation. 
+For more info, read the [A Primer on On-chain Trading Strategies](/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies) article.
 
-- `price_daa_divergence` - TODO
-- `adjusted_price_daa_divergence` - TODO
+- `price_daa_divergence` - Divergence between an asset's price movement and daily active addresses
+- `adjusted_price_daa_divergence` - Smoother version of `price_daa_divergence`, 
+averaging data over the last 365 days
 
 ---
 
