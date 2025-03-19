@@ -295,6 +295,7 @@ export const REFERENCES = [
       'Price Volatility',
       'Price',
       'RSI',
+      'Rank',
       'Realized Market Capitalization Hodl Waves',
       'Realized Value',
       'Sentiment Metrics',
