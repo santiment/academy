@@ -103,7 +103,6 @@ export const GUIDES = [
         slug: 'Requesting display new project',
         title: 'Request to Display New Project',
       },
-      'Social Tool',
       'Social Trends',
     ],
   },
