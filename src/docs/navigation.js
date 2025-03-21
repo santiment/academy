@@ -242,7 +242,7 @@ export const REFERENCES = [
       'Age Consumed',
       'Amount in Top Holders',
       'Annual Inflation Rate',
-      'BTC and S&P 500 Price Divergence',
+      'BTC and S and P 500 Price Divergence',
       'Binance Derivatives',
       'BitMEX Derivatives',
       'Bitcoin ETF Volume',

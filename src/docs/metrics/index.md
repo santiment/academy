@@ -5,6 +5,7 @@ description: "Crypto metrics to delve into key on-chain, social, financial and d
 author: Santiment Team
 date: 2024-04-17
 ---
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FFJB48Z8tfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <Resource title="Deprecated and Renamed Metrics">
@@ -67,7 +68,6 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Unique Social Volume](/metrics/unique-social-volume)
 - [Trending Words Rank](/metrics/trending-words-rank)
 - [NFT Social Volume](/metrics/nft-social-volume)
-
 
 </Resource>
 
@@ -169,8 +169,8 @@ Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and ot
 - [Historical Balance](/metrics/historical-balance)
 - [Labelled Historical Balance](/metrics/labelled-historical-balance)
 - [Latest Transactions](/metrics/latest-transactions)
-<!-- re-add after rework -->
-<!-- - [Top Transfers](/metrics/top-transfers) -->
+  <!-- re-add after rework -->
+  <!-- - [Top Transfers](/metrics/top-transfers) -->
 - [Contract Transaction Count](/metrics/contract-transactions-count)
 - [Contract Interacting Address Count](/metrics/contract-interacting-address-count)
 
@@ -186,9 +186,11 @@ The rest of metrics are also available for XRP.
 The XRP-specific metrics are:
 
 #### Holders metrics
+
 - [Number of accounts](/metrics/xrpl-metrics/number-of-accounts)
 
 #### Activity metrics
+
 - [DEX Volume in USD](/metrics/xrpl-metrics/dex-volume)
 - [Number of assets issued](/metrics/xrpl-metrics/assets-issued)
 - [Number of active trustlines](/metrics/xrpl-metrics/trustline-count)
