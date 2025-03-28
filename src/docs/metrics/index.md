@@ -110,6 +110,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Bitcoin ETF Volume](/metrics/bitcoin-etf-volume)
 - [Circulation](/metrics/circulation)
 - [Dormant Circulation](/metrics/dormant-circulation)
+- [ETF Flow](/metrics/etf-flow)
 - [ETH 2.0](/metrics/eth-2)
 - [Ethena Protocol](/metrics/ethena-protocol)
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
