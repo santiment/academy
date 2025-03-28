@@ -257,6 +257,7 @@ export const REFERENCES = [
       'Development Activity',
       'Dormant Circulation',
       'dYdX Derivatives',
+      'ETF Flow',
       'ETH 2',
       'Emerging Trends',
       'Ethena Protocol',
