@@ -7,8 +7,8 @@ description: Inflow/Outflow from ETF providers
 
 ## Description
 
-Those metrics provide insights into the movement of funds within Exchange-Traded Funds (ETFs), tracking both inflows and outflows. ETFs issue and redeem shares through out trading hours and report at the end of the trading day.
-Following two metrics help assess investor sentiment, liquidity trends and overall market interest in ETFs from different providers.
+Those metrics provide insights into the movement of funds within Exchange-Traded Funds (ETFs), tracking both inflows and outflows. ETFs issue and redeem shares throughout trading hours and report at the end of the trading day.
+The following two metrics help assess investor sentiment, liquidity trends, and overall market interest in ETFs from different providers.
 
 - `daily_etf_flow` - Represents the net amount of money flowing in and out of ETFs on a daily basis, measured in USD, and categorized by provider.
 - `total_etf_flow` - Cumulative ETF flow since inception, reflecting the long-term investment trends and total net capital movements per provider in USD.
