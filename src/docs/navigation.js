@@ -80,6 +80,10 @@ export const GUIDES = [
       {
         slug: 'understanding short-term market trends',
         title: 'Understanding Short-term Market Trends'
+      },
+      {
+        slug: 'understanding crypto market cycles through lending metrics',
+        title: 'Understanding Crypto Market Cycles Through Lending Metrics'
       }
     ],
   },
