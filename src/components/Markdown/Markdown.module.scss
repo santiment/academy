@@ -38,7 +38,8 @@
     font-size: 22px;
   }
 
-  h4, h5 {
+  h4,
+  h5 {
     color: var(--rhino);
     @include text("body-1", "l");
     margin: 12px 0 16px;
@@ -50,7 +51,7 @@
   h4 {
     position: relative;
 
-    &:hover > .anchor {
+    &:hover>.anchor {
       opacity: 1;
     }
   }
@@ -88,7 +89,7 @@
     }
 
     @include responsive('phone-xs', 'phone', 'tablet') {
-    	display: none;
+      display: none;
     }
   }
 
@@ -97,7 +98,7 @@
     border: 1px solid var(--porcelain);
     border-radius: 4px;
 
-    &[alt$='noborder'] { 
+    &[alt$='noborder'] {
       border: none;
       border-radius: initial;
       padding-top: 16px;
@@ -133,15 +134,17 @@
     overflow-y: hidden;
     margin: 20px 0;
     padding: 0 !important;
+
     code {
       white-space: pre;
       border: none;
-    	overflow-y: hidden;
+      overflow-y: hidden;
       padding: 10px;
       margin-bottom: -10px;
       font-size: 16px;
       background: inherit;
     }
+
     span {
       font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
     }
@@ -175,26 +178,26 @@
     }
   }
 
-  ul {
-    li::before {
-      content: "•";
-      color: var(--casper);
-      transform: scale(1.5);
-      display: inline-block;
-      vertical-align: top;
-      width: 1em;
-      margin-left: -1em;
-    }
+  ul>li::before {
+    content: "•";
+    color: var(--casper);
+    transform: scale(1.5);
+    display: inline-block;
+    vertical-align: top;
+    width: 1em;
+    margin-left: -1em;
   }
 
   ol {
     list-style: none;
     counter-reset: li;
-    li {
+
+    &>li {
       counter-increment: li;
+
       &::before {
-        content: "."counter(li);
-      	color: var(--casper);
+        content: "." counter(li);
+        color: var(--casper);
         display: inline-block;
         vertical-align: top;
         width: 1em;
@@ -210,13 +213,13 @@
   ol {
     padding-left: 18px;
 
-    li {
-    	margin-bottom: 8px;
+    &>li {
+      margin-bottom: 8px;
 
-    	P {
-    		display: inline-block;
+      P {
+        display: inline-block;
         margin: 0;
-    	}
+      }
     }
   }
 
@@ -228,7 +231,7 @@
     margin: 15px 0;
 
     @include responsive('phone-xs') {
-  		overflow: auto;
+      overflow: auto;
     }
   }
 
@@ -254,8 +257,8 @@
     border: 1px solid #e7eaf3;
 
     @include responsive('phone-xs') {
-  		font-size: 12px;
-  		padding: 6px 5px;
+      font-size: 12px;
+      padding: 6px 5px;
     }
   }
 
@@ -265,7 +268,7 @@
     border-radius: 8px;
     display: block;
     font-size: 18px;
-    line-height: 26px;    
+    line-height: 26px;
     color: var(--rhino, #2F354D);
     background-color: transparent;
     position: relative;
@@ -295,7 +298,7 @@
   width: 44px;
   text-align: center;
   fill: var(--casper);
-  background:linear-gradient(270deg,#fff,#fff 60%, hsla(0,0%,100%,0));
+  background: linear-gradient(270deg, #fff, #fff 60%, hsla(0, 0%, 100%, 0));
 
   &:hover {
     fill: var(--waterloo);
