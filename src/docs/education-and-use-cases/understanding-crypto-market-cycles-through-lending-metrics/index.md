@@ -152,26 +152,22 @@ upward momentum.
 To apply these insights effectively:
 
 1. **Monitor Heat Signals**:
-
-- Track stable coin lending rates for signs of market overheating (>10%)
-- Watch for extreme borrowing demand spikes
+    * Track stable coin lending rates for signs of market overheating (>10%)
+    * Watch for extreme borrowing demand spikes
 
 2. **Identify Cooling Conditions**:
-
-- Look for declining interest rates
-- Wait for rates to flatten for 2-4 weeks
+    - Look for declining interest rates
+    - Wait for rates to flatten for 2-4 weeks
 
 3. **Confirm Capitulation**:
-
-- Large liquidation events
-- Significant debt reduction following liquidations
-- Negative funding rates (shorts paying longs)
+    - Large liquidation events
+    - Significant debt reduction following liquidations
+    - Negative funding rates (shorts paying longs)
 
 4. **Adjust Strategy Based on Market Phase**:
-
-- In strong uptrends: Consider adding positions after liquidation events
-- In choppy ranges: Wait for price to hold support at liquidation levels
-  before entering
+    - In strong uptrends: Consider adding positions after liquidation events
+    - In choppy ranges: Wait for price to hold support at liquidation levels
+      before entering
 
 ## Conclusion
 
