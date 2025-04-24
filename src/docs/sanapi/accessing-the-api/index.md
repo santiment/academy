@@ -49,14 +49,13 @@ following link:
 Here's an example of how to run a query and view the results directly in your
 browser:
 
-[GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)
-
+[GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%0A%20%20%7D%0A%7D&variables=>)
 
 ### Python library
 
 Santiment offers a Python wrapper for the GraphQL API, known as `sanpy`. You
 can find the documentation and installation instructions for this library
-[here](https://github.com/santiment/sanpy). 
+[here](https://github.com/santiment/sanpy).
 
 You can install `sanpy` using `pip` with the following command:
 
@@ -104,15 +103,12 @@ The following GraphQL request will be executed with curl:
 ```graphql
 {
   getMetric(metric: "dev_activity") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
-      from: "2020-02-10T07:00:00Z"
-      to: "2020-03-10T07:00:00Z"
-      interval: "1w"
-    ) {
-      datetime
-      value
-    }
+      from: "utc_now-60d"
+      to: "utc_now-50d"
+      interval: "1d"
+    )
   }
 }
 ```
@@ -124,13 +120,13 @@ curl \
 -X POST \
 -H "Content-Type: application/graphql" \
 --data '
-{ getMetric(metric: "dev_activity"){ timeseriesData( slug: "ethereum" from: "2020-02-10T07:00:00Z" to: "2020-03-10T07:00:00Z" interval: "1w"){ datetime value } } }' https://api.santiment.net/graphql
+{ getMetric(metric: "dev_activity"){ timeseriesDataJson( slug: "ethereum" from: "utc_now-60d" to: "utc_now-50d" interval: "1d") } }' https://api.santiment.net/graphql
 ```
 
 The response should look similar to this:
 
 ```bash
-{"data":{"getMetric":{"timeseriesData":[{"datetime":"2020-02-13T00:00:00Z","value":1281.0},{"datetime":"2020-02-20T00:00:00Z","value":1115.0},{"datetime":"2020-02-27T00:00:00Z","value":952.0},{"datetime":"2020-03-05T00:00:00Z","value":605.0}]}}}
+{"data":{"getMetric":{"timeseriesDataJson":[{"value":38,"datetime":"2025-02-23T00:00:00Z"},{"value":345,"datetime":"2025-02-24T00:00:00Z"},{"value":411,"datetime":"2025-02-25T00:00:00Z"},{"value":461,"datetime":"2025-02-26T00:00:00Z"},{"value":364,"datetime":"2025-02-27T00:00:00Z"},{"value":334,"datetime":"2025-02-28T00:00:00Z"},{"value":164,"datetime":"2025-03-01T00:00:00Z"},{"value":186,"datetime":"2025-03-02T00:00:00Z"},{"value":262,"datetime":"2025-03-03T00:00:00Z"},{"value":236,"datetime":"2025-03-04T00:00:00Z"},{"value":155,"datetime":"2025-03-05T00:00:00Z"}]}}}
 ```
 
 If you have the `jq` tool installed, you can use it to visualize the response more effectively:
@@ -140,8 +136,8 @@ curl \
 -X POST \
 -H "Content-Type: application/graphql" \
 --data '
-{ getMetric(metric: "dev_activity"){ timeseriesData( slug: "ethereum" from: "2020-02-10T07:00:00Z" to: "2020-03-10T07:00:00Z" interval: "1w"){ datetime value } } }' https://api.santiment.net/graphql \
-| jq .data.getMetric.timeseriesData
+{ getMetric(metric: "dev_activity"){ timeseriesDataJson( slug: "ethereum" from: "utc_now-60d" to: "utc_now-50d" interval: "1d")} }' https://api.santiment.net/graphql \
+| jq .data.getMetric.timeseriesDataJson
 ```
 
 The output should look like this:
@@ -149,20 +145,48 @@ The output should look like this:
 ```json
 [
   {
-    "datetime": "2020-02-13T00:00:00Z",
-    "value": 1281
+    "value": 38,
+    "datetime": "2025-02-23T00:00:00Z"
   },
   {
-    "datetime": "2020-02-20T00:00:00Z",
-    "value": 1115
+    "value": 345,
+    "datetime": "2025-02-24T00:00:00Z"
   },
   {
-    "datetime": "2020-02-27T00:00:00Z",
-    "value": 952
+    "value": 411,
+    "datetime": "2025-02-25T00:00:00Z"
   },
   {
-    "datetime": "2020-03-05T00:00:00Z",
-    "value": 605
+    "value": 461,
+    "datetime": "2025-02-26T00:00:00Z"
+  },
+  {
+    "value": 364,
+    "datetime": "2025-02-27T00:00:00Z"
+  },
+  {
+    "value": 334,
+    "datetime": "2025-02-28T00:00:00Z"
+  },
+  {
+    "value": 164,
+    "datetime": "2025-03-01T00:00:00Z"
+  },
+  {
+    "value": 186,
+    "datetime": "2025-03-02T00:00:00Z"
+  },
+  {
+    "value": 262,
+    "datetime": "2025-03-03T00:00:00Z"
+  },
+  {
+    "value": 236,
+    "datetime": "2025-03-04T00:00:00Z"
+  },
+  {
+    "value": 155,
+    "datetime": "2025-03-05T00:00:00Z"
   }
 ]
 ```
@@ -175,7 +199,7 @@ key on your [Account Settings](https://app.santiment.net/account#api-keys)
 page.
 
 After generating your API key, you need to include it as an additional HTTP
-header in the format `Authorization: Apikey <YOUR_OWN_API_KEY>`. 
+header in the format `Authorization: Apikey <YOUR_OWN_API_KEY>`.
 
 ### Authentication with GraphiQL Explorer
 
@@ -200,6 +224,7 @@ curl \
   --data '{ curentUser { id} }' \
   https://api.santiment.net/graphql
 ```
+
 ## Errors
 
 GraphQL errors are returned with HTTP status code 200.
@@ -223,9 +248,10 @@ For instance, if an invalid query is passed to the API, the following will occur
 $ curl \
   -X POST \
   -H "Content-Type: application/graphql" \
-  --data '{transactionVolume' \
+  --data '{getMetric' \
   https://api.santiment.net/graphql | jq .
 ```
+
 ```json
 {
   "errors": [
@@ -250,7 +276,7 @@ If your query is missing an argument, the error response will describe this:
 $  curl \
   -X POST \
   -H "Content-Type: application/graphql" \
-  --data '{ getMetric(metric: "price_usd"){ timeseriesData(slug: "bitcoin"){ datetime value } } }' \
+  --data '{ getMetric(metric: "price_usd"){ timeseriesDataJson(slug: "bitcoin") } }' \
   https://api.santiment.net/graphql | jq .
 ```
 
@@ -262,7 +288,7 @@ $  curl \
       "locations": [
         {
           "line": 1,
-          "column": 34
+          "column": 35
         }
       ]
     },
@@ -271,7 +297,7 @@ $  curl \
       "locations": [
         {
           "line": 1,
-          "column": 34
+          "column": 35
         }
       ]
     }
@@ -284,27 +310,26 @@ $  curl \
 If the `from` and/or `to` parameters are outside of the allowed interval for the subscription plan and
 [Historical and Realtime data restrictions](/sanapi/historical-and-realtime-data-restrictions) are applied,
 the error will look like this:
+
 ```bash
 $ curl \
   -X POST \
   -H "Content-Type: application/graphql" \
-  --data '{ getMetric(metric: "mvrv_usd_1d"){ timeseriesData(slug: "bitcoin" from: "2015-01-01T00:00:00Z" to: "2016-01-01T00:00:00Z"){ datetime value } } }' \
+  --data '{ getMetric(metric: "mvrv_usd_1d"){ timeseriesDataJson(slug: "bitcoin" from: "2015-01-01T00:00:00Z" to: "2016-01-01T00:00:00Z") } }' \
   https://api.santiment.net/graphql | jq .
 ```
+
 ```json
 {
   "data": {
     "getMetric": {
-      "timeseriesData": null
+      "timeseriesDataJson": null
     }
   },
   "errors": [
     {
-      "message": "Both `from` and `to` parameters are outside the allowed interval you can query mvrv_usd_1d with your current subscription SANAPI FREE. Upgrade to a higher tier in order to access more data.\n\nAllowed time restrictions:\n  - `from` - 2023-07-05 10:02:53.682000Z\n  - `to` - 2024-06-04 10:02:53.682000Z\n",
-      "path": [
-        "getMetric",
-        "timeseriesData"
-      ],
+      "message": "Both `from` and `to` parameters are outside the allowed interval you can query timeseries_data_json with your current subscription SANAPI FREE. Upgrade to a higher tier in order to access more data.\n\nAllowed time restrictions:\n  - `from` - 2024-04-24 12:55:45.778508Z\n  - `to` - 2025-03-25 12:55:45.778508Z\n",
+      "path": ["getMetric", "timeseriesDataJson"],
       "locations": [
         {
           "line": 1,

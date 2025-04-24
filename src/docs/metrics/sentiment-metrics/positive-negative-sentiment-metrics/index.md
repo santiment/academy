@@ -117,23 +117,17 @@ Fetch timeseries data for `sentiment_negative_telegram` for multiple assets at t
 ```graphql
 {
   getMetric(metric: "sentiment_negative_telegram") {
-    timeseriesDataPerSlug(
+    timeseriesDataPerSlugJson(
       from: "utc_now-60d"
       to: "utc_now-55d"
       interval: "1d"
       selector: { slugs: ["ethereum", "bitcoin"] }
-    ) {
-      data {
-        slug
-        value
-      }
-      datetime
-    }
+    )
   }
 }
 ```
 
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_telegram%22)%20%7B%0A%20%20%20%20timeseriesDataPerSlug(%0A%20%20%20%20%20%20from%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-55d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20selector%3A%20%7Bslugs%3A%20%5B%22ethereum%22%2C%22bitcoin%22%5D%7D)%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
+**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_negative_telegram%22)%20%7B%0A%20%20%20%20timeseriesDataPerSlugJson(%0A%20%20%20%20%20%20from%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-55d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20selector%3A%20%7B%20slugs%3A%20%5B%22ethereum%22%2C%20%22bitcoin%22%5D%20%7D%0A%20%20%20%20)%0A%20%20%7D%0A%7D%0A>)**
 
 ---
 
