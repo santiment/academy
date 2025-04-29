@@ -9,7 +9,7 @@ The terms 'asset' and 'project' are often used interchangeably in most contexts.
 
 ## Availability
 
-There are several methods to determine which assets are supported by the products within the Santiment platform. 
+There are several methods to determine which assets are supported by the products within the Santiment platform.
 
 ### [Sanpy](https://github.com/santiment/sanpy)
 
@@ -24,7 +24,7 @@ san.get("projects/all")
 
 The GraphQL request below retrieves a list of all assets:
 
-```graphql
+```graphql-explorer
 {
   allProjects {
     name
@@ -32,8 +32,6 @@ The GraphQL request below retrieves a list of all assets:
   }
 }
 ```
-
-**[Run in explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20name%0A%20%20%20%20slug%0A%20%20%7D%0A%7D)**
 
 You can execute this query using `curl` as shown below:
 
@@ -48,4 +46,3 @@ curl \
 ### [Sansheets](https://sheets.santiment.net/)
 
 After installing the plugin, you can utilize the `=SAN_ALL_PROJECTS()` function to retrieve a comprehensive list of all projects.
-
