@@ -12,7 +12,7 @@ In this article we explore some of the most frequently used queries in the SanAP
 
 This query obtains the daily active addresses for bitcoin for a period of 30 days.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "daily_active_addresses") {
     timeseriesDataJson(
@@ -24,8 +24,6 @@ This query obtains the daily active addresses for bitcoin for a period of 30 day
   }
 }
 ```
-
-You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20selector%3A%20%7B%20slug%3A%20%22bitcoin%22%20%7D%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-31T23%3A59%3A59Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%0A%20%20%7D%0A%7D%0A>).
 
 ### Retrieve data for one asset, apply some transformation - I
 
@@ -336,7 +334,7 @@ You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/gr
 
 ### Retrieve Current Prices for All Assets
 
-```graphql
+```graphql-explorer
 {
   allProjects {
     slug
@@ -350,11 +348,9 @@ You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/gr
 }
 ```
 
-You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20price%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22price_usd%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-1d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20aggregation%3A%20LAST)%0A%20%20%7D%0A%7D%0A>).
-
 ### Retrieve Current Trending Words
 
-```graphql
+```graphql-explorer
 {
   getTrendingWords(
     from: "utc_now-3h"
@@ -370,8 +366,6 @@ You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/gr
   }
 }
 ```
-
-You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getTrendingWords(from%3A%20%22utc_now-3h%22%2C%20to%3A%20%22utc_now%22%2C%20size%3A%2020%2C%20interval%3A%20%221h%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20topWords%20%7B%0A%20%20%20%20%20%20word%0A%20%20%20%20%20%20score%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>).
 
 <Notebox type="none">
 **Read next: [Rate Limits](/sanapi/rate-limits)**

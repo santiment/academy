@@ -40,10 +40,9 @@ and how all the values within an interval are aggregated.
   getMetric(metric: "twitter_followers") {
     timeseriesDataJson(
       slug: "ethereum"
-      from: "2023-01-01T00:00:00Z"
-      to: "2023-01-05T00:00:00Z"
-      interval: "1d"
-      aggregation: LAST)
+      from: "utc_now-90d"
+      to: "utc_now-60d"
+      interval: "1d")
   }
 }
 ```
@@ -77,7 +76,7 @@ information about the applied restrictions per plan.
 Each API query has a limit to the amount of data points it can fetch. The
 [Complexity Page](/sanapi/complexity) provides a detailed explanation on how
 complexity analysis determines whether a given query will be executed or
-rejected. 
+rejected.
 
 ## Glossary
 
@@ -88,4 +87,3 @@ You can find the definitions of some terms used on this page in our dedicated
 
 You can find information about the blockchains we support on our [Supported
 Blockchains page](/sanapi/supported-blockchains).
-

@@ -49,7 +49,7 @@ following link:
 Here's an example of how to run a query and view the results directly in your
 browser:
 
-[GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22)%0A%20%20%7D%0A%7D&variables=>)
+[GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-90d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%0A%20%20%7D%0A%7D&variables=>)
 
 ### Python library
 
@@ -100,7 +100,7 @@ some examples:
 
 The following GraphQL request will be executed with curl:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dev_activity") {
     timeseriesDataJson(

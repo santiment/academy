@@ -31,20 +31,20 @@ The complexity calculation considers the following factors:
 - Metric weight - **W**. Most metrics are stored in specialized fast data
   storage, so they have a smaller weight (0.3). The remaining metrics have a
   weight of 1.
-- Weighted number of assets - A. In case of returning data for many assets (timeseriesDataPerSlugJson APIs),
-  the number of assets multiplied by a weight of 0.04, minimum of 1. In case of returning
-  data for a single asset, the weight is 1.
 - Subscription plan tier - **S**. The higher the user's plan, the larger the
   complexity limit (3 for Basic, 5 for Pro, 7 for Premium). As the complexity
   threshold is constant, the computed complexity is divided by **S**. This
   means that the same query executed by a Pro user will have a complexity five
   times smaller than the same query executed by a Free user.
+- _UPCOMING_: Weighted number of assets - A. In case of returning data for many assets (timeseriesDataPerSlugJson APIs),
+  the number of assets multiplied by a weight of 0.1, minimum of 1. In case of returning
+  data for a single asset, the weight is 1.
 
 Given the above-defined values, the complexity is calculated using the
 following formula:
 
 $$
-Complexity(Q) := \dfrac{N(Q) * F(Q) * Y(Q) * W(Q) * A(Q)}{S(Q)}
+Complexity(Q) := \dfrac{N(Q) * F(Q) * Y(Q) * W(Q)}{S(Q)}
 $$
 
 In this formula, Q represents the query being analyzed, and N(Q)...S(Q) are the described values computed for that query.
@@ -53,7 +53,7 @@ In this formula, Q represents the query being analyzed, and N(Q)...S(Q) are the 
 
 Let's examine how to calculate the complexity when a Business PRO subscription user executes the following query:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "price_usd") {
     timeseriesDataPerSlugJson(
@@ -71,12 +71,12 @@ Let's examine how to calculate the complexity when a Business PRO subscription u
   of `timeseriesDataJson` which returns just a list of `datetime` and `value`.
 - `Y(Q) = 2` - Computed as: `max(diff(2025-04-24, 2021-03-16, "years"), 2) / 2`, where `/` is integer division
 - `S(Q) = 5` - The SanAPI PRO plan offers complexity limits that are 5 times higher than those of the SanAPI Free plan.
-- `A(Q) = 1` - The API call returns data for 3 assets, so A(Q) is `max(1, 3\*0.04) = 1`
+- `A(Q) = 1` - _UPCOMING_: Not used at the moment. The API call returns data for 3 assets, so A(Q) is `max(1, 3\*0.04) = 1`
   - if the number of assets was 50, then the weight would be `max(1, 50*0.04) = max(1, 2) = 2`
     The complexity of the query, Q, is calculated as follows:
 
 $$
-Complexity(Q) = \frac{72000 * 2  * 2 * 0.3 * 1}{5} = 17280
+Complexity(Q) = \frac{72000 * 2  * 2 * 0.3}{5} = 17280
 $$
 
 The complexity threshold is 50000, so this query is valid and the API server

@@ -10,6 +10,7 @@ This articles outlines the restrictions that apply to historical and realtime
 data for the [metrics](/sanapi/fetching-metrics).
 
 Example: If you are on the Free plan, you cannot access `mvrv_usd_1d` values:
+
 - older than 1 year;
 - from the last 30 days.
 
@@ -42,13 +43,12 @@ apply only to those restricted metrics.
 
 ![](./pricing-plans-restrictions.png)
 
-## How to determine the restrictions of each metric 
+## How to determine the restrictions of each metric
 
 You can obtain detailed information about the restrictions of each metric for a
-specific subscription plan using [this
-query](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(product%3A%20SANAPI%20plan%3A%20BUSINESS_PRO%20filter%3A%20METRIC)%20%7B%0A%20%20%20%20name%0A%20%20%20%20isDeprecated%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A):
+specific subscription plan using this query:
 
-```graphql
+```graphql-explorer
 {
   getAccessRestrictions(product: SANAPI plan: BUSINESS_PRO filter: METRIC) {
     name
@@ -62,6 +62,7 @@ query](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestriction
 ```
 
 The following fields are selected:
+
 - `name` - the name of the metric
 - `isDeprecated` - is the deprecated. If true, you must stop using this metric as it will be removed in the future.
 - `isAccessible` - is the metric accessible with the selected subscription plan.
@@ -70,7 +71,6 @@ The following fields are selected:
 
 You are interested in the `restrictedFrom` and `restrictedTo` fields.
 If they are both `null` -- the selected subscription plan has access to the full historical and realtime data for that plan.
-
 
 <Notebox type="none">
 **Read next: [Complexity](/sanapi/complexity)**

@@ -53,7 +53,7 @@ interval between data points.
 
 You can fetch the list of all available metrics using the following [query](https://api.santiment.net/graphiql?query=%7B%0A++getAvailableMetrics%0A%7D%0A):
 
-```graphql
+```graphql-explorer
 {
   getAvailableMetrics
 }
@@ -63,7 +63,7 @@ To fetch the list of available metrics for a specific plan and product, provide
 the `plan` and `product` arguments in the
 [query](https://api.santiment.net/graphiql?query=%7B%0A++getAvailableMetrics%28product%3A+SANAPI+plan%3A+BUSINESS_PRO%29%0A%7D):
 
-```graphql
+```graphql-explorer
 {
   getAvailableMetrics(product: SANAPI, plan: BUSINESS_PRO)
 }
@@ -77,9 +77,9 @@ Access to certain metrics may be limited in various ways based on your subscript
 - Lower-tier subscription plans may have limited access to certain metrics,
   excluding access to historical and real-time data, or no access at all.
 
-You can obtain detailed information about the restrictions on all metrics for a specific subscription plan using [this query](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(product%3A%20SANAPI%2C%20plan%3A%20BUSINESS_PRO%2C%20filter%3A%20METRIC)%20%7B%0A%20%20%20%20name%0A%20%20%20%20minInterval%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20isDeprecated%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%20%20docs%20%7B%0A%20%20%20%20%20%20link%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>):
+You can obtain detailed information about the restrictions on all metrics for a specific subscription plan using this query:
 
-```graphql
+```graphql-explorer
 {
   getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
     name
@@ -113,10 +113,9 @@ You can find the documentation for most of the metrics on [this page](/metrics).
 ## Available Assets
 
 Each metric is retrieved for a specific asset, which is identified by its `slug`.
-You can obtain a list of all slugs using [this
-query](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%7D%0A%7D%0A):
+You can obtain a list of all slugs using this query:
 
-```graphql
+```graphql-explorer
 {
   allProjects {
     slug
@@ -135,9 +134,9 @@ demonstrates three distinct lists:
 - A subset of all accessible metrics that are timeseries metrics
 - A subset of all accessible metrics that are histogram metrics
 
-You can retrieve these lists of metrics using [this query](<https://api.santiment.net/graphiql?query=%7B%0A%20%20projectBySlug(slug%3A%20%22ethereum%22)%20%7B%0A%20%20%20%20availableMetrics%0A%20%20%20%20availableTimeseriesMetrics%0A%20%20%20%20availableHistogramMetrics%0A%20%20%7D%0A%7D>):
+You can retrieve these lists of metrics using this query:
 
-```graphql
+```graphql-explorer
 {
   projectBySlug(slug: "ethereum") {
     availableMetrics
@@ -149,10 +148,9 @@ You can retrieve these lists of metrics using [this query](<https://api.santimen
 
 ## Available projects per metric
 
-To fetch the list of available slugs for a specific metric, use
-[the query](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableProjects%7B%20slug%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>):
+To fetch the list of available slugs for a specific metric, use this query:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mvrv_usd") {
     metadata {
@@ -214,7 +212,7 @@ The types of aggregations are:
 
 The following query retrieves the default aggregation and all available aggregations for each metric:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "daily_active_addresses") {
     metadata {
@@ -224,8 +222,6 @@ The following query retrieves the default aggregation and all available aggregat
   }
 }
 ```
-
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20defaultAggregation%0A%20%20%20%20%20%20availableAggregations%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 ## Queryable fields
 
@@ -291,8 +287,6 @@ the `timeseriesDataJson` field of the `getMetric` API.
 }
 ```
 
-**[Run in explorer](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-50d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20aggregation%3A%20SUM%0A%20%20%20%20%20%20transform%3A%20%7B%20type%3A%20%22moving_average%22%2C%20moving_average_base%3A%203%20%7D%0A%20%20%20%20)%0A%20%20%7D%0A%7D%0A>)**
-
 ### timeseriesDataPerSlugJson
 
 This API acts similar to timeseriesDataJson, but it can return data for more than one asset at a time.
@@ -316,8 +310,6 @@ The differences in parameters compared to timeseriesDataJson are as follows:
 }
 ```
 
-**[Run in explorer](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20timeseriesDataPerSlugJson(%0A%20%20%20%20%20%20selector%3A%20%7B%20slugs%3A%20%5B%22bitcoin%22%2C%20%22ethereum%22%5D%20%7D%0A%20%20%20%20%20%20from%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-50d%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%0A%20%20%7D%0A%7D%0A>)**
-
 ### aggregatedTimeseriesData
 
 Aggregated timeseries data is useful when you require a single value instead of
@@ -338,7 +330,7 @@ among other examples.
 
 The following query fetches the all-time highest price for Santiment:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "price_usd") {
     highest_price: aggregatedTimeseriesData(
@@ -351,8 +343,6 @@ The following query fetches the all-time highest price for Santiment:
 }
 ```
 
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20highest_price%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222017-07-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20aggregation%3A%20MAX%0A%20%20%20%20)%0A%20%20%7D%0A%7D>)**
-
 ### aggregatedTimeseriesData on the project type
 
 Queries like `allProject` or `projectBySlug` also have `aggregatedTimeseriesData` field that works the same way.
@@ -360,7 +350,7 @@ The only difference is that when using `getMetric` the `metric` is already pinne
 for `allProjects` and `projectBySlug` it is vice versa.
 Using aliases, the `aggregatedTimeseriesData` can be selected multiple times.
 
-```graphql
+```graphql-explorer
 {
   allProjects(page: 1, pageSize: 20) {
     slug
@@ -379,8 +369,6 @@ Using aliases, the `aggregatedTimeseriesData` can be selected multiple times.
   }
 }
 ```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects(page%3A%201%20pageSize%3A%2020)%7B%0A%20%20%20%20slug%0A%20%20%20%20devActivity%3A%20aggregatedTimeseriesData(metric%3A%20%22dev_activity_1d%22%20from%3A%20%22utc_now-30d%22%20to%3A%20%22utc_now%22%20aggregation%3A%20SUM)%0A%20%20%20%20priceUsd%3A%20aggregatedTimeseriesData(metric%3A%20%22price_usd%22%20from%3A%20%22utc_now-1d%22%20to%3A%20%22utc_now%22%20aggregation%3A%20LAST)%0A%20%20%7D%0A%7D%0A>)**
 
 ### histogramData
 
@@ -404,15 +392,24 @@ can use the `histogramData` subquery of the `getMetric` API.
 
 Different histogram metrics may have different response types or formats.
 
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22age_distribution%22)%20%7B%0A%20%20%20%20histogramData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-06T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20limit%3A%2020)%7B%0A%20%20%20%20%20%20%20%20labels%0A%20%20%20%20%20%20%20%20values%7B%0A%20%20%20%20%20%20%20%20%20%20...%20on%20FloatList%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20data%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
-
-- `availableMetrics` - The list of all metrics.
-- `availableTimeseriesMetrics` - The subset of the available metrics that can
-  be fetched via the `timeseriesData` field.
-- `availableHistogramMetrics` - The subset of the available metrics that can be
-  fetched via the `histogramData` field.
-
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20projectBySlug(slug%3A%20%22santiment%22)%20%7B%0A%20%20%20%20availableMetrics%0A%20%20%20%20availableTimeseriesMetrics%0A%20%20%20%20availableHistogramMetrics%0A%20%20%7D%0A%7D>)**
+```graphql-explorer
+{
+  getMetric(metric: "age_distribution") {
+    histogramData(
+      slug: "ethereum"
+      from: "utc_now-90d"
+      to: "utc_now-80d"
+      limit: 20){
+        labels
+        values{
+          ... on FloatList{
+            data
+          }
+        }
+    }
+  }
+}
+```
 
 ### metadata
 
@@ -427,7 +424,7 @@ Each metric is accompanied by metadata that describes the following:
 - The projects for which the metric is available.
 - The type of the metric, which can be either a timeseries or a histogram.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "daily_active_addresses") {
     metadata {
@@ -442,13 +439,11 @@ Each metric is accompanied by metadata that describes the following:
 }
 ```
 
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20metric%0A%20%20%20%20%20%20availableAggregations%0A%20%20%20%20%20%20availableSelectors%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%20%20dataType%0A%20%20%20%20%20%20defaultAggregation%0A%20%20%20%20%20%20minInterval%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>>)**
-
 ### availableSince
 
-You can fetch the date from which a specific metric is available for an asset using the following [query](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22transaction_volume%22%29+%7B%0A++++availableSince%28slug%3A+%22bitcoin%22%29%0A++%7D%0A%7D):
+You can fetch the date from which a specific metric is available for an asset using the following query:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "transaction_volume") {
     availableSince(slug: "bitcoin")
@@ -466,8 +461,6 @@ exchanges or markets for over a year. Therefore, the pricing data only starts
 from July 2010. As a result, the MVRV metric, which requires market
 capitalization, is also only available since July 2010.
 
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22transaction_volume%22)%20%7B%0A%20%20%20%20availableSince(slug%3A%22santiment%22)%0A%20%20%7D%0A%7D%0A>)**
-
 ### lastDatetimeComputedAt
 
 > **Note:** This field may be complex to understand. However, in the general
@@ -476,7 +469,7 @@ capitalization, is also only available since July 2010.
 The `lastDatetimeComputedAt` shows the when the latest
 data point was computed.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "daily_active_addresses") {
     lastDatetimeComputedAt(slug: "santiment")
@@ -484,13 +477,11 @@ data point was computed.
 }
 ```
 
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20lastDatetimeComputedAt(slug%3A%20%22santiment%22)%0A%20%20%7D%0A%7D%0A>)**
-
 ## Examples
 
 **Timeseries Data Example**
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "active_addresses_24h") {
     timeseriesDataJson(
@@ -525,11 +516,9 @@ project over the last 60 days, with a 1-day interval.
 }
 ```
 
-**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22twitter_followers%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22maker%22%0A++++++from%3A+%222023-01-01T00%3A00%3A00Z%22%0A++++++to%3A+%222023-02-01T00%3A00%3A00Z%22%0A++++++interval%3A+%227d%22%0A++++++transform%3A+%7Btype%3A+%22consecutive_differences%22%7D%29+%7B%0A++++++++datetime%0A++++++++value%0A++++%7D%0A++%7D%0A%7D)**
-
 **Aggregated Timeseries Data Example**
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "daily_active_addresses") {
     highest_daa: aggregatedTimeseriesData(
@@ -548,11 +537,9 @@ project over the last 60 days, with a 1-day interval.
 }
 ```
 
-**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22daily_active_addresses%22%29+%7B%0A++++highest_daa%3A+aggregatedTimeseriesData%28%0A++++++++slug%3A+%22ethereum%22%0A++++++++from%3A+%222022-01-01T00%3A00%3A00Z%22%0A++++++++to%3A+%222023-01-01T00%3A00%3A00Z%22%0A++++++%09aggregation%3A+MAX%0A++++++%29%0A++++lowest_daa%3A+aggregatedTimeseriesData%28%0A++++++++slug%3A+%22ethereum%22%0A++++++++from%3A+%222022-01-01T00%3A00%3A00Z%22%0A++++++++to%3A+%222023-01-01T00%3A00%3A00Z%22%0A++++++%09aggregation%3A+MIN%0A++++++%29%0A++%7D%0A%7D)**
-
 **Histogram Metric Example I**
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "age_distribution") {
     histogramData(
@@ -574,13 +561,11 @@ project over the last 60 days, with a 1-day interval.
 }
 ```
 
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22age_distribution%22)%20%7B%0A%20%20%20%20histogramData(slug%3A%20%22santiment%22%2C%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%2C%20to%3A%20%222020-03-30T07%3A00%3A00Z%22%2C%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20values%20%7B%0A%20%20%20%20%20%20%20%20...%20on%20DatetimeRangeFloatValueList%20%7B%0A%20%20%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20range%0A%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)**
-
 The response result is a list that contains a 2-element range of datetimes and a float value.
 
 **Histogram Metric Example**
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "price_histogram") {
     histogramData(
@@ -601,8 +586,6 @@ The response result is a list that contains a 2-element range of datetimes and a
   }
 }
 ```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_histogram%22)%20%7B%0A%20%20%20%20histogramData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-02-10T07%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-30T07%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20values%20%7B%0A%20%20%20%20%20%20%20%20...%20on%20FloatRangeFloatValueList%20%7B%0A%20%20%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20range%0A%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=>)**
 
 The response is a list that contains a 2-element range of float (prices) and a float value.
 
