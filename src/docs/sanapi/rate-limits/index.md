@@ -9,7 +9,7 @@ date: 2023-05-09
 Santiment API Rate Limiting is a mechanism that restricts the number of
 requests a user can make within a specific time frame. This limitation is
 crucial for maintaining stability and optimal performance for a large number of
-clients. 
+clients.
 
 1. **Maintaining Service Stability and Performance:** API Rate Limits prevent a
    single entity from excessively using the API service, which could
@@ -34,6 +34,7 @@ calls. In most cases, a single GraphQL request will contain only one GraphQL
 query.
 
 Executing the following GraphQL request will count as 1 API calls:
+
 ```graphql-explorer
 {
   getMetric(metric: "active_addresses_24h") {
@@ -76,18 +77,18 @@ Executing the following GraphQL request will count as 2 API calls:
 API Rate Limits are applied on a **per account** basis. This means that all API
 keys associated with a single account share the same limits. It's important to
 note that API keys used for testing or development purposes can impact the rate
-limits of the API key used for production. 
+limits of the API key used for production.
 
 The rate limits vary based on the subscription plan. You can find the details
-for each plan in [this article](products-and-plans/sanapi-plans). 
+for each plan in [this article](products-and-plans/sanapi-plans).
 
 Rate limits are applied on a **per minute**, **per hour** and **per month**
-basis, with all dates and times set to the UTC timezone. 
+basis, with all dates and times set to the UTC timezone.
 
 The refreshment of these limits occurs **at the start of the next minute, hour,
 or month**. This means that regardless of when the subscription was created,
 the count of API calls will reset at the start of the next month, specifically
-at 00:00:00 UTC on the 1st of the month. 
+at 00:00:00 UTC on the 1st of the month.
 
 ## How to Determine If You Are Being Rate Limited?
 
@@ -117,6 +118,7 @@ of API calls remaining before you reach the limit of allowed API calls:
 ## What to do if the rate limits are reached?
 
 Rate limits can be reached for various different reasons:
+
 - Excessive usage of the API during a development phase;
 - Programming error that consumes many API calls;
 - Unexpected usage peak;
