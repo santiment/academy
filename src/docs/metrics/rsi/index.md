@@ -72,18 +72,14 @@ assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3
 Available under names: `rsi_4h`, `rsi_1d` and `rsi_7d`
 
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "rsi_1d"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "bitcoin"
       from: "2023-11-01T00:00:00Z"
       to: "2023-12-01T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22rsi_1d%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222023-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-12-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

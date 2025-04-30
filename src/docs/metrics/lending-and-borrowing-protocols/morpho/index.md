@@ -84,49 +84,41 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 Action metrics: `morpho_action_deposits<_usd>`, `morpho_action_liquidations<_usd>`, 
 `morpho_action_new_debt<_usd>` and `morpho_action_repayments<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "morpho_action_deposits_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "weth"
       from: "2024-01-01T00:00:00Z"
       to: "2024-02-01T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_action_deposits_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22weth%22%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-02-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total action metrics: `morpho_total_deposits_usd`, `morpho_total_liquidations_usd`, 
 `morpho_total_new_debt_usd` and `morpho_total_repayments_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "morpho_total_new_debt_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "morpho-token"
       from: "2024-01-10T00:00:00Z"
       to: "2024-01-12T00:00:00Z"
       includeIncompleteData: true
-      interval: "1h"){
-        datetime
-        value
-      }
+      interval: "1h")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_total_new_debt_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22morpho-token%22%0A%20%20%20%20%20%20from%3A%20%222024-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-12T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221h%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Morpho vaults total supplied metric: `morpho_vaults_total_supplied_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "morpho_vaults_total_supplied_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       selector:{
         slug:"morpho-token" 
         labelFqn: "santiment/morpho_vault->steakhouse usdc:v1"
@@ -134,31 +126,23 @@ Morpho vaults total supplied metric: `morpho_vaults_total_supplied_usd`
       from: "2024-10-01T00:00:00Z"
       to: "2024-10-10T00:00:00Z"
       includeIncompleteData: true
-      interval: "1h"){
-        datetime
-        value
-      }
+      interval: "1h")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_vaults_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%7B%0A%20%20%20%20%20%20%20%20slug%3A%22morpho-token%22%20%0A%20%20%20%20%20%20%20%20labelFqn%3A%20%22santiment%2Fmorpho_vault-%3Esteakhouse%20usdc%3Av1%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222024-10-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-10-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221h%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 
 Daily active addresses: `morpho_active_addresses`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "morpho_active_addresses"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "morpho-token"
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-10T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22morpho-token%22%0A%20%20%20%20%20%20from%3A%20%222024-08-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-08-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

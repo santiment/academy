@@ -95,15 +95,12 @@ Fetch timeseries data for `sentiment_positive_total` for a single asset:
 ```graphql-explorer
 {
   getMetric(metric: "sentiment_positive_total") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "utc_now-90d"
-      to: "utc_now-60d"
-      interval: "1d"
-    ) {
-      datetime
-      value
-    }
+      to: "utc_now-30d"
+      interval: "7d"
+    )
   }
 }
 ```

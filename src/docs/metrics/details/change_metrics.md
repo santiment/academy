@@ -55,24 +55,18 @@ This metric represents the 24h percent change of the `circulation_180d`
 
 ### Get timeseries data of a change metric
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "price_usd_change_1d") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-7d"
       to: "utc_now"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in
-Explorer**](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usd_change_1d%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22bitcoin%22%0A++++++from%3A+%22utc_now-7d%22%0A++++++to%3A+%22utc_now%22%0A++++++interval%3A+%221d%22%0A++++%29+%7B%0A++++++datetime%0A++++++value%0A++++%7D%0A++%7D%0A%7D)
 
 ### Get aggregated value for multiple assets
 
@@ -97,3 +91,4 @@ Explorer**](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%
 
 [**Run in
 Explorer**](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usd_change_1d%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22bitcoin%22%0A++++++from%3A+%22utc_now-7d%22%0A++++++to%3A+%22utc_now%22%0A++++++interval%3A+%221d%22%0A++++%29+%7B%0A++++++datetime%0A++++++value%0A++++%7D%0A++%7D%0A%7D)
+

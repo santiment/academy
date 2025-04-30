@@ -64,76 +64,56 @@ Available for:
 
 Available under the `holders_distribution_total` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "holders_distribution_total") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "xrp"
       from: "2020-01-01T00:00:00Z"
       to: "2020-01-07T00:00:00Z"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22holders_distribution_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22xrp%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
 
 Available under the `active_addresses_30d` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "active_addresses_30d") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "xrp"
       from: "2020-01-01T00:00:00Z"
       to: "2020-01-07T00:00:00Z"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_30d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22xrp%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
 
 Available under the `active_addresses_60d` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "active_addresses_60d") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "xrp"
       from: "2020-01-01T00:00:00Z"
       to: "2020-01-07T00:00:00Z"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_60d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22xrp%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
 
 Available under the `active_addresses_90d` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "active_addresses_90d") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "xrp"
       from: "2020-01-01T00:00:00Z"
       to: "2020-01-07T00:00:00Z"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_90d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22xrp%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)

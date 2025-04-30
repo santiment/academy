@@ -73,59 +73,47 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 
 Total staked amount metrics: `aave_safety_module_amount<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_safety_module_amount"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "gho"
       from: "2025-01-01T00:00:00Z"
       to: "2025-01-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_safety_module_amount%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22gho%22%0A%20%20%20%20%20%20from%3A%20%222025-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Emissions and APR metrics: `aave_safety_module_emission_usd`
 and `aave_safety_module_apr`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_safety_module_apr"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "aave"
       from: "2025-01-01T00:00:00Z"
       to: "2025-01-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_safety_module_apr%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222025-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total metrics: `aave_safety_module_total_amount_usd` and 
 `aave_safety_module_total_emission_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_safety_module_total_amount_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "aave"
       from: "2025-01-01T00:00:00Z"
       to: "2025-01-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_safety_module_total_amount_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222025-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
