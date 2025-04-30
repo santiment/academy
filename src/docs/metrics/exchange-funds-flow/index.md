@@ -116,63 +116,45 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 Available under the `exchange_balance`, `exchange_inflow` and `exchange_outflow` names.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "exchange_balance") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2020-01-01T12:00:00Z"
       to: "2020-01-03T12:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
 
-**[Run in
-explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22exchange_balance%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T12%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-03T12%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
-
 ---
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "exchange_inflow") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2020-01-01T12:00:00Z"
       to: "2020-01-03T12:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in
-explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22exchange_inflow%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T12%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-03T12%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 ---
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "exchange_outflow") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2020-01-01T12:00:00Z"
       to: "2020-01-03T12:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in
-explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22exchange_outflow%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T12%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-03T12%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**

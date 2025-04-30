@@ -9,7 +9,7 @@ description: The total number of BitMEX perpetual contracts in existence.
 
 Open Interest shows the amount of open perpetual contracts currently on Bitmex's Project Ticker / USD trading
  pairs. When open
- interest reaches unusually high numbers, it can precede increased volatility in the coin’s price.  
+ interest reaches unusually high numbers, it can precede increased volatility in the coin's price.  
 
 Open Value shows the value of the corresponding open interest in Satoshis (XBT/BTC).
 
@@ -58,23 +58,18 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 Available under the `bitmex_perpetual_open_interest` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "bitmex_perpetual_open_interest") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "bitcoin"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22bitmex_perpetual_open_interest%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 
 ---
@@ -83,20 +78,15 @@ Available under the `bitmex_perpetual_open_interest` name.
 
 Available under the `bitmex_perpetual_open_value` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "bitmex_perpetual_open_value") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "bitcoin"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22bitmex_perpetual_open_value%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)

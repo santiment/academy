@@ -67,44 +67,30 @@ Available for `ethereum`.
 
 Amount of total locked ETH coins is available under the `defi_total_value_locked_eth` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "defi_total_value_locked_eth") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
       interval: "1h"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20
-%22defi_total_value_locked_eth%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum
-%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221h%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 Denominated in USD - `defi_total_value_locked_usd`.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "defi_total_value_locked_usd") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
       interval: "1h"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20
-%22defi_total_value_locked_usd%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum
-%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221h%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)

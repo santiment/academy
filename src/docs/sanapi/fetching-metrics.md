@@ -32,18 +32,15 @@ timeseries data, histogram data, and aggregated timeseries data.
 
 Here is an example of a GraphQL `getMetric` query:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "active_addresses_24h") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "bitcoin"
       from: "2023-05-01T08:00:00Z"
       to: "2023-05-02T08:00:00Z"
       interval: "30m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
@@ -51,8 +48,6 @@ Here is an example of a GraphQL `getMetric` query:
 This query retrieves the timeseries data for the metric "active_addresses_24h"
 for Bitcoin, from 8:00 on May 1, 2023, to 8:00 on May 2, 2023, with a 30-minute
 interval between data points.
-
-**[Run the query in the GraphiQL Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222023-05-01T08%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-05-02T08%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%2230m%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 ## Available Metrics
 
@@ -281,7 +276,7 @@ the `timeseriesDataJson` field of the `getMetric` API.
   - `{type: "moving_average", moving_average_base: base}`: Apply a simple moving average. Each data point value is calculated as the average of the last `base` intervals. To compute this, it fetches enough data before `from` so it can be computed.
   - `{type: "changes"}`: For each data point, change the value to the difference between the value and the previous value.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dev_activity") {
     timeseriesDataJson(
@@ -307,7 +302,7 @@ The differences in parameters compared to timeseriesDataJson are as follows:
   `selector: {slugs: ["bitcoin", "ethereum"]}`
 - It does not support the `transform` parameter
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "price_usd") {
     timeseriesDataPerSlugJson(
@@ -498,24 +493,22 @@ data point was computed.
 ```graphql
 {
   getMetric(metric: "active_addresses_24h") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "bitcoin"
       from: "2023-05-01T08:00:00Z"
       to: "2023-05-02T08:00:00Z"
       interval: "30m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
 
-**[Run in Explorer](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A++getMetric%28metric%3A+%22active_addresses_24h%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22bitcoin%22%0A++++++from%3A+%222023-05-01T08%3A00%3A00Z%22%0A++++++to%3A+%222023-05-02T08%3A00%3A00Z%22%0A++++++interval%3A+%2230m%22%29+%7B%0A++++++++datetime%0A++++++++value%0A++++%7D%0A++%7D%0A%7D%0A)**
+This example query retrieves the `development_activity` metric for the Ethereum
+project over the last 60 days, with a 1-day interval.
 
 **Timeseries Data Example**
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "twitter_followers") {
     timeseriesData(

@@ -61,18 +61,14 @@ Available for `m2-money`
 Available under name: `money_supply`
 
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "money_supply"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "m2-money"
       from: "2024-01-01T00:00:00Z"
       to: "2024-03-01T00:00:00Z"
-      interval: "7d"){
-        datetime
-        value
-      }
+      interval: "7d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22money_supply%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22m2-money%22%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%227d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

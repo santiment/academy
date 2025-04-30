@@ -84,23 +84,18 @@ The term refers to a [GraphQL field](https://graphql.org/learn/queries/#fields).
 
 In the first example, the `timeseriesData` field is used. The `datetime` and `value` are also fields. This illustrates that fields can either have arguments or not.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "active_addresses_24h") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2019-01-01T00:00:00Z"
       to: "2019-01-01T03:00:00Z"
       interval: "30m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-01-01T03%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%2230m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 In the second example, the `aggregatedTimeseriesData` field is used.
 
@@ -127,24 +122,19 @@ In the context of Santiment's API, a metric is a term with a specific meaning. I
 
 Consider the following example where `nvt` is the metric and `getMetric` is the query.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "nvt") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2019-01-01T00:00:00Z"
       to: "2019-09-01T00:00:00Z"
       includeIncompleteData: true
       interval: "7d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nvt%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 In some instances, the query and the metric are identical. In the next example, `historicalBalance` is both the query and the metric. This scenario occurs when a query fetches exactly one metric (the metric argument is implicit), unlike `getMetric` where the metric argument is explicitly passed with the `metric` argument.
 

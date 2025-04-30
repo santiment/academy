@@ -62,18 +62,14 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 Available under name: `annual_inflation_rate`
 
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "annual_inflation_rate"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "bitcoin"
       from: "2024-01-01T00:00:00Z"
       to: "2024-02-01T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22annual_inflation_rate%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-02-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

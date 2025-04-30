@@ -64,54 +64,42 @@ Available for `multi-collateral-dai`
 
 Deposit and withdraw metrics: `makerdao_dsr_deposits` and `makerdao_dsr_withdrawals`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "makerdao_dsr_deposits"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "multi-collateral-dai"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-03T00:00:00Z"
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_dsr_deposits%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 Total supplied metric: `makerdao_dsr_total_supplied`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "makerdao_dsr_total_supplied"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "multi-collateral-dai"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-03T00:00:00Z"
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_dsr_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 MakerDAO DAI savings rate metric: `mcd_dsr`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mcd_dsr"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "multi-collateral-dai"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-03T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mcd_dsr%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)

@@ -20,11 +20,11 @@ MVRV shows the ratio between the current price and the average price of every co
 
 The MVRV Ratio is used as an on-chain indicator for the purpose of studying aggregate investor behaviors as price moves to/from their cost basis. It can be considered as a mean reversion style model, where the Realized Cap (aggregate market cost basis) functions as the mean and MVRV measures deviations from this mean.
 
-The value of an asset’s given MVRV gives an idea of how much overvalued or undervalued an asset is based on short, mid, or long-term timeframes.
+The value of an asset's given MVRV gives an idea of how much overvalued or undervalued an asset is based on short, mid, or long-term timeframes.
 
 An MVRV value of 100% (or 2.0) means that if all holders sell their coins/tokens at the current price, they will generate a 100% (x2) profit on average. The more this ratio increases, the more likely traders have historically demonstrated their willingness to sell.
 
-On the other side of the spectrum, a negative MVRV value indicates that the asset is "undervalued" on average. This means that if all coins were sold, most traders will be realizing losses at the asset’s current price.
+On the other side of the spectrum, a negative MVRV value indicates that the asset is "undervalued" on average. This means that if all coins were sold, most traders will be realizing losses at the asset's current price.
 
 MVRV values (regardless of which timeframe) will hover around 0%, assuming the asset has had enough time to normalize after its introduction as a publicly-traded asset.
 
@@ -46,7 +46,7 @@ $$
 
 ## Usage Guide
 
-The MVRV ratio allows traders to gauge both actual profitability vs. loss on the network, as well as gauge the inherent degree of fear and greed that comes with it. Assets have different extremes in terms of how far a positive or negative fluctuation in its MVRV can go. And if we measure the coin’s current MVRV vs. its lowest and highest points, it’s usually fair to make educated presumptions of when price tops and bottoms are forming.
+The MVRV ratio allows traders to gauge both actual profitability vs. loss on the network, as well as gauge the inherent degree of fear and greed that comes with it. Assets have different extremes in terms of how far a positive or negative fluctuation in its MVRV can go. And if we measure the coin's current MVRV vs. its lowest and highest points, it's usually fair to make educated presumptions of when price tops and bottoms are forming.
 
 ### MVRV Bitcoin chart
 
@@ -153,89 +153,63 @@ metrics are available under the `mvrv_usd_intraday` name under the
 
 Example of query for **mvrv_usd**:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mvrv_usd") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2019-01-01T00:00:00Z"
       to: "2019-09-01T00:00:00Z"
       interval: "7d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
 
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22mvrv_usd%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
-
-
 Example of query for **mvrv_usd_intraday**:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mvrv_usd_intraday") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-90d"
       to: "utc_now-30d"
       interval: "3d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd_intraday%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22bitcoin%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-90d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-30d%22%0A%20%20%20%20%20%20interval%3A%20%223d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
 
 Example of query for **timebound MVRV**:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mvrv_usd_7d") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2019-01-01T00:00:00Z"
       to: "2019-09-01T00:00:00Z"
       interval: "7d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
 
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22mvrv_usd_7d%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+Example of query for **MVRV Long/Short Difference**
 
-Example of query for **MVRV long-short difference**:
-
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mvrv_long_short_diff_usd") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2019-01-01T00:00:00Z"
       to: "2019-09-01T00:00:00Z"
       interval: "7d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%22mvrv_long_short_diff_usd%22)%20%7B%0A%20%20%20%20timeseriesData(slug%3A%22santiment%22%2C%20from%3A%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%222019-09-01T00%3A00%3A00Z%22%2C%20interval%3A%227d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 ## Full list of metrics
 

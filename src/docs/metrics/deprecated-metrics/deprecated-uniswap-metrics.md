@@ -73,19 +73,15 @@ Metrics that have `percent` in name represent the percentage.
 
 ## API
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "uniswap_claims_amount") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "uniswap"
       from: "2020-09-15T00:00:00Z"
       to: "2020-10-01T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[Run in explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22uniswap_claims_amount%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22uniswap%22%0A%20%20%20%20%20%20from%3A%20%222020-09-15T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-10-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

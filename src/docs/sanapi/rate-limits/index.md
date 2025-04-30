@@ -34,48 +34,39 @@ calls. In most cases, a single GraphQL request will contain only one GraphQL
 query.
 
 Executing the following GraphQL request will count as 1 API calls:
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "active_addresses_24h") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2019-01-01T00:00:00Z"
       to: "2019-01-01T03:00:00Z"
       interval: "30m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
 
 Executing the following GraphQL request will count as 2 API calls:
 
-```graphql
+```graphql-explorer
 {
   activeAddresses: getMetric(metric: "active_addresses_24h") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2019-01-01T00:00:00Z"
       to: "2019-01-01T03:00:00Z"
       interval: "30m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 
   transactionVolume: getMetric(metric: "transaction_volume") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2019-01-01T00:00:00Z"
       to: "2019-01-01T03:00:00Z"
       interval: "30m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```

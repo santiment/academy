@@ -110,71 +110,54 @@ Assets available for metrics:
 
 Token Locked in Multi-Collateral CDPs 
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mcd_locked_token") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "weth"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
-      interval: "1d") {
-        datetime
-        value
-    }
+      interval: "1d")
   }
 }
 ```
 
-[**Run in Explorer**](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22mcd_locked_token%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22weth%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
-
 DAI ERC20 token total supply:
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mcd_erc20_supply") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "multi-collateral-dai"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
-      interval: "1d") {
-        datetime
-        value
-    }
+      interval: "1d")
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mcd_erc20_supply%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 DAI Total supply:
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mcd_supply") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "multi-collateral-dai"
       from: "2020-04-02T00:00:00Z"
       to: "2020-04-03T00:00:00Z"
-      interval: "5m") {
-        datetime
-        value
-    }
+      interval: "5m")
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mcd_supply%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20from%3A%20%222020-04-02T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 SCD Collateral Ratio:
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "scd_collat_ratio") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "weth"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
-      interval: "1d") {
-        datetime
-        value
-    }
+      interval: "1d")
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22scd_collat_ratio%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22weth%22%0A%20%20%20%20%20%20from%3A%20%222020-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 

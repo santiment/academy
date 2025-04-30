@@ -103,10 +103,10 @@ Tether, USD coin, DAI, Binance USD, TrueUSD and other stablecoins.
 Trade volume metrics: `total_trade_volume_by_dex`, `eth_based_trade_volume_by_dex`, 
 `stablecoin_trade_volume_by_dex` and `other_trade_volume_by_dex`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "total_trade_volume_by_dex") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "multi-collateral-dai"
       	owner: "bancor_v3"
@@ -115,22 +115,18 @@ Trade volume metrics: `total_trade_volume_by_dex`, `eth_based_trade_volume_by_de
       from: "2023-01-01T00:00:00Z"
       to: "2023-01-07T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22total_trade_volume_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22bancor_v3%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Number of trades metrics: `total_trade_amount_by_dex`, `eth_based_trade_amount_by_dex`, 
 `stablecoin_trade_amount_by_dex` and `other_trade_amount_by_dex`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "total_trade_amount_by_dex") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "multi-collateral-dai"
       	owner: "sushi_v2"
@@ -139,21 +135,17 @@ Number of trades metrics: `total_trade_amount_by_dex`, `eth_based_trade_amount_b
       from: "2023-01-01T00:00:00Z"
       to: "2023-01-07T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22total_trade_amount_by_dex%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20%09owner%3A%20%22sushi_v2%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Trade volume between ERC20 token and ETH-based tokens: `eth_trade_volume_by_token`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "eth_trade_volume_by_token") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "chainlink"
       	owner: "uniswap_v2"
@@ -162,21 +154,17 @@ Trade volume between ERC20 token and ETH-based tokens: `eth_trade_volume_by_toke
       from: "2023-01-01T00:00:00Z"
       to: "2023-01-07T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth_trade_volume_by_token%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22chainlink%22%0A%20%20%20%20%20%20%09owner%3A%20%22uniswap_v2%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Trade volume between ERC20 token and stablecoins: `stablecoin_trade_volume_by_token`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "stablecoin_trade_volume_by_token") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "wrapped-bitcoin"
       	owner: "uniswap_v3"
@@ -185,21 +173,17 @@ Trade volume between ERC20 token and stablecoins: `stablecoin_trade_volume_by_to
       from: "2023-01-01T00:00:00Z"
       to: "2023-01-07T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22stablecoin_trade_volume_by_token%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20%09owner%3A%20%22uniswap_v3%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Token ETH Price by DEX: `token_eth_price_by_dex_5m`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "token_eth_price_by_dex_5m") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "usd-coin"
       	owner: "uniswap_v3"
@@ -208,11 +192,7 @@ Token ETH Price by DEX: `token_eth_price_by_dex_5m`
       from: "2023-01-01T00:00:00Z"
       to: "2023-01-07T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22token_eth_price_by_dex_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22usd-coin%22%0A%20%20%20%20%20%20%09owner%3A%20%22uniswap_v3%22%0A%20%20%20%20%20%20%09label%3A%20%22decentralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

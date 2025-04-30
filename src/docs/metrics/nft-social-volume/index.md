@@ -78,21 +78,15 @@ Available under the `nft_social_volume` name, where the value is combined from a
 
 ### Social Volume for [Azuki](https://www.azuki.com/gallery)
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "nft_social_volume") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {contractAddress:"0xed5af388653567af2f388e6224dc7c4b3241c544"}
       from: "2022-01-01T00:00:00Z"
       to: "2022-03-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in
-Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_social_volume%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7BcontractAddress%3A%220xed5af388653567af2f388e6224dc7c4b3241c544%22%7D%0A%20%20%20%20%20%20from%3A%20%222022-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**

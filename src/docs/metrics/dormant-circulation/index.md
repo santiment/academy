@@ -82,24 +82,18 @@ Available under the `dormant_circulation_<timebound>` names.
 The smallest supported interval is 90 days.
 The biggest supported interval is 10 years.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dormant_circulation_90d") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2020-01-01T00:00:00Z"
       to: "2020-01-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in
-Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dormant_circulation_90d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 ## Full list of metrics
 
