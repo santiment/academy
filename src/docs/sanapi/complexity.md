@@ -28,6 +28,9 @@ The complexity calculation considers the following factors:
   days), the number of data points is small. However, the time range spans
   several years. The query still needs to read and aggregate a lot of data in
   the database.
+- Metric weight - **W**. Most metrics are stored in specialized fast data
+  storage, so they have a smaller weight (0.3). The remaining metrics have a
+  weight of 1.
 - Weighted number of assets - A. In case of returning data for many assets (timeseriesDataPerSlugJson APIs),
   the number of assets multiplied by a weight of 0.04, minimum of 1. In case of returning
   data for a single asset, the weight is 1.
@@ -41,7 +44,7 @@ Given the above-defined values, the complexity is calculated using the
 following formula:
 
 $$
-Complexity(Q) := \dfrac{N(Q) * F(Q) * Y(Q) * A(Q)}{S(Q)}
+Complexity(Q) := \dfrac{N(Q) * F(Q) * Y(Q) * W(Q) * A(Q)}{S(Q)}
 $$
 
 In this formula, Q represents the query being analyzed, and N(Q)...S(Q) are the described values computed for that query.
@@ -57,13 +60,13 @@ Let's examine how to calculate the complexity when a Business PRO subscription u
       selector: { slugs: ["bitcoin", "ethereum", "xrp"] }
       from: "utc_now-1500d"
       to: "utc_now"
-      interval: "1h"
+      interval: "30m"
     )
   }
 }
 ```
 
-- `N(Q) = 1500 * 24 = 36000` - The time range spans 3650 days and the interval is set to 1 hour.
+- `N(Q) = 1500 * 24 * 2 = 72000` - The time range spans 3650 days and the interval is set to 1 hour.
 - `F(Q) = 2` - The data points count in practice is 4, but it is explicitly set to 2, so it mimics the behavior
   of `timeseriesDataJson` which returns just a list of `datetime` and `value`.
 - `Y(Q) = 2` - Computed as: `max(diff(2025-04-24, 2021-03-16, "years"), 2) / 2`, where `/` is integer division
@@ -73,17 +76,17 @@ Let's examine how to calculate the complexity when a Business PRO subscription u
     The complexity of the query, Q, is calculated as follows:
 
 $$
-Complexity(Q) = \frac{36000 * 2  * 2 * 1}{5} = 28800
+Complexity(Q) = \frac{72000 * 2  * 2 * 0.3 * 1}{5} = 17280
 $$
 
 The complexity threshold is 50000, so this query is valid and the API server
 will execute it. If a SanAPI Free user attempts to execute this query, S(Q)
-will equal 1 and the complexity will be 144000. This will trigger the
+will equal 1 and the complexity will be 86400. This will trigger the
 following error:
 
 ```
 Operation is too complex:
-complexity is 144000 and maximum is 50000
+complexity is 86400 and maximum is 50000
 ```
 
 <Notebox type="none">
