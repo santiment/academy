@@ -109,36 +109,30 @@ Ratio
 - `nvt_5min` - Same as `nvt`, but computed with 5-minute frequency.
 - `nvt_transaction_volume` - NVT using Transaction Volume. Computed with daily frequency.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "nvt") {
     timeseriesDataJson(
       slug: "santiment"
-      from: "2019-01-01T00:00:00Z"
-      to: "2019-09-01T00:00:00Z"
-      interval: "7d"
+      from: "utc_now-90d"
+      to: "utc_now-60d"
+      interval: "1d"
     )
   }
 }
 ```
 
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nvt%22)%20%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%0A%20%20%7D%0A%7D%0A>)
-
 ---
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "nvt_transaction_volume") {
     timeseriesDataJson(
       slug: "santiment"
-      from: "2019-01-01T00:00:00Z"
-      to: "2019-09-01T00:00:00Z"
-      interval: "7d"
+      from: "utc_now-90d"
+      to: "utc_now-60d"
+      interval: "1d"
     )
   }
 }
 ```
-
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nvt_transaction_volume%22)%20%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%0A%20%20%7D%0A%7D%0A>)
