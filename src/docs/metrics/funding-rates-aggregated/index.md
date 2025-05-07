@@ -64,10 +64,10 @@ Decimal percentage
 - Funding rates aggregated by settlement currency is available for  `funding_rates_aggregated_by_settlement_currency` name.
 - Total funding rates aggregated by asset is available for `total_funding_rates_aggregated_per_asset` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "funding_rates_aggregated_by_exchange") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
         owner: "binance"
@@ -75,23 +75,18 @@ Decimal percentage
       from: "2023-11-27T00:00:00Z"
       to: "2023-11-28T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
 
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22funding_rates_aggregated_by_exchange%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%20%20owner%3A%20%22binance%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-11-27T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-11-28T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 ---
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "funding_rates_aggregated_by_settlement_currency") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
         owner: "USDT"
@@ -99,37 +94,26 @@ explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric
       from: "2023-11-27T00:00:00Z"
       to: "2023-11-28T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
 
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22funding_rates_aggregated_by_settlement_currency%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%20%20owner%3A%20%22USDT%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-11-27T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-11-28T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 
 ---
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "total_funding_rates_aggregated_per_asset") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
       }
       from: "2023-11-27T00:00:00Z"
       to: "2023-11-28T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[Run in
-explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22total_funding_rates_aggregated_per_asset%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-11-27T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-11-28T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

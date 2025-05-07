@@ -86,77 +86,61 @@ Repayment/borrow metrics available for `liquity-usd`
 Action metrics: `liquity_action_deposits<_usd>`, `liquity_action_liquidations<_usd>`, 
 `liquity_action_new_debt<_usd>` and `liquity_action_repayments<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "liquity_action_new_debt"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "liquity-usd"
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-03T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22liquity_action_new_debt%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22liquity-usd%22%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total supplied/borrowed metrics: `liquity_total_supplied<_usd>` and 
 `liquity_total_borrowed<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "liquity_total_supplied"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-03T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22liquity_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Borrow fee metric: `liquity_borrow_fee`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "liquity_borrow_fee"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "liquity-usd"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-03T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22liquity_borrow_fee%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22liquity-usd%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Daily active addresses: `liquity_active_addresses`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "liquity_active_addresses"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "liquity-usd"
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22liquity_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22liquity-usd%22%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

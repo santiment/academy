@@ -33,21 +33,17 @@ In this example, the query fetches the daily active addresses for Bitcoin. The
 query is self-descriptive and easy to maintain. New members to your team can
 intuitively understand the query without the need to consult the documentation.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "daily_active_addresses"){
-    timeseriesData(
+    timeseriesDataJson(
       selector: {slug: "bitcoin"}
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-31T23:59:59Z"
-      interval: "1d"){
-        datetime
-        value
-    }
+      interval: "1d")
   }
 }
 ```
-[Run the example](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7Bslug%3A%20%22bitcoin%22%7D%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-31T23%3A59%3A59Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
 
 Find more GraphQL query examples on the [Common
 Queries](/sanapi/common-queries) page, or read [How to access the

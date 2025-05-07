@@ -72,18 +72,14 @@ Available under names: `price_volatility_1d`, `price_volatility_1w`,
 `price_volatility_2w` and `price_volatility_4w`
 
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "price_volatility_1d"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2022-11-01T00:00:00Z"
       to: "2022-11-03T00:00:00Z"
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_volatility_1d%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

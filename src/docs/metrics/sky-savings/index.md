@@ -65,55 +65,42 @@ Available for `usds`
 
 Deposit and withdraw metrics: `sky_savings_deposits` and `sky_savings_withdrawals`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "sky_savings_deposits"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "usds"
       from: "2024-10-01T00:00:00Z"
       to: "2024-10-07T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sky_savings_deposits%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22usds%22%0A%20%20%20%20%20%20from%3A%20%222024-10-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-10-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total supplied metric: `sky_savings_total_supplied`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "sky_savings_total_supplied"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "usds"
       from: "2024-10-01T00:00:00Z"
       to: "2024-10-07T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sky_savings_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22usds%22%0A%20%20%20%20%20%20from%3A%20%222024-10-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-10-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
 
 Savings APY metric: `sky_savings_apy`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "sky_savings_apy"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "usds"
       from: "2024-10-01T00:00:00Z"
       to: "2024-10-07T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sky_savings_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22usds%22%0A%20%20%20%20%20%20from%3A%20%222024-10-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-10-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

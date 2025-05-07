@@ -78,46 +78,34 @@ Non-negative number of addresses
 
 The metric is available under the `active_withdrawals` name for daily resolution and `active_withdrawals_5m` for intraday resolution.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "active_withdrawals") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2023-05-09T11:25:04.894Z"
       to: "2023-06-23T11:25:04.894Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in
-explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_deposits%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222023-05-09T11%3A25%3A04.894Z%22%0A%20%20%20%20%20%20to%3A%20%222023-06-23T11%3A25%3A04.894Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 
 Withdrawal transactions are available under `withdrawal_transactions` and `withdrawal_transactions_5m` names.
 
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "withdrawal_transactions_5m") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2024-01-01T00:00:00.000Z"
       to: "2024-01-02T00:00:00.000Z"
-      interval: "1h") {
-        datetime
-        value
-    }
+      interval: "1h")
   }
 }
 ```
-
-[**Run in
-explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22withdrawal_transactions_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00.000Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-02T00%3A00%3A00.000Z%22%0A%20%20%20%20%20%20interval%3A%20%221h%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 
 

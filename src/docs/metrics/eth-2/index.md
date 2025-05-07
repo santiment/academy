@@ -74,50 +74,40 @@ Beacon chain metrics:
 
 ETH 2.0 Staker Count:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "eth2_stakers_count") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: { slug: "ethereum" }
       from: "2020-12-05T00:00:00Z"
       to: "2020-12-06T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth2_stakers_count%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222020-12-05T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-12-06T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 ETH 2.0 Staking ROI:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "eth2_roi") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: { slug: "ethereum" }
       from: "2020-12-05T00:00:00Z"
       to: "2020-12-06T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
 
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth2_roi%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222020-12-05T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-12-06T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
 ETH 2.0 Total Staked Amount:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "balance_per_owner") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
         label: "eth2stakingcontract"
@@ -126,15 +116,10 @@ ETH 2.0 Total Staked Amount:
       from: "2020-12-05T00:00:00Z"
       to: "2020-12-06T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22balance_per_owner%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%20%20label%3A%20%22eth2stakingcontract%22%0A%20%20%20%20%20%20%20%20owner%3A%20%22eth2stakingcontract%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222020-12-05T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-12-06T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Staked amount per label:
 
@@ -217,44 +202,34 @@ Top stakers:
 Available under the `eth2_stakers_realized_value_usd_<timebound>`
 and `eth2_stakers_mvrv_usd_<timebound>` names.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "eth2_stakers_realized_value_usd_365d") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2023-01-01T00:00:00Z"
       to: "2023-01-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth2_stakers_realized_value_usd_365d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 Available under the `eth_beacon_deposits`, `eth_beacon_validator_withdrawals` and
 `eth_beacon_reward_withdrawals` names.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "eth_beacon_deposits") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2023-01-01T00:00:00Z"
       to: "2023-01-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth_beacon_deposits%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 ## Full list of metrics
 

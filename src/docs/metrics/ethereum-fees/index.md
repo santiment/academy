@@ -95,115 +95,91 @@ Available for `ethereum`
 
 Fees metrics in ETH: `fees` and `fees_intraday`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "fees") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fees%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Fees metrics in USD: `fees_usd` and `fees_usd_intraday`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "fees_usd_intraday") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-07T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fees_usd_intraday%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Aggregated fees metrics: `average_fees_usd`, `average_fees_usd_5m`, 
 `median_fees_usd` and `median_fees_usd_5m`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "average_fees_usd_5m") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-07T00:00:00Z"
       interval: "5m"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22average_fees_usd_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%225m%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Fees burnt metrics: `fees_burnt_5m` and `fees_burnt_usd_5m`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "fees_burnt_5m") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fees_burnt_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Fees to network circulation metric: `fees_to_network_circulation_usd_1d`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "fees_to_network_circulation_usd_1d") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fees_to_network_circulation_usd_1d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Gas used metrics: `avg_gas_used` and `total_gas_used`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "avg_gas_used") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22avg_gas_used%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)

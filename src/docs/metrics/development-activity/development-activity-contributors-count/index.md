@@ -76,67 +76,52 @@ Number of github accounts
 
 Fetch hourly `dev_activity_contributors_count` for an asset:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dev_activity_contributors_count") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2020-01-01T00:00:00Z"
       to: "2020-03-01T00:00:00Z"
       interval: "1h"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run inExplorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity_contributors_count%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-02-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221h%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
 
 ---
 
 Fetch monthly `dev_activity_contributors_count` for an asset:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dev_activity_contributors_count") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2020-01-01T00:00:00Z"
       to: "2020-03-01T00:00:00Z"
       interval: "30d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run inExplorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity_contributors_count%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-02-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
 
 ---
 
 Fetch the precomputed weekly `dev_activity_contributors_count_7d` for an asset:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dev_activity_contributors_count_7d") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2020-01-01T00:00:00Z"
       to: "2020-03-01T00:00:00Z"
       interval: "7d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity_contributors_count_7d%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
 
 ---
 

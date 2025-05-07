@@ -109,138 +109,111 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 Action metrics: `makerdao_action_deposits<_usd>`, `makerdao_action_liquidations<_usd>`, 
 `makerdao_action_new_debt<_usd>` and `makerdao_action_repayments<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "makerdao_action_deposits_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "weth"
       from: "2022-11-01T00:00:00Z"
       to: "2022-11-03T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_action_deposits_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22weth%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
 
 New debt/repayments against collateral metrics:`dai_created`, `dai_repaid` and `total_dai_created`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dai_created"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "weth"
       from: "2022-11-01T00:00:00Z"
       to: "2022-11-03T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22dai_created%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22weth%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total supplied/borrowed metrics: `makerdao_total_supplied<_usd>` and 
 `makerdao_total_borrowed<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "makerdao_total_supplied"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "wrapped-bitcoin"
       from: "2022-11-01T00:00:00Z"
       to: "2022-11-03T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Collateralization ratio and stability fee metrics: `mcd_collat_ratio` and 
 `mcd_stability_fee`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "mcd_collat_ratio"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "wrapped-bitcoin"
       from: "2022-11-01T00:00:00Z"
       to: "2022-11-03T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22mcd_collat_ratio%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 
 Protocol total action metrics: `makerdao_total_deposits_usd`, `makerdao_total_liquidations_usd`, 
 `makerdao_total_new_debt_usd` and `makerdao_total_repayments_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "makerdao_total_new_debt_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "maker"
       from: "2022-11-01T00:00:00Z"
       to: "2022-11-03T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_total_new_debt_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22maker%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Protocol total supplied/borrowed metrics: `makerdao_protocol_total_supplied_usd` and 
 `makerdao_protocol_total_borrowed_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "makerdao_protocol_total_supplied_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "multi-collateral-dai"
       from: "2022-11-01T00:00:00Z"
       to: "2022-11-03T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_protocol_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20from%3A%20%222022-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-11-03T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Daily active addresses: `makerdao_active_addresses`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "makerdao_active_addresses"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "maker"
       from: "2023-01-01T00:00:00Z"
       to: "2023-01-10T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22maker%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)

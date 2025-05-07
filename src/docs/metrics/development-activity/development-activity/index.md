@@ -87,68 +87,53 @@ There are 3 development activity metrics available:
 
 Fetch the dev activity for an asset:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dev_activity") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "santiment"
       from: "2020-01-13T00:00:00Z"
       to: "2020-01-18T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=>)**
 
 ---
 
 Fetch the `dev_activity` for an arbitrary organization. You  need to provide only the organization name
 to the parameter, not the whole URL. Github links look like this: `https://github.com/<organization>/<repository>`.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dev_activity") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {organization: "google"}
       from: "2020-01-13T00:00:00Z"
       to: "2020-01-18T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7Borganization%3A%20%22google%22%7D%0A%20%20%20%20%20%20from%3A%20%222020-01-13T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-01-18T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
 
 ---
 
 Fetch the `ecosystem_dev_activity`, combining the dev activities of all assets
 that contribute to that ecosystem:
 
-```graphql
+```graphql-explorer
 {
   getEcosystems(ecosystems: ["ethereum"]) {
-    timeseriesData(
+    timeseriesDataJson(
       metric: "ecosystem_dev_activity"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-10T00:00:00Z"
-      interval: "1d") {
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-
-**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems(ecosystems%3A%20%5B%22ethereum%22%5D)%20%7B%0A%20%20%20%20timeseriesData(metric%3A%20%22ecosystem_dev_activity%22%2C%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%2C%20to%3A%20%222024-03-10T00%3A00%3A00Z%22%2C%20interval%3A%20%221d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
 
 ---
 

@@ -102,42 +102,32 @@ Available under the:
 
 ### Unique Social Volume computed on 5 minute intervals
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "unique_social_volume_total_5m") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: { slug: "santiment" }
       from: "2017-11-01T00:00:00Z"
       to: "2020-12-31T00:00:00Z"
       interval: "1w"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22unique_social_volume_total_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%20slug%3A%20%22santiment%22%20%7D%0A%20%20%20%20%20%20from%3A%20%222017-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-12-31T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 ---
 
 ### Unique Social Volume computed on 1 hour intervals
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "unique_social_volume_total_1h") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: { slug: "santiment" }
       from: "2017-11-01T00:00:00Z"
       to: "2020-12-31T00:00:00Z"
       interval: "1w"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22unique_social_volume_total_1h%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%20slug%3A%20%22santiment%22%20%7D%0A%20%20%20%20%20%20from%3A%20%222017-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-12-31T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221w%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)**

@@ -90,97 +90,77 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 Action metrics: `fluid_action_deposits<_usd>`, `fluid_action_liquidations<_usd>`, 
 `fluid_action_new_debt<_usd>` and `fluid_action_repayments<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "fluid_action_deposits_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2025-01-01T00:00:00Z"
       to: "2025-02-01T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fluid_action_deposits_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222025-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-02-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total action/supply metrics: `fluid_total_deposits_usd`, `fluid_total_liquidations_usd`, 
 `fluid_total_new_debt_usd`, `fluid_total_repayments_usd` and `fluid_protocol_total_supplied_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "fluid_total_new_debt_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "instadapp"
       from: "2025-01-10T00:00:00Z"
       to: "2025-01-12T00:00:00Z"
       includeIncompleteData: true
-      interval: "1h"){
-        datetime
-        value
-      }
+      interval: "1h")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fluid_total_new_debt_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22instadapp%22%0A%20%20%20%20%20%20from%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-12T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221h%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 APY metrics: `fluid_supply_apy`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "fluid_supply_apy"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2025-01-10T00:00:00Z"
       to: "2025-01-12T00:00:00Z"
       includeIncompleteData: true
-      interval: "1h"){
-        datetime
-        value
-      }
+      interval: "1h")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fluid_supply_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-12T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221h%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total supplied/borrowed metrics: `fluid_total_supplied<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "fluid_total_supplied"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "2025-01-10T00:00:00Z"
       to: "2025-01-15T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fluid_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-15T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 
 Daily active addresses: `fluid_active_addresses`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "fluid_active_addresses"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "instadapp"
       from: "2025-01-01T00:00:00Z"
       to: "2025-01-10T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22fluid_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22instadapp%22%0A%20%20%20%20%20%20from%3A%20%222025-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

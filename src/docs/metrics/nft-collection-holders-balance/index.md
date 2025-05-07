@@ -54,21 +54,15 @@ Amount in USD
 
 `nft_collection_holders_balance`:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "nft_collection_holders_balance") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: { address: "0xed5af388653567af2f388e6224dc7c4b3241c544" }
       from: "2022-05-01T00:00:00Z"
       to: "2022-05-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-**[Run in
-Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_collection_holders_balance%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%20address%3A%20%220xed5af388653567af2f388e6224dc7c4b3241c544%22%20%7D%0A%20%20%20%20%20%20from%3A%20%222022-05-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222022-05-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**

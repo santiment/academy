@@ -111,137 +111,109 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 Action metrics: `aave_v3_action_deposits<_usd>`, `aave_v3_action_liquidations<_usd>`, 
 `aave_v3_action_new_debt<_usd>` and `aave_v3_action_repayments<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_v3_action_deposits_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "weth"
       from: "2023-04-01T00:00:00Z"
       to: "2023-04-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v3_action_deposits_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22weth%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 Total action metrics: `aave_v3_total_deposits_usd`, `aave_v3_total_liquidations_usd`, 
 `aave_v3_total_new_debt_usd` and `aave_v3_total_repayments_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_v3_total_new_debt_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "aave"
       from: "2023-04-01T00:00:00Z"
       to: "2023-04-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v3_total_new_debt_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 Total supplied/borrowed metrics: `aave_v3_total_supplied<_usd>` and 
 `aave_v3_total_borrowed<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_v3_total_supplied"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "wrapped-bitcoin"
       from: "2023-04-01T00:00:00Z"
       to: "2023-04-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v3_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 Protocol total supplied/borrowed metrics: `aave_v3_protocol_total_supplied_usd` and 
 `aave_v3_protocol_total_borrowed_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_v3_protocol_total_supplied_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "aave"
       from: "2023-04-01T00:00:00Z"
       to: "2023-04-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v3_protocol_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 APY metrics: `aave_v3_supply_apy` and `aave_v3_variable_borrow_apy`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_v3_supply_apy"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "wrapped-bitcoin"
       from: "2023-04-01T00:00:00Z"
       to: "2023-04-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v3_supply_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 Daily active addresses: `aave_v3_active_addresses`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_v3_active_addresses"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "aave"
       from: "2023-03-01T00:00:00Z"
       to: "2023-03-10T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v3_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22aave%22%0A%20%20%20%20%20%20from%3A%20%222023-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-03-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Revenue metrics: `aave_v3_revenue`, `aave_v3_revenue_usd`, `aave_v3_total_protocol_revenue_usd`
 and `aave_v3_total_protocol_cumulative_revenue_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "aave_v3_revenue"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "usd-coin"
       from: "2023-01-01T00:00:00Z"
       to: "2023-01-10T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22aave_v3_revenue%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22usd-coin%22%0A%20%20%20%20%20%20from%3A%20%222023-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

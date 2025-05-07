@@ -35,23 +35,17 @@ The example below demonstrates a GraphQL query used to fetch timeseries price
 data. The parameters control the time range, the interval between data points,
 and how all the values within an interval are aggregated.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "twitter_followers") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
-      from: "2023-01-01T00:00:00Z"
-      to: "2023-01-05T00:00:00Z"
-      interval: "1d"
-      aggregation: LAST){
-        datetime
-        value
-    }
+      from: "utc_now-90d"
+      to: "utc_now-60d"
+      interval: "1d")
   }
 }
 ```
-
-**[Run the example in the GraphiQL Live Explorer](https://api.santiment.net/graphiql?variables=&query=%7B%0A++getMetric%28metric%3A+%22twitter_followers%22%29+%7B%0A++++timeseriesData%28%0A++++++slug%3A+%22ethereum%22%0A++++++from%3A+%222023-01-01T00%3A00%3A00Z%22%0A++++++to%3A+%222023-01-05T00%3A00%3A00Z%22%0A++++++interval%3A+%221d%22%0A++++%09aggregation%3A+LAST%29%7B%0A++++%09%09datetime%0A++++++++value%0A++++%7D%0A++%7D%0A%7D)**
 
 ## How to access the API
 
@@ -82,7 +76,7 @@ information about the applied restrictions per plan.
 Each API query has a limit to the amount of data points it can fetch. The
 [Complexity Page](/sanapi/complexity) provides a detailed explanation on how
 complexity analysis determines whether a given query will be executed or
-rejected. 
+rejected.
 
 ## Glossary
 
@@ -93,4 +87,3 @@ You can find the definitions of some terms used on this page in our dedicated
 
 You can find information about the blockchains we support on our [Supported
 Blockchains page](/sanapi/supported-blockchains).
-

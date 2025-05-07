@@ -72,10 +72,10 @@ Available for [these assets](https://api.santiment.net/graphiql?variables=&query
 
 Binance Active Deposits:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "active_deposits_per_exchange") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
         owner: "binance"
@@ -84,21 +84,18 @@ Binance Active Deposits:
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_deposits_per_exchange%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%20%20owner%3A%20%22binance%22%0A%20%20%20%20%20%20%20%20label%3A%20%22centralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
+
 
 
 Binance Withdrawals Transactions
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "withdrawal_transactions_per_exchange") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
         owner: "binance"
@@ -107,20 +104,17 @@ Binance Withdrawals Transactions
       from: "2020-03-01T00:00:00Z"
       to: "2020-03-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22withdrawal_transactions_per_exchange%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%20%20owner%3A%20%22binance%22%0A%20%20%20%20%20%20%20%20label%3A%20%22centralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222020-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
+
 
 Binance Flow Balance
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "exchange_balance_per_exchange") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
         owner: "binance"
@@ -129,11 +123,7 @@ Binance Flow Balance
       from: "2020-03-01T00:00:00Z"
       to: "2020-03-07T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[**Run in Explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22exchange_balance_per_exchange%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%20%20owner%3A%20%22binance%22%0A%20%20%20%20%20%20%20%20label%3A%20%22centralized_exchange%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222020-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222020-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)

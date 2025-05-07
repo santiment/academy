@@ -126,54 +126,41 @@ All metrics have the same set of [available assets](<https://api.santiment.net/g
 
 Fetch timeseries data for `sentiment_weighted_total` for a single asset:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "sentiment_weighted_total") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethereum"
       from: "utc_now-90d"
-      to: "utc_now-30d"
-      interval: "7d"
-    ) {
-      datetime
-      value
-    }
+      to: "utc_now-60d"
+      interval: "1d"
+    )
   }
 }
 ```
-
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_weighted_total%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-90d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-30d%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)**
 
 ---
 
 Fetch timeseries data for `sentiment_weighted_telegram` for multiple assets at the same time:
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "sentiment_weighted_telegram") {
-    timeseriesDataPerSlug(
+    timeseriesDataPerSlugJson(
       from: "utc_now-60d"
       to: "utc_now-55d"
       interval: "1d"
       selector: { slugs: ["ethereum", "bitcoin"] }
-    ) {
-      data {
-        slug
-        value
-      }
-      datetime
-    }
+    )
   }
 }
 ```
-
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_weighted_telegram%22)%20%7B%0A%20%20%20%20timeseriesDataPerSlug(%0A%20%20%20%20%20%20from%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-55d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20selector%3A%20%7Bslugs%3A%20%5B%22ethereum%22%2C%22bitcoin%22%5D%7D)%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20data%20%7B%0A%20%20%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 ---
 
 Fetch aggregated daily values for many assets:
 
-```graphql
+```graphql-explorer
 {
   allProjects(page: 1, pageSize: 50) {
     slug
@@ -185,8 +172,6 @@ Fetch aggregated daily values for many assets:
   }
 }
 ```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20allProjects(page%3A%201%20pageSize%3A%2050)%7B%0A%20%20%20%20slug%0A%20%20%20%20sentimentWeighted%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22sentiment_weighted_total%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22)%0A%20%20%7D%0A%7D%0A>)**
 
 ---
 

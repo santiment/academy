@@ -55,39 +55,30 @@ Available for [these assets](https://api.santiment.net/graphiql?variables=&query
 
 Available under `labelled_historical_balance`. The query below fetches a total `ethereum` balance of all `centralized_exchange` addresses.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "labelled_historical_balance") {
-    timeseriesData(
+    timeseriesDataJson(
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-07T00:00:00Z"
       interval: "1d"
       selector: {labelFqn: "santiment/centralized_exchange:v1", slug: "ethereum"}
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22labelled_historical_balance%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20selector%3A%20%7BlabelFqn%3A%20%22santiment%2Fcentralized_exchange%3Av1%22%2C%20slug%3A%20%22ethereum%22%7D%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D)
 
 `labelled_historical_balance_changes`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "labelled_historical_balance_changes") {
-    timeseriesData(
+    timeseriesDataJson(
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-07T00:00:00Z"
       interval: "1d"
       selector: {labelFqn: "santiment/centralized_exchange:v1", slug: "ethereum"}
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-[**Run in explorer**](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22labelled_historical_balance_changes%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20from%3A%20%222024-03-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-03-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20selector%3A%20%7BlabelFqn%3A%20%22santiment%2Fcentralized_exchange%3Av1%22%2C%20slug%3A%20%22ethereum%22%7D%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D)

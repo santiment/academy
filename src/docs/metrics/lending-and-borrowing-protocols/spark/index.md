@@ -96,117 +96,93 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 Action metrics: `spark_action_deposits<_usd>`, `spark_action_liquidations<_usd>`, 
 `spark_action_new_debt<_usd>` and `spark_action_repayments<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "spark_action_deposits_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "weth"
       from: "2024-01-01T00:00:00Z"
       to: "2024-02-01T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_action_deposits_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22weth%22%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-02-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total action metrics: `spark_total_deposits_usd`, `spark_total_liquidations_usd`, 
 `spark_total_new_debt_usd` and `spark_total_repayments_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "spark_total_new_debt_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "multi-collateral-dai"
       from: "2024-01-10T00:00:00Z"
       to: "2024-01-12T00:00:00Z"
       includeIncompleteData: true
-      interval: "1h"){
-        datetime
-        value
-      }
+      interval: "1h")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_total_new_debt_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20from%3A%20%222024-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-12T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221h%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Total supplied/borrowed metrics: `spark_total_supplied<_usd>` and 
 `spark_total_borrowed<_usd>`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "spark_total_supplied"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "wrapped-bitcoin"
       from: "2023-04-01T00:00:00Z"
       to: "2023-04-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_total_supplied%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 Protocol total supplied/borrowed metrics: `spark_protocol_total_supplied_usd` and 
 `spark_protocol_total_borrowed_usd`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "spark_protocol_total_supplied_usd"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "maker"
       from: "2023-04-01T00:00:00Z"
       to: "2023-04-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_protocol_total_supplied_usd%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22maker%22%0A%20%20%20%20%20%20from%3A%20%222023-04-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-04-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D&variables=%7B%7D>)
 
 APY metric: `spark_supply_apy` and `spark_borrow_apy`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "spark_supply_apy"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "wrapped-bitcoin"
       from: "2024-08-01T00:00:00Z"
       to: "2024-08-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m"){
-        datetime
-        value
-      }
+      interval: "5m")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_supply_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22wrapped-bitcoin%22%0A%20%20%20%20%20%20from%3A%20%222024-08-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-08-07T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%225m%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Daily active addresses: `spark_active_addresses`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "spark_active_addresses"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "multi-collateral-dai"
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-10T00:00:00Z"
       includeIncompleteData: true
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_active_addresses%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22multi-collateral-dai%22%0A%20%20%20%20%20%20from%3A%20%222024-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20includeIncompleteData%3A%20true%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

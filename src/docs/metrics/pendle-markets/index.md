@@ -9,7 +9,7 @@ description: Pendle Markets Metrics
 Pendle Protocol is a decentralized finance (DeFi) platform that allows users to trade the future yield of tokenized 
 assets. By splitting yield-bearing tokens into principal and yield components, Pendle enables more flexible yield 
 management strategies. This opens up opportunities for users to hedge, speculate, or lock in fixed yields, which 
-isn’t typically possible in traditional DeFi staking. The protocol operates on Ethereum and other blockchain networks, 
+isn't typically possible in traditional DeFi staking. The protocol operates on Ethereum and other blockchain networks, 
 leveraging smart contracts to ensure secure and efficient transactions.
 
 Pendle Markets metrics:
@@ -61,56 +61,42 @@ Available for `ethena-staked-usde`
 
 Pendle total markets TVL metric: `pendle_total_markets_tvl`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "pendle_total_markets_tvl"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethena-staked-usde"
       from: "2025-01-01T00:00:00Z"
       to: "2025-01-10T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22pendle_total_markets_tvl%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethena-staked-usde%22%0A%20%20%20%20%20%20from%3A%20%222025-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
 
 APY metrics: `pendle_underlying_apy` and `pendle_implied_apy`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "pendle_implied_apy"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethena-staked-usde"
       from: "2025-01-01T00:00:00Z"
       to: "2025-01-10T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22pendle_implied_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethena-staked-usde%22%0A%20%20%20%20%20%20from%3A%20%222025-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
 
 Yield spread metric: `pendle_yield_spread`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "pendle_yield_spread"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethena-staked-usde"
       from: "2025-01-01T00:00:00Z"
       to: "2025-01-10T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22pendle_yield_spread%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethena-staked-usde%22%0A%20%20%20%20%20%20from%3A%20%222025-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222025-01-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

@@ -65,36 +65,28 @@ Available for `ethena-staked-usde`
 
 Deposit and withdraw metrics: `ethena_staking_deposits` and `ethena_staking_withdrawals`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "ethena_staking_deposits"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethena-staked-usde"
       from: "2024-06-01T00:00:00Z"
       to: "2024-06-10T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22ethena_staking_deposits%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethena-staked-usde%22%0A%20%20%20%20%20%20from%3A%20%222024-06-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-06-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Staking APY metric: `ethena_staking_apy`
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "ethena_staking_apy"){
-    timeseriesData(
+    timeseriesDataJson(
       slug: "ethena-staked-usde"
       from: "2024-06-01T00:00:00Z"
       to: "2024-06-10T00:00:00Z"
-      interval: "1d"){
-        datetime
-        value
-      }
+      interval: "1d")
   }
 }
 ```
-[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22ethena_staking_apy%22)%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethena-staked-usde%22%0A%20%20%20%20%20%20from%3A%20%222024-06-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-06-10T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%7B%0A%20%20%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%7D%0A%20%20%7D%0A%7D>)

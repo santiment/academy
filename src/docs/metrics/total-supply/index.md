@@ -64,72 +64,54 @@ Available for for [these assets](<https://api.santiment.net/graphiql?variables=&
 
 Total Supply is available under the `total_supply` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "total_supply") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
       }
       from: "2023-11-01T00:00:00Z"
       to: "2023-12-01T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[Run in
-explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22total_supply%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-12-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Supply in Profit is available under the `total_supply_in_profit` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "total_supply_in_profit") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
       }
       from: "2023-11-01T00:00:00Z"
       to: "2023-12-01T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[Run in
-explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22total_supply_in_profit%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-12-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Percent of Supply in Profit is available for  `percent_of_total_supply_in_profit` name.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "percent_of_total_supply_in_profit") {
-    timeseriesData(
+    timeseriesDataJson(
       selector: {
         slug: "ethereum"
       }
       from: "2023-11-01T00:00:00Z"
       to: "2023-12-01T00:00:00Z"
       interval: "1d"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[Run in
-explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22percent_of_total_supply_in_profit%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20from%3A%20%222023-11-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222023-12-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 ## Full list of metrics
 

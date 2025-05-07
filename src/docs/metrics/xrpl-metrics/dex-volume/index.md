@@ -61,19 +61,14 @@ Available for [xrp only](https://api.santiment.net/graphiql?variables=&query=%7B
 
 Available under the `dex_volume_in_usd_5m`, `dex_volume_in_xrp_5m`, `dex_amm_volume_in_xrp_5min` and `dex_amm_volume_in_usd_5min` names.
 
-```graphql
+```graphql-explorer
 {
   getMetric(metric: "dex_volume_in_usd_5m") {
-    timeseriesData(
+    timeseriesDataJson(
       slug: "xrp"
       from: "2024-07-01T00:00:00Z"
       to: "2024-07-07T00:00:00Z"
-    ) {
-      datetime
-      value
-    }
+    )
   }
 }
 ```
-
-[**Run in Explorer**](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22dex_volume_in_usd_5m%22)%20%7B%0A%20%20%20%20timeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22xrp%22%0A%20%20%20%20%20%20from%3A%20%222024-07-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222024-07-07T00%3A00%3A00Z%22%0A%20%20%20%20)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20value%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
