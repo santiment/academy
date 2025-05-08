@@ -10,7 +10,7 @@ date: 2023-03-13
 
 The [XRP Ledger (XRPL)](https://xrpl.org/) is a decentralized, public blockchain led by a global developer community.
 
-Santiment provide key metrics about the XRPL Chain which are listed below:
+Santiment provides key metrics about the XRPL Chain which are listed below:
 
 ### Holder Metrics
 
