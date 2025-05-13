@@ -35,8 +35,7 @@ Amount of coins/tokens
 
 ## Frequency
 
-[daily intervals](/metrics/details/frequency#daily-frequency)
-
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
@@ -61,9 +60,9 @@ Available under the `transaction_volume_in_profit` name.
 {
   getMetric(metric: "transaction_volume_in_profit") {
     timeseriesDataJson(
-      slug: "santiment"
-      from: "2022-03-01T00:00:00Z"
-      to: "2022-03-30T00:00:00Z"
+      slug: "bitcoin"
+      from: "2025-03-01T00:00:00Z"
+      to: "2025-03-30T00:00:00Z"
       interval: "1d"
     )
   }
@@ -76,9 +75,9 @@ Available under the `transaction_volume_in_loss` name.
 {
   getMetric(metric: "transaction_volume_in_loss") {
     timeseriesDataJson(
-      slug: "santiment"
-      from: "2022-03-01T00:00:00Z"
-      to: "2022-03-30T00:00:00Z"
+      slug: "bitcoin"
+      from: "2025-03-01T00:00:00Z"
+      to: "2025-03-30T00:00:00Z"
       interval: "1d"
     )
   }
@@ -91,9 +90,9 @@ Available under the `transaction_volume_profit_loss_ratio` name.
 {
   getMetric(metric: "transaction_volume_profit_loss_ratio") {
     timeseriesDataJson(
-      slug: "santiment"
-      from: "2022-03-01T00:00:00Z"
-      to: "2022-03-30T00:00:00Z"
+      slug: "bitcoin"
+      from: "2025-03-01T00:00:00Z"
+      to: "2025-03-30T00:00:00Z"
       interval: "1d"
     )
   }

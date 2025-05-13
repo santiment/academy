@@ -40,7 +40,8 @@ Amount of coins/tokens
 
 ## Frequency
 
-[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+- transaction_volume - [Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+- transaction_volume_usd - [Daily Intervals](/metrics/details/frequency#daily-frequency)
 
 ---
 
@@ -65,10 +66,10 @@ Available under the `transaction_volume` name.
 {
   getMetric(metric: "transaction_volume") {
     timeseriesDataJson(
-      slug: "santiment"
-      from: "2020-04-01T00:00:00Z"
-      to: "2020-04-07T00:00:00Z"
-      interval: "1d"
+      slug: "bitcoin"
+      from: "2025-04-01T00:00:00Z"
+      to: "2025-04-07T00:00:00Z"
+      interval: "1h"
     )
   }
 }
@@ -83,28 +84,12 @@ The full list of Transaction Volume metrics is:
 <Summary>Open Metrics List</Summary>
 
 - transaction_volume
-- transaction_volume_in_loss
-- transaction_volume_in_profit
-- transaction_volume_profit_loss_ratio
 - transaction_volume_usd
-
-</Details>
-
-<Details>
-
-<Summary>Open Change Metrics List</Summary>
-
-- transaction_volume
 - transaction_volume_change_1d
 - transaction_volume_change_30d
 - transaction_volume_change_7d
-- transaction_volume_in_loss
-- transaction_volume_in_profit
-- transaction_volume_profit_loss_ratio
-- transaction_volume_usd
 - transaction_volume_usd_change_1d
 - transaction_volume_usd_change_30d
 - transaction_volume_usd_change_7d
 
 </Details>
-
