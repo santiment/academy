@@ -31,7 +31,7 @@ const SantimentProductsTooltip = ({ className }) => {
     >
       <div className={styles.container}>
         <div className={styles.block}>
-          <div class={styles.business}>
+          <div className={styles.business}>
             <h3 className={styles.title}>SAN business</h3>
             <div className={styles.products}>
               {BUSINESS_PRODUCTS.map((item, index) => (
