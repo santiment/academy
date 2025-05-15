@@ -3,6 +3,7 @@ import sanapi from './icons/sanapi.svg'
 import sanbase from './icons/sanbase.svg'
 import insights from './icons/insights.svg'
 import sansheets from './icons/sansheets.svg'
+import research from './icons/research.svg'
 
 export const BUSINESS_PRODUCTS = [
   {
@@ -39,5 +40,14 @@ export const CHAIN_PRODUCTS = [
     description: 'Market analysis from the San team and community members',
     label: 'SAN chain support soon',
     to: 'https://insights.santiment.net',
+  },
+]
+
+export const INITIATIVES_PRODUCTS = [
+  {
+    img: research,
+    title: 'Research',
+    description: 'Empowering Academia with Blockchain & Crypto Insights',
+    to: 'https://research.santiment.net/',
   },
 ]
