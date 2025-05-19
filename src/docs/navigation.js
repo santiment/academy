@@ -86,7 +86,7 @@ export const GUIDES = [
         title: 'Understanding Crypto Market Cycles Through Lending Metrics'
       }
     ],
-	  },
+      },
       {
         slug: 'understanding_market_expectations_through_historical_crypto_trends',
         title: 'Understanding Market Expectations Through Historical Crypto Trends'
