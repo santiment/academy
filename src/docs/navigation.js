@@ -90,6 +90,12 @@ export const GUIDES = [
         title: 'Whale monitoring to predict crypto\'s next moves'
       }
     ],
+	  },
+      {
+        slug: 'understanding_market_expectations_through_historical_crypto_trends',
+        title: 'Understanding Market Expectations Through Historical Crypto Trends'
+      }
+    ], 
   },
   {
     title: 'Sanbase',
