@@ -19,7 +19,7 @@ In this article, we’ll explore the primary queries within the [**Historical Cr
 
 <iframe width="560" height="315" src="https://youtu.be/X3xtvZMlGQ4?si=iSrto98nbXOyd52A&t=478" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## **Spotting Market Bottoms with the ‘Buy the Dip’ Query**
+## Spotting Market Bottoms with the Buy the Dip Query
 
 ![noborder](/understanding-market-expectations-through-historical-crypto-trends/image1.png)
 
@@ -33,7 +33,7 @@ Tracking the frequency of "buy the dip" mentions on social channels helps gauge 
 
 [Link on social query](https://app.santiment.net/s/nrdmCug6)
 
-## **Going Against the Crowd with BTC Price Expectations**
+## Going Against the Crowd with BTC Price Expectations
 
 ![noborder](/understanding-market-expectations-through-historical-crypto-trends/image2.png)
 
@@ -47,7 +47,7 @@ Analyzing social chatter about Bitcoin’s future price reveals valuable sentime
 
 [Link on social query](https://app.santiment.net/s/jbpgKsYO)
 
-## **Analyzing Crowd Mentions of Bear or Bull Market**
+## Analyzing Crowd Mentions of Bear or Bull Market
 
 ![noborder](/understanding-market-expectations-through-historical-crypto-trends/image3.png)
 
@@ -61,7 +61,7 @@ Monitoring how often the crypto community references a "bull market" or "bear ma
 
 [Link on social query](https://app.santiment.net/s/njhTxpbX)
 
-## **Analyzing Mentions of "Higher" or "Lower" in Price Discussions**
+## Analyzing Mentions of "Higher" or "Lower" in Price Discussions
 
 ![noborder](/understanding-market-expectations-through-historical-crypto-trends/image4.png)
 
@@ -75,7 +75,7 @@ Tracking how often traders and market participants mention that prices will go "
 
 [Link on social query](https://app.santiment.net/s/-iQm0v3E)
 
-## **Analyzing Mentions of "Pump" and "Dump" in Market Discussions**
+## Analyzing Mentions of "Pump" and "Dump" in Market Discussions
 
 ![noborder](/understanding-market-expectations-through-historical-crypto-trends/image5.png)
 
@@ -113,6 +113,6 @@ When traders begin to become enthralled with altcoins, this is often a reflectio
 
 [Link on social query](https://app.santiment.net/s/FQjsj8kr)
 
-## **Conclusion**
+## Conclusion
 
 By leveraging tools like [Historical Crypto Trends](https://app.santiment.net/social-trends/crypto-trends), investors and analysts can move beyond guesswork and gain a data-backed understanding of market sentiment. Analyzing custom keyword frequencies on the Social Trends page not only sheds light on current expectations but also equips you to recognize trends and anticipate possible market shifts. Ultimately, incorporating these insights can lead to more informed and confident decision-making in the dynamic world of crypto.
