@@ -88,10 +88,9 @@ export const GUIDES = [
     ],
       },
       {
-        slug: 'understanding_market_expectations_through_historical_crypto_trends',
+        slug: 'understanding market expectations through historical cryptotrends',
         title: 'Understanding Market Expectations Through Historical Crypto Trends'
       }
-    ], 
   },
   {
     title: 'Sanbase',
