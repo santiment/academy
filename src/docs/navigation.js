@@ -93,7 +93,7 @@ export const GUIDES = [
         slug: 'whale monitoring to predict crypto next moves',
         title: 'Whale monitoring to predict crypto\'s next moves'
       }
-    ],
+    ]
   },
   {
     title: 'Sanbase',
