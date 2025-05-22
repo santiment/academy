@@ -84,8 +84,12 @@ export const GUIDES = [
       {
         slug: 'understanding crypto market cycles through lending metrics',
         title: 'Understanding Crypto Market Cycles Through Lending Metrics'
+      },
+      {
+        slug: 'understanding market expectations through historical crypto trends',
+        title: 'Understanding Market Expectations Through Historical Crypto Trends'
       }
-    ],
+    ]
   },
   {
     title: 'Sanbase',

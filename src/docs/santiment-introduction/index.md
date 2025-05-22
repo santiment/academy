@@ -151,8 +151,10 @@ platform’s potential:
   discussing market trends and answering community questions.
 - [Free Trial](https://app.santiment.net/pricing): Explore all features for
   two weeks without commitment.
-- Book a call: If you are a B2B customer, book a call with the team. We
+- [Book a call](https://calendly.com/santiment-team/book-a-demo): If you are a B2B customer, book a call with the team. We
   will help you understand how our product can help you.
+- [Discord community](https://santiment.net/discord): Join the Sanbase community - connect with crypto investors, analysts and our team!
+  
 
 ---
 
