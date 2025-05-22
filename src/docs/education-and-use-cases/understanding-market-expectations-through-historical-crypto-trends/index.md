@@ -48,7 +48,7 @@ entry points.
 **Query text:**
 
 ```
-(buy OR buying OR bought) AND dip
+buy AND dip
 ```
 
 [Link on social query](https://app.santiment.net/s/nrdmCug6)
@@ -97,7 +97,7 @@ bull OR bullish
 ```
 
 ```
-Bear OR bearish
+bear OR bearish
 ```
 
 [Link on social query](https://app.santiment.net/s/njhTxpbX)
