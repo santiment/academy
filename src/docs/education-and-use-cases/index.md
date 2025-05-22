@@ -31,6 +31,7 @@ author: Dino Ibisbegovic
 - [Understanding Long-Term Market Trends and Cycles](/education-and-use-cases/understanding-long-term-market-trends-and-cycles)
 - [Understanding Short-Term Market Trends](/education-and-use-cases/understanding-short-term-market-trends)
 - [Understanding Crypto Market Cycles Through Lending Metrics](/education-and-use-cases/understanding-crypto-market-cycles-through-lending-metrics)
+- [Understanding Market Expectations Through Historical Crypto Trends](/education-and-use-cases/understanding-market-expectations-through-historical-crypto-trends)
 </Resource>
 
 <Resource title="Pro Reports">
