@@ -31,6 +31,7 @@ author: Dino Ibisbegovic
 - [Understanding Long-Term Market Trends and Cycles](/education-and-use-cases/understanding-long-term-market-trends-and-cycles)
 - [Understanding Short-Term Market Trends](/education-and-use-cases/understanding-short-term-market-trends)
 - [Understanding Crypto Market Cycles Through Lending Metrics](/education-and-use-cases/understanding-crypto-market-cycles-through-lending-metrics)
+- [Whale monitoring to predict Crypto's next moves](/education-and-use-cases/whale-monitoring-to-predict-crypto-next-moves]
 </Resource>
 
 <Resource title="Pro Reports">
