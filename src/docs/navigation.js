@@ -84,7 +84,11 @@ export const GUIDES = [
       {
         slug: 'understanding crypto market cycles through lending metrics',
         title: 'Understanding Crypto Market Cycles Through Lending Metrics'
-      }
+      },
+	  {
+		slug: 'whale monitoring to predict crypto next moves'  
+		title: 'Whale Monitoring to Predict Crypto's Next Moves'
+	  }
     ],
   },
   {
