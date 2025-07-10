@@ -1,5 +1,5 @@
 ---
-title: Community Messages Count
+title: Community Social Volume
 author: Vlad
 date: 2025-07-10
 description: Number of messages in a project's community chat server
@@ -8,9 +8,9 @@ description: Number of messages in a project's community chat server
 
 ## Definition
 
-Community Messages Count is build on top of the [Social Data](/metrics/details/social-data).
+Community Social Volume is build on top of the [Social Data](/metrics/details/social-data).
 
-Community Messages Count returns the number of messages written in the
+Community Social Volume returns social volume of the asses in the
 asset's own community chat (telegram server) or subreddit (reddit).
 
 Currently `telegram` and `reddit` are supported.
@@ -63,7 +63,7 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 Available under the `community_messages_count_reddit` and `community_messages_count_telegram`
 names, where the available sources are:
 
-- reddit
+- telegram
 
 ```graphql-explorer
 {

@@ -1,7 +1,7 @@
 ---
 title: Social Dominance
 author: Santiment Team
-date: 2024-06-26
+date: 2025-07-10
 description: Share of the crypto discussions that refer to an asset/phrase
 # REF metrics-hub/metricshub/social_dominance.py
 ---
@@ -13,7 +13,7 @@ to a particular asset or phrase.
 
 The metric is build on top of the [Social Data](/metrics/details/social-data).
 
-Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
+We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
 
 ### Social Dominance for an Asset
 

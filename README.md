@@ -11,6 +11,12 @@ yarn
 yarn start
 ```
 
+If you have problems with `yarn` use node v14 / v16. For example:
+```sh
+nvm install 16
+nvm use 16
+```
+
 This is going to run the app on port 8000, so [`localhost:8000`](http://localhost:8000) should be accessible.
 
 
