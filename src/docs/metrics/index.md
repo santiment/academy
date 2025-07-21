@@ -61,13 +61,13 @@ They are taken from measuring social activity on crypto-related forums and
 channels, plus custom sentiment measurements analyzing crowd behavior.
 
 - [Community Messages Count](/metrics/community-messages-count)
+- [Community Social Volume](/metrics/community-social-volume)
 - [Emerging Trends](/metrics/emerging-trends)
 - [Sentiment Metrics](/metrics/sentiment-metrics)
 - [Social Dominance](/metrics/social-dominance)
 - [Social Volume](/metrics/social-volume)
 - [Unique Social Volume](/metrics/unique-social-volume)
 - [Trending Words Rank](/metrics/trending-words-rank)
-- [NFT Social Volume](/metrics/nft-social-volume)
 
 </Resource>
 

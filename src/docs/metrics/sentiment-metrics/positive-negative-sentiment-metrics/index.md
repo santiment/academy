@@ -149,6 +149,38 @@ Fetch aggregated daily values for many assets:
 }
 ```
 
+### Market Sentiment Positive / Negative
+
+There is an option to get Market Sentiment Positive Negative
+
+```graphql-explorer
+{
+  getMetric(metric: "sentiment_positive_telegram") {
+    timeseriesDataJson(
+      selector: { slug: "crypto_market" }
+      from: "utc_now-60d"
+      to: "utc_now-55d"
+      interval: "1d"
+    )
+  }
+}
+```
+
+---
+
+```graphql-explorer
+{
+  getMetric(metric: "sentiment_negative_telegram") {
+    timeseriesDataJson(
+      selector: { slug: "crypto_market" }
+      from: "utc_now-60d"
+      to: "utc_now-55d"
+      interval: "1d"
+    )
+  }
+}
+```
+
 ---
 
 ## Full list of metrics
