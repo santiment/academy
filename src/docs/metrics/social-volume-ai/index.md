@@ -7,9 +7,9 @@ description: The amount of messages/documents that relate to given assert found 
 
 ## Definition
 
-Social Volume is build on top of the [Social Data](/metrics/details/social-data).
+Social Volume is build on top of our [Social Data](/metrics/details/social-data).
 
-The **Social Volume AI** metric has the same idea as the **Social Volume**. But for finding relation of text to the given asset we use NLP (Named Entity Recognition and Named Entity Linking) models. And the same as in **Unique Social Volume** we take into account only unique text documents for each interval, i.e. completely duplicated messages will be excluded from the calculations.
+The **Social Volume AI** metric finds the relation of text to the given asset through the use of NLP(Named Entity Recognition) and NEL(Named Entity Linking) models. Similarly as in [Unique Social Volume](https://academy.santiment.net/metrics/unique-social-volume/#definition) we take into account only unique text documents for each interval, i.e. completely duplicated messages will be excluded from the calculations.
 
 ---
 
