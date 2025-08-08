@@ -8,73 +8,34 @@ date: 2021-03-22
 
 Santiment API Plans provide access to various metrics through the API endpoint: https://api.santiment.net. 
 
-## Free Plan
+## Plans for Individuals
 
-### API access:
-- Full access to free metrics
-- Partial access to restricted metrics:
-  - 2 years of historical data
-  - The last 30 days of data are cut off
-- Rate limits:
-  - 1000 API calls per month
-  - 500 API calls per hour
-  - 100 API calls per minute
-
-### Sanbase access:
-- Full access to free metrics
-- Partial access to restricted metrics on the Sanbase website:
-  - 2 years of historical data
-  - Last 30 days of data are cut-off
-- Allowed number of alerts: 3
-- Limited access to insights
-
-### Santiment Queries access:
-- Credits: 500 credits per month
-- Rate limits:
-  - 500 queries per day
-  - 200 queries per hour
-  - 20 queries per minute
-
-## Business Pro Plan
-
-### API access:
-- Full access to free metrics
-- Partial access to restricted metrics:
-  - 2 years of historical data
-  - No realtime restriction
-- Rate limits:
-  - 600,000 API calls per month
-  - 30,000 API calls per hour
-  - 600 API calls per minute
-
-### Sanbase access:
-- Full access at [Sanbase website](https://app.santiment.net)
-
-### Santiment Queries access:
-- Credits: 50,000 credits per month
-- Rate limits: 
-  - 15K queries per day
-  - 3K queries per hour
-  - 100 queries per minute
-
-## Business Max Plan
-
-### API access:
-- Full access to free metrics
-- Full access to restricted metrics
-- Rate limits:
-  - 1,200,000 API calls per month
-  - 60,000 API calls per hour
-  - 1200 API calls per minute
-
-### Sanbase access:
-- Full access at [Sanbase website](https://app.santiment.net)
-
-### Santiment Queries access:
-- Credits: 500,000 credits per month
-- Rate limits: 
-  - 15K queries per day
-  - 3K queries per hour
-  - 100 queries per minute
+| Feature | **Free Plan** | **Sanbase Pro Plan** | **Sanbase Max Plan** |
+| --- | --- | --- | --- |
+| **API Access** | | | |
+| Free Metrics | Full access | Full access | Full access |
+| Restricted Metrics | Partial access:<br>• 1 years of historical data<br>• Last 30 days **cut off** | Partial access:<br>• 1 years of historical data<br>• Last 30 days **cut off** | Partial access:<br>• 1 years of historical data<br>• No realtime restriction |
+| **Rate Limits** | | | |
+| Monthly Limit | 1,000 API calls | 5,000 API calls | 80,000 API calls |
+| Hourly Limit | 500 API calls | 1,000 API calls | 4,000 API calls |
+| Per Minute Limit | 100 API calls | 100 API calls | 100 API calls |
+| **Sanbase Access** | | | |
+| Free Metrics | Full access | Full access | Full access |
+| Restricted Metrics | Partial access:<br>• 1 years of historical data<br>• Last 30 days **cut off** | Partial access:<br>• 1 years of historical data<br>• Last 30 days **cut off** | Partial access:<br>• 1 years of historical data<br>• No realtime restriction **cut off** |
+| Alerts Limit | 3 alerts allowed | 20 alerts allowed | 20 alerts allowed |
+| Insights Access | Limited access | Full access | Full access |
 
 
+
+## Plans for Business
+
+| Feature | **Business Pro Plan** | **Business Max Plan** | **Enterprise Plan** |
+| --- | --- | --- | --- |
+| **API Access** | | | |           
+| Free Metrics | Full access | Full access | Full access |            
+| Restricted Metrics | Partial access:<br>• 2 years of historical data<br>• No realtime restriction | Full access | Full access |             
+| **Rate Limits** | | | |              
+| Monthly Limit | 600,000 API calls | 1,200,000 API calls | custom |
+| Hourly Limit | 30,000 API calls | 60,000 API calls | custom |
+| Per Minute Limit | 600 API calls | 1,200 API calls | custom |
+| **Sanbase Access** | Full access at [Sanbase](https://app.santiment.net) | Full access at [Sanbase](https://app.santiment.net) | Full access at [Sanbase](https://app.santiment.net) |
