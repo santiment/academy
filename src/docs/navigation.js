@@ -410,14 +410,6 @@ export const REFERENCES = [
   },
 ]
 
-export const RESOURCES = [
-  {
-    title: 'How we compare',
-    description: 'Which crypto analytics solution is right for you?',
-    articles: ['Messari vs Santiment'],
-  },
-]
-
 export const GETTING_STARTED = {
   title: 'Getting started',
   articles: ['Santiment Introduction', 'For Traders', 'For Developers'],
