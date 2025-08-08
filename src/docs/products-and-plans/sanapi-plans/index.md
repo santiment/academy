@@ -7,6 +7,7 @@ date: 2021-03-22
 ## Overview
 
 Santiment API Plans provide access to various metrics through the API endpoint: https://api.santiment.net. 
+Check the [pricing page](https://app.santiment.net/pricing) for the latest plans and pricing.
 
 ## Plans for Individuals
 
