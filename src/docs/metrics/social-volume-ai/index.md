@@ -1,7 +1,7 @@
 ---
 title: Social Volume AI
 author: Ilya
-date: 2024-01-26
+date: 2025-08-11
 description: The amount of messages/documents that relate to given assert found by NLP model
 ---
 
@@ -9,7 +9,7 @@ description: The amount of messages/documents that relate to given assert found 
 
 Social Volume is build on top of our [Social Data](/metrics/details/social-data).
 
-The **Social Volume AI** metric finds the relation of text to the given asset through the use of NLP(Named Entity Recognition) and NEL(Named Entity Linking) models. Similarly as in [Unique Social Volume](https://academy.santiment.net/metrics/unique-social-volume/#definition) we take into account only unique text documents for each interval, i.e. completely duplicated messages will be excluded from the calculations.
+The **Social Volume AI** metric finds the relation of text to the given asset through the use of NLP(Named Entity Recognition) and NEL(Named Entity Linking) models. Similarly as in [Social Volume](https://academy.santiment.net/metrics/social-volume/#definition).
 
 ---
 
