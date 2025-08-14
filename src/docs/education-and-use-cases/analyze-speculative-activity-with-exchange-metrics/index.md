@@ -1,5 +1,5 @@
 ---
-title: Analyzing Speculative Activity with Santiment’s Exchange Metrics
+title: Analyzing Speculative Activity with Exchange Metrics
 author: Dino Ibisbegovic
 date: 2020-02-05
 ---
