@@ -47,9 +47,6 @@ const Sidebar = ({ className }) => {
           {REFERENCES.map((category, idx) => (
             <SidebarCategory {...category} active={active} key={idx} />
           ))}
-          {RESOURCES.map((category, idx) => (
-            <SidebarCategory {...category} active={active} key={idx} />
-          ))}
         </ul>
       </div>
       <div className={styles.empty} />
