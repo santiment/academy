@@ -5,7 +5,7 @@ date: 2022-08-17
 description: Database explorer & research tool
 ---
 
-> :point_right: **We no longer offer this product** :point_left:
+> :point_right: **We no longer offer this product, but still support it for legacy users** :point_left:
 
 [Santiment Queries](https://app.santiment.net/queries) gives access to a Clickhouse Database cluster via SQL interface that holds crypto-related on-chain, financial, social and development activity data.
 

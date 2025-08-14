@@ -1,12 +1,12 @@
 ---
-title: Whale Monitoring to Predict Crypto's Next Moves
+title: Whale Monitoring to Predict the Market
 author: Santiment Team
 date: 2025-05-23
 ---
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xjV6dSXJ79k?si=0Q0hIukTOv_yX9F9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-From time to time, it's important to check on how cryptocurrency whales are
+It's important to monitor on how cryptocurrency whales are
 treating their bags. Generally, if they're accumulating, it's a good sign
 crypto market caps are continuing to rise. If they're moving many coins to
 exchanges, on the other hand, it's a sign that a dump may be around the corner.

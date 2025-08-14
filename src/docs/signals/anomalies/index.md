@@ -7,11 +7,11 @@ description: Signal indicating that real value of the metric doesn't fall in the
 
 ## Definition
 
-**Anomalie signal** indicates that real value of the metric doesn't fall in the predicted interval.
+An **Anomalie** is a signal that indicates the real value of the metric doesn't fall in the predicted interval.
 
-We used fbprophet which is written by facebook to predict confidence intervals for every metric and every asset.
+We predict confidence intervals for every metric and every asset using [fbprophet](https://facebook.github.io/prophet/) (written by facebook).
 Signals can be useful because there are many assets and metrics out there, so it's hard to view all of this data.
-After that we compare predicted lower and upper values to actual value and if it doesn't fall in the interval then we fire a signal. 
+After that we compare predicted lower and upper values to actual value and if it doesn't fall in the interval then we publish it as a signal.
 
 ## List of supported tokens:
 * 0x

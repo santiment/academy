@@ -1,5 +1,5 @@
 ---
-title: Daily Active Addresses (DAA)
+title: Understanding Daily Active Addresses (DAA)
 author: Santiment Team
 date: 2024-07-08
 ---
@@ -12,7 +12,7 @@ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Definition
 
-DAA is the amount of unique active addresses that participate in transactions
+[Daily Active Addresses(DAA)](https://academy.santiment.net/metrics/daily-active-addresses/) is the amount of unique active addresses that participate in transactions
 on a blockchain network each day. It's a measure of the network's activity and
 usage. High DAA suggests strong user engagement and network utility. DAA can be
 influenced by various factors like market trends, network upgrades, or major

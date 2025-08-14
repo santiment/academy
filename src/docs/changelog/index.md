@@ -1,5 +1,5 @@
 ---
-title: Development changelog
+title: Development changelog (Outdated, upgrade to this page coming soon)
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
 date: 2022-04-20
@@ -30,7 +30,6 @@ We update this page every two weeks or more frequently.
 - On Ethereum: ALT, BANANA, BBANK, BEAM, BOTTO, CAH, CHEQ, DEL, DMTR, FLIP, GHX, IMPT, KUJI, LMWR, MAVIA, MEME, ML, OGV, ONDO, OVR, PAAL, PEPE2.0, POL, PORK, SAVM, SHRAP, STFX, TET, TLOS, TOKEN, TRVL, VIC, ZKB.
 - On Polygon: ASK, CPR, FAR, FYN, KASTA, WIFI.
 - Other: 1000SATS, AFC, ANALOS, CETUS, CLEG, DYM, ERG, EXFI, FEVR, FLIX, GMMT, GRUM, IOT, ISLM, JOY, JTO, JUP, KLEVA, KMA, KYVE, LING, MANTA, MNDE, MOBILE, MPLX, MYRO, NAP, OMAX, PROP, PYTH, PZP, SEI, SILLY, SSWP, STIK, TRA, UX, WEN, WIF, WLKN, ZETA.
-
 
 ## December 2023
 
@@ -99,7 +98,7 @@ I am really appreciate any feedback.
 Disclaimer new 2 metrics for our addresses have slow performance.
 Loaded time can be up to 1 minute. Sorry.
 
-### `30.03.22 - 6.04.22` 
+### `30.03.22 - 6.04.22`
 
 **Sanbase**
 
@@ -150,7 +149,7 @@ https://academy.santiment.net/metrics/transaction-volume-in-profit-or-loss
     - Bold, italic, links
     - Type $ for assets suggestions
     - Type @ to mention an user
-    - Type # to link a trend 
+    - Type # to link a trend
 
 **Screeners/Watchlists**
 
@@ -208,7 +207,7 @@ Look at [https://app.santiment.net/s/0UQIX6NU](this metric)
 
 **Academy**
 
-- Navigation from Academy to Sanbase become better. 
+- Navigation from Academy to Sanbase become better.
 
 ## November 2021
 

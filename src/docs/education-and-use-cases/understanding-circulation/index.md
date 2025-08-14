@@ -1,5 +1,5 @@
 ---
-title: Circulation
+title: Understanding Circulation
 author: Santiment Team
 date: 2024-07-19
 ---
@@ -8,7 +8,7 @@ date: 2024-07-19
 
 ## Definition
 
-The circulation metric measures the number of unique coins or tokens being
+The [circulation metric](https://academy.santiment.net/metrics/circulation/#definition) measures the number of unique coins or tokens being
 transferred between addresses on a blockchain within a specific period. It
 provides insights into the actual movement and usage of the asset, indicating
 network activity and utility.

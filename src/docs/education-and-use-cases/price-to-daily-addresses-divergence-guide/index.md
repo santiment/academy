@@ -1,10 +1,10 @@
 ---
-title: Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategies
+title: Price vs DAA Divergence; An On-Chain Trading Strategy Guide
 author: Jan S
 date: 2019-09-17
 ---
 
-Of all the metrics that can be generated from on-chain data, **the daily active addresses** - DAA for short - is probably most well known. 
+Of all the metrics that can be generated from on-chain data, **the daily active addresses** - DAA for short - is probably most well known.
 
 For the uninitiated, DAA is simply the **number of unique crypto addresses** interacting with (sending or receiving) a particular coin on a daily basis. As such, DAA is one of the best on-chain proxies for measuring the amount of users and the overall level of network activity, making it an extremely valuable indicator in cryptocurrency evaluation.
 

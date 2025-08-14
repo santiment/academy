@@ -1,10 +1,11 @@
 ---
-title: Youtube videos
+title: Videos
 author: Santiment Team
 description: Youtube webinars and tutorials
-date: 2021-05-24
+date: 2025-08-14
 ---
 
-- [Walkthroughs](/youtube-videos/walkthroughs)
-- [Webinars](/youtube-videos/webinars)
+- [The Santiment Youtube Channel](https://www.youtube.com/@Santimentfeed/videos) has many videos not necessarily featured here.
 - [Tutorials](/youtube-videos/tutorials)
+- [Full Walkthroughs](/youtube-videos/walkthroughs)
+- [Webinars](/youtube-videos/webinars)
