@@ -26,32 +26,32 @@ export const GUIDES = [
     icon: Education,
     articles: [
       {
-        slug: 'alerts on Sanbase',
-        title: 'Sanbase Alerts - Age Consumed example',
+        slug: 'age consumed alert',
+        title: 'Sanbase Alerts - Age Consumed',
       },
       {
-        slug: 'social trends alerts',
-        title: 'Sanbase Alerts - Social trends / Trending words example',
+        slug: 'social trend alerts',
+        title: 'Sanbase Alerts - Social Trends/Trending Words',
       },
       {
-        slug: 'whale alert',
-        title: 'Sanbase Alerts - Whale Alert example',
-      },
-      'Timing market volatility with Token Age Consumed',
-      {
-        slug:
-          'Investigate Speculative Activity with Santiment’s Exchange Metrics',
-        title: 'Analyze Speculative Activity with Santiment’s Exchange Metrics',
+        slug: 'whale activity alert',
+        title: 'Sanbase Alerts - Whale Activity',
       },
       {
-        slug: 'How To Spot tops with Price - Network Activity divergences',
+        slug: 'timing market volatility with token age consumed',
+        title: 'Timing Market Volatility with Token Age Consumed',
+      },
+      {
+        slug:'analyze speculative activity with exchange metrics',
+        title: 'Analyze Speculative Activity with Exchange Metrics',
+      },
+      {
+        slug: 'spot tops with price network activity divergences',
         title: 'Spot tops with Price - Network Activity divergences',
       },
       {
-        slug:
-          'Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies',
-        title:
-          'Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategies',
+        slug:'price to daily addresses divergence guide',
+        title:'Price vs DAA Divergence; An On-Chain Trading Strategy Guide',
       },
       {
         slug: 'santiment pro reports samples',
@@ -62,16 +62,12 @@ export const GUIDES = [
         title: 'Trading and Transaction Volume'
       },
       {
-        slug: 'daily active addresses',
-        title: 'Daily Active Addresses'
+        slug: 'understanding daily active addresses',
+        title: 'Understanding Daily Active Addresses'
       },
       {
-        slug: 'circulation',
-        title: 'Circulation'
-      },
-      {
-        slug: 'sanr practice makes perfect',
-        title: 'SanR - Practice Makes Perfect'
+        slug: 'understanding circulation',
+        title: 'Understanding Circulation'
       },
       {
         slug: 'understanding long-term market trends and cycles',
@@ -90,8 +86,12 @@ export const GUIDES = [
         title: 'Understanding Market Expectations Through Historical Crypto Trends'
       },
       {
-        slug: 'whale monitoring to predict crypto next moves',
-        title: 'Whale monitoring to predict crypto\'s next moves'
+        slug: 'whale monitoring to predict market moves',
+        title: 'Whale Monitoring to Predict Market Moves'
+      },
+      {
+        slug: 'sanr a playground for trading',
+        title: 'SanR: a Playground for Trading'
       }
     ]
   },
