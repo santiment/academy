@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "paths": {
+      "san-webkit-next": ["./node_modules/san-webkit-next/dist"],
+      "san-webkit-next/*": ["./node_modules/san-webkit-next/dist/*"]
+    }
+  },
+  "include": ["src/**/*", "node_modules/san-webkit-next/src/**/*"],
+  "exclude": ["node_modules/!san-webkit-next", "dist"]
+}

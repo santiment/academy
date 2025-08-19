@@ -1,0 +1,32 @@
+{
+  "name": "svelte-widgets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rollup -c"
+  },
+  "keywords": [],
+  "author": "Serafim Gavrilov <serafim.g@santiment.net>",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^10.0.0",
+    "postcss": "^8.5.6",
+    "rollup": "^4.46.3",
+    "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-svelte": "^7.2.2",
+    "svelte": "^5.38.2",
+    "svelte-preprocess": "^6.0.3",
+    "svelte-preprocess-cssmodules": "^3.0.1",
+    "tailwindcss": "3.4.17",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "san-webkit-next": "github:santiment/san-webkit#lib-4443683a-190825"
+  }
+}
