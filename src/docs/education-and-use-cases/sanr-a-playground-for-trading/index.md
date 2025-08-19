@@ -46,11 +46,7 @@ So, ready to dive in? With SanR by your side, you'll be navigating the crypto
 market like a pro in no time. It's not about being perfect – it's about
 learning, growing, and having fun along the way.
 
-<iframe width="560" height="315"
-src="https://youtu.be/J_Gqt3Ww0Qk"
-title="How to use SanR" frameborder="0" allow="accelerometer; autoplay;
-clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J_Gqt3Ww0Qk?si=K3eESZSmuUJjwKWb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Now try for yourself!
 Use the [Sanr.app](http://sanr.app) or read more about it in the [documentation site](https://docs.santiment.network/)
