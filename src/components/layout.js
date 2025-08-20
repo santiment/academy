@@ -54,8 +54,8 @@ const Layout = ({
   return (
     <Intercom>
       <Helmet>
-        <script src="/widgets.js" defer></script>
         <link rel="stylesheet" href="/widgets.css" />
+        <script src="/widgets.iife.js" defer></script>
       </Helmet>
       <Notifications>
         <div
@@ -85,6 +85,7 @@ const Layout = ({
         </div>
       </Notifications>
       {isShowSidebar && <IntercomWidget isDesktop={isDesktop} />}
+      <ai-button></ai-button>
     </Intercom>
   )
 }

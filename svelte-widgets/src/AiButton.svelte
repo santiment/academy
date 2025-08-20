@@ -1,18 +1,19 @@
-<svelte:options customElement="ai-button" />
+<svelte:options customElement={{ tag: "ai-button", shadow: "none" }} />
 
 <script lang="ts">
-  // import Button from "san-webkit-next/ui/core/Button/Button.svelte"
-  import { ONE_YEAR_IN_MS } from "san-webkit-next/utils/dates"
+  import AIChatbot, { useAIChatbotCtx } from "san-webkit-next/ui/app/AIChatbot"
+
+  useAIChatbotCtx.set({
+    dashboardId: "1099",
+    asset: "ethereum",
+    metrics: [
+      "price_usd",
+      "social_volume_total",
+      "social_dominance_total",
+      "sentiment_positive_total",
+      "sentiment_negative_total",
+    ],
+  })
 </script>
 
-<!-- <Button variant="fill">Aboba</Button> -->
-<h2 class="text-xl text-red">Hello!</h2>
-
-<p>{ONE_YEAR_IN_MS}</p>
-
-<style>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  @import "san-webkit-next/app.css";
-</style>
+<AIChatbot />
