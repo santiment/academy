@@ -73,3 +73,9 @@ package-lock.json
 
 .tool-versions
 .aider*
+
+
+# web components
+
+svelte-widgets/.svelte-kit
+svelte-widgets/static/webkit
