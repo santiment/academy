@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
-    "san-webkit-next": "github:santiment/san-webkit#lib-4443683a-190825",
+    "san-webkit-next": "github:santiment/san-webkit#lib-7a974ad6-050925",
     "svelte": "^5.38.2",
     "svelte-preprocess": "^5.0.4",
     "vite": "6.2.2"

@@ -6,6 +6,16 @@ import { viteStaticCopy } from "vite-plugin-static-copy"
 
 const baseConfig = createConfig({ sveltekit: () => {} })
 
+const ICONS = [
+  "thumb-up-filled.svg",
+  "thumb-up.svg",
+  "thumb-down-filled.svg",
+  "thumb-down.svg",
+  "turtoshi.svg",
+  "close.svg",
+  "back-to-top.svg",
+]
+
 export default defineConfig({
   plugins: [
     ...baseConfig.plugins,
@@ -13,8 +23,12 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: "./static/webkit/**/*",
-          dest: "webkit",
+          src: ICONS.map(name => `static/webkit/icons/${name}`),
+          dest: "webkit/icons",
+        },
+        {
+          src: "static/webkit/illus/turtle.svg",
+          dest: "webkit/illus",
         },
       ],
     }),

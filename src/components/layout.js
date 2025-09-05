@@ -53,10 +53,6 @@ const Layout = ({
 
   return (
     <Intercom>
-      <Helmet>
-        <link rel="stylesheet" href="/widgets.css" />
-        <script src="/widgets.iife.js" defer></script>
-      </Helmet>
       <Notifications>
         <div
           className={cx(styles.container, isShowSidebar && styles.withSidebar)}

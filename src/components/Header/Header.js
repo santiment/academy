@@ -14,6 +14,7 @@ const Header = ({ isShowSidebar, fixedHeader = true }) => {
         <Logo />
         <SantimentProductsTooltip />
         {isShowSidebar && <Search small />}
+        <ai-button class={styles.aiButton}></ai-button>
       </div>
     </header>
   )

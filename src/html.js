@@ -51,9 +51,11 @@ export default function HTML(props) {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-H53MB0V33X"
         ></script>
+        <link rel="stylesheet" href="/widgets.css" />
+        <script src="/widgets.iife.js" defer></script>
         {gtagScript}
       </head>
-      <body {...props.bodyAttributes}>
+      <body {...props.bodyAttributes} data-vaul-drawer-wrapper>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.
