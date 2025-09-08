@@ -55,7 +55,7 @@ export default function HTML(props) {
         <script src="/widgets.iife.js" defer></script>
         {gtagScript}
       </head>
-      <body {...props.bodyAttributes} data-vaul-drawer-wrapper>
+      <body {...props.bodyAttributes}>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.
@@ -64,6 +64,7 @@ export default function HTML(props) {
           key={`body`}
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
+          data-vaul-drawer-wrapper
         />
         {props.postBodyComponents}
         {firstPromoterScript}

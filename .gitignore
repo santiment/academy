@@ -79,3 +79,8 @@ package-lock.json
 
 svelte-widgets/.svelte-kit
 svelte-widgets/static/webkit
+
+# mkcert
+
+local.santiment.net.pem
+local.santiment.net-key.pem

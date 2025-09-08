@@ -37,6 +37,7 @@ const envScript = process.env.NODE_ENV === "production" && (
 const Layout = ({
   children,
   isShowSidebar,
+  isShowSearch,
   fixedHeader,
   classes = {},
   pageContext,
@@ -58,7 +59,10 @@ const Layout = ({
           className={cx(styles.container, isShowSidebar && styles.withSidebar)}
         >
           {envScript}
-          <Header fixedHeader={fixedHeader} isShowSidebar={isShowSidebar} />
+          <Header
+            fixedHeader={fixedHeader}
+            isShowSearch={isShowSearch || isShowSidebar}
+          />
           {isShowSidebar ? (
             <>
               <Sidebar pageContext={pageContext} />
@@ -81,7 +85,6 @@ const Layout = ({
         </div>
       </Notifications>
       {isShowSidebar && <IntercomWidget isDesktop={isDesktop} />}
-      <ai-button></ai-button>
     </Intercom>
   )
 }

@@ -7,14 +7,18 @@ import Logo from "../SantimentProductsTooltip/Logo"
 import SantimentProductsTooltip from "../SantimentProductsTooltip/SantimentProductsTooltip"
 import styles from "./Header.module.scss"
 
-const Header = ({ isShowSidebar, fixedHeader = true }) => {
+const Header = ({ isShowSearch, fixedHeader = true }) => {
   return (
     <header className={cx(styles.wrapper, fixedHeader && styles.fixed)}>
       <div className={cx(styles.header, "container")}>
-        <Logo />
-        <SantimentProductsTooltip />
-        {isShowSidebar && <Search small />}
-        <ai-button class={styles.aiButton}></ai-button>
+        <div class={styles.headerLeft}>
+          <Logo />
+          <SantimentProductsTooltip />
+        </div>
+        <div class={styles.headerRight}>
+          {isShowSearch && <Search />}
+          <ai-button class={styles.aiButton}></ai-button>
+        </div>
       </div>
     </header>
   )
