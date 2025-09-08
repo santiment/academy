@@ -1,28 +1,28 @@
-import React, { useRef, useEffect } from 'react'
-import cx from 'classnames'
-import { Link } from 'gatsby'
-import { InputWithIcon as Input } from '@santiment-network/ui/Input'
-import { isSSR } from '../../utils/utils'
-import Girl from './girl.png'
-import Man from './man.png'
-import styles from './Search.module.scss'
+import React, { useRef, useEffect } from "react"
+import cx from "classnames"
+import { Link } from "gatsby"
+import { InputWithIcon as Input } from "@santiment-network/ui/Input"
+import { isSSR } from "../../utils/utils"
+import Girl from "./girl.png"
+import Man from "./man.png"
+import styles from "./Search.module.scss"
 
 const SUGGESTIONS = [
   {
-    label: 'Trending words',
-    link: '/metrics/emerging-trends/',
+    label: "Trending words",
+    link: "/metrics/emerging-trends/",
   },
   {
-    label: 'Social volume',
-    link: '/metrics/social-volume/',
+    label: "Social volume",
+    link: "/metrics/social-volume/",
   },
   {
-    label: 'MVRV',
-    link: '/metrics/mvrv/',
+    label: "MVRV",
+    link: "/metrics/mvrv/",
   },
   {
-    label: 'Metrics',
-    link: '/metrics/',
+    label: "Metrics",
+    link: "/metrics/",
   },
 ]
 
@@ -32,10 +32,10 @@ const Search = ({ small }) => {
 
     if (window.docsearch) {
       window.docsearch({
-        appId: 'ZVVHPHW3IV',
-        apiKey: '712c7a00cdc130f6828b671dac8ad35f', // required
-        indexName: 'santiment_academy', // required
-        inputSelector: '#search', // required
+        appId: "ZVVHPHW3IV",
+        apiKey: "712c7a00cdc130f6828b671dac8ad35f", // required
+        indexName: "santiment_academy", // required
+        inputSelector: "#search", // required
       })
     }
   }, [])
@@ -67,15 +67,7 @@ const Search = ({ small }) => {
         <img src={Man} alt="man" width="655px" className={styles.man} />
       </div>
       <h3 className={styles.heading}>Santiment Academy</h3>
-      <Input
-        id="search"
-        placeholder="Search docs, articles, video tutorials..."
-        icon="search"
-        forwardedRef={inputEl}
-        iconPosition="left"
-        iconClassName={styles.icon}
-        inputClassName={styles.input}
-      />
+      <ai-input></ai-input>
       <div className={styles.suggestions}>
         <span className={styles.group}>Popular searches:</span>
         {SUGGESTIONS.map(({ link, label }) => (
