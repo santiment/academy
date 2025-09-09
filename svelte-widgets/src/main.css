@@ -37,3 +37,24 @@
       linear-gradient(90deg, #b0ebdb, #ffe7ca) border-box !important;
   }
 }
+
+[data-portal] * {
+  scrollbar-width: auto;
+  scrollbar-color: auto;
+}
+
+[data-portal] *::-webkit-scrollbar {
+  width: initial;
+  height: initial;
+}
+
+[data-portal] *::-webkit-scrollbar-track {
+  background: initial;
+  box-shadow: initial;
+  border: initial;
+}
+
+[data-portal] *::-webkit-scrollbar-thumb {
+  background: initial;
+  border: initial;
+}
