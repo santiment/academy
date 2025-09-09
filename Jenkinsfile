@@ -9,7 +9,7 @@ podTemplate(label: 'academy-builder', containers: [
         def scmVars = checkout scm
         def gitHead = scmVars.GIT_COMMIT.substring(0,7)
 
-        if (env.BRANCH_NAME == "master") {
+        if (env.BRANCH_NAME == "main") {
           withCredentials([
             string(
               credentialsId: 'SECRET_KEY_BASE',
