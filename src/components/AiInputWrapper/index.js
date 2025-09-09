@@ -4,7 +4,7 @@ import styles from "./AiInputWrapper.module.scss"
 import logo from "./tutle-waving.svg"
 
 const AiInputPlaceholder = () => (
-  <>
+  <div className="ai-input-placeholder">
     <h1 className="mb-8 text-center text-3xl text-rhino">
       Hi, I’m Turtoshi — your AI guide to Academy
     </h1>
@@ -47,7 +47,7 @@ const AiInputPlaceholder = () => (
         </button>
       </div>
     </div>
-  </>
+  </div>
 )
 
 const AiInputWrapper = () => {

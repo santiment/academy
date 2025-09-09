@@ -26,9 +26,11 @@ const Header = ({ isShowSearch, fixedHeader = true }) => {
           {isHydrated ? (
             <ai-button></ai-button>
           ) : (
-            <button className="group/button flex items-center cursor-pointer gap-2 bg-white fill-waterloo hover:bg-athens h-8 py-[5px] ask-ai-academy-button rounded-md border-2 border-transparent px-6 transition-colors md:px-4 sm:px-6">
-              Chat with AI
-            </button>
+            <div class="ai-button-placeholder">
+              <button className="group/button flex items-center cursor-pointer gap-2 bg-white fill-waterloo hover:bg-athens h-8 py-[5px] ask-ai-academy-button rounded-md border-2 border-transparent px-6 transition-colors md:px-4 sm:px-6">
+                Chat with AI
+              </button>
+            </div>
           )}
         </div>
       </div>
