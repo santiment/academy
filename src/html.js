@@ -51,6 +51,8 @@ export default function HTML(props) {
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-H53MB0V33X"
         ></script>
+        <link rel="stylesheet" href="/widgets.css" />
+        <script src="/widgets.iife.js" defer></script>
         {gtagScript}
       </head>
       <body {...props.bodyAttributes}>
@@ -62,6 +64,7 @@ export default function HTML(props) {
           key={`body`}
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
+          data-vaul-drawer-wrapper
         />
         {props.postBodyComponents}
         {firstPromoterScript}
