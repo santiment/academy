@@ -38,6 +38,11 @@
   }
 }
 
+.qa-academy-border-gradient {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, #b0ebdb, #ffe7ca) border-box;
+}
+
 [data-portal] * {
   scrollbar-width: auto;
   scrollbar-color: auto;
