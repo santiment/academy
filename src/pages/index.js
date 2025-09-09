@@ -1,19 +1,22 @@
-import React from 'react'
-import cx from 'classnames'
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import Search from '../components/Search/Search'
-import Category from '../components/Category/Category'
-import SocialBanner from '../components/Banner/SocialBanner'
-import { REFERENCES, GUIDES } from '../docs/navigation'
-import GettingStarted from '../components/GettingStarted/GettingStarted'
-import styles from './index.module.scss'
+import React from "react"
+import cx from "classnames"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Search from "../components/Search/Search"
+import Category from "../components/Category/Category"
+import SocialBanner from "../components/Banner/SocialBanner"
+import { REFERENCES, GUIDES } from "../docs/navigation"
+import GettingStarted from "../components/GettingStarted/GettingStarted"
+import styles from "./index.module.scss"
+import AiInputWrapper from "../components/AiInputWrapper"
 
 const IndexPage = ({ pageContext }) => (
-  <Layout pageContext={pageContext} fixedHeader={false}>
+  <Layout pageContext={pageContext} fixedHeader={false} isShowSearch={true}>
     <SEO title="Crypto Academy: Learn How to Analyze Cryptocurrency Market" />
     <section className={styles.wrapper}>
-      <Search />
+      <div className={styles.illustration}>
+        <AiInputWrapper />
+      </div>
       <div className="container">
         <GettingStarted className={styles.startBlock} />
         <h4 className={styles.title}>Guides</h4>

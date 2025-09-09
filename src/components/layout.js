@@ -1,34 +1,34 @@
-import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
-import withSizes from 'react-sizes'
-import cx from 'classnames'
-import GoogleAnalytics from 'react-ga'
-import Helmet from 'react-helmet'
-import { startResponsiveController } from 'webkit/responsive'
-import { mapSizesToProps } from '../utils/sizes'
-import CookiesPopup from 'webkit/ui/CookiesPopup.svelte'
-import Dialogs from 'webkit/ui/Dialog/Dialogs.svelte'
-import Intercom from './Intercom'
-import IntercomWidget from '../components/IntercomWidget'
-import Header from './Header/Header'
-import Footer from './Footer/Footer'
-import Sidebar from './Sidebar/Sidebar'
-import Notifications from './Notifications/Notifications'
-import styles from './layout.module.scss'
-import 'webkit/styles/main.css'
+import React, { useEffect, useLayoutEffect, useState } from "react"
+import PropTypes from "prop-types"
+import withSizes from "react-sizes"
+import cx from "classnames"
+import GoogleAnalytics from "react-ga"
+import Helmet from "react-helmet"
+import { startResponsiveController } from "webkit/responsive"
+import { mapSizesToProps } from "../utils/sizes"
+import CookiesPopup from "webkit/ui/CookiesPopup.svelte"
+import Dialogs from "webkit/ui/Dialog/Dialogs.svelte"
+import Intercom from "./Intercom"
+import IntercomWidget from "../components/IntercomWidget"
+import Header from "./Header/Header"
+import Footer from "./Footer/Footer"
+import Sidebar from "./Sidebar/Sidebar"
+import Notifications from "./Notifications/Notifications"
+import styles from "./layout.module.scss"
+import "webkit/styles/main.css"
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   startResponsiveController()
 }
 
-if (process.env.NODE_ENV === 'production') {
-  GoogleAnalytics.initialize('UA-100571693-14')
-  GoogleAnalytics.initialize('G-H53MB0V33X')
+if (process.env.NODE_ENV === "production") {
+  GoogleAnalytics.initialize("UA-100571693-14")
+  GoogleAnalytics.initialize("G-H53MB0V33X")
 } else {
-  GoogleAnalytics.initialize('UA-100571693-14', { testMode: true })
+  GoogleAnalytics.initialize("UA-100571693-14", { testMode: true })
 }
 
-const envScript = process.env.NODE_ENV === 'production' && (
+const envScript = process.env.NODE_ENV === "production" && (
   <Helmet>
     <script src="/env.js" />
   </Helmet>
@@ -37,6 +37,7 @@ const envScript = process.env.NODE_ENV === 'production' && (
 const Layout = ({
   children,
   isShowSidebar,
+  isShowSearch,
   fixedHeader,
   classes = {},
   pageContext,
@@ -58,7 +59,10 @@ const Layout = ({
           className={cx(styles.container, isShowSidebar && styles.withSidebar)}
         >
           {envScript}
-          <Header fixedHeader={fixedHeader} isShowSidebar={isShowSidebar} />
+          <Header
+            fixedHeader={fixedHeader}
+            isShowSearch={isShowSearch || isShowSidebar}
+          />
           {isShowSidebar ? (
             <>
               <Sidebar pageContext={pageContext} />

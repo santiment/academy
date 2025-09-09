@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "san-webkit-next/app.css";
+
+.expl-tooltip[aria-expanded="true"]:hover::before {
+  display: none;
+}
+
+.fly-and-scale-animation {
+  @apply origin-[--bits-popover-content-transform-origin] data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=bottom]:slide-out-to-top-1 data-[side=left]:slide-in-from-right-2 data-[side=left]:slide-out-to-right-1 data-[side=right]:slide-in-from-left-2 data-[side=right]:slide-out-to-left-1 data-[side=top]:slide-in-from-bottom-2 data-[side=top]:slide-out-to-bottom-1;
+}
+
+.dialog-animation {
+  @apply data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-90 data-[state=open]:zoom-in-90;
+
+  --tw-enter-translate-x: -50% !important;
+  --tw-enter-translate-y: -50% !important;
+  --tw-exit-translate-x: -50% !important;
+  --tw-exit-translate-y: -50% !important;
+}
+
+.animated {
+  @apply fill-mode-both;
+  animation-duration: 0.2s !important;
+}
+
+.ask-ai-academy-button {
+  border: 2px solid transparent;
+
+  background: linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(90deg, #b0ebdb, #ffe7ca) border-box !important;
+
+  &:hover {
+    background: linear-gradient(#f3f4fa, #f3f4fa) padding-box,
+      linear-gradient(90deg, #b0ebdb, #ffe7ca) border-box !important;
+  }
+}
+
+[data-portal] * {
+  scrollbar-width: auto;
+  scrollbar-color: auto;
+}
+
+[data-portal] *::-webkit-scrollbar {
+  width: initial;
+  height: initial;
+}
+
+[data-portal] *::-webkit-scrollbar-track {
+  background: initial;
+  box-shadow: initial;
+  border: initial;
+}
+
+[data-portal] *::-webkit-scrollbar-thumb {
+  background: initial;
+  border: initial;
+}
