@@ -24,11 +24,11 @@ export default defineConfig({
       targets: [
         {
           src: ICONS.map(name => `static/webkit/icons/${name}`),
-          dest: "webkit/icons",
+          dest: "webkit/sprites/icons",
         },
         {
           src: "static/webkit/illus/turtle.svg",
-          dest: "webkit/illus",
+          dest: "webkit/sprites/illus",
         },
       ],
     }),
