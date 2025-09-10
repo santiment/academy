@@ -110,6 +110,18 @@ ai-button,
 
   @import "san-webkit-next/app.css";
 
+  &,
+  * {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    color: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   .expl-tooltip[aria-expanded="true"]:hover::before {
     display: none;
   }
