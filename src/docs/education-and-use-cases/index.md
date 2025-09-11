@@ -3,12 +3,6 @@ title: Education and Use Cases
 author: Dino Ibisbegovic
 ---
 
-<Resource title="Metrics Spotlight">
-- [Trading and Transaction Volume](/education-and-use-cases/trading-and-transaction-volume/)
-- [Daily Active Addresses](/education-and-use-cases/daily-active-addresses/)
-- [Circulation](/education-and-use-cases/circulation/)
-</Resource>
-
 <Resource title="Alerts">
 - [Alerts - Age Consumed Example](/education-and-use-cases/alerts-on-sanbase/)
 - [Alerts - Social Trends/Trending Words Example](/education-and-use-cases/social-trends-alerts/)
@@ -16,8 +10,10 @@ author: Dino Ibisbegovic
 </Resource>
 
 <Resource title="Market Analysis Examples">
-- [Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying](education-and-use-cases/case-study-1-liquidations-and-sentiment)
+- [Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying](education-and-use-cases/case-study-liquidations-and-sentiment-ratio)
 - [Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms](education-and-use-cases/case-study-2-nrpl-and-3ymvrv)
+- [Case Study 3: Social Volume Indicates a Top](education-and-use-cases/case-study-social-volume)
+- [Case Study 4: Using Retail Balances for Profit-Taking Analysis](education-and-use-cases/case-study-retail-profit-taking)
 - [Timing Market Volatility with Token Age Consumed](/education-and-use-cases/timing-market-volatility-with-token-age-consumed/)
 - [Investigate Speculative Activity with Santiment’s Exchange Metrics](/education-and-use-cases/investigate-speculative-activity-with-santiment’s-exchange-metrics/)
 - [Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies](/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/)
