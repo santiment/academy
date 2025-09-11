@@ -1,8 +1,13 @@
 import { defineConfig } from "vite"
 import { svelte } from "@sveltejs/vite-plugin-svelte"
 import { createConfig } from "san-webkit-next/vite.config.js"
+import {
+  SPRITES_OPTIONS,
+  ILLUS_OPTIONS,
+  processSvgWithOutput,
+} from "san-webkit-next/scripts/svg.js"
+
 import path from "node:path"
-import { viteStaticCopy } from "vite-plugin-static-copy"
 
 const baseConfig = createConfig({ sveltekit: () => {} })
 
@@ -14,24 +19,47 @@ const ICONS = [
   "turtoshi.svg",
   "close.svg",
   "back-to-top.svg",
+  "refresh.svg",
+  "user.svg",
 ]
+
+function processListedIcons() {
+  return {
+    name: "process-specific-icons",
+    async buildStart() {
+      console.log("[web-components]: Processing specific SVG assets...")
+
+      const iconsPromises = ICONS.map(name => {
+        const sourcePath = `static/webkit/icons/${name}`
+        const destDir = "../static/webkit/sprites/icons/"
+        return processSvgWithOutput(
+          sourcePath,
+          "static/webkit/sprites/icons/",
+          destDir,
+          SPRITES_OPTIONS,
+          "static/webkit/icons/"
+        )
+      })
+
+      const illusPromise = processSvgWithOutput(
+        "static/webkit/illus/turtle.svg",
+        "static/webkit/sprites/illus/",
+        "../static/webkit/sprites/illus/",
+        ILLUS_OPTIONS,
+        "static/webkit/illus/"
+      )
+
+      await Promise.all([...iconsPromises, illusPromise])
+      console.log("[web-components]: New SVG assets are ready")
+    },
+  }
+}
 
 export default defineConfig({
   plugins: [
     ...baseConfig.plugins,
     svelte({ compilerOptions: { customElement: true } }),
-    viteStaticCopy({
-      targets: [
-        {
-          src: ICONS.map(name => `static/webkit/icons/${name}`),
-          dest: "webkit/sprites/icons",
-        },
-        {
-          src: "static/webkit/illus/turtle.svg",
-          dest: "webkit/sprites/illus",
-        },
-      ],
-    }),
+    processListedIcons(),
   ],
   resolve: {
     alias: {
