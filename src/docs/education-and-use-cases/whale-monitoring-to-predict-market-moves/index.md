@@ -1,5 +1,5 @@
 ---
-title: Whale Monitoring to Predict the Market
+title: Whale Monitoring to Predict Market Moves
 author: Santiment Team
 date: 2025-05-23
 ---

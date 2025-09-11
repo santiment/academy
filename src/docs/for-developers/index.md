@@ -65,34 +65,6 @@ san.get("daily_active_addresses",
     interval="1d")
 ```
 
-### Santiment Queries
-
-There is also [Santiment Queries](/santiment-queries), which gives direct access to the
-database where custom SQL queries can be run.
-
-The query below shows how to obtain the same data as the GraphQL query and the python code above.
-```sql
-SELECT
-    dt,
-    value
-FROM daily_metrics_v2
-WHERE 
-    asset_id = get_asset_id('bitcoin') AND
-    metric_id = get_metric_id('daily_active_addresses') AND 
-    dt >= toDate('2024-01-01') AND 
-    dt <= toDate('2024-01-31')
-ORDER BY dt ASC
-```
-
-Visit the [Santiment Queries web page](https://queries.santiment.net), log in
-to your account and execute the query.
-
-<Notebox type="note">
-Similar to the API subscription plans, historical and realtime in SQL is also
-restricted based on the subscription plan.
-</Notebox>
-
-
 ## Metrics Catalog
 
 There are a few different ways to explore the available metrics.
