@@ -3,8 +3,7 @@
 <script lang="ts">
   import { ChatInput } from "san-webkit-next/ui/app/AIChatbot"
   import Button from "san-webkit-next/ui/core/Button"
-
-  let message = $state("")
+  import Popover from "san-webkit-next/ui/core/Popover"
 
   function handleSubmit(rawPrompt?: string) {
     const prompt = rawPrompt?.trim()
@@ -36,11 +35,7 @@
     class="mb-3 [&>div]:py-3"
     placeholder="Ask AI..."
     icon={null}
-    bind:value={message}
-    onSubmit={() => {
-      handleSubmit(message)
-      message = ""
-    }}
+    onSubmit={(query) => handleSubmit(query)}
   />
 
   <div class="flex flex-wrap items-center justify-center gap-3">
