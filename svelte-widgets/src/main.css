@@ -99,6 +99,92 @@
   --purple-light-4: #c1abff;
 }
 
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate(
+        var(--tw-enter-translate-x, 0),
+        var(--tw-enter-translate-y, 0)
+      )
+      scale(var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate(
+        var(--tw-exit-translate-x, 0),
+        var(--tw-exit-translate-y, 0)
+      )
+      scale(var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
+  }
+}
+
+.expl-tooltip[aria-expanded="true"]:hover::before {
+  display: none;
+}
+
+.fly-and-scale-animation {
+  transform-origin: var(--bits-popover-content-transform-origin);
+}
+
+.fly-and-scale-animation[data-state="open"] {
+  animation-name: enter;
+  --tw-enter-opacity: 0;
+  --tw-enter-scale: 0.95;
+}
+
+.fly-and-scale-animation[data-state="closed"] {
+  animation-name: exit;
+  --tw-exit-opacity: 0;
+  --tw-exit-scale: 0.95;
+}
+
+.fly-and-scale-animation[data-side="bottom"] {
+  --tw-enter-translate-y: -0.5rem;
+  --tw-exit-translate-y: -0.25rem;
+}
+
+.fly-and-scale-animation[data-side="left"] {
+  --tw-enter-translate-x: 0.5rem;
+  --tw-exit-translate-x: 0.25rem;
+}
+
+.fly-and-scale-animation[data-side="right"] {
+  --tw-enter-translate-x: -0.5rem;
+  --tw-exit-translate-x: -0.25rem;
+}
+
+.fly-and-scale-animation[data-side="top"] {
+  --tw-enter-translate-y: 0.5rem;
+  --tw-exit-translate-y: 0.25rem;
+}
+
+.dialog-animation {
+  --tw-enter-translate-x: -50% !important;
+  --tw-enter-translate-y: -50% !important;
+  --tw-exit-translate-x: -50% !important;
+  --tw-exit-translate-y: -50% !important;
+}
+
+.dialog-animation[data-state="open"] {
+  animation-name: enter;
+  --tw-enter-opacity: 0;
+  --tw-enter-scale: 0.9;
+}
+
+.dialog-animation[data-state="closed"] {
+  animation-name: exit;
+  --tw-exit-opacity: 0;
+  --tw-exit-scale: 0.9;
+}
+
+.animated {
+  animation-fill-mode: both;
+  animation-duration: 0.2s !important;
+}
+
 ai-input,
 ai-button,
 .ai-input-placeholder,
@@ -120,52 +206,6 @@ ai-button,
     color: inherit;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  .expl-tooltip[aria-expanded="true"]:hover::before {
-    display: none;
-  }
-
-  .fly-and-scale-animation {
-    transform-origin: var(--bits-popover-content-transform-origin);
-    &[data-state="open"] {
-      @apply animate-in fade-in-0 zoom-in-95;
-    }
-    &[data-state="closed"] {
-      @apply animate-out fade-out-0 zoom-out-95;
-    }
-    &[data-side="bottom"] {
-      @apply slide-in-from-top-2 slide-out-to-top-1;
-    }
-    &[data-side="left"] {
-      @apply slide-in-from-right-2 slide-out-to-right-1;
-    }
-    &[data-side="right"] {
-      @apply slide-in-from-left-2 slide-out-to-left-1;
-    }
-    &[data-side="top"] {
-      @apply slide-in-from-bottom-2 slide-out-to-bottom-1;
-    }
-  }
-
-  .dialog-animation {
-    &[data-state="open"] {
-      @apply animate-in fade-in-0 zoom-in-90;
-    }
-
-    &[data-state="closed"] {
-      @apply animate-out fade-out-0 zoom-out-90;
-    }
-
-    --tw-enter-translate-x: -50% !important;
-    --tw-enter-translate-y: -50% !important;
-    --tw-exit-translate-x: -50% !important;
-    --tw-exit-translate-y: -50% !important;
-  }
-
-  .animated {
-    @apply fill-mode-both;
-    animation-duration: 0.2s !important;
   }
 
   .ask-ai-academy-button {
