@@ -90,19 +90,19 @@ export const GUIDES = [
         title: 'Whale Monitoring to Predict Market Moves'
       },
       {
-        slug: 'case study liquidations and sentiment ratio'
+        slug: 'case study liquidations and sentiment ratio',
         title: 'Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying'
       },
       {
-        slug: 'case study nrpl mvrv'
+        slug: 'case study nrpl mvrv',
         title: 'Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms'
       },
       {
-        slug: 'case study social volume'
+        slug: 'case study social volume',
         title: 'Case Study 3: Social Volume Indicates a Top'
       },
       {
-        slug: 'case study retail profit taking'
+        slug: 'case study retail profit taking',
         title: 'Case Study 4: Using Retail Balances for Profit-Taking Analysis'
       },
       {
