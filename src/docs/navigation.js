@@ -27,15 +27,15 @@ export const GUIDES = [
     articles: [
       {
         slug: 'age consumed alert',
-        title: 'Sanbase Alerts - Age Consumed',
+        title: 'Alerts - Age Consumed',
       },
       {
         slug: 'social trend alerts',
-        title: 'Sanbase Alerts - Social Trends/Trending Words',
+        title: 'Alerts - Social Trends/Trending Words',
       },
       {
         slug: 'whale activity alert',
-        title: 'Sanbase Alerts - Whale Activity',
+        title: 'Alerts - Whale Activity',
       },
       {
         slug: 'timing market volatility with token age consumed',
@@ -47,15 +47,15 @@ export const GUIDES = [
       },
       {
         slug: 'spot tops with price network activity divergences',
-        title: 'Spot tops with Price - Network Activity divergences',
+        title: 'Spot Tops with Price - Network Activity divergences',
       },
       {
         slug:'price to daily addresses divergence guide',
         title:'Price vs DAA Divergence; An On-Chain Trading Strategy Guide',
       },
       {
-        slug: 'santiment pro reports samples',
-        title: 'Santiment PRO Reports Samples',
+        slug: 'santiment pro report samples',
+        title: 'Santiment PRO Report Samples',
       },
       {
         slug: 'trading and transaction volume',
@@ -88,6 +88,22 @@ export const GUIDES = [
       {
         slug: 'whale monitoring to predict market moves',
         title: 'Whale Monitoring to Predict Market Moves'
+      },
+      {
+        slug: 'case study liquidations and sentiment ratio',
+        title: 'Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying'
+      },
+      {
+        slug: 'case study nrpl mvrv',
+        title: 'Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms'
+      },
+      {
+        slug: 'case study social volume',
+        title: 'Case Study 3: Social Volume Indicates a Top'
+      },
+      {
+        slug: 'case study retail profit taking',
+        title: 'Case Study 4: Using Retail Balances for Profit-Taking Analysis'
       },
       {
         slug: 'sanr a playground for trading',
@@ -174,7 +190,7 @@ export const GUIDES = [
     articles: ['Setting Up', 'Adding an API key', 'Functions', 'PRO Templates'],
   },
   {
-    title: 'Products and plans',
+    title: 'Products and Plans',
     icon: ProductsAndPlans,
     description: (
       <>
@@ -201,7 +217,7 @@ export const GUIDES = [
     ],
   },
   {
-    title: 'SAN tokens',
+    title: 'SAN Token',
     icon: SANtokens,
     description: (
       <>
@@ -229,7 +245,7 @@ export const GUIDES = [
     articles: ['Asset', 'Deposit Addresses'],
   },
   {
-    title: 'Youtube videos',
+    title: 'Youtube Videos',
     description: (
       <>
         Santiment webinars, video
