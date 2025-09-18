@@ -21,6 +21,7 @@ const ICONS = [
   "back-to-top.svg",
   "refresh.svg",
   "user.svg",
+  "link.svg",
 ]
 
 function processListedIcons() {
