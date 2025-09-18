@@ -125,12 +125,17 @@ that contribute to that ecosystem:
 
 ```graphql-explorer
 {
-  getEcosystems(ecosystems: ["ethereum"]) {
-    timeseriesDataJson(
+  getEcosystems(ecosystems: ["Ethereum"]) {
+    timeseriesData(
       metric: "ecosystem_dev_activity"
       from: "2024-03-01T00:00:00Z"
       to: "2024-03-10T00:00:00Z"
-      interval: "1d")
+      interval: "1d"
+    )
+    {
+      datetime
+      value
+    }
   }
 }
 ```
@@ -141,7 +146,7 @@ To check what assets are part of the ecosystem and what are their github links:
 
 ```graphql
 {
-  getEcosystems(ecosystems: ["ethereum"]){
+  getEcosystems(ecosystems: ["Ethereum"]){
     name
     projects{
       slug
