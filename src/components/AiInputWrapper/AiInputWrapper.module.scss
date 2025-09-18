@@ -1,0 +1,23 @@
+@import "~@santiment-network/ui/mixins.scss";
+
+.container {
+  padding: 44px 20px 56px 20px;
+  background: url(./turtle-illustration.svg) bottom center / contain no-repeat;
+
+  @include responsive("phone", "phone-xs", "tablet") {
+    background: none;
+  }
+}
+
+.turtle {
+  margin: 0 auto;
+  margin-bottom: 24px;
+  width: 242px;
+  height: 152px;
+
+  display: none;
+
+  @include responsive("phone", "phone-xs", "tablet") {
+    display: block;
+  }
+}

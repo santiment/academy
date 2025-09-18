@@ -1,5 +1,5 @@
-@import '~@santiment-network/ui/mixins';
-@import '~@santiment-network/ui/variables';
+@import "~@santiment-network/ui/mixins";
+@import "~@santiment-network/ui/variables";
 
 .wrapper {
   display: flex;
@@ -7,43 +7,42 @@
 }
 
 :global(.container) {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 1170px;
-	width: 100%;
-	padding-left: 15px;
-	padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .startBlock {
-	margin: 80px auto 80px;
+  margin: 80px auto 80px;
 
-	@include responsive('phone-xs') {
-		margin: 30px auto 0;
-	}
+  @include responsive("phone-xs") {
+    margin: 30px auto 0;
+  }
 }
 
 .blocks {
-	@include grid-wrap(4);
-	grid-gap: 24px;
+  @include grid-wrap(4);
+  grid-gap: 24px;
 
-  @include responsive('phone') {
+  @include responsive("phone") {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 .wide {
-	@include grid-wrap(2);
-	grid-gap: 24px;
-
+  @include grid-wrap(2);
+  grid-gap: 24px;
 }
 
 .title {
-	margin: 80px 0 32px;
-	@include text('h4');
-	color: var(--rhino);
+  margin: 80px 0 32px;
+  @include text("h4");
+  color: var(--rhino);
 
-	@include responsive('phone-xs') {
-		margin: 50px 0 22px;
-	}
+  @include responsive("phone-xs") {
+    margin: 50px 0 22px;
+  }
 }
