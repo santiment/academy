@@ -317,6 +317,7 @@ export const REFERENCES = [
       'NVT',
       'Network Growth',
       'Network Profit Loss',
+      'New Deployed Contracts',
       'Open Interest',
       'Pendle Markets',
       'Price DAA Divergence',
