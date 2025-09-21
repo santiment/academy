@@ -31,8 +31,13 @@ Protocol total action metrics:
 * `morpho_total_new_debt_usd` - Total amount of borrowings on Morpho protocol (combining all assets in USD)
 * `morpho_total_repayments_usd` - Total amount of repayments on Morpho protocol (combining all assets in USD)
 
-Morpho vaults total supplied metric:
+Morpho vaults metrics:
 * `morpho_vaults_total_supplied_usd` - [Morpho vault](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_vaults_total_supplied_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D) total supplied in USD
+* `morpho_vaults_apy` - [Morpho vault](https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_vaults_total_supplied_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D) APY
+
+Protocol total supplied/borrowed metrics:
+* `morpho_protocol_total_supplied_usd` - Total amount supplied on Morpho (combining all assets in USD)
+* `morpho_protocol_total_borrowed_usd` - Total amount borrowed on Morpho (combining all assets in USD)
 
 Daily active addresses:
 * `morpho_active_addresses` - Daily active addresses on Morpho protocol
@@ -72,7 +77,7 @@ Daily active addresses:
 
 ## Available Assets
 
-Metrics related to the entire protocol available for `morpho-token`.
+Metrics related to the entire protocol available for `morpho`.
 
 Other metrics: 
 available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
@@ -104,7 +109,7 @@ Total action metrics: `morpho_total_deposits_usd`, `morpho_total_liquidations_us
 {
   getMetric(metric: "morpho_total_new_debt_usd"){
     timeseriesDataJson(
-      slug: "morpho-token"
+      slug: "morpho"
       from: "2024-01-10T00:00:00Z"
       to: "2024-01-12T00:00:00Z"
       includeIncompleteData: true
@@ -120,7 +125,7 @@ Morpho vaults total supplied metric: `morpho_vaults_total_supplied_usd`
   getMetric(metric: "morpho_vaults_total_supplied_usd"){
     timeseriesDataJson(
       selector:{
-        slug:"morpho-token" 
+        slug:"morpho" 
         labelFqn: "santiment/morpho_vault->steakhouse usdc:v1"
       }
       from: "2024-10-01T00:00:00Z"
@@ -131,6 +136,39 @@ Morpho vaults total supplied metric: `morpho_vaults_total_supplied_usd`
 }
 ```
 
+Morpho vaults APY metric: `morpho_vaults_apy`
+
+```graphql-explorer
+{
+  getMetric(metric: "morpho_vaults_apy"){
+    timeseriesDataJson(
+      selector:{
+        slug:"morpho" 
+        labelFqn: "santiment/morpho_vault->steakhouse usdc:v1"
+      }
+      from: "2025-09-01T00:00:00Z"
+      to: "2025-10-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d")
+  }
+}
+```
+
+Protocol total supplied/borrowed metrics: `morpho_protocol_total_supplied_usd` and 
+`morpho_protocol_total_borrowed_usd`
+
+```graphql-explorer
+{
+  getMetric(metric: "morpho_protocol_total_supplied_usd"){
+    timeseriesDataJson(
+      slug: "morpho"
+      from: "2025-09-01T00:00:00Z"
+      to: "2025-09-07T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m")
+  }
+}
+```
 
 Daily active addresses: `morpho_active_addresses`
 
@@ -138,7 +176,7 @@ Daily active addresses: `morpho_active_addresses`
 {
   getMetric(metric: "morpho_active_addresses"){
     timeseriesDataJson(
-      slug: "morpho-token"
+      slug: "morpho"
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-10T00:00:00Z"
       includeIncompleteData: true
