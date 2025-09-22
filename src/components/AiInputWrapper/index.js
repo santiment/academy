@@ -15,7 +15,7 @@ const AiInputPlaceholder = () => (
             rows="1"
             type="text"
             placeholder="Ask AI..."
-            className="w-full rounded-md bg-transparent outline-none placeholder:text-waterloo resize-none py-0 pr-0 sm:pl-0 sm:h-full max-h-[72px] text-base pl-4"
+            className="w-full rounded-md bg-transparent outline-none placeholder:text-waterloo resize-none py-0 pr-0 sm:pl-0 sm:h-full max-h-[72px] text-sm pl-4"
           ></textarea>
         </div>
       </label>
@@ -23,25 +23,25 @@ const AiInputPlaceholder = () => (
       <div className="flex flex-wrap items-center justify-center gap-3">
         <button
           type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs sm:text-base p-2"
+          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs p-2"
         >
           Which are the metrics Santiment is known for?
         </button>
         <button
           type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs sm:text-base p-2"
+          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs p-2"
         >
           How can I change my subscription?
         </button>
         <button
           type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs sm:text-base p-2"
+          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs p-2"
         >
           Where can I find the TVL metric?
         </button>
         <button
           type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs sm:text-base p-2"
+          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs p-2"
         >
           How can I use MVRV to identify tops and bottoms?
         </button>
