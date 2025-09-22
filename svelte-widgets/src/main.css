@@ -238,8 +238,8 @@ ai-button,
 }
 
 .ai-chatbot-content pre {
-  margin-bottom: 6rem;
-  margin-top: 6rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
   overflow-x: auto;
   border-radius: 0.375rem;
   font-size: 14px;
