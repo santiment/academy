@@ -110,7 +110,7 @@ Available for [these assets](<https://api.santiment.net/graphiql?variables=&quer
 
 Combined Social Volume from all sources for an asset can be seen on a [project's page](https://app.santiment.net/charts).
 
-Social Volume for arbitrary search terms can be viewed from the [trends page](https://app.santiment.net/labs/trends) ![trends page](trends-page.png)
+Social Volume for arbitrary search terms can be viewed from the [trends page](https://app.santiment.net/social-trends) ![trends page](trends-page.png)
 
 The combined social volume from all sources is displayed. From the bottom of the
 page social volume for a specific source can be displayed, too. ![social volume
