@@ -19,7 +19,7 @@ const ICONS = [
   "turtoshi.svg",
   "close.svg",
   "back-to-top.svg",
-  "refresh.svg",
+  "reset.svg",
   "user.svg",
   "link.svg",
 ]
