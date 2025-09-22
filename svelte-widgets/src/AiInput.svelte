@@ -3,7 +3,6 @@
 <script lang="ts">
   import { ChatInput } from "san-webkit-next/ui/app/AIChatbot"
   import Button from "san-webkit-next/ui/core/Button"
-  import Popover from "san-webkit-next/ui/core/Popover"
 
   function handleSubmit(rawPrompt?: string) {
     const prompt = rawPrompt?.trim()
@@ -43,7 +42,7 @@
       <Button
         size="auto"
         variant="border"
-        class="border-porcelain text-xs sm:text-base p-2"
+        class="border-porcelain text-sm sm:text-base p-2"
         onclick={() => handleSubmit(query)}
       >
         {query}

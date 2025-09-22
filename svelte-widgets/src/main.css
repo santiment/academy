@@ -238,14 +238,16 @@ ai-button,
 }
 
 .ai-chatbot-content pre {
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
+  margin-top: 6rem;
   overflow-x: auto;
   border-radius: 0.375rem;
+  font-size: 14px;
 }
 
 .ai-chatbot-content code {
   border-radius: 0.375rem;
-  background-color: #eceef5;
+  background-color: var(--athens);
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   padding-top: 0.125rem;
@@ -261,13 +263,13 @@ ai-button,
 }
 
 .ai-chatbot-content a {
-  color: #14c393;
+  color: var(--green);
   text-decoration: underline;
   cursor: pointer;
 }
 
 .ai-chatbot-content a:hover {
-  color: #24ac85;
+  color: var(--green-hover);
 }
 
 .ai-chatbot-content h2 {
