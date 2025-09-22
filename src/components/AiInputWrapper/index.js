@@ -15,7 +15,7 @@ const AiInputPlaceholder = () => (
             rows="1"
             type="text"
             placeholder="Ask AI..."
-            className="w-full rounded-md bg-transparent outline-none placeholder:text-waterloo resize-none py-0 pr-0 sm:pl-0 sm:h-full max-h-[72px] text-sm pl-4"
+            className="w-full rounded-md bg-transparent outline-none placeholder:text-waterloo resize-none py-0 pr-0 sm:pl-0 sm:h-full max-h-[72px] text-base pl-4"
           ></textarea>
         </div>
       </label>
