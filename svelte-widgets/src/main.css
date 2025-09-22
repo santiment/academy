@@ -307,3 +307,7 @@ ai-button,
   background: initial;
   border: initial;
 }
+
+[data-melt-tooltip-content] {
+  z-index: 99;
+}
