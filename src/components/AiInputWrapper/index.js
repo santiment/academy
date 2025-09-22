@@ -23,25 +23,25 @@ const AiInputPlaceholder = () => (
       <div className="flex flex-wrap items-center justify-center gap-3">
         <button
           type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs p-2"
+          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-sm p-2"
         >
           Which are the metrics Santiment is known for?
         </button>
         <button
           type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs p-2"
+          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-sm p-2"
         >
           How can I change my subscription?
         </button>
         <button
           type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs p-2"
+          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-sm p-2"
         >
           Where can I find the TVL metric?
         </button>
         <button
           type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-xs p-2"
+          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-sm p-2"
         >
           How can I use MVRV to identify tops and bottoms?
         </button>
