@@ -24,7 +24,7 @@ A number of our metrics have proven highly effective in signalling forming tops 
 
 On Sanbase, you can subscribe to alerts whenever a coin you’re interested in experiences a surge in social volume, signaling a correction.
 
-Our [Social Trends tool](https://app.santiment.net/labs/trends) lets you view any coin’s social volume over time to prove the effectiveness of this approach.
+Our [Social Trends tool](https://app.santiment.net/social-trends) lets you view any coin’s social volume over time to prove the effectiveness of this approach.
 
 Example: MATIC
 
