@@ -5,10 +5,22 @@
   user-select: none;
   width: 100%;
   background: var(--white);
-  border-bottom: 1px solid var(--porcelain);
   position: absolute;
   top: 0;
   z-index: 2;
+}
+
+.aiButton {
+}
+
+.headerLeft {
+  display: flex;
+}
+
+.headerRight {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
 }
 
 .fixed {
@@ -21,6 +33,7 @@
   padding: 20px 15px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 70px;
   position: relative;
 

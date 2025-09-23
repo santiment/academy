@@ -64,6 +64,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "dev:https": "mkcert local.santiment.net && gatsby develop --port 3000 --https --host local.santiment.net --key-file ./local.santiment.net-key.pem --cert-file ./local.santiment.net.pem",
     "clean": "gatsby clean",
     "format": "prettier --single-quote --write src/**/*.{js,jsx}",
     "start": "npm run develop",
