@@ -3,6 +3,13 @@ import cx from "classnames"
 import styles from "./AiInputWrapper.module.scss"
 import turleImg from "./tutle-waving.svg"
 
+const queries = [
+  "What is Santiment known for",
+  "How can Santiment help me become profitable?",
+  "How can I use MVRV to identify tops and bottoms?",
+  "What is dev activity metric?",
+]
+
 const AiInputPlaceholder = () => (
   <div className="ai-input-placeholder">
     <h1 className="mb-8 text-center text-3xl text-rhino">
@@ -21,30 +28,14 @@ const AiInputPlaceholder = () => (
       </label>
 
       <div className="flex flex-wrap items-center justify-center gap-3">
-        <button
-          type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-sm p-2"
-        >
-          Which are the metrics Santiment is known for?
-        </button>
-        <button
-          type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-sm p-2"
-        >
-          How can I change my subscription?
-        </button>
-        <button
-          type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-sm p-2"
-        >
-          Where can I find the TVL metric?
-        </button>
-        <button
-          type="button"
-          className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-sm p-2"
-        >
-          How can I use MVRV to identify tops and bottoms?
-        </button>
+        {queries.map(query => (
+          <button
+            type="button"
+            className="group/button flex transition-colors items-center cursor-pointer gap-2 rounded-md border bg-white fill-waterloo hover:bg-athens border-porcelain text-sm p-2"
+          >
+            {query}
+          </button>
+        ))}
       </div>
     </div>
   </div>
