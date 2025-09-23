@@ -217,7 +217,7 @@ export const GUIDES = [
     ],
   },
   {
-    title: 'SAN Token',
+    title: 'SAN Tokens',
     icon: SANtokens,
     description: (
       <>
