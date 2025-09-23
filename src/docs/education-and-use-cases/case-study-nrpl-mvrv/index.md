@@ -1,5 +1,5 @@
 ---
-title: Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms
+title: "Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms"
 author: Maksim Tkachuk
 date: 2025-09-01
 ---

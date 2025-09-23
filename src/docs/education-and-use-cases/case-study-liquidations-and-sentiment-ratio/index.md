@@ -1,5 +1,5 @@
 ---
-title: Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying
+title: "Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying"
 author: Maksim Tkachuk
 date: 2025-09-01
 ---
@@ -26,6 +26,6 @@ What you want to see here is:
 2. Stablecoin debt reducing means people are closing their leveraged positions
 3. Negative sentiment readings means people are posting bearish social media content
 
-This combination of signals gave me the conviction to enter a position on Feb 28th, at $84700 per BTC and then proceed to add more on March 9-10th at $80,000 and $79,300. Holding through the next dip early April was very scary, but the huge spike in liquidations and debt unwind confirmed that the price shouldn’t go much lower from there, as it indeed happened eventually.
+This combination of signals gave me the conviction to enter a position on Feb 28th, at $84700 per BTC and then proceed to add more on March 9-10th at $80,000 and \$79,300. Holding through the next dip early April was very scary, but the huge spike in liquidations and debt unwind confirmed that the price shouldn’t go much lower from there, as it indeed happened eventually.
 
-The result by the time of writing is that I accumulated BTC at very favorable prices right before the huge run to the new ATH at $123k.
+The result by the time of writing is that I accumulated BTC at very favorable prices right before the huge run to the new ATH at \$123k.

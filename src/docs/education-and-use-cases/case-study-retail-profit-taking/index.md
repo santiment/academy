@@ -1,5 +1,5 @@
 ---
-title: Case Study 4: Using Retail Balances for Profit-Taking Analysis
+title: "Case Study 4: Using Retail Balances for Profit-Taking Analysis"
 author: David Utrobin and Maksim Balashevich
 date: 2025-09-01
 ---
@@ -11,7 +11,7 @@ date: 2025-09-01
 
 ### Scenario
 
-It’s November 2024 and BTC is at $92,300, Sebastian, having bought his first holdings a year earlier, November 2023, at $37880 is watching the price rise accelerate after a 3 year bear market and a year of slow uptrend. Bitcoin’s previous all time high was in November of 2021 at the astonishing price of approximately $66,000. The bottom of the previous bear cycle hit on November 09 2022, at the price of around ~15-16k. He’s thinking to himself, “Do I sell?”, “Is the market overheated?” and other such questions. So he decides to do some analysis.
+It’s November 2024 and BTC is at $92,300, Sebastian, having bought his first holdings a year earlier, November 2023, at $37880 is watching the price rise accelerate after a 3 year bear market and a year of slow uptrend. Bitcoin’s previous all time high was in November of 2021 at the astonishing price of approximately \$66,000. The bottom of the previous bear cycle hit on November 09 2022, at the price of around ~15-16k. He’s thinking to himself, “Do I sell?”, “Is the market overheated?” and other such questions. So he decides to do some analysis.
 
 The market and its analysis can be approached in several ways, often complementary to each other. Techniques include technical analysis, sentiment analysis, and on-chain analysis. Below, Sebastien selected an approach that is both comprehensive and relatively simple to understand.
 
@@ -40,7 +40,7 @@ The price is going up on BTC while the the profit-taking level appears healthy, 
 Sell some of the position, with the goal of reentering within the next 4-16 weeks at a lower price.
 
 **Outcome:**
-This moment was followed by a 4 month minor downtrend which contained multiple opportunities to buy back in under $90k.
+This moment was followed by a 4 month minor downtrend which contained multiple opportunities to buy back in under \$90k.
 
 We have compiled a [chart layout](https://app.santiment.net/charts/btc-major-metrics-1410) that includes these two metrics along with several others.
 

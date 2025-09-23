@@ -1,5 +1,5 @@
 ---
-title: Case Study 3: Social Volume Indicates a Top
+title: "Case Study 3: Social Volume Indicates a Top"
 author: David Utrobin
 date: 2025-09-01
 ---
