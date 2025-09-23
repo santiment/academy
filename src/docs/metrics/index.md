@@ -118,6 +118,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Labeled Exchange](/metrics/labeled-exchange)
 - [Lending and Borrowing Protocols](/metrics/lending-and-borrowing-protocols)
 - [MakerDAO DAI Savings Rate](/metrics/makerdao-dai-savings-rate)
+- [New Deployed Contracts](/metrics/new-deployed-contracts)
 - [Pendle Markets](/metrics/pendle-markets)
 - [Sky Savings](/metrics/sky-savings)
 - [Spent Coins Age Band](/metrics/spent-coins-age-band)
