@@ -18,10 +18,10 @@
   }
 
   const queries = [
-    "Which are the metrics Santiment is known for?",
-    "How can I change my subscription?",
-    "Where can I find the TVL metric?",
-    "How can I use MVRV to identify tops and bottoms? ",
+    "What is Santiment known for",
+    "How can Santiment help me become profitable?",
+    "How can I use MVRV to identify tops and bottoms?",
+    "What is dev activity metric?",
   ]
 </script>
 
