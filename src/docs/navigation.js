@@ -277,6 +277,7 @@ export const REFERENCES = [
       'Bitfinex Derivatives',
       'Circulation',
       'Community Messages Count',
+      'CrvUSD Savings',
       'Daily Active Addresses',
       'Daily Aggregated Financial Metrics',
       'Decentralized Exchange Metrics',
