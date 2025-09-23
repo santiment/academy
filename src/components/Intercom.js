@@ -41,7 +41,7 @@ const Intercom = ({ children }) => {
             app_id: "cyjjko9u",
             email,
             name,
-            z_index: 50,
+            z_index: 10,
           })
         }
 
