@@ -15,6 +15,8 @@ WORKDIR /app
 
 COPY ./ /app
 
+ENV BACKEND_URL="globalThis.env?.BACKEND_URL"
+
 RUN npm install -g yarn --force && yarn install --production
 
 RUN yarn build
