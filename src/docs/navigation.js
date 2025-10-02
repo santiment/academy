@@ -360,7 +360,10 @@ export const REFERENCES = [
     description:
       'Development updates, new features and other platform-wide improvements',
     icon: Changelog,
-    articles: [],
+    articles: [
+      'Assets',
+      'Metrics',
+    ],
   },
   {
     title: 'Labels',
