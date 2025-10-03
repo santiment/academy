@@ -15,18 +15,10 @@ const CreatedAssetItem = ({ item }) => {
   const timestamp = new Date(item.eventTimestamp).toLocaleString()
 
   return (
-    <>
+    <a href={link} target="_blank" rel="noreferrer">
       <strong>Created</strong> {name}
       {ticker && ` (${ticker})`} — <time>{timestamp}</time>
-      {link && (
-        <>
-          {" — "}
-          <a href={link} target="_blank" rel="noreferrer">
-            Open
-          </a>
-        </>
-      )}
-    </>
+    </a>
   )
 }
 

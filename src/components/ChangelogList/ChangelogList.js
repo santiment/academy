@@ -4,6 +4,7 @@ import Button from "@santiment-network/ui/Button"
 import markdownStyles from "../Markdown/Markdown.module.scss"
 import { mergeEntries } from "./utils"
 import styles from "./ChangelogList.module.scss"
+import PageLoader from "../../components/Loader/PageLoader"
 
 const ChangelogList = ({
   title,
@@ -72,7 +73,13 @@ const ChangelogList = ({
               const readyEntries = entries ?? initialEntries
               const readyPag = pagination ?? initialPag
 
-              if (loading && !entries) return <div>Loading…</div>
+              if (loading && !entries)
+                return (
+                  <div className={styles.loaderWrapper}>
+                    <PageLoader text="Loading" className={styles.loader} />
+                  </div>
+                )
+
               if (error) return <div>Error: {error.message}</div>
 
               return (
@@ -85,17 +92,21 @@ const ChangelogList = ({
                         <section key={group.date}>
                           <h3>{new Date(group.date).toLocaleDateString()}</h3>
 
-                          {(group[createdKey] || []).map((item, i) => (
-                            <article key={`c-${group.date}-${i}`}>
-                              {renderCreatedItem(item, group)}
-                            </article>
-                          ))}
+                          <ul>
+                            {(group[createdKey] || []).map((item, i) => (
+                              <li key={`c-${group.date}-${i}`}>
+                                {renderCreatedItem(item, group)}
+                              </li>
+                            ))}
+                          </ul>
 
-                          {(group[removedKey] || []).map((item, i) => (
-                            <article key={`r-${group.date}-${i}`}>
-                              {renderRemovedItem(item, group)}
-                            </article>
-                          ))}
+                          <ul>
+                            {(group[removedKey] || []).map((item, i) => (
+                              <li key={`r-${group.date}-${i}`}>
+                                {renderRemovedItem(item, group)}
+                              </li>
+                            ))}
+                          </ul>
                         </section>
                       ))}
                     </div>

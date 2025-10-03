@@ -1,12 +1,12 @@
-import React from "react"
-import withSizes from "react-sizes"
-import cx from "classnames"
-import { mapSizesToProps } from "../../utils/sizes"
-import { ArrowRight } from "../ArticleHeadings/ArticleHeadings"
-import styles from "./ArticleFooter.module.scss"
+import React from 'react'
+import withSizes from 'react-sizes'
+import cx from 'classnames'
+import { mapSizesToProps } from '../../utils/sizes'
+import { ArrowRight } from '../ArticleHeadings/ArticleHeadings'
+import styles from './ArticleFooter.module.scss'
 
 const ArticleLastUpdate = ({ lastUpdatedAt }) => (
-  <div className={cx(styles.articleLastUpdate, "row v-center mrg-xl mrg--b")}>
+  <div className={cx(styles.articleLastUpdate, 'row v-center mrg-xl mrg--b')}>
     <svg
       className="mrg--r mrg-s"
       width="12"
@@ -28,7 +28,7 @@ const ArticleLastUpdate = ({ lastUpdatedAt }) => (
 
 const DiscordCTA = ({ isSmall }) => (
   <a
-    className={cx("row", styles.discordCTA, isSmall && styles.small)}
+    className={cx('row', styles.discordCTA, isSmall && styles.small)}
     href="https://santiment.net/discord"
     target="_blank"
     rel="noreferrer"
@@ -48,7 +48,7 @@ const DiscordCTA = ({ isSmall }) => (
 )
 
 const DiscordLogo = () => (
-  <div className={cx(styles.discordlogo, "row hv-center mrg--r mrg-xl")}>
+  <div className={cx(styles.discordlogo, 'row hv-center mrg--r mrg-xl')}>
     <svg
       width="28"
       height="22"
