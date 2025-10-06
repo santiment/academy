@@ -1,0 +1,315 @@
+# Santiment Academy
+
+## Docs
+
+- [Development changelog (Outdated, upgrade to this page coming soon)](https://academy.santiment.net/raw/changelog/index.md): Development changelog (Outdated, upgrade to this page coming soon)
+- [Sanbase Alerts Example - Age Consumed](https://academy.santiment.net/raw/education-and-use-cases/age-consumed-alert/index.md): Sanbase Alerts Example - Age Consumed
+- [Analyzing Speculative Activity with Exchange Metrics](https://academy.santiment.net/raw/education-and-use-cases/analyze-speculative-activity-with-exchange-metrics/index.md): Analyzing Speculative Activity with Exchange Metrics
+- [Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying](https://academy.santiment.net/raw/education-and-use-cases/case-study-liquidations-and-sentiment-ratio/index.md): Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying
+- [Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms](https://academy.santiment.net/raw/education-and-use-cases/case-study-nrpl-mvrv/index.md): Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms
+- [Case Study 4: Using Retail Balances for Profit-Taking Analysis](https://academy.santiment.net/raw/education-and-use-cases/case-study-retail-profit-taking/index.md): Case Study 4: Using Retail Balances for Profit-Taking Analysis
+- [Case Study 3: Social Volume Indicates a Top](https://academy.santiment.net/raw/education-and-use-cases/case-study-social-volume/index.md): Case Study 3: Social Volume Indicates a Top
+- [Spot tops with Price - Network Activity divergences](https://academy.santiment.net/raw/education-and-use-cases/how-to-spot-tops-with-price-network-activity-divergences/index.md): Spot tops with Price - Network Activity divergences
+- [Education And Use Cases](https://academy.santiment.net/raw/education-and-use-cases/index.md): Education And Use Cases
+- [Price vs DAA Divergence; An On-Chain Trading Strategy Guide](https://academy.santiment.net/raw/education-and-use-cases/price-to-daily-addresses-divergence-guide/index.md): Price vs DAA Divergence; An On-Chain Trading Strategy Guide
+- [SanR - a Playground for Crypto Trading](https://academy.santiment.net/raw/education-and-use-cases/sanr-a-playground-for-trading/index.md): SanR - a Playground for Crypto Trading
+- [Santiment Pro Report Samples](https://academy.santiment.net/raw/education-and-use-cases/santiment-pro-reports-samples/index.md): Santiment Pro Report Samples
+- [Sanbase Alerts Example - Social Trends](https://academy.santiment.net/raw/education-and-use-cases/social-trend-alerts/index.md): Sanbase Alerts Example - Social Trends
+- [Timing Market Volatility with Token Age Consumed](https://academy.santiment.net/raw/education-and-use-cases/timing-market-volatility-with-token-age-consumed/index.md): Timing Market Volatility with Token Age Consumed
+- [Trading and Transaction Volume](https://academy.santiment.net/raw/education-and-use-cases/trading-and-transaction-volume/index.md): Trading and Transaction Volume
+- [Understanding Circulation](https://academy.santiment.net/raw/education-and-use-cases/understanding-circulation/index.md): Understanding Circulation
+- [Understanding Crypto Market Cycles Through Lending Metrics](https://academy.santiment.net/raw/education-and-use-cases/understanding-crypto-market-cycles-through-lending-metrics/index.md): Understanding Crypto Market Cycles Through Lending Metrics
+- [Understanding Long-Term Market Trends and Cycles](https://academy.santiment.net/raw/education-and-use-cases/understanding-long-term-market-trends-and-cycles/index.md): Understanding Long-Term Market Trends and Cycles
+- [Understanding Market Expectations Through Historical Crypto Trends](https://academy.santiment.net/raw/education-and-use-cases/understanding-market-expectations-through-historical-crypto-trends/index.md): Understanding Market Expectations Through Historical Crypto Trends
+- [Understanding Short-Term Market Trends](https://academy.santiment.net/raw/education-and-use-cases/understanding-short-term-market-trends/index.md): Understanding Short-Term Market Trends
+- [Understanding Daily Active Addresses (DAA)](https://academy.santiment.net/raw/education-and-use-cases/understaning-daily-active-addresses/index.md): Understanding Daily Active Addresses (DAA)
+- [Sanbase Alerts Example - Whale Activity](https://academy.santiment.net/raw/education-and-use-cases/whale-activity-alert/index.md): Sanbase Alerts Example - Whale Activity
+- [Whale Monitoring to Predict Market Moves](https://academy.santiment.net/raw/education-and-use-cases/whale-monitoring-to-predict-market-moves/index.md): Whale Monitoring to Predict Market Moves
+- [Getting started for Developers](https://academy.santiment.net/raw/for-developers/index.md): Getting started for Developers
+- [Getting started for traders](https://academy.santiment.net/raw/for-traders/index.md): Getting started for traders
+- [Asset](https://academy.santiment.net/raw/glossary/asset/index.md): Asset
+- [Deposit Addresses](https://academy.santiment.net/raw/glossary/deposit-addresses/index.md): Deposit Addresses
+- [Glossary of API Terms](https://academy.santiment.net/raw/glossary/index.md): Glossary of API Terms
+- [Airdrop Receiver](https://academy.santiment.net/raw/labels/airdrop-receiver/index.md): Airdrop Receiver
+- [Airdrop Sender](https://academy.santiment.net/raw/labels/airdrop-sender/index.md): Airdrop Sender
+- [Blocked Label](https://academy.santiment.net/raw/labels/blocked/index.md): Blocked Label
+- [Bridge](https://academy.santiment.net/raw/labels/bridge/index.md): Bridge
+- [CeFi](https://academy.santiment.net/raw/labels/cefi/index.md): CeFi
+- [Centralized exchange](https://academy.santiment.net/raw/labels/centralized-exchange/index.md): Centralized exchange
+- [Charity](https://academy.santiment.net/raw/labels/charity/index.md): Charity
+- [Closed](https://academy.santiment.net/raw/labels/closed/index.md): Closed
+- [Cold wallet](https://academy.santiment.net/raw/labels/cold-wallet/index.md): Cold wallet
+- [Contract](https://academy.santiment.net/raw/labels/contract/index.md): Contract
+- [Dead address](https://academy.santiment.net/raw/labels/dead-address/index.md): Dead address
+- [Decentralized exchange](https://academy.santiment.net/raw/labels/decentralized-exchange/index.md): Decentralized exchange
+- [DeFi](https://academy.santiment.net/raw/labels/defi/index.md): DeFi
+- [Deposit](https://academy.santiment.net/raw/labels/deposit/index.md): Deposit
+- [Derivatives Label](https://academy.santiment.net/raw/labels/derivatives/index.md): Derivatives Label
+- [DEX user](https://academy.santiment.net/raw/labels/dex-user/index.md): DEX user
+- [DSproxy](https://academy.santiment.net/raw/labels/dsproxy/index.md): DSproxy
+- [ERC1155](https://academy.santiment.net/raw/labels/erc1155/index.md): ERC1155
+- [ERC721](https://academy.santiment.net/raw/labels/erc721/index.md): ERC721
+- [ETH2_Staking](https://academy.santiment.net/raw/labels/eth2-staking/index.md): ETH2_Staking
+- [ETH2 Staking Address](https://academy.santiment.net/raw/labels/eth2-staking-address/index.md): ETH2 Staking Address
+- [Contract Factory](https://academy.santiment.net/raw/labels/factory/index.md): Contract Factory
+- [Fund](https://academy.santiment.net/raw/labels/fund/index.md): Fund
+- [Gambling](https://academy.santiment.net/raw/labels/gambling/index.md): Gambling
+- [GameFi](https://academy.santiment.net/raw/labels/gamefi/index.md): GameFi
+- [Genesis](https://academy.santiment.net/raw/labels/genesis/index.md): Genesis
+- [Hacked](https://academy.santiment.net/raw/labels/hacked/index.md): Hacked
+- [Hot wallet](https://academy.santiment.net/raw/labels/hot-wallet/index.md): Hot wallet
+- [Labels](https://academy.santiment.net/raw/labels/index.md): Labels
+- [Label-fqn](https://academy.santiment.net/raw/labels/label-fqn/index.md): Label-fqn
+- [Lending](https://academy.santiment.net/raw/labels/lending/index.md): Lending
+- [Lending User](https://academy.santiment.net/raw/labels/lending-user/index.md): Lending User
+- [Liquidity](https://academy.santiment.net/raw/labels/liquidity/index.md): Liquidity
+- [Migration Address](https://academy.santiment.net/raw/labels/migration-address/index.md): Migration Address
+- [Miner](https://academy.santiment.net/raw/labels/miner/index.md): Miner
+- [MultiSig](https://academy.santiment.net/raw/labels/multisig/index.md): MultiSig
+- [NFT](https://academy.santiment.net/raw/labels/nft/index.md): NFT
+- [NFT collection](https://academy.santiment.net/raw/labels/nft-collection/index.md): NFT collection
+- [NFT collection name](https://academy.santiment.net/raw/labels/nft-collection-name/index.md): NFT collection name
+- [NFT collection symbol](https://academy.santiment.net/raw/labels/nft-collection-symbol/index.md): NFT collection symbol
+- [NFT Influencer](https://academy.santiment.net/raw/labels/nft-influencer/index.md): NFT Influencer
+- [NFT marketplace](https://academy.santiment.net/raw/labels/nft-marketplace/index.md): NFT marketplace
+- [NFT trader](https://academy.santiment.net/raw/labels/nft-trader/index.md): NFT trader
+- [NFT trader threshold](https://academy.santiment.net/raw/labels/nft-trader-threshold/index.md): NFT trader threshold
+- [NFT user](https://academy.santiment.net/raw/labels/nft-user/index.md): NFT user
+- [OpenSea Username](https://academy.santiment.net/raw/labels/opensea-username/index.md): OpenSea Username
+- [Owner](https://academy.santiment.net/raw/labels/owner/index.md): Owner
+- [Proxy](https://academy.santiment.net/raw/labels/proxy/index.md): Proxy
+- [Sanctioned Label](https://academy.santiment.net/raw/labels/sanctioned/index.md): Sanctioned Label
+- [Scam](https://academy.santiment.net/raw/labels/scam/index.md): Scam
+- [Liquid staking](https://academy.santiment.net/raw/labels/staking/index.md): Liquid staking
+- [Team wallet](https://academy.santiment.net/raw/labels/team_wallet/index.md): Team wallet
+- [Used NFT marketplace](https://academy.santiment.net/raw/labels/used-nft-marketplace/index.md): Used NFT marketplace
+- [Whale](https://academy.santiment.net/raw/labels/whale/index.md): Whale
+- [Whale by USD Balance](https://academy.santiment.net/raw/labels/whale-usd-balance/index.md): Whale by USD Balance
+- [Withdrawal](https://academy.santiment.net/raw/labels/withdrawal/index.md): Withdrawal
+- [Withdrawn From](https://academy.santiment.net/raw/labels/withdrawn-from/index.md): Withdrawn From
+- [Yield Farming Label](https://academy.santiment.net/raw/labels/yield/index.md): Yield Farming Label
+- [Active Addresses 24h](https://academy.santiment.net/raw/metrics/active-addresses-24h/index.md): Active Addresses 24h
+- [Active Deposits](https://academy.santiment.net/raw/metrics/active-deposits/index.md): Active Deposits
+- [Active Withdrawals](https://academy.santiment.net/raw/metrics/active-withdrawals/index.md): Active Withdrawals
+- [Token Age Consumed - Technical Details](https://academy.santiment.net/raw/metrics/age-consumed/age-consumed-technical/index.md): Token Age Consumed - Technical Details
+- [Token Age Consumed metric](https://academy.santiment.net/raw/metrics/age-consumed/index.md): Token Age Consumed metric
+- [Amount in Top Holders](https://academy.santiment.net/raw/metrics/amount-in-top-holders/index.md): Amount in Top Holders
+- [Annual inflation rate](https://academy.santiment.net/raw/metrics/annual-inflation-rate/index.md): Annual inflation rate
+- [Binance Contract Funding Rate (BUSD)](https://academy.santiment.net/raw/metrics/binance-derivatives/busd-binance-funding-rate/index.md): Binance Contract Funding Rate (BUSD)
+- [Binance Perpetual Contracts Open Interest/Value (BUSD)](https://academy.santiment.net/raw/metrics/binance-derivatives/busd-binance-perpetual-open-interest-value/index.md): Binance Perpetual Contracts Open Interest/Value (BUSD)
+- [Binance Derivatives](https://academy.santiment.net/raw/metrics/binance-derivatives/index.md): Binance Derivatives
+- [Binance Contract Funding Rate (USDT)](https://academy.santiment.net/raw/metrics/binance-derivatives/usdt-binance-funding-rate/index.md): Binance Contract Funding Rate (USDT)
+- [Binance Perpetual Contracts Open Interest/Value (USDT)](https://academy.santiment.net/raw/metrics/binance-derivatives/usdt-binance-perpetual-open-interest-value/index.md): Binance Perpetual Contracts Open Interest/Value (USDT)
+- [Bitcoin ETF Volume](https://academy.santiment.net/raw/metrics/bitcoin-etf-volume/index.md): Bitcoin ETF Volume
+- [Bitfinex Contract Funding Rate](https://academy.santiment.net/raw/metrics/bitfinex-derivatives/bitfinex-perpetual-funding-rate/index.md): Bitfinex Contract Funding Rate
+- [Bitfinex Derivatives](https://academy.santiment.net/raw/metrics/bitfinex-derivatives/index.md): Bitfinex Derivatives
+- [BitMEX Derivatives](https://academy.santiment.net/raw/metrics/bitmex-derivatives/index.md): BitMEX Derivatives
+- [BitMEX Perpetual Contract Basis](https://academy.santiment.net/raw/metrics/bitmex-derivatives/perpetual-contract-basis/index.md): BitMEX Perpetual Contract Basis
+- [BitMEX Perpetual Contract Funding Rate](https://academy.santiment.net/raw/metrics/bitmex-derivatives/perpetual-contract-funding-rate/index.md): BitMEX Perpetual Contract Funding Rate
+- [BitMEX Perpetual Contract Price](https://academy.santiment.net/raw/metrics/bitmex-derivatives/perpetual-contract-price/index.md): BitMEX Perpetual Contract Price
+- [BitMEX Perpetual Contracts Open Interest/Value](https://academy.santiment.net/raw/metrics/bitmex-derivatives/perpetual-contracts-open-interest-value/index.md): BitMEX Perpetual Contracts Open Interest/Value
+- [BitMEX Price Index](https://academy.santiment.net/raw/metrics/bitmex-derivatives/price-index/index.md): BitMEX Price Index
+- [BTC and S&P 500 Price Divergence](https://academy.santiment.net/raw/metrics/btc-and-s-and-p-500-price-divergence/index.md): BTC and S&P 500 Price Divergence
+- [Circulation](https://academy.santiment.net/raw/metrics/circulation/index.md): Circulation
+- [Community Messages Count](https://academy.santiment.net/raw/metrics/community-messages-count/index.md): Community Messages Count
+- [Interacting Address Count](https://academy.santiment.net/raw/metrics/contract-interacting-address-count/index.md): Interacting Address Count
+- [Transactions Count](https://academy.santiment.net/raw/metrics/contract-transactions-count/index.md): Transactions Count
+- [CrvUSD Savings](https://academy.santiment.net/raw/metrics/crvusd-savings/index.md): CrvUSD Savings
+- [Daily Active Addresses](https://academy.santiment.net/raw/metrics/daily-active-addresses/index.md): Daily Active Addresses
+- [Daily Active Deposits](https://academy.santiment.net/raw/metrics/daily-active-deposits/index.md): Daily Active Deposits
+- [Daily Aggregated Financial Metrics in USD](https://academy.santiment.net/raw/metrics/daily-aggregated-financial-metrics/index.md): Daily Aggregated Financial Metrics in USD
+- [Dex List](https://academy.santiment.net/raw/metrics/decentralized-exchange-metrics/dex_list/index.md): Dex List
+- [Decentralized Exchange Metrics](https://academy.santiment.net/raw/metrics/decentralized-exchange-metrics/index.md): Decentralized Exchange Metrics
+- [Old Dex List](https://academy.santiment.net/raw/metrics/decentralized-exchange-metrics/old_dex_list/index.md): Old Dex List
+- [Deprecated DeFi](https://academy.santiment.net/raw/metrics/deprecated-metrics/deprecated-defi-metrics/index.md): Deprecated DeFi
+- [Deprecated MakerDAO Metrics](https://academy.santiment.net/raw/metrics/deprecated-metrics/deprecated-makerdao-metrics/index.md): Deprecated MakerDAO Metrics
+- [Deprecated Social Metrics](https://academy.santiment.net/raw/metrics/deprecated-metrics/deprecated-social-metrics/index.md): Deprecated Social Metrics
+- [Deprecated Uniswap Airdrop Metrics](https://academy.santiment.net/raw/metrics/deprecated-metrics/deprecated-uniswap-metrics/index.md): Deprecated Uniswap Airdrop Metrics
+- [Deprecated Metrics](https://academy.santiment.net/raw/metrics/deprecated-metrics/index.md): Deprecated Metrics
+- [Deribit Contract Funding Rate](https://academy.santiment.net/raw/metrics/deribit-derivatives/deribit-perpetual-funding-rate/index.md): Deribit Contract Funding Rate
+- [Deribit Derivatives](https://academy.santiment.net/raw/metrics/deribit-derivatives/index.md): Deribit Derivatives
+- [Access](https://academy.santiment.net/raw/metrics/details/access/index.md): Access
+- [Change Metrics](https://academy.santiment.net/raw/metrics/details/change_metrics/index.md): Change Metrics
+- [Latency](https://academy.santiment.net/raw/metrics/details/data-type/index.md): Latency
+- [Frequency](https://academy.santiment.net/raw/metrics/details/frequency/index.md): Frequency
+- [Interval Timebound](https://academy.santiment.net/raw/metrics/details/interval_timebound/index.md): Interval Timebound
+- [Latency](https://academy.santiment.net/raw/metrics/details/latency/index.md): Latency
+- [Social Data](https://academy.santiment.net/raw/metrics/details/social-data/index.md): Social Data
+- [Stack Coin Age model](https://academy.santiment.net/raw/metrics/details/stack-coin-age-model/index.md): Stack Coin Age model
+- [Supply Distribution Parameters](https://academy.santiment.net/raw/metrics/details/supply_distribution_parameters/index.md): Supply Distribution Parameters
+- [Timebound](https://academy.santiment.net/raw/metrics/details/timebound/index.md): Timebound
+- [Development Activity Metric](https://academy.santiment.net/raw/metrics/development-activity/development-activity/index.md): Development Activity Metric
+- [Development Activity Contributors Count](https://academy.santiment.net/raw/metrics/development-activity/development-activity-contributors-count/index.md): Development Activity Contributors Count
+- [Github Activity](https://academy.santiment.net/raw/metrics/development-activity/github-activity/index.md): Github Activity
+- [Github Activity Contributors Count](https://academy.santiment.net/raw/metrics/development-activity/github-activity-contributors-count/index.md): Github Activity Contributors Count
+- [Development Activity Metrics](https://academy.santiment.net/raw/metrics/development-activity/index.md): Development Activity Metrics
+- [Dormant Circulation](https://academy.santiment.net/raw/metrics/dormant-circulation/index.md): Dormant Circulation
+- [dYdX Contract Funding Rate](https://academy.santiment.net/raw/metrics/dydx-derivatives/dydx-perpetual-funding-rate/index.md): dYdX Contract Funding Rate
+- [dYdX Derivatives](https://academy.santiment.net/raw/metrics/dydx-derivatives/index.md): dYdX Derivatives
+- [Emerging trends](https://academy.santiment.net/raw/metrics/emerging-trends/index.md): Emerging trends
+- [ETF Flow Metrics](https://academy.santiment.net/raw/metrics/etf-flow/index.md): ETF Flow Metrics
+- [ETH 2.0 Metrics](https://academy.santiment.net/raw/metrics/eth-2/index.md): ETH 2.0 Metrics
+- [Ethena Protocol](https://academy.santiment.net/raw/metrics/ethena-protocol/index.md): Ethena Protocol
+- [Ethereum fees](https://academy.santiment.net/raw/metrics/ethereum-fees/index.md): Ethereum fees
+- [Ethereum Spent](https://academy.santiment.net/raw/metrics/ethereum-spent/index.md): Ethereum Spent
+- [Exchange Inflow/Outflow](https://academy.santiment.net/raw/metrics/exchange-funds-flow/index.md): Exchange Inflow/Outflow
+- [FTX Contract Funding Rate](https://academy.santiment.net/raw/metrics/ftx-derivatives/ftx-perpetual-funding-rate/index.md): FTX Contract Funding Rate
+- [FTX Derivatives](https://academy.santiment.net/raw/metrics/ftx-derivatives/index.md): FTX Derivatives
+- [Fully Diluted Valuation in USD](https://academy.santiment.net/raw/metrics/fully-diluted-valuation/index.md): Fully Diluted Valuation in USD
+- [Funding Rates Aggregated](https://academy.santiment.net/raw/metrics/funding-rates-aggregated/index.md): Funding Rates Aggregated
+- [Gini Index](https://academy.santiment.net/raw/metrics/gini-index/index.md): Gini Index
+- [Historical Balance](https://academy.santiment.net/raw/metrics/historical-balance/index.md): Historical Balance
+- [Huobi Contract Funding Rate](https://academy.santiment.net/raw/metrics/huobi-derivatives/huobi-perpetual-funding-rate/index.md): Huobi Contract Funding Rate
+- [Huobi Derivatives](https://academy.santiment.net/raw/metrics/huobi-derivatives/index.md): Huobi Derivatives
+- [Santiment Crypto Metrics Overview](https://academy.santiment.net/raw/metrics/index.md): Santiment Crypto Metrics Overview
+- [Labeled Balance](https://academy.santiment.net/raw/metrics/labeled-balance/index.md): Labeled Balance
+- [Labeled Exchange](https://academy.santiment.net/raw/metrics/labeled-exchange/index.md): Labeled Exchange
+- [Labelled Historical Balance](https://academy.santiment.net/raw/metrics/labelled-historical-balance/index.md): Labelled Historical Balance
+- [Latest Transactions](https://academy.santiment.net/raw/metrics/latest-transactions/index.md): Latest Transactions
+- [Aave Safety Module](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/aave-safety-module/index.md): Aave Safety Module
+- [Aave V2 Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/aave-v2/index.md): Aave V2 Protocol
+- [Aave V3 Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/aave-v3/index.md): Aave V3 Protocol
+- [Compound Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/compound/index.md): Compound Protocol
+- [Compound V3 Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/compound-v3/index.md): Compound V3 Protocol
+- [Fluid Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/fluid/index.md): Fluid Protocol
+- [Fraxlend Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/fraxlend/index.md): Fraxlend Protocol
+- [DeFi Lending and Borrowing Protocols](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/index.md): DeFi Lending and Borrowing Protocols
+- [Liquity Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/liquity/index.md): Liquity Protocol
+- [MakerDAO Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/makerdao/index.md): MakerDAO Protocol
+- [Morpho Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/morpho/index.md): Morpho Protocol
+- [Spark Protocol](https://academy.santiment.net/raw/metrics/lending-and-borrowing-protocols/spark/index.md): Spark Protocol
+- [M2 Money Supply](https://academy.santiment.net/raw/metrics/m2-money-supply/index.md): M2 Money Supply
+- [MakerDAO DAI Savings Rate](https://academy.santiment.net/raw/metrics/makerdao-dai-savings-rate/index.md): MakerDAO DAI Savings Rate
+- [Marketcap in USD](https://academy.santiment.net/raw/metrics/marketcap/index.md): Marketcap in USD
+- [Mean Coin Age](https://academy.santiment.net/raw/metrics/mean-coin-age/index.md): Mean Coin Age
+- [Mean Coin Age - Technical Details](https://academy.santiment.net/raw/metrics/mean-coin-age/mean-coin-age-technical/index.md): Mean Coin Age - Technical Details
+- [Mean Realized Price](https://academy.santiment.net/raw/metrics/mean-realized-price/index.md): Mean Realized Price
+- [MVRV - Market Value To Realized Value](https://academy.santiment.net/raw/metrics/mvrv/index.md): MVRV - Market Value To Realized Value
+- [Network Growth](https://academy.santiment.net/raw/metrics/network-growth/index.md): Network Growth
+- [Network Profit Loss](https://academy.santiment.net/raw/metrics/network-profit-loss/index.md): Network Profit Loss
+- [New Deployed Contracts](https://academy.santiment.net/raw/metrics/new-deployed-contracts/index.md): New Deployed Contracts
+- [NFT Collection Holders Balance](https://academy.santiment.net/raw/metrics/nft-collection-holders-balance/index.md): NFT Collection Holders Balance
+- [NFT Collection Price](https://academy.santiment.net/raw/metrics/nft-collection-price/index.md): NFT Collection Price
+- [NFT Market Volume/Count](https://academy.santiment.net/raw/metrics/nft-market-volume/index.md): NFT Market Volume/Count
+- [NFT Network Profit Loss](https://academy.santiment.net/raw/metrics/nft-network-profit-loss/index.md): NFT Network Profit Loss
+- [NFT Social Volume](https://academy.santiment.net/raw/metrics/nft-social-volume/index.md): NFT Social Volume
+- [NFT Trade Volume USD](https://academy.santiment.net/raw/metrics/nft-trade-volume-usd/index.md): NFT Trade Volume USD
+- [NFT Trades Count](https://academy.santiment.net/raw/metrics/nft-trades-count/index.md): NFT Trades Count
+- [NVT](https://academy.santiment.net/raw/metrics/nvt/index.md): NVT
+- [Open Interest](https://academy.santiment.net/raw/metrics/open-interest/index.md): Open Interest
+- [Pendle Markets](https://academy.santiment.net/raw/metrics/pendle-markets/index.md): Pendle Markets
+- [Price Metrics](https://academy.santiment.net/raw/metrics/price/index.md): Price Metrics
+- [Price and Daily Active Addresses Divergence](https://academy.santiment.net/raw/metrics/price-daa-divergence/index.md): Price and Daily Active Addresses Divergence
+- [Price Volatility](https://academy.santiment.net/raw/metrics/price-volatility/index.md): Price Volatility
+- [Rank](https://academy.santiment.net/raw/metrics/rank/index.md): Rank
+- [Realized Market Capitalization Hodl Waves](https://academy.santiment.net/raw/metrics/realized-market-capitalization-hodl-waves/index.md): Realized Market Capitalization Hodl Waves
+- [Realized Value](https://academy.santiment.net/raw/metrics/realized-value/index.md): Realized Value
+- [Renamed Metrics](https://academy.santiment.net/raw/metrics/renamed-metrics/index.md): Renamed Metrics
+- [RSI](https://academy.santiment.net/raw/metrics/rsi/index.md): RSI
+- [Sentiment metrics](https://academy.santiment.net/raw/metrics/sentiment-metrics/index.md): Sentiment metrics
+- [Positive/Negative Sentiment Metrics](https://academy.santiment.net/raw/metrics/sentiment-metrics/positive-negative-sentiment-metrics/index.md): Positive/Negative Sentiment Metrics
+- [Weighted Sentiment Metrics](https://academy.santiment.net/raw/metrics/sentiment-metrics/weighted-sentiment-metrics/index.md): Weighted Sentiment Metrics
+- [Sky Savings](https://academy.santiment.net/raw/metrics/sky-savings/index.md): Sky Savings
+- [Social Dominance](https://academy.santiment.net/raw/metrics/social-dominance/index.md): Social Dominance
+- [Social Volume](https://academy.santiment.net/raw/metrics/social-volume/index.md): Social Volume
+- [Social Volume AI](https://academy.santiment.net/raw/metrics/social-volume-ai/index.md): Social Volume AI
+- [Spent Coins Age Band](https://academy.santiment.net/raw/metrics/spent-coins-age-band/index.md): Spent Coins Age Band
+- [Stock To Flow ratio](https://academy.santiment.net/raw/metrics/stock-to-flow/index.md): Stock To Flow ratio
+- [Amount of Holders Metrics](https://academy.santiment.net/raw/metrics/supply-distribution/amount-of-holders/index.md): Amount of Holders Metrics
+- [Amount of Labeled Holders Metrics](https://academy.santiment.net/raw/metrics/supply-distribution/amount-of-labeled-holders/index.md): Amount of Labeled Holders Metrics
+- [Combined Balance of Holders Metrics](https://academy.santiment.net/raw/metrics/supply-distribution/combined-balance-of-holders/index.md): Combined Balance of Holders Metrics
+- [Combined Balance of Labeled Holders Metrics](https://academy.santiment.net/raw/metrics/supply-distribution/combined-balance-of-labeled-holders/index.md): Combined Balance of Labeled Holders Metrics
+- [Supply Distribution](https://academy.santiment.net/raw/metrics/supply-distribution/index.md): Supply Distribution
+- [Supply On/Outside Exchanges](https://academy.santiment.net/raw/metrics/supply-on-or-outside-exchanges/index.md): Supply On/Outside Exchanges
+- [Top Holders](https://academy.santiment.net/raw/metrics/top-holders/index.md): Top Holders
+- [Top Social Gainers / Losers metric](https://academy.santiment.net/raw/metrics/top-social-gainers-losers/index.md): Top Social Gainers / Losers metric
+- [Top Transfers](https://academy.santiment.net/raw/metrics/top-transfers/index.md): Top Transfers
+- [Total Supply](https://academy.santiment.net/raw/metrics/total-supply/index.md): Total Supply
+- [Trading Volume in USD](https://academy.santiment.net/raw/metrics/trading-volume/index.md): Trading Volume in USD
+- [Transacted Coin Acquisition Cost](https://academy.santiment.net/raw/metrics/transacted-coin-acquisition-cost/index.md): Transacted Coin Acquisition Cost
+- [Transaction count](https://academy.santiment.net/raw/metrics/transaction-count/index.md): Transaction count
+- [Transaction Size](https://academy.santiment.net/raw/metrics/transaction-size/index.md): Transaction Size
+- [Transaction Volume](https://academy.santiment.net/raw/metrics/transaction-volume/index.md): Transaction Volume
+- [Transaction Volume In Profit Or Loss](https://academy.santiment.net/raw/metrics/transaction-volume-in-profit-or-loss/index.md): Transaction Volume In Profit Or Loss
+- [Trending Words Rank](https://academy.santiment.net/raw/metrics/trending-words-rank/index.md): Trending Words Rank
+- [Unique Social Volume](https://academy.santiment.net/raw/metrics/unique-social-volume/index.md): Unique Social Volume
+- [Velocity](https://academy.santiment.net/raw/metrics/velocity/index.md): Velocity
+- [Velocity - Technical](https://academy.santiment.net/raw/metrics/velocity/velocity-technical/index.md): Velocity - Technical
+- [Whale Transaction Count](https://academy.santiment.net/raw/metrics/whale-transaction-count/index.md): Whale Transaction Count
+- [Whale Transaction Volume](https://academy.santiment.net/raw/metrics/whale-transaction-volume/index.md): Whale Transaction Volume
+- [Assets Issued Metrics](https://academy.santiment.net/raw/metrics/xrpl-metrics/assets-issued/index.md): Assets Issued Metrics
+- [DEX volume](https://academy.santiment.net/raw/metrics/xrpl-metrics/dex-volume/index.md): DEX volume
+- [XRPL Chain metrics](https://academy.santiment.net/raw/metrics/xrpl-metrics/index.md): XRPL Chain metrics
+- [Liquidity in XRPL AMM Pools](https://academy.santiment.net/raw/metrics/xrpl-metrics/liquidity-amm-pools/index.md): Liquidity in XRPL AMM Pools
+- [Number of accounts](https://academy.santiment.net/raw/metrics/xrpl-metrics/number-of-accounts/index.md): Number of accounts
+- [Trustline Count Metrics](https://academy.santiment.net/raw/metrics/xrpl-metrics/trustline-count/index.md): Trustline Count Metrics
+- [Access Plans](https://academy.santiment.net/raw/products-and-plans/access-plans/index.md): Access Plans
+- [How to Create an API Key](https://academy.santiment.net/raw/products-and-plans/create-an-api-key/index.md): How to Create an API Key
+- [How to Pay with Crypto](https://academy.santiment.net/raw/products-and-plans/how-to-pay-with-crypto/index.md): How to Pay with Crypto
+- [Santiment products and plans](https://academy.santiment.net/raw/products-and-plans/index.md): Santiment products and plans
+- [Santiment API Plans](https://academy.santiment.net/raw/products-and-plans/sanapi-plans/index.md): Santiment API Plans
+- [Sanbase Plans](https://academy.santiment.net/raw/products-and-plans/sanbase-plans/index.md): Sanbase Plans
+- [Sanbase PRO Features](https://academy.santiment.net/raw/products-and-plans/sanbase-pro-features/index.md): Sanbase PRO Features
+- [Sanbase subscription via SanR NFT](https://academy.santiment.net/raw/products-and-plans/sanbase-subscription-via-sanr-nft/index.md): Sanbase subscription via SanR NFT
+- [Current products of Santiment](https://academy.santiment.net/raw/products-and-plans/santiment-products/index.md): Current products of Santiment
+- [Connect a Wallet to Your Sanbase Account](https://academy.santiment.net/raw/san-tokens/connect-a-wallet-to-the-sanbase-account/index.md): Connect a Wallet to Your Sanbase Account
+- [How to Buy SAN Tokens](https://academy.santiment.net/raw/san-tokens/how-to-buy-san-tokens/index.md): How to Buy SAN Tokens
+- [SAN tokens](https://academy.santiment.net/raw/san-tokens/index.md): SAN tokens
+- [Benefits of Holding SAN Tokens](https://academy.santiment.net/raw/san-tokens/san-tokens-holding-benefits/index.md): Benefits of Holding SAN Tokens
+- [Accessing the API](https://academy.santiment.net/raw/sanapi/accessing-the-api/index.md): Accessing the API
+- [Common Santiment API GraphQL Queries](https://academy.santiment.net/raw/sanapi/common-queries/index.md): Common Santiment API GraphQL Queries
+- [API Complexity](https://academy.santiment.net/raw/sanapi/complexity/index.md): API Complexity
+- [Fetching Metrics](https://academy.santiment.net/raw/sanapi/fetching-metrics/index.md): Fetching Metrics
+- [API Historical and Realtime data restrictions](https://academy.santiment.net/raw/sanapi/historical-and-realtime-data-restrictions/index.md): API Historical and Realtime data restrictions
+- [API Reference](https://academy.santiment.net/raw/sanapi/index.md): API Reference
+- [API Rate Limits](https://academy.santiment.net/raw/sanapi/rate-limits/index.md): API Rate Limits
+- [Supported Blockchains](https://academy.santiment.net/raw/sanapi/supported-blockchains/index.md): Supported Blockchains
+- [Account Settings](https://academy.santiment.net/raw/sanbase/account-settings/index.md): Account Settings
+- [Alerts Page](https://academy.santiment.net/raw/sanbase/alerts-page/index.md): Alerts Page
+- [Assets Overview page](https://academy.santiment.net/raw/sanbase/assets-page/index.md): Assets Overview page
+- [Sanbase](https://academy.santiment.net/raw/sanbase/index.md): Sanbase
+- [Sanbase Insights](https://academy.santiment.net/raw/sanbase/insights/index.md): Sanbase Insights
+- [Keyboard Shortcuts](https://academy.santiment.net/raw/sanbase/keyboard-shortcuts/index.md): Keyboard Shortcuts
+- [How to Log in Sanbase](https://academy.santiment.net/raw/sanbase/logging-into-sanbase/index.md): How to Log in Sanbase
+- [How to Request New Projects and Tokens for Display on Sanbase](https://academy.santiment.net/raw/sanbase/requesting-display-new-project/index.md): How to Request New Projects and Tokens for Display on Sanbase
+- [Social Trends](https://academy.santiment.net/raw/sanbase/social-trends/index.md): Social Trends
+- [Adding an API Key to Sansheets](https://academy.santiment.net/raw/sansheets/adding-an-api-key/index.md): Adding an API Key to Sansheets
+- [How to Create a Correlation Matrix like Cryptowatch.io](https://academy.santiment.net/raw/sansheets/assets-correlation-matrix-google-sheets/index.md): How to Create a Correlation Matrix like Cryptowatch.io
+- [Functions We Offer](https://academy.santiment.net/raw/sansheets/functions/index.md): Functions We Offer
+- [Onchain Data Functions](https://academy.santiment.net/raw/sansheets/functions/onchain/index.md): Onchain Data Functions
+- [Social Data Functions](https://academy.santiment.net/raw/sansheets/functions/social/index.md): Social Data Functions
+- [XRPL-related Data Functions](https://academy.santiment.net/raw/sansheets/functions/xrp/index.md): XRPL-related Data Functions
+- [Sansheets - Crypto Asset Data for Google Sheets](https://academy.santiment.net/raw/sansheets/index.md): Sansheets - Crypto Asset Data for Google Sheets
+- [Sansheets Onboarding article](https://academy.santiment.net/raw/sansheets/onboarding/index.md): Sansheets Onboarding article
+- [Sansheets Pro Templates](https://academy.santiment.net/raw/sansheets/pro-templates/index.md): Sansheets Pro Templates
+- [Setting up Sansheets](https://academy.santiment.net/raw/sansheets/setting-up/index.md): Setting up Sansheets
+- [Getting started with Santiment](https://academy.santiment.net/raw/santiment-introduction/index.md): Getting started with Santiment
+- [API Access to Sanqueries](https://academy.santiment.net/raw/santiment-queries/api-access/index.md): API Access to Sanqueries
+- [Bridge Transactions Table Overview](https://academy.santiment.net/raw/santiment-queries/bridges/index.md): Bridge Transactions Table Overview
+- [DEX Pools Tables Overview](https://academy.santiment.net/raw/santiment-queries/dex-pools/index.md): DEX Pools Tables Overview
+- [Exploration](https://academy.santiment.net/raw/santiment-queries/exploration/index.md): Exploration
+- [Santiment Queries](https://academy.santiment.net/raw/santiment-queries/index.md): Santiment Queries
+- [Introducing Santiment Queries](https://academy.santiment.net/raw/santiment-queries/introduction/index.md): Introducing Santiment Queries
+- [Lending Pools Overview](https://academy.santiment.net/raw/santiment-queries/lending-pools/index.md): Lending Pools Overview
+- [Metrics Datasets](https://academy.santiment.net/raw/santiment-queries/metric-tables/index.md): Metrics Datasets
+- [NFT Tables Overview](https://academy.santiment.net/raw/santiment-queries/nft-tables/index.md): NFT Tables Overview
+- [Fetching Prices, Volume, and Market Cap using Santiment Queries](https://academy.santiment.net/raw/santiment-queries/prices-tables/index.md): Fetching Prices, Volume, and Market Cap using Santiment Queries
+- [Rate Limits, Restrictions and Credits Cost](https://academy.santiment.net/raw/santiment-queries/rate-limits-and-credits-cost/index.md): Rate Limits, Restrictions and Credits Cost
+- [Writing SQL Queries](https://academy.santiment.net/raw/santiment-queries/writing-sql-queries/index.md): Writing SQL Queries
+- [XRPL Tables Overview](https://academy.santiment.net/raw/santiment-queries/xrpl-tables/index.md): XRPL Tables Overview
+- [Anomalies](https://academy.santiment.net/raw/signals/anomalies/index.md): Anomalies
+- [ATH price USD](https://academy.santiment.net/raw/signals/deprecated/ath-price-usd/index.md): ATH price USD
+- [DAI Mint](https://academy.santiment.net/raw/signals/deprecated/dai-mint/index.md): DAI Mint
+- [Deprecated Signals](https://academy.santiment.net/raw/signals/deprecated/index.md): Deprecated Signals
+- [Large Exchange Transactions](https://academy.santiment.net/raw/signals/deprecated/large-exchange-transactions/index.md): Large Exchange Transactions
+- [Large Transactions](https://academy.santiment.net/raw/signals/deprecated/large-transactions/index.md): Large Transactions
+- [MCD ART Liquidation](https://academy.santiment.net/raw/signals/deprecated/mcd-art-liquidation/index.md): MCD ART Liquidation
+- [Old Coins Moved](https://academy.santiment.net/raw/signals/deprecated/old-coins-moved/index.md): Old Coins Moved
+- [Project in Trending Words](https://academy.santiment.net/raw/signals/deprecated/project-in-trending-words/index.md): Project in Trending Words
+- [UniswapV3 PoolCreated](https://academy.santiment.net/raw/signals/deprecated/uniswapv3-poolcreated/index.md): UniswapV3 PoolCreated
+- [Signals Overview](https://academy.santiment.net/raw/signals/index.md): Signals Overview
+- [Large Exchange Transactions 1M](https://academy.santiment.net/raw/signals/large-exchange-transactions-1m/index.md): Large Exchange Transactions 1M
+- [Videos](https://academy.santiment.net/raw/youtube-videos/index.md): Videos
+- [Youtube tutorials](https://academy.santiment.net/raw/youtube-videos/tutorials/index.md): Youtube tutorials
+- [Walkthroughs](https://academy.santiment.net/raw/youtube-videos/walkthroughs/index.md): Walkthroughs
+- [Youtube webinars](https://academy.santiment.net/raw/youtube-videos/webinars/index.md): Youtube webinars
