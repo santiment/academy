@@ -29,7 +29,7 @@ export default ({ location: { search } }) => (
   <Layout>
     <Mutation mutation={VERIFY_EMAIL_MUTATION} update={updateCache}>
       {(verifyEmail, { called, error, data }) => {
-        if (!called) {
+        if (!called && typeof window !== 'undefined') {
           verifyEmail({ variables: parse(search) })
         }
         if (error) {

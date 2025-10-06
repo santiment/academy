@@ -2,7 +2,7 @@ import ApolloClient from 'apollo-client'
 import fetch from 'isomorphic-fetch'
 import { createHttpLink } from 'apollo-link-http'
 import { setContext } from 'apollo-link-context'
-import { from } from 'apollo-link'
+import { from, ApolloLink, Observable } from 'apollo-link'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
 const authLink = setContext((_, { headers }) => {
@@ -23,8 +23,18 @@ const httpLink = createHttpLink({
   credentials: 'include',
 })
 
+// Avoid external network calls during SSR to speed up builds and prevent failures
+const ssrNoopLink = new ApolloLink(() =>
+  new Observable(observer => {
+    observer.next({ data: {} })
+    observer.complete()
+  })
+)
+
 export const client = new ApolloClient({
-  link: from([authLink, httpLink]),
+  ssrMode: typeof window === 'undefined',
+  link:
+    typeof window === 'undefined' ? ssrNoopLink : from([authLink, httpLink]),
   cache: new InMemoryCache(),
   fetch,
 })

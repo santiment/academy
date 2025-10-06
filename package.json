@@ -32,7 +32,7 @@
     "katex": "^0.11.1",
     "lodash": "^4.17.15",
     "lodash.template": "^4.5.0",
-    "node-sass": "^6.0.1",
+    "sass": "^1.69.0",
     "npm": "^6.12.0",
     "patch-package": "^6.4.7",
     "phoenix": "^1.6.6",
@@ -57,13 +57,20 @@
   "devDependencies": {
     "prettier": "^1.18.2"
   },
+  "engines": {
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider gatsby build",
+    "develop": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
+    "dev:8000": "NODE_OPTIONS=--openssl-legacy-provider gatsby develop -p 8000",
+    "kill:dev": "pkill -f 'gatsby develop' || true",
+    "start:clean": "gatsby clean && npm run develop",
     "dev:https": "mkcert local.santiment.net && gatsby develop --port 3000 --https --host local.santiment.net --key-file ./local.santiment.net-key.pem --cert-file ./local.santiment.net.pem",
     "clean": "gatsby clean",
     "format": "prettier --single-quote --write src/**/*.{js,jsx}",

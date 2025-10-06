@@ -4,18 +4,31 @@ This is the source for [**Santiment Knowledge Base site**](https://academy.santi
 
 ### Running locally
   
-If you have [yarn](https://classic.yarnpkg.com/en/docs/install/) you can run the app simply:
+If you have [yarn](https://classic.yarnpkg.com/en/docs/install/) you can run the app simply (Node 18+ recommended):
 
 ```bash
 yarn
 yarn start
 ```
 
-If you have problems with `yarn` use node v14 / v16. For example:
-```sh
-nvm install 16
-nvm use 16
-```
+Notes for newer Node versions (18/20):
+- This project uses Webpack 4 via Gatsby, which needs the OpenSSL legacy provider on Node 18+.
+- The `develop`/`build` scripts already set `NODE_OPTIONS=--openssl-legacy-provider` for you.
+  - If you still see OpenSSL errors, export it in your shell: `export NODE_OPTIONS=--openssl-legacy-provider`.
+  - Recommended Node: 18 LTS or 20.
+
+Development tips
+- Start the dev server: `yarn start` then open http://localhost:8000
+- Production build: `yarn build` then `yarn serve`
+- To speed up development and avoid flaky upstream calls, server‑side GraphQL requests are disabled during SSR. Auth and API calls still run in the browser after hydration.
+- You may see Sass warnings about `@import` deprecation coming from dependencies; they are harmless.
+
+Troubleshooting
+- "Looks like develop for this site is already running": this means a previous Gatsby dev process is still running or left a stale watcher.
+  - Stop any stray dev processes: `yarn kill:dev`
+  - Clean cache and public: `yarn start:clean`
+  - Alternatively, pick a different port: `yarn dev:8000` or `gatsby develop -p 8001`
+- Nothing at http://localhost:8000: verify nothing else is bound to that port: `lsof -i :8000` (should show nothing) and retry `yarn start`.
 
 
 This is going to run the app on port 8000, so [`localhost:8000`](http://localhost:8000) should be accessible.
