@@ -37,16 +37,16 @@ const HiddenAssetItem = ({ item }) => {
   )
 }
 
+const meta = {
+  title: "Assets | Santiment Academy",
+  description:
+    "Keep track of development updates, new product features and other items from our changelog",
+}
+
 const AssetsPage = ({ pageContext }) => {
   const {
     breadcrumb: { crumbs },
   } = pageContext
-
-  const meta = {
-    title: `Assets | Santiment Academy`,
-    description:
-      "Keep track of development updates, new product features and other items from our changelog",
-  }
 
   return (
     <Layout isShowSidebar>

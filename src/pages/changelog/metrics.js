@@ -42,16 +42,16 @@ const DeprecatedMetricItem = ({ item }) => {
   )
 }
 
+const meta = {
+  title: "Metrics | Santiment Academy",
+  description:
+    "Keep track of development updates, new product features and other items from our changelog",
+}
+
 const MetricsPage = ({ pageContext }) => {
   const {
     breadcrumb: { crumbs },
   } = pageContext
-
-  const meta = {
-    title: `Metrics | Santiment Academy`,
-    description:
-      "Keep track of development updates, new product features and other items from our changelog",
-  }
 
   return (
     <Layout isShowSidebar>

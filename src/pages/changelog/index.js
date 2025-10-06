@@ -8,6 +8,7 @@ import ArticleHeadings from "../../components/ArticleHeadings/ArticleHeadings"
 import ArticleFooter from "../../components/ArticleFooter"
 import { dateDifferenceInWords } from "webkit/utils/dates"
 import markdownStyles from "../../components/Markdown/Markdown.module.scss"
+import { Link } from "gatsby"
 
 const ChangelogPage = ({ pageContext }) => {
   const {
@@ -35,10 +36,10 @@ const ChangelogPage = ({ pageContext }) => {
           </p>
           <ul>
             <li>
-              <a href="/changelog/assets">Assets</a>
+              <Link to="/changelog/assets">Assets</Link>
             </li>
             <li>
-              <a href="/changelog/metrics">Metrics</a>
+              <Link to="/changelog/metrics">Metrics</Link>
             </li>
           </ul>
         </div>
