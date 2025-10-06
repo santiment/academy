@@ -1,11 +1,11 @@
-@import "~@santiment-network/ui/mixins.scss";
+@import '~@santiment-network/ui/mixins.scss';
 
 .entriesWrapper {
   margin-bottom: 30px;
 }
 
 .loader {
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     position: static !important;
     margin-top: 0 !important;
   }

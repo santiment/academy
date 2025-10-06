@@ -1,4 +1,4 @@
-import gql from "graphql-tag"
+import gql from 'graphql-tag'
 
 export const METRICS_QUERY = gql`
   query metricsChangelog($page: Int, $pageSize: Int, $searchTerm: String) {

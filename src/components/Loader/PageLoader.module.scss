@@ -1,4 +1,4 @@
-@import "~@santiment-network/ui/mixins.scss";
+@import '~@santiment-network/ui/mixins.scss';
 
 .loader {
   display: flex;
@@ -7,7 +7,7 @@
   align-items: center;
   height: 50vh;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     position: fixed;
     left: 0;
     right: 0;

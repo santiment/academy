@@ -1,16 +1,16 @@
-import React from "react"
-import cx from "classnames"
-import Breadcrumb from "../../components/Breadcrumb/Breadcrumb"
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
-import ChangelogList from "../../components/ChangelogList/ChangelogList"
-import { METRICS_QUERY } from "../../gql/changelog"
-import styles from "./changelog.module.scss"
-import ArticleFooter from "../../components/ArticleFooter"
+import React from 'react'
+import cx from 'classnames'
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb'
+import Layout from '../../components/layout'
+import SEO from '../../components/seo'
+import ChangelogList from '../../components/ChangelogList/ChangelogList'
+import { METRICS_QUERY } from '../../gql/changelog'
+import styles from './changelog.module.scss'
+import ArticleFooter from '../../components/ArticleFooter'
 
 const CreatedMetricItem = ({ item }) => {
   const metricName =
-    item.metric?.humanReadableName || item.metric?.metric || "—"
+    item.metric?.humanReadableName || item.metric?.metric || '—'
   const docsLink = item.metric?.docs?.link
   const timestamp = new Date(item.eventTimestamp).toLocaleString()
 
@@ -19,7 +19,7 @@ const CreatedMetricItem = ({ item }) => {
       <strong>Created</strong> {metricName} — <time>{timestamp}</time>
       {docsLink && (
         <>
-          {" — "}
+          {' — '}
           <a href={docsLink} target="_blank" rel="noreferrer">
             Docs
           </a>
@@ -31,7 +31,7 @@ const CreatedMetricItem = ({ item }) => {
 
 const DeprecatedMetricItem = ({ item }) => {
   const metricName =
-    item.metric?.humanReadableName || item.metric?.metric || "—"
+    item.metric?.humanReadableName || item.metric?.metric || '—'
   const timestamp = new Date(item.eventTimestamp).toLocaleString()
 
   return (
@@ -43,9 +43,9 @@ const DeprecatedMetricItem = ({ item }) => {
 }
 
 const meta = {
-  title: "Metrics | Santiment Academy",
+  title: 'Metrics | Santiment Academy',
   description:
-    "Keep track of development updates, new product features and other items from our changelog",
+    'Keep track of development updates, new product features and other items from our changelog',
 }
 
 const MetricsPage = ({ pageContext }) => {
@@ -56,7 +56,7 @@ const MetricsPage = ({ pageContext }) => {
   return (
     <Layout isShowSidebar>
       <SEO {...meta} />
-      <div className={cx(styles.wrapper, "container")}>
+      <div className={cx(styles.wrapper, 'container')}>
         <Breadcrumb crumbs={crumbs} crumbLabel="Assets" />
         <ChangelogList
           title="Metrics"

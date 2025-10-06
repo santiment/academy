@@ -1,10 +1,10 @@
-import React from "react"
-import { Query, ApolloConsumer } from "react-apollo"
-import Button from "@santiment-network/ui/Button"
-import markdownStyles from "../Markdown/Markdown.module.scss"
-import { mergeEntries } from "./utils"
-import styles from "./ChangelogList.module.scss"
-import PageLoader from "../../components/Loader/PageLoader"
+import React from 'react'
+import { Query, ApolloConsumer } from 'react-apollo'
+import Button from '@santiment-network/ui/Button'
+import markdownStyles from '../Markdown/Markdown.module.scss'
+import { mergeEntries } from './utils'
+import styles from './ChangelogList.module.scss'
+import PageLoader from '../../components/Loader/PageLoader'
 
 const ChangelogList = ({
   title,
@@ -37,7 +37,7 @@ const ChangelogList = ({
       const res = await client.query({
         query: queryDocument,
         variables: { ...baseVars, page: (pagination.currentPage || 1) + 1 },
-        fetchPolicy: "no-cache",
+        fetchPolicy: 'no-cache',
       })
 
       const next = res?.data?.[queryRoot]
@@ -119,7 +119,7 @@ const ChangelogList = ({
                       disabled={loadingMore}
                       onClick={() => loadMore(client)}
                     >
-                      {loadingMore ? "Loading…" : "Load more"}
+                      {loadingMore ? 'Loading…' : 'Load more'}
                     </Button>
                   ) : null}
                 </>
