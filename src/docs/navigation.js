@@ -282,6 +282,7 @@ export const REFERENCES = [
       'Daily Aggregated Financial Metrics',
       'Decentralized Exchange Metrics',
       'Deprecated Metrics',
+      { slug: 'immutable', title: 'Immutable (Finalized) Metrics' },
       'Deribit Derivatives',
       'Development Activity',
       'Dormant Circulation',
