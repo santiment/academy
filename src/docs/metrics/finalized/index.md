@@ -1,18 +1,18 @@
 ---
-title: Immutable (Finalized) Metrics
-headline: "Immutable metrics via onlyFinalizedData"
+title: Finalized Metrics
+headline: "Finalized metrics via onlyFinalizedData"
 description: "Request guaranteed, finalized values for select metrics via the onlyFinalizedData flag in our GraphQL API."
 author: Santiment Team
 date: 2025-10-06
 ---
 
-We now provide a way to access finalized, immutable metric values through our API. Finalized points are flagged as final for a given interval, meaning no further backfills or adjustments will occur for that timestamp. This is especially useful when you need guaranteed consistency for analysis, dashboards, or reporting.
+We now provide a way to access finalized metric values through our API. Finalized points are flagged as final for a given interval, meaning no further backfills or adjustments will occur for that timestamp. This is especially useful when you need guaranteed consistency for analysis, dashboards, or reporting.
 
 <Notebox type="openBook">
-Immutable here means the value is considered final for the requested interval. It does not change afterwards due to late-arriving data or corrections.
+Finalized here means the value is considered final for the requested interval. It does not change afterwards due to late-arriving data or corrections.
 </Notebox>
 
-<Resource title="How to request immutable data">
+<Resource title="How to request finalized data">
 
 Set `onlyFinalizedData: true` in your GraphQL query. For example, requesting daily finalized Transaction Volume for Bitcoin Cash:
 
@@ -56,7 +56,7 @@ We will expand chain and metric coverage over time.
 </Resource>
 
 <Notebox type="exclamation">
-Requesting immutable data introduces a short additional latency of around 5–10 minutes, as we wait to confirm finalization of each interval.
+Requesting finalized data introduces a short additional latency of around 5–10 minutes, as we wait to confirm finalization of each interval.
 </Notebox>
 
 <Resource title="Related reading">

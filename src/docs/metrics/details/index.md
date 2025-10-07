@@ -11,7 +11,7 @@ Use this page to discover the detailed reference docs that many metric pages lin
 <Resource title="Core Concepts">
 
 - [Access](/metrics/details/access)
-- [Immutable (Finalized) Metrics](/metrics/immutable)
+- [Finalized Metrics](/metrics/finalized)
 - [Data Type](/metrics/details/data-type)
 - [Frequency](/metrics/details/frequency)
 - [Latency](/metrics/details/latency)

@@ -31,7 +31,7 @@ metrics are available under a new name and the old name should be not used.
 
 <Resource title="Data Integrity">
 
-- [Immutable (Finalized) Metrics](/metrics/immutable)
+- [Finalized Metrics](/metrics/finalized)
 
 </Resource>
 
