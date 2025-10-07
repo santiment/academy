@@ -42,7 +42,7 @@ export const GUIDES = [
         title: 'Timing Market Volatility with Token Age Consumed',
       },
       {
-        slug:'analyze speculative activity with exchange metrics',
+        slug: 'analyze speculative activity with exchange metrics',
         title: 'Analyze Speculative Activity with Exchange Metrics',
       },
       {
@@ -50,8 +50,8 @@ export const GUIDES = [
         title: 'Spot Tops with Price - Network Activity divergences',
       },
       {
-        slug:'price to daily addresses divergence guide',
-        title:'Price vs DAA Divergence; An On-Chain Trading Strategy Guide',
+        slug: 'price to daily addresses divergence guide',
+        title: 'Price vs DAA Divergence; An On-Chain Trading Strategy Guide',
       },
       {
         slug: 'santiment pro report samples',
@@ -282,6 +282,7 @@ export const REFERENCES = [
       'Daily Aggregated Financial Metrics',
       'Decentralized Exchange Metrics',
       'Deprecated Metrics',
+      { slug: 'finalized', title: 'Finalized Metrics' },
       'Deribit Derivatives',
       'Development Activity',
       'Dormant Circulation',

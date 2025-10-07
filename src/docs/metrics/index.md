@@ -29,6 +29,12 @@ metrics are available under a new name and the old name should be not used.
 
 </Resource>
 
+<Resource title="Data Integrity">
+
+- [Finalized Metrics](/metrics/finalized)
+
+</Resource>
+
 <Resource title="Financial">
 
 Traditional fundamentals including price, volume and market cap, mean coin age
