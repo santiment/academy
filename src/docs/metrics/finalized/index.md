@@ -16,27 +16,25 @@ Finalized here means the value is considered final for the requested interval. I
 
 Set `onlyFinalizedData: true` in your GraphQL query. For example, requesting daily finalized Transaction Volume for Bitcoin Cash:
 
-```graphql
+```graphql-explorer
 {
-  getMetric(metric: "transaction_volume") {
+  getMetric(metric: "transaction_volume"){
     timeseriesDataJson(
-      selector: { slug: "bitcoin-cash" }
-      from: "utc_now-100d"
+      selector:{slug: "bitcoin-cash"}
+      from: "utc_now-6h"
       to: "utc_now"
-      interval: "1d"
-      onlyFinalizedData: true
+      interval: "5m"
     )
   }
 }
 ```
 
-Try it in your browser: https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20selector%3A%7Bslug%3A%20%22bitcoin-cash%22%7D%0A%20%20%20%20%20%20from%3A%20%22utc_now-100d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20interval%3A%20%221d%22%0A%20%20%20%20%20%20onlyFinalizedData%3A%20true%0A%20%20%20%20)%0A%20%20%7D%0A%7D
 
 </Resource>
 
 <Resource title="Supported scope (WIP)">
 
-This feature is currently in testing and enabled for the blockchain: Bitcoin Cash, and for a limited subset of metrics:
+This feature is currently in testing and implemented for the blockchain: Bitcoin Cash, and for a limited subset of metrics:
 
 - `active_addresses_1h`
 - `active_addresses_24h`
