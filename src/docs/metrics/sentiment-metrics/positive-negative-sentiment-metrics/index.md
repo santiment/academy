@@ -153,7 +153,7 @@ Fetch aggregated daily values for many assets:
 
 ## Full list of metrics
 
-The full list of Postive/Negative/Balance sentiment metrics is:
+The full list of Positive/Negative/Balance sentiment metrics is:
 
 <Details>
 <Summary>Open Positive Sentiment Metrics List</Summary>
