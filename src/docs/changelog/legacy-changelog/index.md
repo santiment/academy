@@ -1,5 +1,5 @@
 ---
-title: Development changelog (Outdated, upgrade to this page coming soon)
+title: Legacy Development changelog
 description: Keep track of development updates, new product features and other items from our changelog
 author: Santiment Team
 date: 2022-04-20
@@ -13,14 +13,14 @@ We update this page every two weeks or more frequently.
 **General**
 
 - The winners of the New Year Campaign had a chance to learn alpha in private calls with Santiment founder and market analysts.
-- Affiliate program is relaunched, https://medium.com/santiment/santiment-is-proud-to-announce-the-relaunch-of-our-referral-program-now-with-increased-commission-e8b7feb5606c
-- BTC ETF volumes dashboard is live, https://queries.santiment.net/dashboard/etf-volumes-728
-- Gini Index and Annual Inflation Rate dashboard is live, https://queries.santiment.net/dashboard/gini-index-and-annual-inflation-rate-738
+- Affiliate program is relaunched, <https://medium.com/santiment/santiment-is-proud-to-announce-the-relaunch-of-our-referral-program-now-with-increased-commission-e8b7feb5606c>
+- BTC ETF volumes dashboard is live, <https://queries.santiment.net/dashboard/etf-volumes-728>
+- Gini Index and Annual Inflation Rate dashboard is live, <https://queries.santiment.net/dashboard/gini-index-and-annual-inflation-rate-738>
 - Santiment daily metrics framework gets 10x faster.
 - BNB-chain-based tokens data pipeline is fixed, Santiment is providing BNB chain data again. Limitations apply.
-- Santiment Feed expands to Google News: https://news.google.com/publications/CAAqBwgKMNLDqQww5MO2BA?ceid=US:en&oc=3&hl=en-US&gl=US
-- Active SanR validator nodes count increased to 30, https://nodes.sanr.network/
-- An application for creating manual signals for buying and selling, SanR, has been upgraded to a completely new version. SanR v2 is live on https://sanr.app/battle/
+- Santiment Feed expands to Google News: <https://news.google.com/publications/CAAqBwgKMNLDqQww5MO2BA?ceid=US:en&oc=3&hl=en-US&gl=US>
+- Active SanR validator nodes count increased to 30, <https://nodes.sanr.network/>
+- An application for creating manual signals for buying and selling, SanR, has been upgraded to a completely new version. SanR v2 is live on <https://sanr.app/battle/>
 
 **New assets**
 
@@ -36,10 +36,10 @@ We update this page every two weeks or more frequently.
 **Sanbase**
 
 - The explorer page now has more advanced filtering capabilities, including recently viewed items, likes, and your own creations.
-- The feed can be filtered by the projects you specify 
-- A more comprehensive explorer page, backed by robust filtering options, is now fully supported on our mobile version. 
-- We are constantly looking to enhance our analytics. We invite you to suggest a Twitter account at https://app.santiment.net/social-trends
-- Our updated Social Trends feature now includes an AI-generated summary of a chosen trend. 
+- The feed can be filtered by the projects you specify
+- A more comprehensive explorer page, backed by robust filtering options, is now fully supported on our mobile version.
+- We are constantly looking to enhance our analytics. We invite you to suggest a Twitter account at <https://app.santiment.net/social-trends>
+- Our updated Social Trends feature now includes an AI-generated summary of a chosen trend.
 - Additional Social Trends updates include Trending Tokens and Alpha Narratives
 - We have added support for Apple Pay and Google Pay
 - The issue with the profile picture upload has been fixed
@@ -81,11 +81,12 @@ We update this page every two weeks or more frequently.
 - Add recently shown assets
 - 2 new metrics: Contract Interacting Addreses, Contract Transactions Count
 
-Last 2 weeks we made many fixes for our Alerts. Our Alerts notifications and preview work better now. 
+Last 2 weeks we made many fixes for our Alerts. Our Alerts notifications and preview work better now.
 
-🎉🎉🎉 Finally We have added new selector for our Charts tool. You can remember our Charts as a great analytics tool for ERC20 or many other type of assets, but now it’s much advanced tool. You can  do a research of any chain addresses on supported blockchains In the closed future we will add social metrics for some type of smart contracts like erc721.
+🎉🎉🎉 Finally We have added new selector for our Charts tool. You can remember our Charts as a great analytics tool for ERC20 or many other type of assets, but now it’s much advanced tool. You can do a research of any chain addresses on supported blockchains In the closed future we will add social metrics for some type of smart contracts like erc721.
 
 Example:
+
 1. [https://app.santiment.net/s/rk-8It-D](https://app.santiment.net/s/rk-8It-D) (BoredApeYachtClub (BAYC) Contract)
 
 You can see 2 available metrics:
@@ -93,7 +94,7 @@ You can see 2 available metrics:
 - Contract Interecting Addresses
 - Contract Transactions Count
 
-Actually it’s not only for contract, it works for any address. 
+Actually it’s not only for contract, it works for any address.
 I am really appreciate any feedback.
 Disclaimer new 2 metrics for our addresses have slow performance.
 Loaded time can be up to 1 minute. Sorry.
@@ -126,30 +127,32 @@ Loaded time can be up to 1 minute. Sorry.
 
 - New assets: 1ECO, ALPINE, GMT, LAZIO, MCONTENT, THG, TREEB, XFL, WTRX, APE, HI, RPG, POLC
 - Alert creation bug fixed
-- Add Cardano Onchain Metrics (https://app.santiment.net/s/eIzhNOf6)
+- Add Cardano Onchain Metrics (<https://app.santiment.net/s/eIzhNOf6>)
 
 **Charts**
+
 - Combined metrics section in the sidebar
 - “Top Transaction Table” sorting fixed
 - “Smoothing” sharing fixed
 - Fullscreen-freeze bug fixed
 - Asset’s market cap and rank info in the top header
 - New master asset selector
-- New metrics: 
-  * Daily On-Chain Transaction Volume in Profit
-  * Daily On-Chain Transaction Volume in Loss
-  * The Ratio of Daily On-Chain Transaction Volume in Profit to Loss
-https://academy.santiment.net/metrics/transaction-volume-in-profit-or-loss
+- New metrics:
+  - Daily On-Chain Transaction Volume in Profit
+  - Daily On-Chain Transaction Volume in Loss
+  - The Ratio of Daily On-Chain Transaction Volume in Profit to Loss
+    <https://academy.santiment.net/metrics/transaction-volume-in-profit-or-loss>
 - Add Master selector blockchains’ filter
 - Ctrl+K (Cmd+K) shortcut for opening master selector
 
 **Insights/Charts**
+
 - Performance improvements
 - New comments features:
-    - Bold, italic, links
-    - Type $ for assets suggestions
-    - Type @ to mention an user
-    - Type # to link a trend
+  - Bold, italic, links
+  - Type \$ for assets suggestions
+  - Type @ to mention an user
+  - Type # to link a trend
 
 **Screeners/Watchlists**
 
@@ -173,7 +176,7 @@ https://academy.santiment.net/metrics/transaction-volume-in-profit-or-loss
 
 - Fix empty data issue when Exchanges 2.0 metrics were combined
 - Combined metrics’ project locking fix
-- Open Edit/Save dialog by clicking on the layout name in the header 
+- Open Edit/Save dialog by clicking on the layout name in the header
 - Displaying amount of available metrics
 
 We exited to announce our new social metric - Social Volume AI. This metric is alternative to Social Volume. For old metric we have a simple algorythm to detect an asset per message. New metric computed using Natural Language Processing (NLP) technique such as Named Entity Recognition (NER). Our trained NER model can process large amount of social data and extract from it mentions about crypto assets.
@@ -265,7 +268,8 @@ Look at [https://app.santiment.net/s/0UQIX6NU](this metric)
 **Weighted Sentiment Total**
 
 (eg.[https://app.santiment.net/s/lE6Y9IjH](https://app.santiment.net/s/lE6Y9IjH))
-- Added more derivatives! New FTX Funding Rate (Available for *beta*)
+
+- Added more derivatives! New FTX Funding Rate (Available for _beta_)
 
 ### `07.10.21 - 13.10.21`
 
@@ -356,7 +360,7 @@ We've enhanced our Charts layout. It is more compact, clean and powerful.
 
 ## August 2021
 
-``19.08.21 - 25.08.21``
+`19.08.21 - 25.08.21`
 
 **Sanbase**
 
@@ -365,18 +369,18 @@ We've enhanced our Charts layout. It is more compact, clean and powerful.
 **Charts**
 
 - `Average Gas Used in Gwei` metric
-- \[Beta only\] Embed chart 
+- \[Beta only\] Embed chart
   ![](https://user-images.githubusercontent.com/24521041/131119924-412b0f73-7d0f-4c79-bbad-78815aae9a45.gif)
 - \[Beta only\] `Binance Exchange Funding Rates (USDT)`, `Binance Exchange Funding Rates (BUSD)` metrics
 
-``12.08.21 - 18.08.21``
+`12.08.21 - 18.08.21`
 
 **Charts**
 
 - `Top holders` setting for `Supply held by … addresses` metrics
 - Highlighting metric with opened settings
 
-``05.08.21 - 11.08.21``
+`05.08.21 - 11.08.21`
 
 **Sanbase**
 
@@ -385,13 +389,15 @@ We've enhanced our Charts layout. It is more compact, clean and powerful.
 **Charts**
 
 #### Combined metrics
+
 \[Beta only\]
 ![](https://user-images.githubusercontent.com/24521041/131119917-cd8c36d0-bc47-49d5-9f9a-db758f23c340.gif)
+
 - `My chart layouts` sorted by the edit date
 
-``29.07.21 - 04.08.21``
+`29.07.21 - 04.08.21`
 
-Migrated [neuro.santiment.net](https://neuro.santiment.net) —> [api.santiment.net](https://api.santiment.net) 
+Migrated [neuro.santiment.net](https://neuro.santiment.net) —> [api.santiment.net](https://api.santiment.net)
 
 **Sanbase**
 
@@ -406,48 +412,52 @@ Migrated [neuro.santiment.net](https://neuro.santiment.net) —> [api.santiment.
 
 ## July 2021
 
-``14.07.21 - 28.07.21``
+`14.07.21 - 28.07.21`
 
 **Sanbase**
+
 - New assets: SKILL, STEP, FOX, MVI, WSG, DPET, MIST, ALPACA
 - Exchanges filter in Screener: `ANY` selector by default
 - `Explore address watchlists` category in watchlists navigation dropdown
 
 **Sanbase Charts**
+
 - Offsetting tooltip position when it blocks the hovered area
 - Displaying values' difference in tooltip when selecting area and holding Shift key
   ![](https://user-images.githubusercontent.com/24521041/127341368-602cd1cb-c9e1-4e7e-81ad-c3d93002c01d.gif)
 
-``07.07.21 - 14.07.21``
+`07.07.21 - 14.07.21`
 
 **Sanbase**
+
 - New assets: DAWN, TOTM, DEXE, ILV
 - Exchange filter in Screener
 
 **Sanbase Charts**
+
 - Updated mapview UI
 - Increased granularity for Active Deposits, Deposit Transactions, Withdrawal Transactions metrics
 - New metric: Active Withdrawals
 - Positive/Negative Bars style option for BitMEX Perpetual Contract Funding Rate metric
 - “Recent Chart Layouts" bug fix
 
-
-``30.06.21 - 07.07.21``
+`30.06.21 - 07.07.21`
 
 **Sanbase**
+
 - Labels for sender/receiver in Latest transactions and Top transactions table in Wallet Balance tool
 - Live This Week In Crypto Widget
 
 **Sanbase Charts**
+
 - Automatic short/live links
 - Supporting drawings in the downloaded png
 - "Project in Trends" signal as a subitem of the "Social Volume" metric (for non BTC/ETH assets)
 - Candles' width fix
 
-
 ## June 2021
 
-``23.06.21 - 30.06.21``
+`23.06.21 - 30.06.21`
 
 **Sanbase**
 
@@ -457,45 +467,48 @@ Migrated [neuro.santiment.net](https://neuro.santiment.net) —> [api.santiment.
 - Notifications & Profile Page UI improvements
 
 **Sanbase Charts**
+
 - Undoing changes by pressing CMD/CTRL + Z
 - Redoing changes by pressing CMD/CTRL + SHIFT + Z
   ![](https://user-images.githubusercontent.com/24521041/127341515-a57498b0-6dcb-4dc1-85a6-a3e2214edd8c.gif)
 - Supply Distribution labeled by number of addresses widget
   ![](https://user-images.githubusercontent.com/24521041/127335518-d2116a4a-62d1-4452-a818-6be52e2bc7db.png)
 
-
-``16.06.21 - 23.06.21``
+`16.06.21 - 23.06.21`
 
 **Sanbase**
+
 - Fix trx hash link in Recent transactions
 - Add Top transactions table to the Wallet Address Tool
   ![](https://user-images.githubusercontent.com/24521041/123233913-25b1b500-d4e3-11eb-9ed2-49aaef15f9a7.png)
 
 **Sanbase Charts**
+
 - Color picker HEX input
 - Smoothing setting for all Social metrics;
 - MVRV USD intraday renamed to MVRV Ratio Intraday
 
-
-``09.06.21 - 16.06.21``
+`09.06.21 - 16.06.21`
 
 **Sanbase**
+
 - Home page UI improvements
 
 **Sanbase Charts**
+
 - New color picker
 - "Weighted sentiment" metrics' smoothing
 - “Download as PNG” button in chart's controls bar
 
-
-
-``02.06.2021 - 09.06.2021``
+`02.06.2021 - 09.06.2021`
 
 **Sanbase**
+
 - New coins: GTC, ATA, CVX, HAPI
 - Support datetime on Social Trends Page: [/labs/trends?datetime=2021-06-04T12:04:21Z](https://app.santiment.net/labs/trends?datetime=2021-06-04T12:04:21Z)
 
 **Sanbase Charts**
+
 - Stability improvements
 - "Stablecoins" asset
   ![](https://media.giphy.com/media/XTX186r2ZeQkUBNcfk/source.gif)
@@ -507,9 +520,9 @@ Migrated [neuro.santiment.net](https://neuro.santiment.net) —> [api.santiment.
 - Labelling metrics with tickers in downloaded PNG
 - "Supply Distribution" merged metrics’ MA indicators support
 - \[Beta only\] Reordering chart’s metrics by using drag and drop
-![](https://media.giphy.com/media/uoy6WD4LIvjCVMzNUo/source.gif)
+  ![](https://media.giphy.com/media/uoy6WD4LIvjCVMzNUo/source.gif)
 
-``26.05.2021 - 02.06.2021``
+`26.05.2021 - 02.06.2021`
 
 **Sanbase**
 
@@ -518,7 +531,7 @@ Migrated [neuro.santiment.net](https://neuro.santiment.net) —> [api.santiment.
 - Add Shared axis toggle on Social Tool page
 - Add `Social tool` and `Social Trends` to the Navigation → Dashboards
 - `Notifications` dropdown in header
-![image](https://user-images.githubusercontent.com/522287/120511618-3d5db800-c3d3-11eb-9f02-968fa4277de1.png)
+  ![image](https://user-images.githubusercontent.com/522287/120511618-3d5db800-c3d3-11eb-9f02-968fa4277de1.png)
 
 **Screener**
 
@@ -528,12 +541,12 @@ Add new filter option -`Rank`
 **Charts**
 
 - Notable metrics
-![image](https://user-images.githubusercontent.com/522287/120517024-a85dbd80-c3d8-11eb-8440-74264108008c.png)
+  ![image](https://user-images.githubusercontent.com/522287/120517024-a85dbd80-c3d8-11eb-8440-74264108008c.png)
 - Auto-update toggle
-![image](https://user-images.githubusercontent.com/522287/120516795-6af93000-c3d8-11eb-9148-729ebce8360f.png)
+  ![image](https://user-images.githubusercontent.com/522287/120516795-6af93000-c3d8-11eb-9148-729ebce8360f.png)
 - “Holdings on the top exchanges" widget
 - Searching metrics by group name
-![image](https://user-images.githubusercontent.com/522287/120516208-c840b180-c3d7-11eb-8dc0-f32ffcbee3ae.png)
+  ![image](https://user-images.githubusercontent.com/522287/120516208-c840b180-c3d7-11eb-8dc0-f32ffcbee3ae.png)
 - New metrics: “Circulation NVT”, “Percent of Stablecoin Total Supply held by Whales with more than 5 million USD”
 - Normalizing “'MVRV USD intraday” values
 - **Fix:** preserving metric’s settings after un/lock
@@ -541,11 +554,11 @@ Add new filter option -`Rank`
 **Sanbase Mobile**
 
 - Add recently used metrics
-![image](https://user-images.githubusercontent.com/522287/120517317-01c5ec80-c3d9-11eb-8182-be12eb48968a.png)
+  ![image](https://user-images.githubusercontent.com/522287/120517317-01c5ec80-c3d9-11eb-8182-be12eb48968a.png)
 
 ## May 2021
 
-``19.05.2021 - 26.05.2021``
+`19.05.2021 - 26.05.2021`
 
 **Sanbase**
 
@@ -556,10 +569,10 @@ Introducing **Charts v3** 📈👋
 - Mark metric as a favorite directly in the sidebar
 - Metrics’ compact layout
 - Quick settings access by clicking on the metric
-![](https://media.giphy.com/media/2cQiNEFfdy4tIKztHf/source.gif)
-![](https://media.giphy.com/media/PJFgKCfAuH1U6GBhjP/source.gif)
+  ![](https://media.giphy.com/media/2cQiNEFfdy4tIKztHf/source.gif)
+  ![](https://media.giphy.com/media/PJFgKCfAuH1U6GBhjP/source.gif)
 
-``12.05.2021 - 19.05.2021``
+`12.05.2021 - 19.05.2021`
 
 **Sanbase**
 
@@ -568,10 +581,9 @@ Introducing **Charts v3** 📈👋
 - Fix stories crash on mobile app
 - Minor changes of Keystakeholder Signals
 - 2 more mini charts on Screener/Watchlists 1d/30d Price Changes
-![image](https://user-images.githubusercontent.com/522287/118840637-424d4280-b8d0-11eb-8668-398f2bd8d476.png)
+  ![image](https://user-images.githubusercontent.com/522287/118840637-424d4280-b8d0-11eb-8668-398f2bd8d476.png)
 
-
-``28.04.2021 - 12.05.2021``
+`28.04.2021 - 12.05.2021`
 
 **Sanbase**
 
@@ -579,7 +591,7 @@ Introducing **Charts v3** 📈👋
 
 ## April 2021
 
-``21.04 - 28.04``
+`21.04 - 28.04`
 
 **Sanbase**
 
@@ -589,16 +601,17 @@ Introducing **Charts v3** 📈👋
 
 **Hunters**
 
-***Welcome to our new DApp https://hunters.santiment.net/ ***
+**_Welcome to our new DApp <https://hunters.santiment.net/> _**
 
 What is Hunters app? -> [https://www.notion.so/santiment/Introducing-Wallet-Hunters-A-decentralized-platform-for-crowdsourced-market-intelligence-777586562ced436682125816eb206c63](https://www.notion.so/santiment/Introducing-Wallet-Hunters-A-decentralized-platform-for-crowdsourced-market-intelligence-777586562ced436682125816eb206c63)
 
 How distribution reward works? -> [https://www.notion.so/santiment/WalletHunters-Reward-Distribution-14c7ad8f39684024970814fa051631a7](https://www.notion.so/santiment/WalletHunters-Reward-Distribution-14c7ad8f39684024970814fa051631a7)
 
-----
+---
+
 Hunters App is **BETA**. When you are trying the SAN hunters app that you agree with BETA behavior. Some of the features can work with bugs, lags or some of them can be changed completely in the Release version.
 
-``14.04 - 21.04``
+`14.04 - 21.04`
 Sanbase
 
 - New coins: K21, TLM, EPNS, VISR, SRK, GS, ZCX
@@ -612,8 +625,9 @@ Sanbase
 - Fix: Screener column save
 - Fix: Alerts bugfixes for some metrics/watchlists
 
-``07.04 - 14.04``
+`07.04 - 14.04`
 Sanbase
+
 - New coins: CFX, MDX, TKO, SHOPX, RAGE, BLANK, AIOZ, 10SET, NFTX, LQTY, KTN
 - Address watchlist: More assets columns in table, Asset distribution column
   ![image](https://user-images.githubusercontent.com/24521041/115566326-d1ac0980-a2c2-11eb-8828-5ed2ac9f5bb6.png)
@@ -625,53 +639,50 @@ Sanbase
 - Fix labels on Historical balance tool
 - Fix 1d resolution on mobile charts
 
+`31.03 - 07.04`
 
-``31.03 - 07.04``
+Sanbase
 
-Sanbase 
 - New coins added: EPS, ATD, FMG, USDF, TIDAL, RAMP, QIUCK, CONV, POLK, MARSH, CELL, FST, STN, BLES, GLQ
 - Screener new filters and columns: Network Realized Profit/Loss, Whale transaction count
 - Fix bug for empty watchlist screen, update infographics after screener filter changes
 - Add labeled holders widget(for ETH/ERC20)
 - Alerts: Add more metrics
 
-
-
 ## March 2021
 
-``24.03 - 31.03``
+`24.03 - 31.03`
 
 Sanbase
+
 - New coins added: STR, L3P, KONO, PKF, COVER, BAMBOO, PROPS, VRA, BANK, NFT, ERN, KLAY
 - New in Watchlists: dynamic columns (as in screener), server-side pagination, horizontal scroll
 - Increased speed of 'eth spent overview' table ('Key stats' tab on ETH chart page)
 - Address watchlist: fixed bug with dublicates in addresses
 - Add table 'Top Holders' table
 - Add metrics 'whale_transaction_count_100k_usd_to_inf' and 'whale_transaction_count_1m_usd_to_inf'
-- Add anchor(link) for sheets templates on home page https://app.santiment.net/#san-sheets
+- Add anchor(link) for sheets templates on home page <https://app.santiment.net/#san-sheets>
 
-
-
-``17.03 - 24.03``
+`17.03 - 24.03`
 
 Sanbase
 
-  - 'Fees Distribution' in metrics sidebar for Ethereum
-  - You can save notes for any addresses in your watchlists. Addresses watchlist table: 'Notes' column, horizontal scroll
-  - Charts: Price metric new visualisation type – [Candles](https://app.santiment.net/s/YCt8Wk0R)
-![image](https://user-images.githubusercontent.com/24521041/115565626-32871200-a2c2-11eb-8c05-305d81786870.png)
+- 'Fees Distribution' in metrics sidebar for Ethereum
+- You can save notes for any addresses in your watchlists. Addresses watchlist table: 'Notes' column, horizontal scroll
+- Charts: Price metric new visualisation type – [Candles](https://app.santiment.net/s/YCt8Wk0R)
+  ![image](https://user-images.githubusercontent.com/24521041/115565626-32871200-a2c2-11eb-8c05-305d81786870.png)
 
-``10.03 - 17.03``
+`10.03 - 17.03`
 
 Sanbase
 
- - Social: show social volume for last day, fix asset's detection
- - Screener: 'Explore watchlists' category as new Screener's entry point
- - Charts: update the structure of metrics tree
- - DEXes dashboard: chart shows price of selected asset
- - Historical Balance: "Assets USD distribution" and "Current balance" widgets
+- Social: show social volume for last day, fix asset's detection
+- Screener: 'Explore watchlists' category as new Screener's entry point
+- Charts: update the structure of metrics tree
+- DEXes dashboard: chart shows price of selected asset
+- Historical Balance: "Assets USD distribution" and "Current balance" widgets
 
-``03.03 - 10.03``
+`03.03 - 10.03`
 
 Sanbase
 
@@ -682,8 +693,7 @@ Sanbase
 - User's favorite chart metrics category
 - Axis values readability improved
 
-
-``25.02 - 03.03``
+`25.02 - 03.03`
 
 Sanbase
 
@@ -693,32 +703,31 @@ Sanbase
 - Chart's stability improved
 
 SanSheets
+
 - Added a new function for marketcap (`SAN_MARKETCAP`) which uses the `marketcap_<currency>` getMetric metric
-
-
 
 ## February 2021
 
-``17.02 - 24.02``
+`17.02 - 24.02`
 
 Sanbase
 
 - Add metric: Whale Transaction Count
-    Number of Transactions Transferring More Than 100k USD
+  Number of Transactions Transferring More Than 100k USD
 - 'Explore screeners' category in Navigation Header Dropdown
 - Charts
-    - Metrics’ stability improved
-    - Customizable axes
-    - New auto-hide/lock sidebar flow
+  - Metrics’ stability improved
+  - Customizable axes
+  - New auto-hide/lock sidebar flow
 - Bugfixes
-    - Alerts with wrong settings
-    - Infographics loading on screener
+  - Alerts with wrong settings
+  - Infographics loading on screener
 
 SanSheets
 
 - Social volume metric: Add twitter as a source, add TOTAL source
 
-``11.02 - 17.02``
+`11.02 - 17.02`
 
 Sanbase
 
@@ -728,7 +737,7 @@ Sanbase
 - Screener: Enhance share popup, horizontal scroll for big tables
 - Beta: Dashboard "ETH Token Trading Analysis"
 
-``04.02 - 10.02``
+`04.02 - 10.02`
 
 SanSheets
 
@@ -738,65 +747,69 @@ SanSheets
 Sanbase
 
 - Alerts has new available metrics:
-  - Holders distributions 
+
+  - Holders distributions
   - Whale transaction count
-  - Bitmex 
+  - Bitmex
   - Mean age
   - Mean dollar invested age
   - NVT
   - Withdrawal transactions
-  
+
 - Home page: Show percent changes for recent watchlists/screeners
 - Screener: reorder columms ability, saving table sorting, fix flow metrics names
 
-``27.01 - 03.02``
+`27.01 - 03.02`
 
 Sanbase
 
 - Add zero step app's new version upgrade
 - Add new ETH 2.0 ROI widget
-- New category "addresses"  in "My watchlists"
+- New category "addresses" in "My watchlists"
 - Drag and drop chart rearrangement in the Mapview
-![d&d_chart_layouts_sort](dd_chart_layouts_sort.gif)
+  ![d&d_chart_layouts_sort](dd_chart_layouts_sort.gif)
 - Allowing to draw on chart for non-beta users
 
-Screener: 
+Screener:
 
 - 200+ new columns (all metrics that supported in filter)
-- Fix "Circulation 180 $" filter + percent filter for that
+- Fix "Circulation 180 \$" filter + percent filter for that
 
 ## January 2021
 
-``20.01 - 27.01``
+`20.01 - 27.01`
 
 - Historical balance: New Money Flow chart
 - Mobile & Tablet & Laptop styles many fixes
 - Bug fix: dashboard's charts
 
-``14.01 - 20.01``
+`14.01 - 20.01`
 
 **Sanbase**
 
 Charts & Dashboards
+
 - New metric "MVRV USD intraday"
 - New dashboard [Ethereum 2.0 Staking Analytics](https://app.santiment.net/eth2)
 - Custom interval selector for dashboard charts
 
 Screener & Watchlists
+
 - "Newest first" my watchlists & screeners sorting in navigation dropdown
 - Screener table loading improvements: server-side pagination and sorting
 - /watchlists and /assets pages stability improved
 - Watchlists and Screener pages SEO links
 
 Santrends
+
 - Trends table stability improved
 
 Fixes
+
 - Metamask login
 - Dashboards: mobile & tablet versions improvements
 
-
-``24.12 - 13.01``
+`24.12 - 13.01`
 
 **Sanbase**
 
@@ -823,28 +836,32 @@ Screener
 
 ## December 2020
 
-``17.12 - 23.12``
+`17.12 - 23.12`
 
 Screener
+
 - Ability to filter assets through your watchlists
 
 Santrends
+
 - New design for trends page/table
 
 Alerts
+
 - New metric 'Network profit/loss'
 
 Account settings
+
 - Show monthly usage of API calls
 
 Historical balance
+
 - Address’ labels, comments and latest transactions
 - Recently viewed “Chart layouts” on home page
 - Lookup wallets using global search
 - Watchlists for addresses
 
-
-``10.12 - 16.12``
+`10.12 - 16.12`
 
 New home page for the Sanbase app is here!
 Now you can easily navigate to your personal watchlists, screeners, exclusive PRO features and more, directly from our home page.
@@ -878,7 +895,6 @@ Charts
 - More contrast axes in the night mode
 - Assets selector has a new category "DeFi"
 - Add Recents Chart Layouts to desktop navigation dropdown
-
 
 ## November 2020
 
@@ -920,12 +936,12 @@ Sanbase has a New Plan! This Plan is the perfect for **Crypto Lords**!
 
 What's inside?
 
-* All in PRO and
-* Dedicated account manager
-* Basic API 300k API calls
-* Closed Webinars with Santiment Analytics
-* Closed chat with Santiment market analysts
-* Custom education & onboarding
+- All in PRO and
+- Dedicated account manager
+- Basic API 300k API calls
+- Closed Webinars with Santiment Analytics
+- Closed chat with Santiment market analysts
+- Custom education & onboarding
 
 ---
 
@@ -989,6 +1005,7 @@ Fixes:
 - Bug fixes.
 
 ## September 2020
+
 - New Uniswap Dashboard
 - Uniswap Dashboard | Date selection for the “UNI Flow Balances” widget;
 - Uniswap Dashboard | Update top claimers table: transaction volume inflow/outflow;
@@ -1009,7 +1026,7 @@ Fixes:
 - Charts | Search submetrics(Twitter Followers 24h, Socail active users, etc) in metrics search,
 - Charts | New metric Social Active Users
 - Charts | "Exchange Inflow" and "Exchange Outflow", You can choose specific exchange
-- Charts | More sanfam users added to  the “Sanfam Insights”
+- Charts | More sanfam users added to the “Sanfam Insights”
 - Charts | Chart performance improved
 - Charts | Supply Distribution Combined Balance widget
 - Charts | Supply Distribution percentage metric’s label and value are appended with the ‘%’ sign
@@ -1019,7 +1036,7 @@ Fixes:
 - Screener | Search input for Market Segments filter
 - Screener & Watchlists | New "compare" feature, which makes life easier to compare assets from your list
 - Screener | UX improvement | Open operator by default (when add a new filter)
-- Screener | Screener tab in  the main navigation
+- Screener | Screener tab in the main navigation
 - Screener | Add change metrics for Social Volume, Sentiment and Social Dominance
 - Screener | 3 new filters: inside channel, outside channel, inside % channel
 - Screener | Pro popup
@@ -1029,11 +1046,11 @@ Fixes:
 - Screener | Various fixes around screener signals
 - Alerts | Fix the master of the historical balance alert
 - Add navigation on Stablecoins Dashboard
-- Stablecoin Dashboard - the Stablecoin Hub - https://app.santiment.net/stablecoins
+- Stablecoin Dashboard - the Stablecoin Hub - <https://app.santiment.net/stablecoins>
 - API performance optimizations. Fixed issue in available metrics caching which will prevent API performance degradation over time.
 - Add new labeled balance and flow metrics:
-    Ex. Eth & Uniswap - [https://tinyurl.com/y5zrc4lp](https://tinyurl.com/y5zrc4lp)
-Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/yyycjjcg)
+  Ex. Eth & Uniswap - [https://tinyurl.com/y5zrc4lp](https://tinyurl.com/y5zrc4lp)
+  Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/yyycjjcg)
 
 ```
         "miners_balance",
@@ -1085,6 +1102,7 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
 ```
 
 ## August 2020
+
 - Charts | Insights layout on the Charts tool
 - Charts | Related Asset's Insights on the Asset's Detailed Page
 - Charts | Small fixes for Chart Layouts (Remove Duplication Action)
@@ -1121,53 +1139,57 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
 ## July 2020
 
 **`Sanbase`**:
-  - New | Santiment Screener is here!
-  - Insights has new home page
-  - Watchlist & Screener has new column "Market segments"
-  * New metric | Top transactions table (It's connected metric with Transaction volume)
-  * New metric | Bitmex Basis Ratio
-  * New metric | Supply distribution (You can add more than one Supply Distributions in your chart layout)
-  * You can apply any chart layout from your watchlist
-  * We add settings for the watermark for our charts.
-  * Webhooks for alerts works with Discord.
-  - New metric | Sentiment Weighted
-  - On Alerts page we add the featured list of alerts. It's a good examples of usage
-  - Add keyboard navigation in all search by assets. ![](https://media.giphy.com/media/lqLdJ505muGP88kXJs/giphy.gif)
-  - Fix when search list was empty
-  - Add formatting for Exchange Balance metric
-  - Fixes for tooltip UX
-  - Fixes for Alpha reports
-  - Fixes Login/Create an account Flow
-  - Shift swapped to CMD + Click for Transactions Table
-  - The huge update for Santiment Charts. There is much more flexibility to setup your own dashboard based on Santiment metrics.
-  - Fix watchlists stats on mobile
-  - Fix search order on Sanbase
-  - Add more keyboard shortcuts
-  - CMD + Click {Charts Page} on Holder Distribution list will pick only only one group
-  - CMD + L {Charts Page} will open a list of chart layouts
-  - / {Any page} will focus on search input
-  - CMD + M {Charts Page} will toggle Mapview/Charts mode
+
+- New | Santiment Screener is here!
+- Insights has new home page
+- Watchlist & Screener has new column "Market segments"
+
+- New metric | Top transactions table (It's connected metric with Transaction volume)
+- New metric | Bitmex Basis Ratio
+- New metric | Supply distribution (You can add more than one Supply Distributions in your chart layout)
+- You can apply any chart layout from your watchlist
+- We add settings for the watermark for our charts.
+- Webhooks for alerts works with Discord.
+
+- New metric | Sentiment Weighted
+- On Alerts page we add the featured list of alerts. It's a good examples of usage
+- Add keyboard navigation in all search by assets. ![](https://media.giphy.com/media/lqLdJ505muGP88kXJs/giphy.gif)
+- Fix when search list was empty
+- Add formatting for Exchange Balance metric
+- Fixes for tooltip UX
+- Fixes for Alpha reports
+- Fixes Login/Create an account Flow
+- Shift swapped to CMD + Click for Transactions Table
+- The huge update for Santiment Charts. There is much more flexibility to setup your own dashboard based on Santiment metrics.
+- Fix watchlists stats on mobile
+- Fix search order on Sanbase
+- Add more keyboard shortcuts
+- CMD + Click {Charts Page} on Holder Distribution list will pick only only one group
+- CMD + L {Charts Page} will open a list of chart layouts
+- / {Any page} will focus on search input
+- CMD + M {Charts Page} will toggle Mapview/Charts mode
 
 ## June 2020
 
 **`Sanbase`**:
-  * Webhooks for Alerts
-  * Dev activity on Desktop now looks better (default MA 7 days)
-  * MVRV Long/Short looks better. (Area lines, percents instead of ratio)
-  * Add Sentiment Metrics (Finally on Santiment App we have Sentiments :smile: )
-  * Add Derivatives Metrics (For BTC & ETH)
-  * We rebuild fullscreen for the Chart. It's bigger now
-  * Chart becomes bigger
-  * Grid on the Chart becomes more granular
-  * Chart layouts - small fixes
-  * You can open our chart tool right from navigation now
-  * Add Frequencies for each metric in "Explanation" sidebar
-  * Add Price in BTC & ETH
-  * New Alert: MVRV Intraday
-  * Many fixes for links and docs
-  * New minimap feature: https://www.loom.com/share/8362041e6551404ba7dd092d125dac5d
-  * New Select&ZoomIn feature for Sanbase Charts
-  * You can edit the calendar as a text.
+
+- Webhooks for Alerts
+- Dev activity on Desktop now looks better (default MA 7 days)
+- MVRV Long/Short looks better. (Area lines, percents instead of ratio)
+- Add Sentiment Metrics (Finally on Santiment App we have Sentiments :smile: )
+- Add Derivatives Metrics (For BTC & ETH)
+- We rebuild fullscreen for the Chart. It's bigger now
+- Chart becomes bigger
+- Grid on the Chart becomes more granular
+- Chart layouts - small fixes
+- You can open our chart tool right from navigation now
+- Add Frequencies for each metric in "Explanation" sidebar
+- Add Price in BTC & ETH
+- New Alert: MVRV Intraday
+- Many fixes for links and docs
+- New minimap feature: <https://www.loom.com/share/8362041e6551404ba7dd092d125dac5d>
+- New Select&ZoomIn feature for Sanbase Charts
+- You can edit the calendar as a text.
 
 ## May 2020
 
@@ -1189,7 +1211,6 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
 
 ![search](social-suggestions.png)
 
-
 ## April 2020
 
 - **`Sanbase`**: Social tool has a new feature. "Comparing". You can compare any topics and assets by social volume and social dominance.
@@ -1200,7 +1221,6 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
 
 ![search](templates.png)
 ![search](templates-profile.png)
-
 
 - **`Sanbase`**: We have a new flow for selecting a datetime interval
 
@@ -1255,19 +1275,19 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
   And now Santiment has own Indices.
   ![feed](feed.png)
 
-- **`Sanbase`**: It's time to pay with crypto for our tools. https://app.santiment.net/pricing
+- **`Sanbase`**: It's time to pay with crypto for our tools. <https://app.santiment.net/pricing>
 
 - **`Sanbase`**: We've updated Sanbase's user profile. And you can track followers.
   ![profile](profile.png)
 
 ## January 2020
 
-- **`Sanbase`**: We make fresh new chart's engine for our services. Now our charts become much faster. You can try it on our desktop web app - https://app.santiment.net/
+- **`Sanbase`**: We make fresh new chart's engine for our services. Now our charts become much faster. You can try it on our desktop web app - <https://app.santiment.net/>
 
 - **`Sanbase`**: Better mobile experience is here. Also you can open our chart in `fullscreen` mode.
   ![mdp](mdp.png)
 
-* **`Sansheets`**:
+- **`Sansheets`**:
 
 1. Removed `SAN_NEWS` function.
 2. Change order of returned data of `SAN_OHLC` function.
@@ -1281,7 +1301,7 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
 
 ## December 2019
 
-- **`Sanbase`**: Our profile page is live - https://app.santiment.net/profile/120
+- **`Sanbase`**: Our profile page is live - <https://app.santiment.net/profile/120>
 
 - **`Sanbase/Insights`**: Let's talk about crypto in our new comments
   ![comments](comments.png)
@@ -1338,7 +1358,7 @@ Social Active Users metric - [https://tinyurl.com/yyycjjcg](https://tinyurl.com/
 - **`Sanbase`**: New beta feature. You can setup simple pricing signal on the chart tool.
   ![signals-on-chart](signals-on-chart.png)
 
-* **`Sanbase`**: Since today on-chain data is available on the charts for EOS
+- **`Sanbase`**: Since today on-chain data is available on the charts for EOS
   (discontinued in May 2020), Ripple and Binance Chain. Binance Chain is
   available under the `Binance Native` name and `binance-coin-native` slug. The
   old `Binance/binance-coin` is still pointing to the ERC20 contract. Not all

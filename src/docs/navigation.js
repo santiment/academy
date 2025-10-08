@@ -59,57 +59,60 @@ export const GUIDES = [
       },
       {
         slug: 'trading and transaction volume',
-        title: 'Trading and Transaction Volume'
+        title: 'Trading and Transaction Volume',
       },
       {
         slug: 'understanding daily active addresses',
-        title: 'Understanding Daily Active Addresses'
+        title: 'Understanding Daily Active Addresses',
       },
       {
         slug: 'understanding circulation',
-        title: 'Understanding Circulation'
+        title: 'Understanding Circulation',
       },
       {
         slug: 'understanding long-term market trends and cycles',
-        title: 'Understanding Long-term Market Trends and Cycles'
+        title: 'Understanding Long-term Market Trends and Cycles',
       },
       {
         slug: 'understanding short-term market trends',
-        title: 'Understanding Short-term Market Trends'
+        title: 'Understanding Short-term Market Trends',
       },
       {
         slug: 'understanding crypto market cycles through lending metrics',
-        title: 'Understanding Crypto Market Cycles Through Lending Metrics'
+        title: 'Understanding Crypto Market Cycles Through Lending Metrics',
       },
       {
-        slug: 'understanding market expectations through historical crypto trends',
-        title: 'Understanding Market Expectations Through Historical Crypto Trends'
+        slug:
+          'understanding market expectations through historical crypto trends',
+        title:
+          'Understanding Market Expectations Through Historical Crypto Trends',
       },
       {
         slug: 'whale monitoring to predict market moves',
-        title: 'Whale Monitoring to Predict Market Moves'
+        title: 'Whale Monitoring to Predict Market Moves',
       },
       {
         slug: 'case study liquidations and sentiment ratio',
-        title: 'Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying'
+        title:
+          'Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying',
       },
       {
         slug: 'case study nrpl mvrv',
-        title: 'Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms'
+        title: 'Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms',
       },
       {
         slug: 'case study social volume',
-        title: 'Case Study 3: Social Volume Indicates a Top'
+        title: 'Case Study 3: Social Volume Indicates a Top',
       },
       {
         slug: 'case study retail profit taking',
-        title: 'Case Study 4: Using Retail Balances for Profit-Taking Analysis'
+        title: 'Case Study 4: Using Retail Balances for Profit-Taking Analysis',
       },
       {
         slug: 'sanr a playground for trading',
-        title: 'SanR: a Playground for Trading'
-      }
-    ]
+        title: 'SanR: a Playground for Trading',
+      },
+    ],
   },
   {
     title: 'Sanbase',
@@ -361,7 +364,7 @@ export const REFERENCES = [
     description:
       'Development updates, new features and other platform-wide improvements',
     icon: Changelog,
-    articles: [],
+    articles: ['Assets', 'Metrics', 'Legacy Changelog'],
   },
   {
     title: 'Labels',
