@@ -10,6 +10,8 @@ date: 2024-04-05
 <Resource>
 - [Positive/Negative Sentiment](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) - Shows how many mentions of a term/asset are expressed in a
 positive/negative manner.
+- [Bullish/Bearish Sentiment](/metrics/sentiment-metrics/bullish-bearish-sentiment-metrics) - Shows how many mentions of a term/asset are expressed in a
+bullish/bearish manner.
 - [Sentiment Balance](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) - The difference between Positive Sentiment and Negative Sentiment 
 - [Sentiment Weighted](/metrics/sentiment-metrics/weighted-sentiment-metrics) - An improved version of the Sentiment Balance that adjusts the values by considering the number of mentions, standardizing data to make diverse asset sentiments comparable. 
 </Resource>
@@ -73,6 +75,14 @@ information. These kind of messages usually have a pretty vanished pair of
 sentiment scores: both **positive** and **negative** scores are close to 0.5.
 We don't include these kind of messages while calculating the **Sentiment
 Metrics**: they are filtered out by a certain threshold.
+
+## Bullish Bearish Sentiment Score
+
+We are using `ElKulako/cryptobert` model from [Hugging Face](https://huggingface.co/) 🤗. This model was trained on crypto related tweets, reddit comments, and telegram posts.
+
+Model returns three probability scores: `bullish`, `neutral`, `bearish`. Each probability score is fall in a range between 0 and 1. Sum of all three scores equals to 1.
+
+Because it is based on the BERT model, it better understands the context of the text.
 
 ## Metrics Calculation
 
