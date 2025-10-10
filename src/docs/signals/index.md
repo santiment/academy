@@ -11,6 +11,22 @@ Signals belong to nonequidistant timeseries data type (the sequence taken at suc
 - [Anomalies](/signals/anomalies)
 - [Large Exchange Transactions 1M](/signals/large-exchange-transactions-1m)
 
+- [Binance Funding Rate](/signals/binance-funding-rate)
+- [BTC Correlation](/signals/btc-correlation)
+- [Dex Exchanges 1M USD](/signals/dex-exchanges-1m-usd)
+- [ETH Whale Dump](/signals/eth-whale-dump)
+- [Hyperliquid Average Funding Rates](/signals/hyperliquid-average-funding-rates)
+- [Large Transfers](/signals/large-transfers)
+- [Large USDC-USDT Mint](/signals/large-usdc-usdt-mint)
+- [Liquidations](/signals/liquidations)
+- [MVRV Danger (Overvaluation) Zone](/signals/mvrv-danger-zone)
+- [MVRV Opportunity (Undervaluation) Zone](/signals/mvrv-opportunity-zone)
+- [Network Activity - Price Divergence](/signals/network-activity-price-divergence)
+- [Project in Trends](/signals/project-in-trends)
+- [Social Dominance Spike](/signals/social-dominance-spike)
+- [Social-Dev Score](/signals/social-dev-score)
+- [USDC Borrow](/signals/usdc-borrow)
+
 <Resource>
 
 Deprecated Signals
