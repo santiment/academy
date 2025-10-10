@@ -6,7 +6,8 @@ author: Santiment Team
 date: 2025-10-06
 ---
 
-We now provide a way to access finalized metric values through our API. Finalized points are flagged as final for a given interval, meaning no further backfills or adjustments will occur for that timestamp. This is especially useful when you need guaranteed consistency for analysis, dashboards, or reporting.
+Santiment provides a way to access finalized metric data points through our API.
+Data points are flagged as final for a given interval, meaning no further backfills or adjustments will occur for that timestamp. This is especially useful when you need guaranteed consistency for analysis, dashboards, or reporting.
 
 <Notebox type="openBook">
 Finalized here means the value is considered final for the requested interval. It does not change afterwards due to late-arriving data or corrections.
@@ -24,6 +25,7 @@ Set `onlyFinalizedData: true` in your GraphQL query. For example, requesting dai
       from: "utc_now-6h"
       to: "utc_now"
       interval: "5m"
+      onlyFinalizedData: true
     )
   }
 }
@@ -34,7 +36,7 @@ Set `onlyFinalizedData: true` in your GraphQL query. For example, requesting dai
 
 <Resource title="Supported scope (WIP)">
 
-This feature is currently in testing and implemented for the blockchain: Bitcoin Cash, and for a limited subset of metrics:
+This feature is currently in testing and implemented for Bitcoin Cash and for a limited subset of metrics:
 
 - `active_addresses_1h`
 - `active_addresses_24h`
@@ -49,12 +51,12 @@ This feature is currently in testing and implemented for the blockchain: Bitcoin
 - `transaction_volume`
 - `transaction_volume_5min`
 
-We will expand chain and metric coverage over time.
+The assets and metrics coverage will expand in the future.
 
 </Resource>
 
 <Notebox type="exclamation">
-Requesting finalized data introduces a short additional latency of around 5–10 minutes, as we wait to confirm finalization of each interval.
+Requesting finalized data introduces additional latency.
 </Notebox>
 
 <Resource title="Related reading">
