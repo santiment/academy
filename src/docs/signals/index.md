@@ -1,16 +1,16 @@
 ---
-title: Signals Overview
-author: Santiment Team
-date: 2021-05-27
+title: Data Anomaly Overview
+author: Larry
+date: 2025-10-20
 ---
 
-We consider signal as some specific event happening at some point of time. Usually the signal is linked to an asset and a specific metric.
+The crypto market is noisy by the minute. We keep it simple: we surface meaningful anomalies from on-chain activity, social signals, and derivatives microstructure, and turn them into clear, ready-to-use signals. 
 
-Signals belong to nonequidistant timeseries data type (the sequence taken at successive non-equally spaced points in time).
+Unlike traditional dashboards, we focus on actionability and reliability. Every signal is validated with rigorous statistical tests and out-of-sample checks to reduce false positives. Integrate notifications to fit your workflow—use the actionable anomalies in a way you like.
 
-- [Anomalies](/signals/anomalies)
+If you’re looking for a systematic way to improve decision quality in a complex market, Data Anomaly is the simplest place to start.
+
 - [Large Exchange Transactions 1M](/signals/large-exchange-transactions-1m)
-
 - [Binance Funding Rate](/signals/binance-funding-rate)
 - [BTC Correlation](/signals/btc-correlation)
 - [Dex Exchanges 1M USD](/signals/dex-exchanges-1m-usd)

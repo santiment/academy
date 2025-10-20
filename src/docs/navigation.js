@@ -415,10 +415,9 @@ export const REFERENCES = [
   },
   {
     title: 'Signals',
-    description: 'Directory of key stakeholder signals available on Santiment',
+    description: 'Directory of key stakeholder data anomalies available on Santiment',
     icon: Signals,
     articles: [
-      'Anomalies',
       'Large Exchange Transactions 1M',
       'Binance Funding Rate',
       'BTC Correlation',
