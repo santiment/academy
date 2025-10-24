@@ -1,23 +1,21 @@
 ---
-title: Community Messages Count
+title: Community Social Volume
 author: Vlad
-date: 2025-07-10
+date: 2025-10-24
 description: Number of messages in a project's community chat server
 # REF metrics-hub/metricshub/social_volume_unit.py
 ---
 
 ## Definition
 
-Community Messages Count is build on top of the [Social Data](/metrics/details/social-data).
+Community Social Volume is build on top of the [Social Data](/metrics/details/social-data).
 
-Community Messages Count returns the number of messages written in the
+Community Social Volume returns social volume of the asses in the
 asset's own community chat (telegram server) or subreddit (reddit).
 
 Currently `telegram` and `reddit` are supported.
 
 We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
-
-Experimental metrics, might undergo changes if a future.
 
 
 ## Access
@@ -53,19 +51,19 @@ Amount of documents that mention the given text pattern.
 ## Available Assets
 
 Available for [these
-assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22community_messages_count_telegram%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22community_social_volume_telegram%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-> Note: `community_messages_count_telegram`, `community_messages_count_reddit` metric are available for the same set of assets.
+> Note: `community_social_volume_telegram`, `community_social_volume_reddit` metrics
 
 ---
 
 ## SanAPI
 
-Available under the `community_messages_count_reddit` and `community_messages_count_telegram` names.
+Available under the  `community_social_volume_telegram` and `community_social_volume_reddit` names.
 
 ```graphql-explorer
 {
-  getMetric(metric: "community_messages_count_reddit") {
+  getMetric(metric: "community_social_volume_reddit") {
     timeseriesDataJson(
       selector: { slug: "solana" }
       from: "2025-01-01T00:00:00Z"
@@ -84,7 +82,7 @@ The full list of Community Message Count metrics is:
 
 <Summary>Open Metrics List</Summary>
 
-- community_messages_count_telegram
-- community_messages_count_reddit
+- community_social_volume_telegram
+- community_social_volume_reddit
 
 </Details>

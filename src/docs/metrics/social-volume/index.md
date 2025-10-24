@@ -1,7 +1,7 @@
 ---
 title: Social Volume
 author: Ivan
-date: 2024-06-26
+date: 2025-07-10
 description: The amount of messages/documents containing a given search term
 # REF metrics-hub/metricshub/social_volume.py
 ---
@@ -57,7 +57,7 @@ documents that contain either the words `btc` and `moon` or the words `bitcoin`
 and `moon` in one document, excluding any documents that contain the word
 `lambo`.
 
-Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
+We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
 
 ---
 
@@ -118,7 +118,7 @@ search term](social-volume-search-term.png)
 
 ## SanAPI
 
-Available under the `social_volume_total` and `social_volume_total_<source>`
+Available under the `social_volume_total` and `social_volume_<source>`
 names, where the available sources are:
 
 - 4chan
@@ -154,6 +154,25 @@ names, where the available sources are:
   getMetric(metric: "social_volume_telegram") {
     timeseriesDataJson(
       selector: { text: "btc AND 1?k" }
+      from: "2020-01-01T00:00:00Z"
+      to: "2020-01-07T00:00:00Z"
+      interval: "1d"
+    )
+  }
+}
+```
+
+---
+
+### Market Social Volume
+
+There is an option to get Market Social Volume
+
+```graphql-explorer
+{
+  getMetric(metric: "social_volume_telegram") {
+    timeseriesDataJson(
+      selector: { slug: "crypto_market" }
       from: "2020-01-01T00:00:00Z"
       to: "2020-01-07T00:00:00Z"
       interval: "1d"

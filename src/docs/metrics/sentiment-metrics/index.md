@@ -37,8 +37,7 @@ text.
 
 
 <Notebox type="note">
-Please note that metrics may undergo changes in historical values due to
-automated recalculations triggered monthly. We constantly update our labels
+We constantly update our labels
 which helps us to keep labels as fresh as possible but result historical data
 changes. Any modifications to labels, social sources, or relevant jobs will
 prompt recalculation for the previous month's data. Within a 12 hour period,
