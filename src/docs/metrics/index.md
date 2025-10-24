@@ -121,6 +121,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [ETH 2.0](/metrics/eth-2)
 - [Ethena Protocol](/metrics/ethena-protocol)
 - [Exchange Funds Flow](/metrics/exchange-funds-flow)
+- [GHO Savings](/metrics/gho-savings)
 - [Labeled Balance](/metrics/labeled-balance)
 - [Labeled Exchange](/metrics/labeled-exchange)
 - [Lending and Borrowing Protocols](/metrics/lending-and-borrowing-protocols)

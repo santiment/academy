@@ -300,6 +300,7 @@ export const REFERENCES = [
       'FTX Derivatives',
       'Fully Diluted Valuation',
       'Funding Rates Aggregated',
+      'GHO Savings',
       'Gini Index',
       'Huobi Derivatives',
       'Labeled Balance',
