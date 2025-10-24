@@ -1,7 +1,7 @@
 ---
 title: Community Social Volume
 author: Vlad
-date: 2025-07-10
+date: 2025-10-24
 description: Number of messages in a project's community chat server
 # REF metrics-hub/metricshub/social_volume_unit.py
 ---
@@ -51,23 +51,19 @@ Amount of documents that mention the given text pattern.
 ## Available Assets
 
 Available for [these
-assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22community_messages_count_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22community_social_volume_telegram%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-> Note: `community_messages_count_total` metric and all metrics for a specific source are
-> available for the same set of assets.
+> Note: `community_social_volume_telegram`, `community_social_volume_reddit` metrics
 
 ---
 
 ## SanAPI
 
-Available under the `community_messages_count_reddit` and `community_messages_count_telegram`
-names, where the available sources are:
-
-- telegram
+Available under the  `community_social_volume_telegram` and `community_social_volume_reddit` names.
 
 ```graphql-explorer
 {
-  getMetric(metric: "community_messages_count_reddit") {
+  getMetric(metric: "community_social_volume_reddit") {
     timeseriesDataJson(
       selector: { slug: "solana" }
       from: "2025-01-01T00:00:00Z"
@@ -86,7 +82,7 @@ The full list of Community Message Count metrics is:
 
 <Summary>Open Metrics List</Summary>
 
-- community_messages_count_telegram
-- community_messages_count_reddit
+- community_social_volume_telegram
+- community_social_volume_reddit
 
 </Details>

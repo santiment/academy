@@ -53,19 +53,15 @@ Amount of documents that mention the given text pattern.
 ## Available Assets
 
 Available for [these
-assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22community_messages_count_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22community_messages_count_telegram%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-> Note: `community_messages_count_total` metric and all metrics for a specific source are
-> available for the same set of assets.
+> Note: `community_messages_count_telegram`, `community_messages_count_reddit` metric are available for the same set of assets.
 
 ---
 
 ## SanAPI
 
-Available under the `community_messages_count_reddit` and `community_messages_count_telegram`
-names, where the available sources are:
-
-- reddit
+Available under the `community_messages_count_reddit` and `community_messages_count_telegram` names.
 
 ```graphql-explorer
 {
