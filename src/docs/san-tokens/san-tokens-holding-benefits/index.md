@@ -11,7 +11,8 @@ There are several benefits for our SAN token holders:
 
 ## Use SAN Tokens for Discounts
 
-You can now use SAN tokens as a discount to offset the cost of Santiment's pricing plans. Holding more than 1,000 SAN tokens provides a 20% discount on all our product pricing plans.
+> :bulb: You can now use SAN tokens for a discount. 
+:point_right: Holding more than 1,000 SAN tokens provides a 20% discount on all our plans.
 
 This discount will be automatically applied to your account if you log in with your crypto wallet or connect your wallet to your existing account.
 

@@ -68,7 +68,7 @@ const DiscordLogo = () => (
 
 const ArticleFooter = ({ lastUpdatedAt, isTablet, isPhone }) => (
   <>
-    <ArticleLastUpdate lastUpdatedAt={lastUpdatedAt} />
+    {lastUpdatedAt && <ArticleLastUpdate lastUpdatedAt={lastUpdatedAt} />}
     <DiscordCTA isSmall={isTablet || isPhone} />
   </>
 )

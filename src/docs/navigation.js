@@ -26,74 +26,93 @@ export const GUIDES = [
     icon: Education,
     articles: [
       {
-        slug: 'alerts on Sanbase',
-        title: 'Sanbase Alerts - Age Consumed example',
+        slug: 'age consumed alert',
+        title: 'Alerts - Age Consumed',
       },
       {
-        slug: 'social trends alerts',
-        title: 'Sanbase Alerts - Social trends / Trending words example',
+        slug: 'social trend alerts',
+        title: 'Alerts - Social Trends/Trending Words',
       },
       {
-        slug: 'whale alert',
-        title: 'Sanbase Alerts - Whale Alert example',
-      },
-      'Timing market volatility with Token Age Consumed',
-      {
-        slug:
-          'Investigate Speculative Activity with Santiment’s Exchange Metrics',
-        title: 'Analyze Speculative Activity with Santiment’s Exchange Metrics',
+        slug: 'whale activity alert',
+        title: 'Alerts - Whale Activity',
       },
       {
-        slug: 'How To Spot tops with Price - Network Activity divergences',
-        title: 'Spot tops with Price - Network Activity divergences',
+        slug: 'timing market volatility with token age consumed',
+        title: 'Timing Market Volatility with Token Age Consumed',
       },
       {
-        slug:
-          'Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies',
-        title:
-          'Price - Daily Addresses Divergence, A Primer on On-chain Trading Strategies',
+        slug: 'analyze speculative activity with exchange metrics',
+        title: 'Analyze Speculative Activity with Exchange Metrics',
       },
       {
-        slug: 'santiment pro reports samples',
-        title: 'Santiment PRO Reports Samples',
+        slug: 'spot tops with price network activity divergences',
+        title: 'Spot Tops with Price - Network Activity divergences',
+      },
+      {
+        slug: 'price to daily addresses divergence guide',
+        title: 'Price vs DAA Divergence; An On-Chain Trading Strategy Guide',
+      },
+      {
+        slug: 'santiment pro report samples',
+        title: 'Santiment PRO Report Samples',
       },
       {
         slug: 'trading and transaction volume',
-        title: 'Trading and Transaction Volume'
+        title: 'Trading and Transaction Volume',
       },
       {
-        slug: 'daily active addresses',
-        title: 'Daily Active Addresses'
+        slug: 'understanding daily active addresses',
+        title: 'Understanding Daily Active Addresses',
       },
       {
-        slug: 'circulation',
-        title: 'Circulation'
-      },
-      {
-        slug: 'sanr practice makes perfect',
-        title: 'SanR - Practice Makes Perfect'
+        slug: 'understanding circulation',
+        title: 'Understanding Circulation',
       },
       {
         slug: 'understanding long-term market trends and cycles',
-        title: 'Understanding Long-term Market Trends and Cycles'
+        title: 'Understanding Long-term Market Trends and Cycles',
       },
       {
         slug: 'understanding short-term market trends',
-        title: 'Understanding Short-term Market Trends'
+        title: 'Understanding Short-term Market Trends',
       },
       {
         slug: 'understanding crypto market cycles through lending metrics',
-        title: 'Understanding Crypto Market Cycles Through Lending Metrics'
+        title: 'Understanding Crypto Market Cycles Through Lending Metrics',
       },
       {
-        slug: 'understanding market expectations through historical crypto trends',
-        title: 'Understanding Market Expectations Through Historical Crypto Trends'
+        slug:
+          'understanding market expectations through historical crypto trends',
+        title:
+          'Understanding Market Expectations Through Historical Crypto Trends',
       },
       {
-        slug: 'whale monitoring to predict crypto next moves',
-        title: 'Whale monitoring to predict crypto\'s next moves'
-      }
-    ]
+        slug: 'whale monitoring to predict market moves',
+        title: 'Whale Monitoring to Predict Market Moves',
+      },
+      {
+        slug: 'case study liquidations and sentiment ratio',
+        title:
+          'Case Study 1: DeFi liquidations and Sentiment Ratio for Dip Buying',
+      },
+      {
+        slug: 'case study nrpl mvrv',
+        title: 'Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms',
+      },
+      {
+        slug: 'case study social volume',
+        title: 'Case Study 3: Social Volume Indicates a Top',
+      },
+      {
+        slug: 'case study retail profit taking',
+        title: 'Case Study 4: Using Retail Balances for Profit-Taking Analysis',
+      },
+      {
+        slug: 'sanr a playground for trading',
+        title: 'SanR: a Playground for Trading',
+      },
+    ],
   },
   {
     title: 'Sanbase',
@@ -174,7 +193,7 @@ export const GUIDES = [
     articles: ['Setting Up', 'Adding an API key', 'Functions', 'PRO Templates'],
   },
   {
-    title: 'Products and plans',
+    title: 'Products and Plans',
     icon: ProductsAndPlans,
     description: (
       <>
@@ -201,7 +220,7 @@ export const GUIDES = [
     ],
   },
   {
-    title: 'SAN tokens',
+    title: 'SAN Tokens',
     icon: SANtokens,
     description: (
       <>
@@ -229,7 +248,7 @@ export const GUIDES = [
     articles: ['Asset', 'Deposit Addresses'],
   },
   {
-    title: 'Youtube videos',
+    title: 'Youtube Videos',
     description: (
       <>
         Santiment webinars, video
@@ -261,10 +280,12 @@ export const REFERENCES = [
       'Bitfinex Derivatives',
       'Circulation',
       'Community Messages Count',
+      'CrvUSD Savings',
       'Daily Active Addresses',
       'Daily Aggregated Financial Metrics',
       'Decentralized Exchange Metrics',
       'Deprecated Metrics',
+      { slug: 'finalized', title: 'Finalized Metrics' },
       'Deribit Derivatives',
       'Development Activity',
       'Dormant Circulation',
@@ -301,6 +322,7 @@ export const REFERENCES = [
       'NVT',
       'Network Growth',
       'Network Profit Loss',
+      'New Deployed Contracts',
       'Open Interest',
       'Pendle Markets',
       'Price DAA Divergence',
@@ -342,7 +364,7 @@ export const REFERENCES = [
     description:
       'Development updates, new features and other platform-wide improvements',
     icon: Changelog,
-    articles: [],
+    articles: ['Assets', 'Metrics', 'Legacy Changelog'],
   },
   {
     title: 'Labels',
@@ -397,24 +419,30 @@ export const REFERENCES = [
   },
   {
     title: 'Signals',
-    description: 'Directory of key stakeholder signals available on Santiment',
+    description: 'Directory of key stakeholder data anomalies available on Santiment',
     icon: Signals,
     articles: [
-      'Anomalies',
       'Large Exchange Transactions 1M',
+      'Binance Funding Rate',
+      'BTC Correlation',
+      'Dex Exchanges 1M USD',
+      'ETH Whale Dump',
+      'Hyperliquid Average Funding Rates',
+      'Large Transfers',
+      'Large USDC-USDT Mint',
+      'Liquidations',
+      'MVRV Danger (Overvaluation) Zone',
+      'MVRV Opportunity (Undervaluation) Zone',
+      'Network Activity - Price Divergence',
+      'Project in Trends',
+      'Social Dominance Spike',
+      'Social-Dev Score',
+      'USDC Borrow',
       {
         slug: 'deprecated',
         title: 'Deprecated Signals',
       },
     ],
-  },
-]
-
-export const RESOURCES = [
-  {
-    title: 'How we compare',
-    description: 'Which crypto analytics solution is right for you?',
-    articles: ['Messari vs Santiment'],
   },
 ]
 

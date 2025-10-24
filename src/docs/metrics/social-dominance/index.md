@@ -86,7 +86,7 @@ Combined Social Dominance from all sources for an asset can be seen on a
 [project's page](https://app.santiment.net/projects/santiment?from=2019-10-12T21%3A00%3A00.000Z&interval=12h&isAnomalyActive=false&isCartesianGridActive=false&isICOPriceActive=true&isLogScale=false&isMultiChartsActive=false&metrics=price_usd,social_dominance_total&projectId=101605&slug=santiment&ticker=SAN&timeRange=6m&title=Santiment%20%28SAN%29&to=2020-04-13T21%3A00%3A00.000Z).
 
 Social Dominance for arbitrary search terms can be viewed from the [trends
-page](https://app.santiment.net/labs/trends) ![trends page](trends-page.png)
+page](https://app.santiment.net/social-trends) ![trends page](trends-page.png)
 
 and enabling the Social Dominance toggle on the next page that shows the result.
 

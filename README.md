@@ -26,6 +26,14 @@ Basically, you can add `.md` (Markdown) file in `src/docs/test.md` or put `index
 It will be available at `academy.santiment.net/test` (locally: `localhost:8000/test`)
 Also you can put images under that folder
 
+### Generate llms.txt
+
+To update the `llms.txt` file (LLM-readable index of all documentation):
+```bash
+pip install pyyaml
+python scripts/generate_llms_txt.py
+```
+
 ### Custom Components
 
 - Available custom components: `<Resource title="title">Markdown Content</Resource>`, `<Notebox type="note|pin|hand">Markdown Content</Notebox>`

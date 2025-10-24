@@ -16,6 +16,7 @@
   }
 
   &__img {
+    border: none !important;
     animation: load 1s infinite alternate;
   }
 }

@@ -142,7 +142,7 @@ available through any of the products.
 
 ## How to Access
 
-### [Sanbase](https://app.santiment.net/labs/trends)
+### [Sanbase](https://app.santiment.net/social-trends)
 
 The emerging trends are available in the _`Labs`_ section.
 

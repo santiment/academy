@@ -24,7 +24,10 @@ Price data may be available for blockchains not listed here.
 | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-| Avalanche (ERC20)  | Optimism           | Arbitrum           |
+| Avalanche          | Optimism           | Arbitrum           |
 | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
+| ICP                |
+| ------------------ |
+| :white_check_mark: |

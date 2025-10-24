@@ -185,7 +185,7 @@ There is an option to get Market Sentiment Positive Negative
 
 ## Full list of metrics
 
-The full list of Postive/Negative/Balance sentiment metrics is:
+The full list of Positive/Negative/Balance sentiment metrics is:
 
 <Details>
 <Summary>Open Positive Sentiment Metrics List</Summary>

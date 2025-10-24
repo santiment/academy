@@ -73,3 +73,14 @@ package-lock.json
 
 .tool-versions
 .aider*
+
+
+# web components
+
+svelte-widgets/.svelte-kit
+svelte-widgets/static/webkit
+
+# mkcert
+
+local.santiment.net.pem
+local.santiment.net-key.pem
