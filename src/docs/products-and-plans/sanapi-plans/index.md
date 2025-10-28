@@ -1,7 +1,7 @@
 ---
 title: Santiment API Plans
-author: Ivan
-date: 2021-03-22
+author: David Utro
+date: 2025-09-22
 ---
 
 ## Overview
@@ -25,8 +25,6 @@ Check the [pricing page](https://app.santiment.net/pricing) for the latest plans
 | Restricted Metrics | Partial access:<br>• 1 years of historical data<br>• 30 days lag | Partial access:<br>• 1 years of historical data<br>• 30 days lag | Partial access:<br>• 1 years of historical data<br>• Realtime data |
 | Alerts Limit | 3 alerts allowed | 20 alerts allowed | 20 alerts allowed |
 | Insights Access | Limited access | Full access | Full access |
-
-
 
 ## Plans for Business
 
