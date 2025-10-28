@@ -1,0 +1,39 @@
+---
+import '../app.css'
+import 'san-webkit-next/app.css'
+import Notifications from 'san-webkit-next/ui/core/Notifications'
+
+import Intercom from '../components/Intercom.svelte'
+import Tracking from '../components/Tracking.svelte'
+import CookiesPopupWrapper from '../components/CookiesPopupWrapper.svelte'
+
+type Props = {
+  class?: string
+}
+
+const { class: className = '' } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/icon-144x144.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Academy</title>
+  </head>
+
+  <body class={className}>
+    <CookiesPopupWrapper client:only="svelte" />
+    <Intercom client:only="svelte">
+      <Tracking client:load>
+        <div data-vaul-drawer-wrapper>
+          <slot />
+        </div>
+      </Tracking>
+    </Intercom>
+    <Notifications client:load />
+  </body>
+</html>
+

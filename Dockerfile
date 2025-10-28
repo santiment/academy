@@ -1,22 +1,19 @@
-FROM debian:bullseye
+FROM node:20-alpine AS base
 
-RUN apt-get update && \
-    apt-get install -y \
-        python3 \
-        python3-dev \
-        python3-pip \
-        build-essential \
-        curl git
+RUN apk add git
+RUN npm install -g pnpm@8
 
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs
+ENV NODE_ENV production
 
 WORKDIR /app
 
-COPY ./ /app
+COPY package.json pnpm-lock.yaml /app
 
-ENV BACKEND_URL="globalThis.env?.BACKEND_URL"
+RUN pnpm i --ignore-scripts --frozen-lockfile --prod --force
 
-RUN npm install -g yarn --force && yarn install --production
+FROM base AS builder
+ARG BACKEND_URL
 
-RUN yarn build
+COPY . /app
+
+RUN pnpm build

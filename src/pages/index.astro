@@ -1,0 +1,41 @@
+---
+import { cn } from 'san-webkit-next/ui/utils'
+import Layout from "../layouts/Layout.astro"
+// import SEO from "../components/seo.astro"
+import Category from "../components/Category/Category.svelte"
+// import SocialBanner from "../components/Banner/SocialBanner"
+import { REFERENCES, GUIDES } from "../docs/navigation.svelte"
+import GettingStarted from "../components/GettingStarted/GettingStarted.astro"
+---
+
+<Layout>
+  <!-- <SEO title="Crypto Academy: Learn How to Analyze Cryptocurrency Market" /> -->
+
+  <section class="flex flex-col">
+    <div class="container">
+      <GettingStarted class="mx-auto my-5 sm:my-2" />
+      <h4 class="text-rhino text-lg mt-20 mx-0 mb-8 sm:mt-12 sm:mb-5">Guides</h4>
+
+      <div class="w-full grid gap-6 grid-cols-4 md:grid-cols-2">
+        {GUIDES.map(({ title, ...rest }) => (
+          <Category key={title} title={title} {...rest} />
+        ))}
+      </div>
+
+      <h4 class="text-rhino text-lg mt-20 mx-0 mb-8 sm:mt-12 sm:mb-5">References</h4>
+
+      <div class="w-full grid gap-6 grid-cols-4 md:grid-cols-2">
+        {REFERENCES.map(({ title, ...rest }) => (
+          <Category
+            wide
+            title={title}
+            {...rest}
+            maxWidth="295px"
+          />
+        ))}
+      </div>
+
+      <!-- <SocialBanner /> -->
+    </div>
+  </section>
+</Layout>

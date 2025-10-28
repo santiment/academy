@@ -1,5 +1,5 @@
-@import "~@santiment-network/ui/mixins";
-@import "~@santiment-network/ui/variables";
+@import '~@santiment-network/ui/mixins';
+@import '~@santiment-network/ui/variables';
 
 .wrapper {
   display: flex;
@@ -18,16 +18,20 @@
 .startBlock {
   margin: 80px auto 80px;
 
-  @include responsive("phone-xs") {
+  @include responsive('phone-xs') {
     margin: 30px auto 0;
   }
+}
+
+.blocks {
+  @apply w-full grid gap-6 grid-cols-4 md:grid-cols-2 sm:grid-cols-1;
 }
 
 .blocks {
   @include grid-wrap(4);
   grid-gap: 24px;
 
-  @include responsive("phone") {
+  @include responsive('phone') {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -39,10 +43,10 @@
 
 .title {
   margin: 80px 0 32px;
-  @include text("h4");
+  @include text('h4');
   color: var(--rhino);
 
-  @include responsive("phone-xs") {
+  @include responsive('phone-xs') {
     margin: 50px 0 22px;
   }
 }

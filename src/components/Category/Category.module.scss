@@ -1,27 +1,27 @@
-@import "~@santiment-network/ui/mixins";
+@import '@santiment-network/ui/mixins';
 
 .wrapper {
   margin-bottom: 64px;
   display: flex;
   color: var(--rhino);
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     flex-direction: column;
   }
 }
 
 .title {
-  @include text("h4");
+  @include text('h4');
   margin: 0 0 16px;
 }
 
 .description {
-  @include text("body-2");
+  @include text('body-2');
   color: var(--waterloo);
   max-width: 255px;
   margin: 0 35px 20px 0;
 
-  @include responsive("phone", "phone-xs") {
+  @include responsive('phone', 'phone-xs') {
     max-width: 100%;
     margin-right: 0;
   }
@@ -48,7 +48,7 @@
     }
   }
 
-  @include responsive("phone-xs") {
+  @include responsive('phone-xs') {
     flex-direction: row;
     justify-content: flex-start;
     padding: 20px;
@@ -64,32 +64,32 @@
   width: 64px;
   height: 64px;
 
-  @include responsive("phone-xs") {
+  @include responsive('phone-xs') {
     margin: 0 8px 0 0;
   }
 }
 
 .title {
-  @include text("body-2");
+  @include text('body-2');
   margin: 0 0 8px;
   text-align: center;
 
-  @include responsive("phone-xs") {
+  @include responsive('phone-xs') {
     text-align: left;
     margin-left: 8px;
   }
 }
 
 .length {
-  @include text("body-3");
+  @include text('body-3');
   color: var(--casper);
   text-align: center;
   margin: 0 12px;
 
-  @include responsive("phone-xs") {
+  @include responsive('phone-xs') {
     text-align: left;
     margin: 0 0 0 8px;
-    @include text("body-3");
+    @include text('body-3');
   }
 }
 
@@ -126,12 +126,12 @@
     height: auto;
     z-index: -1;
 
-    @include responsive("phone-xs") {
+    @include responsive('phone-xs') {
       right: -10px;
       transform: scale(0.8);
     }
 
-    @include responsive("tablet") {
+    @include responsive('tablet') {
       right: -10px;
       transform: scale(0.8);
     }
@@ -141,7 +141,7 @@
     text-align: left;
     margin-bottom: 8px;
 
-    @include responsive("phone-xs") {
+    @include responsive('phone-xs') {
       margin-left: 0;
     }
   }
@@ -150,13 +150,12 @@
     text-align: left;
     margin: 0;
 
-    @include responsive("phone-xs") {
-     max-width: 69%;
+    @include responsive('phone-xs') {
+      max-width: 69%;
     }
-
   }
 
-  @include responsive("phone-xs") {
+  @include responsive('phone-xs') {
     padding: 20px;
   }
 }
@@ -165,6 +164,8 @@
   & path,
   & rect,
   & circle {
-    transition: fill 0.2s ease, stroke 0.2s ease;
+    transition:
+      fill 0.2s ease,
+      stroke 0.2s ease;
   }
 }
