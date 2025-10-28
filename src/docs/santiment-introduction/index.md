@@ -42,7 +42,7 @@ competitive edge:
 - [Charts](https://app.santiment.net/charts): Browse, create, and save layouts to visualize data how you want.
 - [Ecosystem Development Activity Dashboard](https://app.santiment.net/dev-activity): Explore developer activity data for entire blockchains and projects within.
 - [Explorer](https://app.santiment.net/explorer): Browse community generated insights, alerts, chart layouts, and more.
-- [Historical Balance Tool](https://app.santiment.net/labs/balance?assets=): A tool for looking up the historical balance of specific wallet addresses on the Ethereum blockchain.
+- [Historical Balance Tool](https://app.santiment.net/labs/balance?assets=): A tool for looking up the historical balance of specific wallet addresses on the Ethereum blockchain and also BTC, XRP, ADA, and LTC on their native blockchains.
 - [Screener](https://app.santiment.net/screener): Filter and compare assets according to the [Metrics](https://academy.santiment.net/metrics/) you choose.
 - [Social Trends Dashboard](https://app.santiment.net/social-trends): Set of tools to identify trending narratives, topics, and tokens for insights into market sentiment:
     - [Trending Words](https://app.santiment.net/social-trends): See which keywords have the most traction.
