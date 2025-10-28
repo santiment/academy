@@ -203,11 +203,11 @@ export const GUIDES = [
       'Access Plans',
       {
         slug: 'sanbase-plans',
-        title: 'Access Plans - Sanbase',
+        title: 'Plans - Sanbase',
       },
       {
         slug: 'sanapi-plans',
-        title: 'Access Plans - SanAPI',
+        title: 'Plans - SanAPI',
       },
       'Sanbase subscription via SanR NFT',
       'Santiment Products',
