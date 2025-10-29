@@ -72,6 +72,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Sentiment Metrics](/metrics/sentiment-metrics)
 - [Social Dominance](/metrics/social-dominance)
 - [Social Volume](/metrics/social-volume)
+- [Social Volume AI](/metrics/social-volume-ai)
 - [Unique Social Volume](/metrics/unique-social-volume)
 - [Trending Words Rank](/metrics/trending-words-rank)
 
