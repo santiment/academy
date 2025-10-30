@@ -9,6 +9,7 @@ Currently deprecated Data Anomalies:
 - [ATH Price USD](/data-anomaly/deprecated/ath-price-usd)
 - [DAI Mint](/data-anomaly/deprecated/dai-mint)
 - [Large Exchange Transactions](/data-anomaly/deprecated/large-exchange-transactions)
+- [Large Exchange Transactions 1M](/data-anomaly/deprecated/large-exchange-transactions-1m)
 - [Large Transactions](/data-anomaly/deprecated/large-transactions)
 - [MCD ART Liquidation](/data-anomaly/deprecated/mcd-art-liquidation)
 - [Old Coins Moved](/data-anomaly/deprecated/old-coins-moved)
