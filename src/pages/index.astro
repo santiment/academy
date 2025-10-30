@@ -6,27 +6,33 @@ import Category from "../components/Category/Category.svelte"
 // import SocialBanner from "../components/Banner/SocialBanner"
 import { REFERENCES, GUIDES } from "../docs/navigation.svelte"
 import GettingStarted from "../components/GettingStarted/GettingStarted.astro"
+import SocialBanner from '../components/Banner/SocialBanner.astro'
+import Hero from '../components/Hero.svelte'
 ---
 
 <Layout>
   <!-- <SEO title="Crypto Academy: Learn How to Analyze Cryptocurrency Market" /> -->
 
   <section class="flex flex-col">
+
+    <Hero client:only="svelte" />
+
     <div class="container">
       <GettingStarted class="mx-auto my-5 sm:my-2" />
       <h4 class="text-rhino text-lg mt-20 mx-0 mb-8 sm:mt-12 sm:mb-5">Guides</h4>
 
       <div class="w-full grid gap-6 grid-cols-4 md:grid-cols-2">
         {GUIDES.map(({ title, ...rest }) => (
-          <Category key={title} title={title} {...rest} />
+          <Category client:load="svelte" key={title} title={title} {...rest} />
         ))}
       </div>
 
       <h4 class="text-rhino text-lg mt-20 mx-0 mb-8 sm:mt-12 sm:mb-5">References</h4>
 
-      <div class="w-full grid gap-6 grid-cols-4 md:grid-cols-2">
+      <div class="w-full grid gap-6 grid-cols-2 md:grid-cols-2">
         {REFERENCES.map(({ title, ...rest }) => (
           <Category
+            client:load="svelte"
             wide
             title={title}
             {...rest}
@@ -35,7 +41,7 @@ import GettingStarted from "../components/GettingStarted/GettingStarted.astro"
         ))}
       </div>
 
-      <!-- <SocialBanner /> -->
+      <SocialBanner />
     </div>
   </section>
 </Layout>

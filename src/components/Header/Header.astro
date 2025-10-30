@@ -1,0 +1,25 @@
+---
+import { cn } from "san-webkit-next/ui/utils"
+import Search from "../../components/Search/Search"
+import Logo from "../SantimentProductsTooltip/Logo"
+import SantimentProductsTooltip from "../SantimentProductsTooltip/SantimentProductsTooltip"
+import styles from "./Header.module.scss"
+import { AskAIButton } from '$ui/app/AIChatbot/index.js'
+
+const { isShowSearch, fixedHeader = true } = Astro.props
+---
+
+<header class={cn(styles.wrapper, fixedHeader && styles.fixed)}>
+  <div class={cn(styles.header, "container")}>
+    <div class={styles.headerLeft}>
+      <Logo />
+
+      <SantimentProductsTooltip />
+    </div>
+    <div class={styles.headerRight}>
+      {isShowSearch && <Search />}
+
+      <AskAIButton />
+    </div>
+  </div>
+</header>

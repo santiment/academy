@@ -1,4 +1,4 @@
-@import '~@santiment-network/ui/mixins';
+@import '@santiment-network/ui/mixins';
 
 .wrapper {
   margin: 80px 0 0;
@@ -10,7 +10,6 @@
   justify-content: center;
   position: relative;
 
-  // use xs: here
   @include responsive('phone-xs') {
     margin: 50px 0 0;
   }
@@ -23,10 +22,8 @@
     width: 1px;
     height: 104px;
     background: var(--porcelain);
-    // bg-porcelain
   }
 
-  // just use sm: for all of these
   @include responsive('phone', 'phone-xs') {
     flex-direction: column;
     padding: 20px;
@@ -40,7 +37,6 @@
 .img {
   margin: 0 24px 0 16px;
   fill: var(--casper);
-  // fill-casper
 }
 
 .card {
@@ -61,7 +57,6 @@
 
     & .img {
       fill: var(--rhino);
-      // fill rhino
     }
   }
 

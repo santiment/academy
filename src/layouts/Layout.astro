@@ -2,6 +2,7 @@
 import '../app.css'
 import 'san-webkit-next/app.css'
 import Notifications from 'san-webkit-next/ui/core/Notifications'
+import Footer from 'san-webkit-next/ui/app/Footer'
 
 import Intercom from '../components/Intercom.svelte'
 import Tracking from '../components/Tracking.svelte'
@@ -31,6 +32,7 @@ const { class: className = '' } = Astro.props
         <div data-vaul-drawer-wrapper>
           <slot />
         </div>
+        <Footer class="mt-14" client:visible />
       </Tracking>
     </Intercom>
     <Notifications client:load />

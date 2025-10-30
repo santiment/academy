@@ -1,0 +1,25 @@
+---
+import { cn } from 'san-webkit-next/ui/utils'
+import logo from '../../images/logo-SAN.svg'
+import styles from './PageLoader.module.scss'
+
+type Props = {
+  class?: string
+  text?: string
+}
+
+const { class: className, text = 'Loading' } = Astro.props
+---
+
+<div class="page">
+  <div class={cn(styles.loader, className)}>
+    <img
+      src={logo.src}
+      class={styles.loader__img}
+      width="44"
+      height="44"
+      alt="SANbase"
+    />
+    {text}...
+  </div>
+</div>

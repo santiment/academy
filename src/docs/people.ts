@@ -40,6 +40,7 @@ import Larry from '../images/people/Larry.png'
 export const PEOPLE = {
   'santiment team': {
     description: 'Several authors',
+    imageUrl: undefined,
     link: '',
   },
   'tzanko matev': {
@@ -157,4 +158,4 @@ export const PEOPLE = {
     imageUrl: Larry,
     link: '',
   },
-}
+} as const

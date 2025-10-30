@@ -1,5 +1,5 @@
-@import '~@santiment-network/ui/mixins';
-@import '~@santiment-network/ui/variables';
+@import '@santiment-network/ui/mixins';
+@import '@santiment-network/ui/variables';
 
 .wrapper {
   display: flex;
@@ -21,10 +21,6 @@
   @include responsive('phone-xs') {
     margin: 30px auto 0;
   }
-}
-
-.blocks {
-  @apply w-full grid gap-6 grid-cols-4 md:grid-cols-2 sm:grid-cols-1;
 }
 
 .blocks {

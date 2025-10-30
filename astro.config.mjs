@@ -14,6 +14,7 @@ export default (async () => {
       __SVELTEKIT_PATHS_ASSETS__: JSON.stringify(''),
       __SVELTEKIT_APP_DIR__: JSON.stringify(''),
       __SVELTEKIT_PATHS_RELATIVE__: JSON.stringify(''),
+      __SVELTEKIT_PAYLOAD__: JSON.stringify(''),
     },
   })
 

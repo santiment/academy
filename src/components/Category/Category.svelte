@@ -7,34 +7,22 @@
 
   let isHover = $state(false)
   const slug = titleToSlug(title)
-
-  const setHover = () => {
-    if (!isHover) {
-      isHover = true
-    }
-  }
-
-  const removeHover = () => {
-    if (isHover) {
-      isHover = false
-    }
-  }
 </script>
 
 <a
   href={`/${slug}/`}
   class={cn(styles.block, wide && styles.wide)}
-  ontouchstart={setHover}
-  onmouseenter={setHover}
-  ontouchend={removeHover}
-  ontouchcancel={removeHover}
-  onmouseleave={removeHover}
+  ontouchstart={() => (isHover = true)}
+  onmouseenter={() => (isHover = true)}
+  ontouchend={() => (isHover = false)}
+  ontouchcancel={() => (isHover = false)}
+  onmouseleave={() => (isHover = false)}
 >
   <div class={styles.icon}>
-    <Icon withColor={isHover} />
+    <Icon withColor={true} />
   </div>
 
-  <div style:maxWidth>
+  <div style:max-width={maxWidth}>
     <h4 class={styles.title}>{title}</h4>
     <p class={styles.length}>{description}</p>
   </div>
