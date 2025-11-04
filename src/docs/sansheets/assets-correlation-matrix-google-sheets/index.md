@@ -1,5 +1,5 @@
 ---
-title: How to Create a Correlation Matrix like Cryptowatch.io
+title: How to Create a Correlation Matrix
 author: Yura Zatsepin
 ---
 
@@ -59,4 +59,3 @@ We recommend using the following matrix structure for better visualization. You 
 Using Sansheets (Google Sheets Integration of Santiment data) is a convenient and flexible way to conduct your own research based on on-chain, social, and financial data without the need for Python or Julia code. The sample for this article was created in just 10 minutes.
 
 [View the final sample here](https://docs.google.com/spreadsheets/d/1UcgTvueFeDtv9k2xb2zwFLXtsAnUzy1JsN0KIHvC40I/edit?usp=sharing)
-
