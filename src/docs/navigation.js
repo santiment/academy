@@ -418,7 +418,7 @@ export const REFERENCES = [
     ],
   },
   {
-    title: 'Signals',
+    title: 'Data Anomaly',
     description: 'Directory of key stakeholder data anomalies available on Santiment',
     icon: Signals,
     articles: [
@@ -440,7 +440,7 @@ export const REFERENCES = [
       'USDC Borrow',
       {
         slug: 'deprecated',
-        title: 'Deprecated Signals',
+        title: 'Deprecated Data Anomalies',
       },
     ],
   },
