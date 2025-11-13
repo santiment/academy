@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind'
 import mdx from '@astrojs/mdx'
 import { mdsvex } from 'mdsvex'
 import { defineConfig, mergeConfig } from 'astro/config'
+import mdSvexConfig from './mdsvex.config'
 
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
 
@@ -24,9 +25,7 @@ export default (async () => {
     integrations: [
       svelte({
         extensions: ['.svelte', '.svx'],
-        preprocess: mdsvex({
-          extensions: ['.svx'],
-        }),
+        preprocess: mdsvex(mdSvexConfig),
       }),
       mdx(),
       tailwind(),
