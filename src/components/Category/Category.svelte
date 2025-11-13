@@ -19,11 +19,11 @@
   onmouseleave={() => (isHover = false)}
 >
   <div class={styles.icon}>
-    <Icon withColor={true} />
+    <Icon withColor={isHover} />
   </div>
 
   <div style:max-width={maxWidth}>
     <h4 class={styles.title}>{title}</h4>
-    <p class={styles.length}>{description}</p>
+    <p class={styles.length}>{@html description}</p>
   </div>
 </a>

@@ -2,11 +2,13 @@
 import '../app.css'
 import 'san-webkit-next/app.css'
 import Notifications from 'san-webkit-next/ui/core/Notifications'
-import Footer from 'san-webkit-next/ui/app/Footer'
 
+import Nav from '../components/Nav/Nav.astro'
 import Intercom from '../components/Intercom.svelte'
 import Tracking from '../components/Tracking.svelte'
 import CookiesPopupWrapper from '../components/CookiesPopupWrapper.svelte'
+import { ClientRouter } from 'astro:transitions'
+import { cn } from 'san-webkit-next/ui/utils'
 
 type Props = {
   class?: string
@@ -23,18 +25,20 @@ const { class: className = '' } = Astro.props
     <link rel="icon" type="image/png" href="/icon-144x144.png" />
     <meta name="generator" content={Astro.generator} />
     <title>Academy</title>
+    <ClientRouter />
   </head>
 
-  <body class={className}>
+  <body class={cn('pt-16', className)}>
     <CookiesPopupWrapper client:only="svelte" />
     <Intercom client:only="svelte">
       <Tracking client:load>
         <div data-vaul-drawer-wrapper>
+          <Nav />
           <slot />
         </div>
-        <Footer class="mt-14" client:visible />
       </Tracking>
     </Intercom>
+
     <Notifications client:load />
   </body>
 </html>

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { sluggify } from 'san-webkit/lib/utils/url'
 import { flatten } from './utils'
-import { usePageHash } from '../../utils/utils'
+import { usePageHash } from '../../utils/utils.svelte'
 import Icon from '@santiment-network/ui/Icon'
 import styles from './Markdown.module.scss'
 
@@ -14,7 +14,7 @@ const HeadingRenderer = ({ level, children, scrollToTargetAdjusted }) => {
   return React.createElement(`h${level}`, { id: slug }, [
     <a
       href={`#${slug}`}
-      onClick={e => scrollToTargetAdjusted(e, slug, true)}
+      onClick={(e) => scrollToTargetAdjusted(e, slug, true)}
       key={slug}
       className={styles.anchor}
     >

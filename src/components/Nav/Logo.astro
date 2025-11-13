@@ -1,13 +1,15 @@
 ---
-import React from 'react'
-import cx from 'classnames'
-import { Link } from 'gatsby'
-import styles from './Logo.module.scss'
+  import { cn } from 'san-webkit-next/ui/utils'
+  import styles from './Logo.module.scss'
 
-const { className } = Astro.props
+  type TProps = {
+    class?: string
+  }
+
+  const { class: className = '' }: TProps = Astro.props
 ---
 
-<a class={cx(styles.logo, className)} href="/">
+<a class={cn(styles.logo, className)} href="/">
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
     <path fill="#fff" d="M32 16a16 16 0 11-32 0 16 16 0 0132 0z" />
     <path

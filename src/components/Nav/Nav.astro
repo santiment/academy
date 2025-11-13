@@ -1,0 +1,25 @@
+---
+  import { cn } from 'san-webkit-next/ui/utils'
+  import Search from "../../components/Search/Search.svelte"
+  import Logo from './Logo.astro'
+  import ProductsButton from '../ProductsButton/ProductsButton.svelte'
+  import styles from './Nav.module.scss'
+  import { AskAIButton } from 'san-webkit-next/ui/app/AIChatbot'
+
+  const { fixedHeader = true } = Astro.props
+---
+
+<header class={cn(styles.wrapper, fixedHeader && styles.fixed)}>
+  <div class={cn(styles.header, 'container')}>
+    <div class={styles.headerLeft}>
+      <Logo />
+
+      <ProductsButton client:load="svelte" />
+    </div>
+    <div class={styles.headerRight}>
+      <Search client:load="svelte" />
+
+      <AskAIButton client:only="svelte" />
+    </div>
+  </div>
+</header>

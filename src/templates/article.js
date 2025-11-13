@@ -10,7 +10,7 @@ import ArticleHeadings from '../components/ArticleHeadings/ArticleHeadings'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb'
 import ArticleFooter from '../components/ArticleFooter'
 import injectCustomMarkdownComponents from '../components/MarkdownCustomComponents'
-import { usePageHash } from '../utils/utils'
+import { usePageHash } from '../utils/utils.svelte'
 import styles from './article.module.scss'
 
 const Template = ({ data, pageContext }) => {
@@ -61,7 +61,7 @@ const Template = ({ data, pageContext }) => {
 export default Template
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       rawMarkdownBody
       frontmatter {

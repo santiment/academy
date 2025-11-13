@@ -1,59 +1,60 @@
-@import "~@santiment-network/ui/mixins.scss";
+@import '@santiment-network/ui/mixins.scss';
 
 .article-last-update {
-    margin-top: 64px;
+  margin-top: 64px;
 
-    span {
-        color: var(--fiord);
-    }
+  span {
+    color: var(--fiord);
+  }
 }
 
 .discordCTA {
-    background: var(--white);
-    border: 1px solid var(--porcelain);
-    border-radius: 8px;
-    padding: 28px 48px;
-    cursor: pointer;
+  background: var(--white);
+  border: 1px solid var(--porcelain);
+  border-radius: 8px;
+  padding: 28px 48px;
+  cursor: pointer;
 
-    span {
-        font-size: 16px;
+  span {
+    font-size: 16px;
 
-        svg {
-            margin-left: 9px;
-            transition: transform 0.3s ease-in-out;
-            transform: translateX(0);
-        }
+    svg {
+      margin-left: 9px;
+      transition: transform 0.3s ease-in-out;
+      transform: translateX(0);
     }
+  }
 
-    &:hover {
-        color: var(--jungle-green-hover);
-        fill: var(--jungle-green-hover);
+  &:hover {
+    color: var(--jungle-green-hover);
+    fill: var(--jungle-green-hover);
 
-        & span svg {
-            transform: translateX(4px);
-        }
+    & span svg {
+      transform: translateX(4px);
     }
+  }
 }
 
 .small {
-    padding: 28px 24px;
+  padding: 28px 24px;
 }
 
 .discordlogo {
-    min-width: 56px;
-    height: 56px;
-    background: var(--athens);
-    border-radius: 40px;
+  min-width: 56px;
+  height: 56px;
+  background: var(--athens);
+  border-radius: 40px;
 }
 
 .discordinfo {
-    max-width: 360px;
+  max-width: 360px;
 
-    h4 {
-        color: var(--rhino);
-    }
+  h4 {
+    color: var(--rhino);
+  }
 
-    p {
-        color: var(--fiord);
-    }
+  p {
+    color: var(--fiord);
+  }
 }
+

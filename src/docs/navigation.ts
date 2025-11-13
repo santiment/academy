@@ -1,28 +1,21 @@
-import React from 'react'
-import Metrics from '../images/docs/Metrics'
-import Changelog from '../images/docs/Changelog'
-import Education from '../images/docs/Education'
-import ProductsAndPlans from '../images/docs/Products'
-import SANtokens from '../images/docs/San'
-import SanAPI from '../images/docs/Sanapi'
-import Sansheets from '../images/docs/Sansheets'
-import Sanqueries from '../images/docs/Sanqueries'
-import Sanbase from '../images/docs/Sanbase'
-import Glossary from '../images/docs/Glossary'
-import Signals from '../images/docs/Signals'
-import Labels from '../images/docs/Labels'
-import Youtube from '../images/docs/Youtube'
+import Metrics from '../images/docs/Metrics.svelte'
+import Changelog from '../images/docs/Changelog.svelte'
+import Education from '../images/docs/Education.svelte'
+import ProductsAndPlans from '../images/docs/Products.svelte'
+import SANtokens from '../images/docs/San.svelte'
+import SanAPI from '../images/docs/Sanapi.svelte'
+import Sansheets from '../images/docs/Sansheets.svelte'
+import Sanqueries from '../images/docs/Sanqueries.svelte'
+import Sanbase from '../images/docs/Sanbase.svelte'
+import Glossary from '../images/docs/Glossary.svelte'
+import Signals from '../images/docs/Signals.svelte'
+import Labels from '../images/docs/Labels.svelte'
+import Youtube from '../images/docs/Youtube.svelte'
 
 export const GUIDES = [
   {
     title: 'Education and Use cases',
-    description: (
-      <>
-        Examples and use cases
-        <br />
-        for Santiment metrics
-      </>
-    ),
+    description: 'Examples and use cases<br />for Santiment metrics',
     icon: Education,
     articles: [
       {
@@ -82,8 +75,7 @@ export const GUIDES = [
         title: 'Understanding Crypto Market Cycles Through Lending Metrics',
       },
       {
-        slug:
-          'understanding market expectations through historical crypto trends',
+        slug: 'understanding market expectations through historical crypto trends',
         title:
           'Understanding Market Expectations Through Historical Crypto Trends',
       },
@@ -117,12 +109,7 @@ export const GUIDES = [
   {
     title: 'Sanbase',
     icon: Sanbase,
-    description: (
-      <>
-        Our crypto analytics
-        <br />& behavior platform
-      </>
-    ),
+    description: 'Our crypto analytics<br />& behavior platform',
     articles: [
       'Account settings',
       'Alerts page',
@@ -140,12 +127,7 @@ export const GUIDES = [
   {
     title: 'Santiment Queries',
     icon: Sanqueries,
-    description: (
-      <>
-        Our database explorer
-        <br />& research tool
-      </>
-    ),
+    description: 'Our database explorer<br />& research tool',
     articles: [
       'Introduction',
       'Exploration',
@@ -164,12 +146,7 @@ export const GUIDES = [
   {
     title: 'SanAPI',
     icon: SanAPI,
-    description: (
-      <>
-        Our API, available metrics
-        <br />& documentation
-      </>
-    ),
+    description: 'Our API, available metrics<br />& documentation',
     articles: [
       'Accessing the API',
       'Fetching Metrics',
@@ -183,25 +160,13 @@ export const GUIDES = [
   {
     title: 'Sansheets',
     icon: Sansheets,
-    description: (
-      <>
-        Our Spreadsheets plugin
-        <br />
-        for Santiment data
-      </>
-    ),
+    description: 'Our Spreadsheets plugin<br />for Santiment data',
     articles: ['Setting Up', 'Adding an API key', 'Functions', 'PRO Templates'],
   },
   {
     title: 'Products and Plans',
     icon: ProductsAndPlans,
-    description: (
-      <>
-        On the Santiment suite
-        <br />
-        and available plans
-      </>
-    ),
+    description: 'On the Santiment suite<br />and available plans',
     articles: [
       'Access Plans',
       {
@@ -222,13 +187,7 @@ export const GUIDES = [
   {
     title: 'SAN Tokens',
     icon: SANtokens,
-    description: (
-      <>
-        Use cases, roadmap
-        <br />
-        and where to buy
-      </>
-    ),
+    description: 'Use cases, roadmap<br />and where to buy',
     articles: [
       'How to buy SAN tokens',
       'Connect a wallet to the Sanbase account',
@@ -238,24 +197,12 @@ export const GUIDES = [
   {
     title: 'Glossary',
     icon: Glossary,
-    description: (
-      <>
-        Introduction to all relevant
-        <br />
-        terms and concepts
-      </>
-    ),
+    description: 'Introduction to all relevant<br />terms and concepts',
     articles: ['Asset', 'Deposit Addresses'],
   },
   {
     title: 'Youtube Videos',
-    description: (
-      <>
-        Santiment webinars, video
-        <br />
-        tutorials and more
-      </>
-    ),
+    description: 'Santiment webinars, video<br />tutorials and more',
     icon: Youtube,
     articles: ['Webinars', 'Walkthroughs', 'Tutorials'],
   },
@@ -419,25 +366,11 @@ export const REFERENCES = [
   },
   {
     title: 'Signals',
-    description: 'Directory of key stakeholder data anomalies available on Santiment',
+    description: 'Directory of key stakeholder signals available on Santiment',
     icon: Signals,
     articles: [
+      'Anomalies',
       'Large Exchange Transactions 1M',
-      'Binance Funding Rate',
-      'BTC Correlation',
-      'Dex Exchanges 1M USD',
-      'ETH Whale Dump',
-      'Hyperliquid Average Funding Rates',
-      'Large Transfers',
-      'Large USDC-USDT Mint',
-      'Liquidations',
-      'MVRV Danger (Overvaluation) Zone',
-      'MVRV Opportunity (Undervaluation) Zone',
-      'Network Activity - Price Divergence',
-      'Project in Trends',
-      'Social Dominance Spike',
-      'Social-Dev Score',
-      'USDC Borrow',
       {
         slug: 'deprecated',
         title: 'Deprecated Signals',

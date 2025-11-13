@@ -1,4 +1,4 @@
-@import "~@santiment-network/ui/mixins.scss";
+@import "@santiment-network/ui/mixins.scss";
 
 .wrapper {
   width: 100%;
@@ -64,76 +64,4 @@
 
 .icon {
   margin-left: 8px;
-}
-
-:global {
-  .algolia-docsearch-suggestion {
-    &--content {
-      &:before {
-        background: var(--porcelain) !important;
-      }
-
-      &:hover {
-        background: var(--jungle-green-light) !important;
-      }
-    }
-
-    &--highlight {
-      color: var(--jungle-green) !important;
-      box-shadow: none !important;
-      padding-top: 0 !important;
-      padding-bottom: 0 !important;
-      background: var(--jungle-green-light) !important;
-    }
-
-    &--category-header {
-      border-bottom: 1px solid var(--porcelain) !important;
-      color: var(--rhino) !important;
-    }
-
-    &--title {
-      color: var(--rhino) !important;
-      @include text("body-1");
-    }
-
-    &--text {
-      color: var(--rhino) !important;
-    }
-
-    &--subcategory-column {
-      color: var(--waterloo) !important;
-
-      &:before {
-        background: var(--porcelain) !important;
-      }
-    }
-  }
-}
-
-:global(.ds-dropdown-menu) {
-  box-shadow: 0px 4px 12px rgba(24, 27, 43, 0.04) !important;
-
-  &:before {
-    display: none !important;
-  }
-
-  & [class^="ds-dataset-"] {
-    border: 1px solid var(--porcelain) !important;
-  }
-
-  @include responsive("phone-xs") {
-    min-width: 300px !important;
-  }
-
-  @include responsive("phone") {
-    min-width: 400px !important;
-  }
-}
-
-:global(.algolia-autocomplete
-    .ds-dropdown-menu
-    .ds-suggestion.ds-cursor
-    .algolia-docsearch-suggestion:not(.suggestion-layout-simple)
-    .algolia-docsearch-suggestion--content) {
-  background-color: var(--jungle-green-light) !important;
 }

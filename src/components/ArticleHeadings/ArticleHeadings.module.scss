@@ -1,4 +1,4 @@
-@import "~@santiment-network/ui/mixins.scss";
+@import '@santiment-network/ui/mixins.scss';
 
 .list {
   position: fixed;
@@ -12,11 +12,11 @@
   overflow-x: hidden;
   padding-right: 8px;
 
-  @include responsive("phone", "phone-xs", "laptop") {
+  @include responsive('phone', 'phone-xs', 'laptop') {
     display: none;
   }
 
-  @include responsive("tablet") {
+  @include responsive('tablet') {
     margin-left: 650px;
   }
 }
@@ -26,7 +26,7 @@
 
   &.hasBefore::before,
   &:not(:last-child)::after {
-    content: "";
+    content: '';
     display: block;
     height: 4px;
     border-left: 2px solid var(--porcelain);
@@ -57,7 +57,7 @@
 }
 
 .heading {
-  @include text("body-3");
+  @include text('body-3');
   font-weight: normal;
 
   display: block;
@@ -73,7 +73,7 @@
     background: var(--jungle-green);
     top: 0;
     left: 0;
-    content: "";
+    content: '';
     width: 2px;
     height: 100%;
     border-radius: 8px;

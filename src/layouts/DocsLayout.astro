@@ -1,0 +1,38 @@
+---
+import { cn } from 'san-webkit-next/ui/utils'
+import { FooterBottom } from 'san-webkit-next/ui/app/Footer'
+import Sidebar from '../components/Sidebar/Sidebar.astro'
+import Breadcrumb from '../components/Breadcrumb/Breadcrumb.astro'
+import ArticleFooter from '../components/ArticleFooter/index.svelte'
+import styles from './DocsLayout.module.scss'
+
+type Props = {
+  items: any[]
+  currentSlug: any
+  title: any
+}
+
+const { items = [], currentSlug, title } = Astro.props;
+---
+
+<div class="academy-layout">
+  <Sidebar />
+
+  <div
+    class={cn(
+      styles.wrapper,
+      'container',
+    )}
+  >
+    <Breadcrumb crumbs={[]} crumbLabel={''} />
+
+    <slot />
+
+    <ArticleFooter lastUpdatedAt={''} />
+
+    <FooterBottom />
+  </div>
+
+
+</div>
+

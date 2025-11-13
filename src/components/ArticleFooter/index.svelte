@@ -1,7 +1,7 @@
 <script lang="ts">
   import { cn } from 'san-webkit-next/ui/utils'
   import { useDeviceCtx } from 'san-webkit-next/ctx/device'
-  import { ArrowRight } from '../ArticleHeadings/ArticleHeadings'
+  import ArrowRight from '../ArticleHeadings/ArrowRight.svelte'
   import styles from './ArticleFooter.module.scss'
 
   type TProps = {

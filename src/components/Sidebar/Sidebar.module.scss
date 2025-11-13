@@ -1,4 +1,4 @@
-@import "~@santiment-network/ui/mixins.scss";
+@import '@santiment-network/ui/mixins.scss';
 
 .wrapper {
   height: 100%;
@@ -10,7 +10,7 @@
   width: 100%;
   display: flex;
 
-  @include responsive("phone", "phone-xs", "tablet") {
+  @include responsive('phone', 'phone-xs', 'tablet') {
     display: none;
   }
 }
@@ -48,7 +48,7 @@
   margin: 32px 20px 16px 0;
   padding-top: 32px;
   border-top: 1px solid var(--porcelain);
-  @include text("body-3", "m");
+  @include text('body-3', 'm');
   color: var(--casper);
 
   &:first-child {
@@ -75,7 +75,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 4px 10px;
-  @include text("body-2");
+  @include text('body-2');
 
   &__title {
     width: 100%;
@@ -149,7 +149,7 @@
     background: var(--porcelain);
     top: 0;
     left: 0;
-    content: "";
+    content: '';
     width: 1px;
     height: 100%;
     border-radius: 8px;
@@ -166,7 +166,7 @@
     color: var(--jungle-green);
   }
 
-  @include text("body-2");
+  @include text('body-2');
 
   &__active {
     color: var(--jungle-green);
@@ -177,7 +177,7 @@
       background: var(--jungle-green);
       top: 0;
       left: 0;
-      content: "";
+      content: '';
       width: 2px;
       height: 100%;
       border-radius: 8px;

@@ -1,5 +1,5 @@
-@import "~@santiment-network/ui/mixins.scss";
-@import "~@santiment-network/ui/variables.scss";
+@import "@santiment-network/ui/mixins.scss";
+@import "@santiment-network/ui/variables.scss";
 
 .wrapper {
   user-select: none;
@@ -10,8 +10,7 @@
   z-index: 2;
 }
 
-.aiButton {
-}
+.aiButton {}
 
 .headerLeft {
   display: flex;
@@ -107,7 +106,7 @@
     align-items: center;
     justify-content: center;
 
-    :global(#hamburger):checked + & {
+    :global(#hamburger):checked+& {
       display: flex;
     }
   }

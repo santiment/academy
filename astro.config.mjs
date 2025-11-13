@@ -1,5 +1,7 @@
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
+import mdx from '@astrojs/mdx'
+import { mdsvex } from 'mdsvex'
 import { defineConfig, mergeConfig } from 'astro/config'
 
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
@@ -19,7 +21,23 @@ export default (async () => {
   })
 
   return defineConfig({
-    integrations: [svelte(), tailwind()],
+    integrations: [
+      svelte({
+        extensions: ['.svelte', '.svx'],
+        preprocess: mdsvex({
+          extensions: ['.svx'],
+        }),
+      }),
+      mdx(),
+      tailwind(),
+    ],
+    markdown: {
+      shikiConfig: {
+        langAliases: {
+          svx: 'svelte',
+        },
+      },
+    },
     vite: viteConfig,
     ssr: {
       noExternal: ['san-webkit-next'],

@@ -1,0 +1,53 @@
+---
+import SidebarCategory from './SidebarCategory.astro'
+import {
+  GUIDES,
+  REFERENCES,
+  GETTING_STARTED,
+} from '../../docs/navigation'
+
+import { titleToSlug } from '../../utils/docs'
+import { isArticleActive } from './utils'
+import styles from './Sidebar.module.scss'
+
+let active: string[] = []
+
+if (Astro.url) {
+  active = Astro.url.pathname.split('/').slice(1)
+}
+---
+
+<section class={styles.wrapper}>
+  <div class={styles.content}>
+    <ul class={styles.list}>
+      <h3 class={styles.heading}>{GETTING_STARTED.title}</h3>
+      <li>
+        <ul class={styles.blocks}>
+          {(GETTING_STARTED.articles || []).map((article) => {
+            const activeClass = isArticleActive(active, null, article)
+              ? styles.block__active
+              : ''
+            return (
+              <li class={`${styles.block} ${activeClass}`}>
+                <a href={`/${titleToSlug(article)}/`}>{article}</a>
+              </li>
+            )
+          })}
+        </ul>
+      </li>
+
+      <h3 class={styles.heading}>Guides</h3>
+
+      {GUIDES.map((category) => (
+        <SidebarCategory {...category} active={active} />
+      ))}
+
+      <h3 class={styles.heading}>Resources</h3>
+
+      {REFERENCES.map((category) => (
+        <SidebarCategory {...category} active={active} />
+      ))}
+    </ul>
+  </div>
+  <div class={styles.empty}></div>
+</section>
