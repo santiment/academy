@@ -26,3 +26,5 @@ Alameda Fund address: [0x93c08a3168fc469f3fc165cd3a471d19a37ca19e](https://ether
 ## Available Blockchains
 
 * ethereum
+
+Bitcoin network support for this label has been temporarily suspended.
