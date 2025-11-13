@@ -94,13 +94,10 @@ Below you can find labels which are attached to every group from above. Please n
     - [Derivatives](/labels/derivatives)
     - [Lending](/labels/lending)
     - [Liquidity](/labels/liquidity)
-    - TBA: liquid_staking
-    - TBA: staking
     - [Yield Farming](/labels/yield)
 - [CeFi](/labels/cefi)
     - [Centralized exchange](/labels/centralized-exchange)
     - [Fund](/labels/fund)
-    - TBA: Market maker
 - [NFT](/labels/nft)
     - [NFT collection](/labels/nft-collection)
     - [NFT collection name](/labels/nft-collection-name)
@@ -109,7 +106,6 @@ Below you can find labels which are attached to every group from above. Please n
 - [ETH2_Staking](/labels/eth2-staking)
 - [GameFi](/labels/gamefi)
     - [Gambling](/labels/gambling)
-- TBA: mining_pool
 
 
 ### Owner
@@ -126,11 +122,9 @@ Below you can find labels which are attached to every group from above. Please n
     - [ERC1155](/labels/erc1155)
     - [Factory](/labels/factory)
     - [Proxy](/labels/proxy)
-    - TBA: Multisig
 - [Cold wallet](/labels/cold-wallet)
 - [Dead address](/labels/dead-address)
 - [Migration Address](/labels/migration-address)
-- TBA: team_wallet
 
 
 ### Activity
@@ -153,20 +147,8 @@ Below you can find labels which are attached to every group from above. Please n
  - [Withdrawn From](/labels/withdrawn-from)
 
 
-### Social networks
-
-- TBA: twitter
-- TBA: opensea_username
-
-
 ### Status
 
 - [Blocked](/labels/blocked)
 - [Closed](/labels/closed)
-- TBA: Hacked
 - [Sanctioned](/labels/sanctioned)
-
-
-### Chain
-
-- TBA: L2
