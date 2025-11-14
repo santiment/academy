@@ -3,6 +3,11 @@ title: Connect a Wallet to Your Sanbase Account
 author: Santiment Team
 ---
 
+<script lang="ts">
+  import Notebox from '../../../components/markdown/Notebox.svelte'
+  import Resource from '../../../components/markdown/Resource.svelte'
+</script>
+
 <Notebox type="pin">
 This article describes how to stake SAN tokens that are already in your possession. Please refer to [this article](/san-tokens/how-to-buy-san-tokens/) to learn how to buy SAN tokens in the first place.
 </Notebox>

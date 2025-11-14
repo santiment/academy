@@ -1,9 +1,8 @@
 import React from 'react'
-import styles from './Resource.module.scss'
 
 const Resource = ({ title, children }) => (
-  <div className={styles.resource}>
-    {title && <h6 className={styles.header}>{title}</h6>}
+  <div className="flex flex-col bg-athens rounded-lg my-6 py-6 px-8 [&>div]:flex [&>div]:flex-col [&>div_p]:mb-2 [&>div_p]:p-0 last-child:[&>div_p]:m-0">
+    {title && <h6 className="text-lg font-semibold text-rhino mb-3">{title}</h6>}
     {children}
   </div>
 )

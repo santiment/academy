@@ -6,6 +6,8 @@ date: 2025-05-22
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/X3xtvZMlGQ4?si=0x6eV4MvxZoEgFSO&amp;start=476" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<Details></Details>
+
 Expectations are a powerful force in shaping financial markets. Yet, they can
 also be your worst enemy if yours fall into the same category as most. It’s
 common for the market to move in the opposite direction from what most

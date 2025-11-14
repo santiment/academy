@@ -3,11 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import DocsLayout from '../layouts/DocsLayout.astro';
 
 function getSlug(filePath: string): string {
-  return filePath.replace('/src/docs/', '').replace('.svx', '').replace(/\/index$/, '');
+  return filePath.replace('/src/docs/', '').replace(/\.(svx|md)$/, '').replace(/\/index$/, '');
 }
 
 export async function getStaticPaths() {
-  const modules = import.meta.glob('/src/docs/**/*.svx')
+  const modules = import.meta.glob(['/src/docs/**/*.svx', '/src/docs/**/*.md']);
 
 
   return Promise.all(
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
 const { slug } = Astro.params
 const {metadata: preloadedMeta } = Astro.props;
 
-const docs = import.meta.glob('/src/docs/**/*.svx');
+const docs = import.meta.glob(['/src/docs/**/*.svx', '/src/docs/**/*.md']);
 const filePath = Object.keys(docs).find((path) => getSlug(path) === slug);
 
 if (!filePath) return Astro.redirect('/');
