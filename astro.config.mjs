@@ -1,3 +1,6 @@
+import path from 'path'
+import { fileURLToPath } from 'url';
+
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import mdx from '@astrojs/mdx'
@@ -6,6 +9,8 @@ import { defineConfig, mergeConfig } from 'astro/config'
 import mdSvexConfig from './mdsvex.config'
 
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default (async () => {
   const viteBase = await createAstroConfig()
@@ -19,6 +24,9 @@ export default (async () => {
       __SVELTEKIT_PATHS_RELATIVE__: JSON.stringify(''),
       __SVELTEKIT_PAYLOAD__: JSON.stringify(''),
     },
+    alias: {
+      '$components': path.resolve(__dirname, './src/components'),
+    }
   })
 
   return defineConfig({

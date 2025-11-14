@@ -61,14 +61,14 @@
     border-radius: 8px;
     border: 1px solid var(--porcelain);
     margin: 20px 0;
-    border-left: 3px solid var(--jungle-green);
+    border-left: 3px solid var(--green);
 
     &__warning {
-      border-left: 3px solid var(--texas-rose);
+      border-left: 3px solid var(--orange);
     }
 
     &__error {
-      border-left: 3px solid var(--persimmon);
+      border-left: 3px solid var(--red);
     }
   }
 
@@ -85,7 +85,7 @@
     border-bottom: none;
 
     &:hover {
-      fill: var(--jungle-green);
+      fill: var(--green);
     }
 
     @include responsive('phone-xs', 'phone', 'tablet') {
@@ -168,12 +168,12 @@
   }
 
   a {
-    color: var(--jungle-green);
+    color: var(--green);
     word-break: break-word;
 
     &:hover {
-      color: var(--jungle-green-hover);
-      text-decoration: underline var(--jungle-green-light-3);
+      color: var(--green-hover);
+      text-decoration: underline var(--green-light-3);
       text-underline-offset: 4px;
     }
   }
