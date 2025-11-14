@@ -1,59 +1,40 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DocsLayout from '../layouts/DocsLayout.astro';
-
-function getSlug(filePath: string): string {
-  return filePath.replace('/src/docs/', '').replace(/\.(svx|md)$/, '').replace(/\/index$/, '');
-}
+import { getCollection, getEntry } from 'astro:content';
 
 export async function getStaticPaths() {
-  const modules = import.meta.glob(['/src/docs/**/*.svx', '/src/docs/**/*.md']);
-
-
-  return Promise.all(
-    Object.entries(modules).map(async ([path, load]) => {
-      const relative = path.split('/src/docs/')[1]
-      const slug = relative.replace(/\.svx$/, '').replace(/\/index$/, '');
-
-
-      const mod = (await load()) as { metadata?: Record<string, unknown> }
-
-      return {
-        params: { slug, aboba: path },
-        props: { metadata: mod.metadata || {} },
-      }
-    })
-  )
+  const allDocs = await getCollection('docs'); 
+  
+  return allDocs.map((doc) => ({
+    params: { slug: doc.slug },
+  }));
 }
 
-const { slug } = Astro.params
-const {metadata: preloadedMeta } = Astro.props;
+const { slug } = Astro.params;
 
-const docs = import.meta.glob(['/src/docs/**/*.svx', '/src/docs/**/*.md']);
-const filePath = Object.keys(docs).find((path) => getSlug(path) === slug);
+const currentDoc = await getEntry('docs', slug || 'index');
 
-if (!filePath) return Astro.redirect('/');
+if (!currentDoc) {
+  return Astro.redirect('/404');
+}
 
+const allDocsEntries = await getCollection('docs');
 
-const allDocs = await Promise.all(
-  Object.entries(docs).map(async ([path, importDoc]) => {
-    const mod = (await importDoc()) as any;
-    return {
-      slug: getSlug(path),
-      title: mod.metadata?.title ?? getSlug(path),
-    };
-  })
-);
+const allDocs = allDocsEntries.map((entry) => ({
+  slug: entry.slug,
+  title: entry.data.title ?? entry.slug, 
+}));
 
-const doc = (await docs[filePath]!()) as any;
+const { Content } = await currentDoc.render();
 ---
 
 <BaseLayout>
   <DocsLayout
     items={allDocs}
-    currentSlug={slug}
-    title={preloadedMeta?.title ?? slug}
+    currentSlug={currentDoc.slug}
+    title={currentDoc.data.title ?? currentDoc.slug}
   >
-    <doc.default />
+    <Content />
   </DocsLayout>
 </BaseLayout>

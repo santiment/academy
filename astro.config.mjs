@@ -4,9 +4,10 @@ import { fileURLToPath } from 'url';
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import mdx from '@astrojs/mdx'
-import { mdsvex } from 'mdsvex'
 import { defineConfig, mergeConfig } from 'astro/config'
-import mdSvexConfig from './mdsvex.config'
+
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
 
@@ -32,19 +33,15 @@ export default (async () => {
   return defineConfig({
     integrations: [
       svelte({
-        extensions: ['.svelte', '.svx'],
-        preprocess: mdsvex(mdSvexConfig),
+        extensions: ['.svelte'],
       }),
-      mdx(),
+      mdx({
+        syntaxHighlight: 'shiki',
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex]
+      }),
       tailwind(),
     ],
-    markdown: {
-      shikiConfig: {
-        langAliases: {
-          svx: 'svelte',
-        },
-      },
-    },
     vite: viteConfig,
     ssr: {
       noExternal: ['san-webkit-next'],
