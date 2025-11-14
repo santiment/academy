@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DocsLayout from '../layouts/DocsLayout.astro';
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection, getEntry, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const allDocs = await getCollection('docs'); 
   
   return allDocs.map((doc) => ({
-    params: { slug: doc.slug },
+    params: { slug: doc.id },
   }));
 }
 
@@ -22,18 +22,18 @@ if (!currentDoc) {
 const allDocsEntries = await getCollection('docs');
 
 const allDocs = allDocsEntries.map((entry) => ({
-  slug: entry.slug,
-  title: entry.data.title ?? entry.slug, 
+  slug: entry.id,
+  title: entry.data.title ?? entry.id, 
 }));
 
-const { Content } = await currentDoc.render();
+const { Content } = await render(currentDoc);
 ---
 
 <BaseLayout>
   <DocsLayout
     items={allDocs}
-    currentSlug={currentDoc.slug}
-    title={currentDoc.data.title ?? currentDoc.slug}
+    currentSlug={currentDoc.id}
+    title={currentDoc.data.title ?? currentDoc.id}
   >
     <Content />
   </DocsLayout>

@@ -767,7 +767,7 @@ Sanbase
 - Add new ETH 2.0 ROI widget
 - New category "addresses" in "My watchlists"
 - Drag and drop chart rearrangement in the Mapview
-  ![d&d_chart_layouts_sort](dd_chart_layouts_sort.gif)
+  <!-- ![d&d_chart_layouts_sort](dd_chart_layouts_sort.gif) -->
 - Allowing to draw on chart for non-beta users
 
 Screener:
