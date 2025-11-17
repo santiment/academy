@@ -190,7 +190,16 @@ export const GUIDES = [
         for Santiment data
       </>
     ),
-    articles: ['Setting Up', 'Adding an API key', 'Functions', 'PRO Templates'],
+    articles: ['Setting Up', 'Adding an API key',
+      {
+        slug: 'assets-correlation-matrix-google-sheets',
+        title: 'Correlation Matrix',
+      },
+      {
+        slug: 'asset-activity-matrix',
+        title: 'Asset Activity Matrix',
+      },
+      'Functions', 'PRO Templates'],
   },
   {
     title: 'Products and Plans',
