@@ -10,7 +10,6 @@ Unlike traditional dashboards, we focus on actionability and reliability. Every 
 
 If you’re looking for a systematic way to improve decision quality in a complex market, Data Anomaly is the simplest place to start.
 
-- [Large Exchange Transactions 1M](/data-anomaly/large-exchange-transactions-1m)
 - [Binance Funding Rate](/data-anomaly/binance-funding-rate)
 - [BTC Correlation](/data-anomaly/btc-correlation)
 - [Dex Exchanges 1M USD](/data-anomaly/dex-exchanges-1m-usd)
