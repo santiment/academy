@@ -28,6 +28,6 @@ Price data may be available for blockchains not listed here.
 | ------------------ | ------------------ | ------------------ |
 | :white_check_mark: | :white_check_mark: | :white_check_mark: |
 
-| ICP                |
-| ------------------ |
-| :white_check_mark: |
+| ICP                | Solana             |
+| ------------------ | ------------------ |
+| :white_check_mark: | :white_check_mark: |
