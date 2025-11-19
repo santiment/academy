@@ -22,18 +22,53 @@ if (!currentDoc) {
 const allDocsEntries = await getCollection('docs');
 
 const allDocs = allDocsEntries.map((entry) => ({
-  slug: entry.id,
-  title: entry.data.title ?? entry.id, 
+  pathname: entry.id,
+  label: entry.data.title ?? entry.id, 
 }));
 
 const { Content } = await render(currentDoc);
+
+const getBreadcrumbs = (path: string) => {
+  const parts = path.split('/');
+  let currentPath = '';
+  const pathsToFind: string[] = [];
+
+  parts.forEach((part, index) => {
+    if (index > 0) {
+      currentPath += '/';
+    }
+    currentPath += part;
+    
+    pathsToFind.push(currentPath);
+  });
+  
+  if (path !== 'index') {
+     pathsToFind.unshift('index');
+  }
+
+
+  const breadcrumbs = allDocs.filter(doc => pathsToFind.includes(doc.pathname));
+  
+  breadcrumbs.sort((a, b) => pathsToFind.indexOf(a.pathname) - pathsToFind.indexOf(b.pathname));
+
+  const finalBreadcrumbs = breadcrumbs.slice(0, -1);
+
+  const lastCrumb = { 
+    pathname: `/${currentDoc.id}`,
+      label: currentDoc.data.title, 
+  };
+
+  return [...finalBreadcrumbs, lastCrumb];
+};
+
+const breadcrumbs = [{ pathname: '/', label: 'Home' }, ...getBreadcrumbs(currentDoc.id)]
 ---
 
 <BaseLayout>
   <DocsLayout
-    items={allDocs}
+    crumbs={breadcrumbs}
     currentSlug={currentDoc.id}
-    title={currentDoc.data.title ?? currentDoc.id}
+    title={currentDoc.data.title}
   >
     <Content />
   </DocsLayout>

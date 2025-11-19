@@ -350,3 +350,39 @@
   font-weight: 400;
   margin: 32px 0 12px;
 }
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 85px 40px 0;
+
+    @include responsive('laptop', 'desktop', 'tablet') {
+      min-height: 86vh;
+    }
+
+
+    @include responsive('phone', 'phone-xs', 'tablet') {
+      padding: 85px 0 0;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @include responsive('desktop') {
+      width: 885px;
+    }
+
+    @include responsive('laptop', 'desktop') {
+      z-index: 1;
+    }
+  }
+}

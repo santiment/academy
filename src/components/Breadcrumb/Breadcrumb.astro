@@ -1,32 +1,25 @@
 ---
 import { cn } from 'san-webkit-next/ui/utils'
 import Svg from 'san-webkit-next/ui/core/Svg'
-import styles from './Breadcrumb.module.scss'
 
 type Props = {
-  crumbs: { pathname: string, crumbLabel: string }[]
+  crumbs: { pathname: string, label: string }[]
   crumbLabel: string
   class?: string
 }
 
-const { crumbs, crumbLabel, class: className } = Astro.props
+const { crumbs, class: className } = Astro.props
 
-const crumbsWithoutLast = crumbs.map(({ pathname, crumbLabel }) => ({
-  crumbLabel: crumbLabel.charAt(0).toUpperCase() + crumbLabel.slice(1),
-  pathname,
-}))
-
-crumbsWithoutLast.pop()
 ---
 
-<nav class={cn(styles.wrapper, className)}>
-  <ul class={styles.list}>
-    {crumbsWithoutLast.map(({ pathname, crumbLabel }) => (
-      <li class={styles.title}>
-        <a href={pathname}>{crumbLabel}</a>
-        <Svg type="arrow-right" class={styles.icon} />
+<nav class={cn("mt-[18px] px-0 text-sm sm:mb-5", className)}>
+  <ul class="flex">
+    {crumbs.map(({ pathname, label }, index) => (
+      <li class="flex items-center before:!content-[''] before:m-0 before:w-0">
+      <a href={pathname} class="hover:!no-underline !text-rhino hover:!text-green-hover">{label}</a>
+
+        {index < crumbs.length - 1 && <Svg id="arrow-right" w={8} class="mx-3 scale-125 fill-rhino" />}
       </li>
     ))}
-    <li class={styles.last}>{crumbLabel}</li>
   </ul>
 </nav>

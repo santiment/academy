@@ -23,7 +23,9 @@
 }
 
 .empty {
+  pointer-events: none;
   display: flex;
+  opacity: 0;
   width: 885px;
   flex-grow: 1;
   z-index: -1;

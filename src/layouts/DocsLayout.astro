@@ -7,32 +7,42 @@ import ArticleFooter from '../components/ArticleFooter/index.svelte'
 import styles from './DocsLayout.module.scss'
 
 type Props = {
-  items: any[]
+  crumbs: any[]
   currentSlug: any
   title: any
 }
 
-const { items = [], currentSlug, title } = Astro.props;
+const { crumbs = [], currentSlug, title } = Astro.props;
+
 ---
 
-<div class="academy-layout">
+<div class="flex flex-col">
   <Sidebar />
 
-  <div
-    class={cn(
-      styles.wrapper,
-      'container',
-    )}
-  >
-    <Breadcrumb crumbs={[]} crumbLabel={''} />
+  <div class="flex w-full">
+    <div class="flex w-[286px] flex-grow md:none md:flex-grow-0" />
 
-    <slot />
+    <div class="flex flex-col flex-grow w-[885px] z-[1] md:z-0">
+      <main class="flex flex-col pt-[85px] px-10 pb-0 min-w-[86vh] md:px-0">
+        <div
+          class={cn(
+            styles.wrapper,
+          )}
+        >
+          <Breadcrumb crumbs={crumbs} crumbLabel={currentSlug} />
 
-    <ArticleFooter lastUpdatedAt={''} />
+          <div class="px-4">
 
-    <FooterBottom />
+            <h1>{title}</h1>
+
+            <slot />
+
+            <ArticleFooter lastUpdatedAt={''} />
+
+            <FooterBottom />
+          </div>
+        </div>
+        </main>
+      </div>
   </div>
-
-
 </div>
-

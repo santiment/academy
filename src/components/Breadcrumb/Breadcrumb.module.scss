@@ -1,13 +1,5 @@
 @import '@santiment-network/ui/mixins';
 
-.wrapper {
-  margin: 18px 0 48px;
-
-  @include responsive('phone', 'phone-xs') {
-    margin-bottom: 20px;
-  }
-}
-
 .list {
   list-style: none;
   display: inline-block;

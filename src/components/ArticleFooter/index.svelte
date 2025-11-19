@@ -1,21 +1,17 @@
 <script lang="ts">
   import { cn } from 'san-webkit-next/ui/utils'
-  import { useDeviceCtx } from 'san-webkit-next/ctx/device'
-  import ArrowRight from '../ArticleHeadings/ArrowRight.svelte'
-  import styles from './ArticleFooter.module.scss'
+  import Button from 'san-webkit-next/ui/core/Button'
 
   type TProps = {
     lastUpdatedAt?: string | null
   }
 
-  const { device } = useDeviceCtx()
+  // TODO: Move to schema
   const { lastUpdatedAt }: TProps = $props()
-
-  const isMobile = $derived(device.$.isMobile)
 </script>
 
 {#if lastUpdatedAt}
-  <div class={cn(styles.articleLastUpdate, 'row v-center mrg-xl mrg--b')}>
+  <div class={cn('mt-16', 'flex v-center mrg-xl mrg--b')}>
     <svg
       class="mr-2"
       width="12"
@@ -31,17 +27,20 @@
         fill="var(--waterloo,#7A859E)"
       />
     </svg>
-    <span class="body-3 txt-m">Updated {lastUpdatedAt}</span>
+    <span class="body-3 txt-m text-fiord">Updated {lastUpdatedAt}</span>
   </div>
 {/if}
 
 <a
-  class={cn('row', styles.discordCTA, isMobile && styles.small)}
+  class={cn(
+    'flex bg-white border border-porcelain rounded-lg py-7 px-12',
+    'sm:py-8 sm:px-6'
+  )}
   href="https://santiment.net/discord"
   target="_blank"
   rel="noreferrer"
 >
-  <div class={cn(styles.discordlogo, 'row hv-center mrg--r mrg-xl')}>
+  <div class={cn('min-w-14 h-14 bg-athens rounded-full', 'flex center mr-6')}>
     <svg
       width="28"
       height="22"
@@ -58,14 +57,14 @@
     </svg>
   </div>
 
-  <div class={styles.discordinfo}>
-    <h4 class="h4 txt-m mrg--b mrg-xs">Talk to us in Discord</h4>
-    <p class="body-2 mrg--b mrg-l">
+  <div class="max-w-[360px]">
+    <h4 class="text-2xl font-medium mb-1">Talk to us in Discord</h4>
+    <p class="text-base mb-4">
       Still have some questions left? Join our Discord and get help from the
       Santiment team!
     </p>
-    <span class="btn-0">
-      Go to Discord <ArrowRight />
-    </span>
+    <Button icon="right-arrow" iconOnRight class="flex cursor-pointer"
+      >Go to Discord</Button
+    >
   </div>
 </a>

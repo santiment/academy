@@ -1,13 +1,5 @@
 @import '@santiment-network/ui/mixins.scss';
 
-.article-last-update {
-  margin-top: 64px;
-
-  span {
-    color: var(--fiord);
-  }
-}
-
 .discordCTA {
   background: var(--white);
   border: 1px solid var(--porcelain);
@@ -35,16 +27,6 @@
   }
 }
 
-.small {
-  padding: 28px 24px;
-}
-
-.discordlogo {
-  min-width: 56px;
-  height: 56px;
-  background: var(--athens);
-  border-radius: 40px;
-}
 
 .discordinfo {
   max-width: 360px;
@@ -57,4 +39,3 @@
     color: var(--fiord);
   }
 }
-
