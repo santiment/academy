@@ -1,7 +1,7 @@
 ---
 title: Latency
-author: Ivan
-date: 2020-04-06
+author: Vlad
+date: 2025-11-20
 ---
 
 - [On-Chain Latency](#on-chain-latency)
@@ -45,7 +45,7 @@ is being processed separately and usually doesn't take longer than 1 minute.
 The emerging trends are computed once per hour so they become available a few
 minutes after every round hour.
 
-The data for assets is usually computed and it takes 20-40 minutes to compute.
+The data for assets is usually computed and it takes 5-10 minutes to compute.
 
 Data for text terms is computed on-the-fly on the raw data and can be accessed as soon as the
 text messages are stored in our database.
