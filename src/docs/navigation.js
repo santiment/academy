@@ -297,6 +297,7 @@ export const REFERENCES = [
       { slug: 'finalized', title: 'Finalized Metrics' },
       'Deribit Derivatives',
       'Development Activity',
+      'Difficulty',
       'Dormant Circulation',
       'dYdX Derivatives',
       'ETF Flow',
