@@ -352,6 +352,7 @@ export const REFERENCES = [
       'Stock To Flow',
       'Supply Distribution',
       'Supply On Or Outside Exchanges',
+      'Thermocap',
       'Top Holders',
       'Top Social Gainers Losers',
       'Total Supply',

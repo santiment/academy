@@ -135,6 +135,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Stock To Flow ratio](/metrics/stock-to-flow)
 - [Supply Distribution](/metrics/supply-distribution)
 - [Supply On Or Outside Exchanges](/metrics/supply-on-or-outside-exchanges)
+- [Thermocap](/metrics/thermocap)
 - [Top Holders](/metrics/top-holders)
 - [Total Supply](/metrics/total-supply)
 - [Transaction Count](/metrics/transaction-count)
