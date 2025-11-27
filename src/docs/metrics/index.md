@@ -117,6 +117,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 - [Bitcoin ETF Volume](/metrics/bitcoin-etf-volume)
 - [Circulation](/metrics/circulation)
 - [CrvUSD Savings](/metrics/crvusd-savings)
+- [Difficulty](/metrics/difficulty)
 - [Dormant Circulation](/metrics/dormant-circulation)
 - [ETF Flow](/metrics/etf-flow)
 - [ETH 2.0](/metrics/eth-2)
