@@ -54,14 +54,18 @@ export default (async () => {
       mdx({
         syntaxHighlight: 'shiki',
         syntaxHighlight: false,
-        remarkPlugins: [remarkMath, remarkGemoji],
-        rehypePlugins: [rehypeSlug, rehypeKatex],
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
       }),
       tailwind(),
     ],
     vite: viteConfig,
     ssr: {
       noExternal: ['san-webkit-next'],
+    },
+    markdown: {
+      remarkPlugins: [remarkGemoji],
+      rehypePlugins: [rehypeSlug]
     },
     base: '/',
     publicDir: './static',

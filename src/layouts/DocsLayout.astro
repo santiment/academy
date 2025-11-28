@@ -5,6 +5,8 @@ import Sidebar from '../components/Sidebar/Sidebar.astro'
 import Breadcrumb from '../components/Breadcrumb/Breadcrumb.astro'
 import ArticleFooter from '../components/ArticleFooter/index.svelte'
 import styles from './DocsLayout.module.scss'
+import H1 from '$components/markdown/headings/H1.astro'
+import { sluggify } from 'san-webkit-next/utils/url'
 
 type Props = {
   crumbs: any[]
@@ -33,7 +35,7 @@ const { crumbs = [], currentSlug, title } = Astro.props;
 
           <div class="px-4">
 
-            <h1>{title}</h1>
+            <H1 id={sluggify(title)}>{title}</H1>
 
             <slot />
 

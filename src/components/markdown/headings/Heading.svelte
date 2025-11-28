@@ -11,10 +11,15 @@
   const { level = 1, id = '', children }: TProps = $props()
 </script>
 
-<svelte:element this={`h${level}`} {id}>
-  <a href="#{id}" onclick={() => {}} aria-hidden="true">
+<svelte:element this={`h${level}`} {id} class="relative group">
+  <a
+    href="#{id}"
+    onclick={() => {}}
+    aria-hidden="true"
+    class="opacity-0 fill-waterloo absolute w-[1em] h-8 -left-[1em] -top-[1px] border-b-0 hover:fill-green md:hidden group-hover:opacity-100 flex items-center"
+  >
     <Svg id="link" />
   </a>
 
-  {@render children?.()}
+  <span>{@render children?.()}</span>
 </svelte:element>
