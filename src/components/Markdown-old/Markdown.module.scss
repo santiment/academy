@@ -115,52 +115,52 @@
     margin: 18px 0;
   }
 
-  code {
-    background: var(--athens);
-    padding: 0 6px;
-    border-radius: 4px;
-    border: 1px solid var(--porcelain);
-    display: inline-block;
-    margin: 0 2px 2px 0;
-    line-height: 20px;
-    font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
-  }
+  // code {
+  //   background: var(--athens);
+  //   padding: 0 6px;
+  //   border-radius: 4px;
+  //   border: 1px solid var(--porcelain);
+  //   display: inline-block;
+  //   margin: 0 2px 2px 0;
+  //   line-height: 20px;
+  //   font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+  // }
 
-  pre {
-    border: 1px solid var(--porcelain);
-    border-radius: 4px;
-    background: var(--white) !important;
-    overflow-x: auto;
-    overflow-y: hidden;
-    margin: 20px 0;
-    padding: 0 !important;
-
-    code {
-      white-space: pre;
-      border: none;
-      overflow-y: hidden;
-      padding: 10px;
-      margin-bottom: -10px;
-      font-size: 16px;
-      background: inherit;
-    }
-
-    span {
-      font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
-    }
-
-    code:first-child {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 10px;
-      border: 1px solid var(--porcelain);
-    }
-
-    code:last-child {
-      padding: 10px 40px;
-    }
-  }
+  // pre {
+  //   border: 1px solid var(--porcelain);
+  //   border-radius: 4px;
+  //   background: var(--white) !important;
+  //   overflow-x: auto;
+  //   overflow-y: hidden;
+  //   margin: 20px 0;
+  //   padding: 0 !important;
+  //
+  //   code {
+  //     white-space: pre;
+  //     border: none;
+  //     overflow-y: hidden;
+  //     padding: 10px;
+  //     margin-bottom: -10px;
+  //     font-size: 16px;
+  //     background: inherit;
+  //   }
+  //
+  //   span {
+  //     font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
+  //   }
+  //
+  //   code:first-child {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     bottom: 10px;
+  //     border: 1px solid var(--porcelain);
+  //   }
+  //
+  //   code:last-child {
+  //     padding: 10px 40px;
+  //   }
+  // }
 
   iframe {
     width: 100%;
@@ -284,40 +284,6 @@
     position: absolute;
     left: 12px;
   }
-}
-
-.codeWrapper {
-  position: relative;
-}
-
-.copy {
-  -webkit-tap-highlight-color: transparent;
-  position: absolute;
-  right: 1px;
-  top: 10px;
-  width: 44px;
-  text-align: center;
-  fill: var(--casper);
-  background: linear-gradient(270deg, #fff, #fff 60%, hsla(0, 0%, 100%, 0));
-
-  &:hover {
-    fill: var(--waterloo);
-    cursor: pointer;
-  }
-}
-
-.copied::before {
-  @include text('caption');
-
-  display: block;
-  content: 'Copied!';
-  position: absolute;
-  right: 0;
-  bottom: 120%;
-  padding: 3px 10px;
-  border-radius: 4px;
-  background: $fiord;
-  color: $white;
 }
 
 .checkmark {

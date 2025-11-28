@@ -18,7 +18,8 @@
     "astro": "^5.15.2",
     "bits-ui": "^1.3.4",
     "san-webkit-next": "github:santiment/san-webkit#lib-727dddcc-131125",
-    "svelte": "^5.33.7"
+    "svelte": "^5.33.7",
+    "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
     "@astrojs/mdx": "^4.3.9",

@@ -10,8 +10,18 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
+import { remarkCodeAttributes } from './plugins/remark-code-attributes.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const codeAttributesTransformer = {
+  name: 'code-attributes',
+  pre(node) {
+    this.node.properties['data-code'] = encodeURIComponent(this.source);
+
+    this.node.properties['data-language'] = this.options.lang;
+  }
+};
 
 export default (async () => {
   const viteBase = await createAstroConfig()
@@ -37,14 +47,23 @@ export default (async () => {
       }),
       mdx({
         syntaxHighlight: 'shiki',
-        remarkPlugins: [remarkMath],
-        rehypePlugins: [rehypeKatex]
+        extensions: ['.mdx', '.md'],
+        remarkPlugins: [remarkMath, remarkCodeAttributes],
+        rehypePlugins: [rehypeKatex],
       }),
       tailwind(),
     ],
     vite: viteConfig,
     ssr: {
       noExternal: ['san-webkit-next'],
+    },
+    markdown: {
+      shikiConfig: {
+        theme: 'min-light',
+        langAlias: {
+          'graphql-explorer': 'graphql',
+        },
+      },
     },
     base: '/',
     publicDir: './static',
