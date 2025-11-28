@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx'
 import { defineConfig, mergeConfig } from 'astro/config'
 import astroExpressiveCode from 'astro-expressive-code'
 import remarkGemoji from 'remark-gemoji'
-
+import rehypeSlug from 'rehype-slug'
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
@@ -53,19 +53,15 @@ export default (async () => {
       }),
       mdx({
         syntaxHighlight: 'shiki',
-        extensions: ['.mdx', '.md'],
         syntaxHighlight: false,
-        remarkPlugins: [remarkMath],
-        rehypePlugins: [rehypeKatex],
+        remarkPlugins: [remarkMath, remarkGemoji],
+        rehypePlugins: [rehypeSlug, rehypeKatex],
       }),
       tailwind(),
     ],
     vite: viteConfig,
     ssr: {
       noExternal: ['san-webkit-next'],
-    },
-    markdown: {
-      remarkPlugins: [remarkGemoji],
     },
     base: '/',
     publicDir: './static',

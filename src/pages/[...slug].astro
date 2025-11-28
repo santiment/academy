@@ -3,6 +3,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import DocsLayout from '../layouts/DocsLayout.astro';
 import { getCollection, getEntry, render } from 'astro:content';
 
+import H1 from '$components/markdown/headings/H1.astro';
+import H2 from '$components/markdown/headings/H2.astro';
+import H3 from '$components/markdown/headings/H3.astro';
+import H4 from '$components/markdown/headings/H4.astro';
+import H5 from '$components/markdown/headings/H5.astro';
+
 export async function getStaticPaths() {
   const allDocs = await getCollection('docs'); 
   
@@ -62,6 +68,14 @@ const getBreadcrumbs = (path: string) => {
 };
 
 const breadcrumbs = [{ pathname: '/', label: 'Home' }, ...getBreadcrumbs(currentDoc.id)]
+
+const components = {
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  h5: H5,
+}
 ---
 
 <BaseLayout>
@@ -70,6 +84,6 @@ const breadcrumbs = [{ pathname: '/', label: 'Home' }, ...getBreadcrumbs(current
     currentSlug={currentDoc.id}
     title={currentDoc.data.title}
   >
-    <Content />
+    <Content {components} />
   </DocsLayout>
 </BaseLayout>
