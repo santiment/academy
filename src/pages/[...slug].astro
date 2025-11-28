@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DocsLayout from '../layouts/DocsLayout.astro';
-import Pre from '../components/markdown/Pre/Pre.astro'
 import { getCollection, getEntry, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -71,6 +70,6 @@ const breadcrumbs = [{ pathname: '/', label: 'Home' }, ...getBreadcrumbs(current
     currentSlug={currentDoc.id}
     title={currentDoc.data.title}
   >
-    <Content components={{ pre: Pre }} />
+    <Content />
   </DocsLayout>
 </BaseLayout>

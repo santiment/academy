@@ -85,7 +85,7 @@
   }
 
   &__active &__title {
-    color: var(--jungle-green);
+    color: var(--green);
   }
 
   &__wrapper {
@@ -93,9 +93,9 @@
   }
 
   &__active {
-    background-color: var(--jungle-green-light);
-    color: var(--jungle-green-hover);
-    fill: var(--jungle-green-hover);
+    background-color: var(--green-light-1);
+    color: var(--green-hover);
+    fill: var(--green-hover);
 
     & .arrow {
       visibility: visible;
@@ -114,21 +114,21 @@
   }
 
   &__opened .category {
-    background-color: var(--jungle-green-light);
+    background-color: var(--green-light-1);
     color: var(--rhino);
-    fill: var(--jungle-green-hover);
+    fill: var(--green-hover);
   }
 
   &__opened .category__active {
-    background-color: var(--jungle-green-light);
-    color: var(--jungle-green-hover);
-    fill: var(--jungle-green-hover);
+    background-color: var(--green-light-1);
+    color: var(--green-hover);
+    fill: var(--green-hover);
   }
 
   &:hover {
-    background-color: var(--jungle-green-light);
-    color: var(--jungle-green);
-    fill: var(--jungle-green);
+    background-color: var(--green-light-1);
+    color: var(--green);
+    fill: var(--green);
 
     & .arrow {
       visibility: visible;
@@ -165,18 +165,18 @@
   position: relative;
 
   &:hover {
-    color: var(--jungle-green);
+    color: var(--green);
   }
 
   @include text('body-2');
 
   &__active {
-    color: var(--jungle-green);
+    color: var(--green);
 
     &:before {
       position: absolute;
       display: block;
-      background: var(--jungle-green);
+      background: var(--green);
       top: 0;
       left: 0;
       content: '';
@@ -193,5 +193,5 @@
 }
 
 .block__active {
-  color: var(--jungle-green-hover);
+  color: var(--green-hover);
 }

@@ -9,6 +9,7 @@ import {
 import { titleToSlug } from '../../utils/docs'
 import { isArticleActive } from './utils'
 import styles from './Sidebar.module.scss'
+import { cn } from 'san-webkit-next/ui/utils'
 
 let active: string[] = []
 
@@ -21,14 +22,16 @@ if (Astro.url) {
   <div class={styles.content}>
     <ul class={styles.list}>
       <h3 class={styles.heading}>{GETTING_STARTED.title}</h3>
+
       <li>
         <ul class={styles.blocks}>
           {(GETTING_STARTED.articles || []).map((article) => {
             const activeClass = isArticleActive(active, null, article)
               ? styles.block__active
               : ''
+
             return (
-              <li class={`${styles.block} ${activeClass}`}>
+            <li class={cn(styles.block, activeClass)}>
                 <a href={`/${titleToSlug(article)}/`}>{article}</a>
               </li>
             )

@@ -5,23 +5,16 @@ import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import mdx from '@astrojs/mdx'
 import { defineConfig, mergeConfig } from 'astro/config'
+import astroExpressiveCode from 'astro-expressive-code'
+import remarkGemoji from 'remark-gemoji'
 
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
-import { remarkCodeAttributes } from './plugins/remark-code-attributes.mjs';
+import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const codeAttributesTransformer = {
-  name: 'code-attributes',
-  pre(node) {
-    this.node.properties['data-code'] = encodeURIComponent(this.source);
-
-    this.node.properties['data-language'] = this.options.lang;
-  }
-};
 
 export default (async () => {
   const viteBase = await createAstroConfig()
@@ -45,10 +38,24 @@ export default (async () => {
       svelte({
         extensions: ['.svelte'],
       }),
+      astroExpressiveCode({
+        plugins: [pluginLineNumbers()],
+        themes: ['min-light'],
+        shiki: {
+          langAlias: {
+            'graphql-explorer': 'graphql',
+          },
+        },
+        frames: {
+          showCopyToClipboardButton: true,
+          frameBoxShadowCssValue: 'none',
+        },
+      }),
       mdx({
         syntaxHighlight: 'shiki',
         extensions: ['.mdx', '.md'],
-        remarkPlugins: [remarkMath, remarkCodeAttributes],
+        syntaxHighlight: false,
+        remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
       }),
       tailwind(),
@@ -58,12 +65,7 @@ export default (async () => {
       noExternal: ['san-webkit-next'],
     },
     markdown: {
-      shikiConfig: {
-        theme: 'min-light',
-        langAlias: {
-          'graphql-explorer': 'graphql',
-        },
-      },
+      remarkPlugins: [remarkGemoji],
     },
     base: '/',
     publicDir: './static',
