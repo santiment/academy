@@ -26,7 +26,10 @@ const { crumbs = [], currentSlug, headings, title } = Astro.props
     <div class="md:none flex w-[286px] flex-grow md:flex-grow-0"></div>
 
     <div class="z-[1] flex w-[885px] flex-grow flex-col md:z-0">
-      <main class="flex min-w-[86vh] flex-col px-10 pb-0 pt-[85px] md:px-0">
+      <main
+        class="flex min-w-[86vh] flex-col px-10 pb-0 pt-[85px] md:px-0"
+        data-pagefind-body
+      >
         <div class={cn(styles.wrapper)}>
           <Breadcrumb crumbs={crumbs} crumbLabel={currentSlug} />
           <ArticleHeadings headings={headings} />
