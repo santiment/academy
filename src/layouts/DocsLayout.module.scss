@@ -50,6 +50,7 @@
   h3,
   h4 {
     position: relative;
+    scroll-margin-top: 100px;
 
     &:hover>.anchor {
       opacity: 1;

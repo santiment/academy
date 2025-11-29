@@ -1,75 +1,82 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import DocsLayout from '../layouts/DocsLayout.astro';
-import { getCollection, getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro'
+import DocsLayout from '../layouts/DocsLayout.astro'
+import { getCollection, getEntry, render } from 'astro:content'
 
-import H1 from '$components/markdown/headings/H1.astro';
-import H2 from '$components/markdown/headings/H2.astro';
-import H3 from '$components/markdown/headings/H3.astro';
-import H4 from '$components/markdown/headings/H4.astro';
-import H5 from '$components/markdown/headings/H5.astro';
-import Link from '$components/markdown/Link.svelte';
+import H1 from '$components/markdown/headings/H1.astro'
+import H2 from '$components/markdown/headings/H2.astro'
+import H3 from '$components/markdown/headings/H3.astro'
+import H4 from '$components/markdown/headings/H4.astro'
+import H5 from '$components/markdown/headings/H5.astro'
+import Link from '$components/markdown/Link.svelte'
 import Blockquote from '$components/markdown/Blockquote.svelte'
+import Pre from '$components/markdown/Pre/Pre.astro'
 
 export async function getStaticPaths() {
-  const allDocs = await getCollection('docs'); 
-  
+  const allDocs = await getCollection('docs')
+
   return allDocs.map((doc) => ({
     params: { slug: doc.id },
-  }));
+  }))
 }
 
-const { slug } = Astro.params;
+const { slug } = Astro.params
 
-const currentDoc = await getEntry('docs', slug || 'index');
+const currentDoc = await getEntry('docs', slug || 'index')
 
 if (!currentDoc) {
-  return Astro.redirect('/404');
+  return Astro.redirect('/404')
 }
 
-const allDocsEntries = await getCollection('docs');
+const allDocsEntries = await getCollection('docs')
 
 const allDocs = allDocsEntries.map((entry) => ({
   pathname: entry.id,
-  label: entry.data.title ?? entry.id, 
-}));
+  label: entry.data.title ?? entry.id,
+}))
 
-const { Content } = await render(currentDoc);
+const { Content, headings } = await render(currentDoc)
 
 const getBreadcrumbs = (path: string) => {
-  const parts = path.split('/');
-  let currentPath = '';
-  const pathsToFind: string[] = [];
+  const parts = path.split('/')
+  let currentPath = ''
+  const pathsToFind: string[] = []
 
   parts.forEach((part, index) => {
     if (index > 0) {
-      currentPath += '/';
+      currentPath += '/'
     }
-    currentPath += part;
-    
-    pathsToFind.push(currentPath);
-  });
-  
+    currentPath += part
+
+    pathsToFind.push(currentPath)
+  })
+
   if (path !== 'index') {
-     pathsToFind.unshift('index');
+    pathsToFind.unshift('index')
   }
 
+  const breadcrumbs = allDocs.filter((doc) =>
+    pathsToFind.includes(doc.pathname)
+  )
 
-  const breadcrumbs = allDocs.filter(doc => pathsToFind.includes(doc.pathname));
-  
-  breadcrumbs.sort((a, b) => pathsToFind.indexOf(a.pathname) - pathsToFind.indexOf(b.pathname));
+  breadcrumbs.sort(
+    (a, b) => pathsToFind.indexOf(a.pathname) - pathsToFind.indexOf(b.pathname)
+  )
 
-  const finalBreadcrumbs = breadcrumbs.slice(0, -1);
+  const finalBreadcrumbs = breadcrumbs.slice(0, -1)
 
-  const lastCrumb = { 
+  const lastCrumb = {
     pathname: `/${currentDoc.id}`,
-      label: currentDoc.data.title, 
-  };
+    label: currentDoc.data.title,
+  }
 
-  return [...finalBreadcrumbs, lastCrumb];
-};
+  return [...finalBreadcrumbs, lastCrumb]
+}
 
-const breadcrumbs = [{ pathname: '/', label: 'Home' }, ...getBreadcrumbs(currentDoc.id)]
+const breadcrumbs = [
+  { pathname: '/', label: 'Home' },
+  ...getBreadcrumbs(currentDoc.id),
+]
 
 const components = {
   a: Link,
@@ -80,6 +87,7 @@ const components = {
   h3: H3,
   h4: H4,
   h5: H5,
+  pre: Pre,
 }
 ---
 
@@ -88,6 +96,7 @@ const components = {
     crumbs={breadcrumbs}
     currentSlug={currentDoc.id}
     title={currentDoc.data.title}
+    headings={headings}
   >
     <Content {components} />
   </DocsLayout>

@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { useSidenavItems } from './hooks.svelte.js'
   import { usePageHash } from '../../utils/utils.svelte.js'
   import { cn } from 'san-webkit-next/ui/utils'
   import styles from './ArticleHeadings.module.scss'
@@ -20,14 +19,13 @@
   } as const
 
   type TProps = {
-    tableOfContents: any
+    headings: any
     crumbs: any[]
     title: keyof typeof TOPICS
   }
 
-  const { tableOfContents, crumbs = [], title }: TProps = $props()
-  const { list, elementIDs } = useSidenavItems(tableOfContents, title)
-  const { pageHash, scrollToTargetAdjusted } = usePageHash(elementIDs)
+  const { headings, crumbs = [], title }: TProps = $props()
+  const { pageHash, scrollToTargetAdjusted } = usePageHash((headings || []).map((item) => item.slug))
   const topic = crumbs.length > 1 && crumbs[1].crumbLabel
   // @ts-ignore
   const appLink = topic && TOPICS[topic]
@@ -43,7 +41,7 @@
     </li>
   {/if}
 
-  {#each list as { slug, value, depth }, idx}
+  {#each headings as { slug, text, depth }, idx}
     <li
       class={cn(
         styles.item,
@@ -54,14 +52,13 @@
     >
       <a
         href={`#${slug}`}
-        onclick={(e) => scrollToTargetAdjusted(e, slug)}
         class={cn(
           styles.heading,
           depth === 2 && styles.second,
           depth === 3 && styles.third
         )}
       >
-        {value}
+        {text}
       </a>
     </li>
   {/each}
