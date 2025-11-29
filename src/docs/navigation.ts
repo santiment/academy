@@ -1,22 +1,8 @@
-import Metrics from '../images/docs/Metrics.svelte'
-import Changelog from '../images/docs/Changelog.svelte'
-import Education from '../images/docs/Education.svelte'
-import ProductsAndPlans from '../images/docs/Products.svelte'
-import SANtokens from '../images/docs/San.svelte'
-import SanAPI from '../images/docs/Sanapi.svelte'
-import Sansheets from '../images/docs/Sansheets.svelte'
-import Sanqueries from '../images/docs/Sanqueries.svelte'
-import Sanbase from '../images/docs/Sanbase.svelte'
-import Glossary from '../images/docs/Glossary.svelte'
-import Signals from '../images/docs/Signals.svelte'
-import Labels from '../images/docs/Labels.svelte'
-import Youtube from '../images/docs/Youtube.svelte'
-
 export const GUIDES = [
   {
     title: 'Education and Use cases',
     description: 'Examples and use cases<br />for Santiment metrics',
-    icon: Education,
+    icon: 'Education',
     articles: [
       {
         slug: 'age consumed alert',
@@ -108,7 +94,7 @@ export const GUIDES = [
   },
   {
     title: 'Sanbase',
-    icon: Sanbase,
+    icon: 'Sanbase',
     description: 'Our crypto analytics<br />& behavior platform',
     articles: [
       'Account settings',
@@ -126,7 +112,7 @@ export const GUIDES = [
   },
   {
     title: 'Santiment Queries',
-    icon: Sanqueries,
+    icon: 'Sanqueries',
     description: 'Our database explorer<br />& research tool',
     articles: [
       'Introduction',
@@ -145,7 +131,7 @@ export const GUIDES = [
   },
   {
     title: 'SanAPI',
-    icon: SanAPI,
+    icon: 'SanAPI',
     description: 'Our API, available metrics<br />& documentation',
     articles: [
       'Accessing the API',
@@ -159,13 +145,13 @@ export const GUIDES = [
   },
   {
     title: 'Sansheets',
-    icon: Sansheets,
+    icon: 'Sansheets',
     description: 'Our Spreadsheets plugin<br />for Santiment data',
     articles: ['Setting Up', 'Adding an API key', 'Functions', 'PRO Templates'],
   },
   {
     title: 'Products and Plans',
-    icon: ProductsAndPlans,
+    icon: 'ProductsAndPlans',
     description: 'On the Santiment suite<br />and available plans',
     articles: [
       'Access Plans',
@@ -186,7 +172,7 @@ export const GUIDES = [
   },
   {
     title: 'SAN Tokens',
-    icon: SANtokens,
+    icon: 'SANtokens',
     description: 'Use cases, roadmap<br />and where to buy',
     articles: [
       'How to buy SAN tokens',
@@ -196,14 +182,14 @@ export const GUIDES = [
   },
   {
     title: 'Glossary',
-    icon: Glossary,
+    icon: 'Glossary',
     description: 'Introduction to all relevant<br />terms and concepts',
     articles: ['Asset', 'Deposit Addresses'],
   },
   {
     title: 'Youtube Videos',
     description: 'Santiment webinars, video<br />tutorials and more',
-    icon: Youtube,
+    icon: 'Youtube',
     articles: ['Webinars', 'Walkthroughs', 'Tutorials'],
   },
 ]
@@ -212,7 +198,7 @@ export const REFERENCES = [
   {
     title: 'Metrics',
     description: `Introduction to Santiment's on-chain, social and development indicators`,
-    icon: Metrics,
+    icon: 'Metrics',
     articles: [
       'Active Addresses 24h',
       'Active Deposits',
@@ -310,13 +296,13 @@ export const REFERENCES = [
     title: 'Changelog',
     description:
       'Development updates, new features and other platform-wide improvements',
-    icon: Changelog,
+    icon: 'Changelog',
     articles: ['Assets', 'Metrics', 'Legacy Changelog'],
   },
   {
     title: 'Labels',
     description: 'List and descriptions of all address labels on Santiment',
-    icon: Labels,
+    icon: 'Labels',
     articles: [
       'Airdrop Receiver',
       'Airdrop Sender',
@@ -367,7 +353,7 @@ export const REFERENCES = [
   {
     title: 'Signals',
     description: 'Directory of key stakeholder signals available on Santiment',
-    icon: Signals,
+    icon: 'Signals',
     articles: [
       'Anomalies',
       'Large Exchange Transactions 1M',

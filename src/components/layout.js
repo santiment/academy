@@ -13,7 +13,6 @@ import IntercomWidget from "../components/IntercomWidget"
 import Header from "./Header/Header"
 import Footer from "./Footer/Footer"
 import Sidebar from "./Sidebar/Sidebar"
-import Notifications from "./Notifications/Notifications"
 import styles from "./layout.module.scss"
 import "webkit/styles/main.css"
 
@@ -54,36 +53,34 @@ const Layout = ({
 
   return (
     <Intercom>
-      <Notifications>
-        <div
-          className={cx(styles.container, isShowSidebar && styles.withSidebar)}
-        >
-          {envScript}
-          <Header
-            fixedHeader={fixedHeader}
-            isShowSearch={isShowSearch || isShowSidebar}
-          />
-          {isShowSidebar ? (
-            <>
-              <Sidebar pageContext={pageContext} />
-              <div className={styles.wrapper}>
-                <div className={styles.empty} />
-                <div className={styles.content}>
-                  <main className={cx(styles.main, classes.main)}>
-                    {children}
-                  </main>
-                  <Footer isMinified={true} />
-                </div>
+      <div
+        className={cx(styles.container, isShowSidebar && styles.withSidebar)}
+      >
+        {envScript}
+        <Header
+          fixedHeader={fixedHeader}
+          isShowSearch={isShowSearch || isShowSidebar}
+        />
+        {isShowSidebar ? (
+          <>
+            <Sidebar pageContext={pageContext} />
+            <div className={styles.wrapper}>
+              <div className={styles.empty} />
+              <div className={styles.content}>
+                <main className={cx(styles.main, classes.main)}>
+                  {children}
+                </main>
+                <Footer isMinified={true} />
               </div>
-            </>
-          ) : (
-            <>
-              <main className={cx(styles.main, classes.main)}>{children}</main>
-              <Footer />
-            </>
-          )}
-        </div>
-      </Notifications>
+            </div>
+          </>
+        ) : (
+          <>
+            <main className={cx(styles.main, classes.main)}>{children}</main>
+            <Footer />
+          </>
+        )}
+      </div>
       {isShowSidebar && <IntercomWidget isDesktop={isDesktop} />}
     </Intercom>
   )

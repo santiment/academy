@@ -23,8 +23,8 @@ import styles from './index.module.scss'
       <h4 class="text-rhino text-lg mt-20 mx-0 mb-8 sm:mt-12 sm:mb-5">Guides</h4>
 
       <div class="w-full grid gap-6 grid-cols-4 md:grid-cols-2">
-        {GUIDES.map(({ title, ...rest }) => (
-          <Category key={title} title={title} {...rest} />
+        {GUIDES.map(({ title, icon, ...rest }) => (
+          <Category client:visible key={title} icon={icon} title={title} {...rest} />
         ))}
       </div>
 
@@ -33,6 +33,7 @@ import styles from './index.module.scss'
       <div class="w-full grid gap-6 grid-cols-2 md:grid-cols-2">
         {REFERENCES.map(({ title, ...rest }) => (
           <Category
+            client:visible
             wide
             title={title}
             {...rest}

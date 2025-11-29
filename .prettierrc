@@ -3,5 +3,35 @@
   "semi": false,
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "es5"
+  "trailingComma": "es5",
+  "plugins": [
+    "prettier-plugin-astro",
+    "prettier-plugin-svelte",
+    "prettier-plugin-tailwindcss"
+  ],
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    },
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte"
+      }
+    },
+    {
+      "files": [
+        "*.md",
+        "*.mdx"
+      ],
+      "options": {
+        "parser": "mdx",
+        "proseWrap": "preserve",
+        "htmlWhitespaceSensitivity": "ignore"
+      }
+    }
+  ]
 }
