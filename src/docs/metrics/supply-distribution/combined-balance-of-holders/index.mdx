@@ -4,25 +4,35 @@ author: Santiment Team
 date: 2024-04-01
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
-The Combined Balance of Holders metric provides a comprehensive overview of the total tokens held by all 
-addresses within a specified balance interval. By summing up the token balances across every individual 
-address within the designated interval, this metric offers valuable insights into the collective ownership 
+The Combined Balance of Holders metric provides a comprehensive overview of the total tokens held by all
+addresses within a specified balance interval. By summing up the token balances across every individual
+address within the designated interval, this metric offers valuable insights into the collective ownership
 concentration or dispersion within the cryptocurrency ecosystem.
 
 Combined Balance of Holders Metrics:
-- `holders_distribution_combined_balance_<interval>` - Total tokens held by all addresses within a 
-specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
-- `percent_of_holders_distribution_combined_balance_<interval>` - The percentage of tokens held by 
-all addresses within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
-- `holders_distribution_combined_balance_over_<threshold>` - Total tokens held by all addresses with balances 
-exceeding a specified balance [threshold](/metrics/details/supply_distribution_parameters#available-thresholds)
+
+- `holders_distribution_combined_balance_<interval>` - Total tokens held by all addresses within a
+  specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
+- `percent_of_holders_distribution_combined_balance_<interval>` - The percentage of tokens held by
+  all addresses within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
+- `holders_distribution_combined_balance_over_<threshold>` - Total tokens held by all addresses with balances
+  exceeding a specified balance [threshold](/metrics/details/supply_distribution_parameters#available-thresholds)
 
 #### Supply Distribution (by balance of addresses) Bitcoin Chart
-<iframe title="Santiment Chart: [0 - 0.001) coins % (BTC), [0.001 - 0.01) coins % (BTC), [0.01 - 0.1) coins % (BTC), [0.1 - 1) coins % (BTC), [1 - 10) coins % (BTC), [10 - 100) coins % (BTC), [100 - 1,000) coins % (BTC), [1,000 - 10,000) coins % (BTC), [10,000 - 100,000) coins % (BTC), [100,000  - 1,000,000) coins % (BTC), [1,000,000 - 10,000,000) coins % (BTC), [10,000,000 - 100,000,000) coins % (BTC), [100,000,000 - 1,000,000,000) coins % (BTC), [1,000,000,000 - infinity) coins % (BTC)" width="100%" height="350" src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&emalm=1&df=utc_now-90d&dt=utc_now&emcg=1&wm=percent_of_holders_distribution_combined_balance_0_to_0001%3Bpercent_of_holders_distribution_combined_balance_0001_to_001%3Bpercent_of_holders_distribution_combined_balance_001_to_01%3Bpercent_of_holders_distribution_combined_balance_01_to_1%3Bpercent_of_holders_distribution_combined_balance_1_to_10%3Bpercent_of_holders_distribution_combined_balance_10_to_100%3Bpercent_of_holders_distribution_combined_balance_100_to_1k%3Bpercent_of_holders_distribution_combined_balance_1k_to_10k%3Bpercent_of_holders_distribution_combined_balance_10k_to_100k%3Bpercent_of_holders_distribution_combined_balance_100k_to_1M%3Bpercent_of_holders_distribution_combined_balance_1M_to_10M%3Bpercent_of_holders_distribution_combined_balance_10M_to_100M%3Bpercent_of_holders_distribution_combined_balance_100M_to_1B%3Bpercent_of_holders_distribution_combined_balance_1B_to_inf&wax=0%3B1%3B2&wc=%23FF5B5B%3B%23FFCB47%3B%235275FF%3B%23FF8450%3B%23F47BF7%3B%23785549%3B%23D4E763%3B%23FFDAC5%3B%2337D7BA%3B%23777777%3B%23AC948C%3B%23222222%3B%2314c393%3B%237a859e&ws=%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B" scrolling="no"></iframe>
 
-> Additionally, the above metrics can only be calculated for active holders - holders who have moved coins in the 
+<iframe
+  title="Santiment Chart: [0 - 0.001) coins % (BTC), [0.001 - 0.01) coins % (BTC), [0.01 - 0.1) coins % (BTC), [0.1 - 1) coins % (BTC), [1 - 10) coins % (BTC), [10 - 100) coins % (BTC), [100 - 1,000) coins % (BTC), [1,000 - 10,000) coins % (BTC), [10,000 - 100,000) coins % (BTC), [100,000  - 1,000,000) coins % (BTC), [1,000,000 - 10,000,000) coins % (BTC), [10,000,000 - 100,000,000) coins % (BTC), [100,000,000 - 1,000,000,000) coins % (BTC), [1,000,000,000 - infinity) coins % (BTC)"
+  width="100%"
+  height="350"
+  src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&emalm=1&df=utc_now-90d&dt=utc_now&emcg=1&wm=percent_of_holders_distribution_combined_balance_0_to_0001%3Bpercent_of_holders_distribution_combined_balance_0001_to_001%3Bpercent_of_holders_distribution_combined_balance_001_to_01%3Bpercent_of_holders_distribution_combined_balance_01_to_1%3Bpercent_of_holders_distribution_combined_balance_1_to_10%3Bpercent_of_holders_distribution_combined_balance_10_to_100%3Bpercent_of_holders_distribution_combined_balance_100_to_1k%3Bpercent_of_holders_distribution_combined_balance_1k_to_10k%3Bpercent_of_holders_distribution_combined_balance_10k_to_100k%3Bpercent_of_holders_distribution_combined_balance_100k_to_1M%3Bpercent_of_holders_distribution_combined_balance_1M_to_10M%3Bpercent_of_holders_distribution_combined_balance_10M_to_100M%3Bpercent_of_holders_distribution_combined_balance_100M_to_1B%3Bpercent_of_holders_distribution_combined_balance_1B_to_inf&wax=0%3B1%3B2&wc=%23FF5B5B%3B%23FFCB47%3B%235275FF%3B%23FF8450%3B%23F47BF7%3B%23785549%3B%23D4E763%3B%23FFDAC5%3B%2337D7BA%3B%23777777%3B%23AC948C%3B%23222222%3B%2314c393%3B%237a859e&ws=%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B%3B"
+  scrolling="no"
+></iframe>
+
+> Additionally, the above metrics can only be calculated for active holders - holders who have moved coins in the
 > past year. To include only active holders add `active_` prefix (for example: `active_holders_distribution_combined_balance_<interval>`)
 
 ---
@@ -35,8 +45,8 @@ exceeding a specified balance [threshold](/metrics/details/supply_distribution_p
 
 ## Measuring Unit
 
-* `holders_distribution_combined_balance_<interval>` and `holders_distribution_combined_balance_over_<threshold>` - Amount in token
-* `percent_of_holders_distribution_combined_balance_<interval>` - Percentage
+- `holders_distribution_combined_balance_<interval>` and `holders_distribution_combined_balance_over_<threshold>` - Amount in token
+- `percent_of_holders_distribution_combined_balance_<interval>` - Percentage
 
 ---
 
@@ -118,7 +128,9 @@ Holders distribution combined balance over metrics: `<active_>holders_distributi
 ### Combined balance of holders metrics
 
 <Details>
-<Summary>Holders distribution combined balance metrics</Summary>
+
+<summary>Holders distribution combined balance metrics</summary>
+
 - holders_distribution_combined_balance_0_to_0.001
 - holders_distribution_combined_balance_0.001_to_0.01
 - holders_distribution_combined_balance_0.01_to_0.1
@@ -134,10 +146,13 @@ Holders distribution combined balance over metrics: `<active_>holders_distributi
 - holders_distribution_combined_balance_100M_to_1B
 - holders_distribution_combined_balance_1B_to_inf
 - holders_distribution_combined_balance_total
+
 </Details>
 
 <Details>
-<Summary>Percent of holders distribution combined balance metrics</Summary>
+
+<summary>Percent of holders distribution combined balance metrics</summary>
+
 - percent_of_holders_distribution_combined_balance_0_to_0.001
 - percent_of_holders_distribution_combined_balance_0.001_to_0.01
 - percent_of_holders_distribution_combined_balance_0.01_to_0.1
@@ -152,10 +167,13 @@ Holders distribution combined balance over metrics: `<active_>holders_distributi
 - percent_of_holders_distribution_combined_balance_10M_to_100M
 - percent_of_holders_distribution_combined_balance_100M_to_1B
 - percent_of_holders_distribution_combined_balance_1B_to_inf
+
 </Details>
 
 <Details>
-<Summary>Holders distribution combined balance over metrics</Summary>
+
+<summary>Holders distribution combined balance over metrics</summary>
+
 - holders_distribution_combined_balance_over_1
 - holders_distribution_combined_balance_over_10
 - holders_distribution_combined_balance_over_100
@@ -163,12 +181,15 @@ Holders distribution combined balance over metrics: `<active_>holders_distributi
 - holders_distribution_combined_balance_over_10k
 - holders_distribution_combined_balance_over_100k
 - holders_distribution_combined_balance_over_1M
+
 </Details>
 
 ### Combined balance of active holders metrics
 
 <Details>
-<Summary>Active holders distribution combined balance metrics</Summary>
+
+<summary>Active holders distribution combined balance metrics</summary>
+
 - active_holders_distribution_combined_balance_0_to_0.001
 - active_holders_distribution_combined_balance_0.001_to_0.01
 - active_holders_distribution_combined_balance_0.01_to_0.1
@@ -182,10 +203,15 @@ Holders distribution combined balance over metrics: `<active_>holders_distributi
 - active_holders_distribution_combined_balance_1M_to_10M
 - active_holders_distribution_combined_balance_10M_to_inf
 - active_holders_distribution_combined_balance_total
+
 </Details>
 
 <Details>
-<Summary>Percent of active holders distribution combined balance metrics</Summary>
+
+<summary>
+  Percent of active holders distribution combined balance metrics
+</summary>
+
 - percent_of_active_holders_distribution_combined_balance_0_to_0.001
 - percent_of_active_holders_distribution_combined_balance_0.001_to_0.01
 - percent_of_active_holders_distribution_combined_balance_0.01_to_0.1
@@ -198,10 +224,13 @@ Holders distribution combined balance over metrics: `<active_>holders_distributi
 - percent_of_active_holders_distribution_combined_balance_100k_to_1M
 - percent_of_active_holders_distribution_combined_balance_1M_to_10M
 - percent_of_active_holders_distribution_combined_balance_10M_to_inf
+
 </Details>
 
 <Details>
-<Summary>Active holders distribution combined balance over metrics</Summary>
+
+<summary>Active holders distribution combined balance over metrics</summary>
+
 - active_holders_distribution_combined_balance_over_1
 - active_holders_distribution_combined_balance_over_10
 - active_holders_distribution_combined_balance_over_100
@@ -209,4 +238,5 @@ Holders distribution combined balance over metrics: `<active_>holders_distributi
 - active_holders_distribution_combined_balance_over_10k
 - active_holders_distribution_combined_balance_over_100k
 - active_holders_distribution_combined_balance_over_1M
+
 </Details>

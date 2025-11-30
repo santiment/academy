@@ -5,6 +5,7 @@ date: 2023-05-10
 description: Santiment overview for Developers
 ---
 
+import Notebox from '$components/markdown/Notebox.svelte'
 
 ## Introduction
 
@@ -27,7 +28,7 @@ product, which allows developers to write custom SQL to obtain the data from the
 database directly. These SQL queries can be executed from the [Queries web page](https://queries.santiment.net/)
 or [execute the queries through the API](/santiment-queries/api-access)
 
-### GraphQL API 
+### GraphQL API
 
 In this example, the query fetches the daily active addresses for Bitcoin. The
 query is self-descriptive and easy to maintain. New members to your team can
@@ -68,6 +69,7 @@ san.get("daily_active_addresses",
 ## Metrics Catalog
 
 There are a few different ways to explore the available metrics.
+
 - Visit the [metrics' docs articles page](/metrics) where you can find links to
   the documentation articles of the metrics.
 - Open the [Metrics Catalog](https://api.santiment.net/available_metrics)
@@ -75,9 +77,11 @@ There are a few different ways to explore the available metrics.
   assets. This page allows you to filter the metrics supported by a given asset
   and download the data as CSV.
 - Open any [chart page on Sanbase](https://app.santiment.net/charts?slug=ethereum) and explore the metrics on the sidebar.
-- Use the [GraphQL API](https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(filter%3A%20METRIC%2C%20product%3A%20SANAPI%2C%20plan%3A%20BUSINESS_PRO)%20%7B%0A%20%20%20%20name%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20isDeprecated%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%20%20docs%20%7B%0A%20%20%20%20%20%20link%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A) 
-that shows the restrictions for each subscription product -- which metrics are accessible and what are the time range restrictions for them.
+- Use the [GraphQL API](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(filter%3A%20METRIC%2C%20product%3A%20SANAPI%2C%20plan%3A%20BUSINESS_PRO)%20%7B%0A%20%20%20%20name%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20isDeprecated%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%20%20docs%20%7B%0A%20%20%20%20%20%20link%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+  that shows the restrictions for each subscription product -- which metrics are accessible and what are the time range restrictions for them.
 
 <Notebox type="none">
+
 **Read next: [How to Access the API](/sanapi/accessing-the-api/)**
+
 </Notebox>

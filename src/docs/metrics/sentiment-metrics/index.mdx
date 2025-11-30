@@ -1,19 +1,23 @@
 ---
-title: Sentiment metrics 
-author: Santiment Team 
+title: Sentiment metrics
+author: Santiment Team
 date: 2025-10-09
 ---
 
+import Resource from '$components/markdown/Resource.svelte'
+import Notebox from '$components/markdown/Notebox.svelte'
 
 ## Our Sentiment Metrics
 
 <Resource>
+
 - [Positive/Negative Sentiment](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) - Shows how many mentions of a term/asset are expressed in a
-positive/negative manner.
+  positive/negative manner.
 - [Bullish/Bearish Sentiment](/metrics/sentiment-metrics/bullish-bearish-sentiment-metrics) - Shows how many mentions of a term/asset are expressed in a
-bullish/bearish manner.
-- [Sentiment Balance](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) - The difference between Positive Sentiment and Negative Sentiment 
-- [Sentiment Weighted](/metrics/sentiment-metrics/weighted-sentiment-metrics) - An improved version of the Sentiment Balance that adjusts the values by considering the number of mentions, standardizing data to make diverse asset sentiments comparable. 
+  bullish/bearish manner.
+- [Sentiment Balance](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) - The difference between Positive Sentiment and Negative Sentiment
+- [Sentiment Weighted](/metrics/sentiment-metrics/weighted-sentiment-metrics) - An improved version of the Sentiment Balance that adjusts the values by considering the number of mentions, standardizing data to make diverse asset sentiments comparable.
+
 </Resource>
 
 ## What is Sentiment?
@@ -35,22 +39,23 @@ belief that a coin will fail, and many more.
 categorizing emotions, opinions and subjective information in a given piece of
 text.
 
-
 <Notebox type="note">
+
 We constantly update our labels
 which helps us to keep labels as fresh as possible but result historical data
 changes. Any modifications to labels, social sources, or relevant jobs will
 prompt recalculation for the previous month's data. Within a 12 hour period,
 metric can be supplemented with new data.
+
 </Notebox>
 
 ## Sentiment Score
 
 We trained a machine learning model on a large Twitter dataset that contains
-over 1.6 million tweets, each labelled as either **positive** or **negative**. 
+over 1.6 million tweets, each labelled as either **positive** or **negative**.
 The model is then used to evaluate the sentiment of each single document in the
 [Social Data](/metrics/details/social-data) set $-$ it assigns a positive and negative
-**sentiment score** to each message/post/comment/etc. 
+**sentiment score** to each message/post/comment/etc.
 
 The score is the probability that the content of the text is positive or
 negative respectively. Therefore both the **positive** and **negative** sentiment

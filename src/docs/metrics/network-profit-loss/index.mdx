@@ -5,6 +5,8 @@ date: 2021-07-23
 description: Average profit or loss of all coins that change addresses.
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
 Network Profit/Loss (NPL for short) computes the average profit or loss of all coins that change addresses daily. For each coin that moves on-chain, NPL takes the price at which it was last moved and assumes this to be its acquisition price. Once it changes addresses again, NPL assumes the coin was sold.
@@ -77,7 +79,7 @@ The full list of Network Profit Loss metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - network_profit_loss
 - network_profit_loss_change_1d
@@ -85,3 +87,4 @@ The full list of Network Profit Loss metrics is:
 - network_profit_loss_change_7d
 
 </Details>
+

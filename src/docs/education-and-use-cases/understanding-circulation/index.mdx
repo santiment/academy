@@ -4,7 +4,18 @@ author: Santiment Team
 date: 2024-07-19
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/GhHV1t_BwJQ?si=yy-nH9VqrPjqYhmC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+import Notebox from '$components/markdown/Notebox.svelte'
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/GhHV1t_BwJQ?si=yy-nH9VqrPjqYhmC"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
 
 ## Definition
 
@@ -14,13 +25,15 @@ provides insights into the actual movement and usage of the asset, indicating
 network activity and utility.
 
 Accounted tokens in Circulation are unique, meaning that if the same token is
-moved multiple times per day via a *wash trade** it is counted only once.
+moved multiple times per day via a \*wash trade\*\* it is counted only once.
 
-<Notebox type="openBook"> 
+<Notebox type="openBook">
+
 A "wash trade" is a type of market
 manipulation where a trader buys and sells the same financial instruments
 simultaneously through different brokers, creating misleading activity in the
-marketplace without any change in position. 
+marketplace without any change in position.
+
 </Notebox>
 
 ![noborder](circulation.png)
@@ -82,5 +95,3 @@ See what others in crypto can’t!
 
 More technical documentation about the metric can be found here:
 [Circulation | Santiment Academy](https://academy.santiment.net/metrics/circulation/)
-
-

@@ -4,6 +4,9 @@ author: Katsiaryna
 date: 2024-04-09
 description: Total amount of NFT trades per day made on a particular marketplace, amount of NFT trades made by NFT whales and amount of NFT trades made by retail users made on a particular marketplace
 ---
+
+import Notebox from '$components/markdown/Notebox.svelte'
+
 ## Definition
 
 NFT trades count is represented through the following metrics:
@@ -46,11 +49,11 @@ Amount of trades
 
 ## Available Assets
 
-- `nft_trades_count` : [available assets](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_trades_count%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+- `nft_trades_count` : [available assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_trades_count%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-- `nft_whale_trades_count` : [available assets](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_whale_trades_count%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+- `nft_whale_trades_count` : [available assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_whale_trades_count%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-- `nft_retail_trades_count` : [available assets](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_retail_trades_count%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+- `nft_retail_trades_count` : [available assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_retail_trades_count%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 
@@ -66,9 +69,11 @@ Amount of trades
 `x2y2`
 
 <Notebox type="note">
-The Polygon chain has been deprecated as of October 28th 2024 and is no longer supported.
-</Notebox>
 
+The Polygon chain has been deprecated as of October 28th 2024 and is no longer
+supported.
+
+</Notebox>
 
 ## SanAPI
 

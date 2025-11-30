@@ -5,6 +5,8 @@ date: 2020-06-29
 description: Number of unique coins/tokens transferred after being idle for some time
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
 Dormant Circulation shows number of unique coins/tokens transacted on a given day that
@@ -19,7 +21,7 @@ Examples:
   for more than 90 days were transacted during a day. This is the smallest interval
   supported for that metric.
 
-There are also dormant circulation metrics `dormant_circulation_usd_*` that represent the USD value of all 
+There are also dormant circulation metrics `dormant_circulation_usd_*` that represent the USD value of all
 unique coins or tokens that were transacted within a single day that have not been moved for some time.
 
 ---
@@ -101,7 +103,7 @@ The full list of Dormant Circulation metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - dormant_circulation_10y
 - dormant_circulation_180d

@@ -5,6 +5,7 @@ date: 2025-10-07
 description: The bullish, neutral, and bearish sentiment metrics show the part of the total social volume that has bullish, neutral, or bearish sentiment
 ---
 
+import Details from '$components/markdown/Details.svelte'
 
 ## Definition
 
@@ -13,7 +14,6 @@ The Sentiment Bullish, Sentiment Bearish, and Sentiment Neutral metrics represen
 - `sentiment_bullish_<source>` metrics are computed by taking the sum of the bullish sentiment scores.
 - `sentiment_neutral_<source>` metrics are computed by taking the sum of the neutral sentiment scores.
 - `sentiment_bearish_<source>` metrics are computed by taking the sum of the bearish sentiment scores.
-
 
 ### Available Sources
 
@@ -142,7 +142,9 @@ Fetch aggregated daily values for many assets:
 The full list of Bullish/Neutral/Bearish sentiment metrics is:
 
 <Details>
-<Summary>Open bullish Sentiment Metrics List</Summary>
+
+<summary>Open bullish Sentiment Metrics List</summary>
+
 - sentiment_bullish_4chan
 - sentiment_bullish_bitcointalk
 - sentiment_bullish_reddit
@@ -151,10 +153,13 @@ The full list of Bullish/Neutral/Bearish sentiment metrics is:
 - sentiment_bullish_youtube_videos
 - sentiment_bullish_farcaster
 - sentiment_bullish_total
+
 </Details>
 
 <Details>
-<Summary>Open neutral Sentiment Metrics List</Summary>
+
+<summary>Open neutral Sentiment Metrics List</summary>
+
 - sentiment_neutral_4chan
 - sentiment_neutral_bitcointalk
 - sentiment_neutral_reddit
@@ -163,10 +168,13 @@ The full list of Bullish/Neutral/Bearish sentiment metrics is:
 - sentiment_neutral_youtube_videos
 - sentiment_neutral_farcaster
 - sentiment_neutral_total
+
 </Details>
 
 <Details>
-<Summary>Open bearish Sentiment Metrics List</Summary>
+
+<summary>Open bearish Sentiment Metrics List</summary>
+
 - sentiment_bearish_4chan
 - sentiment_bearish_bitcointalk
 - sentiment_bearish_reddit
@@ -175,5 +183,5 @@ The full list of Bullish/Neutral/Bearish sentiment metrics is:
 - sentiment_bearish_youtube_videos
 - sentiment_bearish_farcaster
 - sentiment_bearish_total
-</Details>
 
+</Details>

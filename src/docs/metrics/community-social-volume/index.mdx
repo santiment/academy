@@ -6,6 +6,8 @@ description: Number of messages in a project's community chat server
 # REF metrics-hub/metricshub/social_volume_unit.py
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
 Community Social Volume is build on top of the [Social Data](/metrics/details/social-data).
@@ -16,7 +18,6 @@ asset's own community chat (telegram server) or subreddit (reddit).
 Currently `telegram` and `reddit` are supported.
 
 We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
-
 
 ## Access
 
@@ -59,7 +60,7 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ## SanAPI
 
-Available under the  `community_social_volume_telegram` and `community_social_volume_reddit` names.
+Available under the `community_social_volume_telegram` and `community_social_volume_reddit` names.
 
 ```graphql-explorer
 {
@@ -80,7 +81,7 @@ The full list of Community Message Count metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - community_social_volume_telegram
 - community_social_volume_reddit

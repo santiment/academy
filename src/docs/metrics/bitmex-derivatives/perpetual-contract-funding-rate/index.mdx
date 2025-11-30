@@ -5,9 +5,11 @@ date: 2020-06-03
 description: Amount of coin/tokens moved on-chain.
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Description
 
-The funding rate is a fee paid by one side of the perpetual contract to the other. When the funding rate is positive, Longs pay Shorts. When the funding rate is negative, Shorts pay Longs.  
+The funding rate is a fee paid by one side of the perpetual contract to the other. When the funding rate is positive, Longs pay Shorts. When the funding rate is negative, Shorts pay Longs.
 
 More details on BitMEX [web-site](https://www.bitmex.com/app/perpetualContractsGuide#Mechanics-of-a-Perpetual-Contract-Market).
 
@@ -79,7 +81,7 @@ The full list of Bitmex Perpetual Funding Rate metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - bitmex_perpetual_funding_rate
 - bitmex_perpetual_funding_rate_change_1d
@@ -87,3 +89,4 @@ The full list of Bitmex Perpetual Funding Rate metrics is:
 - bitmex_perpetual_funding_rate_change_7d
 
 </Details>
+

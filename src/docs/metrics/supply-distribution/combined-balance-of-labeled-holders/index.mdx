@@ -4,26 +4,29 @@ author: Santiment Team
 date: 2024-04-01
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
-The Combined Balance of Labeled Holders provides a comprehensive overview of the total tokens held by all addresses 
-with a specific label holding a token across predefined balance intervals. By summing up the token balances of addresses 
-with designated labels such as exchange, infrastructure, miner, whale, or all, this metric provides insights into 
-the composition and activities of various participant groups. Whether tracking the influence of exchanges, the 
-backbone support of infrastructure holders, the mining community, or the presence of large-scale holders (whales), 
-this metric enables stakeholders to assess the diversity and concentration of ownership. By analyzing these 
-labeled holders across predefined balance intervals, it becomes possible to discern trends, identify patterns, 
+The Combined Balance of Labeled Holders provides a comprehensive overview of the total tokens held by all addresses
+with a specific label holding a token across predefined balance intervals. By summing up the token balances of addresses
+with designated labels such as exchange, infrastructure, miner, whale, or all, this metric provides insights into
+the composition and activities of various participant groups. Whether tracking the influence of exchanges, the
+backbone support of infrastructure holders, the mining community, or the presence of large-scale holders (whales),
+this metric enables stakeholders to assess the diversity and concentration of ownership. By analyzing these
+labeled holders across predefined balance intervals, it becomes possible to discern trends, identify patterns,
 and inform strategic decision-making within the cryptocurrency space.
 
-There are two sets of metrics: holders labeled distribution combined balance and holders labeled negative distribution combined balance 
-metrics. Holders labeled distribution combined balance metrics encompass all addresses with a specific label, while 
+There are two sets of metrics: holders labeled distribution combined balance and holders labeled negative distribution combined balance
+metrics. Holders labeled distribution combined balance metrics encompass all addresses with a specific label, while
 holders labeled negative distribution combined balance metrics exclude all addresses with a specific label.
 
 Combined Balance of Labeled Holders Metrics:
-- `holders_labeled_distribution_combined_balance_<interval>` - Total tokens held by all addresses with a specific [label](/metrics/details/supply_distribution_parameters#available-labels) 
-within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
-- `holders_labeled_negative_distribution_combined_balance_<interval>` - Total tokens held by all addresses that do not contain a specific 
-[negative label](/metrics/details/supply_distribution_parameters#available-negative-labels), within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
+
+- `holders_labeled_distribution_combined_balance_<interval>` - Total tokens held by all addresses with a specific [label](/metrics/details/supply_distribution_parameters#available-labels)
+  within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
+- `holders_labeled_negative_distribution_combined_balance_<interval>` - Total tokens held by all addresses that do not contain a specific
+  [negative label](/metrics/details/supply_distribution_parameters#available-negative-labels), within a specified balance [interval](/metrics/details/supply_distribution_parameters#available-intervals)
 
 ---
 
@@ -75,7 +78,7 @@ Holders labeled distribution combined balance metrics: `holders_labeled_distribu
     timeseriesDataJson(
       selector: {
         slug: "ethereum"
-      	label: "miner"
+       label: "miner"
       }
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-10T00:00:00Z"
@@ -93,7 +96,7 @@ Holders labeled negative distribution combined balance metrics: `holders_labeled
     timeseriesDataJson(
       selector: {
         slug: "ethereum"
-      	label: "nonExchange"
+       label: "nonExchange"
       }
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-10T00:00:00Z"
@@ -106,7 +109,9 @@ Holders labeled negative distribution combined balance metrics: `holders_labeled
 ## Full list of metrics
 
 <Details>
-<Summary>Holders labeled distribution combined balance metrics</Summary>
+
+<summary>Holders labeled distribution combined balance metrics</summary>
+
 - holders_labeled_distribution_combined_balance_0_to_0.001
 - holders_labeled_distribution_combined_balance_0.001_to_0.01
 - holders_labeled_distribution_combined_balance_0.01_to_0.1
@@ -120,10 +125,15 @@ Holders labeled negative distribution combined balance metrics: `holders_labeled
 - holders_labeled_distribution_combined_balance_1M_to_10M
 - holders_labeled_distribution_combined_balance_10M_to_inf
 - holders_labeled_distribution_combined_balance_total
+
 </Details>
 
 <Details>
-<Summary>Holders labeled negative distribution combined balance metrics</Summary>
+
+<summary>
+  Holders labeled negative distribution combined balance metrics
+</summary>
+
 - holders_labeled_negative_distribution_combined_balance_0_to_0.001
 - holders_labeled_negative_distribution_combined_balance_0.001_to_0.01
 - holders_labeled_negative_distribution_combined_balance_0.01_to_0.1
@@ -137,4 +147,5 @@ Holders labeled negative distribution combined balance metrics: `holders_labeled
 - holders_labeled_negative_distribution_combined_balance_1M_to_10M
 - holders_labeled_negative_distribution_combined_balance_10M_to_inf
 - holders_labeled_negative_distribution_combined_balance_total
+
 </Details>

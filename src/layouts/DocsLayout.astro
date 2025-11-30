@@ -29,13 +29,14 @@ const { crumbs = [], currentSlug, headings, title } = Astro.props
       <main
         class="flex min-w-[86vh] flex-col px-10 pb-0 pt-[85px] md:px-0"
         data-pagefind-body
+        transition:animate="slide"
       >
         <div class={cn(styles.wrapper)}>
           <Breadcrumb crumbs={crumbs} crumbLabel={currentSlug} />
           <ArticleHeadings headings={headings} />
 
           <div class="px-4">
-            <H1 id={sluggify(title)}>{title}</H1>
+            {title && <H1 id={sluggify(title)}>{title}</H1>}
 
             <slot />
 

@@ -4,6 +4,9 @@ author: Katsiaryna
 date: 2024-04-09
 description: Total NFT trades volume made on a particular marketplace in USD per day, NFT volume in USD made by NFT whales and NFT volumen in USD made by retail users on a particular marketplpace
 ---
+
+import Notebox from '$components/markdown/Notebox.svelte'
+
 ## Definition
 
 NFT volume is represented through several metrics:
@@ -46,11 +49,11 @@ Amount of USD
 
 ## Available Assets
 
-- `nft_trade_volume_usd` : [available assets](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_trade_volume_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+- `nft_trade_volume_usd` : [available assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_trade_volume_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-- `nft_retail_trade_volume_usd`: [available assets](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_retail_trade_volume_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+- `nft_retail_trade_volume_usd`: [available assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_retail_trade_volume_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-- `nft_whale_trade_volume_usd`: [available assets](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_whale_trade_volume_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+- `nft_whale_trade_volume_usd`: [available assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22nft_whale_trade_volume_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 
@@ -66,7 +69,9 @@ Amount of USD
 `x2y2`
 
 <Notebox type="note">
+
 The Polygon chain has been deprecated as of October 28th 2024 and is no longer supported.
+
 </Notebox>
 
 ## SanAPI

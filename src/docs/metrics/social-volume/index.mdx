@@ -3,8 +3,9 @@ title: Social Volume
 author: Ivan
 date: 2025-07-10
 description: The amount of messages/documents containing a given search term
-# REF metrics-hub/metricshub/social_volume.py
 ---
+
+import Details from '$components/markdown/Details.svelte'
 
 ## Definition
 
@@ -36,7 +37,6 @@ The arbitrary search term can be:
   `"buy high sell low"` or `"btc rekt"`.
 - [Lucene Query](http://www.lucenetutorial.com/lucene-query-syntax.html) - a
   search term that allows for logical operators. Examples:
-
   - `OR` - The union of two search results. `btc OR bitcoin` returns the
     documents that contain at least one of the words `btc` and `bitcoin`
   - `AND` - The intersection of two search results. `btc AND moon` returns the
@@ -181,13 +181,13 @@ There is an option to get Market Social Volume
 }
 ```
 
-
 ## Full list of metrics
 
 The full list of Social Volume metrics is:
 
 <Details>
-<Summary>Open Metrics List</Summary>
+
+<summary>Open Metrics List</summary>
 
 - social_volume_4chan
 - social_volume_bitcointalk
@@ -201,7 +201,8 @@ The full list of Social Volume metrics is:
 </Details>
 
 <Details>
-<Summary>Open Change Metrics List</Summary>
+
+<summary>Open Change Metrics List</summary>
 
 - social_volume_total_change_1d
 - social_volume_total_change_30d

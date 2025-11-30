@@ -3,8 +3,9 @@ title: Active Addresses 24h
 author: Ivan
 date: 2022-04-12
 description: Number of unique addresses participating in transactions for the last 24 hour window
-
 ---
+
+import Details from '$components/markdown/Details.svelte'
 
 ## Definition
 
@@ -19,7 +20,6 @@ addresses for every day (between 00:00:00 and 23:59:59). The active addresses
 the past 24 hours. Example: The value of the metric at 17:30pm on March 22
 contains the active addresses in the interval [17:30pm March 21, 17:30pm March
 22].
-
 
 ## Access
 
@@ -87,7 +87,8 @@ The full list of Active Addresses metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
+
 - active_addresses_1h
 - active_addresses_24h
 - active_addresses_24h_change_1d

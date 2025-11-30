@@ -4,6 +4,8 @@ author: Santiment Team
 date: 2020-04-06
 ---
 
+import Notebox from '$components/markdown/Notebox.svelte'
+
 - [Overview](#overview)
 - [Available Metrics](#available-metrics)
 - [Metrics Restrictions Per Plan](#metrics-restrictions-per-plan)
@@ -244,7 +246,7 @@ over time. Each data point provided by the API includes a `datetime` and a
 To retrieve the values for a specific metric, slug, and time range, you can use
 the `timeseriesDataJson` field of the `getMetric` API.
 
-#### Parameters:
+#### Parameters
 
 | Parameter             | Description                                                                                                       |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------- |
@@ -317,7 +319,7 @@ multiple values separated by an even interval. This can be utilized to fetch
 the All-Time High (ATH) price or the highest number of daily active addresses,
 among other examples.
 
-#### Parameters:
+#### Parameters
 
 | Parameter   | Description                                                                   |
 | ----------- | ----------------------------------------------------------------------------- |
@@ -380,7 +382,7 @@ into a specified range. For instance, if we consider the period from January
 To fetch the values for a given histogram metric, slug, and time interval, you
 can use the `histogramData` subquery of the `getMetric` API.
 
-#### Parameters:
+#### Parameters
 
 | Parameter | Description                                      |
 | --------- | ------------------------------------------------ |
@@ -590,5 +592,7 @@ The response result is a list that contains a 2-element range of datetimes and a
 The response is a list that contains a 2-element range of float (prices) and a float value.
 
 <Notebox type="none">
+
 **Read next: [Common GraphQL Queries](/sanapi/common-queries)**
+
 </Notebox>

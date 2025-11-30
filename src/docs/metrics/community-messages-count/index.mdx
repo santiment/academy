@@ -6,6 +6,8 @@ description: Number of messages in a project's community chat server
 # REF metrics-hub/metricshub/social_volume_unit.py
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
 Community Messages Count is build on top of the [Social Data](/metrics/details/social-data).
@@ -18,7 +20,6 @@ Currently `telegram` and `reddit` are supported.
 We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
 
 Experimental metrics, might undergo changes if a future.
-
 
 ## Access
 
@@ -82,7 +83,7 @@ The full list of Community Message Count metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - community_messages_count_telegram
 - community_messages_count_reddit

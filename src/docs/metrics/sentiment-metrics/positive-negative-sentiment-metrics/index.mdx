@@ -5,6 +5,8 @@ date: 2024-06-26
 description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
 The Sentiment Positive and Sentiment Negative metrics represnt the sum of [Sentiment Score](/metrics/sentiment-metrics/#sentiment-score) values.
@@ -38,7 +40,13 @@ Using this data we can compute:
 
 ### Positive and Negative Sentiment Bitcoin Chart
 
-<iframe title="Santiment Chart: Price (BTC), Positive sentiment (Total) (BTC), Negative sentiment (Total) (BTC)" width="100%" height="300" src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&df=utc_now-90d&dt=utc_now-30d&emcg=1&wm=price_usd%3Bsentiment_positive_total%3Bsentiment_negative_total&wax=0%3B1&wc=%2326C953%3B%23665bff%3B%23FF5B5B&ws=%3B%7B%22interval%22%3A%226h%22%2C%22node%22%3A%22filledLine%22%7D%3B%7B%22interval%22%3A%226h%22%2C%22node%22%3A%22filledLine%22%7D" scrolling="no"></iframe>
+<iframe
+  title="Santiment Chart: Price (BTC), Positive sentiment (Total) (BTC), Negative sentiment (Total) (BTC)"
+  width="100%"
+  height="300"
+  src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&df=utc_now-90d&dt=utc_now-30d&emcg=1&wm=price_usd%3Bsentiment_positive_total%3Bsentiment_negative_total&wax=0%3B1&wc=%2326C953%3B%23665bff%3B%23FF5B5B&ws=%3B%7B%22interval%22%3A%226h%22%2C%22node%22%3A%22filledLine%22%7D%3B%7B%22interval%22%3A%226h%22%2C%22node%22%3A%22filledLine%22%7D"
+  scrolling="no"
+></iframe>
 
 ---
 
@@ -188,7 +196,9 @@ There is an option to get Market Sentiment Positive Negative
 The full list of Positive/Negative/Balance sentiment metrics is:
 
 <Details>
-<Summary>Open Positive Sentiment Metrics List</Summary>
+
+<summary>Open Positive Sentiment Metrics List</summary>
+
 - sentiment_positive_4chan
 - sentiment_positive_bitcointalk
 - sentiment_positive_reddit
@@ -197,10 +207,13 @@ The full list of Positive/Negative/Balance sentiment metrics is:
 - sentiment_positive_youtube_videos
 - sentiment_positive_farcaster
 - sentiment_positive_total
+
 </Details>
 
 <Details>
-<Summary>Open Negative Sentiment Metrics List</Summary>
+
+<summary>Open Negative Sentiment Metrics List</summary>
+
 - sentiment_negative_4chan
 - sentiment_negative_bitcointalk
 - sentiment_negative_reddit
@@ -209,10 +222,13 @@ The full list of Positive/Negative/Balance sentiment metrics is:
 - sentiment_negative_youtube_videos
 - sentiment_negative_farcaster
 - sentiment_negative_total
+
 </Details>
 
 <Details>
-<Summary>Open Balance Sentiment Metrics List</Summary>
+
+<summary>Open Balance Sentiment Metrics List</summary>
+
 - sentiment_balance_4chan
 - sentiment_balance_bitcointalk
 - sentiment_balance_reddit
@@ -224,4 +240,5 @@ The full list of Positive/Negative/Balance sentiment metrics is:
 - sentiment_balance_total_change_1d
 - sentiment_balance_total_change_7d
 - sentiment_balance_total_change_30d
+
 </Details>

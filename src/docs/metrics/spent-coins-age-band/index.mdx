@@ -5,6 +5,8 @@ date: 2022-06-01
 description: The distribution by age of coins spend on a given day
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
 Spent Coins Age Band is a set of metrics that represent the distribution of coins
@@ -78,7 +80,9 @@ Available under `spent_coins_age_band_<interval>` and `percent_of_spent_coins_ag
 ## Full list of metrics
 
 <Details>
-<Summary>Spent Coins Age Band Metrics</Summary>
+
+<summary>Spent Coins Age Band Metrics</summary>
+
 - spent_coins_age_band_0d_to_1d
 - spent_coins_age_band_1d_to_7d
 - spent_coins_age_band_7d_to_30d
@@ -92,10 +96,13 @@ Available under `spent_coins_age_band_<interval>` and `percent_of_spent_coins_ag
 - spent_coins_age_band_5y_to_7y
 - spent_coins_age_band_7y_to_10y
 - spent_coins_age_band_10y_to_inf
+
 </Details>
 
 <Details>
-<Summary>Percent of Spent Coins Age Band Metrics</Summary>
+
+<summary>Percent of Spent Coins Age Band Metrics</summary>
+
 - percent_of_spent_coins_age_band_0d_to_1d
 - percent_of_spent_coins_age_band_1d_to_7d
 - percent_of_spent_coins_age_band_7d_to_30d
@@ -109,4 +116,5 @@ Available under `spent_coins_age_band_<interval>` and `percent_of_spent_coins_ag
 - percent_of_spent_coins_age_band_5y_to_7y
 - percent_of_spent_coins_age_band_7y_to_10y
 - percent_of_spent_coins_age_band_10y_to_inf
+
 </Details>

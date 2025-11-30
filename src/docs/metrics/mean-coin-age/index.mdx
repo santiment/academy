@@ -5,6 +5,8 @@ date: 2020-04-06
 description: The average age of all coins/tokens on a given blockchain
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
 Recall that the **[coin-age model](/metrics/details/stack-coin-age-model)**
@@ -15,7 +17,7 @@ There are two coin age defined metrics:
 - Mean Coin Age - The average age of all coins/tokens on the blockchain.
 - Mean Dollar Invested Age - The average age of every dollar invested into the market cap of a coin.
 
-Mean Coin Age metrics are also available for different [time bounds](/metrics/details/timebound), which 
+Mean Coin Age metrics are also available for different [time bounds](/metrics/details/timebound), which
 compute the mean coin age for tokens moved at least once no longer than a specific number of days or years ago.
 
 ### Example (Mean Coin age)
@@ -26,6 +28,7 @@ Given there are 100 tokens in existence:
 - 50 of them have age 20 days
 
 then the average coin age is:
+
 $$
 \frac{10 × 50 + 20 × 50}{100} = 15\;\text{(coin-days)}
 $$
@@ -37,7 +40,8 @@ Given there 100 tokens in existence:
 - 50 of them have age 10 days and the token's price was \$1 at that time
 - 50 of them have age 20 days and the token's price was \$2 at that time
 
-then the mean dollar invested age is: 
+then the mean dollar invested age is:
+
 $$
 \frac{10 × 50 + 20 × 50}{50 × \$1 + 50 × \$2} = \frac{1500}{150} = 10\;\text{(coin-dollar days)}
 $$
@@ -97,7 +101,7 @@ $$
 - Mean Dollar Invested Age is available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_dollar_invested_age%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 > Note: timebound Mean Age metrics are available for [these
-  assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_age_90d%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+> assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22mean_age_90d%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 ---
 
@@ -120,7 +124,7 @@ Available under the `mean_age` and `mean_age_<timebound>` names.
 
 ---
 
-Available under the `mean_dollar_invested_age` and 
+Available under the `mean_dollar_invested_age` and
 `mean_dollar_invested_age_<timebound>` names.
 
 ```graphql-explorer
@@ -139,7 +143,9 @@ Available under the `mean_dollar_invested_age` and
 ## Full list of metrics
 
 <Details>
-<Summary>Mean coin age metrics</Summary>
+
+<summary>Mean coin age metrics</summary>
+
 - mean_age
 - mean_age_90d
 - mean_age_180d
@@ -147,10 +153,13 @@ Available under the `mean_dollar_invested_age` and
 - mean_age_2y
 - mean_age_3y
 - mean_age_5y
+
 </Details>
 
 <Details>
-<Summary>Mean dollar invested age metrics</Summary>
+
+<summary>Mean dollar invested age metrics</summary>
+
 - mean_dollar_invested_age
 - mean_dollar_invested_age_90d
 - mean_dollar_invested_age_180d
@@ -161,4 +170,5 @@ Available under the `mean_dollar_invested_age` and
 - mean_dollar_invested_age_change_1d
 - mean_dollar_invested_age_change_7d
 - mean_dollar_invested_age_change_30d
+
 </Details>

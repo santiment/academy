@@ -5,7 +5,16 @@ date: 2022-06-07
 description: MVRV (Market Value to Realized Value) ratio shows the average profit/loss of all the coins currently in circulation according to the current price.
 ---
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vbYQLNJ40yw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+import Details from '$components/markdown/Details.svelte'
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/vbYQLNJ40yw"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
 
 ## Definition
 
@@ -14,7 +23,6 @@ MVRV (Market Value to Realized Value) ratio is defined as an asset's market capi
 ## MVRV Ratio Overview
 
 MVRV shows the ratio between the current price and the average price of every coin/token acquired. The more the ratio increases, the more people will be willing to sell as the potential profits increase. The value of MVRV gives an idea of how much overvalued or undervalued an asset is.
-
 
 ## How MVRV Measured
 
@@ -32,6 +40,7 @@ Overall, MVRV shows the average profit/loss of all the coins currently in circul
 given the current price.
 
 We need to define two terms:
+
 - `MV` as in `Market Value` refers to the well-known capitalization. The second
   part is the
 - `RV` as in [Realized Value](/metrics/realized-value). It is an alternative to
@@ -50,12 +59,20 @@ The MVRV ratio allows traders to gauge both actual profitability vs. loss on the
 
 ### MVRV Bitcoin chart
 
-<iframe title="Santiment Chart: Price (BTC), MVRV Ratio (30d) (BTC)" width="100%" height="300" src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&df=2021-12-07T16%3A59%3A59.999Z&emcg=1&wm=price_usd%3Bmvrv_usd_30d&wax=0%3B1&wc=%2326C953%3B%23F47BF7&ws=%3B" scrolling="no"></iframe>
+<iframe
+  title="Santiment Chart: Price (BTC), MVRV Ratio (30d) (BTC)"
+  width="100%"
+  height="300"
+  src="https://embed.santiment.net/chart?ps=bitcoin&pt=BTC&df=2021-12-07T16%3A59%3A59.999Z&emcg=1&wm=price_usd%3Bmvrv_usd_30d&wax=0%3B1&wc=%2326C953%3B%23F47BF7&ws=%3B"
+  scrolling="no"
+></iframe>
 
 ### High MVRV Values ( > 2 )
+
 MVRV value of 2 means that if all holders sell their coins/tokens at the current price, they will generate an x2 profit on average.
 
 ### Low MVRV Values ( < 1 )
+
 If the MVRV value is between 0 and 1, then the market is "undervalued" on average, meaning most people will realize losses if they all sell their holdings at the current price.
 
 ## Timebound
@@ -83,6 +100,7 @@ profit/loss long-term and short-term holders can realize.
 ### MVRV Long/Short Difference
 
 MVRV Long/Short Difference is defined as:
+
 $$
 \text{mvrv\_usd\_365d} - \text{mvrv\_usd\_60d}
 $$
@@ -104,7 +122,6 @@ and the short term holders manage to realize profits
 [Restricted Access](/metrics/details/access#restricted-access)
 
 ---
-
 
 ## Measuring Unit
 
@@ -137,7 +154,6 @@ Intervals](/metrics/details/frequency#five-minute-frequency)
 
 The daily interval MVRV metrics are available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
-
 
 The 5-minute MVRV metrics are available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd_intraday%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
@@ -217,7 +233,7 @@ The full list of MVRV metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - mvrv_long_short_diff_usd
 - mvrv_usd

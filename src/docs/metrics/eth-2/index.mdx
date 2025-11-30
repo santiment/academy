@@ -5,6 +5,8 @@ date: 2021-01-28
 description: ETH 2.0 Metrics
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Description
 
 Metrics that show stats related to the ETH 2.0 Staking Contract
@@ -234,14 +236,19 @@ Available under the `eth_beacon_deposits`, `eth_beacon_validator_withdrawals` an
 ## Full list of metrics
 
 <Details>
-<Summary>ETH 2.0 histogram metrics</Summary>
+
+<summary>ETH 2.0 histogram metrics</summary>
+
 - eth2_top_stakers
 - eth2_staked_amount_per_label
 - eth2_staked_address_count_per_label
+
 </Details>
 
 <Details>
-<Summary>ETH 2.0 metrics</Summary>
+
+<summary>ETH 2.0 metrics</summary>
+
 - eth_beacon_deposits
 - eth_beacon_validator_withdrawals
 - eth_beacon_reward_withdrawals
@@ -257,4 +264,5 @@ Available under the `eth_beacon_deposits`, `eth_beacon_validator_withdrawals` an
 - eth2_stakers_mvrv_usd_3y
 - eth2_stakers_mvrv_usd_5y
 - eth2_stakers_mvrv_usd_10y
+
 </Details>

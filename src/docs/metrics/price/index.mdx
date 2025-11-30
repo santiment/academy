@@ -5,16 +5,18 @@ date: 2023-06-01
 description: Price in USD, BTC and USDT
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
 The following metrics are provided:
 
-* `price_usd` - Price in USD, sourced from a 3rd party provider
-* `price_usd_5m` - The same as `price_usd`, but the data points are aligned at 5 minute intervals and 
-any gaps are filled with the last known value
-* `price_btc` - Price in BTC
-* `price_usdt` - Price in USDT
-* Open-High-Close-Low Price in USD
+- `price_usd` - Price in USD, sourced from a 3rd party provider
+- `price_usd_5m` - The same as `price_usd`, but the data points are aligned at 5 minute intervals and
+  any gaps are filled with the last known value
+- `price_btc` - Price in BTC
+- `price_usdt` - Price in USDT
+- Open-High-Close-Low Price in USD
 
 ---
 
@@ -61,6 +63,7 @@ Amount in dollars/usdt/bitcoins
 - Available assets for [price_btc](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_btc%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
 - Available assets for [price_usdt](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_usdt%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
 - Available assets for [price_eth](https://api.santiment.net/graphiql?query=%7B%0A++getMetric%28metric%3A+%22price_eth%22%29%7B%0A++++metadata%7B%0A++++++availableSlugs%0A++++%7D%0A++%7D%0A%7D)
+
 ---
 
 ## SanAPI
@@ -146,7 +149,7 @@ The full list of Price metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - price_btc
 - price_eth
@@ -158,7 +161,7 @@ The full list of Price metrics is:
 
 <Details>
 
-<Summary>Open Change Metrics List</Summary>
+<summary>Open Change Metrics List</summary>
 
 - price_btc_change_1d
 - price_btc_change_30d
@@ -172,3 +175,4 @@ The full list of Price metrics is:
 - price_usd_change_7d
 
 </Details>
+

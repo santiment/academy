@@ -2,8 +2,10 @@
 title: Trading Volume in USD
 author: Ivan
 date: 2020-04-07
-description: Trading Volume in USD 
+description: Trading Volume in USD
 ---
+
+import Details from '$components/markdown/Details.svelte'
 
 ## Definition
 
@@ -12,10 +14,11 @@ The metric is taking into consideration all the trading pairs. The trading pairs
 are not pegged to USD are multiplied by the USD price of the asset.
 
 Trading Volume in USD metrics:
-- `volume_usd` - 24-hour sliding window trading volume across centralized and decentralized exchanges. 
-All transactions are converted to USD. The data is sourced from a 3rd party provider.
-- `volume_usd_5m` - The same as `volume_usd`, but the data points are aligned at 5 minute intervals and 
-any gaps are filled with the last known value 
+
+- `volume_usd` - 24-hour sliding window trading volume across centralized and decentralized exchanges.
+  All transactions are converted to USD. The data is sourced from a 3rd party provider.
+- `volume_usd_5m` - The same as `volume_usd`, but the data points are aligned at 5 minute intervals and
+  any gaps are filled with the last known value
 
 ---
 
@@ -86,7 +89,7 @@ The full list of GitHub Activity metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - volume_usd
 - volume_usd_5m
@@ -95,3 +98,4 @@ The full list of GitHub Activity metrics is:
 - volume_usd_change_7d
 
 </Details>
+

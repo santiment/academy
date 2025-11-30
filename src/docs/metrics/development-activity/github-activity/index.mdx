@@ -2,17 +2,17 @@
 title: Github Activity
 author: Santiment Team
 date: 2023-06-01
-
 ---
+
+import Details from '$components/markdown/Details.svelte'
 
 ## Definition
 
 Unlike [Development Activity](metrics/development-activity/development-activity) which excludes some of the events, the GitHub Activity metric uses all events to compute the metric.
 
-
 There are 3 github activity metrics available:
 
-- `github_activity` - Computed on-the-fly using the Github data. Because of this the metric can compute data for any 
+- `github_activity` - Computed on-the-fly using the Github data. Because of this the metric can compute data for any
   asset or any random Github organization that has public repositories like Google, Facebook, or any other organization.
 - `github_activity_1d` - Precomputed daily metric for each asset that is available on Santiment. This allows the metric
   to be aggregated when the value is needed for all assets at once.
@@ -56,8 +56,8 @@ There are 3 github activity metrics available:
 
 ## Available Assets
 
-- `github_activity` $-$ [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22github_activity%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
-- `github_activity_1d` $-$ [available assets](https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22github_activity_1d%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)
+- `github_activity` $-$ [available assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22github_activity%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+- `github_activity_1d` $-$ [available assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric:%20%22github_activity_1d%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 - `ecosystem_github_activity` $-$ [available ecosystems](https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems%20%7B%0A%20%20%20%20name%0A%20%20%7D%0A%7D%0A)
 
 ---
@@ -81,7 +81,7 @@ Fetch the dev activity for an asset:
 
 ---
 
-Fetch the `github_activity` for an arbitrary organization. You  need to provide only the organization name
+Fetch the `github_activity` for an arbitrary organization. You need to provide only the organization name
 to the parameter, not the whole URL. Github links look like this: `https://github.com/<organization>/<repository>`.
 
 ```graphql-explorer
@@ -120,9 +120,9 @@ To check what assets are part of the ecosystem and what are their github links:
 
 ```graphql
 {
-  getEcosystems(ecosystems: ["ethereum"]){
+  getEcosystems(ecosystems: ["ethereum"]) {
     name
-    projects{
+    projects {
       slug
       githubLinks
     }
@@ -130,7 +130,7 @@ To check what assets are part of the ecosystem and what are their github links:
 }
 ```
 
-**[Run in Explorer](https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems(ecosystems%3A%20%5B%22ethereum%22%5D)%7B%0A%20%20%20%20name%0A%20%20%20%20projects%7B%0A%20%20%20%20%20%20slug%0A%20%20%20%20%20%20githubLinks%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A)**
+**[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems(ecosystems%3A%20%5B%22ethereum%22%5D)%7B%0A%20%20%20%20name%0A%20%20%20%20projects%7B%0A%20%20%20%20%20%20slug%0A%20%20%20%20%20%20githubLinks%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
 
 ---
 
@@ -157,9 +157,10 @@ The full list of GitHub Activity metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - ecosystem_github_activity
 - github_activity_change_30d
 
 </Details>
+

@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { Snippet } from 'svelte'
 
-  import './Details.module.scss'
   import { cn } from 'san-webkit-next/ui/utils'
 
   type TProps = {

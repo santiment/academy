@@ -4,10 +4,15 @@ author: Boris
 date: 2024-04-29
 ---
 
+import Resource from '$components/markdown/Resource.svelte'
+import Notebox from '$components/markdown/Notebox.svelte'
+
 ## Renamed Metrics
 
 <Notebox type="note">
+
 Renamed metrics are those that have undergone a name change within our system, reflecting updates to terminology or standardization efforts. These metrics remain actively supported for analysis and reporting but may now be referred to by a different name than previously used. It's important for users to be aware of these changes to ensure clarity and consistency in their analytical processes. While the underlying data and calculation methods for renamed metrics remain unchanged, their updated names help align our reporting practices with industry standards and best practices. Relying on renamed metrics allows for smoother communication and interpretation of analytical results across teams and stakeholders.
+
 </Notebox>
 
 ## Why Do We Rename Metrics?
@@ -29,7 +34,8 @@ While metrics undergo name changes, their underlying definitions and calculation
 <Resource>
 
 - [Age Consumed Metrics](/metrics/age-consumed) - Renamed from **age_destroyed\[..]** to **age_consumed\[..]**
-- [Weighted Sentiment Metrics](/metrics/sentiment-metrics/weighted-sentiment-metrics) - Renamed from **sentiment\_volume\_consumed_\[..]** to **sentiment\_weighted\_\[..]**
+- [Weighted Sentiment Metrics](/metrics/sentiment-metrics/weighted-sentiment-metrics) - Renamed from **sentiment_volume_consumed\_\[..]** to **sentiment_weighted\_\[..]**
 - [Exchange Inflow/Outflow Metrics](/metrics/exchange-funds-flow) - Renamed from **inflow_per_label_and_owner** to **exchange_inflow_per_exchange** and **outflow_per_label_and_owner** to **exchange_outflow_per_exchange**
 
 </Resource>
+

@@ -5,6 +5,8 @@ date: 2020-04-06
 description: Number of unique coins/tokens being used during a time period
 ---
 
+import Details from '$components/markdown/Details.svelte'
+
 ## Definition
 
 Circulation shows number of unique coins/tokens being used during a time period.
@@ -17,7 +19,7 @@ Examples:
 - `circulation_1y` - Shows how many unique coins/tokens were transacted for the
   past 1 year.
 
-There are also circulation metrics `circulation_usd_*` that represent the USD value of all 
+There are also circulation metrics `circulation_usd_*` that represent the USD value of all
 unique coins or tokens that were transacted within a single day. Unlike simple circulation
 metrics that count the unique cryptocurrencies moved, `circulation_usd_*` metrics convert
 the quantity of these coins or tokens into their equivalent value in USD.
@@ -122,7 +124,7 @@ The full list of Circulation metrics is:
 
 <Details>
 
-<Summary>Open Metrics List</Summary>
+<summary>Open Metrics List</summary>
 
 - circulation
 - circulation_10y
