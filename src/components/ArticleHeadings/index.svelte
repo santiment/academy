@@ -1,8 +1,8 @@
 <script lang="ts">
   import { usePageHash } from '../../utils/utils.svelte.js'
   import { cn } from 'san-webkit-next/ui/utils'
-  import styles from './ArticleHeadings.module.scss'
-  import ArrowRight from './ArrowRight.svelte'
+  import Button from 'san-webkit-next/ui/core/Button'
+  import type { MarkdownHeading } from 'astro'
 
   const TOPICS = {
     sanbase: { href: 'https://app.santiment.net/', title: 'Sanbase' },
@@ -19,43 +19,46 @@
   } as const
 
   type TProps = {
-    headings: any
-    crumbs: any[]
-    title: keyof typeof TOPICS
+    headings: MarkdownHeading[]
   }
 
-  const { headings, crumbs = [], title }: TProps = $props()
-  const { pageHash, scrollToTargetAdjusted } = usePageHash((headings || []).map((item) => item.slug))
-  const topic = crumbs.length > 1 && crumbs[1].crumbLabel
-  // @ts-ignore
+  const { headings }: TProps = $props()
+  const { pageHash, scrollToTargetAdjusted } = usePageHash(headings)
+  
+  const topic = headings.length > 1 && headings[1].text as keyof typeof TOPICS
   const appLink = topic && TOPICS[topic]
 </script>
 
-<ul class={styles.list}>
+<ul 
+  class="fixed ml-[660px] top-[95px] flex flex-col max-h-[85vh] max-w-[210px] overflow-y-auto overflow-x-hidden pr-2 md:flex lg:hidden"
+>
   {#if appLink}
-    <li class={styles.appLink}>
-      <a href={appLink.href} target="_blank" rel="noreferrer">
+    <li>
+      <Button href={appLink.href} target="_blank" icon="right-arrow" iconOnRight>
         Go to {appLink.title}
-        <ArrowRight />
-      </a>
+      </Button>
     </li>
   {/if}
 
   {#each headings as { slug, text, depth }, idx}
     <li
       class={cn(
-        styles.item,
-        pageHash === `#${slug}` && styles.current,
-        idx === 0 && (appLink ? styles.mt50 : styles.mt170),
-        idx > 0 && styles.hasBefore
+        'relative',
+        "before:!content-['']",
+        idx === 0 && (appLink ? 'mt-12' : 'mt-20')
       )}
     >
       <a
         href={`#${slug}`}
+        onclick={(e) => scrollToTargetAdjusted(e, slug)}
         class={cn(
-          styles.heading,
-          depth === 2 && styles.second,
-          depth === 3 && styles.third
+          'text-sm block my-1 py-1 cursor-pointer transition-colors duration-200',
+          'border-l-2 pl-4',
+          depth === 2 && 'pl-8',
+          depth === 3 && 'pl-12',
+          pageHash === `#${slug}` 
+            ? 'border-l-green text-green' 
+            : 'border-l-porcelain text-waterloo hover:text-green hover:border-l-green'
         )}
       >
         {text}

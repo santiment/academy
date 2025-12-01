@@ -22,18 +22,18 @@ const { class: className = '' } = Astro.props
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/icon-144x144.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>Academy</title>
     <ClientRouter />
   </head>
 
-  <body class={cn('pt-16', className)}>
+  <body class={cn('pt-16 overflow-x-hidden', className)}>
     <CookiesPopupWrapper client:only="svelte" />
     <Intercom client:only="svelte">
-      <Tracking client:load>
+      <Tracking client:only="svelte">
         <div data-vaul-drawer-wrapper>
-          <Nav />
+          <Nav transition:persist />
           <slot />
         </div>
       </Tracking>

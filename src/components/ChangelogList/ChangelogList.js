@@ -75,8 +75,8 @@ const ChangelogList = ({
 
               if (loading && !entries)
                 return (
-                  <div className={styles.loaderWrapper}>
-                    <PageLoader text="Loading" className={styles.loader} />
+                  <div className="h-[50vh]">
+                    <PageLoader text="Loading" className="sm:static sm:mt-0" />
                   </div>
                 )
 
@@ -87,7 +87,7 @@ const ChangelogList = ({
                   {!readyEntries || readyEntries.length === 0 ? (
                     <div>No changes yet.</div>
                   ) : (
-                    <div className={styles.entriesWrapper}>
+                    <div className="mb-[30px]">
                       {readyEntries.map(group => (
                         <section key={group.date}>
                           <h3>{new Date(group.date).toLocaleDateString()}</h3>

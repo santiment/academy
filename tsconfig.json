@@ -17,6 +17,9 @@
     "paths": {
       "$components/*": [
         "src/components/*"
+      ],
+      "$layouts/*": [
+        "src/layouts/*"
       ]
     }
   }

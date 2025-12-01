@@ -1,9 +1,7 @@
 <script lang="ts">
   import { ChatInput, useAIChatbotCtx } from 'san-webkit-next/ui/app/AIChatbot'
   import Button from 'san-webkit-next/ui/core/Button'
-  import styles from './Hero.module.scss'
-  import { cn } from 'san-webkit-next/ui/utils'
-  import turtleImg from './turtle-waving.svg?raw'
+  import TurtleWaving from './turtle-waving.svelte';
 
   useAIChatbotCtx.set({
     type: 'ACADEMY_QA',
@@ -19,8 +17,8 @@
   ]
 </script>
 
-<div class={cn(styles.container)}>
-  <img class={cn(styles.turtle)} src={turtleImg} alt="" />
+<div class="py-14 px-5 bg-[url(/turtle-illustration.svg)] bg-bottom bg-contain bg-no-repeat md:bg-none">
+  <TurtleWaving class="mx-auto my-0 mb-6 w-[242px] h-[152px] hidden md:block" />
 
   <h1 class="mb-8 text-center text-3xl text-rhino">
     Hi, I’m Turtoshi — your AI guide to Academy

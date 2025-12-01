@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import styles from './IntercomWidget.module.scss'
 
 const IntercomWidget = ({ isDesktop }) => {
   const [isShown, setIsShown] = useState(true)

@@ -1,14 +1,9 @@
 ---
 import SidebarCategory from './SidebarCategory.astro'
-import {
-  GUIDES,
-  REFERENCES,
-  GETTING_STARTED,
-} from '../../docs/navigation'
+import { GUIDES, REFERENCES, GETTING_STARTED } from '../../docs/navigation'
 
 import { titleToSlug } from '../../utils/docs'
 import { isArticleActive } from './utils'
-import styles from './Sidebar.module.scss'
 import { cn } from 'san-webkit-next/ui/utils'
 
 let active: string[] = []
@@ -18,40 +13,62 @@ if (Astro.url) {
 }
 ---
 
-<section class={styles.wrapper}>
-  <div class={styles.content}>
-    <ul class={styles.list}>
-      <h3 class={styles.heading}>{GETTING_STARTED.title}</h3>
+<section class="fixed bottom-0 left-0 right-0 top-[71px] flex w-full md:hidden">
+  <div class="relative flex grow border-r border-r-porcelain">
+    <ul
+      class="mb-12 ml-auto w-[285px] overflow-hidden pb-10 pl-4 hover:overflow-y-auto focus:overflow-y-auto"
+    >
+      <h3 class="mb-4 ml-0 mr-5 pt-8 text-sm font-medium text-casper">
+        {GETTING_STARTED.title}
+      </h3>
 
       <li>
-        <ul class={styles.blocks}>
-          {(GETTING_STARTED.articles || []).map((article) => {
-            const activeClass = isArticleActive(active, null, article)
-              ? styles.block__active
-              : ''
+        <ul>
+          {
+            (GETTING_STARTED.articles || []).map((article) => {
+              const activeClass = isArticleActive(active, null, article)
+                ? 'text-green-hover'
+                : ''
 
-            return (
-            <li class={cn(styles.block, activeClass)}>
-                <a href={`/${titleToSlug(article)}/`}>{article}</a>
-              </li>
-            )
-          })}
+              return (
+                <li class={cn('mt-2 text-rhino', activeClass)}>
+                  <a href={`/${titleToSlug(article)}/`}>{article}</a>
+                </li>
+              )
+            })
+          }
         </ul>
       </li>
 
-      <h3 class={styles.heading}>Guides</h3>
+      <h3
+        class="mb-4 ml-0 mr-5 mt-8 border-t border-t-porcelain pt-8 text-sm font-medium text-casper"
+      >
+        Guides
+      </h3>
 
-      {GUIDES.map((category) => (
-        <SidebarCategory {...category} active={active} />
-      ))}
+      {
+        GUIDES.map((category) => (
+          <SidebarCategory {...category} active={active} />
+        ))
+      }
 
-      <h3 class={styles.heading}>Resources</h3>
+      <h3
+        class="mb-4 ml-0 mr-5 mt-8 border-t border-t-porcelain pt-8 text-sm font-medium text-casper"
+      >
+        Resources
+      </h3>
 
-      {REFERENCES.map((category) => (
-        <SidebarCategory {...category} active={active} />
-      ))}
+      {
+        REFERENCES.map((category) => (
+          <SidebarCategory {...category} active={active} />
+        ))
+      }
     </ul>
   </div>
 
-  <div class={styles.empty} aria-hidden="true"></div>
+  <div
+    class="pointer-events-none -z-[1] flex w-[885px] grow opacity-0"
+    aria-hidden="true"
+  >
+  </div>
 </section>

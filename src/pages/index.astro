@@ -1,45 +1,59 @@
 ---
-import { cn } from 'san-webkit-next/ui/utils'
 import Footer from 'san-webkit-next/ui/app/Footer'
-import BaseLayout from "../layouts/BaseLayout.astro"
-import SEO from "../components/seo.astro"
-import Category from "../components/Category/Category.svelte"
-import { REFERENCES, GUIDES } from "../docs/navigation"
-import GettingStarted from "../components/GettingStarted/GettingStarted.astro"
-import SocialBanner from '../components/Banner/SocialBanner.astro'
-import Hero from '../components/Hero/Hero.svelte'
-import styles from './index.module.scss'
+
+import BaseLayout from '$layouts/BaseLayout.astro'
+
+import Seo from '$components/seo.astro'
+import Category from '$components/Category/Category.svelte'
+import GettingStarted from '$components/GettingStarted/GettingStarted.astro'
+import SocialBanner from '$components/Banner/SocialBanner.astro'
+import Hero from '$components/Hero/Hero.svelte'
+
+import { REFERENCES, GUIDES } from '../docs/navigation'
 ---
 
 <BaseLayout>
-  <SEO title="Crypto Academy: Learn How to Analyze Cryptocurrency Market" />
+  <Seo title="Crypto Academy: Learn How to Analyze Cryptocurrency Market" />
 
   <section class="flex flex-col">
-
-    <Hero client:only="svelte" />
+    <Hero client:load />
 
     <div class="container">
-      <GettingStarted class={styles.startBlock} />
-      <h4 class="text-rhino text-lg mt-20 mx-0 mb-8 sm:mt-12 sm:mb-5">Guides</h4>
+      <GettingStarted class="mx-auto mb-20 mt-20 sm:mb-0 sm:mt-7" />
+      <h4 class="mx-0 mb-8 mt-20 text-lg text-rhino sm:mb-5 sm:mt-12">
+        Guides
+      </h4>
 
-      <div class="w-full grid gap-6 grid-cols-4 md:grid-cols-2">
-        {GUIDES.map(({ title, icon, ...rest }) => (
-          <Category client:visible key={title} icon={icon} title={title} {...rest} />
-        ))}
+      <div class="grid w-full grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
+        {
+          GUIDES.map(({ title, icon, ...rest }) => (
+            <Category
+              client:idle
+              key={title}
+              icon={icon}
+              title={title}
+              {...rest}
+            />
+          ))
+        }
       </div>
 
-      <h4 class="text-rhino text-lg mt-20 mx-0 mb-8 sm:mt-12 sm:mb-5">References</h4>
+      <h4 class="mx-0 mb-8 mt-20 text-lg text-rhino sm:mb-5 sm:mt-12">
+        References
+      </h4>
 
-      <div class="w-full grid gap-6 grid-cols-2 md:grid-cols-2">
-        {REFERENCES.map(({ title, ...rest }) => (
-          <Category
-            client:visible
-            wide
-            title={title}
-            {...rest}
-            maxWidth="295px"
-          />
-        ))}
+      <div class="grid w-full grid-cols-2 gap-6 md:grid-cols-2 sm:grid-cols-1">
+        {
+          REFERENCES.map(({ title, ...rest }) => (
+            <Category
+              client:idle
+              wide
+              title={title}
+              {...rest}
+              maxWidth="295px"
+            />
+          ))
+        }
       </div>
 
       <SocialBanner />

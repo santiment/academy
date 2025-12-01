@@ -1,13 +1,16 @@
 <script lang="ts">
   import { cn } from 'san-webkit-next/ui/utils'
   import Input from 'san-webkit-next/ui/core/Input'
-  import styles from './Search.module.scss'
 </script>
 
-<div class={cn(styles.wrapper, styles.wrapper__small)}>
+<div class={cn(
+  'w-full bg-athens flex flex-col items-center relative',
+  'w-[296px] ml-auto bg-none z-[1000] items-baseline',
+  'sm:hidden'
+)}>
   <Input
     id="search"
-    inputClass={styles.input}
+    inputClass="w-[296px] h-8 sm:w-[250px] sm:h-10 pl-11"
     placeholder="Search docs"
     icon="search"
   />

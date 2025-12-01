@@ -9,6 +9,8 @@
 
   const { children }: TProps = $props()
 
+  // TODO: Probably need to add auth
+
   onMount(() => {
     const settings = {
       app_id,

@@ -3,6 +3,7 @@ import Svg from 'san-webkit-next/ui/core/Svg'
 import { titleToSlug } from '../../utils/docs'
 import { isCategoryActive, isArticleActive } from './utils'
 import styles from './Sidebar.module.scss'
+import { cn } from 'san-webkit-next/ui/utils'
 
 type Article =
   | string
@@ -25,37 +26,55 @@ const isOpenInitial = isActive
 ---
 
 <li
-  class={`${styles.category__wrapper} ${
-    isOpenInitial ? styles.category__opened : ''
-  }`}
+  class={cn('mt-3 mx-0 mb-3.5', isOpenInitial ? styles.category__opened : '')}
 >
-  <div class={`${styles.category} ${isActive ? styles.category__active : ''}`}>
+  <div class={cn(styles.category, isActive ? styles.category__active : null)}>
     <a href={`/${titleToSlug(title)}/`} class={styles.category__title}>
       {title}
     </a>
 
-    {articles.length > 0 && (
-    <Svg id="arrow-right" w={6} class={styles.arrow} />
-    )}
+    {
+      articles.length > 0 && (
+        <Svg
+          id="arrow-right"
+          w={6}
+          class={cn(
+            'mr-0.5 box-content cursor-pointer rounded px-2.5 py-2 transition-all duration-75 ease-in-out',
+            isActive ? 'visible' : 'invisible'
+          )}
+        />
+      )
+    }
   </div>
 
   <ul class={styles.articles}>
-    {articles.map((article, idx) => {
-      const slugTitle = typeof article === 'string' ? article : article.slug || article.title || ''
-      const linkTitle = typeof article === 'string' ? article : article.title || article.slug || ''
+    {
+      articles.map((article, idx) => {
+        const slugTitle =
+          typeof article === 'string'
+            ? article
+            : article.slug || article.title || ''
+        const linkTitle =
+          typeof article === 'string'
+            ? article
+            : article.title || article.slug || ''
 
-      return (
-        <li>
-          <a
-            href={`/${titleToSlug(title)}/${titleToSlug(slugTitle)}/`}
-            class={`${styles.article} ${
-              isArticleActive(active, title, slugTitle) ? styles.article__active : ''
-            }`}
-          >
-            {linkTitle}
-          </a>
-        </li>
-      )
-    })}
+        return (
+          <li>
+            <a
+              href={`/${titleToSlug(title)}/${titleToSlug(slugTitle)}/`}
+              class={cn(
+                styles.article,
+                isArticleActive(active, title, slugTitle)
+                  ? styles.article__active
+                  : null
+              )}
+            >
+              {linkTitle}
+            </a>
+          </li>
+        )
+      })
+    }
   </ul>
 </li>

@@ -1,25 +1,35 @@
 ---
-  import { cn } from 'san-webkit-next/ui/utils'
-  import Search from "../../components/Search/Search.svelte"
-  import Logo from './Logo.astro'
-  import ProductsButton from '../ProductsButton/ProductsButton.svelte'
-  import styles from './Nav.module.scss'
-  import { AskAIButton } from 'san-webkit-next/ui/app/AIChatbot'
-
-  const { fixedHeader = true } = Astro.props
+import { cn } from 'san-webkit-next/ui/utils'
+import Svg from 'san-webkit-next/ui/core/Svg'
+import Search from '../../components/Search/Search.svelte'
+import ProductsButton from '../ProductsButton/ProductsButton.svelte'
+import { AskAIButton } from 'san-webkit-next/ui/app/AIChatbot'
 ---
 
-<header class={cn(styles.wrapper, fixedHeader && styles.fixed)}>
-  <div class={cn(styles.header, 'container')}>
-    <div class={styles.headerLeft}>
-      <Logo />
+<header
+  class={cn(
+    'select-none w-full bg-white fixed top-0 z-[2] border-b border-b-porcelain'
+  )}
+>
+  <div
+    class={cn(
+      'py-5 px-3.5 flex items-center justify-between h-[70px] relative sm:w-full',
+      'container'
+    )}
+  >
+    <div class="flex">
+      <a class={cn('inline-flex items-center [&>svg]:fill-rhino')} href="/">
+        <Svg illus id="san-logo" w={32} />
 
-      <ProductsButton client:load="svelte" />
+        <span class="mx-2 text-base font-medium text-rhino">Academy</span>
+      </a>
+
+      <ProductsButton client:load transition:persist />
     </div>
-    <div class={styles.headerRight}>
-      <Search client:load="svelte" />
+    <div class="flex justify-end gap-4">
+      <Search client:load transition:persist />
 
-      <AskAIButton client:only="svelte" />
+      <AskAIButton client:load transition:persist />
     </div>
   </div>
 </header>

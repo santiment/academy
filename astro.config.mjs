@@ -30,6 +30,7 @@ export default (async () => {
     },
     alias: {
       '$components': path.resolve(__dirname, './src/components'),
+      '$layouts': path.resolve(__dirname, './src/layouts'),
     }
   })
 
@@ -38,19 +39,19 @@ export default (async () => {
       svelte({
         extensions: ['.svelte'],
       }),
-      // astroExpressiveCode({
-      //   plugins: [pluginLineNumbers()],
-      //   themes: ['min-light'],
-      //   shiki: {
-      //     langAlias: {
-      //       'graphql-explorer': 'graphql',
-      //     },
-      //   },
-      //   frames: {
-      //     showCopyToClipboardButton: true,
-      //     frameBoxShadowCssValue: 'none',
-      //   },
-      // }),
+      astroExpressiveCode({
+        plugins: [pluginLineNumbers()],
+        themes: ['min-light'],
+        shiki: {
+          langAlias: {
+            'graphql-explorer': 'graphql',
+          },
+        },
+        frames: {
+          showCopyToClipboardButton: true,
+          frameBoxShadowCssValue: 'none',
+        },
+      }),
       mdx({
         syntaxHighlight: 'shiki',
         syntaxHighlight: false,

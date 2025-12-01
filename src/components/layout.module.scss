@@ -1,5 +1,5 @@
-@import "~@santiment-network/ui/main.scss";
-@import "~@santiment-network/ui/mixins.scss";
+@import "@santiment-network/ui/main.scss";
+@import "@santiment-network/ui/mixins.scss";
 
 @font-face {
   font-family: 'Proxima Nova';
@@ -43,23 +43,15 @@ body {
 
 .main {
   padding: 70px 0 0;
-
-  @include responsive('phone', 'phone-xs', 'tablet') {
-    padding: 70px 0 0;
-  }
 }
 
 .empty {
   display: flex;
   width: 285px;
 
-  @include responsive('desktop') {
-    flex-grow:1;
-  }
+  flex-grow: 1;
 
-  @include responsive("phone-xs", "phone", "tablet") {
-      display: none;
-  }
+  @apply md:hidden
 }
 
 .container {
@@ -72,6 +64,7 @@ body {
       flex-direction: column;
       align-items: center;
       padding: 85px 40px 0;
+      min-height: 86vh;
 
       @include responsive('laptop', 'desktop', 'tablet') {
         min-height: 86vh;
@@ -93,25 +86,18 @@ body {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-        @include responsive('desktop') {
-          width: 885px;
-        }
 
-        @include responsive('laptop', 'desktop') {
-          z-index: 1;
-        }
+      @include responsive('desktop') {
+        width: 885px;
+      }
+
+      @include responsive('laptop', 'desktop') {
+        z-index: 1;
+      }
     }
 
 
   }
-}
-
-a:hover {
-  color: var(--jungle-green);
-}
-
-:global(#___gatsby) {
-  overflow-x: hidden;
 }
 
 :global(.intercom-namespace .intercom-1tsyd6q) {

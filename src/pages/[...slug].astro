@@ -1,7 +1,8 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
-import DocsLayout from '../layouts/DocsLayout.astro'
 import { getCollection, getEntry, render } from 'astro:content'
+
+import BaseLayout from '$layouts/BaseLayout.astro'
+import DocsLayout from '$layouts/DocsLayout.astro'
 
 import H1 from '$components/markdown/headings/H1.astro'
 import H2 from '$components/markdown/headings/H2.astro'
@@ -11,6 +12,11 @@ import H5 from '$components/markdown/headings/H5.astro'
 import Link from '$components/markdown/Link.svelte'
 import Blockquote from '$components/markdown/Blockquote.svelte'
 import Pre from '$components/markdown/Pre/Pre.astro'
+
+export type TBreadcrump = {
+  pathname: string
+  label?: string
+}
 
 export async function getStaticPaths() {
   const allDocs = await getCollection('docs')
@@ -73,7 +79,7 @@ const getBreadcrumbs = (path: string) => {
   return [...finalBreadcrumbs, lastCrumb]
 }
 
-const breadcrumbs = [
+const breadcrumbs: TBreadcrump[] = [
   { pathname: '/', label: 'Home' },
   ...getBreadcrumbs(currentDoc.id),
 ]

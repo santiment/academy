@@ -10,9 +10,7 @@
   width: 100%;
   display: flex;
 
-  @include responsive('phone', 'phone-xs', 'tablet') {
-    display: none;
-  }
+  @apply md:hidden
 }
 
 .content {
@@ -50,8 +48,9 @@
   margin: 32px 20px 16px 0;
   padding-top: 32px;
   border-top: 1px solid var(--porcelain);
-  @include text('body-3', 'm');
   color: var(--casper);
+
+  @apply text-sm font-medium;
 
   &:first-child {
     border-top: none;
@@ -77,7 +76,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 4px 10px;
-  @include text('body-2');
+  @apply text-base;
+
 
   &__title {
     width: 100%;
@@ -168,7 +168,7 @@
     color: var(--green);
   }
 
-  @include text('body-2');
+  @apply text-base;
 
   &__active {
     color: var(--green);

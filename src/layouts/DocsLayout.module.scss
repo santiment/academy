@@ -10,30 +10,30 @@
   color: var(--rhino);
   word-break: break-word;
 
-  @include text('body-1');
+ @apply text-lg;
   line-height: 28px;
 
   @include responsive('phone', 'phone-xs', 'tablet') {
-    @include text('body-2');
+    @apply text-base;
   }
 
   h1 {
     color: var(--rhino);
-    @include text("h3");
+    @apply text-3xl;
     margin: 26px 0 32px;
     font-weight: 500;
   }
 
   h2 {
     color: var(--rhino);
-    @include text("h4");
+    @apply text-xl;
     margin: 56px 0 24px;
     font-weight: 500;
   }
 
   h3 {
     color: var(--rhino);
-    @include text("h4");
+    @apply text-xl;
     margin: 40px 0 24px;
     font-size: 22px;
   }
@@ -41,7 +41,7 @@
   h4,
   h5 {
     color: var(--rhino);
-    @include text("body-1", "l");
+    @apply text-lg font-semibold;
     margin: 12px 0 16px;
   }
 
@@ -240,12 +240,12 @@
     text-align: center;
     color: var(--rhino);
 
-    @include text("body-3", "l");
+    @apply text-sm font-semibold;
   }
 
   td {
     color: var(--rhino);
-    @include text("body-3");
+    @apply text-sm;
     text-align: center;
     padding: 12px 16px 12px;
   }

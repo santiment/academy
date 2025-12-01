@@ -1,3 +1,4 @@
+import type { MarkdownHeading } from 'astro'
 import { copy } from 'san-webkit-next/utils'
 
 export const isSSR: boolean = typeof window === 'undefined'
@@ -8,10 +9,13 @@ export interface UsePageHashReturn {
   scrollToTargetAdjusted: (e: MouseEvent, id: string, hasCopy?: boolean) => void
 }
 
-export function usePageHash(elementIDs: string[] = []): UsePageHashReturn {
+export function usePageHash(headings: MarkdownHeading[] = []): UsePageHashReturn {
+  const elementIDs = $derived(headings.map((heading) => heading.slug))
+
   let pageHash = $state<string | undefined>(
     isSSR ? undefined : window.location.hash
   )
+
   let scrollListenderEnabled = $state<boolean>(true)
 
   function updateHash(hash: string): void {
@@ -111,7 +115,7 @@ export function usePageHash(elementIDs: string[] = []): UsePageHashReturn {
     updateHash(`#${id}`)
 
     if (!isSSR && hasCopy) {
-      copy(document.URL, () => {})
+      copy(document.URL, () => { })
     }
   }
 

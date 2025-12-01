@@ -1,4 +1,7 @@
 ---
+import type { MarkdownHeading } from 'astro'
+import type { TBreadcrump } from '../pages/[...slug].astro'
+
 import { cn } from 'san-webkit-next/ui/utils'
 import { FooterBottom } from 'san-webkit-next/ui/app/Footer'
 import Sidebar from '../components/Sidebar/Sidebar.astro'
@@ -10,17 +13,17 @@ import H1 from '$components/markdown/headings/H1.astro'
 import { sluggify } from 'san-webkit-next/utils/url'
 
 type Props = {
-  crumbs: any[]
-  currentSlug: any
-  title: any
-  headings: any
+  crumbs: TBreadcrump[]
+  currentSlug: string
+  title: string
+  headings: MarkdownHeading[]
 }
 
 const { crumbs = [], currentSlug, headings, title } = Astro.props
 ---
 
 <div class="flex flex-col">
-  <Sidebar />
+  <Sidebar transition:persist />
 
   <div class="flex w-full">
     <div class="md:none flex w-[286px] flex-grow md:flex-grow-0"></div>
@@ -29,7 +32,7 @@ const { crumbs = [], currentSlug, headings, title } = Astro.props
       <main
         class="flex min-w-[86vh] flex-col px-10 pb-0 pt-[85px] md:px-0"
         data-pagefind-body
-        transition:animate="slide"
+        transition:animate="fade"
       >
         <div class={cn(styles.wrapper)}>
           <Breadcrumb crumbs={crumbs} crumbLabel={currentSlug} />
@@ -44,7 +47,9 @@ const { crumbs = [], currentSlug, headings, title } = Astro.props
           </div>
         </div>
       </main>
-      <div class="mt-14 [&>div]:py-7 [&>div]:pl-[55px] [&>div]:pr-[68px]">
+      <div
+        class="mt-14 [&>div]:py-7 [&>div]:pl-[55px] [&>div]:pr-[68px] [&_svg]:fill-rhino"
+      >
         <FooterBottom />
       </div>
     </div>

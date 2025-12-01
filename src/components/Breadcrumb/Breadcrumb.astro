@@ -1,25 +1,34 @@
 ---
 import { cn } from 'san-webkit-next/ui/utils'
 import Svg from 'san-webkit-next/ui/core/Svg'
+import type { TBreadcrump } from '../../pages/[...slug].astro'
 
 type Props = {
-  crumbs: { pathname: string, label: string }[]
+  crumbs: TBreadcrump[]
   crumbLabel: string
   class?: string
 }
 
 const { crumbs, class: className } = Astro.props
-
 ---
 
-<nav class={cn("mt-[18px] px-0 text-sm sm:mb-5", className)}>
+<nav class={cn('mt-[18px] px-0 text-sm sm:mb-5', className)}>
   <ul class="flex">
-    {crumbs.map(({ pathname, label }, index) => (
-      <li class="flex items-center before:!content-[''] before:m-0 before:w-0">
-      <a href={pathname} class="hover:!no-underline !text-rhino hover:!text-green-hover">{label}</a>
+    {
+      crumbs.map(({ pathname, label }, index) => (
+        <li class="flex items-center before:m-0 before:w-0 before:!content-['']">
+          <a
+            href={pathname}
+            class="!text-rhino hover:!text-green-hover hover:!no-underline"
+          >
+            {label}
+          </a>
 
-        {index < crumbs.length - 1 && <Svg id="arrow-right" w={8} class="mx-3 scale-125 fill-rhino" />}
-      </li>
-    ))}
+          {index < crumbs.length - 1 && (
+            <Svg id="arrow-right" w={8} class="mx-3 scale-125 fill-rhino" />
+          )}
+        </li>
+      ))
+    }
   </ul>
 </nav>

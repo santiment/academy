@@ -25,7 +25,7 @@ export const GUIDES = [
         title: 'Analyze Speculative Activity with Exchange Metrics',
       },
       {
-        slug: 'spot tops with price network activity divergences',
+        slug: 'how to spot tops with price network activity divergences',
         title: 'Spot Tops with Price - Network Activity divergences',
       },
       {

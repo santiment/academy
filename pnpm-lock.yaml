@@ -30,8 +30,8 @@ dependencies:
     specifier: ^8.0.0
     version: 8.0.0
   san-webkit-next:
-    specifier: github:santiment/san-webkit#lib-727dddcc-131125
-    version: github.com/santiment/san-webkit/eada087bc20c00a538cbf177092dd2755c0adad8(@amplitude/rrweb@2.0.0-alpha.33)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.48.2)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.42.3)(tailwind-merge@2.6.0)(tailwindcss@3.4.18)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@7.1.12)(wagmi@2.19.0)
+    specifier: github:santiment/san-webkit#lib-292a0d40-021225
+    version: github.com/santiment/san-webkit/95902f9e0fe3dcddccf60d69fa49f79fb1586d80(@amplitude/rrweb@2.0.0-alpha.33)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.48.2)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.42.3)(tailwind-merge@2.6.0)(tailwindcss@3.4.18)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@7.1.12)(wagmi@2.19.0)
   svelte:
     specifier: ^5.33.7
     version: 5.42.3
@@ -96,11 +96,6 @@ devDependencies:
     version: 7.1.12(sass-embedded@1.93.2)
 
 packages:
-
-  /@adraffy/ens-normalize@1.10.0:
-    resolution: {integrity: sha512-nA9XHtlAkYfJxY7bce8DcN7eKxWWCWkU+1GR9d+U6MbNpfwQp8TI7vqOsBsMcHoT4mBu2kypKoSKnghEzOOq5Q==}
-    requiresBuild: true
-    dev: false
 
   /@adraffy/ens-normalize@1.11.1:
     resolution: {integrity: sha512-nhCBV3quEgesuf7c7KYfperqSS14T8bYuvJ8PcLJp6znkZpFc0AuW4qBtr8eKVyPPe/8RSr7sglCWPU5eaxwKQ==}
@@ -1464,13 +1459,6 @@ packages:
     engines: {node: ^14.21.3 || >=16}
     dev: false
 
-  /@noble/curves@1.4.0:
-    resolution: {integrity: sha512-p+4cb332SFCrReJkCYe8Xzm0OWi4Jji5jVdIZRL/PmacmDkFNw6MrrV+gGpiPxLHbV+zKFRywUWbaseT+tZRXg==}
-    requiresBuild: true
-    dependencies:
-      '@noble/hashes': 1.4.0
-    dev: false
-
   /@noble/curves@1.4.2:
     resolution: {integrity: sha512-TavHr8qycMChk8UwMld0ZDRvatedkzWfH8IiaeGCfymOP5i0hSCozz9vHOL0nkwk7HRMlFnAiKpS2jrUmSybcw==}
     requiresBuild: true
@@ -1511,12 +1499,6 @@ packages:
   /@noble/hashes@1.4.0:
     resolution: {integrity: sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==}
     engines: {node: '>= 16'}
-    requiresBuild: true
-    dev: false
-
-  /@noble/hashes@1.5.0:
-    resolution: {integrity: sha512-1j6kQFb7QRru7eKN3ZDvRcP13rugwdxZqCjbiAVZfIJwgj2A65UmT4TgARXGlXgnRkORLTDTrO19ZErt7+QXgA==}
-    engines: {node: ^14.21.3 || >=16}
     requiresBuild: true
     dev: false
 
@@ -2650,7 +2632,7 @@ packages:
     resolution: {integrity: sha512-N5p/ulfnnA2Pi2M3YeWjULeWbjo7ei22JwU/IXnhoHzKq3pYCN6ynL9mJBOlvDVv892EgLPCWCOwQk/uBT2v0Q==}
     dependencies:
       '@safe-global/safe-gateway-typescript-sdk': 3.23.1
-      viem: 2.21.7(typescript@5.9.3)(zod@3.25.76)
+      viem: 2.38.5(typescript@5.9.3)(zod@3.25.76)
     transitivePeerDependencies:
       - bufferutil
       - typescript
@@ -2714,14 +2696,6 @@ packages:
     requiresBuild: true
     dependencies:
       '@noble/hashes': 1.4.0
-      '@scure/base': 1.1.9
-    dev: false
-
-  /@scure/bip39@1.4.0:
-    resolution: {integrity: sha512-BEEm6p8IueV/ZTfQLp/0vhw4NPnT9oWf5+28nvmeUICjP99f4vr2d+qc7AVGDDtwRep6ifR43Yed9ERVmiITzw==}
-    requiresBuild: true
-    dependencies:
-      '@noble/hashes': 1.5.0
       '@scure/base': 1.1.9
     dev: false
 
@@ -4029,22 +4003,6 @@ packages:
 
   /@xstate/fsm@1.6.5:
     resolution: {integrity: sha512-b5o1I6aLNeYlU/3CPlj/Z91ybk1gUsKT+5NAJI+2W4UjvS5KLG28K9v5UvNoFVjHV8PajVZ00RH3vnjyQO7ZAw==}
-    dev: false
-
-  /abitype@1.0.5(typescript@5.9.3)(zod@3.25.76):
-    resolution: {integrity: sha512-YzDhti7cjlfaBhHutMaboYB21Ha3rXR9QTkNJFzYC4kC8YclaiwPBBBJY8ejFdu2wnJeZCVZSMlQJ7fi8S6hsw==}
-    requiresBuild: true
-    peerDependencies:
-      typescript: '>=5.0.4'
-      zod: ^3 >=3.22.0
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-      zod:
-        optional: true
-    dependencies:
-      typescript: 5.9.3
-      zod: 3.25.76
     dev: false
 
   /abitype@1.0.8(typescript@5.9.3)(zod@3.25.76):
@@ -5986,15 +5944,6 @@ packages:
 
   /isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
-
-  /isows@1.0.4(ws@8.17.1):
-    resolution: {integrity: sha512-hEzjY+x9u9hPmBom9IIAqdJCwNLax+xrPb51vEPpERoFlIxgmZcHzsT5jKG06nvInKOBGvReAVz80Umed5CczQ==}
-    requiresBuild: true
-    peerDependencies:
-      ws: '*'
-    dependencies:
-      ws: 8.17.1
-    dev: false
 
   /isows@1.0.6(ws@8.18.0):
     resolution: {integrity: sha512-lPHCayd40oW98/I0uvgaHKWCSvkzY27LjWLbtzOm64yQ+G3Q5npjjbdppU65iZXkK1Zt+kH9pfegli0AYfwYYw==}
@@ -9296,31 +9245,6 @@ packages:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  /viem@2.21.7(typescript@5.9.3)(zod@3.25.76):
-    resolution: {integrity: sha512-PFgppakInuHX31wHDx1dzAjhj4t6Po6WrWtutDi33z2vabIT0Wv8qT6tl7DLqfLy2NkTqfN2mdshYLeoI5ZHvQ==}
-    requiresBuild: true
-    peerDependencies:
-      typescript: '>=5.0.4'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@adraffy/ens-normalize': 1.10.0
-      '@noble/curves': 1.4.0
-      '@noble/hashes': 1.4.0
-      '@scure/bip32': 1.4.0
-      '@scure/bip39': 1.4.0
-      abitype: 1.0.5(typescript@5.9.3)(zod@3.25.76)
-      isows: 1.0.4(ws@8.17.1)
-      typescript: 5.9.3
-      webauthn-p256: 0.0.5
-      ws: 8.17.1
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
-      - zod
-    dev: false
-
   /viem@2.23.2(typescript@5.9.3)(zod@3.25.76):
     resolution: {integrity: sha512-NVmW/E0c5crMOtbEAqMF0e3NmvQykFXhLOc/CkLIXOlzHSA6KXVz3CYVmaKqBF8/xtjsjHAGjdJN3Ru1kFJLaA==}
     requiresBuild: true
@@ -9620,14 +9544,6 @@ packages:
 
   /web-vitals@5.1.0:
     resolution: {integrity: sha512-ArI3kx5jI0atlTtmV0fWU3fjpLmq/nD3Zr1iFFlJLaqa5wLBkUSzINwBPySCX/8jRyjlmy1Volw1kz1g9XE4Jg==}
-    dev: false
-
-  /webauthn-p256@0.0.5:
-    resolution: {integrity: sha512-drMGNWKdaixZNobeORVIqq7k5DsRC9FnG201K2QjeOoQLmtSDaSsVZdkg6n5jUALJKcAG++zBPJXmv6hy0nWFg==}
-    requiresBuild: true
-    dependencies:
-      '@noble/curves': 1.9.7
-      '@noble/hashes': 1.8.0
     dev: false
 
   /webextension-polyfill@0.10.0:
@@ -9946,9 +9862,9 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
-  github.com/santiment/san-webkit/eada087bc20c00a538cbf177092dd2755c0adad8(@amplitude/rrweb@2.0.0-alpha.33)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.48.2)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.42.3)(tailwind-merge@2.6.0)(tailwindcss@3.4.18)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@7.1.12)(wagmi@2.19.0):
-    resolution: {tarball: https://codeload.github.com/santiment/san-webkit/tar.gz/eada087bc20c00a538cbf177092dd2755c0adad8}
-    id: github.com/santiment/san-webkit/eada087bc20c00a538cbf177092dd2755c0adad8
+  github.com/santiment/san-webkit/95902f9e0fe3dcddccf60d69fa49f79fb1586d80(@amplitude/rrweb@2.0.0-alpha.33)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.48.2)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.42.3)(tailwind-merge@2.6.0)(tailwindcss@3.4.18)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@7.1.12)(wagmi@2.19.0):
+    resolution: {tarball: https://codeload.github.com/santiment/san-webkit/tar.gz/95902f9e0fe3dcddccf60d69fa49f79fb1586d80}
+    id: github.com/santiment/san-webkit/95902f9e0fe3dcddccf60d69fa49f79fb1586d80
     name: san-webkit-next
     version: 0.0.1
     hasBin: true
