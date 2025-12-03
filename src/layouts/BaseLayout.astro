@@ -1,20 +1,37 @@
 ---
 import '../app.css'
 import 'san-webkit-next/app.css'
+
+import { ClientRouter } from 'astro:transitions'
 import Notifications from 'san-webkit-next/ui/core/Notifications'
 
-import Nav from '../components/Nav/Nav.astro'
-import Intercom from '../components/Intercom.svelte'
-import Tracking from '../components/Tracking.svelte'
-import CookiesPopupWrapper from '../components/CookiesPopupWrapper.svelte'
-import { ClientRouter } from 'astro:transitions'
+import Nav from '$components/Nav/Nav.astro'
+import Intercom from '$components/Intercom.svelte'
+import Tracking from '$components/Tracking.svelte'
+import CookiesPopupWrapper from '$components/CookiesPopupWrapper.svelte'
 import { cn } from 'san-webkit-next/ui/utils'
+import HelpFeedback from '$components/HelpFeedback.svelte'
 
 type Props = {
   class?: string
 }
 
 const { class: className = '' } = Astro.props
+
+// TODO:
+// 1. Changelog page
+// 2. Add search
+// 3. Add SEO
+// 4. Double check all styles
+// 5. Dynamic page title
+// 6. Optimize some components
+// 7. Connect footer edited page section
+// 8. Add auth for Intercom
+// 9. Move blockquote to styles
+// 10. Simplify icons hover
+// 11. Add border between contacts section on index page
+// 12. Add 404 page
+// 13. Add analytics
 ---
 
 <!doctype html>
@@ -25,20 +42,21 @@ const { class: className = '' } = Astro.props
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>Academy</title>
+
     <ClientRouter />
   </head>
 
   <body class={cn('pt-16 overflow-x-hidden', className)}>
+    <Intercom client:only="svelte" />
+    <Tracking client:only="svelte" />
     <CookiesPopupWrapper client:only="svelte" />
-    <Intercom client:only="svelte">
-      <Tracking client:only="svelte">
-        <div data-vaul-drawer-wrapper>
-          <Nav transition:persist />
-          <slot />
-        </div>
-      </Tracking>
-    </Intercom>
+    <HelpFeedback client:only="svelte" />
+    <Notifications client:only="svelte" />
 
-    <Notifications client:load />
+    <div data-vaul-drawer-wrapper>
+      <Nav transition:persist />
+
+      <slot />
+    </div>
   </body>
 </html>

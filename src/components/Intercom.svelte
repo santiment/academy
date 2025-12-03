@@ -33,5 +33,3 @@
     }
   })
 </script>
-
-{@render children()}

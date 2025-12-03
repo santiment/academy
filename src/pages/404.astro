@@ -1,0 +1,27 @@
+---
+import BaseLayout from '$layouts/BaseLayout.astro'
+
+import Seo from '$components/seo.astro'
+import Button from 'san-webkit-next/ui/core/Button'
+
+import styles from './404.module.scss'
+---
+
+<BaseLayout>
+  <Seo title="404: Not found" />
+
+  <div class={styles.wrapper}>
+    <h1
+      class="mb-8 text-4xl font-semibold text-rhino md:text-center md:text-xl"
+    >
+      Looks like you got lost
+    </h1>
+    <p class="mb-10 max-w-80 text-lg text-rhino md:text-center md:text-base">
+      The page you're looking for is missing or your link is incorrect.
+    </p>
+
+    <Button variant="fill" href="/" class="h-10 w-auto">
+      Back to home page
+    </Button>
+  </div>
+</BaseLayout>

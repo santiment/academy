@@ -9,89 +9,32 @@
   font-weight: normal;
   color: var(--rhino);
   word-break: break-word;
-
- @apply text-lg;
   line-height: 28px;
 
-  @include responsive('phone', 'phone-xs', 'tablet') {
-    @apply text-base;
-  }
+  @apply text-lg md:text-base;
 
   h1 {
-    color: var(--rhino);
-    @apply text-3xl;
+    @apply text-3xl text-rhino;
     margin: 26px 0 32px;
     font-weight: 500;
   }
 
   h2 {
-    color: var(--rhino);
-    @apply text-xl;
+    @apply text-xl text-rhino;
     margin: 56px 0 24px;
     font-weight: 500;
   }
 
   h3 {
-    color: var(--rhino);
-    @apply text-xl;
+    @apply text-xl text-rhino;
     margin: 40px 0 24px;
     font-size: 22px;
   }
 
   h4,
   h5 {
-    color: var(--rhino);
-    @apply text-lg font-semibold;
+    @apply text-lg text-rhino font-semibold;
     margin: 12px 0 16px;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    position: relative;
-    scroll-margin-top: 100px;
-
-    &:hover>.anchor {
-      opacity: 1;
-    }
-  }
-
-  .blockquote {
-    padding: 8px 18px;
-    border-radius: 8px;
-    border: 1px solid var(--porcelain);
-    margin: 20px 0;
-    border-left: 3px solid var(--green);
-
-    &__warning {
-      border-left: 3px solid var(--orange);
-    }
-
-    &__error {
-      border-left: 3px solid var(--red);
-    }
-  }
-
-
-  .anchor {
-    opacity: 0;
-    fill: var(--waterloo);
-    position: absolute;
-    width: 1em;
-    left: -1em;
-    top: -1px;
-    color: inherit;
-    text-decoration: none;
-    border-bottom: none;
-
-    &:hover {
-      fill: var(--green);
-    }
-
-    @include responsive('phone-xs', 'phone', 'tablet') {
-      display: none;
-    }
   }
 
   img {
@@ -115,51 +58,6 @@
     border-top: 1px solid var(--porcelain);
     margin: 18px 0;
   }
-
-  // code {
-  //   border-radius: 4px;
-  //   border: 1px solid var(--porcelain);
-  //   display: inline-block;
-  //   margin: 0 2px 2px 0;
-  //   line-height: 20px;
-  //   font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
-  // }
-
-  // pre {
-  //   border: 1px solid var(--porcelain);
-  //   border-radius: 4px;
-  //   background: var(--white) !important;
-  //   overflow-x: auto;
-  //   overflow-y: hidden;
-  //   margin: 20px 0;
-  //   padding: 0 !important;
-  //
-  //   code {
-  //     white-space: pre;
-  //     border: none;
-  //     overflow-y: hidden;
-  //     padding: 10px;
-  //     margin-bottom: -10px;
-  //     font-size: 16px;
-  //     background: inherit;
-  //   }
-  //
-  //   span {
-  //     font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace !important;
-  //   }
-  //
-  //   code:first-child {
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     bottom: 10px;
-  //     border: 1px solid var(--porcelain);
-  //   }
-  //
-  //   code:last-child {
-  //     padding: 10px 40px;
-  //   }
-  // }
 
   iframe {
     width: 100%;
@@ -282,106 +180,5 @@
     content: '✅';
     position: absolute;
     left: 12px;
-  }
-}
-
-// .codeWrapper {
-//   position: relative;
-// }
-
-// .copy {
-//   -webkit-tap-highlight-color: transparent;
-//   position: absolute;
-//   right: 1px;
-//   top: 10px;
-//   width: 44px;
-//   text-align: center;
-//   fill: var(--casper);
-//   background: linear-gradient(270deg, #fff, #fff 60%, hsla(0, 0%, 100%, 0));
-//
-//   &:hover {
-//     fill: var(--waterloo);
-//     cursor: pointer;
-//   }
-// }
-//
-// .copied::before {
-//   @include text('caption');
-//
-//   display: block;
-//   content: 'Copied!';
-//   position: absolute;
-//   right: 0;
-//   bottom: 120%;
-//   padding: 3px 10px;
-//   border-radius: 4px;
-//   background: $fiord;
-//   color: $white;
-// }
-
-.checkmark {
-  fill: var(--lima);
-  background: var(--lima-light);
-}
-
-.cross {
-  fill: var(--persimmon);
-  background: var(--persimmon-light);
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-
-  @include responsive('phone-xs') {
-    width: auto;
-    height: auto;
-    background: transparent;
-  }
-}
-
-:global(.san-tokens h2) {
-  font-weight: 400;
-  margin: 32px 0 12px;
-}
-
-
-.container {
-  display: flex;
-  flex-direction: column;
-
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 85px 40px 0;
-
-    @include responsive('laptop', 'desktop', 'tablet') {
-      min-height: 86vh;
-    }
-
-
-    @include responsive('phone', 'phone-xs', 'tablet') {
-      padding: 85px 0 0;
-    }
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-
-    @include responsive('desktop') {
-      width: 885px;
-    }
-
-    @include responsive('laptop', 'desktop') {
-      z-index: 1;
-    }
   }
 }

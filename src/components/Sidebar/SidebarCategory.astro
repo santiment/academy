@@ -19,9 +19,7 @@ interface Props {
 }
 
 const { active = [], title, articles = [] } = Astro.props
-
 const isActive = isCategoryActive(active, title)
-
 const isOpenInitial = isActive
 ---
 
