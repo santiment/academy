@@ -5,10 +5,10 @@ import type { TBreadcrump } from '../pages/[...slug].astro'
 import { FooterBottom } from 'san-webkit-next/ui/app/Footer'
 import { sluggify } from 'san-webkit-next/utils/url'
 
-import Sidebar from '$components/Sidebar/Sidebar.astro'
-import Breadcrumb from '$components/Breadcrumb/Breadcrumb.astro'
-import ArticleFooter from '$components/ArticleFooter/index.svelte'
-import ArticleHeadings from '$components/ArticleHeadings/index.svelte'
+import Sidebar from '$components/Sidebar.astro'
+import Breadcrumb from '$components/Breadcrumb.astro'
+import ArticleFooter from '$components/ArticleFooter.svelte'
+import ArticleHeadings from '$components/ArticleHeadings.svelte'
 import H1 from '$components/markdown/headings/H1.astro'
 
 type Props = {

@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { usePageHash } from '../../utils/utils.svelte.js'
   import { cn } from 'san-webkit-next/ui/utils'
   import Button from 'san-webkit-next/ui/core/Button'
   import type { MarkdownHeading } from 'astro'
+
+  import { usePageHash } from '../utils/utils.svelte.js'
 
   const TOPICS = {
     sanbase: { href: 'https://app.santiment.net/', title: 'Sanbase' },

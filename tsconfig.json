@@ -20,6 +20,9 @@
       ],
       "$layouts/*": [
         "src/layouts/*"
+      ],
+      "$assets/*": [
+        "src/assets/*"
       ]
     }
   }

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { ChatInput, useAIChatbotCtx } from 'san-webkit-next/ui/app/AIChatbot'
   import Button from 'san-webkit-next/ui/core/Button'
-  import TurtleWaving from './turtle-waving.svelte';
+  import TurtleWaving from '$assets/turtle-waving.svelte';
 
   useAIChatbotCtx.set({
     type: 'ACADEMY_QA',

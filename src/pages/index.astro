@@ -4,10 +4,10 @@ import Footer from 'san-webkit-next/ui/app/Footer'
 import BaseLayout from '$layouts/BaseLayout.astro'
 
 import Seo from '$components/seo.astro'
-import Category from '$components/Category/Category.svelte'
-import GettingStarted from '$components/GettingStarted/GettingStarted.astro'
-import SocialBanner from '$components/Banner/SocialBanner.astro'
-import Hero from '$components/Hero/Hero.svelte'
+import Category from '$components/Category.svelte'
+import GettingStarted from '$components/GettingStarted.astro'
+import SocialBanner from '$components/SocialBanner.astro'
+import Hero from '$components/Hero.svelte'
 
 import { REFERENCES, GUIDES } from '../docs/navigation'
 ---
@@ -27,13 +27,7 @@ import { REFERENCES, GUIDES } from '../docs/navigation'
       <div class="grid w-full grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
         {
           GUIDES.map(({ title, icon, ...rest }) => (
-            <Category
-              client:idle
-              key={title}
-              icon={icon}
-              title={title}
-              {...rest}
-            />
+            <Category icon={icon} title={title} {...rest} />
           ))
         }
       </div>
@@ -45,13 +39,7 @@ import { REFERENCES, GUIDES } from '../docs/navigation'
       <div class="grid w-full grid-cols-2 gap-6 md:grid-cols-2 sm:grid-cols-1">
         {
           REFERENCES.map(({ title, ...rest }) => (
-            <Category
-              client:idle
-              wide
-              title={title}
-              {...rest}
-              maxWidth="295px"
-            />
+            <Category wide title={title} {...rest} maxWidth="295px" />
           ))
         }
       </div>

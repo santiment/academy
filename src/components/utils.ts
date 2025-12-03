@@ -1,4 +1,4 @@
-import { titleToSlug } from '../../utils/docs'
+import { titleToSlug } from '../utils/docs'
 
 export const isCategoryActive = (active: any[] = [], category: any) =>
   active[0] === titleToSlug(category)
