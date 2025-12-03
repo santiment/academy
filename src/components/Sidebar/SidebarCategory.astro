@@ -1,9 +1,9 @@
 ---
 import Svg from 'san-webkit-next/ui/core/Svg'
+import { cn } from 'san-webkit-next/ui/utils'
+
 import { titleToSlug } from '../../utils/docs'
 import { isCategoryActive, isArticleActive } from './utils'
-import styles from './Sidebar.module.scss'
-import { cn } from 'san-webkit-next/ui/utils'
 
 type Article =
   | string
@@ -23,11 +23,18 @@ const isActive = isCategoryActive(active, title)
 const isOpenInitial = isActive
 ---
 
-<li
-  class={cn('mt-3 mx-0 mb-3.5', isOpenInitial ? styles.category__opened : '')}
->
-  <div class={cn(styles.category, isActive ? styles.category__active : null)}>
-    <a href={`/${titleToSlug(title)}/`} class={styles.category__title}>
+<li class="mx-0 mb-3.5 mt-3">
+  <div
+    class={cn(
+      'group -ml-2.5 flex w-full items-center justify-between rounded-md py-1 px-2.5 text-base transition-colors duration-200',
+      isActive
+        ? 'bg-green-light-1 text-green-hover fill-green-hover'
+        : isOpenInitial
+          ? 'bg-green-light-1 text-rhino fill-green-hover'
+          : 'text-rhino hover:bg-green-light-1 hover:text-green hover:fill-green'
+    )}
+  >
+    <a href={`/${titleToSlug(title)}/`} class="text-inherit w-full">
       {title}
     </a>
 
@@ -38,16 +45,27 @@ const isOpenInitial = isActive
           w={6}
           class={cn(
             'mr-0.5 box-content cursor-pointer rounded px-2.5 py-2 transition-all duration-75 ease-in-out',
-            isActive ? 'visible' : 'invisible'
+            isOpenInitial ? 'rotate-90' : '',
+            isActive || isOpenInitial
+              ? 'visible'
+              : 'invisible group-hover:visible'
           )}
         />
       )
     }
   </div>
 
-  <ul class={styles.articles}>
+  <ul
+    class={cn(
+      'relative transition-all duration-200 ease-in-out',
+      "before:absolute before:left-0 before:top-0 before:block before:h-full before:w-px before:rounded-lg before:bg-porcelain before:content-['']",
+      isOpenInitial
+        ? 'h-auto my-[17px] overflow-visible'
+        : 'h-0 m-0 overflow-hidden'
+    )}
+  >
     {
-      articles.map((article, idx) => {
+      articles.map((article) => {
         const slugTitle =
           typeof article === 'string'
             ? article
@@ -57,14 +75,16 @@ const isOpenInitial = isActive
             ? article
             : article.title || article.slug || ''
 
+        const isItemActive = isArticleActive(active, title, slugTitle)
+
         return (
           <li>
             <a
               href={`/${titleToSlug(title)}/${titleToSlug(slugTitle)}/`}
               class={cn(
-                styles.article,
-                isArticleActive(active, title, slugTitle)
-                  ? styles.article__active
+                'relative block py-1 pl-4 pr-0 text-base text-fiord hover:text-green',
+                isItemActive
+                  ? "text-green before:absolute before:left-0 before:top-0 before:block before:h-full before:w-0.5 before:rounded-lg before:bg-green before:content-['']"
                   : null
               )}
             >

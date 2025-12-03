@@ -3,7 +3,6 @@ import type { MarkdownHeading } from 'astro'
 import type { TBreadcrump } from '../pages/[...slug].astro'
 
 import { FooterBottom } from 'san-webkit-next/ui/app/Footer'
-import { cn } from 'san-webkit-next/ui/utils'
 import { sluggify } from 'san-webkit-next/utils/url'
 
 import Sidebar from '$components/Sidebar/Sidebar.astro'
@@ -11,8 +10,6 @@ import Breadcrumb from '$components/Breadcrumb/Breadcrumb.astro'
 import ArticleFooter from '$components/ArticleFooter/index.svelte'
 import ArticleHeadings from '$components/ArticleHeadings/index.svelte'
 import H1 from '$components/markdown/headings/H1.astro'
-
-import styles from './DocsLayout.module.scss'
 
 type Props = {
   crumbs: TBreadcrump[]
@@ -36,7 +33,7 @@ const { crumbs = [], currentSlug, headings, title } = Astro.props
         data-pagefind-body
         transition:animate="fade"
       >
-        <div class={cn(styles.wrapper)}>
+        <div class="wrapper">
           <Breadcrumb crumbs={crumbs} crumbLabel={currentSlug} />
           <ArticleHeadings headings={headings} />
 

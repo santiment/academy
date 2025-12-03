@@ -4,7 +4,7 @@
 </script>
 
 <div class={cn(
-  'w-full bg-athens flex flex-col items-center relative',
+  'w-full flex flex-col items-center relative',
   'w-[296px] ml-auto bg-none z-[1000] items-baseline',
   'sm:hidden'
 )}>

@@ -1,16 +1,23 @@
 ---
+import Footer from 'san-webkit-next/ui/app/Footer'
+
 import BaseLayout from '$layouts/BaseLayout.astro'
 
 import Seo from '$components/seo.astro'
 import Button from 'san-webkit-next/ui/core/Button'
-
-import styles from './404.module.scss'
+import { cn } from 'san-webkit-next/ui/utils'
 ---
 
 <BaseLayout>
   <Seo title="404: Not found" />
 
-  <div class={styles.wrapper}>
+  <div
+    class={cn(
+      'container flex min-h-[70vh] flex-col items-start justify-center',
+      "bg-[url('/404.svg')] bg-[center_right] bg-no-repeat",
+      'lg:px-4 md:mt-10 md:min-h-[80vh] md:items-center md:justify-start md:bg-center md:px-5 md:py-3.5'
+    )}
+  >
     <h1
       class="mb-8 text-4xl font-semibold text-rhino md:text-center md:text-xl"
     >
@@ -24,4 +31,6 @@ import styles from './404.module.scss'
       Back to home page
     </Button>
   </div>
+
+  <Footer class="mt-14" client:visible />
 </BaseLayout>

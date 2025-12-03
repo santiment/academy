@@ -1,3 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
+
 html {
   scroll-behavior: smooth;
+}
+
+.wrapper {
+  scroll-behavior: smooth;
+  width: 100%;
+  max-width: 620px;
+  font-style: normal;
+  font-weight: normal;
+  color: var(--rhino);
+  word-break: break-word;
+  line-height: 28px;
+
+  @apply text-lg md:text-base;
+}
+
+.wrapper h1 {
+  @apply text-3xl text-rhino;
+  margin: 26px 0 32px;
+  font-weight: 500;
+}
+
+.wrapper h2 {
+  @apply text-xl text-rhino;
+  margin: 56px 0 24px;
+  font-weight: 500;
+}
+
+.wrapper h3 {
+  @apply text-xl text-rhino;
+  margin: 40px 0 24px;
+  font-size: 22px;
+}
+
+.wrapper h4,
+.wrapper h5 {
+  @apply text-lg font-semibold text-rhino;
+  margin: 12px 0 16px;
+}
+
+.wrapper img {
+  width: 100%;
+  border: 1px solid var(--porcelain);
+  border-radius: 4px;
+}
+
+.wrapper img[alt$='noborder'] {
+  border: none;
+  border-radius: initial;
+  padding-top: 16px;
+}
+
+.wrapper p {
+  margin: 10px 0;
+}
+
+.wrapper hr {
+  border: none;
+  border-top: 1px solid var(--porcelain);
+  margin: 18px 0;
+}
+
+.wrapper iframe {
+  width: 100%;
+  border: none !important;
+}
+
+.wrapper a {
+  color: var(--green);
+  word-break: break-word;
+}
+
+.wrapper a:hover {
+  color: var(--green-hover);
+  text-decoration: underline var(--green-light-3);
+  text-underline-offset: 4px;
+}
+
+.wrapper ul>li::before {
+  content: '•';
+  color: var(--casper);
+  transform: scale(1.5);
+  display: inline-block;
+  vertical-align: top;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.wrapper ol {
+  list-style: none;
+  counter-reset: li;
+}
+
+.wrapper ol>li {
+  counter-increment: li;
+}
+
+.wrapper ol>li::before {
+  content: '.' counter(li);
+  color: var(--casper);
+  display: inline-block;
+  vertical-align: top;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl;
+}
+
+.wrapper ul,
+.wrapper ol {
+  padding-left: 18px;
+}
+
+.wrapper ul>li,
+.wrapper ol>li {
+  margin-bottom: 8px;
+}
+
+.wrapper ul>li p,
+.wrapper ol>li p {
+  display: inline-block;
+  margin: 0;
+}
+
+.wrapper table {
+  border-collapse: collapse;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  margin: 15px 0;
+  @apply sm:overflow-auto;
+}
+
+.wrapper th {
+  background: var(--athens);
+  padding: 10px 14px;
+  text-align: center;
+  color: var(--rhino);
+  @apply text-sm font-semibold;
+}
+
+.wrapper td {
+  color: var(--rhino);
+  text-align: center;
+  padding: 12px 16px 12px;
+  @apply text-sm;
+}
+
+.wrapper table,
+.wrapper th,
+.wrapper td {
+  border: 1px solid #e7eaf3;
+  @apply sm:px-[5px] sm:py-1.5 sm:text-xs;
+}
+
+.wrapper mark {
+  padding: 16px 24px 16px 48px;
+  border: 1px solid var(--porcelain, #e7eaf3);
+  border-radius: 8px;
+  display: block;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--rhino, #2f354d);
+  background-color: transparent;
+  position: relative;
+  margin-top: 24px;
+}
+
+.wrapper mark strong {
+  margin-right: 4px;
+}
+
+.wrapper mark:before {
+  content: '✅';
+  position: absolute;
+  left: 12px;
 }
