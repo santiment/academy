@@ -28,9 +28,9 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params
 
-const currentDoc = await getEntry('docs', slug || 'index')
+const doc = await getEntry('docs', slug || 'index')
 
-if (!currentDoc) {
+if (!doc) {
   return Astro.redirect('/404')
 }
 
@@ -41,7 +41,7 @@ const allDocs = allDocsEntries.map((entry) => ({
   label: entry.data.title ?? entry.id,
 }))
 
-const { Content, headings } = await render(currentDoc)
+const { Content, headings } = await render(doc)
 
 const getBreadcrumbs = (path: string) => {
   const parts = path.split('/')
@@ -72,8 +72,8 @@ const getBreadcrumbs = (path: string) => {
   const finalBreadcrumbs = breadcrumbs.slice(0, -1)
 
   const lastCrumb = {
-    pathname: `/${currentDoc.id}`,
-    label: currentDoc.data.title,
+    pathname: `/${doc.id}`,
+    label: doc.data.title,
   }
 
   return [...finalBreadcrumbs, lastCrumb]
@@ -81,7 +81,7 @@ const getBreadcrumbs = (path: string) => {
 
 const breadcrumbs: TBreadcrump[] = [
   { pathname: '/', label: 'Home' },
-  ...getBreadcrumbs(currentDoc.id),
+  ...getBreadcrumbs(doc.id),
 ]
 
 const components = {
@@ -97,12 +97,7 @@ const components = {
 ---
 
 <BaseLayout>
-  <DocsLayout
-    crumbs={breadcrumbs}
-    currentSlug={currentDoc.id}
-    title={currentDoc.data.title}
-    headings={headings}
-  >
+  <DocsLayout {doc} {breadcrumbs} {headings}>
     <Content {components} />
   </DocsLayout>
 </BaseLayout>

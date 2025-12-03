@@ -2,12 +2,12 @@
   import { cn } from 'san-webkit-next/ui/utils'
   import Button from 'san-webkit-next/ui/core/Button'
   import Svg from 'san-webkit-next/ui/core/Svg'
+  import { getTimeSince } from 'san-webkit-next/utils/dates'
 
   type TProps = {
-    lastUpdatedAt?: string | null
+    lastUpdatedAt?: Date | null
   }
 
-  // TODO: Move to schema
   const { lastUpdatedAt }: TProps = $props()
 </script>
 
@@ -15,7 +15,7 @@
   <div class={cn('mt-16', 'flex items-center mb-6')}>
     <Svg id="time" class="fill-waterloo mr-2" />
 
-    <span class="text-sm font-medium text-fiord">Updated {lastUpdatedAt}</span>
+    <time class="text-sm font-medium text-fiord">Updated {getTimeSince(new Date(lastUpdatedAt))} ago</time>
   </div>
 {/if}
 

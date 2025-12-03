@@ -1,4 +1,5 @@
 ---
+import type { CollectionEntry } from 'astro:content'
 import type { MarkdownHeading } from 'astro'
 import type { TBreadcrump } from '../pages/[...slug].astro'
 
@@ -6,19 +7,34 @@ import { FooterBottom } from 'san-webkit-next/ui/app/Footer'
 import { sluggify } from 'san-webkit-next/utils/url'
 
 import Sidebar from '$components/Sidebar.astro'
-import Breadcrumb from '$components/Breadcrumb.astro'
+import Breadcrumbs from '$components/Breadcrumbs.astro'
 import ArticleFooter from '$components/ArticleFooter.svelte'
-import ArticleHeadings from '$components/ArticleHeadings.svelte'
+import TableOfContents from '$components/TableOfContents.svelte'
 import H1 from '$components/markdown/headings/H1.astro'
 
 type Props = {
-  crumbs: TBreadcrump[]
-  currentSlug: string
-  title?: string
+  doc: CollectionEntry<'docs'>
+  breadcrumbs: TBreadcrump[]
   headings: MarkdownHeading[]
 }
 
-const { crumbs = [], currentSlug, headings, title } = Astro.props
+const { doc, breadcrumbs, headings } = Astro.props
+
+const PRODUCTS = {
+  sanbase: { href: 'https://app.santiment.net/', title: 'Sanbase' },
+  sanapi: { href: 'https://api.santiment.net/', title: 'Sanapi' },
+  sansheets: { href: 'https://sheets.santiment.net/', title: 'Sansheets' },
+  'sql-editor': {
+    href: 'https://app.santiment.net/queries',
+    title: 'SQL Editor',
+  },
+  'youtube-videos': {
+    href: 'https://www.youtube.com/c/santimentnetwork',
+    title: 'Youtube channel',
+  },
+} as const
+
+const relatedLink = PRODUCTS[doc.id as keyof typeof PRODUCTS]
 ---
 
 <div class="flex flex-col">
@@ -33,17 +49,20 @@ const { crumbs = [], currentSlug, headings, title } = Astro.props
         data-pagefind-body
         transition:animate="fade"
       >
+        <TableOfContents client:load {headings} {relatedLink} />
+
+        <Breadcrumbs {breadcrumbs} />
+
         <div class="wrapper">
-          <Breadcrumb crumbs={crumbs} crumbLabel={currentSlug} />
-          <ArticleHeadings headings={headings} />
+          {
+            doc.data.title && (
+              <H1 id={sluggify(doc.data.title)}>{doc.data.title}</H1>
+            )
+          }
 
-          <div class="px-4">
-            {title && <H1 id={sluggify(title)}>{title}</H1>}
+          <slot />
 
-            <slot />
-
-            <ArticleFooter lastUpdatedAt={''} />
-          </div>
+          <ArticleFooter lastUpdatedAt={doc.data.date} />
         </div>
       </main>
       <div

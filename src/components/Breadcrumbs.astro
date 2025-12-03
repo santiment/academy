@@ -5,18 +5,17 @@ import { cn } from 'san-webkit-next/ui/utils'
 import Svg from 'san-webkit-next/ui/core/Svg'
 
 type Props = {
-  crumbs: TBreadcrump[]
-  crumbLabel: string
+  breadcrumbs: TBreadcrump[]
   class?: string
 }
 
-const { crumbs, class: className } = Astro.props
+const { breadcrumbs, class: className } = Astro.props
 ---
 
 <nav class={cn('mt-[18px] px-0 text-sm sm:mb-5', className)}>
   <ul class="flex">
     {
-      crumbs.map(({ pathname, label }, index) => (
+      breadcrumbs.map(({ pathname, label }, index) => (
         <li class="flex items-center before:m-0 before:w-0 before:!content-['']">
           <a
             href={pathname}
@@ -25,7 +24,7 @@ const { crumbs, class: className } = Astro.props
             {label}
           </a>
 
-          {index < crumbs.length - 1 && (
+          {index < breadcrumbs.length - 1 && (
             <Svg id="arrow-right" w={8} class="mx-3 scale-125 fill-rhino" />
           )}
         </li>

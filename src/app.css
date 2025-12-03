@@ -41,6 +41,15 @@ html {
   margin: 12px 0 16px;
 }
 
+.wrapper h1,
+.wrapper h2,
+.wrapper h3,
+.wrapper h4,
+.wrapper h5 {
+  scroll-margin-top: 100px;
+}
+
+
 .wrapper img {
   width: 100%;
   border: 1px solid var(--porcelain);
