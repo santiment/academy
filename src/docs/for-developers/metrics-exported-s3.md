@@ -7,14 +7,14 @@ description: Technical documentation for accessing and reading Santiment metrics
 
 ## Overview
 
-Santiment exports metrics data to Amazon S3 in Parquet format, providing an efficient way to access large-scale time-series data. This data can be queried directly from S3 using analytics tools or downloaded and stored locally.
+Santiment exports metrics data to Amazon S3 in [Parquet](https://parquet.apache.org/) format, providing an efficient way to access large-scale time-series data. This data can be queried directly from S3 using analytics tools or downloaded and stored locally.
 
 ## Data Structure
 
 The exported data is organized in a hierarchical directory structure:
 
 ```
-s3://santiment-metrics-stage/
+s3://santiment-metrics/
 ├── assets.parquet          # Asset metadata lookup table
 ├── metrics.parquet         # Metric metadata lookup table
 └── metrics/
@@ -106,6 +106,10 @@ metric_id | name                                              | version    | sta
 
 ## Querying Data with ClickHouse
 
+In the following examples we use ClickHouse [s3 Table Function](https://clickhouse.com/docs/sql-reference/table-functions/s3) to request data from S3 buckets and 
+process it using SQL queries. But You can use any other instrument which 
+supports data reading from S3 buckets.
+
 ### Basic Query Example
 
 The following example demonstrates how to query metrics data with proper asset and metric name resolution:
@@ -117,7 +121,7 @@ SELECT
     dt,
     value
 FROM s3(
-    url='s3://santiment-metrics-stage/metrics/intraday/price_usd/2024/01/data.parquet',
+    url='s3://santiment-metrics/metrics/intraday/price_usd/2024/01/data.parquet',
     access_key_id='YOUR_KEY_ID', 
     secret_access_key='YOUR_KEY_SECRET', 
     format='Parquet'
@@ -127,7 +131,7 @@ LEFT JOIN (
         asset_id,
         name
     FROM s3(
-        url='s3://santiment-metrics-stage/assets.parquet',
+        url='s3://santiment-metrics/assets.parquet',
         access_key_id='YOUR_KEY_ID', 
         secret_access_key='YOUR_KEY_SECRET', 
         format='Parquet'
@@ -138,7 +142,7 @@ LEFT JOIN (
         metric_id,
         name
     FROM s3(
-        url='s3://santiment-metrics-stage/metrics.parquet',
+        url='s3://santiment-metrics/metrics.parquet',
         access_key_id='YOUR_KEY_ID', 
         secret_access_key='YOUR_KEY_SECRET', 
         format='Parquet'
@@ -164,7 +168,7 @@ SELECT
     dt,
     value
 FROM s3(
-    url='s3://santiment-metrics-stage/metrics/intraday/price_usd/2024/*/data.parquet',
+    url='s3://santiment-metrics/metrics/intraday/price_usd/2024/*/data.parquet',
     access_key_id='YOUR_KEY_ID', 
     secret_access_key='YOUR_KEY_SECRET', 
     format='Parquet'
@@ -172,7 +176,7 @@ FROM s3(
 LEFT JOIN (
     SELECT asset_id, name
     FROM s3(
-        url='s3://santiment-metrics-stage/assets.parquet',
+        url='s3://santiment-metrics/assets.parquet',
         access_key_id='YOUR_KEY_ID', 
         secret_access_key='YOUR_KEY_SECRET', 
         format='Parquet'
@@ -181,26 +185,26 @@ LEFT JOIN (
 LEFT JOIN (
     SELECT metric_id, name
     FROM s3(
-        url='s3://santiment-metrics-stage/metrics.parquet',
+        url='s3://santiment-metrics/metrics.parquet',
         access_key_id='YOUR_KEY_ID', 
         secret_access_key='YOUR_KEY_SECRET', 
         format='Parquet'
     )
 ) AS metrics ON metrics.metric_id = data.metric_id
-WHERE am.name = 'bitcoin';
+WHERE asset.name = 'bitcoin';
 ```
 
 ## Intraday vs Daily Metrics
 
 ### Intraday Metrics
 
-- **Path**: `s3://santiment-metrics-stage/metrics/intraday/{metric_name}/{year}/{month}/data.parquet`
+- **Path**: `s3://santiment-metrics/metrics/intraday/{metric_name}/{year}/{month}/data.parquet`
 - **Granularity**: 5-minute intervals
 - **Use cases**: Intraday trading, detailed analysis, real-time monitoring
 
 ### Daily Metrics
 
-- **Path**: `s3://santiment-metrics-stage/metrics/daily/{metric_name}/{year}/{month}/data.parquet`
+- **Path**: `s3://santiment-metrics/metrics/daily/{metric_name}/{year}/{month}/data.parquet`
 - **Granularity**: Daily aggregated values
 - **Use cases**: Long-term trend analysis, reduced data volume, historical comparisons
 

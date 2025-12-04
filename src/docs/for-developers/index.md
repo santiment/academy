@@ -67,20 +67,19 @@ san.get("daily_active_addresses",
 
 ### Metrics Exported to S3
 
-Santiment exports metrics data to Amazon S3 in Parquet format, providing 
+Santiment exports metrics data to Amazon S3 in [Parquet](https://parquet.apache.org/) format, providing 
 efficient access to large-scale historical data. For tasks like backtesting 
 or ML model training where you need to process large volumes of immutable 
 historical data, reading directly from S3 is more efficient than fetching 
 via API.
 
 The exported data includes both intraday (5-minute intervals) and daily 
-aggregated metrics, stored in an organized directory structure that supports 
-wildcard queries.
+aggregated metrics, stored in an organized directory structure.
 
 To request data exporting and S3 bucket access credentials, please 
 [contact us](support@santiment.net).
 
-**Read more**: [Metrics Exported to S3 - Technical Documentation](for-developers/metrics-exported-s3)
+**Read more**: [Metrics Exported to S3 - Technical Documentation](/for-developers/metrics-exported-s3)
 
 
 ## Metrics Catalog
