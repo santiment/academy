@@ -1,0 +1,14 @@
+---
+import { UniQuery } from 'san-webkit-next/api/executor.js'
+import { queryMetricsChangelog } from '../api'
+import MetricsChangelogList from './MetricsChangelogList.svelte'
+
+const PAGE_SIZE = 20
+const initialData = await queryMetricsChangelog(UniQuery(fetch))(
+  1,
+  PAGE_SIZE,
+  ''
+)
+---
+
+<MetricsChangelogList client:load {initialData} pageSize={PAGE_SIZE} />
