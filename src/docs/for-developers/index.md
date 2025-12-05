@@ -77,7 +77,7 @@ The exported data includes both intraday (5-minute intervals) and daily
 aggregated metrics, stored in an organized directory structure.
 
 To request data exporting and S3 bucket access credentials, please 
-[contact us](Suzanne.p@santiment.net).
+[contact us](mailto:Suzanne.p@santiment.net).
 
 **Read more**: [Metrics Exported to S3 - Technical Documentation](/for-developers/metrics-exported-s3)
 
