@@ -47,7 +47,7 @@ const relatedLink = PRODUCTS[doc.id as keyof typeof PRODUCTS]
 
     <div class="z-[1] flex w-[885px] flex-grow flex-col md:z-0">
       <main
-        class="flex min-w-[86vh] flex-col px-10 pb-0 pt-[85px] md:px-0"
+        class="flex min-w-[86vh] flex-col px-14 pt-[15px] md:px-0"
         data-pagefind-body
         transition:animate="fade"
       >
@@ -55,7 +55,7 @@ const relatedLink = PRODUCTS[doc.id as keyof typeof PRODUCTS]
 
         <Breadcrumbs {breadcrumbs} />
 
-        <div class="wrapper">
+        <div class="wrapper mt-6">
           {
             doc.data.title && (
               <H1 id={sluggify(doc.data.title)}>{doc.data.title}</H1>

@@ -94,10 +94,12 @@ const components = {
   blockquote: Blockquote,
   pre: Pre,
 }
+
+const formattedHeadings = headings.filter((heading) => heading.depth <= 3)
 ---
 
 <BaseLayout title={doc.data.title && `${doc.data.title} | Santiment Academy`}>
-  <DocsLayout {doc} {breadcrumbs} {headings}>
+  <DocsLayout {doc} {breadcrumbs} headings={formattedHeadings}>
     <Content {components} />
   </DocsLayout>
 </BaseLayout>

@@ -1,5 +1,5 @@
 ---
-import SidebarCategory from './SidebarCategory.astro'
+import SidebarCategory from './SidebarCategory.svelte'
 import { GUIDES, REFERENCES, GETTING_STARTED } from '../docs/navigation'
 
 import { titleToSlug } from '../utils/docs'
@@ -16,7 +16,7 @@ if (Astro.url) {
 <section class="fixed bottom-0 left-0 right-0 top-[71px] flex w-full md:hidden">
   <div class="relative flex grow border-r border-r-porcelain">
     <ul
-      class="mb-12 ml-auto w-[285px] overflow-hidden pb-10 pl-4 hover:overflow-y-auto focus:overflow-y-auto"
+      class="ml-auto w-[285px] overflow-y-auto pb-10 pl-4 [scrollbar-gutter:stable] focus:overflow-y-auto"
     >
       <h3 class="mb-4 ml-0 mr-5 pt-8 text-sm font-medium text-casper">
         {GETTING_STARTED.title}
@@ -48,7 +48,7 @@ if (Astro.url) {
 
       {
         GUIDES.map((category) => (
-          <SidebarCategory {...category} active={active} />
+          <SidebarCategory client:load {...category} active={active} />
         ))
       }
 
@@ -60,7 +60,7 @@ if (Astro.url) {
 
       {
         REFERENCES.map((category) => (
-          <SidebarCategory {...category} active={active} />
+          <SidebarCategory client:load {...category} active={active} />
         ))
       }
     </ul>

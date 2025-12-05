@@ -73,6 +73,7 @@
       >
         <Input
           id="search"
+          class="h-8"
           inputClass="w-[296px] h-8 sm:w-[250px] sm:h-10 pl-11"
           placeholder="Search docs"
           icon="search"

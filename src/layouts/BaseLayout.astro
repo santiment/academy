@@ -28,7 +28,6 @@ const {
 // 5. Dynamic page title
 // 6. Optimize some components
 // 8. Add auth for Intercom
-// 9. Move blockquote to styles
 // 13. Add analytics
 ---
 
@@ -44,7 +43,7 @@ const {
     <ClientRouter />
   </head>
 
-  <body class={cn('pt-16 overflow-x-hidden', className)}>
+  <body class={cn('pt-[70px] overflow-x-hidden', className)}>
     <Intercom client:only="svelte" />
     <Tracking client:only="svelte" />
     <CookiesPopupWrapper client:only="svelte" />

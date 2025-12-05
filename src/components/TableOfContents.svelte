@@ -11,7 +11,7 @@
 
   const { headings, relatedLink }: TProps = $props()
 
-  let activeSlug = $state<string>(headings[0]?.slug || '')
+  let activeSlug = $state(headings[0]?.slug || '')
 
   function handleLinkClick(e: MouseEvent, slug: string) {
     e.preventDefault()
@@ -47,7 +47,7 @@
   })
 </script>
 
-<ul class="fixed ml-[660px] top-[95px] flex flex-col max-h-[85vh] max-w-[210px] overflow-y-auto overflow-x-hidden pr-2 md:flex lg:hidden">
+<ul class="fixed ml-[660px] top-[95px] pr-2 flex flex-col max-h-[85vh] max-w-[210px] overflow-y-auto overflow-x-hidden md:flex lg:hidden">
   {#if relatedLink}
     <li>
       <Button href={relatedLink.href} target="_blank" icon="right-arrow" iconOnRight>
@@ -59,7 +59,9 @@
   {#each headings as { slug, text, depth }, idx}
     <li
       class={cn(
-        'relative before:!content-[""]',
+        'relative',
+        'after:content-[""] after:h-1 after:block after:border-l-porcelain after:border-l-2',
+        idx !== 0 && idx !== headings.length ? 'before:content-[""] before:h-1 before:block before:border-l-porcelain before:border-l-2' : '',
         idx === 0 && (relatedLink ? 'mt-12' : 'mt-20')
       )}
     >
@@ -67,12 +69,12 @@
         href={`#${slug}`}
         onclick={(e) => handleLinkClick(e, slug)}
         class={cn(
-          'text-sm block py-1 cursor-pointer transition-colors duration-200 border-l-2 pl-4',
-          depth === 2 && 'pl-8',
-          depth === 3 && 'pl-12',
+          'text-sm block cursor-pointer transition-colors duration-200 border-l-2',
+          depth === 2 && 'pl-4',
+          depth === 3 && 'pl-8',
           activeSlug === slug
             ? 'border-l-green text-green'
-            : 'border-l-porcelain text-rhino hover:text-green hover:border-l-green'
+            : 'border-l-porcelain text-rhino hover:text-green'
         )}
       >
         {text}
