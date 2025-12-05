@@ -13,13 +13,16 @@ import { cn } from 'san-webkit-next/ui/utils'
 import HelpFeedback from '$components/HelpFeedback.svelte'
 
 type Props = {
+  title?: string
   class?: string
 }
 
-const { class: className = '' } = Astro.props
+const {
+  class: className = '',
+  title = 'Crypto Academy: Learn How to Analyze Cryptocurrency Market',
+} = Astro.props
 
 // TODO:
-// 2. Add search
 // 3. Add SEO
 // 4. Double check all styles
 // 5. Dynamic page title
@@ -36,7 +39,7 @@ const { class: className = '' } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>Academy</title>
+    <title>{title}</title>
 
     <ClientRouter />
   </head>

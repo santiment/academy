@@ -3,7 +3,6 @@ import Footer from 'san-webkit-next/ui/app/Footer'
 
 import BaseLayout from '$layouts/BaseLayout.astro'
 
-import Seo from '$components/seo.astro'
 import Category from '$components/Category.svelte'
 import GettingStarted from '$components/GettingStarted.astro'
 import SocialBanner from '$components/SocialBanner.astro'
@@ -12,9 +11,7 @@ import Hero from '$components/Hero.svelte'
 import { REFERENCES, GUIDES } from '../docs/navigation'
 ---
 
-<BaseLayout>
-  <Seo title="Crypto Academy: Learn How to Analyze Cryptocurrency Market" />
-
+<BaseLayout title="Crypto Academy: Learn How to Analyze Cryptocurrency Market">
   <section class="flex flex-col">
     <Hero client:load />
 

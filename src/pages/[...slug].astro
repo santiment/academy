@@ -96,7 +96,7 @@ const components = {
 }
 ---
 
-<BaseLayout>
+<BaseLayout title={doc.data.title && `${doc.data.title} | Santiment Academy`}>
   <DocsLayout {doc} {breadcrumbs} {headings}>
     <Content {components} />
   </DocsLayout>

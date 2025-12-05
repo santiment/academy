@@ -3,14 +3,11 @@ import Footer from 'san-webkit-next/ui/app/Footer'
 
 import BaseLayout from '$layouts/BaseLayout.astro'
 
-import Seo from '$components/seo.astro'
 import Button from 'san-webkit-next/ui/core/Button'
 import { cn } from 'san-webkit-next/ui/utils'
 ---
 
-<BaseLayout>
-  <Seo title="404: Not found" />
-
+<BaseLayout title="404: Not found">
   <div
     class={cn(
       'container flex min-h-[70vh] flex-col items-start justify-center',
