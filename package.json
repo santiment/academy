@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "dev:https": "astro dev --host -- --https",
-    "build": "astro build",
+    "build": "astro build && pagefind --site public",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -24,14 +24,14 @@
     "san-webkit-next": "github:santiment/san-webkit#lib-292a0d40-021225",
     "svelte": "^5.33.7",
     "unist-util-visit": "^5.0.0",
-    "vite-plugin-mkcert": "^1.17.9"
+    "vite-plugin-mkcert": "^1.17.9",
+    "pagefind": "^1.4.0"
   },
   "devDependencies": {
     "@astrojs/mdx": "^4.3.9",
     "@astrojs/svelte": "^7.2.1",
     "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.5",
-    "pagefind": "^1.4.0",
     "prettier": "^3.7.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-svelte": "^3.4.0",

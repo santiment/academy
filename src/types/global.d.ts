@@ -10,3 +10,14 @@ declare global {
     };
   }
 }
+
+declare module "/pagefind/pagefind.js" {
+  export function search(term: string): Promise<{
+    results: Array<{
+      id: string;
+      data: () => Promise<any>;
+      url: string;
+    }>;
+  }>;
+  export function options(opts: Record<string, any>): Promise<void>;
+}
