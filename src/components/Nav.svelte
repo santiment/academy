@@ -1,11 +1,11 @@
----
-import { cn } from 'san-webkit-next/ui/utils'
-import Svg from 'san-webkit-next/ui/core/Svg'
-import { AskAIButton } from 'san-webkit-next/ui/app/AIChatbot'
+<script lang="ts">
+  import { cn } from 'san-webkit-next/ui/utils'
+  import Svg from 'san-webkit-next/ui/core/Svg'
+  import { AskAIButton } from 'san-webkit-next/ui/app/AIChatbot'
 
-import Search from './Search.svelte'
-import ProductsButton from './ProductsButton.svelte'
----
+  import Search from './Search.svelte'
+  import ProductsButton from './ProductsButton.svelte'
+</script>
 
 <header
   class={cn(
@@ -25,12 +25,12 @@ import ProductsButton from './ProductsButton.svelte'
         <span class="mx-2 text-base font-medium text-rhino">Academy</span>
       </a>
 
-      <ProductsButton client:load transition:persist />
+      <ProductsButton />
     </div>
     <div class="flex justify-end gap-4">
-      <Search client:load transition:persist />
+      <Search />
 
-      <AskAIButton client:load transition:persist />
+      <AskAIButton />
     </div>
   </div>
 </header>

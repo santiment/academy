@@ -8,7 +8,7 @@ import type { TBreadcrump } from '../pages/[...slug].astro'
 import { FooterBottom } from 'san-webkit-next/ui/app/Footer'
 import { sluggify } from 'san-webkit-next/utils/url'
 
-import Sidebar from '$components/Sidebar.astro'
+import Sidebar from '$components/Sidebar.svelte'
 import Breadcrumbs from '$components/Breadcrumbs.astro'
 import ArticleFooter from '$components/ArticleFooter.svelte'
 import TableOfContents from '$components/TableOfContents.svelte'
@@ -37,10 +37,16 @@ const PRODUCTS = {
 } as const
 
 const relatedLink = PRODUCTS[doc.id as keyof typeof PRODUCTS]
+
+let active: string[] = []
+
+if (Astro.url) {
+  active = Astro.url.pathname.split('/').slice(1)
+}
 ---
 
 <div class="flex flex-col">
-  <Sidebar transition:persist />
+  <Sidebar client:load {active} transition:persist />
 
   <div class="flex w-full">
     <div class="md:none flex w-[286px] flex-grow md:flex-grow-0"></div>

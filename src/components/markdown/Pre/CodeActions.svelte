@@ -24,8 +24,3 @@
     {explanation}
   ></Button>
 </div>
-
-{#if isExplorer}{/if}
-
-<style>
-</style>

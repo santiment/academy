@@ -4,11 +4,11 @@ import Footer from 'san-webkit-next/ui/app/Footer'
 import BaseLayout from '$layouts/BaseLayout.astro'
 
 import Category from '$components/Category.svelte'
-import GettingStarted from '$components/GettingStarted.astro'
 import SocialBanner from '$components/SocialBanner.astro'
 import Hero from '$components/Hero.svelte'
 
 import { REFERENCES, GUIDES } from '../docs/navigation'
+import { cn } from 'san-webkit-next/ui/utils'
 ---
 
 <BaseLayout title="Crypto Academy: Learn How to Analyze Cryptocurrency Market">
@@ -16,7 +16,69 @@ import { REFERENCES, GUIDES } from '../docs/navigation'
     <Hero client:load />
 
     <div class="container">
-      <GettingStarted class="mx-auto mb-20 mt-20 sm:mb-0 sm:mt-7" />
+      <section class="mx-auto mb-20 mt-20 sm:mb-0 sm:mt-7">
+        <h4 class="mb-8 text-xl text-rhino">Getting started</h4>
+
+        <div
+          class="grid w-full grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1"
+        >
+          <a href="/santiment-introduction/">
+            <article
+              class={cn(
+                'h-full rounded transition-all ease-in-out duration-100 hover:-translate-y-1',
+                'bg-green p-8 sm:py-6 sm:px-5'
+              )}
+            >
+              <h3 class="mb-4 text-lg font-medium text-white">
+                Getting Started With Santiment
+              </h3>
+
+              <p class="m-0 text-base text-porcelain sm:text-sm">
+                Exploring the purpose and benefits of Santiment, this document
+                highlights the available hrefols and provides guidance on
+                effectively utilizing them.
+              </p>
+            </article>
+          </a>
+
+          <a href="/for-traders/">
+            <article
+              class={cn(
+                'h-full rounded transition-all ease-in-out duration-100 hover:-translate-y-1',
+                'bg-rhino p-8 sm:py-6 sm:px-5'
+              )}
+            >
+              <h3 class="mb-4 text-lg font-medium text-white">For Traders</h3>
+
+              <p class="m-0 text-base text-porcelain sm:text-sm">
+                Explanations, tuhrefrials and use cases for Santiment metrics
+                and hrefols. Learn how to use our platform to better understand
+                market behavior, network activity and stakeholder trends.
+              </p>
+            </article>
+          </a>
+
+          <a href="/for-developers/">
+            <article
+              class={cn(
+                'h-full rounded transition-all ease-in-out duration-100 hover:-translate-y-1',
+                'bg-waterloo p-8 sm:py-6 sm:px-5'
+              )}
+            >
+              <h3 class="mb-4 text-lg font-medium text-white">
+                For Developers
+              </h3>
+
+              <p class="m-0 text-base text-porcelain sm:text-sm">
+                Technical documentation on Santiment metrics and indicahrefrs.
+                Understand the calculations, logic and algorithms behind our
+                metrics - many of them cushrefm-built by the Santiment Team.
+              </p>
+            </article>
+          </a>
+        </div>
+      </section>
+
       <h4 class="mx-0 mb-8 mt-20 text-lg text-rhino sm:mb-5 sm:mt-12">
         Guides
       </h4>
@@ -24,7 +86,7 @@ import { REFERENCES, GUIDES } from '../docs/navigation'
       <div class="grid w-full grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
         {
           GUIDES.map(({ title, icon, ...rest }) => (
-            <Category icon={icon} title={title} {...rest} />
+            <Category {icon} {title} {...rest} />
           ))
         }
       </div>
@@ -36,7 +98,7 @@ import { REFERENCES, GUIDES } from '../docs/navigation'
       <div class="grid w-full grid-cols-2 gap-6 md:grid-cols-2 sm:grid-cols-1">
         {
           REFERENCES.map(({ title, ...rest }) => (
-            <Category wide title={title} {...rest} maxWidth="295px" />
+            <Category wide {title} {...rest} maxWidth="295px" />
           ))
         }
       </div>

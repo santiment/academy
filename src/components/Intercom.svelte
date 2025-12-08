@@ -1,13 +1,7 @@
 <script lang="ts">
-  import { onMount, type Snippet } from 'svelte'
+  import { onMount } from 'svelte'
 
   const app_id = 'cyjjko9u'
-
-  type TProps = {
-    children: Snippet
-  }
-
-  const { children }: TProps = $props()
 
   // TODO: Probably need to add auth
 

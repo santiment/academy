@@ -3,14 +3,10 @@ import '../app.css'
 import 'san-webkit-next/app.css'
 
 import { ClientRouter } from 'astro:transitions'
-import Notifications from 'san-webkit-next/ui/core/Notifications'
 
-import Nav from '$components/Nav.astro'
-import Intercom from '$components/Intercom.svelte'
-import Tracking from '$components/Tracking.svelte'
-import CookiesPopupWrapper from '$components/CookiesPopupWrapper.svelte'
+import Nav from '$components/Nav.svelte'
 import { cn } from 'san-webkit-next/ui/utils'
-import HelpFeedback from '$components/HelpFeedback.svelte'
+import AppShell from '$components/AppShell.svelte'
 
 type Props = {
   title?: string
@@ -25,7 +21,6 @@ const {
 // TODO:
 // 3. Add SEO
 // 4. Double check all styles
-// 5. Dynamic page title
 // 6. Optimize some components
 // 8. Add auth for Intercom
 // 13. Add analytics
@@ -44,14 +39,10 @@ const {
   </head>
 
   <body class={cn('pt-[70px] overflow-x-hidden', className)}>
-    <Intercom client:only="svelte" />
-    <Tracking client:only="svelte" />
-    <CookiesPopupWrapper client:only="svelte" />
-    <HelpFeedback client:only="svelte" />
-    <Notifications client:only="svelte" />
+    <AppShell client:only="svelte" />
 
     <div data-vaul-drawer-wrapper>
-      <Nav transition:persist />
+      <Nav client:load transition:persist />
 
       <slot />
     </div>
