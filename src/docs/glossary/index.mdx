@@ -16,11 +16,11 @@ This glossary provides definitions for terms frequently used throughout our docu
   - [ISO8601](#iso8601)
   - [API Key](#api-key)
 
-# GraphQL-related
+## GraphQL-related
 
 More about all the GraphQL-related terms can be found on the [GraphQL documentation](https://graphql.org/learn/) website.
 
-## query
+### query
 
 A "query" in the context of [GraphQL](https://graphql.org/learn/) refers to a read operation. For instance, in the example below, `getAccessRestrictions` is the query. Essentially, in a GraphQL request, the `query` is the function that is invoked.
 
@@ -78,7 +78,7 @@ If different queries are used, aliases can be omitted. In the next example, the 
 
 A query can either return the specified result directly or provide a set of fields that the user can choose from.
 
-## Field
+### Field
 
 The term refers to a [GraphQL field](https://graphql.org/learn/queries/#fields). Fields are used to specify which parts of a complex object should be returned in a query. The following examples demonstrate the use of different fields in the same `getMetric` query.
 
@@ -112,11 +112,9 @@ In the second example, the `aggregatedTimeseriesData` field is used.
 }
 ```
 
-**[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22active_addresses_24h%22)%20%7B%0A%20%20%20%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20%20%20to%3A%20%222019-01-01T03%3A00%3A00Z%22%0A%20%20%20%20%20%20aggregation%3A%20AVG%0A%20%20%20%20)%0A%20%20%7D%0A%7D>)**
+## Santiment-related
 
-# Santiment-related
-
-## Metric
+### Metric
 
 In the context of Santiment's API, a metric is a term with a specific meaning. It refers to a set of data points that carry a particular significance. There are two types of metrics: [timeseries metrics](/metrics/details/data-type#timeseries-data) and [histogram metrics](/metrics/details/data-type#histogram-data).
 
@@ -155,15 +153,15 @@ In some instances, the query and the metric are identical. In the next example, 
 
 **[Run in explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20historicalBalance(%0A%20%20%20%20selector%3A%20%7B%20slug%3A%20%22santiment%22%2C%20infrastructure%3A%20%22ETH%22%20%7D%0A%20%20%20%20address%3A%20%220xA0D8F33Ef9B44DaAE522531DD5E7252962b09207%22%0A%20%20%20%20from%3A%20%222019-01-01T00%3A00%3A00Z%22%0A%20%20%20%20to%3A%20%222019-09-01T00%3A00%3A00Z%22%0A%20%20%20%20interval%3A%20%2230d%22%0A%20%20)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20balance%0A%20%20%7D%0A%7D>)**
 
-## Asset
+### Asset
 
 An asset refers to any cryptocurrency or crypto token that can be associated with a specific price. Examples of assets include Bitcoin, Ethereum, and Santiment tokens. For more detailed information, please visit our [glossary on assets](/glossary/asset).
 
-## Slug
+### Slug
 
 A slug is a unique string that identifies an [asset](/glossary/asset). You can find the slug of various projects, along with their names, tickers, and other data, by using the [allProjects API](https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20infrastructure%0A%20%20%20%20mainContractAddress%0A%20%20%7D%0A%7D%0A).
 
-## Interval
+### Interval
 
 An interval is a representation of time intervals such as 5 minutes, 12 hours, 10 days, or 4 weeks. There are two types of interval representations: fixed time intervals and functions.
 
@@ -201,12 +199,12 @@ The following functions are supported:
 
 Intervals are used when fetching timeseries data. If the raw data is available at 5-minute intervals but you want to fetch it daily, you should provide `interval: "1d"` as a parameter. In this case, the default aggregation will be applied to all 288 5-minute data points in a day to compute the value for the entire day. The type of aggregation varies based on the metric. In some cases, taking the average or the last value is required (price), while in other cases, taking the sum of all values is necessary (transaction volume), and so on.
 
-## ISO8601
+### ISO8601
 
 The API uses the ISO8601 format for date and time. The format is structured as follows: `<year>-<month>-<day>T<hour>:<minute>:<second>Z`.
 
 For instance, January 10th, 2019 at 12:34:56 would be represented as `2019-01-10T12:34:56Z`.
 
-## API Key
+### API Key
 
 Your API key is essential for accessing the premium features provided by our API. For more detailed information, please refer to the [API Authentication](/sanapi/accessing-the-api/#authentication) section.

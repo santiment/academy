@@ -89,6 +89,7 @@ html {
 }
 
 .wrapper ul>li::before {
+  position: absolute;
   content: '•';
   color: var(--casper);
   transform: scale(1.5);
@@ -126,6 +127,7 @@ html {
 
 .wrapper ul>li,
 .wrapper ol>li {
+  position: relative;
   margin-bottom: 8px;
 }
 
@@ -197,5 +199,10 @@ html {
   display: inline-block;
   margin: 0 2px 2px 0;
   line-height: 20px;
+  font-size: 16px;
   font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+}
+
+.expressive-code {
+  margin: 20px 0;
 }

@@ -1,9 +1,12 @@
 <script lang="ts">
   import { onMount } from 'svelte'
+  import { BROWSER } from 'esm-env'
   import { cn } from 'san-webkit-next/ui/utils'
+  import { CMD } from 'san-webkit-next/utils/platform'
   import Input from 'san-webkit-next/ui/core/Input'
   import Popover from 'san-webkit-next/ui/core/Popover'
   import { ss } from 'san-webkit-next/utils'
+  import { useKeyboardShortcut } from 'san-webkit-next/utils/keyboard'
 
   let query = $state('')
   let results = $state<any[]>([])
@@ -12,6 +15,7 @@
   let pagefind = $state<any>(null)
 
   let containerWrapperRef = ss<null | HTMLElement>(null)
+  let inputRef = ss<null | HTMLInputElement>(null)
 
   onMount(async () => {
     try {
@@ -19,7 +23,6 @@
       const pagefindUrl = '/pagefind/pagefind.js'
       pagefind = await import(/* @vite-ignore */ pagefindUrl)
 
-      console.log('pagefind', pagefind)
       await pagefind.options({ excerptLength: 20 })
     } catch (e) {
       console.error(e)
@@ -46,6 +49,11 @@
       loading = false
     }
   }
+
+  if (BROWSER) {
+    useKeyboardShortcut('CMD+K', () => inputRef.$?.focus())
+  }
+
 </script>
 
 <Popover
@@ -72,10 +80,11 @@
         )}
       >
         <Input
+          ref={inputRef}
           id="search"
           class="h-8"
           inputClass="w-[296px] h-8 sm:w-[250px] sm:h-10 pl-11"
-          placeholder="Search docs"
+          placeholder={`Search docs (${CMD} + K)`}
           icon="search"
           autocomplete="off"
           oninput={handleSearch}

@@ -101,8 +101,6 @@ The query looks like this:
 }
 ```
 
-**[Run in GraphiQL Live Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20runRawSqlQuery(%0A%20%20%20%20sqlQueryText%3A%20%22SELECT%5Cn%20%20%20%20get_metric_name(metric_id)%20AS%20metric%2C%5Cn%20%20%20%20get_asset_name(asset_id)%20AS%20asset%2C%5Cn%20%20%20%20dt%2C%5Cn%20%20%20%20argMax(value%2C%20computed_at)%20AS%20value%5Cn%20%20FROM%20daily_metrics_v2%5Cn%20%20WHERE%5Cn%20%20%20%20asset_id%20%3D%20get_asset_id(%7B%7Bslug%7D%7D)%20AND%5Cn%20%20%20%20metric_id%20%3D%20get_metric_id(%7B%7Bmetric%7D%7D)%20AND%5Cn%20%20%20%20dt%20%3E%3D%20now()%20-%20INTERVAL%20%7B%7Blast_n_days%7D%7D%20DAY%5Cn%20%20GROUP%20BY%20dt%2C%20metric_id%2C%20asset_id%5Cn%20%20ORDER%20BY%20dt%20ASC%22%2C%0A%20%20%20%20sqlQueryParameters%3A%20%22%7B%5C%22slug%5C%22%3A%20%5C%22bitcoin%5C%22%2C%20%5C%22last_n_days%5C%22%3A%207%2C%20%5C%22metric%5C%22%3A%20%5C%22nvt%5C%22%7D%22%0A%20%20)%7B%0A%20%20%20%20columns%0A%20%20%20%20columnTypes%0A%20%20%20%20rows%0A%20%20%7D%0A%7D%0A>)**
-
 > **Note**: In order to be able to run the query in the GraphiQL Explorer you need to login on [Sanbase](https://app.santiment.net) on the same browser.
 
 ### curl

@@ -2,7 +2,7 @@
   import type { MarkdownHeading } from 'astro'
   import { onMount } from 'svelte'
   import { cn } from 'san-webkit-next/ui/utils'
-  import Button from 'san-webkit-next/ui/core/Button'
+  import Svg from 'san-webkit-next/ui/core/Svg'
 
   type TProps = {
     relatedLink?: any
@@ -50,9 +50,10 @@
 <ul class="fixed ml-[660px] top-[95px] pr-2 flex flex-col max-h-[85vh] max-w-[210px] overflow-y-auto overflow-x-hidden md:flex lg:hidden">
   {#if relatedLink}
     <li>
-      <Button href={relatedLink.href} target="_blank" icon="right-arrow" iconOnRight>
+      <a href={relatedLink.href} target="_blank" class="flex items-center gap-2 text-green hover:text-green-hover fill-green hover:fill-green-hover">
         Go to {relatedLink.title}
-      </Button>
+        <Svg id="right-arrow" />
+      </a>
     </li>
   {/if}
 
