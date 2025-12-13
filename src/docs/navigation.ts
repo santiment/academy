@@ -367,8 +367,29 @@ export const REFERENCES = [
     description: 'Directory of key stakeholder data anomalies available on Santiment',
     icon: 'Signals',
     articles: [
-      'Anomalies',
       'Large Exchange Transactions 1M',
+      'Dex Exchanges 1M USD',
+      'ETH Whale Dump',
+      'Hyperliquid Average Funding Rates',
+      'Large Transfers',
+      'Large USDC-USDT Mint',
+      'Liquidations',
+      {
+        slug: 'mvrv-danger-zone',
+        title: 'MVRV Danger (Overvaluation) Zone',
+      },
+      {
+        slug: 'mvrv-opportunity-zone',
+        title: 'MVRV Opportunity (Undervaluation) Zone',
+      },
+      {
+        slug: 'network-activity-price-divergence',
+        title: 'Network Activity - Price Divergence',
+      },
+      'Project in Trends',
+      'Social Dominance Spike',
+      'Social-Dev Score',
+      'USDC Borrow',
       {
         slug: 'deprecated',
         title: 'Deprecated Data Anomalies',
