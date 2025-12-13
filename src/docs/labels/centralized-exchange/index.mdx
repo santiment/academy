@@ -27,8 +27,9 @@ Huobi centralized exchange address: [0x5c985e89dde482efe97ea9f1950ad149eb73829b]
 
 ## Available Blockchains
 
-* bitcoin
 * ethereum
+
+Bitcoin network support for this label has been temporarily suspended.
 
 ## See Also
 

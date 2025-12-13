@@ -1,7 +1,7 @@
 ---
 title: Weighted Sentiment Metrics
 author: Santiment Team
-date: 2025-03-18
+date: 2025-11-18
 description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment
 ---
 
@@ -69,6 +69,17 @@ In case of `5m` aggregated metrics when we calculate standard deviation and aver
 In case of `1h` aggregated metrics -- we take $d$ 1h's datapoints.
 
 In case of `1d` aggregated metrics -- we take $d$ 1d's datapoints.
+
+<Notebox type="note">
+The `5m` interval sentiment volume consumed metrics are highly sensitive to short-term fluctuations and external events, which can introduce significant noise into the data. This can make it difficult to accurately assess underlying sentiment trends.  To mitigate this, we recommend utilizing metrics
+aggregated over longer intervals:
+
+ *   **`1h` (one-hour) metrics:** These provide a more stable and smoothed representation of sentiment.
+ *   **`1d` (one-day) metrics:** These offer a broader perspective on sentiment, reducing the impact of daily noise.
+
+Using these longer intervals helps to capture more sustained sentiment patterns.
+</Notebox>
+
 
 ### Available Sources
 

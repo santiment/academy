@@ -4,11 +4,10 @@ author: Santiment Team
 date: 2023-06-01
 ---
 
-
 ## Metrics
 
 The development-related data allows the definition of different metrics.
-These metrics include: 
+These metrics include:
 - [Development Activity](/metrics/development-activity/development-activity/) -
   Ignore the non-development related events. Excluding this allows values of
   projects who use Github for issue tracking and projects who do not use Github
@@ -22,7 +21,7 @@ These metrics include:
 
 ---
 
-## Why Development Acitivty matters?
+## Why Development Activity matters?
 
 The development activity of a project that Santiment tracks is done in the
 project's public GitHub repositories. The work done in private repositories
@@ -50,7 +49,6 @@ features.
 
 ## How is development activity tracked?
 
-
 Development-related metrics are using the events emitted by Github. The metrics
 **do not** use the number of commits in a repository.
 
@@ -70,7 +68,7 @@ There are a lot of projects that fork (copy everything up until this moment)
 other blockchains' source code and make small changes on top of it, without the
 intent of proposing these changes back to the original repository. The process
 of forking inherits all commits, but this is other people's work -- this is
-not work done by the team that makes the fork. 
+not work done by the team that makes the fork.
 
 #### Example 
 For example, if a person forks the [Bitcoin Github
@@ -114,7 +112,6 @@ piece](https://medium.com/santiment/tracking-github-activity-of-crypto-projects-
 by Valentin, our ex-CTO.
 
 ---
-
 
 ## As a Trading Strategy
 

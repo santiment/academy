@@ -1,0 +1,87 @@
+---
+title: Thermocap
+author: Filip
+date: 2025-11-01
+description: Thermocap Metric
+---
+
+## Description
+Thermocap is a metric that tracks the total value of coins paid to miners, offering a 
+clear view of how much a blockchain network spends on its own security. By multiplying 
+all historical coinbase rewards by their USD value at the time they were mined, thermocap 
+reflects the real capital that has flowed into sustaining mining operations. Because 
+miners are responsible for maintaining and securing the network, this aggregated spend 
+effectively represents the network’s total security budget.
+
+Thermocap Metrics:
+* `thermocap` - Total historical value of all mining rewards paid to miners
+* `mctc` - The ratio comparing a network’s market capitalization to its thermocap
+
+---
+
+## Access
+
+[Free Access](/metrics/details/access#free-access)
+
+---
+
+## Measuring Unit
+
+* `thermocap` - Amount in USD
+* `mctc` - Ratio
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Frequency
+
+[Daily Intervals](/metrics/details/frequency#daily-frequency)
+
+---
+
+## Latency
+
+[Price Latency](/metrics/details/latency#price-latency)
+
+---
+
+## Available Assets
+
+Available for `bitcoin`
+
+---
+
+### SanAPI
+
+Available under names: `thermocap` 
+
+```graphql explorer
+{
+  getMetric(metric: "thermocap"){
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "2025-11-01T00:00:00Z"
+      to: "2025-11-10T00:00:00Z"
+      interval: "1d")
+  }
+}
+```
+
+Available under name: `mctc` 
+
+```graphql explorer
+{
+  getMetric(metric: "mctc"){
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "2025-11-01T00:00:00Z"
+      to: "2025-11-10T00:00:00Z"
+      interval: "1d")
+  }
+}
+```
