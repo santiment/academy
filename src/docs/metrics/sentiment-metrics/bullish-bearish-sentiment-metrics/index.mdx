@@ -61,7 +61,7 @@ All metrics have the same set of [available assets](<https://api.santiment.net/g
 
 Fetch timeseries data for `sentiment_bullish_total` for a single asset:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "sentiment_bullish_total") {
     timeseriesDataJson(
@@ -78,7 +78,7 @@ Fetch timeseries data for `sentiment_bullish_total` for a single asset:
 
 Fetch timeseries data for `sentiment_neutral_total` for multiple assets at the same time:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "sentiment_neutral_total") {
     timeseriesDataPerSlugJson(
@@ -95,7 +95,7 @@ Fetch timeseries data for `sentiment_neutral_total` for multiple assets at the s
 
 Fetch timeseries data for `sentiment_bearish_total` for multiple assets at the same time:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "sentiment_bearish_total") {
     timeseriesDataPerSlugJson(
@@ -112,7 +112,7 @@ Fetch timeseries data for `sentiment_bearish_total` for multiple assets at the s
 
 Fetch aggregated daily values for many assets:
 
-```graphql-explorer
+```graphql explorer
 {
   allProjects(page: 1, pageSize: 50) {
     slug

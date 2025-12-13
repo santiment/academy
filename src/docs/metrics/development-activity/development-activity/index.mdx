@@ -89,7 +89,7 @@ There are 3 development activity metrics available:
 
 Fetch the dev activity for an asset:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "dev_activity") {
     timeseriesDataJson(
@@ -107,7 +107,7 @@ Fetch the dev activity for an asset:
 Fetch the `dev_activity` for an arbitrary organization. You need to provide only the organization name
 to the parameter, not the whole URL. Github links look like this: `https://github.com/<organization>/<repository>`.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "dev_activity") {
     timeseriesDataJson(
@@ -125,7 +125,7 @@ to the parameter, not the whole URL. Github links look like this: `https://githu
 Fetch the `ecosystem_dev_activity`, combining the dev activities of all assets
 that contribute to that ecosystem:
 
-```graphql-explorer
+```graphql explorer
 {
   getEcosystems(ecosystems: ["Ethereum"]) {
     timeseriesData(

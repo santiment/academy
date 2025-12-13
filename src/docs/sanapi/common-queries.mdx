@@ -14,7 +14,7 @@ In this article we explore some of the most frequently used queries in the SanAP
 
 This query obtains the daily active addresses for bitcoin for a period of 30 days.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "daily_active_addresses") {
     timeseriesDataJson(
@@ -336,7 +336,7 @@ You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/gr
 
 ### Retrieve Current Prices for All Assets
 
-```graphql-explorer
+```graphql explorer
 {
   allProjects {
     slug
@@ -352,7 +352,7 @@ You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/gr
 
 ### Retrieve Current Trending Words
 
-```graphql-explorer
+```graphql explorer
 {
   getTrendingWords(
     from: "utc_now-3h"

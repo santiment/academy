@@ -34,7 +34,7 @@ timeseries data, histogram data, and aggregated timeseries data.
 
 Here is an example of a GraphQL `getMetric` query:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "active_addresses_24h") {
     timeseriesDataJson(
@@ -55,7 +55,7 @@ interval between data points.
 
 You can fetch the list of all available metrics using the following [query](https://api.santiment.net/graphiql?query=%7B%0A++getAvailableMetrics%0A%7D%0A):
 
-```graphql-explorer
+```graphql explorer
 {
   getAvailableMetrics
 }
@@ -65,7 +65,7 @@ To fetch the list of available metrics for a specific plan and product, provide
 the `plan` and `product` arguments in the
 [query](https://api.santiment.net/graphiql?query=%7B%0A++getAvailableMetrics%28product%3A+SANAPI+plan%3A+BUSINESS_PRO%29%0A%7D):
 
-```graphql-explorer
+```graphql explorer
 {
   getAvailableMetrics(product: SANAPI, plan: BUSINESS_PRO)
 }
@@ -81,7 +81,7 @@ Access to certain metrics may be limited in various ways based on your subscript
 
 You can obtain detailed information about the restrictions on all metrics for a specific subscription plan using this query:
 
-```graphql-explorer
+```graphql explorer
 {
   getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
     name
@@ -117,7 +117,7 @@ You can find the documentation for most of the metrics on [this page](/metrics).
 Each metric is retrieved for a specific asset, which is identified by its `slug`.
 You can obtain a list of all slugs using this query:
 
-```graphql-explorer
+```graphql explorer
 {
   allProjects {
     slug
@@ -138,7 +138,7 @@ demonstrates three distinct lists:
 
 You can retrieve these lists of metrics using this query:
 
-```graphql-explorer
+```graphql explorer
 {
   projectBySlug(slug: "ethereum") {
     availableMetrics
@@ -152,7 +152,7 @@ You can retrieve these lists of metrics using this query:
 
 To fetch the list of available slugs for a specific metric, use this query:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "mvrv_usd") {
     metadata {
@@ -214,7 +214,7 @@ The types of aggregations are:
 
 The following query retrieves the default aggregation and all available aggregations for each metric:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "daily_active_addresses") {
     metadata {
@@ -274,7 +274,7 @@ the `timeseriesDataJson` field of the `getMetric` API.
   - `{type: "moving_average", moving_average_base: base}`: Apply a simple moving average. Each data point value is calculated as the average of the last `base` intervals. To compute this, it fetches enough data before `from` so it can be computed.
   - `{type: "changes"}`: For each data point, change the value to the difference between the value and the previous value.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "dev_activity") {
     timeseriesDataJson(
@@ -298,7 +298,7 @@ The differences in parameters compared to timeseriesDataJson are as follows:
   `selector: {slugs: ["bitcoin", "ethereum"]}`
 - It does not support the `transform` parameter
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "price_usd") {
     timeseriesDataPerSlugJson(
@@ -332,7 +332,7 @@ among other examples.
 
 The following query fetches the all-time highest price for Santiment:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "price_usd") {
     highest_price: aggregatedTimeseriesData(
@@ -352,7 +352,7 @@ The only difference is that when using `getMetric` the `metric` is already pinne
 for `allProjects` and `projectBySlug` it is vice versa.
 Using aliases, the `aggregatedTimeseriesData` can be selected multiple times.
 
-```graphql-explorer
+```graphql explorer
 {
   allProjects(page: 1, pageSize: 20) {
     slug
@@ -394,7 +394,7 @@ can use the `histogramData` subquery of the `getMetric` API.
 
 Different histogram metrics may have different response types or formats.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "age_distribution") {
     histogramData(
@@ -426,7 +426,7 @@ Each metric is accompanied by metadata that describes the following:
 - The projects for which the metric is available.
 - The type of the metric, which can be either a timeseries or a histogram.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "daily_active_addresses") {
     metadata {
@@ -445,7 +445,7 @@ Each metric is accompanied by metadata that describes the following:
 
 You can fetch the date from which a specific metric is available for an asset using the following query:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "transaction_volume") {
     availableSince(slug: "bitcoin")
@@ -471,7 +471,7 @@ capitalization, is also only available since July 2010.
 The `lastDatetimeComputedAt` shows the when the latest
 data point was computed.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "daily_active_addresses") {
     lastDatetimeComputedAt(slug: "santiment")
@@ -483,7 +483,7 @@ data point was computed.
 
 **Timeseries Data Example**
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "active_addresses_24h") {
     timeseriesDataJson(
@@ -501,7 +501,7 @@ project over the last 60 days, with a 1-day interval.
 
 **Timeseries Data Example**
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "twitter_followers") {
     timeseriesData(
@@ -520,7 +520,7 @@ project over the last 60 days, with a 1-day interval.
 
 **Aggregated Timeseries Data Example**
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "daily_active_addresses") {
     highest_daa: aggregatedTimeseriesData(
@@ -541,7 +541,7 @@ project over the last 60 days, with a 1-day interval.
 
 **Histogram Metric Example I**
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "age_distribution") {
     histogramData(
@@ -567,7 +567,7 @@ The response result is a list that contains a 2-element range of datetimes and a
 
 **Histogram Metric Example**
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "price_histogram") {
     histogramData(

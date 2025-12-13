@@ -66,7 +66,7 @@ There are 3 github activity metrics available:
 
 Fetch the dev activity for an asset:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "github_activity") {
     timeseriesDataJson(
@@ -84,7 +84,7 @@ Fetch the dev activity for an asset:
 Fetch the `github_activity` for an arbitrary organization. You need to provide only the organization name
 to the parameter, not the whole URL. Github links look like this: `https://github.com/<organization>/<repository>`.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "github_activity") {
     timeseriesDataJson(
@@ -102,7 +102,7 @@ to the parameter, not the whole URL. Github links look like this: `https://githu
 Fetch the `ecosystem_github_activity`, combining the dev activities of all assets
 that contribute to that ecosystem:
 
-```graphql-explorer
+```graphql explorer
 {
   getEcosystems(ecosystems: ["ethereum"]) {
     timeseriesDataJson(
@@ -136,7 +136,7 @@ To check what assets are part of the ecosystem and what are their github links:
 
 GitHub Activity Change for Ethereum Repository Over 7 Days
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "github_activity_change_30d") {
     timeseriesDataJson(

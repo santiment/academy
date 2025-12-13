@@ -11,7 +11,6 @@ import H4 from '$components/markdown/headings/H4.astro'
 import H5 from '$components/markdown/headings/H5.astro'
 import Link from '$components/markdown/Link.svelte'
 import Blockquote from '$components/markdown/Blockquote.svelte'
-import Pre from '$components/markdown/Pre/Pre.astro'
 
 export type TBreadcrump = {
   pathname: string
@@ -92,7 +91,6 @@ const components = {
   h5: H5,
   a: Link,
   blockquote: Blockquote,
-  // pre: Pre,
 }
 
 const formattedHeadings = headings.filter((heading) => heading.depth <= 3)

@@ -89,7 +89,7 @@ day for given time period. Projects are referred to by a unique identifier
 (slug). This metric is calculated daily, so the interval should be selected
 accordingly.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "circulation_1d") {
     timeseriesDataJson(
@@ -105,7 +105,7 @@ accordingly.
 Without any suffixes like \_1d, the metric returns the number of coins/tokens
 ever seen up until now, which is equal to the total supply at that datetime.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "circulation") {
     timeseriesDataJson(

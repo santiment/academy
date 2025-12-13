@@ -84,7 +84,7 @@ The term refers to a [GraphQL field](https://graphql.org/learn/queries/#fields).
 
 In the first example, the `timeseriesData` field is used. The `datetime` and `value` are also fields. This illustrates that fields can either have arguments or not.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "active_addresses_24h") {
     timeseriesDataJson(
@@ -99,7 +99,7 @@ In the first example, the `timeseriesData` field is used. The `datetime` and `va
 
 In the second example, the `aggregatedTimeseriesData` field is used.
 
-```graphql
+```graphql explorer
 {
   getMetric(metric: "active_addresses_24h") {
     aggregatedTimeseriesData(
@@ -122,7 +122,7 @@ In the context of Santiment's API, a metric is a term with a specific meaning. I
 
 Consider the following example where `nvt` is the metric and `getMetric` is the query.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "nvt") {
     timeseriesDataJson(

@@ -37,7 +37,7 @@ query.
 
 Executing the following GraphQL request will count as 1 API calls:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "active_addresses_24h") {
     timeseriesDataJson(
@@ -52,7 +52,7 @@ Executing the following GraphQL request will count as 1 API calls:
 
 Executing the following GraphQL request will count as 2 API calls:
 
-```graphql-explorer
+```graphql explorer
 {
   activeAddresses: getMetric(metric: "active_addresses_24h") {
     timeseriesDataJson(

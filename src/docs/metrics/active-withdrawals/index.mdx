@@ -78,7 +78,7 @@ Non-negative number of addresses
 
 The metric is available under the `active_withdrawals` name for daily resolution and `active_withdrawals_5m` for intraday resolution.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "active_withdrawals") {
     timeseriesDataJson(
@@ -95,7 +95,7 @@ The metric is available under the `active_withdrawals` name for daily resolution
 Withdrawal transactions are available under `withdrawal_transactions` and `withdrawal_transactions_5m` names.
 
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "withdrawal_transactions_5m") {
     timeseriesDataJson(

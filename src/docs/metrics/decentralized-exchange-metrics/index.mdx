@@ -112,7 +112,7 @@ Tether, USD coin, DAI, Binance USD, TrueUSD and other stablecoins.
 Trade volume metrics: `total_trade_volume_by_dex`, `eth_based_trade_volume_by_dex`,
 `stablecoin_trade_volume_by_dex` and `other_trade_volume_by_dex`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "total_trade_volume_by_dex") {
     timeseriesDataJson(
@@ -132,7 +132,7 @@ Trade volume metrics: `total_trade_volume_by_dex`, `eth_based_trade_volume_by_de
 Number of trades metrics: `total_trade_amount_by_dex`, `eth_based_trade_amount_by_dex`,
 `stablecoin_trade_amount_by_dex` and `other_trade_amount_by_dex`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "total_trade_amount_by_dex") {
     timeseriesDataJson(
@@ -151,7 +151,7 @@ Number of trades metrics: `total_trade_amount_by_dex`, `eth_based_trade_amount_b
 
 Trade volume between ERC20 token and ETH-based tokens: `eth_trade_volume_by_token`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "eth_trade_volume_by_token") {
     timeseriesDataJson(
@@ -170,7 +170,7 @@ Trade volume between ERC20 token and ETH-based tokens: `eth_trade_volume_by_toke
 
 Trade volume between ERC20 token and stablecoins: `stablecoin_trade_volume_by_token`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "stablecoin_trade_volume_by_token") {
     timeseriesDataJson(
@@ -189,7 +189,7 @@ Trade volume between ERC20 token and stablecoins: `stablecoin_trade_volume_by_to
 
 Token ETH Price by DEX: `token_eth_price_by_dex_5m`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "token_eth_price_by_dex_5m") {
     timeseriesDataJson(

@@ -109,7 +109,7 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 Action metrics: `makerdao_action_deposits<_usd>`, `makerdao_action_liquidations<_usd>`, 
 `makerdao_action_new_debt<_usd>` and `makerdao_action_repayments<_usd>`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "makerdao_action_deposits_usd"){
     timeseriesDataJson(
@@ -125,7 +125,7 @@ Action metrics: `makerdao_action_deposits<_usd>`, `makerdao_action_liquidations<
 
 New debt/repayments against collateral metrics:`dai_created`, `dai_repaid` and `total_dai_created`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "dai_created"){
     timeseriesDataJson(
@@ -141,7 +141,7 @@ New debt/repayments against collateral metrics:`dai_created`, `dai_repaid` and `
 Total supplied/borrowed metrics: `makerdao_total_supplied<_usd>` and 
 `makerdao_total_borrowed<_usd>`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "makerdao_total_supplied"){
     timeseriesDataJson(
@@ -157,7 +157,7 @@ Total supplied/borrowed metrics: `makerdao_total_supplied<_usd>` and
 Collateralization ratio and stability fee metrics: `mcd_collat_ratio` and 
 `mcd_stability_fee`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "mcd_collat_ratio"){
     timeseriesDataJson(
@@ -174,7 +174,7 @@ Collateralization ratio and stability fee metrics: `mcd_collat_ratio` and
 Protocol total action metrics: `makerdao_total_deposits_usd`, `makerdao_total_liquidations_usd`, 
 `makerdao_total_new_debt_usd` and `makerdao_total_repayments_usd`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "makerdao_total_new_debt_usd"){
     timeseriesDataJson(
@@ -190,7 +190,7 @@ Protocol total action metrics: `makerdao_total_deposits_usd`, `makerdao_total_li
 Protocol total supplied/borrowed metrics: `makerdao_protocol_total_supplied_usd` and 
 `makerdao_protocol_total_borrowed_usd`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "makerdao_protocol_total_supplied_usd"){
     timeseriesDataJson(
@@ -205,7 +205,7 @@ Protocol total supplied/borrowed metrics: `makerdao_protocol_total_supplied_usd`
 
 Daily active addresses: `makerdao_active_addresses`
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "makerdao_active_addresses"){
     timeseriesDataJson(

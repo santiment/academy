@@ -63,7 +63,7 @@ assets](https://api.santiment.net/graphiql?query=%7B%0A%20%20allErc20Projects%20
 
 Available as a field of the project graphql type, fetch the amount of ETH spent for every `interval` in the time range.
 
-```graphql
+```graphql explorer
 {
   projectBySlug(slug: "santiment") {
     ethSpentOverTime(
@@ -78,14 +78,11 @@ Available as a field of the project graphql type, fetch the amount of ETH spent 
 }
 ```
 
-**[Run in
-Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20projectBySlug(slug%3A%20%22santiment%22)%20%7B%0A%20%20%20%20ethSpentOverTime(from%3A%20%222019-01-01T00%3A00%3A00Z%22%2C%20to%3A%20%222020-01-07T00%3A00%3A00Z%22%2C%20interval%3A%20%2230d%22)%20%7B%0A%20%20%20%20%20%20datetime%0A%20%20%20%20%20%20ethSpent%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&variables=%7B%7D>)**
-
 ### Aggregated data per project
 
 In order to fetch how many ETH every project spent in a the last N days, you can execute the following GraphQL query (the `days` can contain any number of days):
 
-```graphql
+```graphql explorer
 {
   allProjects {
     slug
@@ -93,6 +90,3 @@ In order to fetch how many ETH every project spent in a the last N days, you can
   }
 }
 ```
-
-**[Run in
-Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20ethSpent(days%3A%2030)%0A%20%20%7D%0A%7D%0A>)**

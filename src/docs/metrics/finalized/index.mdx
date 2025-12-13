@@ -22,7 +22,7 @@ Finalized here means the value is considered final for the requested interval. I
 
 Set `onlyFinalizedData: true` in your GraphQL query. For example, requesting daily finalized Transaction Volume for Bitcoin Cash:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "transaction_volume"){
     timeseriesDataJson(

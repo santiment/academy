@@ -76,7 +76,7 @@ Beacon chain metrics:
 
 ETH 2.0 Staker Count:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "eth2_stakers_count") {
     timeseriesDataJson(
@@ -91,7 +91,7 @@ ETH 2.0 Staker Count:
 
 ETH 2.0 Staking ROI:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "eth2_roi") {
     timeseriesDataJson(
@@ -106,7 +106,7 @@ ETH 2.0 Staking ROI:
 
 ETH 2.0 Total Staked Amount:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "balance_per_owner") {
     timeseriesDataJson(
@@ -125,7 +125,7 @@ ETH 2.0 Total Staked Amount:
 
 Staked amount per label:
 
-```graphql
+```graphql explorer
 {
   getMetric(metric: "eth2_staked_amount_per_label") {
     histogramData(
@@ -147,11 +147,9 @@ Staked amount per label:
 }
 ```
 
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22eth2_staked_amount_per_label%22)%20%7B%0A%20%20%20%20histogramData(%0A%20%20%20%20%20%20selector%3A%20%7Bslug%3A%20%22ethereum%22%7D%0A%20%20%20%20%20%20from%3A%20%22utc_now-70d%22%0A%20%20%20%20%20%20to%3A%22utc_now%22%0A%20%20%20%20)%7B%0A%20%20%20%20%20%20values%7B%0A%20%20%20%20%20%20%20%20__typename%0A%20%20%20%20%20%20%20%20...%20on%20StringLabelFloatValueList%7B%0A%20%20%20%20%20%20%20%20data%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20label%0A%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%09%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
-
 Count of addresses that staked:
 
-```graphql
+```graphql explorer
 {
   getMetric(metric: "eth2_staked_address_count_per_label") {
     histogramData(
@@ -171,8 +169,6 @@ Count of addresses that staked:
   }
 }
 ```
-
-[**Run in Explorer**](<https://api.santiment.net/graphiql?query=%7B%0A%09getMetric(metric%3A%20%22eth2_staked_address_count_per_label%22)%7B%0A%20%20%20%20%20%20%20%20%20%20histogramData(%0A%20%20%20%20%20%20%20%20%20%20%20%20selector%3A%20%7Bslug%3A%20%22ethereum%22%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3A%20%22utc_now-10d%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20%20%20%20%20)%7B%0A%09%09%09values%7B%0A%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20...%20on%20StringLabelFloatValueList%7B%0A%20%20%20%20%20%20%20%20%20%20data%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20label%0A%20%20%20%20%20%20%20%20%20%20%20%20value%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 Top stakers:
 
@@ -204,7 +200,7 @@ Top stakers:
 Available under the `eth2_stakers_realized_value_usd_<timebound>`
 and `eth2_stakers_mvrv_usd_<timebound>` names.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "eth2_stakers_realized_value_usd_365d") {
     timeseriesDataJson(
@@ -220,7 +216,7 @@ and `eth2_stakers_mvrv_usd_<timebound>` names.
 Available under the `eth_beacon_deposits`, `eth_beacon_validator_withdrawals` and
 `eth_beacon_reward_withdrawals` names.
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "eth_beacon_deposits") {
     timeseriesDataJson(

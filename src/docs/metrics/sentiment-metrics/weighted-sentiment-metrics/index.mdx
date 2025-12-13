@@ -128,7 +128,7 @@ All metrics have the same set of [available assets](<https://api.santiment.net/g
 
 Fetch timeseries data for `sentiment_weighted_total` for a single asset:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "sentiment_weighted_total") {
     timeseriesDataJson(
@@ -145,7 +145,7 @@ Fetch timeseries data for `sentiment_weighted_total` for a single asset:
 
 Fetch timeseries data for `sentiment_weighted_telegram` for multiple assets at the same time:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "sentiment_weighted_telegram") {
     timeseriesDataPerSlugJson(
@@ -162,7 +162,7 @@ Fetch timeseries data for `sentiment_weighted_telegram` for multiple assets at t
 
 Fetch aggregated daily values for many assets:
 
-```graphql-explorer
+```graphql explorer
 {
   allProjects(page: 1, pageSize: 50) {
     slug

@@ -100,7 +100,7 @@ All metrics have the same set of [available assets](<https://api.santiment.net/g
 
 Fetch timeseries data for `sentiment_positive_total` for a single asset:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "sentiment_positive_total") {
     timeseriesDataJson(
@@ -117,7 +117,7 @@ Fetch timeseries data for `sentiment_positive_total` for a single asset:
 
 Fetch timeseries data for `sentiment_negative_telegram` for multiple assets at the same time:
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "sentiment_negative_telegram") {
     timeseriesDataPerSlugJson(
@@ -134,7 +134,7 @@ Fetch timeseries data for `sentiment_negative_telegram` for multiple assets at t
 
 Fetch aggregated daily values for many assets:
 
-```graphql-explorer
+```graphql explorer
 {
   allProjects(page: 1, pageSize: 50) {
     slug
@@ -161,7 +161,7 @@ Fetch aggregated daily values for many assets:
 
 There is an option to get Market Sentiment Positive Negative
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "sentiment_positive_telegram") {
     timeseriesDataJson(
@@ -176,7 +176,7 @@ There is an option to get Market Sentiment Positive Negative
 
 ---
 
-```graphql-explorer
+```graphql explorer
 {
   getMetric(metric: "sentiment_negative_telegram") {
     timeseriesDataJson(
