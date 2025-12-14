@@ -45,39 +45,41 @@ if (Astro.url) {
 }
 ---
 
-<div class="flex flex-col">
-  <Sidebar client:load {active} transition:persist />
+<div
+  class="container mx-auto grid min-h-screen w-full grid-cols-[285px_1fr] pl-0 md:grid-cols-1"
+>
+  <div
+    class="sticky top-[71px] block h-[calc(100vh-71px)] border-r border-r-porcelain md:hidden"
+  >
+    <Sidebar client:load {active} transition:persist />
+  </div>
 
-  <div class="flex w-full">
-    <div class="md:none flex w-[286px] flex-grow md:flex-grow-0"></div>
+  <div class="flex min-w-0 flex-col">
+    <main
+      class="flex w-full max-w-[885px] flex-col px-14 pt-[15px] md:px-4"
+      data-pagefind-body
+    >
+      <TableOfContents client:load {headings} {relatedLink} />
 
-    <div class="z-[1] flex w-[885px] flex-grow flex-col md:z-0">
-      <main
-        class="flex min-w-[86vh] flex-col px-14 pt-[15px] md:px-0"
-        data-pagefind-body
-        transition:animate="fade"
-      >
-        <TableOfContents client:load {headings} {relatedLink} />
+      <Breadcrumbs {breadcrumbs} />
 
-        <Breadcrumbs {breadcrumbs} />
+      <div class="wrapper mt-6">
+        {
+          doc.data.title && (
+            <H1 id={sluggify(doc.data.title)}>{doc.data.title}</H1>
+          )
+        }
 
-        <div class="wrapper mt-6">
-          {
-            doc.data.title && (
-              <H1 id={sluggify(doc.data.title)}>{doc.data.title}</H1>
-            )
-          }
+        <slot />
 
-          <slot />
-
-          <ArticleFooter lastUpdatedAt={doc.data.date} />
-        </div>
-      </main>
-      <div
-        class="mt-14 [&>div]:py-7 [&>div]:pl-[55px] [&>div]:pr-[68px] [&_svg]:fill-rhino"
-      >
-        <FooterBottom />
+        <ArticleFooter lastUpdatedAt={doc.data.date} />
       </div>
+    </main>
+
+    <div
+      class="-mr-[100vw] mt-14 border-t border-porcelain pr-[100vw] [&>div]:py-7 [&>div]:pl-[55px] [&>div]:pr-[68px] [&_svg]:fill-rhino"
+    >
+      <FooterBottom class="border-none !pr-0" />
     </div>
   </div>
 </div>
