@@ -4,8 +4,6 @@ author: Santiment Team
 date: 2024-04-01
 ---
 
-import Details from '$components/markdown/Details.svelte'
-
 ## Definition
 
 The Combined Balance of Labeled Holders provides a comprehensive overview of the total tokens held by all addresses
@@ -76,10 +74,7 @@ Holders labeled distribution combined balance metrics: `holders_labeled_distribu
 {
   getMetric(metric: "holders_labeled_distribution_combined_balance_1_to_10") {
     timeseriesDataJson(
-      selector: {
-        slug: "ethereum"
-       label: "miner"
-      }
+      selector: { slug: "ethereum", label: "miner" }
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-10T00:00:00Z"
       interval: "1d"
@@ -92,12 +87,11 @@ Holders labeled negative distribution combined balance metrics: `holders_labeled
 
 ```graphql explorer
 {
-  getMetric(metric: "holders_labeled_negative_distribution_combined_balance_10_to_100") {
+  getMetric(
+    metric: "holders_labeled_negative_distribution_combined_balance_10_to_100"
+  ) {
     timeseriesDataJson(
-      selector: {
-        slug: "ethereum"
-       label: "nonExchange"
-      }
+      selector: { slug: "ethereum", label: "nonExchange" }
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-10T00:00:00Z"
       interval: "1d"
@@ -108,7 +102,7 @@ Holders labeled negative distribution combined balance metrics: `holders_labeled
 
 ## Full list of metrics
 
-<Details>
+<details>
 
 <summary>Holders labeled distribution combined balance metrics</summary>
 
@@ -126,13 +120,11 @@ Holders labeled negative distribution combined balance metrics: `holders_labeled
 - holders_labeled_distribution_combined_balance_10M_to_inf
 - holders_labeled_distribution_combined_balance_total
 
-</Details>
+</details>
 
-<Details>
+<details>
 
-<summary>
-  Holders labeled negative distribution combined balance metrics
-</summary>
+<summary>Holders labeled negative distribution combined balance metrics</summary>
 
 - holders_labeled_negative_distribution_combined_balance_0_to_0.001
 - holders_labeled_negative_distribution_combined_balance_0.001_to_0.01
@@ -148,4 +140,4 @@ Holders labeled negative distribution combined balance metrics: `holders_labeled
 - holders_labeled_negative_distribution_combined_balance_10M_to_inf
 - holders_labeled_negative_distribution_combined_balance_total
 
-</Details>
+</details>

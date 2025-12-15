@@ -109,6 +109,7 @@ html {
 }
 
 .wrapper ol>li::before {
+  position: absolute;
   content: '.' counter(li);
   color: var(--casper);
   display: inline-block;
