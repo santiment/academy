@@ -74,6 +74,11 @@ export default defineConfig({
   vite: viteConfig,
   base: '/',
   markdown: {
+    shikiConfig: {
+      langAlias: {
+        SQL: 'sql',
+      },
+    },
     remarkPlugins: [remarkMath, remarkGemoji],
     rehypePlugins: [rehypeKatex, rehypeSlug],
   },

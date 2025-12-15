@@ -22,7 +22,7 @@
   </h3>
 {/snippet}
 
-<aside class={cn("h-full overflow-y-auto pb-10 pl-4 pr-5 [scrollbar-gutter:stable]", className)}>
+<aside class={cn("h-full overflow-y-auto pb-10 pl-4 [scrollbar-gutter:stable]", className)}>
   {@render sectionHeader(GETTING_STARTED.title)}
 
   <ul>

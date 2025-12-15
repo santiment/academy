@@ -26,6 +26,11 @@ const {
 // 6. Optimize some components
 // 8. Add auth for Intercom
 // 13. Add analytics
+let active: string[] = []
+
+if (Astro.url) {
+  active = Astro.url.pathname.split('/').slice(1)
+}
 ---
 
 <html lang="en">
@@ -39,7 +44,7 @@ const {
     <ClientRouter />
   </head>
 
-  <body class={cn('pt-[70px] overflow-x-hidden', className)}>
+  <body class={cn('pt-[70px]', className)}>
     <AppShell client:only="svelte" />
 
     <div data-vaul-drawer-wrapper>

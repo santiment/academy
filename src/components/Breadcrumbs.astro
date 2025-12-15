@@ -13,7 +13,7 @@ const { breadcrumbs, class: className } = Astro.props
 ---
 
 <nav class={cn('mt-[18px] px-0 text-sm sm:mb-5', className)}>
-  <ul class="flex">
+  <ul class="flex flex-wrap gap-y-4">
     {
       breadcrumbs.map(({ pathname, label }, index) => (
         <li class="flex items-center before:m-0 before:w-0 before:!content-['']">

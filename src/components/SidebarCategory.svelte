@@ -55,7 +55,7 @@
         icon="arrow-right"
         iconSize={8}
         class={cn(
-          "h-6 cursor-pointer focus:outline-none fill-green hover:bg-green-light-2",
+          "h-6 md:h-8 cursor-pointer focus:outline-none fill-green hover:bg-green-light-2",
           '[&_svg]:transition-transform [&_svg]:duration-200 [&_svg]:ease-in-out',
           isOpen ? '[&_svg]:rotate-90' : '[&_svg]:rotate-0',
           isActive || isOpen
@@ -85,7 +85,7 @@
           <a
             href={`/${titleToSlug(title)}/${titleToSlug(slugTitle)}/`}
             class={cn(
-              'relative block py-1 pl-4 pr-0 text-base text-fiord hover:text-green',
+              'relative block py-1 pl-4 pr-4 text-base text-fiord hover:text-green',
               isItemActive && "text-green before:absolute before:left-0 before:top-0 before:block before:h-full before:w-0.5 before:rounded-lg before:bg-green before:content-['']"
             )}
           >

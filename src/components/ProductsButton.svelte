@@ -3,14 +3,14 @@
   import ProductsButton from 'san-webkit-next/ui/app/Products'
 </script>
 
-<ProductsButton>
+<ProductsButton class="md:hidden">
   {#snippet children({ ref })}
     <Button
       {ref}
       size="auto"
       icon="products-toggle"
       iconSize={16}
-      class="fill-waterloo hover:bg-transparent hover:fill-green-hover p-2 mr-[42px]"
+      class="fill-waterloo hover:bg-transparent hover:fill-green-hover p-2 mr-[42px] md:hidden"
     ></Button>
   {/snippet}
 </ProductsButton>
