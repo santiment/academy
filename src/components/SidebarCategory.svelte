@@ -1,25 +1,25 @@
 <script lang="ts">
   import { slide } from 'svelte/transition'
   import { cn } from 'san-webkit-next/ui/utils'
-
-  import { titleToSlug } from '../utils/docs'
-  import { isCategoryActive, isArticleActive } from './utils'
+  // import { titleToSlug } from '../utils/docs'  <-- УДАЛЯЕМ (больше не нужно)
+  // import { isCategoryActive, isArticleActive } from './utils' <-- УДАЛЯЕМ (логика будет внутри)
   import Button from 'san-webkit-next/ui/core/Button'
 
-  type TArticle = string | { slug?: string; title?: string }
-  
+  import type { SidebarLink } from '../utils/sidebar'
+
   interface TProps {
-    active: string[]
     title: string
-    articles?: TArticle[]
+    articles?: SidebarLink[] 
+    currentSlug: string
+    href?: string
   }
 
-  let { active = [], title, articles = [] }: TProps = $props()
+  let { title, articles = [], currentSlug, href }: TProps = $props()
 
-  let isOpen = $state(isCategoryActive(active, title))
-
-  let isActive = $derived(isCategoryActive(active, title))
+  let isActive = $derived(articles.some(a => a.slug === currentSlug));
   
+  let isOpen = $state(isActive);
+
   $effect(() => {
     if (isActive) {
       isOpen = true
@@ -45,9 +45,15 @@
           : 'text-rhino hover:bg-green-light-1 hover:text-green hover:fill-green'
     )}
   >
-    <a href={`/${titleToSlug(title)}/`} class="text-inherit w-full">
-      {title}
-    </a>
+    {#if href}
+      <a href={href} class="text-inherit w-full font-medium block">
+        {title}
+      </a>
+    {:else}
+      <span class="text-inherit w-full font-medium cursor-default">
+        {title}
+      </span>
+    {/if}
 
     {#if articles.length > 0}
       <Button
@@ -77,19 +83,17 @@
       )}
     >
       {#each articles as article}
-        {@const slugTitle = typeof article === 'string' ? article : article.slug || article.title || ''}
-        {@const linkTitle = typeof article === 'string' ? article : article.title || article.slug || ''}
-        {@const isItemActive = isArticleActive(active, title, slugTitle)}
+        {@const isItemActive = currentSlug === article.slug}
 
         <li>
           <a
-            href={`/${titleToSlug(title)}/${titleToSlug(slugTitle)}/`}
+            href={article.href} 
             class={cn(
               'relative block py-1 pl-4 pr-4 text-base text-fiord hover:text-green',
               isItemActive && "text-green before:absolute before:left-0 before:top-0 before:block before:h-full before:w-0.5 before:rounded-lg before:bg-green before:content-['']"
             )}
           >
-            {linkTitle}
+            {article.title}
           </a>
         </li>
       {/each}

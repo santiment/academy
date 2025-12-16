@@ -13,6 +13,9 @@ import Breadcrumbs from '$components/Breadcrumbs.astro'
 import ArticleFooter from '$components/ArticleFooter.svelte'
 import TableOfContents from '$components/TableOfContents.svelte'
 import H1 from '$components/markdown/headings/H1.astro'
+import { getSidebar } from '../utils/sidebar'
+
+// TODO: Finish getSidebar fetching
 
 type Props = {
   doc: CollectionEntry<'docs'>
@@ -43,6 +46,8 @@ let active: string[] = []
 if (Astro.url) {
   active = Astro.url.pathname.split('/').slice(1)
 }
+
+const sidebarData = await getSidebar()
 ---
 
 <div
@@ -51,7 +56,7 @@ if (Astro.url) {
   <div
     class="sticky top-[71px] block h-[calc(100vh-71px)] border-r border-r-porcelain md:hidden"
   >
-    <Sidebar client:load {active} transition:persist />
+    <Sidebar client:load {active} {sidebarData} transition:persist />
   </div>
 
   <div class="flex min-w-0 flex-col">
