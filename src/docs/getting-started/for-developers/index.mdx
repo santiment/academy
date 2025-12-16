@@ -1,5 +1,5 @@
 ---
-title: Getting started for Developers
+title: For Developers
 author: Santiment Team
 date: 2023-05-10
 description: Santiment overview for Developers
@@ -36,12 +36,13 @@ intuitively understand the query without the need to consult the documentation.
 
 ```graphql explorer
 {
-  getMetric(metric: "daily_active_addresses"){
+  getMetric(metric: "daily_active_addresses") {
     timeseriesDataJson(
-      selector: {slug: "bitcoin"}
+      selector: { slug: "bitcoin" }
       from: "2024-01-01T00:00:00Z"
       to: "2024-01-31T23:59:59Z"
-      interval: "1d")
+      interval: "1d"
+    )
   }
 }
 ```
@@ -68,20 +69,19 @@ san.get("daily_active_addresses",
 
 ### Metrics Exported to S3
 
-Santiment exports metrics data to Amazon S3 in [Parquet](https://parquet.apache.org/) format, providing 
-efficient access to large-scale historical data. For tasks like backtesting 
-or ML model training where you need to process large volumes of immutable 
-historical data, reading directly from S3 is more efficient than fetching 
+Santiment exports metrics data to Amazon S3 in [Parquet](https://parquet.apache.org/) format, providing
+efficient access to large-scale historical data. For tasks like backtesting
+or ML model training where you need to process large volumes of immutable
+historical data, reading directly from S3 is more efficient than fetching
 via API.
 
-The exported data includes both intraday (5-minute intervals) and daily 
+The exported data includes both intraday (5-minute intervals) and daily
 aggregated metrics, stored in an organized directory structure.
 
-To request data exporting and S3 bucket access credentials, please 
+To request data exporting and S3 bucket access credentials, please
 [contact us](mailto:Suzanne.p@santiment.net).
 
 **Read more**: [Metrics Exported to S3 - Technical Documentation](/for-developers/metrics-exported-s3)
-
 
 ## Metrics Catalog
 
