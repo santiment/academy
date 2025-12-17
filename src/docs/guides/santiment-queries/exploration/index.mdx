@@ -3,6 +3,7 @@ title: Exploration
 author: Santiment Team
 date: 2022-08-17
 description: Learn how to explore the contents of the database and table structure
+sidebarOrder: 20
 ---
 
 ## Overview
@@ -141,6 +142,7 @@ Let's take a look at the following table structure:
 ```
 
 ### Table Name
+
 The complete table name is `default.intraday_metrics`, where `default` refers to the database and `intraday_metrics` is the table name. Since queries are executed in the `default` database, you can omit `default` when referencing the table.
 
 ### Columns
@@ -155,7 +157,8 @@ This is a crucial field to understand and consider when writing a query. ClickHo
 
 ### Engine
 
-The [Table Engine](https://clickhouse.com/docs/en/engines/table-engines/) controls how data is stored, updated, and accessed. If the engine is *MergeTree, then the `FINAL` keyword needs to be used. See the [Writing SQL Queries](/santiment-queries/writing-sql-queries) page for more detailed examples and reasoning.
+The [Table Engine](https://clickhouse.com/docs/en/engines/table-engines/) controls how data is stored, updated, and accessed. If the engine is \*MergeTree, then the `FINAL` keyword needs to be used. See the [Writing SQL Queries](/santiment-queries/writing-sql-queries) page for more detailed examples and reasoning.
 
 ### Partition
+
 The partitioning has little to no effect on performance, making it safe to ignore.

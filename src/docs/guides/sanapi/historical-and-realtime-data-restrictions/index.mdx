@@ -2,6 +2,8 @@
 title: API Historical and Realtime data restrictions
 author: Santiment Team
 date: 2024-07-03
+sidebarLabel: Historical and Realtime data restrictions
+sidebarOrder: 50
 ---
 
 import Notebox from '$components/markdown/Notebox.svelte'
@@ -52,7 +54,7 @@ specific subscription plan using this query:
 
 ```graphql explorer
 {
-  getAccessRestrictions(product: SANAPI plan: BUSINESS_PRO filter: METRIC) {
+  getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
     name
     isDeprecated
     isAccessible

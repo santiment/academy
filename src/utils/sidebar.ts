@@ -43,6 +43,7 @@ export async function getSidebar(): Promise<SidebarSection[]> {
   const collection = await getCollection('docs');
 
   const validDocs = collection.filter((doc) => {
+    if (doc.data.hidden) return false;
     const isIndexFile = doc.filePath?.endsWith('/index.mdx');
     if (!isIndexFile) return false;
 

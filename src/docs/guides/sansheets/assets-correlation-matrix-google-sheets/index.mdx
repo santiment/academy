@@ -1,6 +1,8 @@
 ---
 title: How to Create a Correlation Matrix
 author: Yura Zatsepin
+sidebarLabel: Correlation Matrix
+sidebarOrder: 30
 ---
 
 In this article, we will demonstrate the power and ease of using Google Sheets Integration with Santiment data. You will learn how to create a correlation matrix similar to the one on Cryptowatch.io, with the added bonus of being able to create a correlation matrix for not only the top 20 assets but for any crypto assets.
@@ -36,7 +38,7 @@ This function will automatically populate the last 7 days of Bitcoin's USD price
 ## How to Calculate Correlations
 
 Google Sheets has a built-in function for calculating the Pearson Correlation:
-```=CORREL()```
+`=CORREL()`
 
 To calculate the Pearson Coefficient for Bitcoin and Ethereum, simply select the cells with BTC price data (in our case, C7:C13) and the cells with Ethereum price data (G7:G13) within the `=CORREL()` function, as shown below:
 

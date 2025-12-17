@@ -3,6 +3,8 @@ title: Metrics Datasets
 author: Santiment Team
 date: 2024-04-01
 description: Learn about Santiment metrics datasets.
+sidebarLabel: Metric Tables
+sidebarOrder: 70
 ---
 
 ## Overview
@@ -50,6 +52,7 @@ WHERE
     dt >= toDateTime('2020-01-01 00:00:00')
 LIMIT 2
 ```
+
 Test in [Queries](https://queries.santiment.net/query/dict-example-with-func-413)
 
 ---
@@ -110,12 +113,12 @@ Table `intraday_metrics` also has `label` and `owner` columns so that metrics st
 
 > Note that this table uses old way to filter labels (plain label/owner instead of label_fqn).
 
-This table could be used to retrieve [labelled exchange](/metrics/labeled-exchange) metrics under names: 
+This table could be used to retrieve [labelled exchange](/metrics/labeled-exchange) metrics under names:
 
-* `labelled_active_deposits`
-* `labelled_deposit_transactions`
-* `labelled_active_withdrawals`
-* `labelled_withdrawal_transactions` 
+- `labelled_active_deposits`
+- `labelled_deposit_transactions`
+- `labelled_active_withdrawals`
+- `labelled_withdrawal_transactions`
 
 or NFT [trading volume](metrics/nft-trade-volume-usd) and [trades count](metrics/nft-trades-count) metrics.
 
@@ -155,11 +158,12 @@ WHERE dt >= today() - 7
 
 Test in [Queries](https://queries.santiment.net/query/ecosystem-example-482)
 
-> In that table you can find dev activity metrics like 
-* `ecosystem_github_activity`
-* `ecosystem_dev_activity`
-* `ecosystem_github_activity_contributors_count`
-* `ecosystem_dev_activity_contributors_count`, etc.
+> In that table you can find dev activity metrics like
+
+- `ecosystem_github_activity`
+- `ecosystem_dev_activity`
+- `ecosystem_github_activity_contributors_count`
+- `ecosystem_dev_activity_contributors_count`, etc.
 
 Here's an example how to get ecosystem_github_activity_contributors_count for ethereum:
 
@@ -191,7 +195,7 @@ SELECT
 FROM intraday_nft_metrics
 WHERE
     dt >= toDateTime('2024-01-01 00:00:00')
-    AND asset_id = get_asset_id('ethereum') 
+    AND asset_id = get_asset_id('ethereum')
     AND metric_id = get_metric_id('nft_collection_min_price')
     AND collection_name = 'boredapeyachtclub'
 LIMIT 5
@@ -207,11 +211,11 @@ Test in [Queries](https://queries.santiment.net/query/intraday-nft-metrics-examp
 
 There are few metadata tables storing data about metrics, assets and label_fqns:
 
-* `metric_metadata` stores metric name, ID, metric version, etc.
-* `asset_metadata` stores asset name, ID, decimals, contract_addresses, ticker and slug, etc.
-* `label_metadata` stores label fqn, ID and other label related info.
+- `metric_metadata` stores metric name, ID, metric version, etc.
+- `asset_metadata` stores asset name, ID, decimals, contract_addresses, ticker and slug, etc.
+- `label_metadata` stores label fqn, ID and other label related info.
 
-Using these table you can navigate through a wide range of Santiment datasets. For instance, you're able to 
+Using these table you can navigate through a wide range of Santiment datasets. For instance, you're able to
 find all price-related metrics with a simple query:
 
 ```SQL
@@ -229,12 +233,12 @@ SELECT DISTINCT name, asset_id, decimals, contract_addresses
 FROM asset_metadata
 WHERE name = 'uniswap'
 ```
+
 ```
 ┌───────name─┬──asset_id─┬──deciamls─┬──────────contract_addresses───────────────────────────┐
-│ 'uniswap'       2825         18   ['0x1f9840a85d5af5bf1d1762f925bdaddc4201f984']  │ 
+│ 'uniswap'       2825         18   ['0x1f9840a85d5af5bf1d1762f925bdaddc4201f984']  │
 └─────────────┴────────────┴─────────────┴───────────────────────────────────────────────────────────┘
 ```
-
 
 ### Using precomputed metrics to build new metrics
 
@@ -270,6 +274,7 @@ GROUP BY dt
 ORDER BY dt ASC
 LIMIT 10
 ```
+
 Test in [Queries](https://queries.santiment.net/query/usage-of-precomputed-metrics-example-415)
 
 ```
@@ -296,7 +301,7 @@ WITH
     get_metric_id('price_usd') AS price_usd_metric_id,
     get_metric_id('mean_realized_price_usd_intraday_20y') AS realized_price_usd_metric_id
 SELECT
-    dt, 
+    dt,
     price_usd / realized_price_usd AS mvrv_usd_ratio,
     floor((mvrv_usd_ratio - 1) * 100, 2) AS mvrv_usd_percent
 FROM (
@@ -315,6 +320,7 @@ FROM (
 ORDER BY dt ASC
 LIMIT 10
 ```
+
 Test in [Queries](https://queries.santiment.net/query/with-example-416)
 
 The next query demonstrates what needs to be done if there is a need to
@@ -325,7 +331,7 @@ WITH
     get_metric_id('price_usd') AS price_usd_metric_id,
     get_metric_id('mean_realized_price_usd_intraday_20y') AS realized_price_usd_metric_id
 SELECT
-    month, 
+    month,
     price_usd / realized_price_usd AS mvrv_usd_ratio,
     floor((mvrv_usd_ratio - 1) * 100, 2) AS mvrv_usd_percent
 FROM (
@@ -344,14 +350,17 @@ FROM (
 ORDER BY month ASC
 LIMIT 10
 ```
+
 Test in [Queries](https://queries.santiment.net/query/with-example-with-aggregated-dt-417)
 
 The following row needs some explanation:
+
 ```sql
 argMaxIf(value, dt, metric_id=get_metric_id('price_usd')) AS price_usd,
 ```
 
 This function call has three parameters:
+
 - `value` - This is the column that is returned
 - `dt` - This is the column that `max` is performed upon. Of all columns
   matching the filter, the one with the max `dt` is returned.
@@ -365,10 +374,3 @@ argument:
 ```sql
 argMaxIf(value, (dt, computed_at), metric_id=get_metric_id('price_usd')) AS price_usd,
 ```
-
-
-
-
-
-
-

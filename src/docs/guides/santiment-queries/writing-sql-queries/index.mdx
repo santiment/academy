@@ -3,6 +3,7 @@ title: Writing SQL Queries
 author: Santiment Team
 date: 2022-08-17
 description: First steps in using SQL combined with Santiment's datasets
+sidebarOrder: 30
 ---
 
 ## Overview
@@ -52,7 +53,8 @@ Example: There is one value per day for an asset-metric pair in the
 the same primary key but different `value` and `computed_at` is inserted.
 
 In order to read the data as if it is already merged, you need to add the
-`FINAL` keyword after the table name: 
+`FINAL` keyword after the table name:
+
 ```sql
 SELECT dt, value
 FROM daily_metrics_v2 FINAL
@@ -60,12 +62,14 @@ WHERE asset_id = get_asset_id('bitcoin') AND  metric_id = get_metric_id('daily_a
 ORDER BY dt DESC
 LIMIT 2
 ```
+
 Test in [Queries](https://queries.santiment.net/query/final-example-408)
 
 This `FINAL` keyword is not free - it slightly reduces the performance. In case
 performance is seeked, the same goal can be achieved with standard SQL by using
 `GROUP BY` the primary key and aggregate functions. This approach has smaller
 performance penalty at the cost of code readability and maintainability.
+
 ```sql
 SELECT dt, argMax(value, computed_at)
 FROM daily_metrics_v2
@@ -101,6 +105,7 @@ Let's use `daily_metrics_v2` table as an example. Here's a schema for this table
 
 The following example shows how to fetch rows for Bitcoin's
 `daily_active_addresses` metric:
+
 ```SQL
 SELECT asset_id, metric_id, dt, value
 FROM daily_metrics_v2 FINAL
@@ -138,6 +143,7 @@ Test in [Queries](https://queries.santiment.net/query/predef-example-411)
 The result still contains the integer representation of the asset and metric. To
 convert the `asset_id` to the asset name and the `metric_id` to the metric name
 there are a few options:
+
 - Join the result with the `asset_metadata` and `metric_metadata` tables. This
   works, but is highly verbose.
 - Use [dictionaries](https://clickhouse.com/docs/en/sql-reference/dictionaries/external-dictionaries/external-dicts) that store these mappings and can be used without JOIN.
@@ -155,6 +161,7 @@ WHERE
     dt >= toDateTime('2020-01-01 00:00:00')
 LIMIT 2
 ```
+
 Test in [Queries](https://queries.santiment.net/query/dict-example-412)
 
 ```
@@ -180,6 +187,7 @@ WHERE
     dt >= toDateTime('2020-01-01 00:00:00')
 LIMIT 2
 ```
+
 Test in [Queries](https://queries.santiment.net/query/dict-example-with-func-413)
 
 To obtain the average value per month, aggregation and grouping must be used.
@@ -202,6 +210,7 @@ WHERE
 GROUP BY month
 LIMIT 12
 ```
+
 Test in [Queries](https://queries.santiment.net/query/group-by-example-414)
 
 ```
@@ -293,6 +302,7 @@ FROM (
 )
 GROUP BY datetime
 ```
+
 Test in [Queries](https://queries.santiment.net/query/example-for-address-balance-419)
 
 Note that not every month has a balance. This is because during these months no transfers happened and balance records
@@ -352,6 +362,7 @@ FROM (
 )
 GROUP BY month
 ```
+
 Test in [Queries](https://queries.santiment.net/query/example-for-development-activity-420)
 
 ```
@@ -400,6 +411,7 @@ FROM (
 )
 GROUP BY month
 ```
+
 Test in [Queries](https://queries.santiment.net/query/example-2-for-development-activity-421)
 
 ```
@@ -418,3 +430,4 @@ Test in [Queries](https://queries.santiment.net/query/example-2-for-development-
 │ 2021-12-01 │           19 │
 └────────────┴──────────────┘
 ```
+

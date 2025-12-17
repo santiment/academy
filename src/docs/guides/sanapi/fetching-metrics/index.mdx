@@ -2,6 +2,7 @@
 title: Fetching Metrics
 author: Santiment Team
 date: 2020-04-06
+sidebarOrder: 20
 ---
 
 import Notebox from '$components/markdown/Notebox.svelte'
@@ -401,13 +402,14 @@ Different histogram metrics may have different response types or formats.
       slug: "ethereum"
       from: "utc_now-90d"
       to: "utc_now-80d"
-      limit: 20){
-        labels
-        values{
-          ... on FloatList{
-            data
-          }
+      limit: 20
+    ) {
+      labels
+      values {
+        ... on FloatList {
+          data
         }
+      }
     }
   }
 }

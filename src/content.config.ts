@@ -10,6 +10,7 @@ const docs = defineCollection({
     date: z.coerce.date().optional(),
     sidebarLabel: z.string().optional(),
     sidebarOrder: z.number().default(999),
+    hidden: z.boolean().default(false),
   })
 });
 

@@ -2,6 +2,7 @@
 title: Price vs DAA Divergence; An On-Chain Trading Strategy Guide
 author: Jan S
 date: 2019-09-17
+sidebarOrder: 70
 ---
 
 Of all the metrics that can be generated from on-chain data, **the daily active addresses** - DAA for short - is probably most well known.
@@ -12,7 +13,7 @@ The [network effect](https://en.wikipedia.org/wiki/Network_effect) posits that t
 
 ![](01.png)
 
-That said, it's not as easy to explain where this relationship actually comes from, or exactly what influences what. Higher prices *could* attract more people to invest in Bitcoin and in turn lead to growth in active addresses. On the other hand, an increase in daily active addresses *could* lead investors and their models to start valuing Bitcoin higher and buy more. In other words, the 'chicken and the egg' problem is alive and well in crypto.
+That said, it's not as easy to explain where this relationship actually comes from, or exactly what influences what. Higher prices _could_ attract more people to invest in Bitcoin and in turn lead to growth in active addresses. On the other hand, an increase in daily active addresses _could_ lead investors and their models to start valuing Bitcoin higher and buy more. In other words, the 'chicken and the egg' problem is alive and well in crypto.
 
 As always, the truth lies probably somewhere in between. In fact, when testing this via the [Granger Causality test](https://en.wikipedia.org/wiki/Granger_causality), we couldn't find that either metric (DAA or price) clearly moves before the other.
 
@@ -53,31 +54,31 @@ While we have developed an effective **"something's about to change"** indicator
 
 a) DAA trends increase ↑ while the price trends decrease ↓
 
-b) DAA trends decrease ↓ while the price trends increase ↑ 
+b) DAA trends decrease ↓ while the price trends increase ↑
 
-In other words, we are distinguishing between cases where Bitcoin's DAA rises **more than** the price and cases where Bitcoin's DAA falls **more than** the price. 
+In other words, we are distinguishing between cases where Bitcoin's DAA rises **more than** the price and cases where Bitcoin's DAA falls **more than** the price.
 
 The following image shows these signals, marked based on whether DAA increases or decreases compared to the price:
 
 ![](04.png)
 
-Success! The 'price grew more than DAA' signals appear to be effective buy indicators (September 2017, February 2018, August 2018 etc). Similarly, the 'price declined more than DAA' signals could serve as strong exit indicators (June 2017, December 2017, July 2018 etc). 
+Success! The 'price grew more than DAA' signals appear to be effective buy indicators (September 2017, February 2018, August 2018 etc). Similarly, the 'price declined more than DAA' signals could serve as strong exit indicators (June 2017, December 2017, July 2018 etc).
 
 This approach seems to form the basis of a tradeable strategy. Let's backtest it to see how our Bitcoin portfolio would have performed if we only BOUGHT and SOLD based on these historical signals:
 
 ![](05.png)
 
-Our returns with the new Price-DAA Divergence strategy (in blue) would be more than 2x compared to simply HOLDing Bitcoin (in red) over the same time frame. 
+Our returns with the new Price-DAA Divergence strategy (in blue) would be more than 2x compared to simply HOLDing Bitcoin (in red) over the same time frame.
 
-However, it's important to note that these signals should not be traded exclusively (buy **only** when BUY-signal and hold **only** till **SELL**-signal). There is no guarantee that these signals will detect **ALL** major trend changes. 
+However, it's important to note that these signals should not be traded exclusively (buy **only** when BUY-signal and hold **only** till **SELL**-signal). There is no guarantee that these signals will detect **ALL** major trend changes.
 
-We selected the 0.5 Divergence Threshold relatively arbitrarily. We could have set the threshold higher, which would have resulted in fewer trading signals. 
+We selected the 0.5 Divergence Threshold relatively arbitrarily. We could have set the threshold higher, which would have resulted in fewer trading signals.
 
 For instance, if the solitary BUY signal in September 2017 was not present, we would have COMPLETELY missed the 2017 bull market. Therefore, while these signals are accurate in our opinion, they should always be combined with additional signals and complementary strategies for optimal results.
 
 ## Branching out
 
-Until now, we've only applied our price-DAA divergence strategy to Bitcoin. So, how does this model perform when applied to other major cryptocurrencies? 
+Until now, we've only applied our price-DAA divergence strategy to Bitcoin. So, how does this model perform when applied to other major cryptocurrencies?
 
 Let's test it on Ethereum, using the same parameters as before: a 3-week window and a 0.5 divergence threshold. Here's what we get:
 
@@ -85,7 +86,7 @@ Let's test it on Ethereum, using the same parameters as before: a 3-week window 
 
 The results show a robust set of BUY and SELL signals. BUY signals were primarily triggered during short-term bottoms (July 2017, March 2018, October 2019, etc.), while SELL signals seem to align well with excellent selling opportunities (June 2017, January 2018, January 2019, June 2019, etc.).
 
-However, it's important to note that these signals should not be followed exclusively. A closer look reveals that relying solely on our price-DAA signals would have caused us to miss most of the 2017 ETH bull run. 
+However, it's important to note that these signals should not be followed exclusively. A closer look reveals that relying solely on our price-DAA signals would have caused us to miss most of the 2017 ETH bull run.
 
 In other words, different cryptocurrencies will require different parameters to generate optimal results. For instance, the signals for Maker (MKR) appear similarly effective when we set a price-DAA threshold of **0.9**:
 
@@ -99,9 +100,6 @@ In the observed time frame (2018-present), MKR HODLers lost approximately 35% of
 
 ## Conclusion
 
-While the aforementioned strategy demonstrates potential, it should not be followed blindly. As observed, relying solely on this model could have caused you to miss the entire 2017 bull run. No strategy is foolproof, hence it is crucial to **always** use it in combination with other metrics, signals, and indicators. 
+While the aforementioned strategy demonstrates potential, it should not be followed blindly. As observed, relying solely on this model could have caused you to miss the entire 2017 bull run. No strategy is foolproof, hence it is crucial to **always** use it in combination with other metrics, signals, and indicators.
 
-This brings to mind that Sanbase offers over 120 different on-chain, social, and development indicators. If you're seeking additional tools to complement the Price-DAA strategy, these platforms would be an excellent starting point. 
-
-
-
+This brings to mind that Sanbase offers over 120 different on-chain, social, and development indicators. If you're seeking additional tools to complement the Price-DAA strategy, these platforms would be an excellent starting point.
