@@ -16,15 +16,15 @@
 
   let { title, articles = [], currentSlug, href }: TProps = $props()
 
-  let isActive = $derived(articles.some(a => a.slug === currentSlug));
+  let isActive = $derived(false);
   
-  let isOpen = $state(isActive);
+  let isOpen = $state(false);
 
-  $effect(() => {
-    if (isActive) {
-      isOpen = true
-    }
-  })
+  // $effect(() => {
+  //   if (isActive) {
+  //     isOpen = true
+  //   }
+  // })
 
   function toggle(e: MouseEvent) {
     e.preventDefault()
@@ -46,11 +46,11 @@
     )}
   >
     {#if href}
-      <a href={href} class="text-inherit w-full font-medium block">
+      <a href={href} class="text-inherit w-full block">
         {title}
       </a>
     {:else}
-      <span class="text-inherit w-full font-medium cursor-default">
+      <span class="text-inherit w-full cursor-default">
         {title}
       </span>
     {/if}
