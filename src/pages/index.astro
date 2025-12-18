@@ -6,8 +6,8 @@ import BaseLayout from '$layouts/BaseLayout.astro'
 import Category from '$components/Category.svelte'
 import SocialBanner from '$components/SocialBanner.astro'
 import Hero from '$components/Hero.svelte'
+import { GUIDES, RESOURCES } from '$assets/links'
 
-import { REFERENCES, GUIDES } from '../docs/navigation'
 import { cn } from 'san-webkit-next/ui/utils'
 ---
 
@@ -92,12 +92,12 @@ import { cn } from 'san-webkit-next/ui/utils'
       </div>
 
       <h4 class="mx-0 mb-8 mt-20 text-lg text-rhino sm:mb-5 sm:mt-12">
-        References
+        Resources
       </h4>
 
       <div class="grid w-full grid-cols-2 gap-6 md:grid-cols-2 sm:grid-cols-1">
         {
-          REFERENCES.map(({ title, ...rest }) => (
+          RESOURCES.map(({ title, ...rest }) => (
             <Category wide {title} {...rest} maxWidth="295px" />
           ))
         }

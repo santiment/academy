@@ -35,21 +35,21 @@
   type IconName = keyof typeof ICONS_MAP
 
   type TProps = { 
-    wide?: boolean, 
-    title?: string, 
-    description?: string, 
+    title: string, 
+    href: string,
     icon: IconName, 
+    wide?: boolean, 
+    description?: string, 
     maxWidth?: number 
   }
 
-  const { wide, title = '', description, icon, maxWidth }: TProps = $props()
+  const { title, href, wide, description, icon, maxWidth }: TProps = $props()
 
-  const slug = titleToSlug(title)
   const Icon = ICONS_MAP[icon]
 </script>
 
 <a
-  href={`/${slug}/`}
+  {href}
   class={cn(
     'group relative flex flex-col items-center justify-center overflow-hidden rounded border border-porcelain',
     'pt-10 px-4 pb-7 sm:p-5 sm:flex-row sm:justify-start',
