@@ -238,7 +238,7 @@ If the query does not return a status code of `200`, it indicates a different
 issue. Here are some possibilities:
 
 - `429` - You're being rate-limited. Reduce the number of requests you're
-  making. Check the [Rate limits](/sanapi/rate-limits) page for more
+  making. Check the [Rate limits](/guides/sanapi/rate-limits) page for more
   information.
 - `5xx` - An internal server error has occurred. Please let us know in the
   support channel on our [Discord server](https://santiment.net/discord).
@@ -311,7 +311,7 @@ $  curl \
 ### Error example - historical and realtime data restriction
 
 If the `from` and/or `to` parameters are outside of the allowed interval for the subscription plan and
-[Historical and Realtime data restrictions](/sanapi/historical-and-realtime-data-restrictions) are applied,
+[Historical and Realtime data restrictions](/guides/sanapi/historical-and-realtime-data-restrictions) are applied,
 the error will look like this:
 
 ```bash
@@ -346,6 +346,6 @@ $ curl \
 
 <Notebox type="none">
 
-**Read next: [Fetching Metrics](/sanapi/fetching-metrics)**
+**Read next: [Fetching Metrics](/guides/sanapi/fetching-metrics)**
 
 </Notebox>

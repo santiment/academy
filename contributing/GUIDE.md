@@ -88,13 +88,13 @@ Markdown link syntax is: `[Link Text](Link URL)`. The link URL can be:
 - Internal -- point to some other page of Academy. These paths are relative. Relative paths allow you to link to stage
   pages on stage and to prod pages on prod. Do not use full paths when linking to other Academy pages!
 
-  Example: `[NVT article](/metrics/nvt)`. The root of the relative path is the `/src/docs/` directory.
+  Example: `[NVT article](/resources/metrics/nvt)`. The root of the relative path is the `/src/docs/` directory.
 
   Standard relative path syntax works: `./` points to the current directory and `../` points to the parent directory.
 
 The same rules apply to linking from other pages to your new article page.
 If our example `Trading and Transaction Volume` article is located in the `Education and Use Cases` directory, then
-the following syntax will create a link to our article: `[Trading and Transaction Volume](/education-and-use-cases/trading-and-transaction-volume/)`
+the following syntax will create a link to our article: `[Trading and Transaction Volume](/guides/education-and-use-cases/trading-and-transaction-volume/)`
 
 #### Images
 

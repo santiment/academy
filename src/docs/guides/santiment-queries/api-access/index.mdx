@@ -11,7 +11,7 @@ sidebarOrder: 40
 
 Before you start, make sure you acquaint yourself with the Sanqueries product
 and the SQL queries you can write by reading the `Introduction`, `Exploration`
-and `Writing SQL Queries` articles that can be found on the [Sanqueries Oveview](/santiment-queries/introduction/) page.
+and `Writing SQL Queries` articles that can be found on the [Sanqueries Oveview](/guides/santiment-queries/introduction/) page.
 
 The [Santiment Queries Web Interface](https://app.santiment.net/queries) is only
 one of the ways to execute queries and access the data.
@@ -48,7 +48,7 @@ and used in the API.
 
 ## API Endpoint
 
-On the [API Overview](/sanapi/#overview/) page one can find information how to access the API.
+On the [API Overview](/guides/sanapi/#overview/) page one can find information how to access the API.
 
 There are two ways to execute queries using the API:
 
@@ -148,7 +148,7 @@ The result of both the direct API call and the curl command is a JSON. The dates
 The `runRawSqlQuery` accepts two arguments:
 
 - `sqlQueryText` - The SQL query to execute. The query must be a valid SQL query that
-  can be executed against the Clickhouse database. The article [Writing SQL Queries](/santiment-queries/writing-sql-queries/) is a recommended read.
+  can be executed against the Clickhouse database. The article [Writing SQL Queries](/guides/santiment-queries/writing-sql-queries/) is a recommended read.
   The query allows for parametrization by using named parameters. Each parameter has a key and a value.
   The query contains the parameter name surrounded in double curly braces: `{{key}}`.
 - `sqlQueryParameters` - A stringified JSON object that contains the key-value pairs. When the SQL query

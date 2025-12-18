@@ -84,7 +84,7 @@ Test in [Queries](https://queries.santiment.net/query/price-example-478)
 
 ### labeled_intraday_metrics_v2
 
-Table `labeled_intraday_metrics_v2` stores metrics for a given `blockchain` and `label_id`. Each `label_id` corresponds to a certain [label FQN.](/labels/label-fqn) The data for that ID is stored in the `label_metadata` table. Blockchain column contains the string for blockchain name, e.g. `bictoin`, `ethereum`, etc.
+Table `labeled_intraday_metrics_v2` stores metrics for a given `blockchain` and `label_id`. Each `label_id` corresponds to a certain [label FQN.](/resources/labels/label-fqn) The data for that ID is stored in the `label_metadata` table. Blockchain column contains the string for blockchain name, e.g. `bictoin`, `ethereum`, etc.
 
 For instance, you can retrieve ethereum balance of all centralized exchange addresses with the query:
 
@@ -113,7 +113,7 @@ Table `intraday_metrics` also has `label` and `owner` columns so that metrics st
 
 > Note that this table uses old way to filter labels (plain label/owner instead of label_fqn).
 
-This table could be used to retrieve [labelled exchange](/metrics/labeled-exchange) metrics under names:
+This table could be used to retrieve [labelled exchange](/resources/metrics/labeled-exchange) metrics under names:
 
 - `labelled_active_deposits`
 - `labelled_deposit_transactions`
