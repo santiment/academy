@@ -26,7 +26,7 @@
 - [Whale Monitoring to Predict Market Moves](https://academy.santiment.net/education-and-use-cases/whale-monitoring-to-predict-market-moves/): Whale Monitoring to Predict Market Moves
 - [Getting started for Developers](https://academy.santiment.net/getting-started/for-developers/): Getting started for Developers
 - [Metrics Exported to S3 - Technical Documentation](https://academy.santiment.net/getting-started/for-developers/metrics-exported-s3/): Metrics Exported to S3 - Technical Documentation
-- [Getting started for traders](https://academy.santiment.net/for-traders/): Getting started for traders
+- [Getting started for traders](https://academy.santiment.net/getting-started/for-traders/): Getting started for traders
 - [Asset](https://academy.santiment.net/glossary/asset/): Asset
 - [Deposit Addresses](https://academy.santiment.net/glossary/deposit-addresses/): Deposit Addresses
 - [Glossary of API Terms](https://academy.santiment.net/glossary/): Glossary of API Terms
