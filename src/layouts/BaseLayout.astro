@@ -18,19 +18,6 @@ const {
   class: className = '',
   title = 'Crypto Academy: Learn How to Analyze Cryptocurrency Market',
 } = Astro.props
-
-// TODO:
-// 3. Add SEO
-// 4. Double check all styles
-// 5. Dynamic page title
-// 6. Optimize some components
-// 8. Add auth for Intercom
-// 13. Add analytics
-let active: string[] = []
-
-if (Astro.url) {
-  active = Astro.url.pathname.split('/').slice(1)
-}
 ---
 
 <html lang="en">

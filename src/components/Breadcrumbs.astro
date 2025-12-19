@@ -1,11 +1,11 @@
 ---
-import type { TBreadcrump } from '../pages/[...slug].astro'
+import type { TBreadcrumb } from '../utils/breadcrumbs'
 
 import { cn } from 'san-webkit-next/ui/utils'
 import Svg from 'san-webkit-next/ui/core/Svg'
 
 type Props = {
-  breadcrumbs: TBreadcrump[]
+  breadcrumbs: TBreadcrumb[]
   class?: string
 }
 

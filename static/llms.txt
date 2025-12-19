@@ -12,7 +12,7 @@
 - [Education And Use Cases](https://academy.santiment.net/guides/education-and-use-cases/): Education And Use Cases
 - [Price vs DAA Divergence; An On-Chain Trading Strategy Guide](https://academy.santiment.net/guides/education-and-use-cases/price-to-daily-addresses-divergence-guide/): Price vs DAA Divergence; An On-Chain Trading Strategy Guide
 - [SanR - a Playground for Crypto Trading](https://academy.santiment.net/guides/education-and-use-cases/sanr-a-playground-for-trading/): SanR - a Playground for Crypto Trading
-- [Santiment Pro Report Samples](https://academy.santiment.net/guides/education-and-use-cases/santiment-pro-reports-samples/): Santiment Pro Report Samples
+- [Santiment Pro Report Samples](https://academy.santiment.net/guides/education-and-use-cases/santiment-pro-report-samples/): Santiment Pro Report Samples
 - [Sanbase Alerts Example - Social Trends](https://academy.santiment.net/guides/education-and-use-cases/social-trend-alerts/): Sanbase Alerts Example - Social Trends
 - [Timing Market Volatility with Token Age Consumed](https://academy.santiment.net/guides/education-and-use-cases/timing-market-volatility-with-token-age-consumed/): Timing Market Volatility with Token Age Consumed
 - [Trading and Transaction Volume](https://academy.santiment.net/guides/education-and-use-cases/trading-and-transaction-volume/): Trading and Transaction Volume
