@@ -1,7 +1,7 @@
 ---
 import { UniQuery } from 'san-webkit-next/api/executor.js'
-import { queryAssetsChangelog } from '../api'
-import AssetsChangelogList from './AssetsChangelogList.svelte'
+import { queryAssetsChangelog } from '$modules/changelog/api'
+import AssetsList from './AssetsList.svelte'
 
 const PAGE_SIZE = 20
 const initialData = await queryAssetsChangelog(UniQuery(fetch))(
@@ -11,4 +11,4 @@ const initialData = await queryAssetsChangelog(UniQuery(fetch))(
 )
 ---
 
-<AssetsChangelogList client:load {initialData} pageSize={PAGE_SIZE} />
+<AssetsList client:load {initialData} pageSize={PAGE_SIZE} />

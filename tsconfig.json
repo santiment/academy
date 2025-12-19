@@ -16,13 +16,19 @@
     ],
     "paths": {
       "$components/*": [
-        "src/components/*"
+        "./src/components/*"
       ],
       "$layouts/*": [
-        "src/layouts/*"
+        "./src/layouts/*"
+      ],
+      "$config/*": [
+        "./src/config/*"
+      ],
+      "$modules/*": [
+        "./src/modules/*"
       ],
       "$assets/*": [
-        "src/assets/*"
+        "./src/assets/*"
       ]
     }
   }

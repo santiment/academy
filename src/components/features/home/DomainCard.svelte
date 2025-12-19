@@ -1,21 +1,21 @@
 <script lang="ts">
   import { cn } from 'san-webkit-next/ui/utils'
 
-  import Metrics from '$assets/categories/Metrics.svelte'
-  import Changelog from '$assets/categories/Changelog.svelte'
-  import Education from '$assets/categories/Education.svelte'
-  import ProductsAndPlans from '$assets/categories/Products.svelte'
-  import SANtokens from '$assets/categories/San.svelte'
-  import SanAPI from '$assets/categories/Sanapi.svelte'
-  import Sansheets from '$assets/categories/Sansheets.svelte'
-  import Sanqueries from '$assets/categories/Sanqueries.svelte'
-  import Sanbase from '$assets/categories/Sanbase.svelte'
-  import Glossary from '$assets/categories/Glossary.svelte'
-  import Signals from '$assets/categories/Signals.svelte'
-  import Labels from '$assets/categories/Labels.svelte'
-  import Youtube from '$assets/categories/Youtube.svelte'
+  import Metrics from '$components/ui/illustrations/categories/Metrics.svelte'
+  import Changelog from '$components/ui/illustrations/categories/Changelog.svelte'
+  import Education from '$components/ui/illustrations/categories/Education.svelte'
+  import ProductsAndPlans from '$components/ui/illustrations/categories/Products.svelte'
+  import SANtokens from '$components/ui/illustrations/categories/San.svelte'
+  import SanAPI from '$components/ui/illustrations/categories/Sanapi.svelte'
+  import Sansheets from '$components/ui/illustrations/categories/Sansheets.svelte'
+  import Sanqueries from '$components/ui/illustrations/categories/Sanqueries.svelte'
+  import Sanbase from '$components/ui/illustrations/categories/Sanbase.svelte'
+  import Glossary from '$components/ui/illustrations/categories/Glossary.svelte'
+  import Signals from '$components/ui/illustrations/categories/Signals.svelte'
+  import Labels from '$components/ui/illustrations/categories/Labels.svelte'
+  import Youtube from '$components/ui/illustrations/categories/Youtube.svelte'
 
-  const ICONS_MAP = {
+  const ILLUSES_MAP = {
     Metrics,
     Changelog,
     Education,
@@ -31,20 +31,20 @@
     Youtube
   }
 
-  type IconName = keyof typeof ICONS_MAP
+  type IconName = keyof typeof ILLUSES_MAP
 
   type TProps = { 
-    title: string, 
-    href: string,
+    title: string
+    href: string
     icon: IconName, 
     wide?: boolean, 
     description?: string, 
-    maxWidth?: number 
+    maxWidth?: string
   }
 
   const { title, href, wide, description, icon, maxWidth }: TProps = $props()
 
-  const Icon = ICONS_MAP[icon]
+  const Icon = ILLUSES_MAP[icon]
 </script>
 
 <a

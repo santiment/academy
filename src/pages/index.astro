@@ -1,14 +1,15 @@
 ---
+import Svg from 'san-webkit-next/ui/core/Svg'
 import Footer from 'san-webkit-next/ui/app/Footer'
 
 import BaseLayout from '$layouts/BaseLayout.astro'
 
-import Category from '$components/Category.svelte'
-import SocialBanner from '$components/SocialBanner.astro'
-import Hero from '$components/Hero.svelte'
-import { GUIDES, RESOURCES } from '$assets/links'
-
+import DomainCard from '$components/features/home/DomainCard.svelte'
+import Hero from '$components/features/home/Hero.svelte'
 import { cn } from 'san-webkit-next/ui/utils'
+import { GUIDES, RESOURCES } from '$config/home'
+
+import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
 ---
 
 <BaseLayout title="Crypto Academy: Learn How to Analyze Cryptocurrency Market">
@@ -86,7 +87,7 @@ import { cn } from 'san-webkit-next/ui/utils'
       <div class="grid w-full grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
         {
           GUIDES.map(({ title, icon, ...rest }) => (
-            <Category {icon} {title} {...rest} />
+            <DomainCard {icon} {title} {...rest} />
           ))
         }
       </div>
@@ -98,12 +99,64 @@ import { cn } from 'san-webkit-next/ui/utils'
       <div class="grid w-full grid-cols-2 gap-6 md:grid-cols-2 sm:grid-cols-1">
         {
           RESOURCES.map(({ title, ...rest }) => (
-            <Category wide {title} {...rest} maxWidth="295px" />
+            <DomainCard wide {title} {...rest} maxWidth="295px" />
           ))
         }
       </div>
 
-      <SocialBanner />
+      <section
+        class={cn(
+          'relative mt-20 flex items-center justify-center rounded bg-athens px-5 py-12 sm:flex-col sm:p-5 xs:mt-[50px]',
+          "after:content-[''] after:left-1/2 after:absolute after:block after:w-[1px] after:h-[104px] after:bg-porcelain sm:after:hidden"
+        )}
+      >
+        <a
+          href="https://santiment.net/discord"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={cn(
+            'mx-7 flex w-full max-w-[458px] items-center rounded px-4 py-6 transition-all duration-100 ease-in-out',
+            'group hover:cursor-pointer hover:-translate-y-0.5 hover:bg-white'
+          )}
+        >
+          <div>
+            <Svg
+              id="discord"
+              w={36}
+              h={27}
+              class="ml-6 mr-4 fill-casper group-hover:fill-rhino"
+            />
+          </div>
+          <div>
+            <h3 class="mb-1 text-lg text-rhino">Join our discord!</h3>
+            <p class="text-sm text-waterloo">
+              Talk directly with the Santiment Team
+            </p>
+          </div>
+        </a>
+
+        <a
+          href="https://app.santiment.net/support"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={cn(
+            'mx-7 flex w-full max-w-[458px] items-center rounded px-4 py-6 transition-all duration-100 ease-in-out',
+            'group hover:cursor-pointer hover:-translate-y-0.5 hover:bg-white'
+          )}
+        >
+          <div>
+            <ForwardedEmailIcon
+              class="ml-6 mr-4 fill-casper group-hover:fill-rhino"
+            />
+          </div>
+          <div>
+            <h3 class="mb-1 text-lg text-rhino">Contact us</h3>
+            <p class="text-sm text-waterloo">
+              Reach out to us directly via email
+            </p>
+          </div>
+        </a>
+      </section>
     </div>
   </section>
 

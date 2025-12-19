@@ -1,9 +1,8 @@
 <script lang="ts">
   import { UniQuery } from 'san-webkit-next/api/executor.js'
+  import Root from './Root.svelte'
 
-  import ChangelogCore from '../ChangelogCore.svelte'
-
-  import { queryMetricsChangelog } from '../api'
+  import { queryMetricsChangelog } from '$modules/changelog/api'
   import { getFormattedDetailedTimestamp } from 'san-webkit-next/utils/dates'
 
   let { initialData, pageSize = 20 } = $props<{ initialData: any, pageSize?: number }>()
@@ -28,7 +27,7 @@
   {/if}
 {/snippet}
 
-<ChangelogCore 
+<Root 
   {initialData}
   {fetchNextPage}
   keys={{ created: 'createdMetrics', removed: 'deprecatedMetrics' }}

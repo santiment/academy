@@ -10,9 +10,9 @@ import * as Headings from '$components/markdown/headings'
 import Link from '$components/markdown/Link.svelte'
 import Blockquote from '$components/markdown/Blockquote.svelte'
 
-import { getSidebar, ROOT_SECTIONS } from '../utils/sidebar'
-import { getFirstDocInSection } from '../utils/docs'
-import { getBreadcrumbs } from '../utils/breadcrumbs'
+import { getSidebar, ROOT_SECTIONS } from '$modules/navigation/sidebar'
+import { getFirstDocInSection } from '$modules/docs/engine'
+import { getBreadcrumbs } from '$modules/navigation/breadcrumbs'
 
 export async function getStaticPaths() {
   const allDocs = await getCollection('docs')

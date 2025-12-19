@@ -1,7 +1,7 @@
 <script lang="ts">
   import { UniQuery } from 'san-webkit-next/api/executor.js'
-  import { queryAssetsChangelog } from '../api'
-  import ChangelogCore from '../ChangelogCore.svelte'
+  import { queryAssetsChangelog } from '$modules/changelog/api'
+  import Root from './Root.svelte'
   import { getFormattedDetailedTimestamp } from 'san-webkit-next/utils/dates'
 
   let { initialData, pageSize = 20 } = $props<{ initialData: any, pageSize?: number }>()
@@ -29,7 +29,7 @@
   {#if item.hidingReason} — {item.hidingReason}{/if}
 {/snippet}
 
-<ChangelogCore 
+<Root 
   {initialData}
   {fetchNextPage}
   keys={{ created: 'createdAssets', removed: 'hiddenAssets' }}
