@@ -1,6 +1,5 @@
 <script lang="ts">
   import { cn } from 'san-webkit-next/ui/utils'
-  import { titleToSlug } from '../utils/docs'
 
   import Metrics from '$assets/categories/Metrics.svelte'
   import Changelog from '$assets/categories/Changelog.svelte'

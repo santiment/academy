@@ -38,35 +38,6 @@ const viteConfig = mergeConfig(viteBase, {
   },
 })
 
-const legacySections = {
-  // Getting started
-  '/santiment-introduction': '/getting-started/santiment-introduction',
-  '/for-traders': '/getting-started/for-traders',
-  '/for-developers': '/getting-started/for-developers',
-  // Guides
-  '/education-and-use-cases': '/guides/education-and-use-cases',
-  '/glossary': '/guides/glossary',
-  '/products-and-plans': '/guides/products-and-plans',
-  '/san-tokens': '/guides/san-tokens',
-  '/sanapi': '/guides/sanapi',
-  '/sanbase': '/guides/sanbase',
-  '/sansheets': '/guides/sansheets',
-  '/santiment-queries': '/guides/santiment-queries',
-  '/youtube-videos': '/guides/youtube-videos',
-  // Resources
-  '/changelog': '/resources/changelog',
-  '/data-anomaly': '/resources/data-anomaly',
-  '/labels': '/resources/labels',
-  '/metrics': '/resources/metrics',
-}
-
-const mappedRedirects = Object.entries(legacySections).reduce((acc, [oldPath, newPath]) => {
-  acc[oldPath] = newPath
-  acc[`${oldPath}/[...slug]`] = `${newPath}/[...slug]`
-
-  return acc;
-}, {});
-
 export default defineConfig({
   site: 'https://academy.santiment.net',
   integrations: [
