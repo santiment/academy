@@ -1,5 +1,5 @@
 ---
-import { siteMetaData } from '../../site.metadata.js'
+import { SEO as seoConfig } from '../../config/seo'
 
 export interface Props {
   title?: string
@@ -13,7 +13,7 @@ const {
   description: defaultDescription,
   author: defaultAuthor,
   siteUrl: configSiteUrl,
-} = siteMetaData ?? {}
+} = seoConfig ?? {}
 
 const props = Astro.props
 

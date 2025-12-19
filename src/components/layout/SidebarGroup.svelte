@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { SidebarGroup } from '../../utils/sidebar'
+  import type { SidebarGroup } from '$modules/navigation/sidebar'
 
   import { slide } from 'svelte/transition'
   import { cn } from 'san-webkit-next/ui/utils'

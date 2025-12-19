@@ -1,21 +1,14 @@
 <script lang="ts">
   import type { Snippet } from 'svelte'
+  import type { TChangelogData } from '$modules/changelog/types'
 
   import Button from 'san-webkit-next/ui/core/Button'
-  import { mergeEntries } from './utils'
+  import { mergeEntries } from '$modules/changelog/utils'
   import { getFormattedMonthDayYear } from 'san-webkit-next/utils/dates'
 
-  type TData = {
-    entries: any[]
-    pagination: {
-      currentPage: number
-      hasMore: boolean
-    }
-  }
-
   type TProps = {
-    initialData: TData
-    fetchNextPage: (page: number) => Promise<TData>
+    initialData: TChangelogData
+    fetchNextPage: (page: number) => Promise<TChangelogData>
     keys: { created: string; removed: string }
     renderCreated: Snippet<[any]>
     renderRemoved: Snippet<[any]>

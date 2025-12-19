@@ -3,11 +3,16 @@ import '../app.css'
 import 'san-webkit-next/app.css'
 
 import { ClientRouter } from 'astro:transitions'
+import Notifications from 'san-webkit-next/ui/core/Notifications'
 
-import Nav from '$components/Nav.svelte'
-import Seo from '$components/Seo.astro'
+import Nav from '$components/layout/Nav.svelte'
+import Seo from '$components/layout/SEO.astro'
+import Intercom from '$components/services/Intercom.svelte'
+import Tracking from '$components/services/Tracking.svelte'
+import Cookies from '$components/services/Cookies.svelte'
+import SupportButton from '$components/shared/SupportButton.svelte'
+
 import { cn } from 'san-webkit-next/ui/utils'
-import AppShell from '$components/AppShell.svelte'
 
 type Props = {
   title?: string
@@ -32,7 +37,11 @@ const {
   </head>
 
   <body class={cn('pt-[70px]', className)}>
-    <AppShell client:only="svelte" />
+    <Intercom client:only="svelte" />
+    <Tracking client:only="svelte" />
+    <Cookies client:only="svelte" />
+    <SupportButton client:only="svelte" />
+    <Notifications client:only="svelte" />
 
     <div data-vaul-drawer-wrapper>
       <Nav client:load transition:persist />

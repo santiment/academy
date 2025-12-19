@@ -1,6 +1,6 @@
 <script lang="ts">
   import { cn } from 'san-webkit-next/ui/utils'
-  import type { SidebarSection } from '../../utils/sidebar'
+  import type { SidebarSection } from '$modules/navigation/sidebar'
   import SidebarGroup from './SidebarGroup.svelte'
   import SidebarLink from './SidebarLink.svelte'
 
