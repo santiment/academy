@@ -8,9 +8,10 @@
   interface Props {
     item: SidebarGroup
     currentSlug: string
+    onLinkClick?: () => void
   }
 
-  let { item, currentSlug }: Props = $props()
+  let { item, currentSlug, onLinkClick }: Props = $props()
 
   const checkActive = (slug: string) => 
     slug === item.slug || (item.items?.some(child => child.slug === slug) ?? false)
@@ -38,7 +39,7 @@
     isActive ? 'bg-green-light-1 text-green' : 'text-rhino hover:bg-green-light-1 hover:text-green',
     isOpen && !isActive && 'bg-green-light-1'
   )}>
-    <a href={item.href} class="block w-full text-inherit">
+    <a href={item.href} class="block w-full text-inherit" onclick={onLinkClick}>
       {item.title}
     </a>
 
@@ -77,6 +78,7 @@
               'hover:text-green text-fiord',
               isSubActive && "text-green before:absolute before:left-[-1px] before:top-0 before:h-full before:w-[1px] before:bg-green"
             )}
+            onclick={onLinkClick}
           >
             {subItem.title}
           </a>
