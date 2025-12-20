@@ -3,8 +3,8 @@ import type { CollectionEntry } from 'astro:content'
 
 import { getCollection, render } from 'astro:content'
 
-import BaseLayout from '$layouts/BaseLayout.astro'
-import DocsLayout from '$layouts/DocsLayout.astro'
+import Page from '$layouts/Page.astro'
+import Document from '$layouts/Document.astro'
 
 import * as Headings from '$components/markdown/headings'
 import Link from '$components/markdown/Link.svelte'
@@ -66,8 +66,8 @@ const components = {
 const formattedHeadings = headings.filter((h) => h.depth <= 3)
 ---
 
-<BaseLayout title={`${doc.data.title} | Santiment Academy`}>
-  <DocsLayout {doc} {breadcrumbs} {sidebarData} headings={formattedHeadings}>
+<Page title={`${doc.data.title} | Santiment Academy`}>
+  <Document {doc} {breadcrumbs} {sidebarData} headings={formattedHeadings}>
     <Content {components} />
-  </DocsLayout>
-</BaseLayout>
+  </Document>
+</Page>

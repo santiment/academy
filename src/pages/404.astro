@@ -4,10 +4,10 @@ import Button from 'san-webkit-next/ui/core/Button'
 
 import { cn } from 'san-webkit-next/ui/utils'
 
-import BaseLayout from '$layouts/BaseLayout.astro'
+import Page from '$layouts/Page.astro'
 ---
 
-<BaseLayout title="404: Not found">
+<Page title="404: Not found">
   <div
     class={cn(
       'container flex min-h-[70vh] flex-col items-start justify-center',
@@ -30,4 +30,4 @@ import BaseLayout from '$layouts/BaseLayout.astro'
   </div>
 
   <Footer class="mt-14" client:visible />
-</BaseLayout>
+</Page>
