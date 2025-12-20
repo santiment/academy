@@ -1,4 +1,5 @@
 import { mount } from 'svelte'
+
 import CookiesPopup from 'san-webkit-next/ui/core/CookiesPopup'
 
 export function initCookiesPopup() {
@@ -10,6 +11,6 @@ export function initCookiesPopup() {
 
   mount(CookiesPopup, {
     target: document.body,
-    props: { isVisible: true }
+    props: { isVisible: true },
   })
 }

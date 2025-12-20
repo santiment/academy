@@ -1,7 +1,8 @@
 import { ApiQuery } from 'san-webkit-next/api'
 
-export const queryMetricsChangelog = ApiQuery((page: number, pageSize: number, searchTerm: string) => ({
-  schema: `query metricsChangelog($page: Int, $pageSize: Int, $searchTerm: String) {
+export const queryMetricsChangelog = ApiQuery(
+  (page: number, pageSize: number, searchTerm: string) => ({
+    schema: `query metricsChangelog($page: Int, $pageSize: Int, $searchTerm: String) {
     metricsChangelog(
       page: $page
       pageSize: $pageSize
@@ -37,8 +38,8 @@ export const queryMetricsChangelog = ApiQuery((page: number, pageSize: number, s
     }
   }
 `,
-  variables: { page, pageSize, searchTerm },
-}),
+    variables: { page, pageSize, searchTerm },
+  }),
   (gql) => gql.metricsChangelog,
 )
 
@@ -82,4 +83,3 @@ export const queryAssetsChangelog = ApiQuery(
   }),
   (gql) => gql.assetsChangelog,
 )
-

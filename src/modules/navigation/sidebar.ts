@@ -21,17 +21,17 @@ export type SidebarSection = {
 }
 
 type SidebarItemDraft = Omit<SidebarGroup, 'type'> & {
-  type: 'link' | 'group';
+  type: 'link' | 'group'
 }
 
 export const ROOT_SECTIONS: Record<string, string> = {
   'getting-started': 'Getting Started',
-  'guides': 'Guides',
-  'resources': 'Resources',
+  guides: 'Guides',
+  resources: 'Resources',
 }
 
 function isGroup(item: SidebarItem): item is SidebarGroup {
-  return item.type === 'group';
+  return item.type === 'group'
 }
 
 function sortSidebarItems(items: SidebarItem[]) {
@@ -44,30 +44,34 @@ function sortSidebarItems(items: SidebarItem[]) {
   })
 }
 
-export function getSidebar(allDocs: CollectionEntry<'docs'>[]): SidebarSection[] {
-  const docs = allDocs.filter(d => !d.data.hidden && d.filePath?.endsWith('/index.mdx'))
+export function getSidebar(
+  allDocs: CollectionEntry<'docs'>[],
+): SidebarSection[] {
+  const docs = allDocs.filter(
+    (d) => !d.data.hidden && d.filePath?.endsWith('/index.mdx'),
+  )
 
   const sidebarMap: Record<string, SidebarSection> = Object.fromEntries(
-    Object.keys(ROOT_SECTIONS).map(key => [
+    Object.keys(ROOT_SECTIONS).map((key) => [
       key,
-      { title: ROOT_SECTIONS[key], items: [] }
-    ])
+      { title: ROOT_SECTIONS[key], items: [] },
+    ]),
   )
 
   const itemMap = new Map<string, SidebarItemDraft>()
 
-  docs.forEach(doc => {
+  docs.forEach((doc) => {
     itemMap.set(doc.id, {
       type: 'link',
       title: doc.data.sidebarLabel || doc.data.title,
       href: `/${doc.id}/`,
       order: doc.data.sidebarOrder ?? 999,
       slug: doc.id,
-      items: []
+      items: [],
     })
   })
 
-  docs.forEach(doc => {
+  docs.forEach((doc) => {
     const item = itemMap.get(doc.id)!
     const parts = doc.id.split('/')
     const [rootKey] = parts
@@ -85,7 +89,7 @@ export function getSidebar(allDocs: CollectionEntry<'docs'>[]): SidebarSection[]
 
   const result = Object.values(sidebarMap)
 
-  result.forEach(section => sortSidebarItems(section.items))
+  result.forEach((section) => sortSidebarItems(section.items))
 
   return result
 }
