@@ -10,8 +10,8 @@ export const getFirstDocInSection = (
 
       if (!minDoc) return current
 
-      const currentOrder = current.data.sidebarOrder ?? 999
-      const minOrder = minDoc.data.sidebarOrder ?? 999
+      const currentOrder = current.data.sidebar.order ?? 999
+      const minOrder = minDoc.data.sidebar.order ?? 999
 
       return currentOrder < minOrder ? current : minDoc
     },
