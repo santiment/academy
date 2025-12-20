@@ -48,7 +48,7 @@ export function getSidebar(
   allDocs: CollectionEntry<'docs'>[],
 ): SidebarSection[] {
   const docs = allDocs.filter(
-    (d) => !d.data.hidden && d.filePath?.endsWith('/index.mdx'),
+    (d) => !d.data.sidebar.hidden && d.filePath?.endsWith('/index.mdx'),
   )
 
   const sidebarMap: Record<string, SidebarSection> = Object.fromEntries(
@@ -63,9 +63,9 @@ export function getSidebar(
   docs.forEach((doc) => {
     itemMap.set(doc.id, {
       type: 'link',
-      title: doc.data.sidebarLabel || doc.data.title,
+      title: doc.data.sidebar.label || doc.data.title,
       href: `/${doc.id}/`,
-      order: doc.data.sidebarOrder ?? 999,
+      order: doc.data.sidebar.order ?? 999,
       slug: doc.id,
       items: [],
     })

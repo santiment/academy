@@ -36,7 +36,7 @@ export const getBreadcrumbs = (
     if (doc) {
       crumbs.push({
         pathname: `/${doc.id}`,
-        label: doc.data.sidebarLabel ?? doc.data.title,
+        label: doc.data.sidebar.label ?? doc.data.title,
       })
     }
   }
