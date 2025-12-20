@@ -5,11 +5,11 @@
   import Svg from 'san-webkit-next/ui/core/Svg'
 
   type TProps = {
-    relatedLink?: any
+    relatedProduct?: { href: string, title: string }
     headings: MarkdownHeading[]
   }
 
-  const { headings, relatedLink }: TProps = $props()
+  const { headings, relatedProduct }: TProps = $props()
 
   let activeSlug = $state(headings[0]?.slug || '')
 
@@ -48,10 +48,10 @@
 </script>
 
 <ul class="fixed ml-[660px] top-[95px] pr-2 flex flex-col max-h-[85vh] max-w-[210px] overflow-y-auto overflow-x-hidden lg:hidden">
-  {#if relatedLink}
+  {#if relatedProduct}
     <li>
-      <a href={relatedLink.href} target="_blank" class="flex items-center gap-2 text-green hover:text-green-hover fill-green hover:fill-green-hover">
-        Go to {relatedLink.title}
+      <a href={relatedProduct.href} target="_blank" class="flex items-center gap-2 text-green hover:text-green-hover fill-green hover:fill-green-hover">
+        Go to {relatedProduct.title}
         <Svg id="right-arrow" />
       </a>
     </li>
@@ -63,7 +63,7 @@
         'relative',
         'after:content-[""] after:h-1 after:block after:border-l-porcelain after:border-l-2',
         idx !== 0 && idx !== headings.length ? 'before:content-[""] before:h-1 before:block before:border-l-porcelain before:border-l-2' : '',
-        idx === 0 && (relatedLink ? 'mt-12' : 'mt-20')
+        idx === 0 && (relatedProduct ? 'mt-12' : 'mt-20')
       )}
     >
       <a

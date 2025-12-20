@@ -1,4 +1,4 @@
-export const PRODUCTS = {
+export const PRODUCTS: Record<string, { href: string; title: string }> = {
   sanbase: { href: 'https://app.santiment.net/', title: 'Sanbase' },
   sanapi: { href: 'https://api.santiment.net/', title: 'Sanapi' },
   sansheets: { href: 'https://sheets.santiment.net/', title: 'Sansheets' },

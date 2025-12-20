@@ -10,13 +10,18 @@ import Seo from '$components/layout/SEO.astro'
 import SupportButton from '$components/shared/SupportButton.svelte'
 
 import { cn } from 'san-webkit-next/ui/utils'
+import type { SidebarSection } from '$modules/navigation/sidebar'
 
 type Props = {
+  currentSlug?: string
+  sidebarData?: SidebarSection[]
   title?: string
   class?: string
 }
 
 const {
+  currentSlug,
+  sidebarData,
   class: className = '',
   title = 'Crypto Academy: Learn How to Analyze Cryptocurrency Market',
 } = Astro.props
@@ -38,7 +43,7 @@ const {
     <Notifications client:only="svelte" />
 
     <div data-vaul-drawer-wrapper>
-      <Nav client:load transition:persist />
+      <Nav {currentSlug} {sidebarData} client:load transition:persist />
 
       <slot />
     </div>

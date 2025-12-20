@@ -13,6 +13,7 @@ import Blockquote from '$components/markdown/Blockquote.svelte'
 import { getSidebar, ROOT_SECTIONS } from '$modules/navigation/sidebar'
 import { getFirstDocInSection } from '$modules/docs/engine'
 import { getBreadcrumbs } from '$modules/navigation/breadcrumbs'
+import { PRODUCTS } from '$config/products'
 
 export async function getStaticPaths() {
   const allDocs = await getCollection('docs')
@@ -20,14 +21,20 @@ export async function getStaticPaths() {
 
   const docsMap = new Map(allDocs.map((d) => [d.id, d]))
 
-  const prepareProps = (doc: CollectionEntry<'docs'>) => ({
-    params: { slug: doc.id },
-    props: {
-      doc,
-      sidebarData,
-      breadcrumbs: getBreadcrumbs(doc.id, docsMap),
-    },
-  })
+  const prepareProps = (doc: CollectionEntry<'docs'>) => {
+    const [_section, productId] = doc.id.split('/')
+    const relatedProduct = PRODUCTS[productId]
+
+    return {
+      params: { slug: doc.id },
+      props: {
+        doc,
+        sidebarData,
+        relatedProduct,
+        breadcrumbs: getBreadcrumbs(doc.id, docsMap),
+      },
+    }
+  }
 
   const docPaths = allDocs.map(prepareProps)
 
@@ -39,6 +46,7 @@ export async function getStaticPaths() {
       props: {
         doc: firstDoc,
         sidebarData,
+        relatedProduct: null,
         breadcrumbs: getBreadcrumbs(firstDoc?.id ?? section, docsMap),
       },
     }
@@ -47,7 +55,7 @@ export async function getStaticPaths() {
   return [...docPaths, ...sectionPaths]
 }
 
-const { doc, sidebarData, breadcrumbs } = Astro.props
+const { doc, sidebarData, relatedProduct, breadcrumbs } = Astro.props
 
 if (!doc) return Astro.redirect('/404')
 
@@ -66,8 +74,18 @@ const components = {
 const formattedHeadings = headings.filter((h) => h.depth <= 3)
 ---
 
-<Page title={`${doc.data.title} | Santiment Academy`}>
-  <Document {doc} {breadcrumbs} {sidebarData} headings={formattedHeadings}>
+<Page
+  currentSlug={doc.id}
+  {sidebarData}
+  title={`${doc.data.title} | Santiment Academy`}
+>
+  <Document
+    {doc}
+    {breadcrumbs}
+    {relatedProduct}
+    {sidebarData}
+    headings={formattedHeadings}
+  >
     <Content {components} />
   </Document>
 </Page>
