@@ -1,21 +1,22 @@
-import path from 'path'
-import { fileURLToPath } from 'url';
-
+import mdx from '@astrojs/mdx'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
-import mdx from '@astrojs/mdx'
-import { defineConfig, mergeConfig } from 'astro/config'
-import remarkGemoji from 'remark-gemoji'
-import rehypeSlug from 'rehype-slug'
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
-import astroExpressiveCode from 'astro-expressive-code';
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
+import path from 'path'
+import rehypeKatex from 'rehype-katex'
+import rehypeSlug from 'rehype-slug'
+import remarkGemoji from 'remark-gemoji'
+import remarkMath from 'remark-math'
+import { fileURLToPath } from 'url'
+
+import astroExpressiveCode from 'astro-expressive-code'
+import { defineConfig, mergeConfig } from 'astro/config'
 
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
-import { expressiveCodeExplorer } from './plugins/ec-explorer-outside.mjs';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import { expressiveCodeExplorer } from './plugins/ec-explorer-outside.mjs'
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const viteBase = await createAstroConfig()
 
@@ -29,10 +30,10 @@ const viteConfig = mergeConfig(viteBase, {
     __SVELTEKIT_PAYLOAD__: JSON.stringify(''),
   },
   alias: {
-    '$components': path.resolve(__dirname, './src/components'),
-    '$layouts': path.resolve(__dirname, './src/layouts'),
-    '$modules': path.resolve(__dirname, './src/modules'),
-    '$config': path.resolve(__dirname, './src/config'),
+    $components: path.resolve(__dirname, './src/components'),
+    $layouts: path.resolve(__dirname, './src/layouts'),
+    $modules: path.resolve(__dirname, './src/modules'),
+    $config: path.resolve(__dirname, './src/config'),
   },
   ssr: {
     noExternal: ['san-webkit-next'],
@@ -54,7 +55,8 @@ export default defineConfig({
         borderWidth: '1px',
         borderColor: 'var(--porcelain)',
         codeFontSize: '16px',
-        codeFontFamily: 'Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
+        codeFontFamily:
+          'Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace',
         frames: {
           inlineButtonBorder: 'none',
           inlineButtonBackground: 'none',
@@ -62,12 +64,12 @@ export default defineConfig({
           inlineButtonBackgroundHoverOrFocusOpacity: 'var(--rhino)',
           frameBoxShadowCssValue: 'none',
           tooltipSuccessBackground: 'var(--rhino)',
-          tooltipSuccessForeground: 'var(--white)'
+          tooltipSuccessForeground: 'var(--white)',
         },
         lineNumbers: {
           foreground: 'var(--casper)',
         },
-      }
+      },
     }),
     mdx(),
     tailwind(),

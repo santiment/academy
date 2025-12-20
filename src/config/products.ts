@@ -11,4 +11,3 @@ export const PRODUCTS = {
     title: 'Youtube channel',
   },
 }
-

@@ -3,7 +3,7 @@ This is the source for [**Santiment Knowledge Base site**](https://academy.santi
 ## Contributing
 
 ### Running locally
-  
+
 If you have [yarn](https://classic.yarnpkg.com/en/docs/install/) you can run the app simply:
 
 ```bash
@@ -12,13 +12,13 @@ yarn start
 ```
 
 If you have problems with `yarn` use node v14 / v16. For example:
+
 ```sh
 nvm install 16
 nvm use 16
 ```
 
 This is going to run the app on port 8000, so [`localhost:8000`](http://localhost:8000) should be accessible.
-
 
 ### How to add an article
 
@@ -29,6 +29,7 @@ Also you can put images under that folder
 ### Generate llms.txt
 
 To update the `llms.txt` file (LLM-readable index of all documentation):
+
 ```bash
 pip install pyyaml
 python scripts/generate_llms_txt.py
@@ -83,25 +84,28 @@ Note the three dashes before and after metadata. _Don't forget to put them there
 ---
 
 ## Learn More
-* [Sanbase](https://app.santiment.net)
-* [Insights](https://insights.santiment.net)
-* [Sheets](https://sheets.santiment.net)
-* [SanR](https://sanr.app)
-* [API](https://api.santiment.net)
-* [Knowledge Base](https://academy.santiment.net)
+
+- [Sanbase](https://app.santiment.net)
+- [Insights](https://insights.santiment.net)
+- [Sheets](https://sheets.santiment.net)
+- [SanR](https://sanr.app)
+- [API](https://api.santiment.net)
+- [Knowledge Base](https://academy.santiment.net)
 
 ## Become a SanDev
+
 We're hiring developers, support people, and product managers all the time. Please check our [open positions](https://santiment.notion.site/Open-positions-f1880de7557b468a80b1465013f311cd)
 
 [Contact us](mailto:jobs@santiment.net)
 
 ## Community
+
 Join thousands of members worldwide in our [community server](https://santiment.net/discord).
 
 ## Get the Latest News
 
-* [Twitter](https://twitter.com/santimentfeed)
-* [Blog](https://insights.santiment.net)
-* [Youtube](https://www.youtube.com/channel/UCSzP_Z3MrygWlbLMyrNmMkg)
+- [Twitter](https://twitter.com/santimentfeed)
+- [Blog](https://insights.santiment.net)
+- [Youtube](https://www.youtube.com/channel/UCSzP_Z3MrygWlbLMyrNmMkg)
 
 Any other questions, reach out to us at [support@santiment.net](support@santiment.net). We’d happy to help!

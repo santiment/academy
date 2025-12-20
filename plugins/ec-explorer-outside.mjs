@@ -18,14 +18,18 @@ export function expressiveCodeExplorer() {
         const url = new URL('https://api.santiment.net/graphiql')
         url.searchParams.set('query', codeBlock.code)
 
-        const link = h('a.ec-explorer-link', {
-          href: url.toString(),
-          target: '_blank',
-          rel: 'noopener noreferrer',
-        }, 'Run in Explorer')
+        const link = h(
+          'a.ec-explorer-link',
+          {
+            href: url.toString(),
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          },
+          'Run in Explorer',
+        )
 
         renderData.blockAst.children.push(h('div.ec-explorer-actions', [link]))
       },
-    }
+    },
   })
 }
