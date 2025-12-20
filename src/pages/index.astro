@@ -2,7 +2,7 @@
 import Svg from 'san-webkit-next/ui/core/Svg'
 import Footer from 'san-webkit-next/ui/app/Footer'
 
-import BaseLayout from '$layouts/BaseLayout.astro'
+import Page from '$layouts/Page.astro'
 
 import DomainCard from '$components/features/home/DomainCard.svelte'
 import Hero from '$components/features/home/Hero.svelte'
@@ -12,7 +12,7 @@ import { GUIDES, RESOURCES } from '$config/home'
 import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
 ---
 
-<BaseLayout title="Crypto Academy: Learn How to Analyze Cryptocurrency Market">
+<Page title="Crypto Academy: Learn How to Analyze Cryptocurrency Market">
   <section class="flex flex-col">
     <Hero client:load />
 
@@ -161,4 +161,4 @@ import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
   </section>
 
   <Footer class="mt-14" client:visible />
-</BaseLayout>
+</Page>
