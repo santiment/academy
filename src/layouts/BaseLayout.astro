@@ -7,9 +7,6 @@ import Notifications from 'san-webkit-next/ui/core/Notifications'
 
 import Nav from '$components/layout/Nav.svelte'
 import Seo from '$components/layout/SEO.astro'
-import Intercom from '$components/services/Intercom.svelte'
-import Tracking from '$components/services/Tracking.svelte'
-import Cookies from '$components/services/Cookies.svelte'
 import SupportButton from '$components/shared/SupportButton.svelte'
 
 import { cn } from 'san-webkit-next/ui/utils'
@@ -37,9 +34,6 @@ const {
   </head>
 
   <body class={cn('pt-[70px]', className)}>
-    <Intercom client:only="svelte" />
-    <Tracking client:only="svelte" />
-    <Cookies client:only="svelte" />
     <SupportButton client:only="svelte" />
     <Notifications client:only="svelte" />
 
@@ -50,3 +44,13 @@ const {
     </div>
   </body>
 </html>
+
+<script>
+  import { startLinksListener } from 'san-webkit-next/analytics'
+  import { initIntercom } from '$modules/support/intercom'
+  import { initCookiesPopup } from '$modules/consent/cookies'
+
+  startLinksListener()
+  initIntercom()
+  initCookiesPopup()
+</script>
