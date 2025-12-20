@@ -8,9 +8,10 @@
     sidebarData: SidebarSection[]
     currentSlug: string
     class?: string
+    onLinkClick?: () => void
   }
 
-  let { sidebarData, currentSlug, class: className }: Props = $props()
+  let { sidebarData, currentSlug, class: className, onLinkClick }: Props = $props()
 </script>
 
 {#snippet sectionHeader(title: string, hasBorder: boolean)}
@@ -35,6 +36,7 @@
             title={item.title} 
             href={item.href} 
             isActive={currentSlug === item.slug} 
+            onclick={onLinkClick}
           />
         {/if}
       {/each}

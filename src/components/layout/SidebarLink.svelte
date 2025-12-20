@@ -5,14 +5,16 @@
     title: string
     href: string
     isActive: boolean
+    onclick?: () => void
   }
 
-  let { title, href, isActive }: TProps = $props()
+  let { title, href, isActive, onclick }: TProps = $props()
 </script>
 
 <li class="list-none">
   <a
     {href}
+    {onclick}
     class={cn(
       'block py-1 text-base transition-colors duration-200',
       isActive ? 'text-green' : 'text-rhino hover:text-green-hover'
