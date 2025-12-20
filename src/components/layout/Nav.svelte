@@ -7,6 +7,15 @@
 
   import Search from '$components/features/search/Search.svelte'
   import ProductsButton from '$components/ui/ProductsButton.svelte'
+  import Sidebar from '$components/layout/Sidebar.svelte'
+  import type { SidebarSection } from '$modules/navigation/sidebar'
+
+  type TProps = {
+    currentSlug?: string
+    sidebarData?: SidebarSection[]
+  }
+
+  const { currentSlug, sidebarData }: TProps = $props()
 
   let navOpen = $state(false)
 
@@ -52,7 +61,9 @@
     <div class="fixed inset-0 z-50 top-[71px] flex-col overflow-auto bg-white p-4 md:flex">
       <Button icon="close" class="fill-waterloo absolute mb-4 self-end" onclick={() => (navOpen = false)}></Button>
 
-      <!-- <Sidebar class="pl-2 h-auto overflow-y-visible [&_a]:min-h-10 [&_a]:items-center [&_a]:flex [&_a]:text-base [&_li]:my-0 [&_h3]:mb-2 pr-0" /> -->
+      {#if currentSlug && sidebarData}
+        <Sidebar {currentSlug} {sidebarData} class="pl-2 h-auto overflow-y-visible [&_a]:min-h-10 [&_a]:items-center [&_a]:flex [&_a]:text-base [&_li]:my-0 [&_h3]:mb-2 pr-0" />
+      {/if}
 
       <div class="border-t border-p-porcelain pb-3 pt-3 mt-3">
         <Products

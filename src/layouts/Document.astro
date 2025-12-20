@@ -16,18 +16,16 @@ import LastUpdated from '$components/shared/LastUpdated.svelte'
 import DiscordCTA from '$components/shared/DiscordCTA.svelte'
 
 import H1 from '$components/markdown/headings/H1.astro'
-import { PRODUCTS } from '$config/products'
 
 type Props = {
   doc: CollectionEntry<'docs'>
   breadcrumbs: TBreadcrumb[]
   sidebarData: SidebarSection[]
+  relatedProduct: { href: string; title: string } | null
   headings: MarkdownHeading[]
 }
 
-const { doc, breadcrumbs, sidebarData, headings } = Astro.props
-
-const relatedLink = PRODUCTS[doc.id as keyof typeof PRODUCTS]
+const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
 ---
 
 <div
@@ -49,7 +47,7 @@ const relatedLink = PRODUCTS[doc.id as keyof typeof PRODUCTS]
       class="flex w-full max-w-[885px] flex-col px-14 pt-[15px] md:px-4"
       data-pagefind-body
     >
-      <TableOfContents client:load {headings} {relatedLink} />
+      <TableOfContents client:load {headings} {relatedProduct} />
 
       <Breadcrumbs {breadcrumbs} />
 
