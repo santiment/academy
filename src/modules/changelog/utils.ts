@@ -1,8 +1,8 @@
-export function mergeEntries(
-  prevEntries: any[],
-  nextEntries: any[],
-  keys: { created: string; removed: string },
-) {
+export function mergeEntries<T extends { date: string }>(
+  prevEntries: T[],
+  nextEntries: T[],
+  keys: { created: keyof T; removed: keyof T },
+): T[] {
   if (!prevEntries.length) return nextEntries
   if (!nextEntries.length) return prevEntries
 
@@ -13,14 +13,15 @@ export function mergeEntries(
     const mergedGroup = {
       ...lastPrev,
       [keys.created]: [
-        ...(lastPrev[keys.created] || []),
-        ...(firstNext[keys.created] || []),
+        ...((lastPrev[keys.created] as unknown as any[]) || []),
+        ...((firstNext[keys.created] as unknown as any[]) || []),
       ],
       [keys.removed]: [
-        ...(lastPrev[keys.removed] || []),
-        ...(firstNext[keys.removed] || []),
+        ...((lastPrev[keys.removed] as unknown as any[]) || []),
+        ...((firstNext[keys.removed] as unknown as any[]) || []),
       ],
     }
+
     return [...prevEntries.slice(0, -1), mergedGroup, ...nextEntries.slice(1)]
   }
 

@@ -1,17 +1,23 @@
-<script lang="ts">
+<script lang="ts" generics="EntryType extends { date: string }, TCreated, TRemoved">
   import type { Snippet } from 'svelte'
-  import type { TChangelogData } from '$modules/changelog/types'
+  import type { Pagination } from '$modules/changelog/types'
 
   import Button from 'san-webkit-next/ui/core/Button'
   import { mergeEntries } from '$modules/changelog/utils'
   import { getFormattedMonthDayYear } from 'san-webkit-next/utils/dates'
 
   type TProps = {
-    initialData: TChangelogData
-    fetchNextPage: (page: number) => Promise<TChangelogData>
-    keys: { created: string; removed: string }
-    renderCreated: Snippet<[any]>
-    renderRemoved: Snippet<[any]>
+    initialData: {
+      entries: EntryType[]
+      pagination: Pagination
+    }
+    fetchNextPage: (page: number) => Promise<{ entries: EntryType[], pagination: Pagination }>
+    keys: { 
+      created: keyof EntryType
+      removed: keyof EntryType
+    }
+    renderCreated: Snippet<[TCreated]>
+    renderRemoved: Snippet<[TRemoved]>
   }
 
   let { 
@@ -43,6 +49,11 @@
       isLoading = false
     }
   }
+
+  function getList(group: EntryType, key: keyof EntryType) {
+    const val = group[key];
+    return Array.isArray(val) ? val : [];
+  }
 </script>
 
 <div class="flex flex-col gap-8">
@@ -51,20 +62,23 @@
   {:else}
     <div>
       {#each entries as group (group.date)}
+        {@const createdItems = getList(group, keys.created)}
+        {@const removedItems = getList(group, keys.removed)}
+
         <section class="mb-8">
           <h3 class="text-xl font-bold mb-4">{getFormattedMonthDayYear(new Date(group.date), { utc: true })}</h3>
 
-          {#if group[keys.created]?.length}
+          {#if createdItems.length}
             <ul>
-              {#each group[keys.created] as item}
+              {#each createdItems as item}
                 <li>{@render renderCreated(item)}</li>
               {/each}
             </ul>
           {/if}
 
-          {#if group[keys.removed]?.length}
+          {#if removedItems.length}
             <ul>
-              {#each group[keys.removed] as item}
+              {#each removedItems as item}
                 <li>{@render renderRemoved(item)}</li>
               {/each}
             </ul>
