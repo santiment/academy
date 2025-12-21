@@ -11,7 +11,7 @@
   let { title, href, isActive, onclick }: TProps = $props()
 </script>
 
-<li class="list-none">
+<li>
   <a
     {href}
     {onclick}

@@ -75,9 +75,10 @@ const formattedHeadings = headings.filter((h) => h.depth <= 3)
 ---
 
 <Page
+  title={`${doc.data.headline || doc.data.title} | Santiment Academy`}
+  description={doc.data.description}
   currentSlug={doc.id}
   {sidebarData}
-  title={`${doc.data.title} | Santiment Academy`}
 >
   <Document
     {doc}

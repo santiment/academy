@@ -14,6 +14,7 @@ import Breadcrumbs from '$components/shared/Breadcrumbs.astro'
 import TableOfContents from '$components/layout/TableOfContents.svelte'
 import LastUpdated from '$components/shared/LastUpdated.svelte'
 import DiscordCTA from '$components/shared/DiscordCTA.svelte'
+import SupportButton from '$components/shared/SupportButton.svelte'
 
 import H1 from '$components/markdown/headings/H1.astro'
 
@@ -32,7 +33,7 @@ const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
   class="container mx-auto grid min-h-screen w-full grid-cols-[285px_1fr] pl-0 md:grid-cols-1"
 >
   <div
-    class="sticky top-[71px] block h-[calc(100vh-71px)] border-r border-r-porcelain md:hidden"
+    class="sticky top-[71px] block h-[calc(100vh-71px)] border-r border-r-porcelain bg-white md:hidden"
   >
     <Sidebar
       client:load
@@ -67,10 +68,9 @@ const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
       </div>
     </main>
 
-    <div
-      class="mt-14 [&>div]:py-7 [&>div]:pl-[55px] [&>div]:pr-[68px] [&_svg]:fill-rhino"
-    >
-      <FooterBottom class="" />
-    </div>
+    <footer class="mt-14 [&_svg]:fill-rhino">
+      <FooterBottom class="border-none pl-14 lg:border lg:pl-3" />
+    </footer>
   </div>
+  <SupportButton client:only="svelte" />
 </div>

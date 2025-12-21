@@ -71,7 +71,7 @@
   }}
 >
   {#snippet children()} 
-      <label 
+      <div 
         bind:this={containerWrapperRef.$}
         class={cn(
           'w-full flex flex-col items-center relative',
@@ -90,7 +90,7 @@
           oninput={handleSearch}
           onfocus={() => { if (query.length >= 2) showResults = true }}
         />
-      </label>
+      </div>
   {/snippet}
 
   {#snippet content()}
