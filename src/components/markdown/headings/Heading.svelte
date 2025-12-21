@@ -24,14 +24,14 @@
 </script>
 
 <svelte:element this={`h${level}`} {id} class="relative group">
-  <a
-    href="#{id}"
-    aria-hidden="true"
+  <button
+    type="button"
+    aria-label={`Copy link to section ${id}`}
     class="opacity-0 fill-waterloo absolute w-[1em] h-full -left-[1em] -top-[1px] border-b-0 hover:fill-green md:hidden group-hover:opacity-100 flex items-center"
     onclick={handleCopy}
   >
     <Svg id="link" />
-  </a>
+  </button>
 
   {@render children?.()}
 </svelte:element>
