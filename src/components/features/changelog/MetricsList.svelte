@@ -5,23 +5,31 @@
   import { queryMetricsChangelog } from '$modules/changelog/api'
   import { getFormattedDetailedTimestamp } from 'san-webkit-next/utils/dates'
 
-  let { initialData, pageSize = 20 } = $props<{ initialData: any, pageSize?: number }>()
+  import type { 
+    MetricsChangelogData, 
+    MetricCreatedEvent, 
+    MetricDeprecatedEvent 
+  } from '$modules/changelog/types'
+
+  let { initialData, pageSize = 20 } = $props<{ initialData: MetricsChangelogData, pageSize?: number }>()
 
   const fetchNextPage = (page: number) => 
     queryMetricsChangelog(UniQuery(fetch))(page, pageSize, '')
 </script>
 
-{#snippet createdMetric(item: any)}
+{#snippet createdMetric(item: MetricCreatedEvent)}
   {@const metricName = item.metric?.humanReadableName || item.metric?.metric || '—'}
   <strong>Created</strong> {metricName} - <time>{getFormattedDetailedTimestamp(new Date(item.eventTimestamp), { utc: true })}</time>
+
   {#if item.metric?.docs?.link}
      — <a href={item.metric.docs.link} target="_blank" rel="noreferrer" class="text-green">Docs</a>
   {/if}
 {/snippet}
 
-{#snippet deprecatedMetric(item: any)}
+{#snippet deprecatedMetric(item: MetricDeprecatedEvent)}
   {@const metricName = item.metric?.humanReadableName || item.metric?.metric || '—'}
   <strong>Deprecated</strong> {metricName} - <time>{getFormattedDetailedTimestamp(new Date(item.eventTimestamp), { utc: true })}</time>
+
   {#if item.deprecationNote}
      — {item.deprecationNote}
   {/if}

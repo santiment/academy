@@ -66,11 +66,11 @@
           {currentSlug} 
           {sidebarData} 
           onLinkClick={() => (navOpen = false)}
-          class="pl-2 h-auto overflow-y-visible [&_a]:min-h-10 [&_a]:items-center [&_a]:flex [&_a]:text-base [&_li]:my-0 [&_h3]:mb-2 pr-0"
+          class="pl-2 h-auto overflow-y-visible [&_a]:min-h-10 [&_a]:items-center [&_a]:flex [&_a]:text-base [&_li]:my-0 [&_h3]:mb-2 pr-0 border-b border-b-porcelain"
         />
       {/if}
 
-      <div class="border-t border-p-porcelain pb-3 pt-3 mt-3">
+      <div class="pb-3 pt-3 mt-3">
         <Products
           class="products-styled-list"
         />

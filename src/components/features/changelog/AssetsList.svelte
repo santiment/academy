@@ -4,13 +4,19 @@
   import Root from './Root.svelte'
   import { getFormattedDetailedTimestamp } from 'san-webkit-next/utils/dates'
 
-  let { initialData, pageSize = 20 } = $props<{ initialData: any, pageSize?: number }>()
+  import type { 
+    AssetsChangelogData, 
+    AssetCreatedEvent, 
+    AssetHiddenEvent 
+  } from '$modules/changelog/types'
+
+  let { initialData, pageSize = 20 } = $props<{ initialData: AssetsChangelogData, pageSize?: number }>()
 
   const fetchNextPage = (page: number) => 
     queryAssetsChangelog(UniQuery(fetch))(page, pageSize, '')
 </script>
 
-{#snippet createdAsset(item: any)}
+{#snippet createdAsset(item: AssetCreatedEvent)}
   {@const asset = item.asset}
 
   <a href={asset?.link} target="_blank" rel="noreferrer">
@@ -19,7 +25,7 @@
   </a>
 {/snippet}
 
-{#snippet hiddenAsset(item: any)}
+{#snippet hiddenAsset(item: AssetHiddenEvent)}
   {@const asset = item.asset}
 
   <strong>Hidden</strong> {asset?.name}
