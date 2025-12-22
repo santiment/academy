@@ -1,0 +1,102 @@
+<script lang="ts" generics="EntryType extends { date: string }, TCreated, TRemoved">
+  import type { Snippet } from 'svelte'
+  import type { Pagination } from '$modules/changelog/types'
+
+  import Button from 'san-webkit-next/ui/core/Button'
+  import { mergeEntries } from '$modules/changelog/utils'
+  import { getFormattedMonthDayYear } from 'san-webkit-next/utils/dates'
+
+  type TProps = {
+    initialData: {
+      entries: EntryType[]
+      pagination: Pagination
+    }
+    fetchNextPage: (page: number) => Promise<{ entries: EntryType[], pagination: Pagination }>
+    keys: { 
+      created: keyof EntryType
+      removed: keyof EntryType
+    }
+    renderCreated: Snippet<[TCreated]>
+    renderRemoved: Snippet<[TRemoved]>
+  }
+
+  let { 
+    initialData, 
+    fetchNextPage, 
+    keys, 
+    renderCreated, 
+    renderRemoved 
+  }: TProps = $props()
+
+  let entries = $state(initialData.entries)
+  let pagination = $state(initialData.pagination)
+  let isLoading = $state(false)
+
+  async function loadMore() {
+    if (isLoading || !pagination.hasMore) return
+
+    isLoading = true
+
+    try {
+      const nextPage = (pagination.currentPage || 1) + 1
+      const data = await fetchNextPage(nextPage)
+
+      entries = mergeEntries(entries, data.entries, keys)
+      pagination = data.pagination
+    } catch (e) {
+      console.error(e)
+    } finally {
+      isLoading = false
+    }
+  }
+
+  function getList(group: EntryType, key: keyof EntryType) {
+    const val = group[key];
+    return Array.isArray(val) ? val : [];
+  }
+</script>
+
+<div class="flex flex-col gap-8">
+  {#if entries.length === 0}
+    <div>No changes yet.</div>
+  {:else}
+    <div>
+      {#each entries as group (group.date)}
+        {@const createdItems = getList(group, keys.created)}
+        {@const removedItems = getList(group, keys.removed)}
+
+        <section class="mb-8">
+          <h3 class="text-xl font-bold mb-4">{getFormattedMonthDayYear(new Date(group.date), { utc: true })}</h3>
+
+          {#if createdItems.length}
+            <ul>
+              {#each createdItems as item}
+                <li>{@render renderCreated(item)}</li>
+              {/each}
+            </ul>
+          {/if}
+
+          {#if removedItems.length}
+            <ul>
+              {#each removedItems as item}
+                <li>{@render renderRemoved(item)}</li>
+              {/each}
+            </ul>
+          {/if}
+        </section>
+      {/each}
+    </div>
+  {/if}
+
+  {#if pagination.hasMore}
+    <div class="flex justify-center mt-4">
+      <Button 
+        variant="fill" 
+        loading={isLoading}
+        onclick={loadMore}
+      >
+        Load more
+      </Button>
+    </div>
+  {/if}
+</div>

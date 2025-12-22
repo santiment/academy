@@ -1,14 +1,23 @@
-import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { glob } from 'astro/loaders'
+import { defineCollection, z } from 'astro:content'
 
 const docs = defineCollection({
-  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/docs" }),
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/docs' }),
   schema: z.object({
-    title: z.string().optional(),
+    title: z.string(),
+    headline: z.string().optional(),
     description: z.string().optional(),
+    date: z.coerce.date().optional(),
     author: z.string().nullable().optional(),
-    date: z.coerce.date().optional()
-  })
-});
 
-export const collections = { docs };
+    sidebar: z
+      .object({
+        label: z.string().optional(),
+        order: z.number().default(999),
+        hidden: z.boolean().default(false),
+      })
+      .default({}),
+  }),
+})
+
+export const collections = { docs }

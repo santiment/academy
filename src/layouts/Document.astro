@@ -1,0 +1,71 @@
+---
+import 'katex/dist/katex.min.css'
+
+import type { CollectionEntry } from 'astro:content'
+import type { MarkdownHeading } from 'astro'
+import type { TBreadcrumb } from '$modules/navigation/breadcrumbs'
+import type { SidebarSection } from '$modules/navigation/sidebar'
+
+import { FooterBottom } from 'san-webkit-next/ui/app/Footer'
+import { sluggify } from 'san-webkit-next/utils/url'
+
+import Sidebar from '$components/layout/Sidebar.svelte'
+import Breadcrumbs from '$components/shared/Breadcrumbs.astro'
+import TableOfContents from '$components/layout/TableOfContents.svelte'
+import LastUpdated from '$components/shared/LastUpdated.svelte'
+import DiscordCTA from '$components/shared/DiscordCTA.svelte'
+import SupportButton from '$components/shared/SupportButton.svelte'
+
+import H1 from '$components/markdown/headings/H1.astro'
+
+type Props = {
+  doc: CollectionEntry<'docs'>
+  breadcrumbs: TBreadcrumb[]
+  sidebarData: SidebarSection[]
+  relatedProduct: { href: string; title: string } | null
+  headings: MarkdownHeading[]
+}
+
+const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
+---
+
+<div
+  class="container mx-auto grid min-h-screen w-full grid-cols-[285px_1fr] pl-0 md:grid-cols-1"
+>
+  <div
+    class="sticky top-[71px] block h-[calc(100vh-71px)] border-r border-r-porcelain bg-white md:hidden"
+  >
+    <Sidebar client:load {sidebarData} currentSlug={doc.id} />
+  </div>
+
+  <div class="flex min-w-0 flex-col">
+    <main
+      class="flex w-full max-w-[885px] flex-col px-14 pt-[15px] md:px-4"
+      data-pagefind-body
+    >
+      <TableOfContents client:load {headings} {relatedProduct} />
+
+      <Breadcrumbs {breadcrumbs} />
+
+      <div class="wrapper mt-6">
+        {
+          doc.data.title && (
+            <H1 id={sluggify(doc.data.title)}>{doc.data.title}</H1>
+          )
+        }
+
+        <slot />
+
+        <div class="mt-16">
+          <LastUpdated lastUpdated={doc.data.date} />
+          <DiscordCTA />
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-14 [&_svg]:fill-rhino">
+      <FooterBottom class="border-none pl-14 lg:border lg:pl-3" />
+    </footer>
+  </div>
+  <SupportButton client:only="svelte" />
+</div>

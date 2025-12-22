@@ -1,0 +1,66 @@
+---
+import type { SidebarSection } from '$modules/navigation/sidebar'
+
+import '../app.css'
+import 'san-webkit-next/app.css'
+
+import { ClientRouter } from 'astro:transitions'
+import Notifications from 'san-webkit-next/ui/core/Notifications'
+
+import Nav from '$components/layout/Nav.svelte'
+import Seo from '$components/layout/SEO.astro'
+
+import GoogleAnalytics from '$modules/analytics/components/GoogleAnalytics.astro'
+import Intercom from '$modules/support/components/Intercom.astro'
+
+type Props = {
+  currentSlug?: string
+  sidebarData?: SidebarSection[]
+  title?: string
+  description?: string
+}
+
+const {
+  title,
+  description,
+  currentSlug,
+  sidebarData,
+} = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <Seo {title} {description} />
+
+    {import.meta.env.PROD && (
+      <GoogleAnalytics id="G-H53MB0V33X" />
+      <Intercom appId="cyjjko9u" />
+    )}
+
+    <ClientRouter />
+  </head>
+
+  <body class="pt-[70px]">
+    <Notifications client:only="svelte" />
+
+    <div data-vaul-drawer-wrapper>
+      <Nav {currentSlug} {sidebarData} client:load transition:persist />
+
+      <slot />
+    </div>
+  </body>
+</html>
+
+<script>
+  import { startLinksListener } from 'san-webkit-next/analytics'
+  import { initCookiesPopup } from '$modules/consent/cookies'
+
+  if (import.meta.env.PROD) {
+    startLinksListener();
+    initCookiesPopup();
+  }
+</script>

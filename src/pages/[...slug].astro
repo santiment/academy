@@ -1,103 +1,92 @@
 ---
-import { getCollection, getEntry, render } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
 
-import BaseLayout from '$layouts/BaseLayout.astro'
-import DocsLayout from '$layouts/DocsLayout.astro'
+import { getCollection, render } from 'astro:content'
 
-import H1 from '$components/markdown/headings/H1.astro'
-import H2 from '$components/markdown/headings/H2.astro'
-import H3 from '$components/markdown/headings/H3.astro'
-import H4 from '$components/markdown/headings/H4.astro'
-import H5 from '$components/markdown/headings/H5.astro'
+import Page from '$layouts/Page.astro'
+import Document from '$layouts/Document.astro'
+
+import * as Headings from '$components/markdown/headings'
 import Link from '$components/markdown/Link.svelte'
 import Blockquote from '$components/markdown/Blockquote.svelte'
 
-export type TBreadcrump = {
-  pathname: string
-  label?: string
-}
+import { getSidebar, ROOT_SECTIONS } from '$modules/navigation/sidebar'
+import { getFirstDocInSection } from '$modules/docs/engine'
+import { getBreadcrumbs } from '$modules/navigation/breadcrumbs'
+import { PRODUCTS } from '$config/products'
 
 export async function getStaticPaths() {
   const allDocs = await getCollection('docs')
+  const sidebarData = getSidebar(allDocs)
 
-  return allDocs.map((doc) => ({
-    params: { slug: doc.id },
-  }))
+  const docsMap = new Map(allDocs.map((d) => [d.id, d]))
+
+  const prepareProps = (doc: CollectionEntry<'docs'>) => {
+    const [_section, productId] = doc.id.split('/')
+    const relatedProduct = PRODUCTS[productId]
+
+    return {
+      params: { slug: doc.id },
+      props: {
+        doc,
+        sidebarData,
+        relatedProduct,
+        breadcrumbs: getBreadcrumbs(doc.id, docsMap),
+      },
+    }
+  }
+
+  const docPaths = allDocs.map(prepareProps)
+
+  const sectionPaths = Object.keys(ROOT_SECTIONS).map((section) => {
+    const firstDoc = getFirstDocInSection(allDocs, section)
+
+    return {
+      params: { slug: section },
+      props: {
+        doc: firstDoc,
+        sidebarData,
+        relatedProduct: null,
+        breadcrumbs: getBreadcrumbs(firstDoc?.id ?? section, docsMap),
+      },
+    }
+  })
+
+  return [...docPaths, ...sectionPaths]
 }
 
-const { slug } = Astro.params
+const { doc, sidebarData, relatedProduct, breadcrumbs } = Astro.props
 
-const doc = await getEntry('docs', slug || 'index')
-
-if (!doc) {
-  return Astro.redirect('/404')
-}
-
-const allDocsEntries = await getCollection('docs')
-
-const allDocs = allDocsEntries.map((entry) => ({
-  pathname: entry.id,
-  label: entry.data.title ?? entry.id,
-}))
+if (!doc) return Astro.redirect('/404')
 
 const { Content, headings } = await render(doc)
 
-const getBreadcrumbs = (path: string) => {
-  const parts = path.split('/')
-  let currentPath = ''
-  const pathsToFind: string[] = []
-
-  parts.forEach((part, index) => {
-    if (index > 0) {
-      currentPath += '/'
-    }
-    currentPath += part
-
-    pathsToFind.push(currentPath)
-  })
-
-  if (path !== 'index') {
-    pathsToFind.unshift('index')
-  }
-
-  const breadcrumbs = allDocs.filter((doc) =>
-    pathsToFind.includes(doc.pathname)
-  )
-
-  breadcrumbs.sort(
-    (a, b) => pathsToFind.indexOf(a.pathname) - pathsToFind.indexOf(b.pathname)
-  )
-
-  const finalBreadcrumbs = breadcrumbs.slice(0, -1)
-
-  const lastCrumb = {
-    pathname: `/${doc.id}`,
-    label: doc.data.title,
-  }
-
-  return [...finalBreadcrumbs, lastCrumb]
-}
-
-const breadcrumbs: TBreadcrump[] = [
-  { pathname: '/', label: 'Home' },
-  ...getBreadcrumbs(doc.id),
-]
-
 const components = {
-  h1: H1,
-  h2: H2,
-  h3: H3,
-  h4: H4,
-  h5: H5,
+  h1: Headings.H1,
+  h2: Headings.H2,
+  h3: Headings.H3,
+  h4: Headings.H4,
+  h5: Headings.H5,
   a: Link,
   blockquote: Blockquote,
 }
 
-const formattedHeadings = headings.filter((heading) => heading.depth <= 3)
+const formattedHeadings = headings.filter((h) => h.depth <= 3)
 ---
 
-<BaseLayout title={doc.data.title && `${doc.data.title} | Santiment Academy`}>
-  <DocsLayout {doc} {breadcrumbs} headings={formattedHeadings}>
+<Page
+  title={`${doc.data.headline || doc.data.title} | Santiment Academy`}
+  description={doc.data.description}
+  currentSlug={doc.id}
+  {sidebarData}
+>
+  <Document
+    {doc}
+    {breadcrumbs}
+    {relatedProduct}
+    {sidebarData}
+    headings={formattedHeadings}
+  >
     <Content {components} />
-  </DocsLayout>
-</BaseLayout>
+  </Document>
+</Page>
