@@ -18,17 +18,16 @@ This is going to run the app on port **3000**, so [`localhost:3000`](http://loca
 
 We use **MDX** (.mdx) for all content. The routing is file-system based and located in `src/content/docs/` (or `src/docs/`).
 
-- To create a page at `academy.santiment.net/test`, add `src/docs/test.mdx` or `src/docs/test/index.mdx`.
+- To create a page at `academy.santiment.net/test`, add `src/docs/[section]/test.mdx`.
 - Images should be placed in the same folder as the article and referenced relatively.
 
-### Sidebar and Navigation
+### Sidebar & Visibility
 
-Navigation is **automatic** based on the file structure. There is no longer a `navigation.md` or `navigation.js` file to update.
+The sidebar is generated automatically.
 
-- **To show an article in the sidebar**: Use `index.mdx` inside a folder. The folder name determines the category.
-- **To hide an article (Direct link only)**:
-- Name the file something other than `index.mdx` (e.g., `guide.mdx`).
-- Or add `sidebar: { hidden: true }` to the MDX frontmatter of an `index.mdx` file.
+- **Visibility**: All files are visible by default.
+- **Hiding**: To hide an article from the sidebar, set `sidebar.hidden: true` in the frontmatter.
+- **Ordering**: Use `sidebar.order: [number]` to control the position in the list.
 
 ### Custom Components
 
