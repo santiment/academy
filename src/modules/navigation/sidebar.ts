@@ -47,9 +47,7 @@ function sortSidebarItems(items: SidebarItem[]) {
 export function getSidebar(
   allDocs: CollectionEntry<'docs'>[],
 ): SidebarSection[] {
-  const docs = allDocs.filter(
-    (d) => !d.data.sidebar.hidden && d.filePath?.endsWith('/index.mdx'),
-  )
+  const docs = allDocs.filter((d) => !d.data.sidebar.hidden)
 
   const sidebarMap: Record<string, SidebarSection> = Object.fromEntries(
     Object.keys(ROOT_SECTIONS).map((key) => [
