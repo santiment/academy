@@ -11,11 +11,11 @@
   import type { SidebarSection } from '$modules/navigation/sidebar'
 
   type TProps = {
-    currentSlug?: string
+    slug?: string
     sidebarData?: SidebarSection[]
   }
 
-  const { currentSlug, sidebarData }: TProps = $props()
+  const { slug, sidebarData }: TProps = $props()
 
   let navOpen = $state(false)
 
@@ -61,9 +61,9 @@
     <div class="fixed inset-0 z-50 top-[71px] flex-col overflow-auto bg-white p-4 md:flex">
       <Button icon="close" class="fill-waterloo absolute mb-4 self-end" onclick={() => (navOpen = false)}></Button>
 
-      {#if currentSlug && sidebarData}
+      {#if slug && sidebarData}
         <Sidebar 
-          {currentSlug} 
+          {slug} 
           {sidebarData} 
           onLinkClick={() => (navOpen = false)}
           class="pl-2 h-auto overflow-y-visible [&_a]:min-h-10 [&_a]:items-center [&_a]:flex [&_a]:text-base [&_li]:my-0 [&_h3]:mb-2 pr-0 border-b border-b-porcelain"

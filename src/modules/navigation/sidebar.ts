@@ -1,5 +1,9 @@
 import { type CollectionEntry } from 'astro:content'
 
+import { getPublicSlug } from '$modules/navigation/paths'
+
+import { ROOT_SECTIONS } from '$config/navigation'
+
 export type SidebarLink = {
   type: 'link'
   title: string
@@ -22,12 +26,6 @@ export type SidebarSection = {
 
 type SidebarItemDraft = Omit<SidebarGroup, 'type'> & {
   type: 'link' | 'group'
-}
-
-export const ROOT_SECTIONS: Record<string, string> = {
-  'getting-started': 'Getting started',
-  guides: 'Guides',
-  resources: 'Resources',
 }
 
 function isGroup(item: SidebarItem): item is SidebarGroup {
@@ -62,9 +60,9 @@ export function getSidebar(
     itemMap.set(doc.id, {
       type: 'link',
       title: doc.data.sidebar.label || doc.data.title,
-      href: `/${doc.id}/`,
+      href: `/${getPublicSlug(doc.id)}/`,
       order: doc.data.sidebar.order ?? 999,
-      slug: doc.id,
+      slug: getPublicSlug(doc.id),
       items: [],
     })
   })

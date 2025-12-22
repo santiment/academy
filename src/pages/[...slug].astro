@@ -1,92 +1,40 @@
 ---
-import type { CollectionEntry } from 'astro:content'
-
 import { getCollection, render } from 'astro:content'
 
 import Page from '$layouts/Page.astro'
 import Document from '$layouts/Document.astro'
 
-import * as Headings from '$components/markdown/headings'
-import Link from '$components/markdown/Link.svelte'
-import Blockquote from '$components/markdown/Blockquote.svelte'
-
-import { getSidebar, ROOT_SECTIONS } from '$modules/navigation/sidebar'
-import { getFirstDocInSection } from '$modules/docs/engine'
-import { getBreadcrumbs } from '$modules/navigation/breadcrumbs'
-import { PRODUCTS } from '$config/products'
+import { getSidebar } from '$modules/navigation/sidebar'
+import { MARKDOWN_COMPONENTS } from '$config/markdown'
+import { prepareDocProps } from '$modules/docs/props'
 
 export async function getStaticPaths() {
   const allDocs = await getCollection('docs')
   const sidebarData = getSidebar(allDocs)
 
-  const docsMap = new Map(allDocs.map((d) => [d.id, d]))
-
-  const prepareProps = (doc: CollectionEntry<'docs'>) => {
-    const [_section, productId] = doc.id.split('/')
-    const relatedProduct = PRODUCTS[productId]
-
-    return {
-      params: { slug: doc.id },
-      props: {
-        doc,
-        sidebarData,
-        relatedProduct,
-        breadcrumbs: getBreadcrumbs(doc.id, docsMap),
-      },
-    }
+  const context = {
+    sidebarData,
+    docsMap: new Map(allDocs.map((d) => [d.id, d])),
+    slugRegistry: new Map<string, string>(),
   }
 
-  const docPaths = allDocs.map(prepareProps)
-
-  const sectionPaths = Object.keys(ROOT_SECTIONS).map((section) => {
-    const firstDoc = getFirstDocInSection(allDocs, section)
-
-    return {
-      params: { slug: section },
-      props: {
-        doc: firstDoc,
-        sidebarData,
-        relatedProduct: null,
-        breadcrumbs: getBreadcrumbs(firstDoc?.id ?? section, docsMap),
-      },
-    }
-  })
-
-  return [...docPaths, ...sectionPaths]
+  return allDocs.map((doc) => prepareDocProps(doc, context))
 }
 
 const { doc, sidebarData, relatedProduct, breadcrumbs } = Astro.props
 
 if (!doc) return Astro.redirect('/404')
 
-const { Content, headings } = await render(doc)
-
-const components = {
-  h1: Headings.H1,
-  h2: Headings.H2,
-  h3: Headings.H3,
-  h4: Headings.H4,
-  h5: Headings.H5,
-  a: Link,
-  blockquote: Blockquote,
-}
-
-const formattedHeadings = headings.filter((h) => h.depth <= 3)
+const { Content, headings: rawHeadings } = await render(doc)
+const headings = rawHeadings.filter((h) => h.depth <= 3)
 ---
 
 <Page
   title={`${doc.data.headline || doc.data.title} | Santiment Academy`}
   description={doc.data.description}
-  currentSlug={doc.id}
   {sidebarData}
 >
-  <Document
-    {doc}
-    {breadcrumbs}
-    {relatedProduct}
-    {sidebarData}
-    headings={formattedHeadings}
-  >
-    <Content {components} />
+  <Document {doc} {breadcrumbs} {relatedProduct} {sidebarData} {headings}>
+    <Content components={MARKDOWN_COMPONENTS} />
   </Document>
 </Page>

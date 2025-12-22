@@ -6,12 +6,12 @@
 
   interface Props {
     sidebarData: SidebarSection[]
-    currentSlug: string
+    slug: string
     class?: string
     onLinkClick?: () => void
   }
 
-  let { sidebarData, currentSlug, class: className, onLinkClick }: Props = $props()
+  let { sidebarData, slug, class: className, onLinkClick }: Props = $props()
 </script>
 
 {#snippet sectionHeader(title: string, hasBorder: boolean)}
@@ -30,12 +30,12 @@
     <ul class="flex flex-col gap-2">
       {#each section.items as item (item.slug)}
         {#if item.type === 'group'}
-          <SidebarGroup {item} {currentSlug} />
+          <SidebarGroup {item} currentSlug={slug} />
         {:else}
           <SidebarLink 
             title={item.title} 
             href={item.href} 
-            isActive={currentSlug === item.slug} 
+            isActive={slug === item.slug} 
             onclick={onLinkClick}
           />
         {/if}

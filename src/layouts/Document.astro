@@ -26,6 +26,8 @@ type Props = {
   headings: MarkdownHeading[]
 }
 
+const { slug } = Astro.params
+
 const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
 ---
 
@@ -35,7 +37,7 @@ const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
   <div
     class="sticky top-[71px] block h-[calc(100vh-71px)] border-r border-r-porcelain bg-white md:hidden"
   >
-    <Sidebar client:load {sidebarData} currentSlug={doc.id} />
+    <Sidebar client:load {sidebarData} {slug} />
   </div>
 
   <div class="flex min-w-0 flex-col">

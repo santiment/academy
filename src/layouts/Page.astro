@@ -14,18 +14,14 @@ import GoogleAnalytics from '$modules/analytics/components/GoogleAnalytics.astro
 import Intercom from '$modules/support/components/Intercom.astro'
 
 type Props = {
-  currentSlug?: string
   sidebarData?: SidebarSection[]
   title?: string
   description?: string
 }
 
-const {
-  title,
-  description,
-  currentSlug,
-  sidebarData,
-} = Astro.props
+const { slug } = Astro.params
+
+const { title, description, sidebarData } = Astro.props
 ---
 
 <html lang="en">
@@ -36,10 +32,14 @@ const {
     <meta name="generator" content={Astro.generator} />
     <Seo {title} {description} />
 
-    {import.meta.env.PROD && (
-      <GoogleAnalytics id="G-H53MB0V33X" />
-      <Intercom appId="cyjjko9u" />
-    )}
+    {
+      import.meta.env.PROD && (
+        <>
+          <GoogleAnalytics id="G-H53MB0V33X" />
+          <Intercom appId="cyjjko9u" />
+        </>
+      )
+    }
 
     <ClientRouter />
   </head>
@@ -48,7 +48,7 @@ const {
     <Notifications client:only="svelte" />
 
     <div data-vaul-drawer-wrapper>
-      <Nav {currentSlug} {sidebarData} client:load transition:persist />
+      <Nav {slug} {sidebarData} client:load transition:persist />
 
       <slot />
     </div>
@@ -60,7 +60,7 @@ const {
   import { initCookiesPopup } from '$modules/consent/cookies'
 
   if (import.meta.env.PROD) {
-    startLinksListener();
-    initCookiesPopup();
+    startLinksListener()
+    initCookiesPopup()
   }
 </script>
