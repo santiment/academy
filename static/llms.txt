@@ -24,9 +24,9 @@
 - [Understanding Daily Active Addresses (DAA)](https://academy.santiment.net/education-and-use-cases/understaning-daily-active-addresses/): Understanding Daily Active Addresses (DAA)
 - [Sanbase Alerts Example - Whale Activity](https://academy.santiment.net/education-and-use-cases/whale-activity-alert/): Sanbase Alerts Example - Whale Activity
 - [Whale Monitoring to Predict Market Moves](https://academy.santiment.net/education-and-use-cases/whale-monitoring-to-predict-market-moves/): Whale Monitoring to Predict Market Moves
-- [Getting started for Developers](https://academy.santiment.net/getting-started/for-developers/): Getting started for Developers
-- [Metrics Exported to S3 - Technical Documentation](https://academy.santiment.net/getting-started/for-developers/metrics-exported-s3/): Metrics Exported to S3 - Technical Documentation
-- [Getting started for traders](https://academy.santiment.net/getting-started/for-traders/): Getting started for traders
+- [Getting started for Developers](https://academy.santiment.net/for-developers/): Getting started for Developers
+- [Metrics Exported to S3 - Technical Documentation](https://academy.santiment.net/for-developers/metrics-exported-s3/): Metrics Exported to S3 - Technical Documentation
+- [Getting started for traders](https://academy.santiment.net/for-traders/): Getting started for traders
 - [Asset](https://academy.santiment.net/glossary/asset/): Asset
 - [Deposit Addresses](https://academy.santiment.net/glossary/deposit-addresses/): Deposit Addresses
 - [Glossary of API Terms](https://academy.santiment.net/glossary/): Glossary of API Terms
@@ -283,7 +283,7 @@
 - [Sansheets Onboarding article](https://academy.santiment.net/sansheets/onboarding/): Sansheets Onboarding article
 - [Sansheets Pro Templates](https://academy.santiment.net/sansheets/pro-templates/): Sansheets Pro Templates
 - [Setting up Sansheets](https://academy.santiment.net/sansheets/setting-up/): Setting up Sansheets
-- [Getting started with Santiment](https://academy.santiment.net/getting-started/santiment-introduction/): Getting started with Santiment
+- [Getting started with Santiment](https://academy.santiment.net/santiment-introduction/): Getting started with Santiment
 - [API Access to Sanqueries](https://academy.santiment.net/santiment-queries/api-access/): API Access to Sanqueries
 - [Bridge Transactions Table Overview](https://academy.santiment.net/santiment-queries/bridges/): Bridge Transactions Table Overview
 - [DEX Pools Tables Overview](https://academy.santiment.net/santiment-queries/dex-pools/): DEX Pools Tables Overview
