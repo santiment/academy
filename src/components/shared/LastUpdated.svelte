@@ -4,7 +4,7 @@
   import { getTimeSince } from 'san-webkit-next/utils/dates'
 
   type TProps = {
-    lastUpdatedAt?: Date | null
+    lastUpdatedAt?: Date | string
   }
 
   const { lastUpdatedAt }: TProps = $props()

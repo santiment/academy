@@ -6,7 +6,6 @@ import type { MarkdownHeading } from 'astro'
 import type { TBreadcrumb } from '$modules/navigation/breadcrumbs'
 import type { SidebarSection } from '$modules/navigation/sidebar'
 
-import { FooterBottom } from 'san-webkit-next/ui/app/Footer'
 import { sluggify } from 'san-webkit-next/utils/url'
 
 import Sidebar from '$components/layout/Sidebar.svelte'
@@ -24,11 +23,19 @@ type Props = {
   sidebarData: SidebarSection[]
   relatedProduct: { href: string; title: string } | null
   headings: MarkdownHeading[]
+  lastUpdatedAt?: Date | string
 }
 
 const { slug } = Astro.params
 
-const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
+const {
+  doc,
+  breadcrumbs,
+  relatedProduct,
+  sidebarData,
+  headings,
+  lastUpdatedAt,
+} = Astro.props
 ---
 
 <div
@@ -59,15 +66,11 @@ const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
         <slot />
 
         <div class="mt-16">
-          <LastUpdated lastUpdated={doc.data.date} />
+          <LastUpdated {lastUpdatedAt} />
           <DiscordCTA />
         </div>
       </div>
     </main>
-
-    <footer class="mt-14 [&_svg]:fill-rhino">
-      <FooterBottom class="border-none pl-14 lg:border lg:pl-3" />
-    </footer>
   </div>
   <SupportButton client:only="svelte" />
 </div>

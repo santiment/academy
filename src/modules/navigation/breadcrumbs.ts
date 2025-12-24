@@ -26,7 +26,7 @@ export const getBreadcrumbs = (
 
     if (doc) {
       crumbs.push({
-        pathname: `/${getPublicSlug(doc.id)}`,
+        pathname: `/${getPublicSlug(doc.id)}/`,
         label: doc.data.sidebar.label ?? doc.data.title,
       })
     }

@@ -23,7 +23,7 @@
   </h3>
 {/snippet}
 
-<aside class={cn("sidebar h-full overflow-y-auto pb-10 pl-4 [scrollbar-gutter:stable] relative", className)}>
+<aside class={cn("sidebar h-full overflow-y-auto pb-10 pl-4 relative", className)}>
   {#each sidebarData as section, index (section.title)}
     {@render sectionHeader(section.title, index !== 0)}
 

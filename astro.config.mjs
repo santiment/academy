@@ -15,6 +15,7 @@ import { defineConfig, mergeConfig } from 'astro/config'
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
 
 import { expressiveCodeExplorer } from './plugins/ec-explorer-outside.mjs'
+import { remarkLastUpdated } from './plugins/remark-last-updated.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -42,6 +43,16 @@ const viteConfig = mergeConfig(viteBase, {
 
 export default defineConfig({
   site: 'https://academy.santiment.net',
+  trailingSlash: 'always',
+  build: {
+    format: 'directory',
+  },
+  redirects: {
+    '/metrics/mvrv-ratio/': '/metrics/mvrv/',
+    '/metrics/holders-distribution/': '/metrics/supply-distribution/',
+    '/education-and-use-cases/understaning-daily-active-addresses/':
+      '/education-and-use-cases/understanding-daily-active-addresses/',
+  },
   integrations: [
     svelte({
       extensions: ['.svelte'],
@@ -82,7 +93,7 @@ export default defineConfig({
         SQL: 'sql',
       },
     },
-    remarkPlugins: [remarkMath, remarkGemoji],
+    remarkPlugins: [remarkMath, remarkGemoji, remarkLastUpdated],
     rehypePlugins: [rehypeKatex, rehypeSlug],
   },
   publicDir: './static',

@@ -25,8 +25,14 @@ const { doc, sidebarData, relatedProduct, breadcrumbs } = Astro.props
 
 if (!doc) return Astro.redirect('/404')
 
-const { Content, headings: rawHeadings } = await render(doc)
+const {
+  Content,
+  headings: rawHeadings,
+  remarkPluginFrontmatter,
+} = await render(doc)
+
 const headings = rawHeadings.filter((h) => h.depth <= 3)
+const lastUpdatedAt = doc.data.date || remarkPluginFrontmatter.lastUpdatedAt
 ---
 
 <Page
@@ -34,7 +40,14 @@ const headings = rawHeadings.filter((h) => h.depth <= 3)
   description={doc.data.description}
   {sidebarData}
 >
-  <Document {doc} {breadcrumbs} {relatedProduct} {sidebarData} {headings}>
+  <Document
+    {doc}
+    {breadcrumbs}
+    {relatedProduct}
+    {sidebarData}
+    {headings}
+    {lastUpdatedAt}
+  >
     <Content components={MARKDOWN_COMPONENTS} />
   </Document>
 </Page>
