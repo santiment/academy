@@ -1,19 +1,18 @@
 <script lang="ts">
   import Svg from 'san-webkit-next/ui/core/Svg'
   import { cn } from 'san-webkit-next/ui/utils'
-  import { getTimeSince } from 'san-webkit-next/utils/dates'
+  import { dateDifferenceInWords } from '$modules/date/index'
 
   type TProps = {
-    lastUpdatedAt?: Date | string
+    dateModified: Date
   }
 
-  const { lastUpdatedAt }: TProps = $props()
+  const { dateModified }: TProps = $props()
+  const isoDate = $derived(dateModified.toISOString())
 </script>
 
-{#if lastUpdatedAt}
-  <div class={cn('flex items-center mb-6')}>
-    <Svg id="time" class="fill-waterloo mr-2" />
+<div class={cn('flex items-center mb-6')}>
+  <Svg id="time" class="fill-waterloo mr-2" />
 
-    <time class="text-sm font-medium text-fiord">Updated {getTimeSince(new Date(lastUpdatedAt))} ago</time>
-  </div>
-{/if}
+  <time datetime={isoDate} class="text-sm font-medium text-fiord">Updated {dateDifferenceInWords(dateModified)}</time>
+</div>

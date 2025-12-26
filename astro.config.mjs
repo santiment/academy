@@ -15,7 +15,6 @@ import { defineConfig, mergeConfig } from 'astro/config'
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
 
 import { expressiveCodeExplorer } from './plugins/ec-explorer-outside.mjs'
-import { remarkLastUpdated } from './plugins/remark-last-updated.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
@@ -93,7 +92,7 @@ export default defineConfig({
         SQL: 'sql',
       },
     },
-    remarkPlugins: [remarkMath, remarkGemoji, remarkLastUpdated],
+    remarkPlugins: [remarkMath, remarkGemoji],
     rehypePlugins: [rehypeKatex, rehypeSlug],
   },
   publicDir: './static',
