@@ -7,7 +7,7 @@ const docs = defineCollection({
     title: z.string(),
     headline: z.string().optional(),
     description: z.string().optional(),
-    date: z.coerce.date().optional(),
+    datePublished: z.coerce.date(),
     dateModified: z.coerce.date(),
     author: z.string().nullable().optional(),
 
