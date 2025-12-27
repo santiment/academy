@@ -66,7 +66,10 @@ const {
         <slot />
 
         <div class="mt-16">
-          <LastUpdated dateModified={doc.data.dateModified} />
+          <LastUpdated
+            datePublished={doc.data.datePublished}
+            dateModified={doc.data.dateModified}
+          />
           <DiscordCTA />
         </div>
       </div>
