@@ -20,7 +20,7 @@ One of the best parts of Sansheets' integration with Google Sheets is that templ
 
 ![](01_examplequery.png)
 
-The possibilities are pretty endless when it comes to what types of models can be created, and Santiment offers an array of 48 different functions to use for you to build any cryptocurrency model your heart desires. You can learn all about the Sansheets functions we have available, and how they work on our academy page: [https://academy.santiment.net/sansheets/functions/](https://academy.santiment.net/sansheets/functions/)
+The possibilities are pretty endless when it comes to what types of models can be created, and Santiment offers an array of 48 different functions to use for you to build any cryptocurrency model your heart desires. You can learn all about the Sansheets functions we have available, and how they work on our academy page: [/sansheets/functions/](/sansheets/functions/)
 
 With the explanation out of the way, let's get into how to get you setup with Sansheets on. To get started and begin creating your own templates and models, follow these simple steps precisely:
 
@@ -55,13 +55,13 @@ With the explanation out of the way, let's get into how to get you setup with Sa
 
 11. To test out your newly and fully enabled Sansheets add-on, type in **`=SAN`** and look to see if there is a dropdown of different function options to choose from. If you see them, then you are officially ready to enter Santiment formulas and begin creating your own models!
     ![](13_sanequals.png)
-12. Choose a cell and ensure there are 2-5 blank columns to the right of it (depending on the SAN formula you choose to input). You can select between any SAN formula available in the dropdown, or refer to the Sansheets academy page to find the perfect function to accomplish what you're trying to create: [https://academy.santiment.net/sansheets/functions/](https://academy.santiment.net/sansheets/functions/). Once selected, enter it with an open parentheses afterwards, followed by the full name of the project's slug, a comma, then your start date as "`DATE(month,day, year)`", another comma, and your end date as "`DATE(month,day, year)`" OR "`TODAY()`" if you would like your model to auto-update to the current date. Then press enter. Eg, "`=SAN_OHLC("bitcoin",DATE(2015,2,1),TODAY())`" will give you the Open, High, Low, and Close prices of every day between February 1st, 2015 and the most recent Santiment data available.
+12. Choose a cell and ensure there are 2-5 blank columns to the right of it (depending on the SAN formula you choose to input). You can select between any SAN formula available in the dropdown, or refer to the Sansheets academy page to find the perfect function to accomplish what you're trying to create: [/sansheets/functions/](/sansheets/functions/). Once selected, enter it with an open parentheses afterwards, followed by the full name of the project's slug, a comma, then your start date as "`DATE(month,day, year)`", another comma, and your end date as "`DATE(month,day, year)`" OR "`TODAY()`" if you would like your model to auto-update to the current date. Then press enter. Eg, "`=SAN_OHLC("bitcoin",DATE(2015,2,1),TODAY())`" will give you the Open, High, Low, and Close prices of every day between February 1st, 2015 and the most recent Santiment data available.
     ![](14_ohlc.png)
 
 Depending on how large your timeframe was, you will have to wait momentarily while seeing "Loading..." where you entered your formula. Once done, you will see the data you requested generate into the expanded rows and columns from your original cell.
 ![](15_ohlcresult.png)
 
-Note that you may also refer to our helpful Github Sansheets function repository to find additional info on functions to pull data for any of your favorite metrics: [https://github.com/santiment/google-spreadsheet-addon/blob/master/doc/sheet_functions.md](https://academy.santiment.net/sansheets/functions/)
+Note that you may also refer to our helpful Github Sansheets function repository to find additional info on functions to pull data for any of your favorite metrics: [https://github.com/santiment/google-spreadsheet-addon/blob/master/doc/sheet_functions.md](/sansheets/functions/)
 
 A nice feature with Sansheets that you won't see in traditional data models is the fact that you can direct it to auto-pull Santiment data on a daily basis without any action needed. Simply take a certain start date and enter it into your formula along with an end date of "`TODAY()`" and Sansheets will add an extra row of data to whatever metric you are directing Sansheets to pull from Santiment's extensive database.
 
