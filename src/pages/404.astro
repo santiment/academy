@@ -5,9 +5,12 @@ import Button from 'san-webkit-next/ui/core/Button'
 import { cn } from 'san-webkit-next/ui/utils'
 
 import Page from '$layouts/Page.astro'
+import SEO from '$components/layout/SEO.astro'
 ---
 
-<Page title="404: Not found">
+<Page>
+  <SEO slot="seo" title=`404: Not found` />
+
   <div
     class={cn(
       'container flex min-h-[70vh] flex-col items-start justify-center',

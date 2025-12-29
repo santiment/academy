@@ -7,7 +7,7 @@
 <a
   class={cn(
     'flex bg-white border border-porcelain rounded-lg py-7 px-12 transition-all duration-1000',
-    'sm:py-8 sm:px-6 !no-underline group'
+    'sm:py-8 sm:px-6 !no-underline group sm:flex-col'
   )}
   href="https://santiment.net/discord"
   target="_blank"
@@ -18,14 +18,14 @@
   </div>
 
   <div class="max-w-[360px] !text-rhino">
-    <h4 class="text-2xl font-medium mb-1">Talk to us in Discord</h4>
+    <h4 class="!text-xl !font-medium !mt-0 !mb-1">Talk to us in Discord</h4>
 
-    <p class="text-base mb-4">
+    <p class="text-base !mt-0 !mb-4">
       Still have some questions left? Join our Discord and get help from the
       Santiment team!
     </p>
 
-    <Button variant="plain" icon="right-arrow" iconOnRight class="text-green fill-green group-hover:[&>svg]:translate-x-1 group-hover:text-green-hover group-hover:fill-green-hover [&_svg]:transition-transform [&_svg]:duration-300 [&_svg]:ease-in-out">
+    <Button variant="plain" icon="right-arrow" iconOnRight class="!py-0 !h-[20px] text-base text-green fill-green group-hover:[&>svg]:translate-x-1 group-hover:text-green-hover group-hover:fill-green-hover [&_svg]:transition-transform [&_svg]:duration-300 [&_svg]:ease-in-out">
       Go to Discord
     </Button>
   </div>

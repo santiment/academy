@@ -8,11 +8,17 @@ import DomainCard from '$components/features/home/DomainCard.svelte'
 import Hero from '$components/features/home/Hero.svelte'
 import { cn } from 'san-webkit-next/ui/utils'
 import { GUIDES, RESOURCES } from '$config/home'
+import SEO from '$components/layout/SEO.astro'
 
 import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
 ---
 
-<Page title="Crypto Academy: Learn How to Analyze Cryptocurrency Market">
+<Page>
+  <SEO
+    slot="seo"
+    title="Crypto Academy: Learn How to Analyze Cryptocurrency Market"
+  />
+
   <section class="flex flex-col">
     <Hero client:load />
 

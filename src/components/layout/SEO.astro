@@ -12,22 +12,19 @@ const {
   title: defaultTitle,
   description: defaultDescription,
   author: defaultAuthor,
-  siteUrl: configSiteUrl,
 } = seoConfig ?? {}
 
 const props = Astro.props
 
 const pageTitle = props.title ?? defaultTitle
 const metaDescription = props.description ?? defaultDescription
-const lang = props.lang ?? 'en'
 const extraMeta = props.meta ?? []
 
-const siteHref = Astro.site?.href ?? configSiteUrl ?? ''
+const canonicalURL = Astro.url.href
 
 const imageUrl = new URL('/academy.png', Astro.site).href
 ---
 
-<meta http-equiv="content-language" content={lang} />
 <title>{pageTitle}</title>
 
 <meta name="description" content={metaDescription} />
@@ -35,10 +32,9 @@ const imageUrl = new URL('/academy.png', Astro.site).href
 <meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={metaDescription} />
 <meta property="og:image" content={imageUrl} />
+<meta property="og:url" content={canonicalURL} />
 
-{siteHref && <meta property="og:url" content={siteHref} />}
-
-<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content={pageTitle} />
 <meta name="twitter:description" content={metaDescription} />
 <meta name="twitter:image" content={imageUrl} />

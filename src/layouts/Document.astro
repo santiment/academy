@@ -28,14 +28,7 @@ type Props = {
 
 const { slug } = Astro.params
 
-const {
-  doc,
-  breadcrumbs,
-  relatedProduct,
-  sidebarData,
-  headings,
-  lastUpdatedAt,
-} = Astro.props
+const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
 ---
 
 <div
@@ -66,10 +59,7 @@ const {
         <slot />
 
         <div class="mt-16">
-          <LastUpdated
-            datePublished={doc.data.datePublished}
-            dateModified={doc.data.dateModified}
-          />
+          <LastUpdated dateModified={doc.data.dateModified} />
           <DiscordCTA />
         </div>
       </div>
