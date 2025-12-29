@@ -1,4 +1,5 @@
 import mdx from '@astrojs/mdx'
+import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
@@ -23,11 +24,11 @@ const viteBase = await createAstroConfig()
 const viteConfig = mergeConfig(viteBase, {
   define: {
     __SVELTEKIT_APP_VERSION_POLL_INTERVAL__: '0',
-    __SVELTEKIT_PATHS_BASE__: JSON.stringify(''),
-    __SVELTEKIT_PATHS_ASSETS__: JSON.stringify(''),
-    __SVELTEKIT_APP_DIR__: JSON.stringify(''),
-    __SVELTEKIT_PATHS_RELATIVE__: JSON.stringify(''),
-    __SVELTEKIT_PAYLOAD__: JSON.stringify(''),
+    __SVELTEKIT_PATHS_BASE__: '""',
+    __SVELTEKIT_PATHS_ASSETS__: '""',
+    __SVELTEKIT_APP_DIR__: '""',
+    __SVELTEKIT_PATHS_RELATIVE__: '""',
+    __SVELTEKIT_PAYLOAD__: '""',
   },
   alias: {
     $components: path.resolve(__dirname, './src/components'),
@@ -83,6 +84,7 @@ export default defineConfig({
     }),
     mdx(),
     tailwind(),
+    sitemap(),
   ],
   vite: viteConfig,
   base: '/',
