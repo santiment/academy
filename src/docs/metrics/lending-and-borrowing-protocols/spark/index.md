@@ -48,6 +48,11 @@ Protocol total supplied/borrowed metrics:
 Daily active addresses:
 * `spark_active_addresses` - Daily active addresses on Spark protocol
 
+Flashloan metrics:
+* `spark_flashloan` - Flashloan volume by asset
+* `spark_flashloan_usd` - Flashloan volume by asset in USD
+* `spark_total_flashloan_usd` - Total flashloan volume across Spark in USD
+
 ---
 
 ## Access
@@ -183,6 +188,21 @@ Daily active addresses: `spark_active_addresses`
       to: "2024-01-10T00:00:00Z"
       includeIncompleteData: true
       interval: "1d")
+  }
+}
+```
+
+Flashloan metrics: `spark_flashloan`, `spark_flashloan_usd` and `spark_total_flashloan_usd`
+
+```graphql-explorer
+{
+  getMetric(metric: "spark_flashloan"){
+    timeseriesDataJson(
+      slug: "usd-coin"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m")
   }
 }
 ```
