@@ -63,6 +63,11 @@ Revenue metrics:
 * `aave_v3_total_protocol_revenue_usd` - Aave V3 Total Protocol Revenue
 * `aave_v3_total_protocol_cumulative_revenue_usd` - Daily Aave V3 Total Protocol Cumulative Revenue
 
+Flashloan metrics:
+* `aave_v3_flashloan` - Flashloan volume by asset
+* `aave_v3_flashloan_usd` - Flashloan volume by asset in USD
+* `aave_v3_total_flashloan_usd` - Total flashloan volume across Aave V3 in USD
+
 ---
 
 ## Access
@@ -214,6 +219,21 @@ and `aave_v3_total_protocol_cumulative_revenue_usd`
       to: "2023-01-10T00:00:00Z"
       includeIncompleteData: true
       interval: "1d")
+  }
+}
+```
+
+Flashloan metrics: `aave_v3_flashloan`, `aave_v3_flashloan_usd` and `aave_v3_total_flashloan_usd`
+
+```graphql-explorer
+{
+  getMetric(metric: "aave_v3_flashloan"){
+    timeseriesDataJson(
+      slug: "usd-coin"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m")
   }
 }
 ```

@@ -42,6 +42,11 @@ Protocol total supplied/borrowed metrics:
 Daily active addresses:
 * `morpho_active_addresses` - Daily active addresses on Morpho protocol
 
+Flashloan metrics:
+* `morpho_flashloan` - Flashloan volume by asset
+* `morpho_flashloan_usd` - Flashloan volume by asset in USD
+* `morpho_total_flashloan_usd` - Total flashloan volume across Morpho in USD
+
 ---
 
 ## Access
@@ -181,6 +186,21 @@ Daily active addresses: `morpho_active_addresses`
       to: "2024-01-10T00:00:00Z"
       includeIncompleteData: true
       interval: "1d")
+  }
+}
+```
+
+Flashloan metrics: `morpho_flashloan`, `morpho_flashloan_usd` and `morpho_total_flashloan_usd`
+
+```graphql-explorer
+{
+  getMetric(metric: "morpho_flashloan"){
+    timeseriesDataJson(
+      slug: "usd-coin"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m")
   }
 }
 ```
