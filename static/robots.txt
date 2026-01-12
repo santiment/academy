@@ -1,6 +1,0 @@
-robots.txt 
-User-agent: *
-Disallow: /*.jpg
-Disallow: /*.png
-Disallow: /*.gif
-Sitemap: https://academy.santiment.net/sitemap.xml

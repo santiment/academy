@@ -1,0 +1,43 @@
+---
+import { SEO as seoConfig } from '../../config/seo'
+
+export interface Props {
+  title?: string
+  description?: string
+  lang?: string
+  meta?: Array<Record<string, string>>
+}
+
+const {
+  title: defaultTitle,
+  description: defaultDescription,
+  author: defaultAuthor,
+} = seoConfig ?? {}
+
+const props = Astro.props
+
+const pageTitle = props.title ?? defaultTitle
+const metaDescription = props.description ?? defaultDescription
+const extraMeta = props.meta ?? []
+
+const canonicalURL = Astro.url.href
+
+const imageUrl = new URL('/academy.png', Astro.site).href
+---
+
+<title>{pageTitle}</title>
+
+<meta name="description" content={metaDescription} />
+<meta property="og:type" content="website" />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={metaDescription} />
+<meta property="og:image" content={imageUrl} />
+<meta property="og:url" content={canonicalURL} />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={metaDescription} />
+<meta name="twitter:image" content={imageUrl} />
+<meta name="twitter:creator" content={defaultAuthor} />
+
+{extraMeta.map((attrs) => <meta {...attrs} />)}
