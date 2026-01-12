@@ -13,6 +13,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
     "@expressive-code/plugin-line-numbers": "^0.41.4",
     "@melt-ui/svelte": "^0.86.0",
     "@santiment-network/ui": "^0.5.237",
@@ -33,6 +34,7 @@
     "@astrojs/svelte": "^7.2.2",
     "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.6",
+    "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "katex": "^0.16.25",
     "prettier": "^3.7.2",
     "prettier-plugin-astro": "^0.14.1",

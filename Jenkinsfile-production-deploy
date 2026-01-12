@@ -1,0 +1,52 @@
+podTemplate(label: 'academy-production-deploy', nodeSelector: 'cpu.credits=no', containers: [
+    containerTemplate(name: 'kubectl', image: 'lachlanevenson/k8s-kubectl:v1.25.4', command: 'cat', ttyEnabled: true),
+    containerTemplate(name: 'docker', image: 'docker', ttyEnabled: true, command: 'cat', envVars: [
+      envVar(key: 'DOCKER_BUILDKIT', value: '1'),
+      envVar(key: 'DOCKER_HOST', value: 'tcp://docker-host-docker-host:2375')]),
+    containerTemplate(name: 'awscli', image: 'mikesir87/aws-cli', ttyEnabled: true, command: 'cat', envVars: [
+      envVar(key: 'AWS_DEFAULT_REGION', value: 'eu-central-1'),
+      secretEnvVar(key: 'AWS_ACCESS_KEY_ID', secretName: 'academy-uploader-env', secretKey: 'awsAccessKeyId'),
+      secretEnvVar(key: 'AWS_SECRET_ACCESS_KEY', secretName: 'academy-uploader-env', secretKey: 'awsSecretAccessKey'),
+    ])
+]) {
+  node('academy-production-deploy') {
+    stage('Update deployment') {
+      def scmVars = checkout scm
+      def gitCommit = scmVars.GIT_COMMIT
+
+      withCredentials([
+          string(credentialsId: 'aws_account_id', variable: 'aws_account_id')
+        ]){
+        
+        def awsRegistry = "${env.aws_account_id}.dkr.ecr.eu-central-1.amazonaws.com"
+        def sourceImage = "${awsRegistry}/academy"
+        def taggedSource = "${sourceImage}:${gitCommit}"
+
+        container('docker') {
+          docker.withRegistry("https://${awsRegistry}", "ecr:eu-central-1:ecr-credentials") {
+            sh "docker pull ${taggedSource}"
+            sh "mkdir -p artifacts"
+            sh "docker create --name academy-temp ${taggedSource}"
+            sh "docker cp academy-temp:/app/public ./artifacts/"
+            sh "docker rm academy-temp"
+          }
+        }
+      }
+    }
+    
+    stage('Copy assets to S3') {
+      container('awscli') {
+        def bucket = "s3://academy-production.santiment.net"
+        
+        sh "cd ./artifacts/public/ && aws s3 sync . ${bucket}/ --delete --exclude index.html"
+        sh """
+            aws s3 cp ./artifacts/public/index.html ${bucket}/index.html \
+            --metadata-directive REPLACE \
+            --cache-control max-age=0,no-cache,no-store,must-revalidate \
+            --content-type text/html
+        """
+        }
+    }
+    
+  }
+}

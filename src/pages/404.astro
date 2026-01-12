@@ -1,18 +1,21 @@
 ---
 import Footer from 'san-webkit-next/ui/app/Footer'
-
-import BaseLayout from '$layouts/BaseLayout.astro'
-
 import Button from 'san-webkit-next/ui/core/Button'
+
 import { cn } from 'san-webkit-next/ui/utils'
+
+import Page from '$layouts/Page.astro'
+import SEO from '$components/layout/SEO.astro'
 ---
 
-<BaseLayout title="404: Not found">
+<Page>
+  <SEO slot="seo" title=`404: Not found` />
+
   <div
     class={cn(
       'container flex min-h-[70vh] flex-col items-start justify-center',
-      "bg-[url('/404.svg')] bg-[center_right] bg-no-repeat",
-      'lg:px-4 md:mt-10 md:min-h-[80vh] md:items-center md:justify-start md:bg-center md:px-5 md:py-3.5'
+      "bg-[url('/404.svg')] bg-[center_right] bg-no-repeat md:bg-none",
+      'lg:px-4 md:mt-10 md:min-h-[80vh] md:items-center md:px-5 md:py-3.5',
     )}
   >
     <h1
@@ -30,4 +33,4 @@ import { cn } from 'san-webkit-next/ui/utils'
   </div>
 
   <Footer class="mt-14" client:visible />
-</BaseLayout>
+</Page>

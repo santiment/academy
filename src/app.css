@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--casper) var(--porcelain);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -49,7 +54,6 @@ html {
   scroll-margin-top: 100px;
 }
 
-
 .wrapper img {
   width: 100%;
   border: 1px solid var(--porcelain);
@@ -88,7 +92,7 @@ html {
   text-underline-offset: 4px;
 }
 
-.wrapper ul>li::before {
+.wrapper ul > li::before {
   position: absolute;
   content: '•';
   color: var(--casper);
@@ -104,11 +108,11 @@ html {
   counter-reset: li;
 }
 
-.wrapper ol>li {
+.wrapper ol > li {
   counter-increment: li;
 }
 
-.wrapper ol>li::before {
+.wrapper ol > li::before {
   position: absolute;
   content: '.' counter(li);
   color: var(--casper);
@@ -126,14 +130,14 @@ html {
   padding-left: 18px;
 }
 
-.wrapper ul>li,
-.wrapper ol>li {
+.wrapper ul > li,
+.wrapper ol > li {
   position: relative;
   margin-bottom: 8px;
 }
 
-.wrapper ul>li p,
-.wrapper ol>li p {
+.wrapper ul > li p,
+.wrapper ol > li p {
   display: inline-block;
   margin: 0;
 }
@@ -201,7 +205,13 @@ html {
   margin: 0 2px 2px 0;
   line-height: 20px;
   font-size: 16px;
-  font-family: Fira Code, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family:
+    Fira Code,
+    Consolas,
+    Monaco,
+    'Andale Mono',
+    'Ubuntu Mono',
+    monospace;
 }
 
 .expressive-code {

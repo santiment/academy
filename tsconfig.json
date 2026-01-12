@@ -1,13 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [
-    ".astro/types.d.ts",
-    "**/*"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ],
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     "plugins": [
       {
@@ -15,15 +9,11 @@
       }
     ],
     "paths": {
-      "$components/*": [
-        "src/components/*"
-      ],
-      "$layouts/*": [
-        "src/layouts/*"
-      ],
-      "$assets/*": [
-        "src/assets/*"
-      ]
+      "$components/*": ["./src/components/*"],
+      "$layouts/*": ["./src/layouts/*"],
+      "$config/*": ["./src/config/*"],
+      "$modules/*": ["./src/modules/*"],
+      "$assets/*": ["./src/assets/*"]
     }
   }
 }
