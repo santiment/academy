@@ -32,6 +32,8 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             activeSlug = entry.target.id
+
+            history.replaceState(null, '', `#${activeSlug}`)
           }
         })
       },
