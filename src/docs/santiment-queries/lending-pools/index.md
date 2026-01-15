@@ -1,7 +1,7 @@
 ---
 title: Lending Pools Overview
 author: Santiment Team
-date: 2023-04-03
+date: 2026-01-15
 description: Information about the Lending Pools's table stored in Santiment Queries.
 ---
 
@@ -33,7 +33,7 @@ We can inspect the table with the commands we learned in [Exploration](/santimen
 
 Below, we have listed the table containing the lending pools data with its columns, brief descriptions, and some example queries that you can use to explore the table.
 
-### lending\_pools\_events
+### lending\_events\_with\_args
 
 - **tx_hash** (*String*): Hash of the transaction in which the event has been included
 - **log_index** (*UInt32*): Log index of the event
@@ -49,6 +49,7 @@ Below, we have listed the table containing the lending pools data with its colum
 - **project_name** (*String*): Name of the project, such as aave_v2, aave_v3, compound, compound_v3, liquity and makerdao.
 - **user** (*String*): Address performing the action
 - **computed_at** (*DateTime*): The timestamp when the event was inserted into the table.
+- **args** (*JSON*): Additional arguments related to the event
 
 ## Sample Queries
 
@@ -58,7 +59,7 @@ To find the total deposits for AAVE-v2 in the last 30 days for a specific token,
 
 ```sql
 SELECT SUM(amount_in)
-FROM lending_pools_events
+FROM lending_events_with_args
 WHERE project_name = 'aave_v2'
 AND action = 'deposit'
 AND token_in = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
@@ -74,7 +75,7 @@ To find the number of liquidations that occurred in the past 30 days on MakerDAO
 
 ```sql
 SELECT COUNT(*)
-FROM lending_pools_events
+FROM lending_events_with_args
 WHERE project_name = 'makerdao'
 AND action = 'liquidate'
 AND dt >= now() - interval 30 DAY
@@ -87,7 +88,7 @@ Test in [Queries](https://queries.santiment.net/query/number-of-liquidations-for
 
 ```sql
 SELECT DISTINCT user
-FROM lending_pools_events
+FROM lending_events_with_args
 WHERE project_name = 'compound'
 AND action = 'borrow'
 AND dt >= now() - interval 30 DAY
