@@ -4,13 +4,11 @@
 
 ![File Structure](./file_structure.png)
 
-All pages seen on the website are located inside src/docs/.
+All pages seen on the website are located inside `src/content/docs/`.
 For example all metrics articles are located inside src/docs/metrics/, pages about
-Sanbase are inside src/docs/sanbase/, etc.
+Sanbase are inside `src/docs/guides/sanbase/`, etc.
 
-This structure is not extremely important for the visualization, but one should keep
-discipline when deciding where to put a new article. It should be created inside the
-most appropriate directory, or if such directory is missing - crate a new directory.
+This structure is very important for the visualization. It should be created inside the most appropriate directory, or if such directory is missing - create a new directory.
 
 ## Article-level file structure
 
@@ -21,26 +19,29 @@ When creating a new article, do the following steps:
 - Create a new folder named `trading-and-transaction-volume` inside it. This directory name is important
   and should reflect the name of the article itself. Usually it is the `snake-case` version of the title.
   This directory name is important as we'll use it when we create links to that article.
-- Create an `index.md` file inside that directory. The name is important. This will be the main/index page of
+- Create an `index.mdx` file inside that directory. The name is important. This will be the main/index page of
   the article.
 
-## Contents of the index.md file
+## Contents of the index.mdx file
 
 ### Header
 
-Always start with the header structure, which looks like this:
+Always start with the header structure, which looks like this.
+Fields `title` and `datePublished` are mandatory.
+`datePublished` field must not be update after article deploy.
+Add field `dateModified` and write any changes thee instead.
 
 ```
 ---
 title: Trading and Transaction Volume
 author: Santiment Team
-date: 2025-05-13
+datePublished: 2025-05-13
 ---
 ```
 
 ![Header fields](./title_and_date.jpg)
 
-The `title` and `date` fields are displayed on the article page, as seen in the screenshot.
+The `title` and `dateModified` fields are displayed on the article page, as seen in the screenshot.
 
 The `title` field will be transformed to an h1 HTML tag in the final page.
 One page should have one h1 tag, holding the title. In Markdown this is usually represented
@@ -107,38 +108,3 @@ to the current directory.
 Note: The `noborder` is Academy-specific and it removes borders from images. By default we prefer to not have borders.
 
 Prefer adding the images to the directory of your article instead of using images hosted on some other server.
-
-## Add the article to the navigation
-
-The final thing we need to do is to put our new article in the left navigation bar in the appropriate place.
-
-To do this, open the `/src/docs/navigation.js` file.
-
-Locate the JS variable that points to the parent directory that holds your article.
-
-Existing variables are: `export const GETTING_STARTED`, `export const REFERENCES`, `export const GUIDES`, etc.
-
-These variables hold a dictionary with a few notable key-value pairs.
-
-- `title: 'Education and Use cases'` - The title of the group of links in the sidebar.
-- `articles: [ ... ]` - Holds the list of articles in that group. Your task is to add the article here.
-
-There are two ways of adding articles. Follow the same convention as the rest of the articles defined in that group.
-
-### Option 1
-
-```js
-{
-  slug: 'alerts on Sanbase',
-  title: 'Sanbase Alerts - Age Consumed example',
-}
-```
-
-- `slug` refers to the name of the directory of the article. When the `slug` is lowercased and spaces are replaced with `-` it must match the name of the directory you created.
-- `title` shows how the article will be named in the sidebar. The title can be different form the slug.
-
-### Option 2
-
-If the slug and title match, then you can just write the title as a string: `Trading and Transaction Volume`
-
-![noborder](./navigation.png)

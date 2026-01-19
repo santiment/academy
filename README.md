@@ -51,9 +51,10 @@ python scripts/generate_llms_txt.py
 A metadata block (Frontmatter) should be in YAML notation directly at the top of the MDX file.
 
 - **title**: Required.
-- **description**: Required for SEO.
-- **date**: Update this field when you refactor the article.
-- **author**: Name should match a key in [`src/docs/people.js`](<https://www.google.com/search?q=%5Bhttps://github.com/santiment/academy/blob/master/src/docs/people.js%5D(https://github.com/santiment/academy/blob/master/src/docs/people.js)>) to display author bio and image.
+- **description**: Required.
+- **datePublished**: Required.
+- **dateModified**: Update this field when you refactor the article.
+- **author**: Preferably full name.
 
 Example:
 
@@ -62,7 +63,8 @@ Example:
 title: Daily active addresses metric
 description: The number of distinct addresses that participated in a transfer.
 author: Tzanko Matev
-date: 2025-12-21
+dateModified: 2025-12-21
+datePublished: 2025-12-21
 sidebar:
   hidden: false
 ---
