@@ -29,6 +29,8 @@ Action metrics:
 * `makerdao_action_new_debt_usd` - Amount of borrowed tokens in USD
 * `makerdao_action_repayments` - Amount of repaid tokens
 * `makerdao_action_repayments_usd` - Amount of repaid tokens in USD
+* `makerdao_action_repayments_filtered` - Amount of repaid tokens, excluding repayments from MEV bots and the LitePSM mechanism
+* `makerdao_action_repayments_filtered_usd` - Amount of repaid tokens in USD, excluding repayments from MEV bots and the LitePSM mechanism
 
 New debt/repayments against collateral metrics:
 * `dai_created` - Amount of DAI created, backed by underlying collateral
@@ -107,7 +109,8 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 ### SanAPI
 
 Action metrics: `makerdao_action_deposits<_usd>`, `makerdao_action_liquidations<_usd>`, 
-`makerdao_action_new_debt<_usd>` and `makerdao_action_repayments<_usd>`
+`makerdao_action_new_debt<_usd>`, `makerdao_action_repayments<_usd>` and
+`makerdao_action_repayments_filtered<_usd>`
 
 ```graphql-explorer
 {
