@@ -126,7 +126,6 @@ export const GUIDES = [
     articles: [
       'Account settings',
       'Alerts page',
-      { slug: 'Assets page', title: 'Assets Overview page' },
       'Insights',
       'Keyboard Shortcuts',
       'Logging into Sanbase',
@@ -135,6 +134,7 @@ export const GUIDES = [
         title: 'Request to Display New Project',
       },
       'Social Trends',
+      'Watchlists',
     ],
   },
   {
