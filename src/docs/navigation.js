@@ -126,6 +126,7 @@ export const GUIDES = [
     articles: [
       'Account settings',
       'Alerts page',
+      'Charts',
       'Insights',
       'Keyboard Shortcuts',
       'Logging into Sanbase',
