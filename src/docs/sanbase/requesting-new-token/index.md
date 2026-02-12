@@ -7,6 +7,6 @@ At Santiment, we work directly with on-chain data, which allows us to display in
 
 To request the addition of a new token to Sanbase, or to add a known team wallet containing significant assets held by the team, please send us a message via
 
-- discord, via the feature request channel
-- telegram
-- the green "help and feedback button" on app.santiment.net
+- [Discord](https://santiment.net/discord), via the feature request channel
+- [Telegram](https://t.me/santiment_network)
+- The green "help and feedback button" on app.santiment.net
