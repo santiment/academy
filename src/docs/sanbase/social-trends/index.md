@@ -158,6 +158,15 @@ at their price peaks and then play down effectively. You can learn more by
 reading [this
 article](https://insights.santiment.net/read/can-you-trade-on-trending-crypto-tokens-7396).
 
+## Trending Stories
+
+[Trending stories](https://app.santiment.net/social-trends/trending-stories)
+shows the top 10 stories with the most growing number of mentions in the
+cryptocurrency space. The more mentions a story starts receiving compared to
+the previous period, the more it is trending. This allows you to find 
+whose discussions in the cryptocurrency space are currently gaining
+popularity.
+
 ### Token Sentiment
 
 The social volume of token mentions is categorized into neutral, positive
