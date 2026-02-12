@@ -131,8 +131,8 @@ export const GUIDES = [
       'Keyboard Shortcuts',
       'Logging into Sanbase',
       {
-        slug: 'Requesting display new project',
-        title: 'Request to Display New Project',
+        slug: 'requesting new token',
+        title: 'Request New Token Coverage',
       },
       'Social Trends',
       'Watchlists',
