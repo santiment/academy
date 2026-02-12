@@ -33,6 +33,7 @@ Action metrics:
 * `aave_v3_action_new_debt_usd` - Amount of borrowed tokens in USD
 * `aave_v3_action_repayments` - Amount of repaid tokens
 * `aave_v3_action_repayments_usd` - Amount of repaid tokens in USD
+* `aave_v3_action_age_repayments` - Amount of repaid tokens multiplied by how long they were borrowed
 
 Total supplied/borrowed metrics:
 * `aave_v3_total_supplied` - Total supplied tokens
@@ -114,7 +115,7 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 ### SanAPI
 
 Action metrics: `aave_v3_action_deposits<_usd>`, `aave_v3_action_liquidations<_usd>`, 
-`aave_v3_action_new_debt<_usd>` and `aave_v3_action_repayments<_usd>`
+`aave_v3_action_new_debt<_usd>` and `aave_v3_action<_age>_repayments<_usd>`
 
 ```graphql-explorer
 {
