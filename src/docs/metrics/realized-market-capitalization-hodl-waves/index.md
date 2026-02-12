@@ -15,7 +15,7 @@ cap of coins that are 1 to 7 days old with total realized market cap:
 
 Assigning age to coins/tokens is done according to the [coin-age model](/metrics/details/stack-coin-age-model), it measures how long a coin has stayed in a given wallet.
 
-## Read More
+### Additional Resources
 
 [Metrics Explained: Realized Market Capitalization Hodl Waves](https://app.santiment.net/insights/read/metrics-explained-realized-market-capitalization-hodl-waves-10430)
 

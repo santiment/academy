@@ -1,5 +1,5 @@
 ---
-title: Latency
+title: Data Types
 author: Ivan
 date: 2020-04-10
 ---
@@ -51,8 +51,7 @@ as the following list:
 A histogram is an approximate representation of the distribution of numerical or
 categorical data.
 
-The metric is represented as a list of data points, where every point is represented
-represented by a tuple containing a `range` an a `value`.
+The metric is represented as a list of data points, where every point is represented by a tuple containing a `range` an a `value`.
 
 ### Example (histogram data)
 

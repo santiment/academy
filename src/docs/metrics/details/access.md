@@ -16,7 +16,7 @@ in the `Free` plan and all paid plans.
 
 Metrics with restricted access have partial access to the metric data.
 The restrictions depend both on the product used (Sanbase, SanAPI) and the
-subscription plan used (Free, Basic, Pro, etc.).
+subscription plan used (Free, Pro, etc.).
 
 Some of the metrics that are available on Sanbase might not be available in the
 Free and Basic SanAPI plans, but only in Pro and higher.
