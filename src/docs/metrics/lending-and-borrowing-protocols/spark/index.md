@@ -24,6 +24,7 @@ Action metrics:
 * `spark_action_new_debt_usd` - Amount of borrowed tokens in USD
 * `spark_action_repayments` - Amount of repaid tokens
 * `spark_action_repayments_usd` - Amount of repaid tokens in USD
+* `spark_action_age_repayments` - Amount of repaid tokens multiplied by how long they were borrowed
 
 Total supplied/borrowed metrics:
 * `spark_total_supplied` - Total supplied tokens
@@ -99,7 +100,7 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 ### SanAPI
 
 Action metrics: `spark_action_deposits<_usd>`, `spark_action_liquidations<_usd>`, 
-`spark_action_new_debt<_usd>` and `spark_action_repayments<_usd>`
+`spark_action_new_debt<_usd>` and `spark_action<_age>_repayments<_usd>`
 
 ```graphql-explorer
 {
