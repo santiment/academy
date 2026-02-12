@@ -213,7 +213,6 @@ export const GUIDES = [
       </>
     ),
     articles: [
-      'Access Plans',
       {
         slug: 'sanbase-plans',
         title: 'Plans - Sanbase',
