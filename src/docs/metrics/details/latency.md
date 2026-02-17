@@ -66,4 +66,4 @@ hours
 ## Daily Metrics Latency
 
 The daily metrics have one value per day. The value is finalized between 1 and 2 hours
-after the day is over, in the UTC timezone. This delay happens due to some required validation and processing of the previous day's data for the purpose of data integrity.
+after midnight, in the UTC timezone. This delay happens due to some required validation and processing of the previous day's data for the purpose of data integrity.
