@@ -49,58 +49,57 @@ This section is broken into subsections with explanations, screenshots, and anim
 
 When opening charts you will see a single asset/metric combination on the top left corner: BTC, price. Click on BTC and a menu will appear where you may select an asset of your choice.
 
-![changeasset.gif](attachment:85e25173-4ff8-48e6-b62d-342839e6e548:changeasset.gif)
+![changeasset.gif](changeasset.gif)
 
 ### Chart Display Settings
 
 1. Changing color and other display settings for a specific metric: simply click on the metric and utilize the popup menu.
     
-    ![displaysettingsnewcharts.gif](attachment:7813e7a5-bf65-4f8c-ab4b-03d524f24dbe:displaysettingsnewcharts.gif)
+![displaysettingsnewcharts.gif](displaysettingsnewcharts.gif)
     
 2. New Drag mode to adjust the scale of the chart on both x and y axis or to move the current view left or right along the timeline.
     
-    ![drag mode.gif](attachment:f8adfe76-7b45-46c3-b4d6-44289a54a094:drag_mode.gif)
+![drag mode.gif](drag_mode.gif)
     
 3. Shift mode lets you quickly analyze percentage changes in price, volume, or other metrics directly on the chart.
     
-    ![shift mode.gif](attachment:993a19f1-ec31-457c-a417-1632bc5a98f9:shift_mode.gif)
+![shift mode.gif](shift_mode.gif)
     
 4. Zoom mode let’s you select and zoom into a specific time range within your current view.
     
-    ![zoommode.gif](attachment:73192f32-8df5-40a2-a4c3-da6e2921d66c:zoommode.gif)
+![zoommode.gif](zoommode.gif)
     
 5. Hide metrics from the chart using the eye icon to the right of each metric listed within the chart on the top right.
     
-    ![chrome_2026-01-20_15-53-51.png](attachment:30ee41f1-4950-4442-8fd7-615dbb4c87ec:chrome_2026-01-20_15-53-51.png)
+![chrome_2026-01-20_15-53-51.png](chrome_2026-01-20_15-53-51.png)
     
 6. Timeline below the chart allows you to select the time-period manually with sliders.
     
-    ![timelineslider.gif](attachment:f444f097-82d2-410c-b28f-48fcf9908480:timelineslider.gif)
+![timelineslider.gif](timelineslider.gif)
     
 7. Global time and granularity scale selector is at the very bottom, it adjusts all charts and metrics contained within the layout.
     
-    ![image.png](attachment:e7e73181-ed57-4c1a-9ee4-a97fad53e1a7:image.png)
+![timebar.png](timebar.png)
     
 8. Hovering with your mouse over the chart displays a small menu at the bottom center of the chart. This allows you to add or remove charts and to move them up or down within the layout.
     
-    ![image.png](attachment:0bb14e31-cb3b-464b-b63e-85441f12ff9b:image.png)
-    
+![chartcontroller.png](chartcontroller.png)   
 
 ### The Sidebar
 
 The sidebar is a new addition that makes it easy to switch back and forth between different chart layouts. It links to the charts explorer page and includes a search field for accessibility. Below, the menu contains recently viewed layouts at the top and saved layouts further down.
 
-![image.png](attachment:903e8645-18d7-4335-98a1-9fac8753667b:image.png)
+![sidebar1.png](sidebar1.png)
 
 ### Adding Metrics
 
-On the top left of the chart there is a button to “Add metric”
+On the top left of the chart there is a button to “Add metric.” Metrics can only be added one by one.
 
-![image.png](attachment:30bb277c-0cd9-47b3-980c-36286dc0282b:image.png)
+![addmetric1.png](addmetric1.png)
 
-Select one of three options
+Select one of the three options.
 
-![image.png](attachment:f5fbdcfb-1ef1-464b-b307-908ae19f6765:image.png)
+![3options.png](3options.png)
 
 **Asset Interface**
 
@@ -110,15 +109,11 @@ Select from a list of over 3,000 crypto assets—covered above in the “Selecti
 
 Select from a list of popular tradfi assets. Metrics in this category are limited to price-only.
 
-![image.png](attachment:781b4b0c-0bf6-4f5d-8e88-401d6a697e0d:image.png)
+![tradfiselector.png](tradfiselector.png)
 
 **Formulas Interface**
 
-See guide below.
-
-Notes
-
-- Metrics can only be added one by one.
+[See guide below.](#formula-interface-guide)
 
 ### Combining Metrics
 
@@ -130,24 +125,24 @@ Step 1: Add metrics you want to combine, one by one, to the chart.
 
 Step 2: Go to formulas interface
 
-![image.png](attachment:71ec170d-b633-4a97-95de-c776eaace160:image.png)
+![3options.png](3options.png)
 
 Step 3: Create formula with variables defined in the “Chart Metrics” tab on the top left.
 Below is an example of creating a ratio of exchange flows combined metric.
 The metrics added are represented as m1, m2, and m3.
 Step 4: Input your formula into the Formula field and click "Save".
 
-![chrome_ZmZ2QURwu1.png](attachment:9dd55aab-fc66-44fe-86bd-4c3c5d0164ed:chrome_ZmZ2QURwu1.png)
+![ratioofexchangeflowsformula.png](ratioofexchangeflowsformula.png)
 
 Note:
 
-- When changing the asset in your chart, the combined metric created with this method will change automatically.
+When changing the asset in your chart, the combined metric created with this method will change automatically.
 
 **Method 2**
 
 Create the combined metric using your own defined variables using the “api_metrics” function.
 
-![ERF2 method 2.png](attachment:895b10e8-fc75-417c-82b9-9179d803c254:ERF2_method_2.png)
+![ERF2_method_2.png](ERF2_method_2.png)
 
 Guidelines:
 
@@ -167,15 +162,15 @@ Note:
 Simply click on the formula button on the left side of the metric directly above the chart. 
 See image below:
 
-![image.png](attachment:a5f4afea-ed6a-4962-9b8c-3d79bd739f65:image.png)
+![clickformulabutton.png](clickformulabutton.png)
 
 ## Guides
 
 ### Formula Interface Guide
 
-![image.png](attachment:1959e774-ff30-4f72-ae42-5d38c3f9863e:image.png)
+![Formulainterface1.png](Formulainterface1.png)
 
-![chrome_2026-01-14_11-25-21.png](attachment:3f2b3045-040a-4f9c-82be-b7e2dbbcb966:chrome_2026-01-14_11-25-21.png)
+![Formulainterface2.png](Formulainterface2.png)
 
 The Formula Interface is a powerful tool that allows users to create personalized metrics, trading strategies, or conditional signals. These custom formulas allow you to combine existing chart metrics, define custom variables, apply mathematical functions, and be able to do so with a handy drag-and-drop UX. Once created, the formula is added as a new metric to your chart, where it can be visualized alongside price data. This interface is ideal for:
 
@@ -308,12 +303,12 @@ x2 = api_metric("price_usd", "bitcoin"); x1 / x2`
     I have a assumption, that I want to open long position when price > 30 day moving average, and exit when it’s not.
     
 2. **Add needed metrics**
-    - [ ]  BTC price - named as `m1`
-    - [ ]  BTC 30 day moving average - named as `m2` 
+    - BTC price - named as `m1`
+    - BTC 30 day moving average - named as `m2` 
     Create using the formula interface using the `sma` function to define the specific metric. 
     See image below for reference.
     
-    ![image.png](attachment:61b76a7f-6135-4156-837a-fd1851b0733c:image.png)
+    ![addMAmetric.png](addMAmetric.png)
     
     1. **Save the new metric and add a new one to the chart, go to the formulas interface again**
     2. **Specify the strategy using the `backtest` function**
@@ -329,7 +324,7 @@ x2 = api_metric("price_usd", "bitcoin"); x1 / x2`
     - signals - this will determine our positions: direction and size
     - options - we will ignore this for now
     
-    ![image.png](attachment:8a8a7cf7-d8cf-4714-baf6-aafce0417604:image.png)
+    ![backtest11.png](backtest11.png)
     
 2. **Design the signal**
     
@@ -343,7 +338,7 @@ x2 = api_metric("price_usd", "bitcoin"); x1 / x2`
     
     which will be translated into:
     
-    ![image.png](attachment:40519a73-55f9-4934-a2b4-4a5f1d43c409:image.png)
+    ![ifcondition.png](ifcondition.png)
     
     `if` function also accepts 3 parameters:
     
@@ -368,26 +363,25 @@ x2 = api_metric("price_usd", "bitcoin"); x1 / x2`
 
 Now we have everything.
 
-- [ ]  First parameter: `m1`, which is the BTC price
-- [ ]  Second parameter: `m3`, which is the if condition statement, we created in step 3
-- [ ]  Third parameter, the scary long brackets, we ignore it for now
+- First parameter: `m1`, which is the BTC price
+- Second parameter: `m3`, which is the if condition statement, we created in step 3
+- Third parameter, the scary long brackets, we ignore it for now
 
 Press save, now we have a curve shows our net value!
 
 1. **(Optional) Clean the chart**
     
-    ![image.png](attachment:1d9d591e-09a6-47ce-b7e5-3a215323567c:image.png)
+![hideclearchart.png](hideclearchart.png)
     
-
 In the top left corner of the graph, we can hide our intermediate metrics, to make it look a bit clean.
 
-![image.png](attachment:75b2cc69-7ed9-4ce1-a0da-d45501285ae9:image.png)
+![looksclean.png](looksclean.png)
 
 ## Old vs New Comparison Images
 
 **Former charts default screen**
 
-![image.png](attachment:83b13f72-fafe-4449-8986-928b49671f2c:image.png)
+![formerdefault.png](formerdefault.png)
 
 **New charts default screen**   (won’t have until launch)
 
@@ -395,12 +389,12 @@ In the top left corner of the graph, we can hide our intermediate metrics, to ma
 
 **Former gobal asset selector vs new global asset selector**
 
-![chrome_2026-01-26_10-36-18.gif](attachment:495046d0-bc35-43f5-b28a-e08c6b0f5462:chrome_2026-01-26_10-36-18.gif)
+![chrome_2026-01-26_10-36-18.gif](chrome_2026-01-26_10-36-18.gif)
 
 **Former add metric flow vs new add metric flow**
 
-![formervsnewmetricsadd.gif](attachment:59a32691-61f9-4851-a24f-b13babac0959:formervsnewmetricsadd.gif)
+![formervsnewmetricsadd.gif](formervsnewmetricsadd.gif)
 
 **Former chart display settings vs new chart display settings**
 
-![formervsnewchartdisplay.gif](attachment:0772e5a6-6aea-47f8-bc8e-52a468de7e37:formervsnewchartdisplay.gif)
+![formervsnewchartdisplay.gif](formervsnewchartdisplay.gif)
