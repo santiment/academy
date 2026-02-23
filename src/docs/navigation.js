@@ -367,7 +367,6 @@ export const REFERENCES = [
       'Velocity',
       'Whale Transaction Count',
       'Whale Transaction Volume',
-      'XRPL Metrics',
       // 'Top Transfers',
     ],
   },
