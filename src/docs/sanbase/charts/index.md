@@ -81,7 +81,11 @@ When opening charts you will see a single asset/metric combination on the top le
     
 ![timebar.png](timebar.png)
     
-8. Hovering with your mouse over the chart displays a small menu at the bottom center of the chart. This allows you to add or remove charts and to move them up or down within the layout.
+8. Adjust for a specific timezone using the timezone selector on the right side of the Global time and granularity scale widget above.
+
+![timezoneselector.png](timezoneselector.png) 
+
+9. Hovering with your mouse over the chart displays a small menu at the bottom center of the chart. This allows you to add or remove charts and to move them up or down within the layout.
     
 ![chartcontroller.png](chartcontroller.png)   
 
