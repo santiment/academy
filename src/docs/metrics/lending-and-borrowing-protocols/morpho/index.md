@@ -24,6 +24,7 @@ Action metrics:
 * `morpho_action_new_debt_usd` - Amount of borrowed tokens in USD
 * `morpho_action_repayments` - Amount of repaid tokens
 * `morpho_action_repayments_usd` - Amount of repaid tokens in USD
+* `morpho_action_age_repayments` - Amount of repaid tokens multiplied by how long they were borrowed
 
 Protocol total action metrics:
 * `morpho_total_deposits_usd` - Total amount of deposits on Morpho protocol (combining all assets in USD)
@@ -92,7 +93,7 @@ available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20
 ### SanAPI
 
 Action metrics: `morpho_action_deposits<_usd>`, `morpho_action_liquidations<_usd>`, 
-`morpho_action_new_debt<_usd>` and `morpho_action_repayments<_usd>`
+`morpho_action_new_debt<_usd>` and `morpho_action<_age>_repayments<_usd>`
 
 ```graphql-explorer
 {
