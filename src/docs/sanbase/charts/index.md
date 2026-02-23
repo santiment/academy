@@ -14,6 +14,7 @@ description: A handbook for the Sanbase charts system
 - [Overview](#overview)
     - [Purpose](#purpose)
     - [What's New](#whats-new)
+    - [Video Walkthrough](#video-walkthrough)
 - [Getting Started](#getting-started)
     - [Selecting an Asset](#selecting-an-asset)
     - [Chart Display Settings](#chart-display-settings)
@@ -40,6 +41,10 @@ We've upgraded our [chart system](https://app.santiment.net/charts) to deliver a
 - Sidebar for quick access to recently viewed or saved chart layouts.
 - Metrics selection now completely contained within the charts themselves, not the sidebar like before.
 - Global asset selection control change & ability to lock metrics
+
+### Video Walkthrough
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HGmzAVdchLo?si=GnRJ9UQd9N_9rJbL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Getting Started
 
