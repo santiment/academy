@@ -14,5 +14,5 @@ Sanbase is a platform designed for in-depth coin analysis, low-latency signals, 
 - [Keyboard Shortcuts](/sanbase/keyboard-shortcuts/): Learn the keyboard shortcuts to navigate Sanbase more efficiently.
 - [Logging into Sanbase](/sanbase/logging-into-sanbase): Find out how to log into your Sanbase account.
 - [Request to Display New Project](/sanbase/requesting-display-new-project): Learn how to request a new project display on Sanbase.
-- [Social Tool](/sanbase/social-tool/): This tool allows you to monitor interest in any topic across dedicated cryptocurrency social channels, including over 1000 Telegram groups, Discord servers, crypto subreddits, Twitter accounts, and more.
-- [Social Trends](/sanbase/emerging-trends-page): This feature contains the `Top 10` trending words in crypto, providing a quick overview of the top developing topics in the crypto world at the moment.
+- [Social Trends](/sanbase/social-trends): This feature contains the `Top 10` trending words in crypto, providing a quick overview of the top developing topics in the crypto world at the moment.
+- [Trending Stories](/sanbase/trending-stories): This feature contains the `Top 10` trending stories in crypto, providing a quick overview of the top developing topics in the crypto world at the moment.
