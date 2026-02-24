@@ -1,0 +1,44 @@
+---
+import { getCollection, render } from 'astro:content'
+
+import Page from '$layouts/Page.astro'
+import Document from '$layouts/Document.astro'
+
+import { getSidebar } from '$modules/navigation/sidebar'
+import { MARKDOWN_COMPONENTS } from '$config/markdown'
+import { prepareDocProps } from '$modules/docs/props'
+import SEO from '$components/layout/SEO.astro'
+
+export async function getStaticPaths() {
+  const allDocs = await getCollection('docs')
+  const sidebarData = getSidebar(allDocs)
+
+  const context = {
+    sidebarData,
+    docsMap: new Map(allDocs.map((d) => [d.id, d])),
+    slugRegistry: new Map<string, string>(),
+  }
+
+  return allDocs.map((doc) => prepareDocProps(doc, context))
+}
+
+const { doc, sidebarData, relatedProduct, breadcrumbs } = Astro.props
+
+if (!doc) return Astro.redirect('/404')
+
+const { Content, headings: rawHeadings } = await render(doc)
+
+const headings = rawHeadings.filter((h) => h.depth <= 3)
+---
+
+<Page {sidebarData}>
+  <SEO
+    slot="seo"
+    title=`${doc.data.headline || doc.data.title} | Santiment Academy`
+    description={doc.data.description}
+  />
+
+  <Document {doc} {breadcrumbs} {relatedProduct} {sidebarData} {headings}>
+    <Content components={MARKDOWN_COMPONENTS} />
+  </Document>
+</Page>

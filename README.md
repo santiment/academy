@@ -1,108 +1,105 @@
-This is the source for [**Santiment Knowledge Base site**](https://academy.santiment.net)
+This is the source for **[Santiment Knowledge Base site](https://academy.santiment.net)**
 
 ## Contributing
 
 ### Running locally
-  
-If you have [yarn](https://classic.yarnpkg.com/en/docs/install/) you can run the app simply:
+
+We use **pnpm** and **Node v22**. To run the app locally:
 
 ```bash
-yarn
-yarn start
+pnpm install
+pnpm dev
+
 ```
 
-If you have problems with `yarn` use node v14 / v16. For example:
-```sh
-nvm install 16
-nvm use 16
-```
-
-
-This is going to run the app on port 8000, so [`localhost:8000`](http://localhost:8000) should be accessible.
-
+This is going to run the app on port **3000**, so [`localhost:3000`](http://localhost:3000) should be accessible.
 
 ### How to add an article
 
-Basically, you can add `.md` (Markdown) file in `src/docs/test.md` or put `index.md` to `src/docs/test` folder.
-It will be available at `academy.santiment.net/test` (locally: `localhost:8000/test`)
-Also you can put images under that folder
+We use **MDX** (.mdx) for all content. The routing is file-system based and located in `src/content/docs/` (or `src/docs/`).
+
+- To create a page at `academy.santiment.net/test`, add `src/docs/[section]/test.mdx`.
+- Images should be placed in the same folder as the article and referenced relatively.
+
+### Sidebar & Visibility
+
+The sidebar is generated automatically.
+
+- **Visibility**: All files are visible by default.
+- **Hiding**: To hide an article from the sidebar, set `sidebar.hidden: true` in the frontmatter.
+- **Ordering**: Use `sidebar.order: [number]` to control the position in the list.
+
+### Custom Components
+
+- **Available custom components**: `<Resource title="title">Markdown Content</Resource>`, `<Notebox type="note|pin|hand">Markdown Content</Notebox>`
+- **Disable image automatic bordering**: Append `noborder` to image alt, eg: `![noborder](image.png)`
 
 ### Generate llms.txt
 
 To update the `llms.txt` file (LLM-readable index of all documentation):
+
 ```bash
 pip install pyyaml
 python scripts/generate_llms_txt.py
+
 ```
-
-### Custom Components
-
-- Available custom components: `<Resource title="title">Markdown Content</Resource>`, `<Notebox type="note|pin|hand">Markdown Content</Notebox>`
-- Disable image automatic bordering: Append `noborder` to image alt, eg: `![noborder](46_connect_wallet_with_mm_sign_v2.png)`
-
-### Add an article into navigation sidebar
-
-If you want to see article not only by direct link, choose category for article, (example: "Metrics")
-Categories are available in [`src/docs/navigation.js`](https://github.com/santiment/academy/blob/master/src/docs/navigation.js)
-
-Example: you want to add `Transaction Volume` article.
-You should choose: `METRICS` category, add `"Transaction Volume"` to `articles` array.
-After that add markdown file `transaction-volume.md` (or transaction-volume/index.md) to `src/docs/metrics/`.
-
-Also, need to add a reference to the article file in category root article (see examples in `src/docs/metrics/index.md`)
-
-> If you can't find appropriate category for your article [write us](mailto:support@santiment.net).
 
 ---
 
 ### Metadata
 
-A metadata block should be in a yaml notation directly in markdown file.
+A metadata block (Frontmatter) should be in YAML notation directly at the top of the MDX file.
 
-- Each article should contain a **title** and **description**
-- Update **date** field, when you refactor your article.
-- **author** name should use existing person from [`src/docs/people.js`](https://github.com/santiment/academy/blob/master/src/docs/people.js). If you use it right - image and person description will appear.
+- **title**: Required.
+- **description**: Required.
+- **datePublished**: Required.
+- **dateModified**: Update this field when you refactor the article.
+- **author**: Preferably full name.
 
-Example of a metadata block inside markdown file:
+Example:
 
 ```yaml
 ---
 title: Daily active addresses metric
-description: some description for seo
+description: The number of distinct addresses that participated in a transfer.
 author: Tzanko Matev
-date: 2019-01-01
+dateModified: 2025-12-21
+datePublished: 2025-12-21
+sidebar:
+  hidden: false
 ---
 ## Some title in article
 
 The number of distinct addresses that ...
 ```
 
-Note the three dashes before and after metadata. _Don't forget to put them there_.
-
-`h2` for headings in article will be in the fast navigation through the article
+`h2` (##) headings will be used to generate the fast navigation (Table of Contents) on the right.
 
 ---
 
 ## Learn More
-* [Sanbase](https://app.santiment.net)
-* [Insights](https://insights.santiment.net)
-* [Sheets](https://sheets.santiment.net)
-* [SanR](https://sanr.app)
-* [API](https://api.santiment.net)
-* [Knowledge Base](https://academy.santiment.net)
+
+- [Sanbase](https://app.santiment.net)
+- [Insights](https://insights.santiment.net)
+- [Sheets](https://sheets.santiment.net)
+- [SanR](https://sanr.app)
+- [API](https://api.santiment.net)
+- [Knowledge Base](https://academy.santiment.net)
 
 ## Become a SanDev
+
 We're hiring developers, support people, and product managers all the time. Please check our [open positions](https://santiment.notion.site/Open-positions-f1880de7557b468a80b1465013f311cd)
 
 [Contact us](mailto:jobs@santiment.net)
 
 ## Community
+
 Join thousands of members worldwide in our [community server](https://santiment.net/discord).
 
 ## Get the Latest News
 
-* [Twitter](https://twitter.com/santimentfeed)
-* [Blog](https://insights.santiment.net)
-* [Youtube](https://www.youtube.com/channel/UCSzP_Z3MrygWlbLMyrNmMkg)
+- [Twitter](https://twitter.com/santimentfeed)
+- [Blog](https://insights.santiment.net)
+- [Youtube](https://www.youtube.com/channel/UCSzP_Z3MrygWlbLMyrNmMkg)
 
-Any other questions, reach out to us at [support@santiment.net](support@santiment.net). We’d happy to help!
+Any other questions, reach out to us at [support@santiment.net](mailto:support@santiment.net). We’d happy to help!

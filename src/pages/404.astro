@@ -1,0 +1,36 @@
+---
+import Footer from 'san-webkit-next/ui/app/Footer'
+import Button from 'san-webkit-next/ui/core/Button'
+
+import { cn } from 'san-webkit-next/ui/utils'
+
+import Page from '$layouts/Page.astro'
+import SEO from '$components/layout/SEO.astro'
+---
+
+<Page>
+  <SEO slot="seo" title=`404: Not found` />
+
+  <div
+    class={cn(
+      'container flex min-h-[70vh] flex-col items-start justify-center',
+      "bg-[url('/404.svg')] bg-[center_right] bg-no-repeat md:bg-none",
+      'lg:px-4 md:mt-10 md:min-h-[80vh] md:items-center md:px-5 md:py-3.5',
+    )}
+  >
+    <h1
+      class="mb-8 text-4xl font-semibold text-rhino md:text-center md:text-xl"
+    >
+      Looks like you got lost
+    </h1>
+    <p class="mb-10 max-w-80 text-lg text-rhino md:text-center md:text-base">
+      The page you're looking for is missing or your link is incorrect.
+    </p>
+
+    <Button variant="fill" href="/" class="h-10 w-auto">
+      Back to home page
+    </Button>
+  </div>
+
+  <Footer class="mt-14" client:visible />
+</Page>
