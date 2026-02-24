@@ -1,7 +1,7 @@
 ---
 title: Supported Blockchains
 author: Santiment Team
-date: 2023-05-31
+date: 2026-02-24
 ---
 
 When Santiment designates a blockchain as supported, it signifies that on-chain transactions (including events, receipts, and other pertinent data) are exported, and metrics are constructed based on these data.
