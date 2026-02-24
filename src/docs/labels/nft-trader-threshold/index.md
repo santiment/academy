@@ -7,9 +7,9 @@ description: label
 
 ## Description
 
-The label is attached to the addresses that actively traded NFTs recently. During ordinary market this label duplicates [nft_trader](/labels/nft-trader) label. It differs during most active NFT market period and denotes to the most active part of the traders. 
+The label is attached to addresses that have actively traded NFTs recently. During an ordinary market, this label duplicates the [nft_trader](/labels/nft-trader) label. It differs during the most active NFT market periods and denotes the most active part of the traders.
 
-While the NFT trader label is based on percentiles, the NFT trader threshold uses top-Nth value of trades count and volume among all  NFT active addresses, with the N number recorded in the value field of the label.
+While the NFT trader label is based on percentiles, the NFT trader threshold uses the top-Nth value of trades count and volume among all NFT active addresses, with the N number recorded in the value field of the label.
 The labels are calculated for two N-threshold values: 1000 and 5000.
 
 

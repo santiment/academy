@@ -9,7 +9,7 @@ description: Centralized exhange label
 
 The centralized exchange label is used to identify wallet addresses that belong to centralized cryptocurrency exchanges (e.g. Binance, Coinbase, etc).
 
-Centralzied exchanges (CEX) are operated by a central authority or entity that manages the exchange, executes trades, and stores users' digital assets. CEXs typically have a user-friendly interface and offer high liquidity, faster transaction processing, and a wide range of trading pairs. 
+Centralized exchanges (CEX) are operated by a central authority or entity that manages the exchange, executes trades, and stores users' digital assets. CEXs typically have a user-friendly interface and offer high liquidity, faster transaction processing, and a wide range of trading pairs. 
 
 ## [Label fqn](/labels/label-fqn)
 
@@ -17,7 +17,7 @@ Centralzied exchanges (CEX) are operated by a central authority or entity that m
 
 ## Limitations
 
-Please note that there's no way to know whether you collected ALL addresses of the particular exchange. Although we constantly working on adding new labels it's safe to assume there are still exchange addresses we did not label yet.
+Please note that there is no way to know whether you have collected ALL addresses of a particular exchange. Although we are constantly working on adding new labels, it is safe to assume there are still exchange addresses we have not labeled yet.
 
 ## Label Examples
 

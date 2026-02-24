@@ -9,18 +9,18 @@ description: ETH 2.0 Metrics
 
 Metrics that show stats related to the ETH 2.0 Staking Contract
 
-- `eth2_stakers_count` - Amount of addresses that sent ETH to the ETH 2.0 Staking Contract
+- `eth2_stakers_count` - Number of addresses that sent ETH to the ETH 2.0 Staking Contract
 - `eth2_stakers_realized_value_usd_<timebound>` - [Realized value](/metrics/realized-value) of stakers addresses.
-  Metric is available for different [time bounds](/metrics/details/timebound).
+  The metric is available for different [time bounds](/metrics/details/timebound).
 - `eth2_stakers_mvrv_usd_<timebound>` - [MVRV](/metrics/mvrv) of stakers addresses.
-  Metric is available for different [time bounds](/metrics/details/timebound).
+  The metric is available for different [time bounds](/metrics/details/timebound).
 - `eth2_roi` - The annual return on staking in the ETH 2.0 contract
 
 ETH 2.0 histogram metrics - see [examples](#sanapi) for details how to query it:
 
 - `eth2_top_stakers` - Top addresses by staked amount
 - `eth2_staked_amount_per_label` - Total staked amount by label
-- `eth2_staked_address_count_per_label` - Amount of addresses that staked ETH by label
+- `eth2_staked_address_count_per_label` - Number of addresses that staked ETH by label
 
 Beacon chain metrics:
 
@@ -38,8 +38,8 @@ Beacon chain metrics:
 
 ## Measuring Unit
 
-- `eth2_stakers_count` - Amount of addresses
-- `eth2_roi` - Percents
+- `eth2_stakers_count` - Number of addresses
+- `eth2_roi` - Percentage
 - `eth2_stakers_realized_value_usd_<timebound>` and `eth2_stakers_mvrv_usd_<timebound>` - USD
 - `eth_beacon_deposits`, `eth_beacon_validator_withdrawals` and
   `eth_beacon_reward_withdrawals` - Amount in ETH

@@ -5,7 +5,7 @@ date: 2023-06-01
 ---
 
 [BitMEX](https://www.bitmex.com/) is a P2P crypto-products trading platform.  
-Metrics build on top of BitMEX trading contracts.
+Metrics built on top of BitMEX trading contracts.
 
 - [BitMEX Perpetual Contract Funding Rate](/metrics/bitmex-derivatives/perpetual-contract-funding-rate)
 - [BitMEX Perpetual Contract Price](/metrics/bitmex-derivatives/perpetual-contract-price)

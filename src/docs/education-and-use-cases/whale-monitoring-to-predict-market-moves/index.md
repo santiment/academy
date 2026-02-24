@@ -6,7 +6,7 @@ date: 2025-05-23
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xjV6dSXJ79k?si=0Q0hIukTOv_yX9F9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-It's important to monitor on how cryptocurrency whales are
+It's important to monitor how cryptocurrency whales are
 treating their bags. Generally, if they're accumulating, it's a good sign
 crypto market caps are continuing to rise. If they're moving many coins to
 exchanges, on the other hand, it's a sign that a dump may be around the corner.
@@ -98,7 +98,7 @@ Tiers.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lnzph78TCPg?si=zOw2-0HBUlNaJcJV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Often times, you may not be sure of what asset you are looking for, and you
+Oftentimes, you may not be sure of what asset you are looking for, and you
 simply want to see which coins may suddenly be getting significantly moved by
 whales. We specifically have built a dashboard for tracking when large batches
 of any coin are moving to centralized exchanges. This is especially useful as a

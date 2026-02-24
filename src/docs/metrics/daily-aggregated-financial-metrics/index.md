@@ -54,7 +54,7 @@ Amount in USD
 
 Available Assets for [daily_avg_marketcap_usd](https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_avg_marketcap_usd%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
 
-Use the same API call to check the available metrics for the other metrics.
+Use the same API call to check the available assets for the other metrics.
 
 ---
 

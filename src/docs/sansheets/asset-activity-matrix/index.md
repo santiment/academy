@@ -100,9 +100,9 @@ Let us examine the eight key metrics we track and the reasons each matters for f
 
 [Age Consumed](https://academy.santiment.net/metrics/age-consumed): Similar to Mean Dollar Invested age, this metric looks at the amount of coins moved multiplied by the "age" in which they had been sitting prior to being moved. In short, a red square reflects that a large amount of coins (which had previously been stagnant) have suddenly moved for the first time in a long time. This is generally a bullish sign, as it means that a network just received a healthy amount of coins that can now be moved back into regular circulation, theoretically bolstering the network's overall activity.
 
-### The Anomolies Tab
+### The Anomalies Tab
 
-The anomolies tab is an alternative view that simplifies things if the massive array of different colors aren't your thing. The 'Anomolies' tab, shown below, displays all squares in yellow UNLESS the metric for that day is an extreme outlier. In other words, only the top 3 days(shown in red) or bottom 3 days(shown in blue), compared to the asset's past 3 months of data, will be visible. This view can make it much easier to quickly find assets of interest.
+The anomalies tab is an alternative view that simplifies things if the massive array of different colors aren't your thing. The 'Anomalies' tab, shown below, displays all squares in yellow UNLESS the metric for that day is an extreme outlier. In other words, only the top 3 days (shown in red) or bottom 3 days (shown in blue), compared to the asset's past 3 months of data, will be visible. This view can make it much easier to quickly find assets of interest.
 
 ![](anomolieview.png)
 
@@ -114,13 +114,13 @@ If you want to get straight to the point of seeing which assets are doing best a
 
 This can be tremendously handy, and may even be your preferred way of viewing the data on this model. Want to know which coins are having the highest spikes in whale transactions vs. their 3-month averages? Look no further than the Top 10 list on this tab.
 
-You will see the price percentage changes next to the coin's name for the price change leaderboards. And within each of the eight metric ranking leaderboards, you will see the coin's most recent full day's ranking for that metric. For example, if you see "1" this shows that the coin in question is having it's best reading of that metric in the last 3 months.
+You will see the price percentage changes next to the coin's name for the price change leaderboards. And within each of the eight metric ranking leaderboards, you will see the coin's most recent full day's ranking for that metric. For example, if you see "1" this shows that the coin in question is having its best reading of that metric in the last 3 months.
 
 There is an 'Overall Average Rank' leaderboard on the far right of this 'Top 10' tab. It averages the rankings of all eight metrics together to indicate which coins have the best overall 'Hot' rankings.
 
 ### Loading Data
 
-When you open the file, you will have to load the data. During loading times, you'll see how much data the model has left to load, as well as any individual coin and metric data errors coming in from the API. These errors will be rare and generally minor, but they are inevitable. So keep in mind that there is nothing wrong with your file when it does happen. Usually it's due to Google Sheets timing out temporarily when trying to retrieve a specific asset's data. If the square reaches 100%, it should turn green. If the progress bar lingers between 97 and 99 % without advancing, you may safely consider the load as complete. The stall may occur because certain metrics for certain assets are occationaly switched active or inactive on the Santiment API.
+When you open the file, you will have to load the data. During loading times, you'll see how much data the model has left to load, as well as any individual coin and metric data errors coming in from the API. These errors will be rare and generally minor, but they are inevitable. So keep in mind that there is nothing wrong with your file when it does happen. Usually it's due to Google Sheets timing out temporarily when trying to retrieve a specific asset's data. If the square reaches 100%, it should turn green. If the progress bar lingers between 97 and 99 % without advancing, you may safely consider the load as complete. The stall may occur because certain metrics for certain assets are occasionally switched active or inactive on the Santiment API.
 
 ![](loading.png)
 
@@ -140,4 +140,4 @@ Note that this model has daily metrics, so there should be no need to refresh th
 
 ## Disclaimer
 
-Trading is, of course, at your own risk. This model simply presents provides you the data necessary for you to make the most informed decisions for your own strategy.
+Trading is, of course, at your own risk. This model simply provides you the data necessary for you to make the most informed decisions for your own strategy.

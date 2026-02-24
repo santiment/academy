@@ -2,12 +2,12 @@
 title: Positive/Negative Sentiment Metrics
 author: Santiment Team
 date: 2024-06-26
-description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment
+description: The positive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment
 ---
 
 ## Definition
 
-The Sentiment Positive and Sentiment Negative metrics represnt the sum of [Sentiment Score](/metrics/sentiment-metrics/#sentiment-score) values.
+The Sentiment Positive and Sentiment Negative metrics represent the sum of [Sentiment Score](/metrics/sentiment-metrics/#sentiment-score) values.
 
 - `sentiment_positive_<source>` metrics are computed by taking the sum of the positive sentiment scores that are over 0.7.
 - `sentiment_negative_<source>` metrics are computed by taking the sum of the negative sentiment scores that are over 0.7.
@@ -19,9 +19,9 @@ The Sentiment Positive and Sentiment Negative metrics represnt the sum of [Senti
 
 ### Example
 
-Thare are 10 messages in telegram that mention `bitcoin`. Below is a table that shows
+There are 10 messages in Telegram that mention `bitcoin`. Below is a table that shows
 the sentiment scores of those 10 messages. The messages with the same sentiment score
-are grouped together (messages count bigger than 1).
+are grouped together (message count greater than 1).
 
 | Messages count | Positive Sentiment Score | Negative Sentiment Score |
 | -------------- | ------------------------ | ------------------------ |

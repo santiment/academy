@@ -67,15 +67,15 @@ channels, including:
 #### Hype Score
 
 The Hype Score is the primary criterion for ranking words on our list. It's
-based on this[formula](/metrics/emerging-trends/#hype-score) developed
+based on this [formula](/metrics/emerging-trends/#hype-score) developed
 by Santiment, which analyzes all social media messages.
 
 Using [social volume](https://academy.santiment.net/sanbase/emerging-trends-page/#social-volume)
 and number of unique authors we rank words by popularity in social media at the
 moment.
 
-A higher **Hype Score** indicates that for the last 24 hours this particular
-word or topic became more valuable for the audience compared to previous 14
+A higher **Hype Score** indicates that over the last 24 hours this particular
+word or topic became more valuable for the audience compared to the previous 14
 days.
 
 ### How to use it
@@ -126,7 +126,7 @@ takes up.
 
 ![noborder](image7.png)
 
-Our AI integrations helps readers understand of the reasons behind the
+Our AI integration helps readers understand the reasons behind the
 sudden rise in popularity of a word. Previously, people could infer the
 context from the word cloud of related words, but now AI gives a more
 specific answer based on many inputs and sources. In short, it answers the
@@ -179,8 +179,8 @@ Dominance over the last 24 hours.
 
 ![noborder](image12.png)
 
-Methodology of bullish, neutral or bearish meters based on custom BERT-like
-LLM trained on crypto-related messages from our social media so.
+Methodology of bullish, neutral, or bearish meters based on a custom BERT-like
+LLM trained on crypto-related messages from our social media sources.
 
 ### AI summary
 
@@ -188,7 +188,7 @@ LLM trained on crypto-related messages from our social media so.
 
 ![noborder](image14.png)
 
-Our AI integrations helps readers understand of the reasons behind the
+Our AI integration helps readers understand the reasons behind the
 sudden rise in popularity of a word. Previously, people could infer the
 context from the word cloud of related words, but now AI gives a more
 specific answer based on many inputs and sources. In short, it answers the

@@ -6,11 +6,11 @@ description: Average balance of all holders of NFT collection
 ---
 ## Definition
 
-This metric represents average balance of collection holders 
-(e.g. average balance of `bored apes` holders is $10M). 
+This metric represents the average balance of collection holders
+(e.g., the average balance of `bored apes` holders is $10M).
 
-Balance of holders is calculated based on their ownership of NFTs
-(sum of values (in eth and usd) of all NFTs they have).
+The balance of holders is calculated based on their ownership of NFTs
+(sum of values (in ETH and USD) of all NFTs they hold).
 
 
 ## Access

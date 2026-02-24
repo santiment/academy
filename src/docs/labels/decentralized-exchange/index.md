@@ -9,7 +9,7 @@ description: Decentralized exchange label
 
 Decentralized exchange label denotes an address belonging to a decentralized exchange (including dex pools, dex factories, etc).
 
-Decentralzied exhcnage (DEX) is a decentralized platform that operate on a peer-to-peer (P2P) network, without a central authority or entity. DEXs allow users to trade cryptocurrencies directly with each other, using smart contracts and blockchain technology. Unlike centralzied exchanges (CEX), DEXs offer greater privacy, security, and transparency, as users have full control over their assets and do not need to trust a third party to execute trades. However, DEXs may have lower liquidity, slower transaction processing, and fewer trading pairs compared to CEXs.
+A decentralized exchange (DEX) is a decentralized platform that operates on a peer-to-peer (P2P) network, without a central authority or entity. DEXs allow users to trade cryptocurrencies directly with each other, using smart contracts and blockchain technology. Unlike centralized exchanges (CEX), DEXs offer greater privacy, security, and transparency, as users have full control over their assets and do not need to trust a third party to execute trades. However, DEXs may have lower liquidity, slower transaction processing, and fewer trading pairs compared to CEXs.
 
 ## [Label fqn](/labels/label-fqn)
 

@@ -9,9 +9,9 @@ description: Total number of outstanding or open contracts in the market.
 The funding rate is a recurring fee that long positions pay to short positions, or vice versa, at predetermined intervals (usually every 8 hours). The goal is to ensure that the price of the perpetual contract stays close to the spot price of the underlying asset.
 Perpetual futures contracts are a type of derivative that tracks the price of an underlying asset and is designed to closely mimic the spot market.
 
-Funding rates aggregated metrics use [Open Interest](/metrics/open-interest) for aggregation. Meaning the contract with the biggest open interest will have the biggest impact on the final funding rate aggregated value.
+Funding rates aggregated metrics use [Open Interest](/metrics/open-interest) for aggregation, meaning the contract with the biggest open interest will have the biggest impact on the final funding rate aggregated value.
 There are three types of funding rates aggregated metrics:
-- Funding rates aggregated by exchange - represents the aggregation of all funding rates by open interest on given exchange for a given asset
+- Funding rates aggregated by exchange - represents the aggregation of all funding rates by open interest on a given exchange for a given asset
 - Funding rates aggregated by settlement currency - represents the aggregation of all funding rates by open interest per settlement currency for a given asset
 - Total funding rates aggregated by asset - represents the aggregation of all funding rates by open interest for a given asset
 ---
@@ -67,9 +67,9 @@ Decimal percentage
 
 ## SanAPI
 
-- Funding rates aggregated by exchange available under the `funding_rates_aggregated_by_exchange` name.
-- Funding rates aggregated by settlement currency is available for  `funding_rates_aggregated_by_settlement_currency` name.
-- Total funding rates aggregated by asset is available for `total_funding_rates_aggregated_per_asset` name.
+- Funding rates aggregated by exchange is available under the `funding_rates_aggregated_by_exchange` name.
+- Funding rates aggregated by settlement currency is available under the `funding_rates_aggregated_by_settlement_currency` name.
+- Total funding rates aggregated by asset is available under the `total_funding_rates_aggregated_per_asset` name.
 
 ```graphql-explorer
 {

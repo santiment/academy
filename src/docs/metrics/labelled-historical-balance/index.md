@@ -7,9 +7,9 @@ description: Get historical balance for a given label
 
 ## Definition
 
-`labelled_historical_balance` shows a historical balance for a provided [label FQN](/labels/label-fqn). I.e. it shows a total combined balance for all addresses labelled with a given label FQN. For instance, all centralized exchange addresses or all miner addresses.
+`labelled_historical_balance` shows the historical balance for a provided [label FQN](/labels/label-fqn). It shows a total combined balance for all addresses labelled with a given label FQN -- for instance, all centralized exchange addresses or all miner addresses.
 
-`labelled_historical_balance_changes` shows a change in the historical balance.
+`labelled_historical_balance_changes` shows the change in the historical balance.
 
 You can find available labels along with [label FQNs](/labels/label-fqn) at [labels academy section](labels/#domains).
 Here are some label FQN examples:

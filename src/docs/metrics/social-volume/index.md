@@ -8,7 +8,7 @@ description: The amount of messages/documents containing a given search term
 
 ## Definition
 
-Social Volume is build on top of the [Social Data](/metrics/details/social-data).
+Social Volume is built on top of the [Social Data](/metrics/details/social-data).
 
 The total number of [social data text documents](/metrics/details/social-data) that
 contain the given search term at least once. Examples of documents are telegram
@@ -26,7 +26,7 @@ similar to:
 > AND NOT ((san AND francisco) OR (san AND fran) OR (san AND diego) OR (san AND
 > marino) OR (san AND jose))
 
-which includes documents containg `santiment` or `san` but excludes documents
+which includes documents containing `santiment` or `san` but excludes documents
 that contain common phrases containing `san` like `San Francisco`.
 
 The arbitrary search term can be:
@@ -42,7 +42,7 @@ The arbitrary search term can be:
   - `AND` - The intersection of two search results. `btc AND moon` returns the
     documents that contain both of the words `btc` and `moon` at the same time.
   - `NOT` - Filter out documents that contain a given search term. `btc NOT lambo`
-    returns the documents that contain the word `btc` and does not
+    returns the documents that contain the word `btc` and do not
     contain the word `lambo`
   - `?` - A wildcard search. `?` in the search term means that it can match any
     character. For example the query `btc AND 1?k` will be the combined result
@@ -57,7 +57,7 @@ documents that contain either the words `btc` and `moon` or the words `bitcoin`
 and `moon` in one document, excluding any documents that contain the word
 `lambo`.
 
-We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
+We constantly update our labels, which helps us keep them as fresh as possible but results in historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12-hour period, the metric can be supplemented with new data.
 
 ---
 

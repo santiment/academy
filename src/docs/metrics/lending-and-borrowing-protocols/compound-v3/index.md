@@ -7,7 +7,7 @@ description: Compound V3 Protocol Metrics
 
 ## Description
 Compound V3 is the third version of the [Compound](https://compound.finance/) protocol.
-New version represents a significant shift in the DeFi landscape by introducing 
+This new version represents a significant shift in the DeFi landscape by introducing
 a unified borrowing market model. In this model, the base asset can be borrowed 
 against other assets.
 
@@ -18,7 +18,7 @@ asset (WETH, USDC, or USDT).
 This transformation carries several advantages. First, it enhances security 
 for users across all assets within the Compound ecosystem. Second, it allows 
 for increased collateral ratios, providing more flexibility for borrowers. 
-This also decreases the liability for each market since all debt is settled in 
+This also decreases the liability for each market, since all debt is settled in
 the form of assets.
 
 ### Metrics related to Compound protocol:
@@ -93,10 +93,10 @@ Daily active addresses:
 
 ## Available Assets
 
-Metrics related to the entire protocol available for `compound`
+Metrics related to the entire protocol are available for `compound`.
 
-Other metrics: 
-available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22compound_v3_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+Other metrics are
+available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22compound_v3_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>).
 
 ---
 

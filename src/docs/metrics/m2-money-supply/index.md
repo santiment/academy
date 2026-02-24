@@ -46,7 +46,7 @@ Billions of Dollars
 
 ## Latency
 
-FED announces data on a monthly basis
+The Fed announces data on a monthly basis
 
 ---
 
@@ -58,7 +58,7 @@ Available for `m2-money`
 
 ### SanAPI
 
-Available under name: `money_supply`
+Available under the name: `money_supply`
 
 
 ```graphql-explorer

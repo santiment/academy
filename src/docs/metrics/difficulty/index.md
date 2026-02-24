@@ -6,9 +6,9 @@ description: Difficulty Metric
 ---
 
 ## Description
-The difficulty metric in the PoW network measures how hard it is for miners to find a 
-valid hash for a new block. In bitcoin network it automatically adjusts roughly every 
-two weeks to maintain an average block time of 10 minutes, ensuring network stability 
+The difficulty metric in a PoW network measures how hard it is for miners to find a
+valid hash for a new block. In the Bitcoin network, it automatically adjusts roughly every
+two weeks to maintain an average block time of 10 minutes, ensuring network stability
 despite changes in total mining power. As more miners join the network, the difficulty 
 increases, making mining more challenging, while a drop in mining power lowers it. 
 

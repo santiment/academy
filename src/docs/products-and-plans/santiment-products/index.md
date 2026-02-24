@@ -36,6 +36,6 @@ Insights is a comprehensive crypto analytics feed and research hub designed to d
 
 ## SanR
 
-SanR is a decentralized price prediction platform designed to enhance transparency and accountability in price forecasting by leveraging the power of blockchain technology. SanR ensures that every prediction is immutable, verified, and recorded on a blockchain, eliminating the possibility of faked performance which creates real reputation for forecasters.
+SanR is a decentralized price prediction platform designed to enhance transparency and accountability in price forecasting by leveraging the power of blockchain technology. SanR ensures that every prediction is immutable, verified, and recorded on a blockchain, eliminating the possibility of faked performance, which creates real reputation for forecasters.
 
 <https://sanr.app/>

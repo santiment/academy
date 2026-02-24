@@ -9,12 +9,12 @@ description: How to execute queries using the API
 
 Before you start, make sure you acquaint yourself with the Sanqueries product
 and the SQL queries you can write by reading the `Introduction`, `Exploration`
-and `Writing SQL Queries` articles that can be found on the [Sanqueries Oveview](/santiment-queries/introduction/) page.
+and `Writing SQL Queries` articles that can be found on the [Sanqueries Overview](/santiment-queries/introduction/) page.
 
 The [Santiment Queries Web Interface](https://app.santiment.net/queries) is only
 one of the ways to execute queries and access the data.
 
-For those who want to automate the process of executing queries, we provide access
+For those who want to automate the process of executing queries, we provide
 access via our GraphQL API. You can query the API endpoint directly or use our
 [python library](https://github.com/santiment/sanpy).
 
@@ -35,7 +35,7 @@ A few examples of when the API can be used:
 ## How to use the Web interface to write queries for the API?
 
 The web interface is a powerful tool for exploring the data, writing queries,
-observing the results in real-time or explore prebuilt dashboards.
+observing the results in real-time, or exploring prebuilt dashboards.
 
 Even when the data is consumed only through the API, it is recommended to use
 the web interface to write the SQL queries. The web interface
@@ -56,7 +56,7 @@ There are two ways to execute queries using the API:
 
 ### The query
 
-The query that is used in the examples bellow is the following:
+The query that is used in the examples below is the following:
 
 ```sql
 SELECT

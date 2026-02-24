@@ -7,7 +7,7 @@ description: NFT Influencer
 
 ## Description
 
-This label denotes an onchain address of some nft influencer.
+This label denotes an on-chain address of an NFT influencer.
 
 ## [Label fqn](/labels/label-fqn)
 

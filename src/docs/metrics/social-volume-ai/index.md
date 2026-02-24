@@ -2,14 +2,14 @@
 title: Social Volume AI
 author: Ilya
 date: 2025-08-11
-description: The amount of messages/documents that relate to given assert found by NLP model
+description: The amount of messages/documents that relate to a given asset found by NLP model
 ---
 
 ## Definition
 
-Social Volume is build on top of our [Social Data](/metrics/details/social-data).
+Social Volume is built on top of our [Social Data](/metrics/details/social-data).
 
-The **Social Volume AI** metric finds the relation of text to the given asset through the use of NLP(Named Entity Recognition) and NEL(Named Entity Linking) models. Similarly as in [Social Volume](https://academy.santiment.net/metrics/social-volume/#definition).
+The **Social Volume AI** metric finds the relation of text to a given asset through the use of NLP (Named Entity Recognition) and NEL (Named Entity Linking) models, similarly to [Social Volume](https://academy.santiment.net/metrics/social-volume/#definition).
 
 ---
 
@@ -21,7 +21,7 @@ The **Social Volume AI** metric finds the relation of text to the given asset th
 
 ## Measuring Unit
 
-Amount of distinct related to the given asset documents extracted by NLP model.
+Amount of distinct documents related to the given asset, extracted by the NLP model.
 
 ---
 
@@ -54,7 +54,7 @@ Available for [these assets](<https://api.santiment.net/graphiql?variables=&quer
 
 ## Sanbase
 
-Social Volume AI for an asset can be seen on a a [project's page](https://app.santiment.net/charts).
+Social Volume AI for an asset can be seen on a [project's page](https://app.santiment.net/charts).
 
 ## SanAPI
 

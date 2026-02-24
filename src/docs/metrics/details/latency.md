@@ -11,7 +11,7 @@ date: 2025-11-20
 
 ## On-Chain Latency
 
-In order to compute on-chain data, a number block confirmations are required
+In order to compute on-chain data, a number of block confirmations are required
 before fetching the data for a given block. Measured in time:
 
 - Bitcoin - Around 30 minutes
@@ -25,13 +25,13 @@ After the block is considered confirmed and its data is fetched, the data
 processing can take anywhere from a few minutes to few hours. The upper limits
 are:
 
-- For 5-minute interval metrics processing the data can take up to 20 minutes
-  most
-- For daily metrics processing the data can take up to 2 hours
+- For 5-minute interval metrics, processing the data can take up to 20 minutes
+  at most
+- For daily metrics, processing the data can take up to 2 hours
 
 ## Social Data Latency
 
-Each one of the social data source:
+Each one of the social data sources:
 
 - Telegram
 - Reddit
@@ -45,7 +45,7 @@ is being processed separately and usually doesn't take longer than 1 minute.
 The emerging trends are computed once per hour so they become available a few
 minutes after every round hour.
 
-The data for assets is usually computed and it takes 5-10 minutes to compute.
+The data for assets usually takes 5-10 minutes to compute.
 
 Data for text terms is computed on-the-fly on the raw data and can be accessed as soon as the
 text messages are stored in our database.

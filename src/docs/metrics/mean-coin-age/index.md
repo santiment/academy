@@ -10,7 +10,7 @@ description: The average age of all coins/tokens on a given blockchain
 Recall that the **[coin-age model](/metrics/details/stack-coin-age-model)**
 allows us at each given point in time to assign age to each coin/token.
 
-There are two coin age defined metrics:
+There are two coin-age-defined metrics:
 
 - Mean Coin Age - The average age of all coins/tokens on the blockchain.
 - Mean Dollar Invested Age - The average age of every dollar invested into the market cap of a coin.
@@ -18,7 +18,7 @@ There are two coin age defined metrics:
 Mean Coin Age metrics are also available for different [time bounds](/metrics/details/timebound), which 
 compute the mean coin age for tokens moved at least once no longer than a specific number of days or years ago.
 
-### Example (Mean Coin age)
+### Example (Mean Coin Age)
 
 Given there are 100 tokens in existence:
 
@@ -32,12 +32,12 @@ $$
 
 ### Example (Mean Dollar Invested Age)
 
-Given there 100 tokens in existence:
+Given there are 100 tokens in existence:
 
 - 50 of them have age 10 days and the token's price was \$1 at that time
 - 50 of them have age 20 days and the token's price was \$2 at that time
 
-then the mean dollar invested age is: 
+then the mean dollar invested age is:
 $$
 \frac{10 × 50 + 20 × 50}{50 × \$1 + 50 × \$2} = \frac{1500}{150} = 10\;\text{(coin-dollar days)}
 $$

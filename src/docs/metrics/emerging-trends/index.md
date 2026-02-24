@@ -14,13 +14,13 @@ the topics which _emerged_ faster than any others over the last 24 hours. By
 "emerging" we mean getting more social attraction from the crowd, being
 discussed much more than any other topic.
 
-We detect these words by computing the so called _hype score_ for each single
+We detect these words by computing the so-called _hype score_ for each single
 word that is present in the [social data](/metrics/details/social-data/) after filtering
 and cleaning the data. Once this number is calculated, the words are ranked
 according to the corresponding scores in a descending order. The top 10 words in
 the resulting list are the top emerging trends.
 
-We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
+We constantly update our labels, which helps us keep them as fresh as possible but results in historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12-hour period, the metric can be supplemented with new data.
 
 ---
 
@@ -95,12 +95,12 @@ different data sources with different average daily volumes of talks.
 
 ### Ranking the Words
 
-Once the texts are cleaned and each word has it's hype score, we first rank the
+Once the texts are cleaned and each word has its hype score, we first rank the
 words in descending order (the highest hype score goes to the top) and then
 combine the results across different data sources if necessary: this is done by
 averaging the hype score for each word across all desired data sources and
 ranking the words afterwards again. In case a given word is present in source 1
-and is not present in source 2 we assume that it's hype score in the second data
+and is not present in source 2 we assume that its hype score in the second data
 source is 0.
 
 ---

@@ -25,7 +25,7 @@ As you explore the tool’s graphs, you’ll encounter key metrics such as
 [**social dominance**](https://academy.santiment.net/metrics/social-dominance/#social-dominance-for-an-asset).
 These powerful market indicators both offer insight into the intensity and
 focus of market conversations, as well as reveal how the subject matter of
-these conversations transition between topics.
+these conversations transitions between topics.
 
 In this article, we’ll explore the primary queries within the
 [**Historical Crypto Trends**](https://app.santiment.net/social-trends/crypto-trends) tool,
@@ -38,9 +38,9 @@ expectations and how these sentiments play out over time.
 
 Tracking the frequency of "buy the dip" mentions on social channels helps gauge
 market sentiment. Spikes in these mentions signal investor optimism, often
-after temporary rebounds that may still lead to further declines. Low volume of
+after temporary rebounds that may still lead to further declines. A low volume of
 conversations surrounding ‘buying the dip’ reflects fear and can indicate
-potential buying opportunities. High volume reflects an overly eager crowd that
+potential buying opportunities. A high volume reflects an overly eager crowd that
 is not yet fearful, meaning the market dip is likely to continue longer.
 Monitoring this trend with Sanbase provides valuable insights for timing market
 entry points.
@@ -116,7 +116,7 @@ which can point to an oversold market and a possible rebound.
 **Query text:**
 
 ```
-high OR higher`
+high OR higher
 ```
 
 ```
@@ -179,7 +179,7 @@ reflection of greed or overconfidence in the markets. And if altcoins have been
 on a prolonged rally, you may see a spike in the term “altseason”. This means
 that traders are confident enough that the current altcoin rally will continue.
 Since markets historically move the opposite direction of the crowd’s
-expectations, you can interpret spikes in “altseason” as a bearish one in
+expectations, you can interpret spikes in “altseason” as a bearish signal in
 almost all cases.
 
 **Query text:**

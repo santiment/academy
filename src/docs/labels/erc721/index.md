@@ -7,7 +7,7 @@ description: ERC721 contract standart label
 
 ## Description
 
-Denotes a smart contract that follows erc-721 standart.
+Denotes a smart contract that follows the ERC-721 standard.
 
 ERC721 is a standard for non-fungible tokens (NFTs) on the Ethereum blockchain, enabling unique digital assets to be represented and traded on the network.
 

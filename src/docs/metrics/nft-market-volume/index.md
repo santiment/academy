@@ -6,8 +6,8 @@ description: Daily market volume in ETH, and daily market count for NFT collecti
 ---
 ## Definition
 
-NFT Market Volume/Count is metric which calculates market count and the market volume 
-in ETH for NFT collections. Assumption is that when the majority of the volume is buying NFTs, the market
+NFT Market Volume/Count is a metric that calculates the market count and the market volume
+in ETH for NFT collections. The assumption is that when the majority of the volume is buying NFTs, the market
 is in a euphoric state. On the other hand, when NFT owners accept many orders,
 the market is depressed.
 

@@ -33,7 +33,7 @@ inside of it. This means that one GraphQL request can count as multiple API
 calls. In most cases, a single GraphQL request will contain only one GraphQL
 query.
 
-Executing the following GraphQL request will count as 1 API calls:
+Executing the following GraphQL request will count as 1 API call:
 
 ```graphql-explorer
 {
@@ -124,7 +124,7 @@ Rate limits can be reached for various different reasons:
 - Unexpected usage peak;
 - Need for more API calls in the long term.
 
-In case of a temporary issue or error, you can go to you [Account page](https://app.santiment.net/account#api-keys)
+In case of a temporary issue or error, you can go to your [Account page](https://app.santiment.net/account#api-keys)
 and press the `Reset`. The self-reset of API rate limits is available once per 90 days:
 ![](./reset_api_rate_limits.png)
 

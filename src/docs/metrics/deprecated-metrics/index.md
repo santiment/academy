@@ -53,5 +53,5 @@ MakerDAO metrics have been migrated to a new framework
 no longer supported
 - [Deprecated Uniswap Airdrop Metrics](/metrics/deprecated-metrics/deprecated-uniswap-metrics) - The Airdrop
 occurred in September 2020, but there are no more claims
-- [Deprecated Social Metrics](/metrics/deprecated-metrics/deprecated-social-metrics) - Some of the socual sources were combined into one.
+- [Deprecated Social Metrics](/metrics/deprecated-metrics/deprecated-social-metrics) - Some of the social sources were combined into one.
 </Resource>

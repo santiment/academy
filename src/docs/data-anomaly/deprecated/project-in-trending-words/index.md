@@ -10,4 +10,4 @@ description: Signal indicates that some project appeared in top-10 trending word
 **Project in Trending Words** indicates that the project appeared in top-10 trending words.
 
 Bitcoin and Ethereum are not tracked.
-Once the signal is fired for some project the cooldown period of 12 hours is activeted for this project. No new project-in-trending-words signals are emitted during the cooldown period.
+Once the signal is fired for a project, the cooldown period of 12 hours is activated for that project. No new project-in-trending-words signals are emitted during the cooldown period.

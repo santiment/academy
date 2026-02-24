@@ -10,7 +10,7 @@ Spikes in the TAC chart indicate the movement of tokens that have been dormant f
 
 Such events can introduce volatility to the token’s short-term price action. The direction of this volatility, whether upward or downward, is unique to each situation. However, a spike in TAC is always a prompt to pay closer attention.
 
-Consider Bitcoin's TAC chart for the past six months; Almost every significant peak either signaled an impending correction (red), or occurred at the lowest point of the rally (green):
+Consider Bitcoin's TAC chart for the past six months: almost every significant peak either signaled an impending correction (red) or occurred at the lowest point of the rally (green):
 
 ![](image3.png)
 

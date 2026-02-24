@@ -11,13 +11,13 @@ that have been created or mined, and are currently in circulation, including tho
 be locked or reserved.
 
 Supply in Profit metric is computed by summing all token amounts that were last transferred when 
-the price of token was less then the current price.
+the price of the token was less than the current price.
 
 Percent of Supply in Profit represents the ratio between Supply in Profit and 
-[Circulation Supply](/metrics/circulation). This metric measures weather the market is in 
-depression or euphoria stage. If token is breaking all time highs every holder is in profit, 
-so the metric value is 100%. On the other side, in the bear markets there are usually more then 
-half of tokens are in loss, so the metric value drops below 50%.
+[Circulation Supply](/metrics/circulation). This metric measures whether the market is in a
+depression or euphoria stage. If a token is breaking all-time highs, every holder is in profit,
+so the metric value is 100%. On the other hand, in bear markets, usually more than
+half of the tokens are in loss, so the metric value drops below 50%.
 
 ---
 
@@ -54,7 +54,7 @@ half of tokens are in loss, so the metric value drops below 50%.
 
 ## Available Assets
 
-Available for for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22total_supply%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+Available for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22total_supply%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 > Note: All metrics are available for the same set of assets.
 
@@ -96,7 +96,7 @@ Supply in Profit is available under the `total_supply_in_profit` name.
 }
 ```
 
-Percent of Supply in Profit is available for  `percent_of_total_supply_in_profit` name.
+Percent of Supply in Profit is available under the `percent_of_total_supply_in_profit` name.
 
 ```graphql-explorer
 {

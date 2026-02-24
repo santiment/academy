@@ -11,7 +11,7 @@ If the perpetual is trading at a premium to the underlying index, long positions
 
 ``position size * TWAP of ((future mark price - index) / index) / 24``
 
-More details on FTX [web-site](https://help.ftx.com/hc/en-us/articles/360027946571-Funding).
+More details on the FTX [website](https://help.ftx.com/hc/en-us/articles/360027946571-Funding).
 
 ---
 

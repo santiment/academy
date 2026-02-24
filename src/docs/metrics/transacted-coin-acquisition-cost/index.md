@@ -13,7 +13,7 @@ metric does not include:
 
 - Minting/mining/uncle rewards.
 - Transactions of coins/tokens that were acquired on the same day. This would
-  handle most situation with deposit/withdrawal addresses.
+  handle most situations with deposit/withdrawal addresses.
   - Example: There are two transactions on the same day: `A - 10ETH -> B` and `B
     -> 10ETH C` - `B` moves the coins on the same day that they were received.
     This second transaction is not counted.
@@ -23,8 +23,8 @@ circulation](/metrics/circulation) (**not** the [transaction
 volume](/metrics/transaction-volume)) **minus** the block rewards/uncle
 rewards/mints.
 
-The metric returns a list of prices ranges and a number of coins/tokens that
-were last time moved when the price was in that range. The ranges have even
+The metric returns a list of price ranges and a number of coins/tokens that
+were last moved when the price was in that range. The ranges have even
 length with the exception of the range that contains the queried day price. This
 range is split around that price, resulting in two ranges. This has the benefit
 of knowing exactly how many coins/tokens were last time moved when the price was
@@ -32,7 +32,7 @@ above or below the queried day price.
 
 ### Example
 
-Let's take a look at what prices were aquired the bitcoins transacted on 09 November 2021 when bitcoin reached an all time high of over $68,000:
+Let's take a look at what prices were acquired the bitcoins transacted on 09 November 2021 when bitcoin reached an all time high of over $68,000:
 
 - `[$low - $high]` - `number of bitcoins`
 - `[$0        - $16,886.13]` - ` 9,497.95 `
@@ -41,11 +41,11 @@ Let's take a look at what prices were aquired the bitcoins transacted on 09 Nove
 - `[$50,658.39 - $59,987.51]` - `2711.52`
 - `[$59,987.51 - ∞]` - `178,339.76`
 
-It is clear that when the price is at its all time high all of the sellers are profiting but some are profiting much more than others. The majority of the bitcoins were last time moved when the price was in the range $59.9k-$57.5k. But there are 9,497.95 bitcoins that moved last when the price was under $16.9k.
+It is clear that when the price is at its all-time high, all of the sellers are profiting, but some are profiting much more than others. The majority of the bitcoins were last moved when the price was in the range $59.9k-$57.5k. But there are 9,497.95 bitcoins that last moved when the price was under $16.9k.
 
 ### Example
 
-Let's take a look at what prices were aquired the bitcoins transacted on 20 July 2021 when bitcoin reached a local minimum of around $29,000, after reaching to over $64,000 just 3 months before that:
+Let's take a look at what prices were acquired the bitcoins transacted on 20 July 2021 when bitcoin reached a local minimum of around $29,000, after reaching over $64,000 just 3 months before that:
 - `[$low - $high]` - `number of bitcoins`
 - `[$0 - $15880.41]` -  `13586.16`
 - `[$15880.41 - $29842.86]` -  `694.53`
@@ -54,7 +54,7 @@ Let's take a look at what prices were aquired the bitcoins transacted on 20 July
 - `[$47641.23 - $63521.64]` -  `4693.35`
 - `[$63521.64 -  ∞]` - `146.27`
 
-Looking at this data we concule that majority of the bitcoins, around 99.9k or around 87% of all bitcoins transacted, were last moved when the price was higher. This would mean that most of transactions on that day resulted in a loss.
+Looking at this data, we conclude that the majority of the bitcoins, around 99.9k or around 87% of all bitcoins transacted, were last moved when the price was higher. This would mean that most of the transactions on that day resulted in a loss.
 
 ## Access
 
@@ -64,7 +64,7 @@ Looking at this data we concule that majority of the bitcoins, around 99.9k or a
 
 ## Measuring Unit
 
-Number coins/tokens per price range
+Number of coins/tokens per price range
 
 ---
 

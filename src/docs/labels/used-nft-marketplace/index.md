@@ -7,7 +7,7 @@ description: label
 
 ## Description
 
-The `used_nft_marketplace` label denotes the marketplaces that NFT user traded on.
+The `used_nft_marketplace` label denotes the marketplaces that an NFT user has traded on.
 
 ## [Label fqn](/labels/label-fqn)
 

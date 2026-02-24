@@ -27,7 +27,7 @@ essentially reflecting the complexity of the transaction.
 Ethereum fees metrics:
 - `fees`: Total fees paid in ETH over a daily interval
 - `fees_intraday`: Total fees paid in ETH over 5-minute time intervals
-- `fees_usd`:  Total fees paid in USD over a daily interval
+- `fees_usd`: Total fees paid in USD over a daily interval
 - `fees_usd_intraday`: Total fees paid in USD over 5-minute time intervals
 
 Aggregated fees metrics:

@@ -13,7 +13,7 @@ and continuously accrue interest at the current GSR. This mechanism encourages l
 GHO holding, enhances liquidity stability, and provides users with a low-risk way to earn 
 yield directly within the Aave ecosystem.
 
-Sky Savings metrics:
+GHO Savings metrics:
 * `gho_savings_deposits` - Amount of GHO deposited into the savings contract
 * `gho_savings_withdrawals` - Amount of GHO withdrawn from the savings contract
 * `gho_savings_total_supplied` - Total supply of GHO in the savings contract

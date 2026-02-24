@@ -11,7 +11,7 @@ Exchange-labeled metrics showcase exchange metrics from the perspective of a sin
 
 ---
 
-Supported_metrics:
+Supported metrics:
 
 * `active_deposits_per_exchange` - The number of unique deposit addresses that have been active on a particular day for a given asset within a specific exchange. Essentially, this metric serves as an indicator of how many users have deposited a given asset into the specified exchange.
 
@@ -26,7 +26,7 @@ Supported_metrics:
 * `exchange_outflow_per_exchange` - The volume of coins/tokens transferred from wallets associated with a given exchange to non-exchange wallets.
 * `exchange_balance_per_exchange` - The net balance resulting from the difference between inflow and outflow (inflow minus outflow) for a particular exchange.
 
-Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data. Additionally, adjustments to labels automatically trigger recalculation of labeled balances.
+Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels, which helps us keep them as fresh as possible but results in historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12-hour period, a metric can be supplemented with new data. Additionally, adjustments to labels automatically trigger recalculation of labeled balances.
 
 ---
 

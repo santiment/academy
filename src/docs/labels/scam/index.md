@@ -7,7 +7,7 @@ description: Scam label
 
 ## Description
 
-Label `scam` means that address has been linked to scam activity and this information has been publicly disclosed.
+The label `scam` means that the address has been linked to scam activity and this information has been publicly disclosed.
 
 ## [Label fqn](/labels/label-fqn)
 

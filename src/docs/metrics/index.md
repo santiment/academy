@@ -10,8 +10,8 @@ date: 2024-04-17
 
 <Resource title="Deprecated and Renamed Metrics">
 
-There are metrics that are deprecated, scheduled for deprecation, or the
-metrics are available under a new name and the old name should be not used.
+There are metrics that are deprecated, scheduled for deprecation, or
+available under a new name where the old name should not be used.
 
 - [Deprecated Metrics](/metrics/deprecated-metrics)
 - [Renamed Metrics](/metrics/renamed-metrics)
@@ -61,7 +61,7 @@ Traditional fundamentals including price, volume and market cap, mean coin age
 
 <Resource title="Social/Sentiment">
 
-Metrics build on top of [Social Data](/metrics/details/social-data)
+Metrics built on top of [Social Data](/metrics/details/social-data)
 
 They are taken from measuring social activity on crypto-related forums and
 channels, plus custom sentiment measurements analyzing crowd behavior.
@@ -177,7 +177,7 @@ channels, plus custom sentiment measurements analyzing crowd behavior.
 
 We have a bunch of API methods related to blockchain addresses.
 The list of supported blockchains [can be found here](/sanapi/supported-blockchains/).
-Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and other return tables, eg "Top Trasfres Table".
+Some of these methods return [timeseries](/sanapi/metrics/#timeseriesdata) and others return tables, e.g. "Top Transfers Table".
 
 - [Historical Balance](/metrics/historical-balance)
 - [Labelled Historical Balance](/metrics/labelled-historical-balance)

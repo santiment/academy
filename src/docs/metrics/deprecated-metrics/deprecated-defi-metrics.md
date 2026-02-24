@@ -22,7 +22,7 @@ Some of the DeFi-related metrics have their own pages:
 
 On this page the following metrics are defined:
 
-* `defi_total_value_locked_usd` - Shows total value locked in DeFi projects, available in USD .
+* `defi_total_value_locked_usd` - Shows total value locked in DeFi projects, available in USD.
 * `defi_total_value_locked_eth` - Shows total value locked in DeFi projects, available in ETH.
 
 ---

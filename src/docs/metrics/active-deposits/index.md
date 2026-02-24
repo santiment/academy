@@ -22,8 +22,8 @@ particular day for a given asset. Refer to a [deposit address explanation here](
 
 ### Deposit Transactions
 
-Deposit transactions metric shows the total number of all **incoming and outcoming transactions** involving
-deposit addresses on a particular day for `deposit_transactions` and for a particlar 5 minutes interval for `deposit_transactions_5m`.
+Deposit transactions metric shows the total number of all **incoming and outgoing transactions** involving
+deposit addresses on a particular day for `deposit_transactions` and for a particular 5-minute interval for `deposit_transactions_5m`.
 
 As such, this metric accounts for both user-to-exchange transactions:
 
@@ -40,7 +40,7 @@ deposit-related transactions** means that more coins are entering the exchanges,
 although the number of transactions to the exchanges stayed the same. In other
 words, **the average deposit size has increased.**
 
-For an exchange-specific data please refer to [that page](/metrics/labeled-exchange)
+For exchange-specific data, please refer to [that page](/metrics/labeled-exchange).
 
 ---
 

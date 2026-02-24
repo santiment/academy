@@ -27,7 +27,7 @@ Notice the steep drop off?
 
 The increased activity (and subsequent dip) correlates squarely to a huge ETH
 mixer that operated between March 2017 and March 2018. During that time, coins
-were moved a lot between addresses which lead to big velocity spikes.
+were moved a lot between addresses, which led to big velocity spikes.
 
 Once the mixer was liquidated, token velocity toppled back to 'normal' levels,
 where it's remained ever since.

@@ -83,7 +83,7 @@ Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20projectBySlug(sl
 
 ### Aggregated data per project
 
-In order to fetch how many ETH every project spent in a the last N days, you can execute the following GraphQL query (the `days` can contain any number of days):
+In order to fetch how many ETH every project spent in the last N days, you can execute the following GraphQL query (the `days` can contain any number of days):
 
 ```graphql
 {

@@ -7,8 +7,8 @@ description: Metric returns historical balance for a chain address / contract
 
 ## Definition
 
-Metric returns historical balance for a chain address / contract
-[Example of usage Historical Balance on Sanbase](https://app.santiment.net/labs/balance?address=0x876eabf441b2ee5b5b0554fd502a8e0600950cfa&assets[]=shiba-inu&from=2021-10-20T19%3A00%3A00.000Z&isLog=false&priceMetrics[]=shiba-inu&to=2022-04-21T18%3A59%3A59.999Z)
+This metric returns the historical balance for a chain address or contract.
+[Example of usage of Historical Balance on Sanbase](https://app.santiment.net/labs/balance?address=0x876eabf441b2ee5b5b0554fd502a8e0600950cfa&assets[]=shiba-inu&from=2021-10-20T19%3A00%3A00.000Z&isLog=false&priceMetrics[]=shiba-inu&to=2022-04-21T18%3A59%3A59.999Z)
 
 ---
 

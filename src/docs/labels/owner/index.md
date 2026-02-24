@@ -7,9 +7,9 @@ description: Owner label
 
 ## Description
 
-Owner is a standalone label which denotes the person or company which controls a given address. Note that owner label is not a nickname. Owner is a broader term rather than nickname which is an owner's attribute (e.g. Vitalik Buterin might have several nicknames: 'Vitaliy', 'ETH_daddy', 'Jogn Galt', etc).
+Owner is a standalone label that denotes the person or company that controls a given address. Note that the owner label is not a nickname. Owner is a broader term than nickname, which is an owner's attribute (e.g. Vitalik Buterin might have several nicknames: 'Vitaliy', 'ETH_daddy', 'John Galt', etc.).
 
-In most cases Owner label is connected with other labels (such as [centralized_exchange](/labels/centralized-exchange)).
+In most cases, the Owner label is connected with other labels (such as [centralized_exchange](/labels/centralized-exchange)).
 
 ## [Label fqn](/labels/label-fqn)
 
@@ -26,4 +26,4 @@ Aave: [0x625aE63000f46200499120B906716420bd059240](https://etherscan.io/address/
 
 ## Available Blockchains
 
-Blockchain indifferent
+Blockchain-independent

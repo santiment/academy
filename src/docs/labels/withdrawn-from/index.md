@@ -6,7 +6,7 @@ description: label
 ---
 
 ## Description
-A`withdrawn_from` label is used to identify the entity involved in a withdrawal action.
+The `withdrawn_from` label is used to identify the entity involved in a withdrawal action.
 
 The most common case is a centralized exchange (CEX) withdrawal. See the details in the image below.
 

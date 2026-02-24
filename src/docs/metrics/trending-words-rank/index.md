@@ -6,14 +6,14 @@ description: Rank of asset in top trending words
 ---
 ## Definition
 
-Trending Words Rank is build on top of the [Social Data](/metrics/details/social-data).
+Trending Words Rank is built on top of the [Social Data](/metrics/details/social-data).
 
-Trending Words Rank for an asset represents position of that asset based on top
+Trending Words Rank for an asset represents the position of that asset based on the top
 trending words score.
-Data for asset and some time interval only appears if asset for that time
-interval is in top trending words.
+Data for an asset and a given time interval only appears if the asset for that time
+interval is in the top trending words.
 
-Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
+Please note that metrics may undergo changes in historical values due to automated recalculations triggered monthly. We constantly update our labels, which helps us keep them as fresh as possible but results in historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12-hour period, the metric can be supplemented with new data.
 
 
 ## Access

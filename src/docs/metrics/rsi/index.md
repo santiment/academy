@@ -18,7 +18,7 @@ upward price movement. Traders commonly use RSI in conjunction with other techni
 make informed decisions about entering or exiting positions in financial markets.
 
 
-RSI metric is available for 3 different time periods
+The RSI metric is available for 3 different time periods:
 * `rsi_4h` - RSI for a 4-hour time frame
 * `rsi_1d` - RSI for a 1-day time frame
 * `rsi_7d` - RSI for a 7-day time frame

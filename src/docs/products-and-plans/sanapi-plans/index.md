@@ -15,14 +15,14 @@ Check the [pricing page](https://app.santiment.net/pricing) for the latest plans
 | --- | --- | --- | --- |
 | **API Access** | | | |
 | Free Metrics | Full access | Full access | Full access |
-| Restricted Metrics | Partial access:<br>• 1 years of historical data<br>• 30 days lag | Partial access:<br>• 1 years of historical data<br>• 30 days lag | Partial access:<br>• 1 years of historical data<br>• No realtime restriction |
+| Restricted Metrics | Partial access:<br>• 1 year of historical data<br>• 30 days lag | Partial access:<br>• 1 year of historical data<br>• 30 days lag | Partial access:<br>• 1 year of historical data<br>• No realtime restriction |
 | **Rate Limits** | | | |
 | Monthly Limit | 1,000 API calls | 5,000 API calls | 80,000 API calls |
 | Hourly Limit | 500 API calls | 1,000 API calls | 4,000 API calls |
 | Per Minute Limit | 100 API calls | 100 API calls | 100 API calls |
 | **Sanbase Access** | | | |
 | Free Metrics | Full access | Full access | Full access |
-| Restricted Metrics | Partial access:<br>• 1 years of historical data<br>• 30 days lag | Partial access:<br>• 1 years of historical data<br>• 30 days lag | Partial access:<br>• 1 years of historical data<br>• Realtime data |
+| Restricted Metrics | Partial access:<br>• 1 year of historical data<br>• 30 days lag | Partial access:<br>• 1 year of historical data<br>• 30 days lag | Partial access:<br>• 1 year of historical data<br>• Realtime data |
 | Alerts Limit | 3 alerts allowed | 20 alerts allowed | 20 alerts allowed |
 | Insights Access | Limited access | Full access | Full access |
 

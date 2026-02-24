@@ -9,8 +9,8 @@ description: Total number of outstanding or open contracts in the market.
 Open interest represents the total number of outstanding contracts that have not been settled by an offsetting trade. For example, if trader A buys a futures contract from trader B, and neither has closed out their position, the open interest is one.
 Traders can close out their positions by taking an opposing position (sell if they were long or buy if they were short). Changes in open interest can reflect whether traders are initiating new positions or closing existing ones.
 There are three types of open interest metrics:
-- Open interest per exchange - represents the sum of open interests of all contracts on given exchange for a given asset
-- Open interest per settlement currency - represents the sum of open interests of all contracts for given settlement currency and asset
+- Open interest per exchange - represents the sum of open interests of all contracts on a given exchange for a given asset
+- Open interest per settlement currency - represents the sum of open interests of all contracts for a given settlement currency and asset
 - Total open interest - represents the sum of open interests of all contracts for a given asset
 ---
 

@@ -9,7 +9,7 @@ description: Spark Protocol Metrics
 [Spark](https://spark.fi/) is a lending and borrowing crypto protocol developed by MakerDAO. 
 Spark aims to offer competitive interest rates and enhanced liquidity within the DeFi ecosystem, 
 integrating the best liquidity from Maker and seamlessly incorporating the best DeFi protocols. 
-The protocol incorporates with MakerDAO's existing infrastructure, ensuring stability and security. 
+The protocol integrates with MakerDAO's existing infrastructure, ensuring stability and security. 
 By utilizing Spark, users can efficiently manage their crypto assets and optimize their financial 
 strategies within the decentralized finance landscape.
 
@@ -90,10 +90,10 @@ Flashloan metrics:
 
 ## Available Assets
 
-Metrics related to the entire protocol available for `maker` and `multi-collateral-dai`
+Metrics related to the entire protocol are available for `maker` and `multi-collateral-dai`.
 
-Other metrics: 
-available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+Other metrics are
+available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>).
 
 ---
 
@@ -163,7 +163,7 @@ Protocol total supplied/borrowed metrics: `spark_protocol_total_supplied_usd` an
 }
 ```
 
-APY metric: `spark_supply_apy` and `spark_borrow_apy`
+APY metrics: `spark_supply_apy` and `spark_borrow_apy`
 
 ```graphql-explorer
 {

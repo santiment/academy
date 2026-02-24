@@ -7,7 +7,7 @@ description: CeFi label
 
 ## Description
 
-Centralized Finance (CeFi) refers to financial services and applications that operate on blockchain and are provided by centralized entities or organizations, such as exchanges, banks, financial institutions, etc. Unlike DeFi, which are managed by smart-contracts, CeFi are rely on the central authority or entity which manages the financial transactions, executes trades, and stores users' assets.
+Centralized Finance (CeFi) refers to financial services and applications that operate on blockchain and are provided by centralized entities or organizations, such as exchanges, banks, financial institutions, etc. Unlike DeFi, which is managed by smart contracts, CeFi relies on a central authority or entity that manages financial transactions, executes trades, and stores users' assets.
 
 CeFi platforms typically offer higher speed, liquidity, and convenience compared to decentralized finance (DeFi) platforms, but they may also have higher fees, lower privacy, and greater risks.
 

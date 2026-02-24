@@ -6,7 +6,7 @@ description: Derivatives Label
 ---
 
 ## Description
-Label used for addresses that are used in derivatives projects.
+This label is used for addresses that are involved in derivatives projects.
 
 Crypto derivatives function similarly to traditional derivatives, 
 where a buyer and a seller engage in a contractual agreement to trade an underlying asset. 

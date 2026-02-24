@@ -7,7 +7,7 @@ description: The position in the list of assets ordered by Marketcap in ascendin
 
 ## Definition
 
-The `rank` metrics is defined by the numerical position, starting from 1, of the asset within the list of all assets sorted by market capitalization in ascending order. Assets with smaller market capitalizations are assigned lower numerical positions.
+The `rank` metric is defined by the numerical position, starting from 1, of the asset within the list of all assets sorted by market capitalization in ascending order. Assets with smaller market capitalizations are assigned lower numerical positions.
 
 ## Access
 

@@ -21,7 +21,7 @@ Here's a Network Growth graph for
 [Aragon](https://app.santiment.net/projects/aragon), which lets anyone create
 and manage a decentralized organization on Ethereum.
 
-UP until December of 2017, the Aragon network grew by 85-750 new addresses each
+Up until December 2017, the Aragon network grew by 85-750 new addresses each
 day, and the price loyally followed.
 
 Then, right around the start of 2018, the network growth slowly began to

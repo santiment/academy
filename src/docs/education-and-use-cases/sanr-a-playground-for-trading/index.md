@@ -6,7 +6,7 @@ date: 2024-07-19
 
 ## SanR: Practice Makes Perfect
 
-Picture this; you're standing at the edge of a vast, shimmering ocean, ready to
+Picture this: you're standing at the edge of a vast, shimmering ocean, ready to
 dive into it, but you freeze. It's intimidating, the deep water with mysteries lurking beneath.
 
 The exciting world of trading is like that for most people. It's a thrilling adventure, but let's be honest, it's scary.

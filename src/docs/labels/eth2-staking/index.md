@@ -7,7 +7,7 @@ description: ETH2 Staking label
 
 ## Description
 
-The eth2_staking label is used to identify wallet addresses that stake ETH
+The eth2_staking label is used to identify wallet addresses that stake ETH.
 
 ## [Label fqn](/labels/label-fqn)
 

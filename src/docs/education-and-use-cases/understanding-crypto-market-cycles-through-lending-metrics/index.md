@@ -48,13 +48,13 @@ When borrowing demand increases, interest rates rise. Extreme interest rate
 spikes often signal market tops, while flat or low rates may indicate market
 bottoms.
 
-This framework reflects an analysis of the behaviour of market participants,
+This framework reflects an analysis of the behavior of market participants,
 where the determination of the value of money is a direct expression of general
 market sentiment.
 
 ### Key Indicators
 
-1. **Stable Coin Supply Rate**: The amount of interest earned when depositing
+1. **Stablecoin Supply Rate**: The amount of interest earned when depositing
    stablecoins like USDC or DAI
 2. **Borrowing Rate**: The interest paid when borrowing these assets
 3. **Supply/Borrow Ratio**: The relationship between available capital and
@@ -152,7 +152,7 @@ upward momentum.
 To apply these insights effectively:
 
 1. **Monitor Heat Signals**:
-    * Track stable coin lending rates for signs of market overheating (>10%)
+    * Track stablecoin lending rates for signs of market overheating (>10%)
     * Watch for extreme borrowing demand spikes
 
 2. **Identify Cooling Conditions**:

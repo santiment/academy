@@ -7,7 +7,7 @@ description: DeFi label
 
 ## Description
 
-The DeFi label is used to identify wallet addresses that are involved in decentralized finance (DeFi) activities. By using the DeFi label, you quickly identify which wallets are involved in DeFi activities and gain a better understanding of the DeFi ecosystem.
+The DeFi label is used to identify wallet addresses that are involved in decentralized finance (DeFi) activities. By using the DeFi label, you can quickly identify which wallets are involved in DeFi activities and gain a better understanding of the DeFi ecosystem.
 
 DeFi group includes other labels such as [decentralized exchange](/labels/decentralized-exchange), [stablecoin](/labels/stablecoin) and others. Visit [this page](labels/#domains) to see full child labels list.
 

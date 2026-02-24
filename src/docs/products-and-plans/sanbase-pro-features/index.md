@@ -35,7 +35,7 @@ Sanbase Pro grants you access to special market reports and daily analysis produ
 - Daily briefs on the behavior of whales, miners, traders, and other market stakeholders
 - Timely analysis of short-term market trends and top coins to watch
 
-Each Santiment Insight doubles as a crash course on exactly how to use on-chain, social, and development data to clarify the crypto markets and its biggest driving forces.
+Each Santiment Insight doubles as a crash course on exactly how to use on-chain, social, and development data to clarify the crypto markets and their biggest driving forces.
 
 Learn it today, apply it tomorrow.
 

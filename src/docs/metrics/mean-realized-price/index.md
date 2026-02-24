@@ -16,8 +16,8 @@ $$
 \text{mean\_realized\_price\_usd} = \frac{\text{realized\_value\_usd}}{\text{circulation}}
 $$
 
-Mean Realized Price metric is also available for different [time bounds](/metrics/details/timebound), which 
-computes the mean realized price for tokens moved at least once no longer than a specific number of days or years ago.
+The Mean Realized Price metric is also available for different [time bounds](/metrics/details/timebound), which
+compute the mean realized price for tokens moved at least once no longer than a specific number of days or years ago.
 
 
 ### Bottom Indicator Use Case

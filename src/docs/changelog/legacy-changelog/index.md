@@ -79,11 +79,11 @@ We update this page every two weeks or more frequently.
 
 - Main selector supports chain addresses
 - Add recently shown assets
-- 2 new metrics: Contract Interacting Addreses, Contract Transactions Count
+- 2 new metrics: Contract Interacting Addresses, Contract Transactions Count
 
 Last 2 weeks we made many fixes for our Alerts. Our Alerts notifications and preview work better now.
 
-🎉🎉🎉 Finally We have added new selector for our Charts tool. You can remember our Charts as a great analytics tool for ERC20 or many other type of assets, but now it’s much advanced tool. You can do a research of any chain addresses on supported blockchains In the closed future we will add social metrics for some type of smart contracts like erc721.
+Finally, we have added a new selector for our Charts tool. You may remember Charts as a great analytics tool for ERC20 or many other types of assets, but now it is a much more advanced tool. You can research any chain addresses on supported blockchains. In the near future we will add social metrics for some types of smart contracts like ERC721.
 
 Example:
 
@@ -91,13 +91,13 @@ Example:
 
 You can see 2 available metrics:
 
-- Contract Interecting Addresses
+- Contract Interacting Addresses
 - Contract Transactions Count
 
 Actually it’s not only for contract, it works for any address.
-I am really appreciate any feedback.
-Disclaimer new 2 metrics for our addresses have slow performance.
-Loaded time can be up to 1 minute. Sorry.
+I really appreciate any feedback.
+Disclaimer: the new 2 metrics for addresses have slow performance.
+Loading time can be up to 1 minute. Sorry.
 
 ### `30.03.22 - 6.04.22`
 
@@ -151,7 +151,7 @@ Loaded time can be up to 1 minute. Sorry.
 - New comments features:
   - Bold, italic, links
   - Type \$ for assets suggestions
-  - Type @ to mention an user
+  - Type @ to mention a user
   - Type # to link a trend
 
 **Screeners/Watchlists**
@@ -179,7 +179,7 @@ Loaded time can be up to 1 minute. Sorry.
 - Open Edit/Save dialog by clicking on the layout name in the header
 - Displaying amount of available metrics
 
-We exited to announce our new social metric - Social Volume AI. This metric is alternative to Social Volume. For old metric we have a simple algorythm to detect an asset per message. New metric computed using Natural Language Processing (NLP) technique such as Named Entity Recognition (NER). Our trained NER model can process large amount of social data and extract from it mentions about crypto assets.
+We are excited to announce our new social metric - Social Volume AI. This metric is an alternative to Social Volume. For the old metric we had a simple algorithm to detect an asset per message. The new metric is computed using Natural Language Processing (NLP) techniques such as Named Entity Recognition (NER). Our trained NER model can process large amounts of social data and extract mentions about crypto assets from it.
 Look at [https://app.santiment.net/s/0UQIX6NU](this metric)
 
 ## December 2021 and January 2022
@@ -210,7 +210,7 @@ Look at [https://app.santiment.net/s/0UQIX6NU](this metric)
 
 **Academy**
 
-- Navigation from Academy to Sanbase become better.
+- Navigation from Academy to Sanbase has become better.
 
 ## November 2021
 
@@ -223,7 +223,7 @@ Look at [https://app.santiment.net/s/0UQIX6NU](this metric)
 
 **Sanbase**
 
-- New assets: ASM, BANANA, BLCT, BSW,, CUSD, DDX, DERC, DOGEDASH, EURT, HAI, KAR, LGCY, METIS, MPL, NFT, PLSPAD, SFUND, SGB, SHFT, SNL, SPS, SSV, SSX, TKING, USDX, WHALE, WNCG, XSGD
+- New assets: ASM, BANANA, BLCT, BSW, CUSD, DDX, DERC, DOGEDASH, EURT, HAI, KAR, LGCY, METIS, MPL, NFT, PLSPAD, SFUND, SGB, SHFT, SNL, SPS, SSV, SSX, TKING, USDX, WHALE, WNCG, XSGD
 - Nightmode styles fixes
 
 **Alerts**
@@ -233,7 +233,7 @@ Look at [https://app.santiment.net/s/0UQIX6NU](this metric)
 **Charts**
 
 - Add Layout comments
-- Charts header tool bar is updated. We make it more compact
+- Charts header toolbar is updated. We made it more compact
 
 ### `10.11.21 - 17.11.21`
 
@@ -658,7 +658,7 @@ Sanbase
 - New coins added: STR, L3P, KONO, PKF, COVER, BAMBOO, PROPS, VRA, BANK, NFT, ERN, KLAY
 - New in Watchlists: dynamic columns (as in screener), server-side pagination, horizontal scroll
 - Increased speed of 'eth spent overview' table ('Key stats' tab on ETH chart page)
-- Address watchlist: fixed bug with dublicates in addresses
+- Address watchlist: fixed bug with duplicates in addresses
 - Add table 'Top Holders' table
 - Add metrics 'whale_transaction_count_100k_usd_to_inf' and 'whale_transaction_count_1m_usd_to_inf'
 - Add anchor(link) for sheets templates on home page <https://app.santiment.net/#san-sheets>
@@ -746,7 +746,7 @@ SanSheets
 
 Sanbase
 
-- Alerts has new available metrics:
+- Alerts have new available metrics:
 
   - Holders distributions
   - Whale transaction count
@@ -757,7 +757,7 @@ Sanbase
   - Withdrawal transactions
 
 - Home page: Show percent changes for recent watchlists/screeners
-- Screener: reorder columms ability, saving table sorting, fix flow metrics names
+- Screener: reorder columns ability, saving table sorting, fix flow metrics names
 
 `27.01 - 03.02`
 
@@ -890,7 +890,7 @@ We start tracking Coinbase erc20 wallets.
 
 Charts
 
-- Chart layouts stores the color settings
+- Chart layouts store the color settings
 - New MVRV visualisation
 - More contrast axes in the night mode
 - Assets selector has a new category "DeFi"
@@ -932,7 +932,7 @@ Charts:
 
 ---
 
-Sanbase has a New Plan! This Plan is the perfect for **Crypto Lords**!
+Sanbase has a New Plan! This Plan is perfect for **Crypto Lords**!
 
 What's inside?
 
@@ -951,7 +951,7 @@ Watchlist & Screener page:
 - Copy assets to watchlist & save as watchlist table actions
 - Price graph 7 days column
 - Infographics available for watchlists.
-- Screener has new one infographic: Volume and Marketcap
+- Screener has a new infographic: Volume and Marketcap
 - Screener has a new 'Age consumed' filter
 
 Charts:
@@ -962,7 +962,7 @@ Charts:
 
 Sanbase:
 
-- Historical balance/Alerts now has support BTC/LTC and other wallets
+- Historical balance/Alerts now has support for BTC/LTC and other wallets
 - Uni Dashboard New Navigation and charts
 - Add help&feedback button
 
@@ -1023,7 +1023,7 @@ Fixes:
 - Charts | “Exchange Inflow/Outflow” metrics’ exchange setting now has exchanges divided into 2 categories: CEX and DEX
 - Charts | Add Dex Volume and Trade Amount metrics
 - Charts | Add new Price-DAA Divergence metrics: `price_daa_divergence`, `adjusted_price_daa_divergence`
-- Charts | Search submetrics(Twitter Followers 24h, Socail active users, etc) in metrics search,
+- Charts | Search submetrics (Twitter Followers 24h, Social active users, etc.) in metrics search
 - Charts | New metric Social Active Users
 - Charts | "Exchange Inflow" and "Exchange Outflow", You can choose specific exchange
 - Charts | More sanfam users added to the “Sanfam Insights”
@@ -1109,7 +1109,7 @@ Fixes:
 - Charts | CMD + SHIFT + CLICK - Add metric to the new chart
 - Charts | New metric - Defi total value locked in USD (ETH, for beta users)
 - Charts | Supply Distribution is available in Search for metrics
-- Charts | Make more visible Insigths on the chart
+- Charts | Make Insights more visible on the chart
 - Charts | Add more categories for Insights
 - Charts | Chart layout hot fix
 - Charts | More labels on Top Token Transactions
@@ -1134,25 +1134,25 @@ Fixes:
 - Update Navbar Header | New dropdown for Chart layouts
 - Rename Watchlist in the Navigation Bar to Market
 - Insights | You can see new category - Only for PRO users
-- Update User's dropdown in the Navigation Barj
+- Update User's dropdown in the Navigation Bar
 
 ## July 2020
 
 **`Sanbase`**:
 
 - New | Santiment Screener is here!
-- Insights has new home page
-- Watchlist & Screener has new column "Market segments"
+- Insights has a new home page
+- Watchlist & Screener have a new column "Market segments"
 
 - New metric | Top transactions table (It's connected metric with Transaction volume)
 - New metric | Bitmex Basis Ratio
 - New metric | Supply distribution (You can add more than one Supply Distributions in your chart layout)
 - You can apply any chart layout from your watchlist
-- We add settings for the watermark for our charts.
-- Webhooks for alerts works with Discord.
+- We added settings for the watermark for our charts.
+- Webhooks for alerts work with Discord.
 
 - New metric | Sentiment Weighted
-- On Alerts page we add the featured list of alerts. It's a good examples of usage
+- On the Alerts page we added the featured list of alerts. These are good examples of usage
 - Add keyboard navigation in all search by assets. ![](https://media.giphy.com/media/lqLdJ505muGP88kXJs/giphy.gif)
 - Fix when search list was empty
 - Add formatting for Exchange Balance metric
@@ -1230,7 +1230,7 @@ Fixes:
 
 ![search](socsalerts.png)
 
-- **`Sanbase`**: We add very specific metric for Ethereum. Say welcome to Miners Balance
+- **`Sanbase`**: We added a very specific metric for Ethereum. Say welcome to Miners Balance
 
 ![miners balance](minersBalance.png)
 
@@ -1240,7 +1240,7 @@ Fixes:
 
 ## March 2020
 
-- **`Sanbase`**: We add Twitter % changes 24h, 7d
+- **`Sanbase`**: We added Twitter % changes 24h, 7d
 
 ![twitter changes](twitterChanges.png)
 
@@ -1256,19 +1256,19 @@ Fixes:
 
 ![comparing](comparing.png)
 
-- **`Sanbase`**: We add a better explanation for our metrics on •Studio•
+- **`Sanbase`**: We added a better explanation for our metrics on Studio
 
 ![explanations](explanations.png)
 
 ## February 2020
 
-- **`Sanbase`**: We add time bounds metrics
+- **`Sanbase`**: We added time bounds metrics
 
 ![timebounds](timebounds.png)
 
 - **`Sansheets`**: `=SAN_MEAN_DOLLAR_INVESTED_AGE` function has been published
 
-- **`Sanbase`**: New look of Santiment Studio. Our chart tool is much ease to use now.
+- **`Sanbase`**: New look of Santiment Studio. Our chart tool is much easier to use now.
   ![charts](charts.png)
 
 - **`Sanbase`**: First time to see our new feed. Where you can find latest hot events, insights and anomalies in the crypto world.
@@ -1282,7 +1282,7 @@ Fixes:
 
 ## January 2020
 
-- **`Sanbase`**: We make fresh new chart's engine for our services. Now our charts become much faster. You can try it on our desktop web app - <https://app.santiment.net/>
+- **`Sanbase`**: We made a fresh new chart engine for our services. Now our charts are much faster. You can try it on our desktop web app - <https://app.santiment.net/>
 
 - **`Sanbase`**: Better mobile experience is here. Also you can open our chart in `fullscreen` mode.
   ![mdp](mdp.png)
@@ -1315,7 +1315,7 @@ Fixes:
 - **`Sanbase`**: Now you can check top trending words on our charts -
   ![trends-chart](trends-chart.png)
   Just hovering the chart and moving the mouse pointer. This works with Social Volume metric.
-- **`Sanbase`**: You can use the new search field if you looking for some metric
+- **`Sanbase`**: You can use the new search field if you are looking for a specific metric
   ![metrics-search](metrics-search.png)
 - **`Sanbase/Sansheets/API`**: Finally we have unified header for all our services (except santiment.net)
   ![header](header.png)
@@ -1333,7 +1333,7 @@ Fixes:
 - **`Sanbase`**: Now you can download CSV data from our Sanbase's chart tool.
   ![csv](csv.png)
 
-- **`Sansheets`**: Some functions has been introduced:
+- **`Sansheets`**: Some functions have been introduced:
 
 ```
  SAN_DAILY_AVG_MARKETCAP

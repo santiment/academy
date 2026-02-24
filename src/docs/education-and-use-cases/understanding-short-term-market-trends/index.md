@@ -12,7 +12,7 @@ narratives.
 
 &nbsp;
 
-For the purpose, we will use a layout with four charts with key indicators. We
+For this purpose, we will use a layout with four charts with key indicators. We
 will use SHIB as a proxy.
 
 &nbsp;
@@ -38,13 +38,13 @@ Open this layout with four charts and let’s dive in.
 
 Chart 1 of the layout combines address activity and network growth metrics.
 The idea is to gauge if the price rise is supported by the network metrics
-rise. If it isn’t - good chance for a top.
+rise. If it isn’t - there’s a good chance it’s a top.
 
 ![noborder](./network_activity.png)
 
 <Notebox type="arrowRight">
 Active Addresses 24h - the number of distinct addresses that participated in a
-transfer for the given asset in the past 24 hours window.
+transfer for the given asset in the past 24-hour window.
 
 Network Growth - the number of new addresses that transferred a given coin for
 the first time.
@@ -61,7 +61,7 @@ market top.
 
 ## Social Metrics
 
-Same idea applies to social volume and sentiment metrics on Chart 2 of the layout. Those metrics are usually the strongest mid-trend. When they start slumping but the price still pushes higher - that indicates narrative weakening and momentum exhaustion, which is a good signal to get out.
+The same idea applies to social volume and sentiment metrics on Chart 2 of the layout. Those metrics are usually the strongest mid-trend. When they start slumping but the price still pushes higher, that indicates narrative weakening and momentum exhaustion, which is a good signal to get out.
 
 ![noborder](./social_metrics.png)
 
@@ -106,8 +106,8 @@ Divergences reveal market sentiment and potential price movements.
 
 ## Derivatives Metrics
 On Chart 4 of the layout we look at funding rate and open interest metrics.
-They allow us to analyse the derivatives market of a coin. Increase of open
-interest and high funding while price staying seemingly slat might indicate
+They allow us to analyze the derivatives market of a coin. An increase in open
+interest and high funding while the price stays seemingly flat might indicate
 insiders positioning for an upcoming catalyst event.
 
 ![noborder](./derivative_metrics.png)
@@ -121,7 +121,7 @@ asset.
 </Notebox>
 
 <Notebox type="dart">
-Analyse the derivatives market for potential insider activity.
+Analyze the derivatives market for potential insider activity.
 </Notebox>
 
 <Notebox type="brain">
@@ -129,8 +129,8 @@ Rising open interest and high funding rates with stable prices indicate insider
 positioning for upcoming catalyst events.
 </Notebox>
 
-All of these metrics will help you better spot trend reversals early and to
-identify potential infliction points. 
+All of these metrics will help you better spot trend reversals early and
+identify potential inflection points. 
 
 [Sanbase Charts | Short-term market cycle]( https://app.santiment.net/charts/short-term-over-under-valued-coins-24504)
 

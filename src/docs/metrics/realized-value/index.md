@@ -9,7 +9,7 @@ description: Marketcap alternative with acquisition price instead of current pri
 
 Realized Value is an alternative to Market Capitalization (Market Value). Instead of
 multiplying all coins/tokens by the last price, every coin/token is assigned the
-price at which it was last moved. Assigning age to coin/tokens is done
+price at which it was last moved. Assigning age to coins/tokens is done
 according to the [coin-age model](/metrics/details/stack-coin-age-model).
 
 Realized Value metric is also available for different [time bounds](/metrics/details/timebound), which 

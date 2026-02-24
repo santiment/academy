@@ -4,7 +4,7 @@ author: Jan S
 date: 2019-09-17
 ---
 
-Of all the metrics that can be generated from on-chain data, **the daily active addresses** - DAA for short - is probably most well known.
+Of all the metrics that can be generated from on-chain data, **the daily active addresses** - DAA for short - is probably the most well known.
 
 For the uninitiated, DAA is simply the **number of unique crypto addresses** interacting with (sending or receiving) a particular coin on a daily basis. As such, DAA is one of the best on-chain proxies for measuring the amount of users and the overall level of network activity, making it an extremely valuable indicator in cryptocurrency evaluation.
 
@@ -14,9 +14,9 @@ The [network effect](https://en.wikipedia.org/wiki/Network_effect) posits that t
 
 That said, it's not as easy to explain where this relationship actually comes from, or exactly what influences what. Higher prices *could* attract more people to invest in Bitcoin and in turn lead to growth in active addresses. On the other hand, an increase in daily active addresses *could* lead investors and their models to start valuing Bitcoin higher and buy more. In other words, the 'chicken and the egg' problem is alive and well in crypto.
 
-As always, the truth lies probably somewhere in between. In fact, when testing this via the [Granger Causality test](https://en.wikipedia.org/wiki/Granger_causality), we couldn't find that either metric (DAA or price) clearly moves before the other.
+As always, the truth probably lies somewhere in between. In fact, when testing this via the [Granger Causality test](https://en.wikipedia.org/wiki/Granger_causality), we couldn't find that either metric (DAA or price) clearly moves before the other.
 
-However, when looking directly at the graph, we can see the patterns clearly emerge. For example, throughout Q1 of 2019, the DAA were steadily growing way before the market started to recover. Same holds true for July 2019, when a decline in DAA preceded a decline in price.
+However, when looking directly at the graph, we can see the patterns clearly emerge. For example, throughout Q1 of 2019, the DAA were steadily growing well before the market started to recover. The same holds true for July 2019, when a decline in DAA preceded a decline in price.
 
 So could there be some forecasting potential in this metric?
 

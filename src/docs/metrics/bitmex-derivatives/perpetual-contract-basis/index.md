@@ -11,7 +11,7 @@ Shows the difference between BitMEX [perpetual contract's price](/metrics/bitmex
  Project Ticker and BitMEX [index (spot) price](/metrics/bitmex-derivatives/price-index) for Project Ticker.  
 
 Available as
-  absolute value or ratio. In the last case it is computed using the formula: `(contract's price - index
+  absolute value or ratio. In the latter case, it is computed using the formula: `(contract's price - index
    price)/index price`
 
 ---

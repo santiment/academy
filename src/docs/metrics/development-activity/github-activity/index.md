@@ -81,7 +81,7 @@ Fetch the dev activity for an asset:
 
 ---
 
-Fetch the `github_activity` for an arbitrary organization. You  need to provide only the organization name
+Fetch the `github_activity` for an arbitrary organization. You need to provide only the organization name
 to the parameter, not the whole URL. Github links look like this: `https://github.com/<organization>/<repository>`.
 
 ```graphql-explorer

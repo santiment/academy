@@ -2,7 +2,7 @@
 title: Stack Coin Age model
 author: Santiment Team
 date: 2020-04-02
-description: Introducing the Stack Coin Age model. Extending metrics to Accound-based blockchains.
+description: Introducing the Stack Coin Age model. Extending metrics to Account-based blockchains.
 ---
 
 
@@ -63,7 +63,7 @@ tell us about different types of behavior of market participants.
 The Bitcoin blockchain uses the so-called **UTXO model** for keeping track of
 coins. UTXO stands for "Unspent Transaction Output".
 
-Each Bitcoin address holds of a bunch of _outputs_; each output contains a
+Each Bitcoin address holds a bunch of _outputs_; each output contains a
 certain amount of coins. A Bitcoin transaction consists of a list of old outputs
 that are going to be destroyed or _spent_, and a list of new outputs that are
 going to be created. The total amount of coins in the spent outputs must be
