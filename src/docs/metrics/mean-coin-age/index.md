@@ -1,14 +1,14 @@
 ---
 title: Mean Coin Age
-author: Ivan
-date: 2020-04-06
+author: Ivan & David U.
+date: 2026-02-12
 description: The average age of all coins/tokens on a given blockchain
 ---
 
 ## Definition
 
 Recall that the **[coin-age model](/metrics/details/stack-coin-age-model)**
-allows us at each given point in time to assign age to each coin/token.
+allows us at each given point in time to assign *age* to each coin/token, defined as the # of days held in current wallet.
 
 There are two coin age defined metrics:
 

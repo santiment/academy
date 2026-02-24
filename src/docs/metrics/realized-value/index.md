@@ -7,13 +7,11 @@ description: Marketcap alternative with acquisition price instead of current pri
 
 ## Definition
 
-Realized Value is an alternative to Market Capitalization (Market Value). Instead of
-multiplying all coins/tokens by the last price, every coin/token is assigned the
-price at which it was last moved. Assigning age to coin/tokens is done
-according to the [coin-age model](/metrics/details/stack-coin-age-model).
+Realized Market Cap, also known as Realized Value, is an alternative to regular Market Capitalization (Market Value). Instead of multiplying all coins/tokens by the last price, every coin/token is assigned the price at which it last transacted/moved. 
 
-Realized Value metric is also available for different [time bounds](/metrics/details/timebound), which 
-computes realized value for tokens moved at least once no longer than a specific number of days or years ago.
+Assigning age to coin/tokens is done according to the [coin-age model](/metrics/details/stack-coin-age-model).
+
+The Realized Value metric is available for different [time bounds](/metrics/details/timebound), which computes realized value for tokens moved at least once no longer than the specified time. Eg: `realized_value_usd_7d` tells us the summed value of all transacted coins within 0 - 7 days.
 
 ---
 

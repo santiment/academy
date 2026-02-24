@@ -14,15 +14,15 @@ author: Dino Ibisbegovic
 - [Case Study 2: NRPL and 3y MVRV to Spot Macro Cycle Bottoms](education-and-use-cases/case-study-2-nrpl-and-3ymvrv)
 - [Case Study 3: Social Volume Indicates a Top](education-and-use-cases/case-study-social-volume)
 - [Case Study 4: Using Retail Balances for Profit-Taking Analysis](education-and-use-cases/case-study-retail-profit-taking)
+- [Analyze Speculative Activity with Santiment’s Exchange Metrics](education-and-use-cases/analyze-speculative-activity-with-exchange-metrics/)
+- [Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies](/education-and-use-cases/ price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/)
 - [Timing Market Volatility with Token Age Consumed](/education-and-use-cases/timing-market-volatility-with-token-age-consumed/)
-- [Investigate Speculative Activity with Santiment’s Exchange Metrics](/education-and-use-cases/investigate-speculative-activity-with-santiment’s-exchange-metrics/)
-- [Price to Daily Addresses Divergence - Primer on On-chain Trading Strategies](/education-and-use-cases/price-to-daily-addresses-divergence---primer-on-on-chain-trading-strategies/)
 - [Trading and Transaction Volume](/education-and-use-cases/trading-and-transaction-volume)
 - [Understanding Long-Term Market Trends and Cycles](/education-and-use-cases/understanding-long-term-market-trends-and-cycles)
 - [Understanding Short-Term Market Trends](/education-and-use-cases/understanding-short-term-market-trends)
 - [Understanding Crypto Market Cycles Through Lending Metrics](/education-and-use-cases/understanding-crypto-market-cycles-through-lending-metrics)
 - [Understanding Market Expectations Through Historical Crypto Trends](/education-and-use-cases/understanding-market-expectations-through-historical-crypto-trends)
-- [Whale monitoring to predict Crypto's next moves](/education-and-use-cases/whale-monitoring-to-predict-crypto-next-moves)
+- [Whale monitoring to predict Crypto's next moves](education-and-use-cases/whale-monitoring-to-predict-market-moves/)
 </Resource>
 
 <Resource title="Pro Reports">

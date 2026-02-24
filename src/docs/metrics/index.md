@@ -8,24 +8,39 @@ date: 2024-04-17
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FFJB48Z8tfM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<Resource title="Metric Details">
+
+Documentation and detailed reference material that many metric pages link to. Each article explains a core concept or parameter.
+
+- [Access](/metrics/details/access)
+- [Data Type](/metrics/details/data-type)
+- [Frequency](/metrics/details/frequency)
+- [Interval Timebound](/metrics/details/interval_timebound)
+- [Latency](/metrics/details/latency)
+- [Social Data](/metrics/details/social-data)
+- [Stack Coin Age Model](/metrics/details/stack-coin-age-model)
+- [Supply Distribution Parameters](/metrics/details/supply_distribution_parameters)
+- [Timebound](/metrics/details/timebound)
+
+</Resource>
+
 <Resource title="Deprecated and Renamed Metrics">
 
-There are metrics that are deprecated, scheduled for deprecation, or the
-metrics are available under a new name and the old name should be not used.
+These metrics are deprecated, soon to be removed, or renamed.
 
 - [Deprecated Metrics](/metrics/deprecated-metrics)
 - [Renamed Metrics](/metrics/renamed-metrics)
 
 </Resource>
 
-<Resource title="Video explanations of some metrics">
+<Resource title="Video Explanations">
 
 - [Breakdown of Santiment's Top 15 Metrics](https://www.youtube.com/watch?v=FFJB48Z8tfM)
-- [Top metrics for new users](https://www.youtube.com/watch?v=c6q4RsQvA58)
 - [Finding future crypto pumps](https://www.youtube.com/watch?v=2UpK0CnzzuE)
-- [Social Trends metrics](https://www.youtube.com/watch?v=p60ZlNes8WEo)
-- [Using Top Stakeholders metrics](https://www.youtube.com/watch?v=lLyd8GzPixY)
 - [How to use MVRV](https://www.youtube.com/watch?v=vbYQLNJ40yw)
+- [Social Trends metrics](https://www.youtube.com/watch?v=p60ZlNes8WEo)
+- [Top metrics for new users](https://www.youtube.com/watch?v=c6q4RsQvA58)
+- [Using Top Stakeholders metrics](https://www.youtube.com/watch?v=lLyd8GzPixY)
 
 </Resource>
 

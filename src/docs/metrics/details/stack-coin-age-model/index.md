@@ -243,7 +243,7 @@ Akiron. “Bitcoin Days Destroyed.”
 [bitcoin days destroyed](https://en.bitcoin.it/wiki/Bitcoin_Days_Destroyed).
 
 Bansal, Dhruv. “Bitcoin Data Science (Pt. 1): HODL Waves.”
-[hodl waves](https://unchained.com/blog/tag/hodl-waves/).
+[hodl waves](https://medium.com/unchained-capital-blog/bitcoin-data-science-pt-1-hodl-waves-7f3501d53f63).
 
 Carter, Nic. “Bitcoin Honeybadger 2018 Bitcoin Conference, Riga, Day 2.”
 [bitcoin honeybadged 2018](https://www.youtube.com/watch?v=D2WXxgZ8h-0&t=78m8s).

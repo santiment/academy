@@ -1,22 +1,12 @@
 ---
 title: MakerDAO Protocol
-author: Filip
-date: 2023-01-01
+author: Filip & David U.
+date: 2026-02-12
 description: MakerDAO Protocol Metrics
 ---
 
 ## Description
-MakerDAO is a decentralized finance (DeFi) platform built on the Ethereum 
-blockchain that allows individuals to create and manage the DAI stablecoin, 
-which is pegged to the value of the US dollar. MakerDAO uses a system of 
-smart contracts to manage the creation and redemption of DAI tokens, which 
-can be used for a variety of purposes, such as payments, trading, and investment.
-
-One of the key features of MakerDAO is its collateralized debt position (CDP) 
-system, which allows users to lock up their digital assets as collateral in order 
-to generate DAI stablecoins. This creates a decentralized lending system that is 
-independent of traditional financial intermediaries and allows users to access 
-liquidity without having to sell their assets.
+Sky, formerly known as MakerDAO, is a decentralized finance (DeFi) protocol built on the Ethereum blockchain. Sky allows users to lock up their digital assets as collateral in order to borrow against them. The generated debts are denominated in the $DAI stablecoin which is pegged to the US Dollar.
 
 ### Metrics related to MakerDAO protocol:
 
@@ -99,10 +89,7 @@ Amount in tokens/USD
 
 ## Available Assets
 
-Metrics related to the entire protocol available for `maker` and `multi-collateral-dai`
-
-Other metrics: 
-available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+Metrics are available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
 
 ---
 
