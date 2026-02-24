@@ -57,7 +57,7 @@ Let's examine how to calculate the complexity when a Business PRO subscription u
 {
   getMetric(metric: "price_usd") {
     timeseriesDataPerSlugJson(
-      selector: { slugs: ["bitcoin", "ethereum", "xrp"] }
+      selector: { slugs: ["bitcoin", "ethereum", "tether"] }
       from: "utc_now-1500d"
       to: "utc_now"
       interval: "30m"

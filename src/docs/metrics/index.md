@@ -188,25 +188,3 @@ Some of this methods return [timeseries](/sanapi/metrics/#timeseriesdata) and ot
 - [Contract Interacting Address Count](/metrics/contract-interacting-address-count)
 
 </Resource>
-
-<Resource title="XRPL Metrics">
-
-[XRP Ledger (XRPL)](https://xrpl.org/) is a decentralized, public blockchain led by a global developer community.
-
-Santiment provides key metrics about the XRPL Chain which are listed below.
-The rest of metrics are also available for XRP.
-
-The XRP-specific metrics are:
-
-#### Holders metrics
-
-- [Number of accounts](/metrics/xrpl-metrics/number-of-accounts)
-
-#### Activity metrics
-
-- [DEX Volume in USD](/metrics/xrpl-metrics/dex-volume)
-- [Number of assets issued](/metrics/xrpl-metrics/assets-issued)
-- [Number of active trustlines](/metrics/xrpl-metrics/trustline-count)
-- [Liquidty in XRPL AMM Pools](/metrics/xrpl-metrics/liquidity-amm-pools)
-
-</Resource>

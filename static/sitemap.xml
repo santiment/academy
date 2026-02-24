@@ -563,26 +563,6 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://academy.santiment.net/metrics/xrpl-metrics/number-of-accounts/</loc>
-  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://academy.santiment.net/metrics/xrpl-metrics/dex-volume/</loc>
-  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://academy.santiment.net/metrics/xrpl-metrics/assets-issued/</loc>
-  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://academy.santiment.net/metrics/xrpl-metrics/trustline-count/</loc>
-  <lastmod>2024-06-26T11:01:04+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://academy.santiment.net/education-and-use-cases/trading-and-transaction-volume/</loc>
   <lastmod>2024-06-26T11:01:00+00:00</lastmod>
   <priority>0.64</priority>
@@ -1323,11 +1303,6 @@
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://academy.santiment.net/metrics/xrpl-metrics</loc>
-  <lastmod>2024-06-26T11:01:03+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
   <loc>https://academy.santiment.net/metrics/details/frequency/</loc>
   <lastmod>2024-06-26T11:01:02+00:00</lastmod>
   <priority>0.51</priority>
@@ -1374,11 +1349,6 @@
 </url>
 <url>
   <loc>https://academy.santiment.net/sansheets/functions/social/</loc>
-  <lastmod>2024-06-26T11:01:06+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://academy.santiment.net/sansheets/functions/xrp/</loc>
   <lastmod>2024-06-26T11:01:06+00:00</lastmod>
   <priority>0.51</priority>
 </url>
