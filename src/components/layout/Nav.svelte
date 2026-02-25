@@ -59,7 +59,7 @@
 
   {#if navOpen}
     <div class="fixed inset-0 z-50 top-[71px] flex-col overflow-auto bg-white p-4 md:flex">
-      <Button icon="close" class="fill-waterloo absolute mb-4 self-end" onclick={() => (navOpen = false)}></Button>
+      <Button icon="close" class="fill-waterloo mb-4 self-end" onclick={() => (navOpen = false)}></Button>
 
       {#if slug && sidebarData}
         <Sidebar 
