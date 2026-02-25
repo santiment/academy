@@ -1,0 +1,81 @@
+---
+title: Aggregate Metrics
+author: Filip
+datePublished: 2026-01-01
+description: Aggregate Metrics
+---
+
+## Description
+
+Aggregate metrics combine liquidation, borrowing, and repayment activity across all
+supported lending and borrowing protocols. They track the total value of new debt,
+repayments, and liquidations, separated between stablecoins and non-stablecoins.
+This breakdown makes it easier to analyze differences in user behavior and risk profiles
+across asset types. By aggregating these values at the market level, the metrics provide
+a clear view of overall lending dynamics in DeFi.
+
+### Aggregate Metrics
+
+- `total_lending_liquidations_non_stablecoins_usd` - Total USD value of liquidations for non-stablecoin assets
+- `total_lending_liquidations_stablecoins_usd` - Total USD value of liquidations for stablecoin assets
+- `total_lending_new_debt_non_stablecoins_usd` - Total USD value of new debt issued in non-stablecoin assets
+- `total_lending_new_debt_stablecoins_usd` - Total USD value of new debt issued in stablecoin assets
+- `total_lending_repayments_non_stablecoins_usd` - Total USD value of repayments made in non-stablecoin assets
+- `total_lending_repayments_stablecoins_usd` - Total USD value of repayments made in stablecoin assets
+
+---
+
+## Access
+
+[Restricted Access](/metrics/details/access#restricted-access)
+
+---
+
+## Measuring Unit
+
+- Amount in USD
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Frequency
+
+- [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
+
+---
+
+## Latency
+
+[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+
+---
+
+## Available Assets
+
+Available for `ethereum` (covering lending and borrowing protocols on Ethereum)
+
+---
+
+### SanAPI
+
+Aggregate Metrics: `total_lending_liquidations<_non>_stablecoins_usd`,
+`total_lending_new_debt<_non>_stablecoins_usd` and
+`total_lending_repayments<_non>_stablecoins_usd`
+
+```graphql-explorer
+{
+  getMetric(metric: "total_lending_repayments_stablecoins_usd"){
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-07T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m")
+  }
+}
+```
