@@ -3,7 +3,7 @@ title: Lending Pools Overview
 author: Santiment Team
 description: Information about the Lending Pools's table stored in Santiment Queries.
 datePublished: 2023-04-03
-dateModified: 2024-03-13
+dateModified: 2026-01-15
 sidebar:
   label: Lending Pools
   order: 90
@@ -37,22 +37,23 @@ We can inspect the table with the commands we learned in [Exploration](/santimen
 
 Below, we have listed the table containing the lending pools data with its columns, brief descriptions, and some example queries that you can use to explore the table.
 
-### lending_pools_events
+### lending\_events\_with\_args
 
-- **tx_hash** (_String_): Hash of the transaction in which the event has been included
-- **log_index** (_UInt32_): Log index of the event
-- **dt** (_DateTime_): Date and time of the event
-- **chain** (_String_): The chain that the pool is deployed on
-- **pool_address** (_String_): Address of the pool
-- **on_behalf_of** (_String_): Address holding the debt or collateral
-- **action** (_Enum8_): Type of action recorded. _borrow_ = 0, _deposit_ = 1, _withdraw_ = 2, _liquidate_ = 3, _repay_ = 4
-- **token_in** (_Nullable(String)_): Address of token received by the pool (in case of deposit/repay/liquidate actions)
-- **token_out** (_Nullable(String)_): Address of token leaving the pool (in case of borrow/withdraw/liquidate actions)
-- **amount_in** (_UInt256_): The amount of the token received by the pool. 0 in case of borrow/withdraw
-- **amount_out** (_UInt256_): The amount of the token leaving the pool. 0 in case of deposit/repay
-- **project_name** (_String_): Name of the project, such as aave_v2, aave_v3, compound, compound_v3, liquity and makerdao.
-- **user** (_String_): Address performing the action
-- **computed_at** (_DateTime_): The timestamp when the event was inserted into the table.
+- **tx_hash** (*String*): Hash of the transaction in which the event has been included
+- **log_index** (*UInt32*): Log index of the event
+- **dt** (*DateTime*): Date and time of the event
+- **chain** (*String*): The chain that the pool is deployed on
+- **pool_address** (*String*): Address of the pool
+- **on_behalf_of** (*String*): Address holding the debt or collateral
+- **action** (*Enum8*): Type of action recorded. *borrow* = 0, *deposit* = 1, *withdraw* = 2, *liquidate* = 3, *repay* = 4
+- **token_in** (*Nullable(String)*): Address of token received by the pool (in case of deposit/repay/liquidate actions)
+- **token_out** (*Nullable(String)*): Address of token leaving the pool (in case of borrow/withdraw/liquidate actions)
+- **amount_in** (*UInt256*): The amount of the token received by the pool. 0 in case of borrow/withdraw
+- **amount_out** (*UInt256*): The amount of the token leaving the pool. 0 in case of deposit/repay
+- **project_name** (*String*): Name of the project, such as aave_v2, aave_v3, compound, compound_v3, liquity and makerdao.
+- **user** (*String*): Address performing the action
+- **computed_at** (*DateTime*): The timestamp when the event was inserted into the table.
+- **args** (*JSON*): Additional arguments related to the event
 
 ## Sample Queries
 
@@ -62,7 +63,7 @@ To find the total deposits for AAVE-v2 in the last 30 days for a specific token,
 
 ```sql
 SELECT SUM(amount_in)
-FROM lending_pools_events
+FROM lending_events_with_args
 WHERE project_name = 'aave_v2'
 AND action = 'deposit'
 AND token_in = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2'
@@ -79,7 +80,7 @@ To find the number of liquidations that occurred in the past 30 days on MakerDAO
 
 ```sql
 SELECT COUNT(*)
-FROM lending_pools_events
+FROM lending_events_with_args
 WHERE project_name = 'makerdao'
 AND action = 'liquidate'
 AND dt >= now() - interval 30 DAY
@@ -93,7 +94,7 @@ Test in [Queries](https://queries.santiment.net/query/number-of-liquidations-for
 
 ```sql
 SELECT DISTINCT user
-FROM lending_pools_events
+FROM lending_events_with_args
 WHERE project_name = 'compound'
 AND action = 'borrow'
 AND dt >= now() - interval 30 DAY

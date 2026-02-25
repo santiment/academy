@@ -23,10 +23,6 @@ The result will display the list of tables:
 ┌─name───────────────────┐
 │ xrp_balances           │
 │ xrp_balances_shard_v5  │
-│ xrp_dex_volume         │
-│ xrp_dex_volume_shard   │
-│ xrp_ripple_state       │
-│ xrp_ripple_state_shard │
 └────────────────────────┘
 ```
 
@@ -56,76 +52,4 @@ Represents balance changes per address per currency.
 
 ## xrp_dex_volume
 
-Represents trades on the XRPL DEX.
 
-- **dt** (_DateTime_): The time when the transaction occurred.
-- **blockNumber** (_UInt64_): Unique identifier for the block in which the transaction was processed.
-- **offerAddress** (_String_): The owner of the funds.
-- **makerAddress** (_String_): The address of the account that owns the Offer, resulting in a DEX trade.
-- **offerSequence** (_UInt32_): The sequence number of the Offer transaction that resulted in a DEX trade.
-- **takerPaysIssuerCurrency** (_String_): The currency type offered by the taker.
-- **takerPaysAmount** (_Float64_): The amount of currency offered by the taker.
-- **takerGetsIssuerCurrency** (_String_): The currency type received by the taker.
-- **takerGetsAmount** (_Float64_): The amount of currency received by the taker.
-- **transactionIndex** (_UInt64_): Position of the transaction that caused the balance change inside the XRPL block.
-- **transactionHash** (_String_): Hash value identifying the transaction that caused the balance change.
-- **xrpAmount** (_Nullable(Float64)_): The amount of the trade measured in XRP.
-
-## xrp_ripple_state
-
-Represents creation and destruction or XRPL trustlines.
-
-- **sign** (_Int8_): Indicates the creation or deletion of a trustline. '1' denotes creation, and '-1' denotes deletion.
-- **dt** (_DateTime_): The date and time when the transaction occurred.
-- **blockNumber** (_UInt64_): A unique identifier for the block in which the transaction was processed.
-- **transactionIndex** (_UInt32_): The position of the transaction that caused the balance change inside the XRPL block.
-- **transactionHash** (_String_): The hash value identifying the transaction that caused the balance change.
-- **currency** (_String_): The type of currency used in the trustline.
-- **balance** (_Float64_): The accumulated balance.
-- **highLimitIssuer** (_String_): The issuer of the high account.
-- **highLimitBalance** (_Float64_): The balance of the high account.
-- **lowLimitIssuer** (_String_): The issuer of the low account.
-- **lowLimitBalance** (_Float64_): The balance of the low account.
-
-## Sample Queries
-
-### DEX Volume per Asset Pair, Measured in XRP
-
-DEX volume for a specific asset pair, per day, measured in XRP.
-
-```sql
-WITH ('r3kmLJN5D28dHuH8vZNUZpMC43pEHpaocV/USD', 'rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B/BTC') AS issuer_pair
-SELECT
-    toDate(dt) AS day,
-    SUM(xrpAmount) AS count_final
-FROM xrp_dex_volume
-WHERE (takerPaysIssuerCurrency IN (issuer_pair)) OR (takerGetsIssuerCurrency IN (issuer_pair))
-GROUP BY day
-ORDER BY day DESC
-LIMIT 100
-```
-
-Test in [Queries](https://queries.santiment.net/query/dex-volume-per-asset-pair-measured-in-xrp-422)
-
----
-
-### DEX Volume per Asset Pair, Measured in USD
-
-DEX volume for a specific asset pair, per day, measured in USD. To achieve the result, we need to join the on-chain XRPL data with prices.
-
-```sql
-WITH ('r3kmLJN5D28dHuH8vZNUZpMC43pEHpaocV/USD', 'rvYAfWj5gh67oV6fW32ZzP3Aw4Eubs59B/BTC') AS issuer_pair
-SELECT
-    toDate(dt) AS dt,
-    SUM(xrpAmount * value) AS volume_usd
-FROM xrp_dex_volume
-INNER JOIN daily_metrics_v2 USING (dt)
-WHERE (metric_id = dictGet('metrics_by_name', 'metric_id', 'daily_avg_price_usd'))
-AND (asset_id = dictGet('assets_by_name', 'asset_id', 'xrp'))
-AND ((takerPaysIssuerCurrency IN (issuer_pair)) OR (takerGetsIssuerCurrency IN (issuer_pair)))
-GROUP BY dt
-ORDER BY dt DESC
-LIMIT 100
-```
-
-Test in [Queries](https://queries.santiment.net/query/dex-volume-per-asset-pair-measured-in-usd-423)
