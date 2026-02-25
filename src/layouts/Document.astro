@@ -42,14 +42,14 @@ const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
 
   <div class="flex min-w-0 flex-col">
     <main
-      class="flex w-full max-w-[885px] flex-col px-14 pt-[15px] md:px-4"
+      class="flex w-full max-w-[885px] flex-col px-14 py-[60px] md:px-4 md:py-[20px]"
       data-pagefind-body
     >
       <TableOfContents client:load {headings} {relatedProduct} />
 
       <Breadcrumbs {breadcrumbs} />
 
-      <div class="wrapper mt-6">
+      <div class="wrapper mt-6 md:mt-0">
         {
           doc.data.title && (
             <H1 id={sluggify(doc.data.title)}>{doc.data.title}</H1>
