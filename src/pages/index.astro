@@ -1,16 +1,21 @@
 ---
 import Svg from 'san-webkit-next/ui/core/Svg'
 import Footer from 'san-webkit-next/ui/app/Footer'
+import { cn } from 'san-webkit-next/ui/utils'
 
 import Page from '$layouts/Page.astro'
 
 import DomainCard from '$components/features/home/DomainCard.svelte'
-import Hero from '$components/features/home/Hero.svelte'
-import { cn } from 'san-webkit-next/ui/utils'
-import { GUIDES, RESOURCES } from '$config/home'
+import HeroChat from '$components/features/home/HeroChat.svelte'
+import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
 import SEO from '$components/layout/SEO.astro'
 
-import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
+import turtleDesktopIllustration from '$components/ui/illustrations/turtle-desktop.svg'
+import turtleMobileIllustration from '$components/ui/illustrations/turtle-mobile.svg'
+
+import { GUIDES, RESOURCES } from '$config/home'
+
+const bgImage = `url(${turtleDesktopIllustration.src})`
 ---
 
 <Page>
@@ -19,8 +24,44 @@ import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
     title="Crypto Academy: Learn How to Analyze Cryptocurrency Market"
   />
 
+  <Fragment>
+    <link
+      rel="preload"
+      href={turtleDesktopIllustration.src}
+      as="image"
+      media="(min-width: 992px)"
+      type="image/svg+xml"
+      fetchpriority="high"
+    />
+
+    <link
+      rel="preload"
+      href={turtleMobileIllustration.src}
+      as="image"
+      media="(max-width: 991px)"
+      fetchpriority="high"
+    />
+  </Fragment>
+
   <section class="flex flex-col">
-    <Hero client:load />
+    <div class="hero-bg px-5 py-14">
+      <img
+        src={turtleMobileIllustration.src}
+        alt="Turtoshi"
+        width="242"
+        height="152"
+        fetchpriority="high"
+        class="mx-auto my-0 mb-6 hidden h-[152px] w-[242px] md:block"
+      />
+
+      <h1 class="mb-8 text-center text-3xl text-rhino">
+        Hi, I’m Turtoshi — your AI guide to Academy
+      </h1>
+
+      <div class="mx-auto max-w-[600px] items-center">
+        <HeroChat client:load />
+      </div>
+    </div>
 
     <div class="container">
       <section class="mx-auto mb-20 mt-20 sm:mb-0 sm:mt-7">
@@ -168,3 +209,10 @@ import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
 
   <Footer class="mt-14" client:visible />
 </Page>
+
+<style define:vars={{ bgImage }}>
+  .hero-bg {
+    background-image: var(--bgImage);
+    @apply bg-cover bg-bottom bg-no-repeat md:bg-none;
+  }
+</style>

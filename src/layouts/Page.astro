@@ -6,6 +6,7 @@ import 'san-webkit-next/app.css'
 
 import { ClientRouter } from 'astro:transitions'
 import Notifications from 'san-webkit-next/ui/core/Notifications'
+import fontRegular from 'san-webkit-next/fonts/ProximaNova-Regular.woff2?url'
 
 import Nav from '$components/layout/Nav.svelte'
 
@@ -29,6 +30,7 @@ const { sidebarData } = Astro.props
     <meta name="generator" content={Astro.generator} />
 
     <slot name="seo" />
+    <slot name="head" />
 
     {
       import.meta.env.PROD && (
