@@ -17,8 +17,8 @@ const buildSitemapXml = (
 ${entries}
 </urlset>`
 
-export const GET: APIRoute = async (context) => {
-  const siteUrl = context.site!.href
+export const GET: APIRoute = async ({ site }) => {
+  const siteUrl = site?.href || 'https://academy.santiment.net'
   const docs = await getCollection('docs')
 
   const homepageEntry = buildSitemapEntry(siteUrl)

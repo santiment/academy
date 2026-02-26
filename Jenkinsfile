@@ -12,6 +12,9 @@ slaveTemplates.dockerTemplate { label ->
         def scmVars = checkout scm
 
         if (env.BRANCH_NAME == "main") {
+          def backendUrl = "https://api-stage.santiment.net" 
+          def siteUrl = "https://academy-stage.santiment.net/"
+
           withCredentials([
             string(
               credentialsId: 'SECRET_KEY_BASE',
@@ -24,7 +27,7 @@ slaveTemplates.dockerTemplate { label ->
           ]) {
             def awsRegistry = "${env.aws_account_id}.dkr.ecr.eu-central-1.amazonaws.com"
             docker.withRegistry("https://${awsRegistry}", "ecr:eu-central-1:ecr-credentials") {
-              sh "docker build --build-arg BACKEND_URL=https://api-stage.santiment.net -t ${awsRegistry}/academy:stage -t ${awsRegistry}/academy:${scmVars.GIT_COMMIT} ."
+              sh "docker build --build-arg BACKEND_URL=${backendUrl} --build-arg BACKEND_URL=${siteUrl} -t ${awsRegistry}/academy:stage -t ${awsRegistry}/academy:${scmVars.GIT_COMMIT} ."
               sh "docker push ${awsRegistry}/academy:stage"
               sh "docker push ${awsRegistry}/academy:${scmVars.GIT_COMMIT}"
             }
@@ -32,6 +35,9 @@ slaveTemplates.dockerTemplate { label ->
         }
 
         if (env.BRANCH_NAME == "production") {
+          def backendUrl = "https://api.santiment.net" 
+          def siteUrl = "https://academy.santiment.net/"
+
           withCredentials([
             string(
               credentialsId: 'SECRET_KEY_BASE',
@@ -44,7 +50,7 @@ slaveTemplates.dockerTemplate { label ->
           ]) {
             def awsRegistry = "${env.aws_account_id}.dkr.ecr.eu-central-1.amazonaws.com"
             docker.withRegistry("https://${awsRegistry}", "ecr:eu-central-1:ecr-credentials") {
-              sh "docker build --build-arg BACKEND_URL=https://api.santiment.net -t ${awsRegistry}/academy:production -t ${awsRegistry}/academy:${scmVars.GIT_COMMIT} ."
+              sh "docker build --build-arg BACKEND_URL=${backendUrl} --build-arg BACKEND_URL=${siteUrl} -t ${awsRegistry}/academy:production -t ${awsRegistry}/academy:${scmVars.GIT_COMMIT} ."
               sh "docker push ${awsRegistry}/academy:production"
               sh "docker push ${awsRegistry}/academy:${scmVars.GIT_COMMIT}"
             }

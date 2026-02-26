@@ -42,8 +42,10 @@ const viteConfig = mergeConfig(viteBase, {
   },
 })
 
+const siteUrl = process.env.SITE_URL || 'https://academy.santiment.net'
+
 export default defineConfig({
-  site: 'https://academy.santiment.net',
+  site: siteUrl,
   trailingSlash: 'always',
   build: {
     format: 'directory',
