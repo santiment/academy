@@ -13,7 +13,6 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
-    "@astrojs/sitemap": "^3.6.0",
     "@expressive-code/plugin-line-numbers": "^0.41.4",
     "@melt-ui/svelte": "^0.86.0",
     "@santiment-network/ui": "^0.5.237",

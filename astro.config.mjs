@@ -1,5 +1,4 @@
 import mdx from '@astrojs/mdx'
-import sitemap from '@astrojs/sitemap'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
@@ -86,7 +85,6 @@ export default defineConfig({
     }),
     mdx(),
     tailwind(),
-    sitemap(),
   ],
   vite: viteConfig,
   base: '/',

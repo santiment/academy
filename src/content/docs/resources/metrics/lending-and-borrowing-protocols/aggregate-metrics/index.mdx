@@ -68,15 +68,16 @@ Aggregate Metrics: `total_lending_liquidations<_non>_stablecoins_usd`,
 `total_lending_new_debt<_non>_stablecoins_usd` and
 `total_lending_repayments<_non>_stablecoins_usd`
 
-```graphql-explorer
+```graphql explorer
 {
-  getMetric(metric: "total_lending_repayments_stablecoins_usd"){
+  getMetric(metric: "total_lending_repayments_stablecoins_usd") {
     timeseriesDataJson(
       slug: "ethereum"
       from: "2026-01-01T00:00:00Z"
       to: "2026-01-07T00:00:00Z"
       includeIncompleteData: true
-      interval: "5m")
+      interval: "5m"
+    )
   }
 }
 ```
