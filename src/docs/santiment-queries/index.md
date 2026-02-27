@@ -20,4 +20,4 @@ description: Database explorer & research tool
 - [Lending Pools Overview](/santiment-queries/lending-pools/) tracks the deposits, borrows, repayments, withdrawals, and liquidation actions on lending protocols.
 - [DEX Pools Overview](/santiment-queries/dex-pools/) gives information about the dex pools tables in Santiment Queries.
 - [NFT Tables Overview](/santiment-queries/nft-tables) gives information about the nft related tables in Santiment Queries.
-- [XRPL Tables Overview](santiment-queries/xrpl-tables) gives information about the tables for the XRPL chain in Santiment Queries.
+- [XRPL Tables Overview](/santiment-queries/xrpl-tables) gives information about the tables for the XRPL chain in Santiment Queries.

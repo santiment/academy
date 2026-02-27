@@ -180,7 +180,7 @@ Loading time can be up to 1 minute. Sorry.
 - Displaying amount of available metrics
 
 We are excited to announce our new social metric - Social Volume AI. This metric is an alternative to Social Volume. For the old metric we had a simple algorithm to detect an asset per message. The new metric is computed using Natural Language Processing (NLP) techniques such as Named Entity Recognition (NER). Our trained NER model can process large amounts of social data and extract mentions about crypto assets from it.
-Look at [https://app.santiment.net/s/0UQIX6NU](this metric)
+Look at [this metric](https://app.santiment.net/s/0UQIX6NU)
 
 ## December 2021 and January 2022
 
