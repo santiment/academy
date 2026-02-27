@@ -26,7 +26,7 @@ Metrics related to MakerDAO protocols.
 measured by a token<sup>[1]
 * `mcd_liquidation` - Amount of liquidated tokens<sup>[2]
 * `mcd_erc20_supply` - DAI ERC20 token total supply
-* `mcd_supply` - The total amount of Multi-Collareral DAI tokens: DAI ERC20 Supply plus  DAI in DSR
+* `mcd_supply` - The total amount of Multi-Collateral DAI tokens: DAI ERC20 Supply plus DAI in DSR
 * `mcd_collat_ratio_weth` - These metrics show the collateralization ratio of MCD collateral tokens.
 
 > [1]: Please switch to the new metric `makerdao_total_supplied_usd`,

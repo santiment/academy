@@ -7,7 +7,7 @@ description: Signal indicating a large MakerDAO liquidation
 
 ## Definition
 
-**Multi-Collateral DAI ART Liquidation Signal** indicates that an outstanding liquidation occured.
+**Multi-Collateral DAI ART Liquidation Signal** indicates that an outstanding liquidation occurred.
 
 Fires a signal if more than $100k was liquidated over last 5 minutes.
 

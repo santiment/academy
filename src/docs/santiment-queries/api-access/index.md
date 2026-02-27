@@ -9,12 +9,12 @@ description: How to execute queries using the API
 
 Before you start, make sure you acquaint yourself with the Sanqueries product
 and the SQL queries you can write by reading the `Introduction`, `Exploration`
-and `Writing SQL Queries` articles that can be found on the [Sanqueries Oveview](/santiment-queries/introduction/) page.
+and `Writing SQL Queries` articles that can be found on the [Sanqueries Overview](/santiment-queries/introduction/) page.
 
 The [Santiment Queries Web Interface](https://app.santiment.net/queries) is only
 one of the ways to execute queries and access the data.
 
-For those who want to automate the process of executing queries, we provide access
+For those who want to automate the process of executing queries, we provide
 access via our GraphQL API. You can query the API endpoint directly or use our
 [python library](https://github.com/santiment/sanpy).
 
@@ -35,7 +35,7 @@ A few examples of when the API can be used:
 ## How to use the Web interface to write queries for the API?
 
 The web interface is a powerful tool for exploring the data, writing queries,
-observing the results in real-time or explore prebuilt dashboards.
+observing the results in real-time, or exploring prebuilt dashboards.
 
 Even when the data is consumed only through the API, it is recommended to use
 the web interface to write the SQL queries. The web interface
@@ -56,7 +56,7 @@ There are two ways to execute queries using the API:
 
 ### The query
 
-The query that is used in the examples bellow is the following:
+The query that is used in the examples below is the following:
 
 ```sql
 SELECT
@@ -215,7 +215,7 @@ The meaning of the fields is:
   Example types are `UInt64`, `Date`, `Float64`, `DateTime`, `String`, etc. These type are mapped
   to JSON types as JSON has a limited number of types. All integer and float types are
   mapped to the JSON number type but with specified meaning (size, type and sign of the number).
-  A lot of the other types are transpored as JSON string - `String`, `Date`, `DateTime` and others
+  A lot of the other types are transported as JSON string - `String`, `Date`, `DateTime` and others
   are JSON strings with specified meaning.
 - `rows` is a list of lists, each inner list is a row in the result. The order of the
   rows is the same as in the result of the SQL query. The order of the columns in the
@@ -278,9 +278,9 @@ dt                   metric    asset       value
 
 #### sanpy request parameters definition
 
-The `execute_sql` function accepts three named parameters - one mandatory and two optinal:
+The `execute_sql` function accepts three named parameters - one mandatory and two optional:
 
-- `query` - The meaning is the same as in the `runRawSqlQuery` API described. This parameter is mandatory/
+- `query` - The meaning is the same as in the `runRawSqlQuery` API described. This parameter is mandatory.
 - `parameters` - The meaning is the same as in the `runRawSqlQuery` API described above.
   The format here is a Python dictionary that automatically gets converted to a JSON string when
   executing the request. If the query does not have any parameters, this parameter can be omitted.

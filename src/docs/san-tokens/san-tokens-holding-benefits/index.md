@@ -38,7 +38,7 @@ By providing 3,000+ SAN to our Uniswap V2 pools (and the corresponding amount of
 
 You can add liquidity to the SAN<->ETH pool here: <https://app.uniswap.org/#/add/v2/ETH/0x7C5A0CE9267ED19B22F8cae653F198e3E8daf098>
 
-As soon as you hold the LP tokens in your wallet and connect it to your account or login with it, you will automatically receive a Pro subscription within one hour. 💗
+As soon as you hold the LP tokens in your wallet and connect it to your account or log in with it, you will automatically receive a Pro subscription within one hour. 💗
 
 <Notebox>Please make sure to do your own due diligence regarding the Uniswap protocol and understand the risks involved in providing liquidity. Santiment has no control over the Uniswap protocol and cannot be held accountable for any potential losses of any kind.</Notebox>
 

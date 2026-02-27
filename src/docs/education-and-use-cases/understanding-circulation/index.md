@@ -14,7 +14,7 @@ provides insights into the actual movement and usage of the asset, indicating
 network activity and utility.
 
 Accounted tokens in Circulation are unique, meaning that if the same token is
-moved multiple times per day via a *wash trade** it is counted only once.
+moved multiple times per day via a *wash trade*, it is counted only once.
 
 <Notebox type="openBook"> 
 A "wash trade" is a type of market
@@ -30,11 +30,11 @@ marketplace without any change in position.
 Circulation measures the number of unique coins/tokens being transferred
 between addresses, while transaction volume includes all on-chain movements of
 a token. This means that if one token/coin changes hands 5 times on a given
-day, it will be counted once by the token circulation, but 5 times if were to
+day, it will be counted once by the token circulation, but 5 times if you were to
 use [transaction
 volume](https://academy.santiment.net/education-and-use-cases/trading-and-transaction-volume/).
 
-Circulation shouldn’t also be used interchangeably with [Stock to Flow (S2F)
+Circulation also shouldn’t be used interchangeably with [Stock to Flow (S2F)
 ratio](https://academy.santiment.net/metrics/stock-to-flow/). S2F compares the
 total supply of a token to the new annual production, often used to predict
 price based on an asset's supply dynamics and scarcity. Circulation, on the
@@ -44,7 +44,7 @@ timeframe, indicating network activity and utility.
 ## **How to interpret Circulation metric**
 
 High circulation often signals increased interest and utility, which can lead
-to change in price direction. Depending on context, a spike in Circulation can
+to a change in price direction. Depending on context, a spike in Circulation can
 be a very good indicator of a nearing top or bottom as we can see on the chart
 below:
 
@@ -75,7 +75,7 @@ same.
 
 ![noborder](selector.png)
 
-Alternatively you can use the smaller selector to build on top of your chart
+Alternatively, you can use the smaller selector to build on top of your chart
 and insert more metrics, even for multiple tokens at once.
 
 See what others in crypto can’t!

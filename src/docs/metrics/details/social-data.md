@@ -109,7 +109,7 @@ We collect posts from [4chan.org/biz](https://boards.4chan.org/biz/)
 In the metric name this source is typed as `4chan`. Example:
 `social_volume_4chan`
 
-**Latency**: The scraper goes though all the new posts once per 5 minute.
+**Latency**: The scraper goes through all the new posts once every 5 minutes.
 
 **History**: The historical data starts at `2023-02-05`
 
@@ -121,7 +121,7 @@ We collect posts from [Farcaster](https://www.farcaster.xyz/)
 In the metrics' names this source is typed as `farcaster`. Example:
 `social_volume_farcaster`
 
-**Latency**: The scraper goes though all the new posts once per 5 minute.
+**Latency**: The scraper goes through all the new posts once every 5 minutes.
 
 **History**: The historical data starts at `2024-04-01`
 

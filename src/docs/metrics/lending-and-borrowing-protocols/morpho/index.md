@@ -9,8 +9,8 @@ description: Morpho Protocol Metrics
 [Morpho](https://morpho.org/) is a decentralized finance (DeFi) protocol designed to optimize yields in 
 lending and borrowing markets. It operates as a layer on top of existing protocols like 
 Compound and Aave, improving the efficiency of capital allocation by matching lenders and 
-borrowers directly. This direct matching reduces intermediaries, enhancing both the interest 
-rates for lenders and borrowers. The protocol aims to offer seamless and more profitable 
+borrowers directly. This direct matching reduces intermediaries, enhancing the interest
+rates for both lenders and borrowers. The protocol aims to offer seamless and more profitable 
 interactions within the DeFi ecosystem.
 
 ### Metrics related to Morpho protocol:
@@ -83,10 +83,10 @@ Flashloan metrics:
 
 ## Available Assets
 
-Metrics related to the entire protocol available for `morpho`.
+Metrics related to the entire protocol are available for `morpho`.
 
-Other metrics: 
-available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+Other metrics are
+available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>).
 
 ---
 

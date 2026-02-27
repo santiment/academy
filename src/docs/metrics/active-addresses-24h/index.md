@@ -16,8 +16,8 @@ This metric is similar to the Daily Active Addresses. The difference is that the
 daily active addresses is computed on whole days only - it counts the active
 addresses for every day (between 00:00:00 and 23:59:59). The active addresses
 24h is computed every 5 minutes and counts the active addresses for
-the past 24 hours. Example: The value of the metric at 17:30pm on March 22
-contains the active addresses in the interval [17:30pm March 21, 17:30pm March
+the past 24 hours. Example: The value of the metric at 17:30 on March 22
+contains the active addresses in the interval [17:30 March 21, 17:30 March
 22].
 
 

@@ -47,11 +47,11 @@ competitive edge:
 - [Social Trends Dashboard](https://app.santiment.net/social-trends): Set of tools to identify trending narratives, topics, and tokens for insights into market sentiment:
     - [Trending Words](https://app.santiment.net/social-trends): See which keywords have the most traction.
     - [Trending Stories](https://app.santiment.net/social-trends/trending-stories): See which stories are getting the most attention.
-    - [Trending Coins](https://app.santiment.net/social-trends/trending-coins): See which assets are have the most social interest.
-    - [Crypto Narratvies](https://app.santiment.net/social-trends/crypto-narratives): See narratives and their behaviors over time.
+    - [Trending Coins](https://app.santiment.net/social-trends/trending-coins): See which assets have the most social interest.
+    - [Crypto Narratives](https://app.santiment.net/social-trends/crypto-narratives): See narratives and their behaviors over time.
 - [Watchlists](https://app.santiment.net/watchlists): Track custom or pre-set market segments.
 - [Whale Watcher Dashboard](https://queries.santiment.net/dashboard/top-cex-deposits-1001?utm_source=sanbase&utm_medium=post&utm_campaign=sanbase_eth_top_cex_deposits_b_112124/&fpr=twitter): Tracks large deposits to centralized exchanges, which can signal potential sell-offs.
-- [Asset Activity Matrix](https://app.santiment.net/insights/read/the-new-activity-matrix-model-for-sanbase-pro-is-a-game-changer-for-crypto-analytics-7389): All of your daily crypto analytic research on one page thanks for SanSheets and Google Sheets, PRO subscription required.
+- [Asset Activity Matrix](https://app.santiment.net/insights/read/the-new-activity-matrix-model-for-sanbase-pro-is-a-game-changer-for-crypto-analytics-7389): All of your daily crypto analytic research on one page thanks to SanSheets and Google Sheets. PRO subscription required.
 
 ![noborder](./scredriver.png)
 

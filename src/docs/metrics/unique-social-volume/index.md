@@ -8,7 +8,7 @@ description: The amount of messages/documents containing a given search term wit
 
 ## Definition
 
-Unique Social Volume is build on top of the [Social Data](/metrics/details/social-data).
+Unique Social Volume is built on top of the [Social Data](/metrics/details/social-data).
 
 The **Unique Social Volume** is the same type of aggregation on top of the
 social data as the **Social Volume**, but it takes into account only the unique
@@ -16,7 +16,7 @@ text documents for each interval, i.e. completely duplicated messages will be
 excluded from the calculations, which results in a slightly lower and to some
 degree cleaner way to measure the volume of mentions for a given asset or word.
 
-There are two separate metrics for the unique social volume:
+There are three separate metrics for the unique social volume:
 
 - unique_social_volume_total_5m
 - unique_social_volume_total_1h
@@ -25,13 +25,13 @@ There are two separate metrics for the unique social volume:
 The `5m`, `1h` and `1d` control what range of data is used. If some spam messages are
 posted in the span of 30 minutes, then every one of the six  5-minute buckets would have
 one copy of that message. In the case of `1h` all these messages would be reduced
-to a single one, thus providing more aggresive spam filtering.
+to a single one, thus providing more aggressive spam filtering.
 
 When comparing `unique_social_volume_total_1h` and
 `unique_social_volume_total_5m` aggregated at `1h` intervals, the
 `unique_social_volume_total_1h` will always have less or equal values.
 
-We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
+We constantly update our labels, which helps us keep them as fresh as possible but results in historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12-hour period, the metric can be supplemented with new data.
 
 ---
 

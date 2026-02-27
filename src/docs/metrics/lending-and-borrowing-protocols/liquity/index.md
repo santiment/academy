@@ -16,7 +16,7 @@ highly fluctuating interest rates.
 Aside from the collateral, the loans are backed by a Stability Pool containing LUSD and 
 by other borrowers collectively serving as a safety net.
 
-### Metrics related to Compound protocol:
+### Metrics related to Liquity protocol:
 
 Action metrics:
 * `liquity_action_deposits` - Amount of deposited tokens
@@ -75,9 +75,9 @@ Daily active addresses:
 
 ## Available Assets
 
-Deposit/supply metrics available for `ethereum`
+Deposit/supply metrics are available for `ethereum`.
 
-Repayment/borrow metrics available for `liquity-usd`
+Repayment/borrow metrics are available for `liquity-usd`.
 
 ---
 

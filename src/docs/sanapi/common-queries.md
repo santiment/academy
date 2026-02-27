@@ -28,7 +28,7 @@ This query obtains the daily active addresses for bitcoin for a period of 30 day
 ### Retrieve data for one asset, apply some transformation - I
 
 The development activity is very sensitive to day/night cycles, as well as public holidays or vacation days taken by the team.
-To smooth the data we can apply a moving average transformation to the data direclty in the API call.
+To smooth the data, we can apply a moving average transformation to the data directly in the API call.
 
 ```graphql
 {
@@ -48,7 +48,7 @@ You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/gr
 
 ### Retrieve data for one asset, apply some transformation - II
 
-The `twitter_followers` metric shows the total number of twitter followers of
+The `twitter_followers` metric shows the total number of Twitter followers of
 the handle of a project. If we apply the `consecutive_difference` we can
 directly see how the total number of followers changes week by week (because we
 use 7 day interval). The values show how many followers the project gained or
@@ -225,7 +225,7 @@ The API allows for very complex queries that filter, order and paginate projects
 - Runs on the watchlist `stablecoins` (one can use their own watchlists) with the addition of `santiment`, `bitcoin` and `ethereum`;
 - Keeps only those projects that have at least 1000 daily active addresses on average for the last 7 days;
 - Orders the result in descending order using the current daily active addresses;
-- Returns the first 10 projects according to these filter and orderding rules.
+- Returns the first 10 projects according to these filter and ordering rules.
 
 ```graphql
 {

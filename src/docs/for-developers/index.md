@@ -25,9 +25,9 @@ minimizing the number of API calls and reducing bandwidth usage.
 Apart from precomputed metrics, Santiment has the [Santiment Queries](/santiment-queries)
 product, which allows developers to write custom SQL to obtain the data from the
 database directly. These SQL queries can be executed from the [Queries web page](https://queries.santiment.net/)
-or [execute the queries through the API](/santiment-queries/api-access)
+or [execute the queries through the API](/santiment-queries/api-access).
 
-### GraphQL API 
+### GraphQL API
 
 In this example, the query fetches the daily active addresses for Bitcoin. The
 query is self-descriptive and easy to maintain. New members to your team can
@@ -88,7 +88,7 @@ There are a few different ways to explore the available metrics.
 - Visit the [metrics' docs articles page](/metrics) where you can find links to
   the documentation articles of the metrics.
 - Open the [Metrics Catalog](https://api.santiment.net/available_metrics)
-  webpage that list all the metrics with information about the available
+  webpage that lists all the metrics with information about the available
   assets. This page allows you to filter the metrics supported by a given asset
   and download the data as CSV.
 - Open any [chart page on Sanbase](https://app.santiment.net/charts?slug=ethereum) and explore the metrics on the sidebar.

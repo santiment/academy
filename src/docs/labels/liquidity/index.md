@@ -7,7 +7,7 @@ description: Liquidity provider label
 
 ## Description
 
-Liquidity providers are entities that offer both buy and sell-side liquidity to cryptocurrency.
+Liquidity providers are entities that offer both buy-side and sell-side liquidity to cryptocurrency markets.
 
 ## [Label fqn](/labels/label-fqn)
 

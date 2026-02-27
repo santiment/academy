@@ -2,16 +2,16 @@
 title: Spent Coins Age Band
 author: Ante
 date: 2022-06-01
-description: The distribution by age of coins spend on a given day
+description: The distribution by age of coins spent on a given day
 ---
 
 ## Definition
 
 Spent Coins Age Band is a set of metrics that represent the distribution of coins
 spent on a given day by the age of coins. In addition to absolute values, there
-is percentage type of this metric, which shows the relative share of coins in a
-given interval in relation to total amount of coins spent on a given day.
-Assigning age to coin/tokens is done according to the [coin-age model](/metrics/details/stack-coin-age-model).
+is a percentage type of this metric, which shows the relative share of coins in a
+given interval in relation to the total amount of coins spent on a given day.
+Assigning age to coins/tokens is done according to the [coin-age model](/metrics/details/stack-coin-age-model).
 
 ---
 

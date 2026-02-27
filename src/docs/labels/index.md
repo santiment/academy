@@ -11,7 +11,7 @@ Generally speaking, an **address label** is a piece of information attached to a
 
 The most common use case of one is to denote the owner of the given address. E.g. address “A” belongs to Alice, and address “B” belongs to Binance exchange. Another use-case would be marking (aka labeling) an address as a smart contract. E.g. address “C” is an ERC-721 standard contract.
 
-In the context of market analysis we are interested in the market participants' addresses mostly. Information about excanhges, whales, traders, DeFi protocols, etc gives a lot of insights on what's going on on the market. There are a lot of label types and use-cases which are described below.
+In the context of market analysis, we are mostly interested in the market participants' addresses. Information about exchanges, whales, traders, DeFi protocols, etc. gives a lot of insight into what is going on in the market. There are a lot of label types and use cases, which are described below.
 
 
 ## How we gather labels
@@ -30,7 +30,7 @@ Collecting labels is not a trivial task. To keep our explanation concise, there 
 
     This is the most powerful method if you need to label many addresses. At Santiment, we have a lot of manually developed algorithms for labeling different types of addresses. Some of our algorithms are native (e.g. in order to find NFT traders, we can just track trades on an NFT trading platform). Others are quite sophisticated (e.g. we developed an algorithm that tracks coinbase cold wallets and relies on some counterintuitive assumptions and filters the whole history of ETH transactions to find these cold wallets).
 
-Very often, we combine different methods. For instance, we could manually collect some addresses, manually analyze its on-chain behavior, and design an algorithm gathering all addresses of the initial type.
+Very often, we combine different methods. For instance, we could manually collect some addresses, manually analyze their on-chain behavior, and design an algorithm gathering all addresses of the initial type.
 
 
 ## Limitations
@@ -49,7 +49,7 @@ In case you found any mistakes in our labeling, please let us know (via discord 
 
 ## Naming
 
-Each label has it's own name, so called label FQN (Fully Qualified Name). [Read about label FQNs here](/labels/label-fqn)
+Each label has its own name, a so-called label FQN (Fully Qualified Name). [Read about label FQNs here](/labels/label-fqn)
 
 ## Label Groups
 
@@ -63,7 +63,7 @@ We split all labels into major groups. Each major group might consist of smaller
 
 * **Owner**
 
-    A standalone label which denotes the person or company which controls a given address. Note that the owner label is not a nickname. Owner is a broader term rather than nickname which is an owner's attribute (e.g. Vitalik Buterin might have several nicknames: 'Vitaliy', 'ETH_daddy', 'John Galt', etc)
+    A standalone label that denotes the person or company that controls a given address. Note that the owner label is not a nickname. Owner is a broader term than nickname, which is an owner's attribute (e.g. Vitalik Buterin might have several nicknames: 'Vitaliy', 'ETH_daddy', 'John Galt', etc.).
 
 * **Infrastructure**
 
@@ -83,7 +83,7 @@ We split all labels into major groups. Each major group might consist of smaller
 
 ---
 
-Below you can find labels which are attached to every group from above. Please note that an address might have many labels. For example, every _DEX_ address is labeled as _DeFi_ as well (_DeFi_ is a parent group for _DEX_ group) or _centralized_exchange_ addresses most often owe a dedicated _owner_ label.
+Below you can find labels that are attached to every group from above. Please note that an address might have many labels. For example, every _DEX_ address is labeled as _DeFi_ as well (_DeFi_ is a parent group for the _DEX_ group), and _centralized_exchange_ addresses most often have a dedicated _owner_ label.
 
 
 ### Domains

@@ -33,7 +33,7 @@ The SAN token is also available on [Uniswap](https://app.uniswap.org/#/swap?outp
 
 #### Kyber
 
-San tokens are also available on [Kyber](https://kyber.network/) via [Kyber Swap](https://kyberswap.com/swap/ethereum/eth-to-san). If you don’t have any crypto, you may get it on [Kyber](https://kyberswap.com/buy-crypto) using your credit card.
+SAN tokens are also available on [Kyber](https://kyber.network/) via [Kyber Swap](https://kyberswap.com/swap/ethereum/eth-to-san). If you don’t have any crypto, you may get it on [Kyber](https://kyberswap.com/buy-crypto) using your credit card.
 
 ![noborder](Kyber.png)
 

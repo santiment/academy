@@ -9,7 +9,7 @@ is a measurement that detects changes in the volume of the token circulation and
 can show us when tokens that have been frozen for a long time come into
 circulation. We have computed this measurement for all ERC20 tokens. In theory
 it can be calculated for any cryptocurrency which has publicly readable
-transactions (so not like #ZEC or #XMR)
+transactions (so not like #ZEC or #XMR).
 
 To understand the token age consumed, we need to rethink our idea of a token
 account. At any given moment, an account has a value which is a single number.
@@ -91,7 +91,7 @@ consumed.
 If there were multiple incoming and/or outgoing transactions happening at the
 same block number $t$, we replace them in our calculations with a single
 transaction. This transaction will be incoming if the total incoming amount is
-greater than the total outgoing amount, and it will be outgoing. So we
+greater than the total outgoing amount, and it will be outgoing otherwise. So we
 can reduce this case to one of the cases we described above.
 
 After we have computed the token age consumed contribution at block $t$ for
@@ -108,15 +108,15 @@ tokens, which she obtained at block 0, and Bob doesn't have any tokens.
 
 First, Alice transfers 1000 tokens to Bob at block 5. Her transaction stack has a
 single element $[(5000, 0)]$ and 1000 tokens are consumed from it, contributing
-$1000*(5-0)=5000$ token age consumed for block 5. Now Alice transaction stack is
-$[(4000, 0)]$ and Bob transaction stack is $[(1000,5)]$.
+$1000*(5-0)=5000$ token age consumed for block 5. Now Alice's transaction stack is
+$[(4000, 0)]$ and Bob's transaction stack is $[(1000,5)]$.
 
 Later Bob decides to move these tokens to an exchange and sell them, so at block
 15 Bob transfers his tokens to an exchange wallet, which contributes
 $1000*(15-5)=10000$ token age consumed to block 15. On the other hand Alice
 transfers 2000 tokens to Bob at the same block 15, which makes the total token
 age consumed for block 15 $10000 + 2000 * (15-0) = 10000 + 30000 = 40000$. The
-transaction stacks of Alice is $[(2000, 0)]$, while the stack of Bob is $[(2000,
+transaction stack of Alice is $[(2000, 0)]$, while the stack of Bob is $[(2000,
 15)]$.
 
 At block 25, both Alice and Bob decide to transfer their tokens to an exchange,

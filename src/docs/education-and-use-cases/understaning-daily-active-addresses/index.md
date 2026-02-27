@@ -12,7 +12,7 @@ referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Definition
 
-[Daily Active Addresses(DAA)](https://academy.santiment.net/metrics/daily-active-addresses/) is the amount of unique active addresses that participate in transactions
+[Daily Active Addresses (DAA)](https://academy.santiment.net/metrics/daily-active-addresses/) is the number of unique active addresses that participate in transactions
 on a blockchain network each day. It's a measure of the network's activity and
 usage. High DAA suggests strong user engagement and network utility. DAA can be
 influenced by various factors like market trends, network upgrades, or major
@@ -48,7 +48,7 @@ more informed decision.
 
 ## How to monitor DAA using Sanbase
 
-Here is a ready-to-be-copied Layout with Trading and Transaction volume for
+Here is a ready-to-be-copied Layout with Daily Active Addresses for
 your convenience: [Sanbase Daily Active Addresses Chart](https://app.santiment.net/charts/daily-active-addresses-25309)
 
 ![noborder](./daa_sanbase_chart.png)

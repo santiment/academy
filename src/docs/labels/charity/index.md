@@ -7,7 +7,7 @@ description: Charity label
 
 ## Description
 
-This label is assigned for project addresses that are involved in charitable or nonprofit endeavors.
+This label is assigned to project addresses that are involved in charitable or nonprofit endeavors.
 
 ## [Label fqn](/labels/label-fqn)
 

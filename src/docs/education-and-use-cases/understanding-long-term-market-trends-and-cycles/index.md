@@ -10,7 +10,7 @@ a long-term market cycle.
 
 &nbsp;
 
-For the purpose, we will use a layout with five charts with key indicators. We
+For this purpose, we will use a layout with five charts with key indicators. We
 will use BTC as a proxy.
 
 &nbsp;
@@ -35,8 +35,8 @@ Open this layout with five charts and let’s dive in:
 
 ## [Age Consumed](/metrics/age-consumed)
 
-Key metric on chart 1 of the layout is age consumed, which represents amounts
-of coins that moved multiplied by the time that they spent in the last address.
+The key metric on chart 1 of the layout is age consumed, which represents the amount
+of coins that moved multiplied by the time that they spent at the last address.
 Large spikes of this metric mean that long-term holders are moving their funds,
 which often marks key turning points for the market.
 
@@ -58,10 +58,10 @@ market shifts.
 
 ## [Mean Dollar Invested Age (MDIA)](/metrics/mean-coin-age)
 
-On chart 2 of the layout, you can see mean dollar age metrics, one of which is
-measuring this value for all coins, while the other one is only looking at
+On chart 2 of the layout, you can see mean dollar age metrics, one of which
+measures this value for all coins, while the other one only looks at
 coins moved within the last 365 days. These metrics help gauge the macro trend
-strength. When the value drops, that indicates inflow of new money, and the
+strength. When the value drops, that indicates an inflow of new money, and the
 inverse indicates that money isn’t coming in. They usually start falling around
 the middle of the bull market, acting as a confirmation of strength. Change of
 mode from down to up often predicts major market tops.
@@ -87,10 +87,10 @@ Rising Values show lack of new money, often predicting major market tops.
 
 ## [MVRV Ratio](/metrics/mvrv)
 
-Chart 3 of the layout has MVRV ratios  (Market Value to Realized Value) with
-different timeframes. Here, the same idea of coins moved within specific time
+Chart 3 of the layout has MVRV ratios (Market Value to Realized Value) with
+different timeframes. Here, the same idea of coins moved within a specific time
 applies. The key idea here is to look for divergences between MVRV and price.
-MVRV diverging from price can be only caused by the change in realized value.
+MVRV diverging from price can only be caused by a change in realized value.
 When realized value rises, that means on average market participants are buying
 in at the highs, indicating “greed” mode of the market, and price tends to
 trend down as a result. The opposite applies as well. When participants are
@@ -120,8 +120,8 @@ Divergences reveal market sentiment and potential price movements.
 
 Network Realized Profit/Loss on chart 4 of the layout measures the collective
 PnL of all holders. Big negative spikes are usually the best long-term buy
-signals. Spotting the tops, however, works a bit different - the biggest spikes
-are happening around mid-bull market. But after that, when the price continues
+signals. Spotting the tops, however, works a bit differently - the biggest spikes
+happen around mid-bull market. But after that, when the price continues
 higher but NRPL stays close to 0, this usually means that the market’s top is
 near.
 
@@ -137,7 +137,7 @@ Identify optimal buying opportunities and potential market peaks.
 </Notebox>
 
 <Notebox type="brain">
-Big Negative Spikes indicate the best longterm buy signals.
+Big Negative Spikes indicate the best long-term buy signals.
 Mid-Bull Market Spikes signify significant profit-taking.
 Price rising with NRPL Near 0 suggests an approaching market top.
 </Notebox>
@@ -146,8 +146,8 @@ Price rising with NRPL Near 0 suggests an approaching market top.
 
 Social volume on panel 5 indicates the amount of discussion in crypto social
 media. You generally want to get in when the amount of chatter is low, and the
-average Joe isn’t interested in crypto at all, but when everyone is only taking
-about Bitcoin, it’s best to consider an exit or partial profit taking strategy.
+average Joe isn’t interested in crypto at all, but when everyone is only talking
+about Bitcoin, it’s best to consider an exit or partial profit-taking strategy.
 
 ![noborder](./social_volume.png)
 

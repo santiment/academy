@@ -37,11 +37,11 @@ text.
 
 
 <Notebox type="note">
-We constantly update our labels
-which helps us to keep labels as fresh as possible but result historical data
+We constantly update our labels,
+which helps us keep them as fresh as possible but results in historical data
 changes. Any modifications to labels, social sources, or relevant jobs will
-prompt recalculation for the previous month's data. Within a 12 hour period,
-metric can be supplemented with new data.
+prompt recalculation for the previous month's data. Within a 12-hour period,
+the metric can be supplemented with new data.
 </Notebox>
 
 ## Sentiment Score
@@ -70,16 +70,16 @@ the same: short messages with a single and/or simple idea behind them.
 
 But this is not the case for all the messages: some of them might be long and
 complicated, some might be just neutral or contain spam or other irrelevant
-information. These kind of messages usually have a pretty vanished pair of
+information. These kinds of messages usually have a fairly indistinct pair of
 sentiment scores: both **positive** and **negative** scores are close to 0.5.
-We don't include these kind of messages while calculating the **Sentiment
+We don't include these kinds of messages when calculating the **Sentiment
 Metrics**: they are filtered out by a certain threshold.
 
 ## Bullish Bearish Sentiment Score
 
 We are using `ElKulako/cryptobert` model from [Hugging Face](https://huggingface.co/) 🤗. This model was trained on crypto related tweets, reddit comments, and telegram posts.
 
-Model returns three probability scores: `bullish`, `neutral`, `bearish`. Each probability score is fall in a range between 0 and 1. Sum of all three scores equals to 1.
+The model returns three probability scores: `bullish`, `neutral`, `bearish`. Each probability score falls in a range between 0 and 1. The sum of all three scores equals 1.
 
 Because it is based on the BERT model, it better understands the context of the text.
 

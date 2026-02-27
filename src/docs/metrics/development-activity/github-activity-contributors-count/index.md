@@ -21,7 +21,7 @@ There are 3 development activity contributors count metrics available:
   when the value is needed for all assets at once.
 - `ecosystem_github_activity_contributors_count_7d` - Precomputed for each
   ecosystem. The metric is defined as the total count of unique contributors
-  that contributed to the github organization of at least one of assets that
+  that contributed to the GitHub organization of at least one of the assets that
   belong to it.
 
 > Note: The precomputed metrics `github_activity_contributors_count_7d` and
@@ -42,7 +42,7 @@ There are 3 development activity contributors count metrics available:
 
 ## Measuring Unit
 
-Number of github accounts
+Number of GitHub accounts
 
 ---
 

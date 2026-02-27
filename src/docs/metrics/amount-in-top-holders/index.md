@@ -7,7 +7,7 @@ description: Number of unique coins/tokens held by top holders
 
 ## Definition
 
-Show the amount of coins/tokens help by the top holders. By default the top 10
+Shows the amount of coins/tokens held by the top holders. By default, the top 10
 holders are taken.
 
 Metrics available:

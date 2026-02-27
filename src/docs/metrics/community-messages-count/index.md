@@ -8,16 +8,16 @@ description: Number of messages in a project's community chat server
 
 ## Definition
 
-Community Messages Count is build on top of the [Social Data](/metrics/details/social-data).
+Community Messages Count is built on top of the [Social Data](/metrics/details/social-data).
 
 Community Messages Count returns the number of messages written in the
-asset's own community chat (telegram server) or subreddit (reddit).
+asset's own community chat (Telegram server) or subreddit (Reddit).
 
 Currently `telegram` and `reddit` are supported.
 
-We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
+We constantly update our labels, which helps us keep them as fresh as possible but results in historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12-hour period, the metric can be supplemented with new data.
 
-Experimental metrics, might undergo changes if a future.
+Experimental metrics; might undergo changes in the future.
 
 
 ## Access
@@ -55,7 +55,7 @@ Amount of documents that mention the given text pattern.
 Available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22community_messages_count_telegram%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-> Note: `community_messages_count_telegram`, `community_messages_count_reddit` metric are available for the same set of assets.
+> Note: `community_messages_count_telegram` and `community_messages_count_reddit` metrics are available for the same set of assets.
 
 ---
 

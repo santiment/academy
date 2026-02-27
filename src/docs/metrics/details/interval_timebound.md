@@ -19,7 +19,7 @@ account-based blockchains. To define the age of a coin in account-based
 blockchains we developed our own [Coin Age
 Model](/metrics/details/stack-coin-age-model)
 
-Interval Timebound metrics names are formed from the original metric name plus a
+Interval Timebound metric names are formed from the original metric name plus an
 interval timebound suffix. Available interval timebound suffixes are:
 
 - `0d_1d` - 0 to 1 day

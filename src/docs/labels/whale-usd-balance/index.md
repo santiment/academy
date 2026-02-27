@@ -11,7 +11,7 @@ We define an address as a whale if the address holds a specific amount of money 
 
 Notes:
 
-* For each erc20 asset whale labels are computed separately. 
+* For each ERC-20 asset, whale labels are computed separately.
 
 * Whales are computed for coins with a minimum capitalization of $1M.
 

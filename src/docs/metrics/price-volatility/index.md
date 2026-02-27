@@ -15,7 +15,7 @@ $$
 volatility(assetPrice) = \frac{\sigma(assetPrice)}{\mu(assetPrice)}
 $$
 
-Price volatility metrics are available for 4 different time periods
+Price volatility metrics are available for 4 different time periods:
 * `price_volatility_1d` - Price volatility for the last day
 * `price_volatility_1w` - Price volatility for the last 7 days
 * `price_volatility_2w` - Price volatility for the last 14 days

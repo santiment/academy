@@ -7,7 +7,7 @@ description: Dead address label
 
 ## Description
 
-Addresses that can not be owed by anyone and/or used for tokens burning. Also called as cemetary addresses.
+Addresses that cannot be owned by anyone and/or are used for token burning. Also known as cemetery addresses.
 
 ## [Label fqn](/labels/label-fqn)
 
@@ -51,6 +51,6 @@ Fixed set of ETH addresses:
 0xffffffffffffffffffffffffffffffffffffffff
 ```
 
-## Available Blockchain:
+## Available Blockchains
 
 * ethereum

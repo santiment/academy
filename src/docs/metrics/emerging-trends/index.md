@@ -14,13 +14,13 @@ the topics which _emerged_ faster than any others over the last 24 hours. By
 "emerging" we mean getting more social attraction from the crowd, being
 discussed much more than any other topic.
 
-We detect these words by computing the so called _hype score_ for each single
+We detect these words by computing the so-called _hype score_ for each single
 word that is present in the [social data](/metrics/details/social-data/) after filtering
 and cleaning the data. Once this number is calculated, the words are ranked
 according to the corresponding scores in a descending order. The top 10 words in
 the resulting list are the top emerging trends.
 
-We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
+We constantly update our labels, which helps us keep them as fresh as possible but results in historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12-hour period, the metric can be supplemented with new data.
 
 ---
 
@@ -74,7 +74,7 @@ where:
 - $u_t$ is the total amount of unique users that have used the word under
   consideration at least once.
 
-On an intuitive level the hype score tends to be a measuring of how rapidly the
+On an intuitive level, the hype score tends to be a measure of how rapidly the
 social volume of a certain word increased over the last 24 hours in comparison
 to the past 2 weeks. This is done by comparing the current social volume change
 to the average social volume of the past 14 days.
@@ -87,7 +87,7 @@ heavy spam) this word will have a hype score of **0** thanks to the
 $\log(\text{unique\_users})$ component. On the other hand, words with 100 and 200 users
 will have more or less the same chance to get a higher hype score.
 
-It's also worth noticing that we use the **normalized** social volume instead of
+It is also worth noting that we use the **normalized** social volume instead of
 the regular one. This makes it easier to compare the resulting hype score across
 different data sources with different average daily volumes of talks.
 
@@ -95,12 +95,12 @@ different data sources with different average daily volumes of talks.
 
 ### Ranking the Words
 
-Once the texts are cleaned and each word has it's hype score, we first rank the
+Once the texts are cleaned and each word has its hype score, we first rank the
 words in descending order (the highest hype score goes to the top) and then
 combine the results across different data sources if necessary: this is done by
 averaging the hype score for each word across all desired data sources and
 ranking the words afterwards again. In case a given word is present in source 1
-and is not present in source 2 we assume that it's hype score in the second data
+and is not present in source 2 we assume that its hype score in the second data
 source is 0.
 
 ---

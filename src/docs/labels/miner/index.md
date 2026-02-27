@@ -7,9 +7,9 @@ description: Miner label
 
 ## Description
 
-The label denotes the address mining blocks. Address should produce at least 1 block to be considered as miner.
+The label denotes an address mining blocks. An address should produce at least 1 block to be considered a miner.
 
-In ethereum network only PoW miners are considered. There are 8331 miners labels in ethereum blockchain and new labels are not added after the Merge (September 15, 2022).
+In the Ethereum network, only PoW miners are considered. There are 8,331 miner labels in the Ethereum blockchain, and new labels are not added after the Merge (September 15, 2022).
 
 ## [Label fqn](/labels/label-fqn)
 

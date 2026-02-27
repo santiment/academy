@@ -7,7 +7,7 @@ description: Hot wallet label
 
 ## Description
 
-Denotes a hot wallet of a centralized exchanges or other entity.
+Denotes a hot wallet of a centralized exchange or other entity.
 
 ## [Label fqn](/labels/label-fqn)
 

@@ -7,7 +7,7 @@ description: USD Volume of coin/tokens moved on-chain by whales.
 
 ## Description
 
-This metric shows the total volume of transactions whose value in USD is above a given threhsold.
+This metric shows the total volume of transactions whose value in USD is above a given threshold.
 There are two metrics available:
 - `whale_transaction_volume_100k_usd_to_inf` - The volume of all transactions whose USD value is above $100,000
 - `whale_transaction_volume_1m_usd_to_inf` - The volume of all transactions whose USD value is above $1,000,000

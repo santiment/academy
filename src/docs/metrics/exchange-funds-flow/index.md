@@ -25,7 +25,7 @@ price of the coin/token at the given date. The available USD metrics are
 ![bitcoin funds in/outflow](bitcoin-funds-inflow-outflow.png)
 ![bitcoin funds balance](bitcoin-funds-flow-balance.png)
 
-For an exchange-specific data please refer to [that page](/metrics/labeled-exchange)
+For exchange-specific data, please refer to [that page](/metrics/labeled-exchange).
 
 ---
 

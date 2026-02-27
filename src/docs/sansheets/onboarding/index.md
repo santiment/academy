@@ -10,15 +10,15 @@ Whether you are a data scientist, crypto hobbyist, or simply a trader and invest
 
 Through existing custom templates that our team and Sanfam have already created, or through your own creations, you can investigate network activity, discover market patterns, and analyze stakeholder behavior with our clean, reliable data streams for hundreds of digital assets.
 
-Whereas our Sanbase platform are mainly used to provide any cryptocurrency data you may want to access at the tip of your fingertips, Sansheets allows you to make use of this data and actually form public or private strategies to backtest with the full power of Google Sheets, and use them for your own trading any way you'd like.
+Whereas our Sanbase platform is mainly used to provide any cryptocurrency data you may want to access at your fingertips, Sansheets allows you to make use of this data and actually form public or private strategies to backtest with the full power of Google Sheets, and use them for your own trading any way you'd like.
 
-One of the best parts of Sansheets' integration with Google Sheets is that templates can be setup to auto-update data without any need to refresh or constantly re-input end dates for the model to pull data for. Simply end your date range with "TODAY()" and you'll receive data directly into your model as soon as it becomes available on Santiment.
+One of the best parts of Sansheets' integration with Google Sheets is that templates can be set up to auto-update data without any need to refresh or constantly re-input end dates for the model to pull data for. Simply end your date range with "TODAY()" and you'll receive data directly into your model as soon as it becomes available on Santiment.
 
 ![](01_examplequery.png)
 
 The possibilities are pretty endless when it comes to what types of models can be created, and Santiment offers an array of 48 different functions to use for you to build any cryptocurrency model your heart desires. You can learn all about the Sansheets functions we have available, and how they work on our academy page: https://academy.santiment.net/sansheets/functions/
 
-With the explanation out of the way, let's get into how to get you setup with Sansheets on. To get started and begin creating your own templates and models, follow these simple steps precisely:
+With the explanation out of the way, let's get into how to get you set up with Sansheets. To get started and begin creating your own templates and models, follow these simple steps precisely:
 
 ## Install and activate Sansheets
 
@@ -42,7 +42,7 @@ With the explanation out of the way, let's get into how to get you setup with Sa
 
 8. With Sansheets now enabled, you simply need to provide your API key. This key is found by going to https://sheets.santiment.net and clicking on the **account icon** at the top right of your page.
    ![](10_account-icon.png)
-9. If you already have an API key active, you will see your key with a **copy button** to allow you to easily copy it. If one doesn't yet exist yet, simply click on the **Generate** button and then use the **copy button** to save it to your clipboard.
+9. If you already have an API key active, you will see your key with a **copy button** to allow you to easily copy it. If one doesn't exist yet, simply click on the **Generate** button and then use the **copy button** to save it to your clipboard.
    ![](11_apikey.png)
 10. Head back to your Google Sheets page and go to Add-ons -> Santiment Data, and click on Add API Key. Paste your copied API key and click **Confirm**.
     ![](12_addapikey.png)
@@ -71,7 +71,7 @@ When it comes to using existing Sansheets templates, many templates provided by 
 
 ### NVT Analysis
 
-The objective of the NVT Analysis template is to indicate how a given coin's token circulation looks at a given time compared to its market cap. Using trendlines over time on a monthly perspective, this is a great tool to indicate when markets are looking bearish to bullish.What you see here is:
+The objective of the NVT Analysis template is to indicate how a given coin's token circulation looks at a given time compared to its market cap. Using trendlines over time on a monthly perspective, this is a great tool to indicate when markets are looking bearish to bullish. What you see here is:
 
 1. A set of NVT columns represented by five distinct colors ranging from bearish to bullish
 2. Three lines representing the high, average, and low price of each respective month

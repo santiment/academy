@@ -6,10 +6,10 @@ description: Daily minimum, maximum, average price in eth and usd, and daily tra
 ---
 ## Definition
 
-NFT Collection price is a set of metrics that represent prices and number of trades
+NFT Collection Price is a set of metrics that represent prices and the number of trades
 for NFT collections and tokens. Based on the collection address and interval, users can
-fetch data for minimum, maximum and average prices in ETH and USD for NFT collection
-with that address. Also, they can fetch number of trades for some NFT collection.
+fetch data for minimum, maximum, and average prices in ETH and USD for an NFT collection
+with that address. They can also fetch the number of trades for a given NFT collection.
 Based on the collection address and token ID, users can fetch all the prices for that
 NFT token.
 
@@ -21,7 +21,7 @@ NFT token.
 
 ## Measuring Unit
 
-* Price metrics - amount USD and ETH
+* Price metrics - amount in USD and ETH
 * Trade count metrics - amount of trades
 
 ---

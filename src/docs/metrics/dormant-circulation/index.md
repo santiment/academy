@@ -7,8 +7,8 @@ description: Number of unique coins/tokens transferred after being idle for some
 
 ## Definition
 
-Dormant Circulation shows number of unique coins/tokens transacted on a given day that
-have not been moved for big amount of time.
+Dormant Circulation shows the number of unique coins/tokens transacted on a given day that
+have not been moved for a long period of time.
 
 Examples:
 

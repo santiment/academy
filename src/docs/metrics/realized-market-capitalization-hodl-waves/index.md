@@ -8,12 +8,12 @@ description: Percent of interval Realized Marketcap in total Realized Marketcap
 ## Definition
 
 Realized Market Capitalization Hodl Waves is an alternative to Circulation Hodl Waves.
-This metric is representing the percentage of realized cap for a given timebound
+This metric represents the percentage of realized cap for a given timebound
 interval in total realized cap value.
 For example `realized_cap_hodl_waves_1d_to_7d` is computed by dividing the realized
 cap of coins that are 1 to 7 days old with total realized market cap:
 `(realized_cap_usd_7d - realized_cap_usd_1d) / realized_cap_usd`
-Assigning age to coin/tokens is done according to the [coin-age model](/metrics/details/stack-coin-age-model).
+Assigning age to coins/tokens is done according to the [coin-age model](/metrics/details/stack-coin-age-model).
 
 ---
 

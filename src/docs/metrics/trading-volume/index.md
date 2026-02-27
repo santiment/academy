@@ -8,7 +8,7 @@ description: Trading Volume in USD
 ## Definition
 
 The Trading Volume is the volume in USD traded on exchanges.
-The metric is taking into consideration all the trading pairs. The trading pairs that
+The metric takes into consideration all the trading pairs. The trading pairs that
 are not pegged to USD are multiplied by the USD price of the asset.
 
 Trading Volume in USD metrics:
@@ -82,7 +82,7 @@ Available under `volume_usd` and `volume_usd_5m` names
 
 ## Full list of metrics
 
-The full list of GitHub Activity metrics is:
+The full list of Trading Volume metrics is:
 
 <Details>
 

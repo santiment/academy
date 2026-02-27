@@ -7,7 +7,7 @@ description: OpenSea Username
 
 ## Description
 
-> label under maintaince
+> label under maintenance
 
 This label provides valuable details about the connection between the user's profile on the OpenSea platform and addresses.
 

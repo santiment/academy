@@ -15,15 +15,15 @@ MVRV (Market Value to Realized Value) ratio is an asset's market capitalization 
 
 MVRV shows the ratio between the current price and the average price of every token acquired. An increase in the ratio shows us how much unrealized profit the market is sitting on. As the ratio increases, more market participants become willing sellers. The value of MVRV gives an idea about the average profit of holders across different durations.
 
-## How MVRV Measured
+## How MVRV Is Measured
 
 The MVRV Ratio is used as an on-chain indicator for the purpose of studying aggregate investor behaviors as price moves to/from their cost basis. It can be considered as a mean reversion style model, where the Realized Cap (aggregate market cost basis) functions as the mean and MVRV measures deviations from this mean.
 
-The value of an asset's given MVRV gives an idea of how much overvalued or undervalued an asset is based on short, mid, or long-term timeframes.
+The value of a given asset's MVRV gives an idea of how overvalued or undervalued an asset is based on short-, mid-, or long-term timeframes.
 
 An MVRV value of 100% (or 2.0) means that if all holders sell their coins/tokens at the current price, they will generate a 100% (x2) profit on average. The more this ratio increases, the more likely traders have historically demonstrated their willingness to sell.
 
-On the other side of the spectrum, a negative MVRV value indicates that the asset is "undervalued" on average. This means that if all coins were sold, most traders will be realizing losses at the asset's current price.
+On the other side of the spectrum, a negative MVRV value indicates that the asset is "undervalued" on average. This means that if all coins were sold, most traders would be realizing losses at the asset's current price.
 
 MVRV values (regardless of which timeframe) will hover around 0%, assuming the asset has had enough time to normalize after its introduction as a publicly-traded asset.
 
@@ -91,10 +91,10 @@ than long-term holders if they sell at a price at this moment. Positive values
 show the opposite.
 
 During strong and long bull runs, this metric tends to grow, and during bear
-markets it is decreasing. The rationale is that during strong bull runs, the
-long term holders are determining when the bull run will end when they start
-selling, while during bear markets, the long term holders are at a loss on average
-and the short term holders manage to realize profits
+markets it decreases. The rationale is that during strong bull runs, the
+long-term holders determine when the bull run will end when they start
+selling, while during bear markets, the long-term holders are at a loss on average
+and the short-term holders manage to realize profits.
 
 ---
 
@@ -120,9 +120,9 @@ Ratio
 ## Frequency
 
 All available assets have [Daily
-Intervals](/metrics/details/frequency#daily-frequency) A subset of the available
-assets that consists of some of the bigger assets have [Five-Minute
-Intervals](/metrics/details/frequency#five-minute-frequency)
+Intervals](/metrics/details/frequency#daily-frequency). A subset of the available
+assets that consists of some of the bigger assets has [Five-Minute
+Intervals](/metrics/details/frequency#five-minute-frequency).
 
 ---
 
@@ -145,9 +145,9 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ## SanAPI
 
-The daily metrics are available under the `mvrv_usd` name under the
+The daily metrics are available under the `mvrv_usd` name and under the
 `mvrv_usd_<interval>` name for the timebound metrics. The 5-minute interval
-metrics are available under the `mvrv_usd_intraday` name under the
+metrics are available under the `mvrv_usd_intraday` name and under the
 `mvrv_usd_intraday_<interval>` name for the timebound metrics.
 
 Example of query for **mvrv_usd**:

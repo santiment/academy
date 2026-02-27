@@ -53,7 +53,7 @@ Available for `solana`
 
 ### SanAPI
 
-Available under name: `new_deployed_contracts`
+Available under the name: `new_deployed_contracts`
 
 
 ```graphql-explorer

@@ -2,7 +2,7 @@
 title: Weighted Sentiment Metrics
 author: Santiment Team
 date: 2025-11-18
-description: The postive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment
+description: The positive and negative sentiment metrics show the part of the total social volume that has positive or negative sentiment
 ---
 
 ## Definition
@@ -10,12 +10,12 @@ description: The postive and negative sentiment metrics show the part of the tot
 The **Sentiment Weighted** is an improved version of the [Sentiment
 Balance](/metrics/sentiment-metrics/positive-negative-sentiment-metrics) that also takes into account the [Unique Social Volume](/metrics/unique-social-volume).
 
-### Why Sentiment Balance needs improvement?
+### Why does Sentiment Balance need improvement?
 
 Sentiment Positive/Negative/Balance metrics' values are in the interval `[-social_volume; +social_volume]`
 where `social_volume` is the number of messages that mention a given coin.
 
-This makes the values of different assets hard to compare, as the mentions of Bitcoin are magnitutes higher compared to the mentions of a small token.
+This makes the values of different assets hard to compare, as the mentions of Bitcoin are magnitudes higher compared to the mentions of a small token.
 
 ### Sentiment Weighted Intuitive Definition
 

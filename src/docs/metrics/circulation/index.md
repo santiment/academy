@@ -7,7 +7,7 @@ description: Number of unique coins/tokens being used during a time period
 
 ## Definition
 
-Circulation shows number of unique coins/tokens being used during a time period.
+Circulation shows the number of unique coins/tokens being used during a time period.
 
 Examples:
 

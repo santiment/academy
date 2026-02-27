@@ -7,7 +7,7 @@ description: Closed label
 
 ## Description
 
-Label `closed` used to indicate that an address's owner has announced the end of their project or business operations.
+The label `closed` is used to indicate that an address's owner has announced the end of their project or business operations.
 
 ## [Label fqn](/labels/label-fqn)
 

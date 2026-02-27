@@ -14,7 +14,7 @@ Track the amount of ETH leaving the wallets where ICO funds were collected.
 #### Example
 
 Below is the ETH spent over time of Golem plotted against the Golem price and ETH price.
-Enabling the ETH is useful to give you an approximation for the value in USD that this
+Enabling the ETH price is useful to give you an approximation of the value in USD that this
 ETH movement generated. Most often ICOs move ethereum out of their ICO wallets to
 sell them on exchanges to fund the project.
 
@@ -83,7 +83,7 @@ Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20projectBySlug(sl
 
 ### Aggregated data per project
 
-In order to fetch how many ETH every project spent in a the last N days, you can execute the following GraphQL query (the `days` can contain any number of days):
+In order to fetch how many ETH every project spent in the last N days, you can execute the following GraphQL query (the `days` can contain any number of days):
 
 ```graphql
 {

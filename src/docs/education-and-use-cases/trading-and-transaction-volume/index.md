@@ -37,7 +37,7 @@ activities like staking, lending, and swapping tokens.
 
 
 Another difference to note is that transaction volume is purely on-chain data,
-while trading volume is combination of on-chain data (from DEXs) and off-chain
+while trading volume is a combination of on-chain data (from DEXs) and off-chain
 data (which is self-reported from CEXs). 
 
 <Notebox type="none">
@@ -100,7 +100,7 @@ your convenience: [link here](https://app.santiment.net/charts/YM8Zi2X6__sCl)
 As soon as you have adjusted the Chart based on your preferences (time
 intervals, colors, etc.) you can save it as a new private Layout. Then, using
 the Master selector (the bigger one on the top) you can change the currently
-analysed token to another while your visual preferences and metrics remain the
+analyzed token to another while your visual preferences and metrics remain the
 same.
 
 ![](./selector.png)

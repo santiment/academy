@@ -6,7 +6,7 @@ description: Yield Farming Label
 ---
 
 ## Description
-Label used to mark addresses that are used in Yield Farming activities
+This label is used to mark addresses that are involved in yield farming activities.
 
 ## [Label fqn](/labels/label-fqn)
 

@@ -6,7 +6,7 @@ description: Sanctioned Label
 ---
 
 ## Description
-Label used to mark addresses that were added into sanction list. For example - OFAC Sanction list.
+This label is used to mark addresses that were added to a sanctions list. For example, the OFAC sanctions list.
 
 ## [Label fqn](/labels/label-fqn)
 

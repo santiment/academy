@@ -7,7 +7,7 @@ description: MultiSig Label
 
 ## Description
 
-Multisig wallets are a type of cryptocurrency wallets for which at least two private keys are needed to sign a transaction. Very often a multisig is a smart contract that requires several addresses to initiate a transaction.
+Multisig wallets are a type of cryptocurrency wallet for which at least two private keys are needed to sign a transaction. Very often, a multisig is a smart contract that requires several addresses to initiate a transaction.
 
 ## [Label fqn](/labels/label-fqn)
 

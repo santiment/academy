@@ -99,10 +99,10 @@ Amount in tokens/USD
 
 ## Available Assets
 
-Metrics related to the entire protocol available for `maker` and `multi-collateral-dai`
+Metrics related to the entire protocol are available for `maker` and `multi-collateral-dai`.
 
-Other metrics: 
-available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+Other metrics are
+available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22makerdao_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>).
 
 ---
 
@@ -126,7 +126,7 @@ Action metrics: `makerdao_action_deposits<_usd>`, `makerdao_action_liquidations<
 ```
 
 
-New debt/repayments against collateral metrics:`dai_created`, `dai_repaid` and `total_dai_created`
+New debt/repayments against collateral metrics: `dai_created`, `dai_repaid` and `total_dai_created`
 
 ```graphql-explorer
 {

@@ -7,7 +7,7 @@ description: Lending User
 
 ## Description
 
-These addresses were engaged in lending activities, where they facilitated the process  lending funds.
+These addresses were engaged in lending activities, where they facilitated the process of lending funds.
 
 ## [Label fqn](/labels/label-fqn)
 

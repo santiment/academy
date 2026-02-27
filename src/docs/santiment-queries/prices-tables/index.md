@@ -21,7 +21,7 @@ The `asset_prices_v3` table offers extensive information about cryptocurrency as
 - **price_usd** (*Float64*): The price of the asset in USD.
 - **price_btc** (*Float64*): The price of the asset in Bitcoin.
 - **marketcap_usd** (*Float64*): The market capitalization of the asset in USD.
-- **volume_usd** (*Float64*): The rolling total trading volume of the asset in USD for last 24 hours 
+- **volume_usd** (*Float64*): The rolling total trading volume of the asset in USD for the last 24 hours.
 
 ## Sample Queries
 

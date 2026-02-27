@@ -20,7 +20,7 @@ A massive trade on a DEX may result in price slippage and sudden liquidity chang
 - **DeFi Project Analysis**
 DeFi analysts and investors can assess how significant token holders interact with their ecosystem, helping them evaluate project health, token stability, or manipulation risks.
 
-##Examples
+## Examples
 
 ![](image1.png)
 

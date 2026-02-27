@@ -61,7 +61,7 @@ Amount in USD
 
 ### SanAPI
 
-Available under `etf_volume_usd_5m` name.
+Available under the `etf_volume_usd_5m` name.
 
 
 ```graphql-explorer

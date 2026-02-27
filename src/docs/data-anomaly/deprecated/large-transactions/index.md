@@ -13,7 +13,7 @@ In order to filter most valuable transactions for each transaction a threshold v
 
 If the transaction's approximate value in USD is above the threshold value, a signal is fired.
 
-Approximate transaction values are calculated by multiplying the amount of transferres coins to closest coin's price value using price data with 5 minutes interval for each transaction.
+Approximate transaction values are calculated by multiplying the amount of transferred coins by the closest coin price value, using price data with a 5-minute interval for each transaction.
 
 ## List of supported tokens
 * ethereum

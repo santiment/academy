@@ -49,7 +49,7 @@ and how all the values within an interval are aggregated.
 
 ## How to access the API
 
-Instructions how to access the API can be found on the [Accessing the API](/sanapi/accessing-the-api) page.
+Instructions on how to access the API can be found on the [Accessing the API](/sanapi/accessing-the-api) page.
 
 ## Fetching Metrics
 

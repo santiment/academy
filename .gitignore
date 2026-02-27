@@ -73,6 +73,7 @@ package-lock.json
 
 .tool-versions
 .aider*
+.claude/settings.local.json
 
 
 # web components

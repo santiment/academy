@@ -7,9 +7,9 @@ description: Whale label
 
 ## Description
 
-Whale is an address holding a substensial amount of tokens. We sort all addresses by its balance and label top 100 addresses as whales every day. For each erc20 asset whale labels are computed separately.
+A whale is an address holding a substantial amount of tokens. We sort all addresses by their balance and label the top 100 addresses as whales every day. For each ERC-20 asset, whale labels are computed separately.
 
-Note that the addresses labelled as whale yesterday might not be a whale any more tomorrow.
+Note that addresses labeled as whale yesterday might not be a whale anymore tomorrow.
 
 ## [Label fqn](/labels/label-fqn)
 

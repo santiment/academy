@@ -100,7 +100,7 @@ The following fields are selected:
 
 - `name` - the name of the metric
 - `minInterval` - what is the minimal interval between two data points (5 minutes or 1 day in most cases)
-- `isDeprecated` - is the deprecated. If true, you must stop using this metric as it will be removed in the future.
+- `isDeprecated` - is the metric deprecated. If true, you must stop using this metric as it will be removed in the future.
 - `isAccessible` - is the metric accessible with the selected subscription plan.
 - `restrictedFrom` - what is the earliest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 - `restrictedTo` - what is the latest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
@@ -262,10 +262,10 @@ the `timeseriesDataJson` field of the `getMetric` API.
   aggregation function using the [metadata](#metadata) query.
 - `includeIncompleteData`: In some cases, if the day is not yet complete, the
   current value can be misleading. For instance, fetching daily active
-  addresses at 12pm would include only half a day's data, potentially making
+  addresses at 12 PM would include only half a day's data, potentially making
   the data for that day appear too low.
-- `fields`: If the returned fields name should be something other than `datetime` or `value`, aliases can be given.
-  In case of `aggregation: OHLC`, the fields that can be overriden are `valueOhlc`, `open`, `high`, `close` and `low`
+- `fields`: If the returned field names should be something other than `datetime` or `value`, aliases can be given.
+  In the case of `aggregation: OHLC`, the fields that can be overridden are `valueOhlc`, `open`, `high`, `close` and `low`
   - `{datetime: "dt", value: "v"}`
 - `transform`: Apply a transformation to the timeseries data result. Available transformations include:
   - `{type: "none"}`: Do not apply any transformation
@@ -345,7 +345,7 @@ The following query fetches the all-time highest price for Santiment:
 
 ### aggregatedTimeseriesData on the project type
 
-Queries like `allProject` or `projectBySlug` also have `aggregatedTimeseriesData` field that works the same way.
+Queries like `allProjects` or `projectBySlug` also have an `aggregatedTimeseriesData` field that works the same way.
 The only difference is that when using `getMetric` the `metric` is already pinned and the `slug` needs to be provided, while
 for `allProjects` and `projectBySlug` it is vice versa.
 Using aliases, the `aggregatedTimeseriesData` can be selected multiple times.
@@ -466,7 +466,7 @@ capitalization, is also only available since July 2010.
 > **Note:** This field may be complex to understand. However, in the general
 > case, this field is not used.
 
-The `lastDatetimeComputedAt` shows the when the latest
+The `lastDatetimeComputedAt` shows when the latest
 data point was computed.
 
 ```graphql-explorer
@@ -561,7 +561,7 @@ project over the last 60 days, with a 1-day interval.
 }
 ```
 
-The response result is a list that contains a 2-element range of datetimes and a float value.
+The response is a list that contains a 2-element range of datetimes and a float value.
 
 **Histogram Metric Example**
 

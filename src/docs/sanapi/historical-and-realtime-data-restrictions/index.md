@@ -6,7 +6,7 @@ date: 2024-07-03
 
 ## Overview
 
-This articles outlines the restrictions that apply to historical and realtime
+This article outlines the restrictions that apply to historical and realtime
 data for the [metrics](/sanapi/fetching-metrics).
 
 Example: If you are on the Free plan, you cannot access `mvrv_usd_1d` values:
@@ -64,13 +64,13 @@ specific subscription plan using this query:
 The following fields are selected:
 
 - `name` - the name of the metric
-- `isDeprecated` - is the deprecated. If true, you must stop using this metric as it will be removed in the future.
+- `isDeprecated` - is the metric deprecated. If true, you must stop using this metric as it will be removed in the future.
 - `isAccessible` - is the metric accessible with the selected subscription plan.
 - `restrictedFrom` - what is the earliest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 - `restrictedTo` - what is the latest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 
 You are interested in the `restrictedFrom` and `restrictedTo` fields.
-If they are both `null` -- the selected subscription plan has access to the full historical and realtime data for that plan.
+If they are both `null`, the selected subscription plan has access to the full historical and realtime data for that metric.
 
 <Notebox type="none">
 **Read next: [Complexity](/sanapi/complexity)**

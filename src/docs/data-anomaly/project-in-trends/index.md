@@ -16,7 +16,7 @@ description: Data Anomaly shows crypto tokens gaining major social buzz, signali
 - Dogecoin anomalies:
 ![](image3.png)
 
-## Usecases
+## Use Cases
 
 - **Early Trend Detection for Traders**
 A sudden surge in mentions can indicate both hype and risk. If a token is trending due to controversy or security issues, users can take precautionary measures to protect their investments.

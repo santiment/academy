@@ -63,7 +63,7 @@ LIMIT 2
 Test in [Queries](https://queries.santiment.net/query/final-example-408)
 
 This `FINAL` keyword is not free - it slightly reduces the performance. In case
-performance is seeked, the same goal can be achieved with standard SQL by using
+performance is sought, the same goal can be achieved with standard SQL by using
 `GROUP BY` the primary key and aggregate functions. This approach has smaller
 performance penalty at the cost of code readability and maintainability.
 ```sql

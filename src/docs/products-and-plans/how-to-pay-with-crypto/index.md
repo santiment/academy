@@ -23,7 +23,7 @@ or
 
 ![](PaySan.jpg)
 
-After making the payment please contact our team at [support@santiment.net](mailto:support@santiment.net) so we can activate your account.
+After making the payment, please contact our team at [support@santiment.net](mailto:support@santiment.net) so we can activate your account.
 
 > **Note:** We accept `ETH`, `DAI`, `USDC`, or `USDT` for any of our products and services.
 
@@ -35,7 +35,7 @@ What is token burning? It's the process of sending tokens to an invalid address,
 
 Benefits:
 
-- 2x Value: If you Burn SAN we credit you at 2x the current market rate.
+- 2x Value: If you burn SAN, we credit you at 2x the current market rate.
 - Supply reduction: Every burn decreases the total SAN supply, increasing proportional ownership for all holders.
 
 Please be aware of the following restrictions:

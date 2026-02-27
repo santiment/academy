@@ -66,7 +66,7 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 ### SanAPI
 
-Available under name: `gini_index`
+Available under the name: `gini_index`
 
 
 ```graphql-explorer

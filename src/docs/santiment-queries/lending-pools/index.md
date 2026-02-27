@@ -2,7 +2,7 @@
 title: Lending Pools Overview
 author: Santiment Team
 date: 2026-01-15
-description: Information about the Lending Pools's table stored in Santiment Queries.
+description: Information about the Lending Pools table stored in Santiment Queries.
 ---
 
 ## Overview

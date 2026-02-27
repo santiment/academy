@@ -16,14 +16,14 @@ Santiment provides an alternative formula for NVT:
 `NVT = Daily Market Cap / Daily Circulation`
 
 Since daily circulation is zero at the beginning of each day, NVT based on it
-would have a spike at the day beginning, we solve it with rolling NVT metric
-which uses rolling circulation for last 24 hours and is computed using
+would have a spike at the day's beginning. We solve this with a rolling NVT metric
+that uses rolling circulation for the last 24 hours and is computed using the
 following formula:
 
 `NVT = Intraday Market Cap / Rolling Circulation`
 
-For some assets there is a more prceise metric called Circulation NVT,
-which takes 24 hour rolling daily circulation instead of daily.
+For some assets there is a more precise metric called Circulation NVT,
+which takes 24-hour rolling daily circulation instead of daily.
 The `Network Value-to-Transaction` (NVT) ratio is an asset valuation metric
 similar to the [P/E
 ratio](https://www.investopedia.com/terms/p/price-earningsratio.asp)
@@ -36,7 +36,7 @@ therefore possibly overvalued. Conversely, a low P/E might indicate that
 the current stock price is low relative to earnings and possibly
 undervalued.
 
-As crypto assets are not companies, their earnings are not known , so
+As crypto assets are not companies, their earnings are not known, so
 Transaction Volume is often used as a proxy for the blockchain's
 underlying value.
 

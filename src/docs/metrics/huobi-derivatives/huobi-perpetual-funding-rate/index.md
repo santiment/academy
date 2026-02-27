@@ -7,9 +7,9 @@ description: Amount of coin/tokens moved on-chain.
 
 ## Description
 
-Funding rate aims to ensure that the transaction price of Perpetual Swap closely follows the underlying reference price. The Funding rate for each period is calculated from the data of the previous period and has been determined at the beginning of the current period. It will not be changed during the period and will be applied in funding calculation at the end of the current period. Meanwhile, in this period, the estimated funding rate for the next period is calculated every minute, and the last calculated estimated funding rate will be used as the rate for the next period.
+The funding rate aims to ensure that the transaction price of Perpetual Swap closely follows the underlying reference price. The funding rate for each period is calculated from the data of the previous period and is determined at the beginning of the current period. It will not change during the period and will be applied in the funding calculation at the end of the current period. Meanwhile, during this period, the estimated funding rate for the next period is calculated every minute, and the last calculated estimated funding rate will be used as the rate for the next period.
 
-More details on Huobi [web-site](https://help.dydx.exchange/en/articles/4797443-perpetual-funding-rate).
+More details on the Huobi [website](https://help.dydx.exchange/en/articles/4797443-perpetual-funding-rate).
 
 ---
 

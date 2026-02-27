@@ -12,8 +12,8 @@ date: 2020-04-10
 Timeseries data is a sequence taken at successive equally spaced points in time
 (every 5 minutes, every day, every year, etc.).
 
-The metric is represtented as a list of data points, where every point is
-represented by a tuple containing a `datetime` an a `value`.
+The metric is represented as a list of data points, where every point is
+represented by a tuple containing a `datetime` and a `value`.
 
 ### Example (timeseries data)
 
@@ -51,8 +51,8 @@ as the following list:
 A histogram is an approximate representation of the distribution of numerical or
 categorical data.
 
-The metric is represented as a list of data points, where every point is represented
-represented by a tuple containing a `range` an a `value`.
+The metric is represented as a list of data points, where every point is
+represented by a tuple containing a `range` and a `value`.
 
 ### Example (histogram data)
 

@@ -7,8 +7,8 @@ description: Get latest transactions for a chain address
 
 ## Definition
 
-Get latest transactions for a chain address
-[Example of usage **latest transactions** on Sanbase](https://app.santiment.net/labs/balance?address=0x876eabf441b2ee5b5b0554fd502a8e0600950cfa&assets[]=shiba-inu&from=2021-10-20T19%3A00%3A00.000Z&isLog=false&priceMetrics[]=shiba-inu&to=2022-04-21T18%3A59%3A59.999Z)
+Get the latest transactions for a chain address.
+[Example of usage of **latest transactions** on Sanbase](https://app.santiment.net/labs/balance?address=0x876eabf441b2ee5b5b0554fd502a8e0600950cfa&assets[]=shiba-inu&from=2021-10-20T19%3A00%3A00.000Z&isLog=false&priceMetrics[]=shiba-inu&to=2022-04-21T18%3A59%3A59.999Z)
 
 ---
 

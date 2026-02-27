@@ -203,7 +203,7 @@ header in the format `Authorization: Apikey <YOUR_OWN_API_KEY>`.
 
 ### Authentication with GraphiQL Explorer
 
-Santiment also offers an advanced version of GraphiQL that is particularly useful!\[\]
+Santiment also offers an advanced version of GraphiQL that is particularly useful
 for API users:
 [https://api.santiment.net/graphiql_advanced](https://api.santiment.net/graphiql_advanced).
 This version allows users to add HTTP headers, which can be used to include an

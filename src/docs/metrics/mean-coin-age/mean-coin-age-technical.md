@@ -19,7 +19,7 @@ $$
 
 Let us call the quantity in the numerator the **total coin-age** and denote it
 by $TCA(t)$. The quantity in the denominator is the _total supply_ existing at
-time $t$. We will call it $TS(t)$
+time $t$. We will call it $TS(t)$.
 
 ## Total supply
 
@@ -114,7 +114,7 @@ GROUP BY asset_id, daily_dt
 
 From the facts above, we can easily derive the mean coin-age. We first compute
 the daily or five-minute $\Delta TCT$. Then we use a cumulative sum to calculate
-the daily five-minute total creation timestamp $TCT$. From that, we can
+the daily or five-minute total creation timestamp $TCT$. From that, we can
 calculate the mean creation timestamp as a _composite metric_ with the SQL
 formula:
 
@@ -154,7 +154,7 @@ age_consumed + dt * circulation_delta_20y
 ```
 
 However, our age consumed metric is measured in days. If we want the delta TCT
-to be measured in seconds the formula is
+to be measured in seconds, the formula is
 
 ```sql
 age_consumed*86400 + dt*circulation_delta_20y

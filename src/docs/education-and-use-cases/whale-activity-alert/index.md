@@ -22,7 +22,7 @@ In May 2021, YFI's price seemed to be steadily increasing, while whale activity 
 
 ![whale-chart-2](image2.png)
 
-A wise trader could have considered the sudden surge as a possible reason to exit. Though how you choose to act on this information is entirely up to you, it can be just one additional data point that can inform a very valuable decision. Remember, knowledge is power, and timely knowledge is even more so, especially when it comes to trading. Spotting the surge manually requires a lot of manual effort, the smart trader utilizes the alerts feature.
+A wise trader could have considered the sudden surge as a possible reason to exit. Though how you choose to act on this information is entirely up to you, it can be just one additional data point that can inform a very valuable decision. Remember, knowledge is power, and timely knowledge is even more so, especially when it comes to trading. Spotting the surge manually requires a lot of effort; the smart trader utilizes the alerts feature.
 
 ## Setting Up a Whale Transaction Alert
 

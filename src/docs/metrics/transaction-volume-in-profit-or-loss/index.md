@@ -7,8 +7,8 @@ description: Amount of coin/tokens moved on-chain that are in profit or in loss 
 
 ## Description
 
-Those metrics show the aggregate amount of coins/tokens across all transactions on
-the network that moved in profit or loss for a given asset in an interval.
+These metrics show the aggregate amount of coins/tokens across all transactions on
+the network that moved in profit or loss for a given asset in a given interval.
 There is also a metric which shows the ratio between transaction volume in profit
 and transaction volume in loss.
 

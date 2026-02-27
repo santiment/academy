@@ -8,12 +8,12 @@ description: Share of the crypto discussions that refer to an asset/phrase
 
 ## Definition
 
-Social Dominance shows the share of the discussions in crypto media that is referring
+Social Dominance shows the share of the discussions in crypto media that refer
 to a particular asset or phrase.
 
-The metric is build on top of the [Social Data](/metrics/details/social-data).
+The metric is built on top of the [Social Data](/metrics/details/social-data).
 
-We constantly update our labels which helps us to keep labels as fresh as possible but result historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12 hour period, metric can be supplemented with new data.
+We constantly update our labels, which helps us keep them as fresh as possible but results in historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation for the previous month's data. Within a 12-hour period, the metric can be supplemented with new data.
 
 ### Social Dominance for an Asset
 
@@ -22,7 +22,7 @@ Volume](/metrics/social-volume) of that asset to the combined social volume of t
 100 largest assets by marketcap.
 
 Social Dominance of 50% for an asset means that the number of messages/posts that discuss
-this asset equal half the number of messages/posts that discuss the Top 100 assets.
+this asset equals half the number of messages/posts that discuss the Top 100 assets.
 
 > This definition allows the social dominance of an asset to exceed 100%.
 > This can happen for assets whose name and/or ticker is a very common English word.

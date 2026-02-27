@@ -11,7 +11,7 @@ These metrics include:
 - [Development Activity](/metrics/development-activity/development-activity/) -
   Ignore the non-development related events. Excluding this allows values of
   projects who use Github for issue tracking and projects who do not use Github
-  for issue tracking to be faily compared
+  for issue tracking to be fairly compared
 - [Development Activity Contributors Count](/metrics/development-activity/development-activity-contributors-count/)
   - Track the number of unique development activity contributors.
 - [Github Activity](/metrics/development-activity/github-activity/) - Count all
@@ -21,7 +21,7 @@ These metrics include:
 
 ---
 
-## Why Development Activity matters?
+## Why Does Development Activity Matter?
 
 The development activity of a project that Santiment tracks is done in the
 project's public GitHub repositories. The work done in private repositories
@@ -70,12 +70,12 @@ intent of proposing these changes back to the original repository. The process
 of forking inherits all commits, but this is other people's work -- this is
 not work done by the team that makes the fork.
 
-#### Example 
+#### Example
 For example, if a person forks the [Bitcoin Github
 repository](https://github.com/bitcoin/bitcoin) they will inherit all 40,000+
 commits, while performing just one action of forking.
 
-### How Santiment measures development activity?
+### How Does Santiment Measure Development Activity?
 
 At Santiment, we implemented a more reliable approach $-$ tracking the number of
 [Github events](https://docs.github.com/en/rest/using-the-rest-api/github-event-types?apiVersion=2022-11-28)
@@ -91,11 +91,11 @@ but there are also many other activities that generate an event:
 More importantly, when a project is forked, it does not inherit any of the
 already emitted events. Our custom method dramatically improves both accuracy
 and serviceability of Github data. The reason is that the process of forking a
-repository generates just a single `ForkEvent` instead creating an event for
+repository generates just a single `ForkEvent` instead of creating an event for
 every commit that gets inherited.
 
 At the time of writing this the [bitcoin](https://github.com/bitcoin/bitcoin)
-repository has around 40k commits and [Bitoin
+repository has around 40k commits and the [Bitcoin
 SV](https://github.com/bitcoin-sv/bitcoin-sv) repository has around 18.9k
 commits. Let's take a look at the events counting approach:
 

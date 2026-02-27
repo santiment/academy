@@ -2,7 +2,7 @@
 title: Stack Coin Age model
 author: Santiment Team
 date: 2020-04-02
-description: Introducing the Stack Coin Age model. Extending metrics to Accound-based blockchains.
+description: Introducing the Stack Coin Age model. Extending metrics to Account-based blockchains.
 ---
 
 
@@ -63,7 +63,7 @@ tell us about different types of behavior of market participants.
 The Bitcoin blockchain uses the so-called **UTXO model** for keeping track of
 coins. UTXO stands for "Unspent Transaction Output".
 
-Each Bitcoin address holds of a bunch of _outputs_; each output contains a
+Each Bitcoin address holds a bunch of _outputs_; each output contains a
 certain amount of coins. A Bitcoin transaction consists of a list of old outputs
 that are going to be destroyed or _spent_, and a list of new outputs that are
 going to be created. The total amount of coins in the spent outputs must be
@@ -246,7 +246,7 @@ Bansal, Dhruv. “Bitcoin Data Science (Pt. 1): HODL Waves.”
 [hodl waves](https://unchained.com/blog/tag/hodl-waves/).
 
 Carter, Nic. “Bitcoin Honeybadger 2018 Bitcoin Conference, Riga, Day 2.”
-[bitcoin honeybadged 2018](https://www.youtube.com/watch?v=D2WXxgZ8h-0&t=78m8s).
+[bitcoin honeybadger 2018](https://www.youtube.com/watch?v=D2WXxgZ8h-0&t=78m8s).
 
 Carter, Nic, Antoine Le Calvez, and Coinmetrics team. 2018. “Introducing
 Realized Capitalization.” 2018.

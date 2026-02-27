@@ -45,7 +45,7 @@ The `bridge_transactions` table is designed to capture and store detailed inform
 - **tx_hash** (*String*): Hash of the transaction.
 - **log_index** (*UInt32*): Log index of the   event.
 - **dt** (*DateTime*): Date and time of the transaction
-- **chain_in** (*String*): The target blockchain to recieve the funds.
+- **chain_in** (*String*): The target blockchain to receive the funds.
 - **chain_out** (*String*): The Blockchain from where the transaction was initiated
 - **contract_addr** (*String*): Address of the involved smart contract.
 - **token_in** (*Nullable(String)*): Type of token received from the bridge.
