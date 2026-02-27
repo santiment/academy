@@ -7,7 +7,7 @@ description: Amount of coin/tokens moved on-chain.
 
 ## Description
 
-Details about Bitfinex's funding rates [web-site](https://support.bitfinex.com/hc/en-us/articles/360024039494-How-are-the-Funding-interest-earnings-and-fees-calculated-at-Bitfinex).
+More details about Bitfinex's funding rates can be found on their [website](https://support.bitfinex.com/hc/en-us/articles/360024039494-How-are-the-Funding-interest-earnings-and-fees-calculated-at-Bitfinex).
 
 ---
 

@@ -70,7 +70,7 @@ intent of proposing these changes back to the original repository. The process
 of forking inherits all commits, but this is other people's work -- this is
 not work done by the team that makes the fork.
 
-#### Example 
+#### Example
 For example, if a person forks the [Bitcoin Github
 repository](https://github.com/bitcoin/bitcoin) they will inherit all 40,000+
 commits, while performing just one action of forking.

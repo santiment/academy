@@ -53,7 +53,7 @@ If this is your first time logging in via email, you have the option to add an E
 
 ### Purchasing and Staking SAN Tokens
 
-You are now prepared to stake SAN tokens in order to avail discounts on your access plan. To learn how to stake SAN tokens, please refer to [this article](/san-tokens/connect-a-wallet-to-the-sanbase-account). 
+You are now prepared to stake SAN tokens in order to receive discounts on your access plan. To learn how to stake SAN tokens, please refer to [this article](/san-tokens/connect-a-wallet-to-the-sanbase-account). 
 
 If you need assistance on how to purchase SAN tokens initially, you can find guidance in [this article](/san-tokens/how-to-buy-san).
 

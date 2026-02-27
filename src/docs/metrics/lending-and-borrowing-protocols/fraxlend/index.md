@@ -57,7 +57,7 @@ Daily active addresses:
 ## Measuring Unit
 
 * Amount in tokens/USD
-* Borrow APY metric in percentage
+* Borrow APY metric in percentages
 
 ---
 

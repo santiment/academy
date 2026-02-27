@@ -65,7 +65,7 @@ Daily active addresses:
 
 ## Frequency
 
-* [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency) - Actions, supply and APY metrics
+* [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency) - Actions, supply, and APY metrics
 * [Daily Intervals](/metrics/details/frequency#daily-frequency) - Active addresses metric
 
 ---

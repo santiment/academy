@@ -41,9 +41,9 @@ Uniswap Airdrop Metrics:
 
 ## Measuring Unit
 
-Metrics that have `amount` in name represent the number of tokens.
-Metrics that have `count` in name represent the number of claims.
-Metrics that have `percent` in name represent the percentage.
+Metrics that have `amount` in their name represent the number of tokens.
+Metrics that have `count` in their name represent the number of claims.
+Metrics that have `percent` in their name represent the percentage.
 
 ---
 

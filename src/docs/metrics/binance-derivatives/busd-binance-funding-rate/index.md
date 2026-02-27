@@ -9,7 +9,7 @@ description: Amount of coin/tokens moved on-chain.
 
 Funding rates are periodic payments made to either long or short traders, calculated based on the difference between the perpetual contract prices and spot prices. When the market is bullish, the funding rate is positive and tends to rise over time. In these situations, traders who are long on a perpetual contract will pay a funding fee to traders on the opposing side. Conversely, the funding rate will be negative when the market is bearish, where traders who are short on a perpetual contract will pay a funding fee to long traders.
 
-More details on Binance [web-site](https://www.binance.com/en/support/faq/360033525031).
+More details on Binance [website](https://www.binance.com/en/support/faq/360033525031).
 
 ---
 

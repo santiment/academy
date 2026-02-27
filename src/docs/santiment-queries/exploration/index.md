@@ -88,7 +88,7 @@ Test in [Queries](https://queries.santiment.net/query/show-create-table-391)
 
 ## Get data from a table
 
-After inspecting the structure of a given table, you can execute a few simple queries to obtain some data from the table to see how it looks. Most of the time, it makes more sense to select more recent data instead of data starting from the beginning, as it will be more relevant. To improve readability, you can apply functions for transforming the `metric_id` and `asset_id` to their names. The `, *` syntax allows you to select all fields but also add something else to the result.
+After inspecting the structure of a given table, you can execute a few simple queries to obtain some data from the table and see how it looks. Most of the time, it makes more sense to select more recent data instead of data starting from the beginning, as it will be more relevant. To improve readability, you can apply functions for transforming the `metric_id` and `asset_id` to their names. The `, *` syntax allows you to select all fields and also add something else to the result.
 
 ```sql
 SELECT

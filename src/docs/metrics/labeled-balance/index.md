@@ -6,7 +6,7 @@ description: Labeled Balance Metrics
 ---
 
 ## Description
-Metrics that show labeled addresses inflow, outflow and balances
+Metrics that show labeled addresses' inflow, outflow, and balances.
 
 * `inflow_per_label_and_owner` - inflow of a given owner
 * `outflow_per_label_and_owner` - outflow of a given owner

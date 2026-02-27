@@ -32,7 +32,7 @@ Total supplied/borrowed metrics:
 * `spark_total_borrowed` - Total borrowed tokens
 * `spark_total_borrowed_usd` - Total borrowed tokens in USD
 
-APY (annual percentage yield) metric:
+APY (annual percentage yield) metrics:
 * `spark_supply_apy` - Supply APY
 * `spark_borrow_apy` - Variable borrow APY (variable interest rate will fluctuate based on the market conditions)
 
@@ -65,7 +65,7 @@ Flashloan metrics:
 ## Measuring Unit
 
 * Amount in tokens/USD
-* APY metrics in percentage
+* APY metrics in percentages
 
 ---
 

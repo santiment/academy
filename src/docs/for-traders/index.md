@@ -17,9 +17,9 @@ As a general overview, Santiment tools can enhance and complement your trading i
 
 ## Spot tops and exit opportunities
 
-A number of our metrics have proven highly effective in signaling forming tops and impending corrections. Here’s just a few examples:
+A number of our metrics have proven highly effective in signaling forming tops and impending corrections. Here are just a few examples:
 
--> Using our social data, we found that extreme spikes in a coin’s social volume during a rally are often a reliable indicator of local tops. This is especially the case with mid and low-cap coins, who mostly ever attract ‘mainstream’ crypto attention during breakouts, so the increased social chatter is almost always pump-related. This period of ‘peak hype’ for a coin is an exceedingly risky time to enter into position - or not exit the one you’re already in.
+-> Using our social data, we found that extreme spikes in a coin’s social volume during a rally are often a reliable indicator of local tops. This is especially the case with mid and low-cap coins, who mostly only attract ‘mainstream’ crypto attention during breakouts, so the increased social chatter is almost always pump-related. This period of ‘peak hype’ for a coin is an exceedingly risky time to enter a position - or not exit the one you’re already in.
 
 On Sanbase, you can subscribe to alerts whenever a coin you’re interested in experiences a surge in social volume, signaling a correction.
 
@@ -39,7 +39,7 @@ Example: Tezos
 
 Another custom Santiment metric - **Mean Dollar Invested Age** - has been a reliable top indicator for Bitcoin over its entire lifespan.
 
-Mean dollar invested age calculates how long each Bitcoin has stayed in its current address, and then computes the average ‘age’ of all money (expressed in dollars) used to buy Bitcoins. In other words, a rising slope on the MDIA chart indicates hodler accumulation, while dips indicate sudden movements of previously idle coins.
+Mean dollar invested age calculates how long each bitcoin has stayed in its current address, and then computes the average ‘age’ of all money (expressed in dollars) used to buy bitcoins. In other words, a rising slope on the MDIA chart indicates hodler accumulation, while dips indicate sudden movements of previously idle coins.
 
 Every major Bitcoin top so far was accompanied by a significant drop in mean dollar age:
 
@@ -75,13 +75,13 @@ Not all metrics need to tell you if the price is likely to go ↑ or ↓ in orde
 
 For example, our Token Age Consumed metric tracks the activity of coins based on how long they’ve stayed in their current wallets. Spikes on the TAC chart indicate the movement of previously idle coins, i.e. those owned by longterm HODLers or even ICO investors.
 
-Depending on general market conditions and recent PA, this kind of holder behavior can mean different things, but it’s  almost always an omen of growing instability. The spikes in TAC can precede explosive growth or extreme downward pressure, making it a great starting point for further analysis to decide which is more likely.
+Depending on general market conditions and recent PA, this kind of holder behavior can mean different things, but it’s almost always an omen of growing instability. The spikes in TAC can precede explosive growth or extreme downward pressure, making it a great starting point for further analysis to decide which is more likely.
 
 For instance, we recently wrote about elevated activity on Bitcoin’s Token Age Consumed graph, suggesting that longtime HODLers are starting to move their coins and warning of volatility ahead:
 
 ![](image10.png)
 
-At the time of writing, Bitcoin was in a week-long consolidation mode and trading in the $8300-$8500 range. Within days of the article, Bitcoin first dropped more than % down to $7475, only to then grow by 28.6% in 24 hours, finally slowing down at $9650.
+At the time of writing, Bitcoin was in a week-long consolidation mode and trading in the $8300-$8500 range. Within days of the article, Bitcoin first dropped down to $7475, only to then grow by 28.6% in 24 hours, finally slowing down at $9650.
 
 Volatility markers are used most effectively as an initial indicator of upcoming trend reversals, a starting point that you can build upon and leverage by analyzing additional metrics, signals and information.
 
@@ -89,7 +89,7 @@ Volatility markers are used most effectively as an initial indicator of upcoming
 
 Finally, Santiment tools do a lot more than inform you of - and enable you to react to - prospective exit and entry points, or help you trade market anomalies. Many of our metrics and indicators warrant deep analysis and close study if you truly want to understand crypto market behavior, network activity or crowd sentiment.
 
-For example, if you looked at pure on-chain transaction volumes for Ethereum over its lifsepan, you’d be forgiven if you assumed that the network suffered mass exodus since its 2018 top, and is currently a shell of its former self:
+For example, if you looked at pure on-chain transaction volumes for Ethereum over its lifespan, you’d be forgiven if you assumed that the network suffered mass exodus since its 2018 top, and is currently a shell of its former self:
 
 ![](image11.png)
 
@@ -97,11 +97,11 @@ This is why deep network analysis is so important for successful traders. Compar
 
 ![](image1.png)
 
-Higher token velocity means that the same token is used in transactions more often. You can notice the same steep drop-off in ETH’s velocity around the start of 2018. This heightened activity (and subsequent dip) correlates strongly with the huge ETH mixer that operated between March 2017-2018, artificially inflation on-chain trx volumes by moving the same coins many times over.
+Higher token velocity means that the same token is used in transactions more often. You can notice the same steep drop-off in ETH’s velocity around the start of 2018. This heightened activity (and subsequent dip) correlates strongly with the huge ETH mixer that operated between March 2017-2018, artificially inflating on-chain trx volumes by moving the same coins many times over.
 
-Once the mixer was liquidated, token velocity toppled back to ‘normal’ levels (as tokens weren’t mixed as much anymore), where it’s remained ever since. This lets us know that the decline in TRX volume wasn’t due to speculative, but rather technical reasons, allowing us to better understand - and valuate the network.
+Once the mixer was liquidated, token velocity toppled back to ‘normal’ levels (as tokens weren’t mixed as much anymore), where it’s remained ever since. This lets us know that the decline in TRX volume wasn’t due to speculative, but rather technical reasons, allowing us to better understand and value the network.
 
-Speaking of valuation metrics, Santiment offers a number of highly effective long-term indicators of project health. These will not tell you where the price is headed short-term, but it will give you a strong sense of the project’s well-being, adoption and ongoing development - all crucial long-term investment factors.
+Speaking of valuation metrics, Santiment offers a number of highly effective long-term indicators of project health. These will not tell you where the price is headed short-term, but they will give you a strong sense of the project’s well-being, adoption and ongoing development - all crucial long-term investment factors.
 
 For example, network growth (number of new addresses created on the network daily) is a strong on-chain proxy for project adoption over time. Compare the network growth of a project with strong community backing like BAT, which continues to add hundreds of new addresses to its network each day:
 

@@ -33,7 +33,7 @@ Metrics are located in different tables, depending on some different parameters.
 
 ### daily_metrics_v2
 
-The `daily_metrics_v2` table stores a single metric value for each asset for each day. I.e. in that tables stored metrics that have exactly 1 value per day.
+The `daily_metrics_v2` table stores a single metric value for each asset for each day. That is, it stores metrics that have exactly 1 value per day.
 
 Here's an example how to fetch `daily_active_addresses` for `bitcoin` using `daily_metrics_v2`
 
@@ -81,7 +81,7 @@ Test in [Queries](https://queries.santiment.net/query/price-example-478)
 
 ### labeled_intraday_metrics_v2
 
-Table `labeled_intraday_metrics_v2` stores metrics for a given `blockchain` and `label_id`. Each `label_id` corresponds to a certain [label FQN.](/labels/label-fqn) The data for that ID is stored in the `label_metadata` table. Blockchain column contains the string for blockchain name, e.g. `bictoin`, `ethereum`, etc.
+Table `labeled_intraday_metrics_v2` stores metrics for a given `blockchain` and `label_id`. Each `label_id` corresponds to a certain [label FQN.](/labels/label-fqn) The data for that ID is stored in the `label_metadata` table. The blockchain column contains the string for the blockchain name, e.g. `bitcoin`, `ethereum`, etc.
 
 For instance, you can retrieve ethereum balance of all centralized exchange addresses with the query:
 
@@ -106,7 +106,7 @@ Test in [Queries](https://queries.santiment.net/query/cex-balance-example-479)
 
 ### daily_label_based_metrics
 
-Table `intraday_metrics` also has `label` and `owner` columns so that metrics stored in that table correspond to a particular label and owner.
+The `daily_label_based_metrics` table also has `label` and `owner` columns so that metrics stored in that table correspond to a particular label and owner.
 
 > Note that this table uses old way to filter labels (plain label/owner instead of label_fqn).
 
@@ -222,7 +222,7 @@ WHERE name LIKE '%price%'
 
 Test in [Queries](https://queries.santiment.net/query/price-related-metrics-example-488)
 
-Also you're able to find deciamals and contract addresses for a particular asset, e.g. uniswap:
+You are also able to find decimals and contract addresses for a particular asset, e.g. uniswap:
 
 ```SQL
 SELECT DISTINCT name, asset_id, decimals, contract_addresses
@@ -238,7 +238,7 @@ WHERE name = 'uniswap'
 
 ### Using precomputed metrics to build new metrics
 
-Not all metrics are build from the raw data only. Some of the metrics are
+Not all metrics are built from the raw data only. Some of the metrics are
 computed by combining a set of pre-computed metrics.
 
 The MVRV is defined as the ratio between the Market Value and Realized Value.
@@ -288,7 +288,7 @@ Test in [Queries](https://queries.santiment.net/query/usage-of-precomputed-metri
 ```
 
 To return only some of the columns, the query can be provided as a FROM subquery. This does not induce any
-performence degradation. This example also shows how the [WITH Clause](https://clickhouse.com/docs/en/sql-reference/statements/select/with/)
+performance degradation. This example also shows how the [WITH Clause](https://clickhouse.com/docs/en/sql-reference/statements/select/with/)
 can be used to avoid string literals repetition.
 
 ```sql

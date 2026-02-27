@@ -7,9 +7,9 @@ description: The total number of Binance perpetual contracts in existence.
 
 ## Description
 
-Traders are always searching for information to get an edge in the market. The most valuable information is one that provides insights into what other traders are doing - Open Interest offers this information if you know how to interpret it. By understanding open interest and its impact on crypto prices, it can help you make better-informed trading decisions.
+Traders are always searching for information to get an edge in the market. The most valuable information is that which provides insights into what other traders are doing - Open Interest offers this information if you know how to interpret it. Understanding open interest and its impact on crypto prices can help you make better-informed trading decisions.
 
-More details on Binance [web-site](https://www.binance.com/en/blog/futures/what-information-does-open-interest-convey-421499824684900398).
+More details on Binance [website](https://www.binance.com/en/blog/futures/what-information-does-open-interest-convey-421499824684900398).
 
 ---
 

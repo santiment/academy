@@ -14,7 +14,7 @@ Track the amount of ETH leaving the wallets where ICO funds were collected.
 #### Example
 
 Below is the ETH spent over time of Golem plotted against the Golem price and ETH price.
-Enabling the ETH is useful to give you an approximation for the value in USD that this
+Enabling the ETH price is useful to give you an approximation of the value in USD that this
 ETH movement generated. Most often ICOs move ethereum out of their ICO wallets to
 sell them on exchanges to fund the project.
 

@@ -154,7 +154,7 @@ age_consumed + dt * circulation_delta_20y
 ```
 
 However, our age consumed metric is measured in days. If we want the delta TCT
-to be measured in seconds the formula is
+to be measured in seconds, the formula is
 
 ```sql
 age_consumed*86400 + dt*circulation_delta_20y

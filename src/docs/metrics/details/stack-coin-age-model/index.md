@@ -246,7 +246,7 @@ Bansal, Dhruv. “Bitcoin Data Science (Pt. 1): HODL Waves.”
 [hodl waves](https://unchained.com/blog/tag/hodl-waves/).
 
 Carter, Nic. “Bitcoin Honeybadger 2018 Bitcoin Conference, Riga, Day 2.”
-[bitcoin honeybadged 2018](https://www.youtube.com/watch?v=D2WXxgZ8h-0&t=78m8s).
+[bitcoin honeybadger 2018](https://www.youtube.com/watch?v=D2WXxgZ8h-0&t=78m8s).
 
 Carter, Nic, Antoine Le Calvez, and Coinmetrics team. 2018. “Introducing
 Realized Capitalization.” 2018.

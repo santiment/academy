@@ -21,7 +21,7 @@ account-based blockchains. To define the age of a coin in account-based
 blockchains we developed our own [Coin Age
 Model](/metrics/details/stack-coin-age-model)
 
-Timebound metrics names are formed from the original metric name plus a
+Timebound metric names are formed from the original metric name plus a
 timebound suffix. Available timebound suffixes are:
 
 - `_1d` - 1 day

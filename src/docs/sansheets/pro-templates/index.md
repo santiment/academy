@@ -15,7 +15,7 @@ _In case you are already a Sanbase Pro subscriber and want to copy these templat
 
 This template visualizes the [Mean Dollar Age](https://insights.santiment.net/read/%F0%9F%93%A2-mean-age-653/) of Bitcoin, Ethereum, and various ERC20 coins in comparison to one another.
 
-Developed by Santiment, Mean Dollar Age calculates the average age of all dollars invested in acquiring a particular coin. This metric identifies accumulation and sell cycles for any coin, and identifying dips in Mean Dollar Age can serve as a novel bullish indicator.
+Developed by Santiment, Mean Dollar Age calculates the average age of all dollars invested in acquiring a particular coin. This metric identifies accumulation and sell cycles for any coin, and dips in Mean Dollar Age can serve as a novel bullish indicator.
 
 ## Top Holders Template
 

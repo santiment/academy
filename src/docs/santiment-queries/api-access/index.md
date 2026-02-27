@@ -215,7 +215,7 @@ The meaning of the fields is:
   Example types are `UInt64`, `Date`, `Float64`, `DateTime`, `String`, etc. These type are mapped
   to JSON types as JSON has a limited number of types. All integer and float types are
   mapped to the JSON number type but with specified meaning (size, type and sign of the number).
-  A lot of the other types are transpored as JSON string - `String`, `Date`, `DateTime` and others
+  A lot of the other types are transported as JSON string - `String`, `Date`, `DateTime` and others
   are JSON strings with specified meaning.
 - `rows` is a list of lists, each inner list is a row in the result. The order of the
   rows is the same as in the result of the SQL query. The order of the columns in the
@@ -278,9 +278,9 @@ dt                   metric    asset       value
 
 #### sanpy request parameters definition
 
-The `execute_sql` function accepts three named parameters - one mandatory and two optinal:
+The `execute_sql` function accepts three named parameters - one mandatory and two optional:
 
-- `query` - The meaning is the same as in the `runRawSqlQuery` API described. This parameter is mandatory/
+- `query` - The meaning is the same as in the `runRawSqlQuery` API described. This parameter is mandatory.
 - `parameters` - The meaning is the same as in the `runRawSqlQuery` API described above.
   The format here is a Python dictionary that automatically gets converted to a JSON string when
   executing the request. If the query does not have any parameters, this parameter can be omitted.

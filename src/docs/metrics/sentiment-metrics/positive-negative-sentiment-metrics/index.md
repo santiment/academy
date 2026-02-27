@@ -151,7 +151,7 @@ Fetch aggregated daily values for many assets:
 
 ### Market Sentiment Positive / Negative
 
-There is an option to get Market Sentiment Positive Negative
+There is an option to get Market Sentiment Positive/Negative:
 
 ```graphql-explorer
 {

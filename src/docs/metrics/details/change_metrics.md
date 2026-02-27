@@ -22,7 +22,7 @@ The metrics with the suffix `_change_<interval>` indicate the percent value
 change at the given time compared to `interval` time ago. This allows the
 percent changes to be fetched historically and to be plotted on charts.
 
-Change metrics' names are formed from the original metric name and a change
+Change metric names are formed from the original metric name and a change
 suffix. Available change intervals and their suffixes are:
 
 - `_change_1h` - 1 hour. Available only for USD price

@@ -74,7 +74,7 @@ where:
 - $u_t$ is the total amount of unique users that have used the word under
   consideration at least once.
 
-On an intuitive level the hype score tends to be a measuring of how rapidly the
+On an intuitive level, the hype score tends to be a measure of how rapidly the
 social volume of a certain word increased over the last 24 hours in comparison
 to the past 2 weeks. This is done by comparing the current social volume change
 to the average social volume of the past 14 days.
@@ -87,7 +87,7 @@ heavy spam) this word will have a hype score of **0** thanks to the
 $\log(\text{unique\_users})$ component. On the other hand, words with 100 and 200 users
 will have more or less the same chance to get a higher hype score.
 
-It's also worth noticing that we use the **normalized** social volume instead of
+It is also worth noting that we use the **normalized** social volume instead of
 the regular one. This makes it easier to compare the resulting hype score across
 different data sources with different average daily volumes of talks.
 

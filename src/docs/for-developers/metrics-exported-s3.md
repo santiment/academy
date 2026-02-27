@@ -107,8 +107,8 @@ metric_id | name                                              | version    | sta
 ## Querying Data with ClickHouse
 
 In the following examples we use ClickHouse [s3 Table Function](https://clickhouse.com/docs/sql-reference/table-functions/s3) to request data from S3 buckets and 
-process it using SQL queries. But You can use any other instrument which 
-supports data reading from S3 buckets.
+process it using SQL queries. But you can use any other instrument that 
+supports reading data from S3 buckets.
 
 ### Basic Query Example
 

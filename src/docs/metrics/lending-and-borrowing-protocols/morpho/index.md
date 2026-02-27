@@ -9,8 +9,8 @@ description: Morpho Protocol Metrics
 [Morpho](https://morpho.org/) is a decentralized finance (DeFi) protocol designed to optimize yields in 
 lending and borrowing markets. It operates as a layer on top of existing protocols like 
 Compound and Aave, improving the efficiency of capital allocation by matching lenders and 
-borrowers directly. This direct matching reduces intermediaries, enhancing both the interest 
-rates for lenders and borrowers. The protocol aims to offer seamless and more profitable 
+borrowers directly. This direct matching reduces intermediaries, enhancing the interest
+rates for both lenders and borrowers. The protocol aims to offer seamless and more profitable 
 interactions within the DeFi ecosystem.
 
 ### Metrics related to Morpho protocol:

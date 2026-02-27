@@ -13,7 +13,7 @@ Open Interest shows the amount of open perpetual contracts currently on Bitmex's
 
 Open Value shows the value of the corresponding open interest in Satoshis (XBT/BTC).
 
-More details on BitMEX [web-site](https://www.bitmex.com/app/contract/XBTUSD)  
+More details on BitMEX [website](https://www.bitmex.com/app/contract/XBTUSD)  
 
 ---
 

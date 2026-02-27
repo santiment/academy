@@ -40,7 +40,7 @@ There are 3 development activity contributors count metrics available:
 
 ## Measuring Unit
 
-Number of github accounts
+Number of GitHub accounts
 
 ---
 

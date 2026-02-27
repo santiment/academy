@@ -31,8 +31,8 @@ The complexity calculation considers the following factors:
 - Metric weight - **W**. Most metrics are stored in specialized fast data
   storage, so they have a smaller weight (0.3). The remaining metrics have a
   weight of 1.
-- Weighted number of assets - **A**. In case of returning data for many assets (timeseriesDataPerSlugJson API),
-  the number of assets multiplied by a weight of 0.1, minimum of 1. In case of returning
+- Weighted number of assets - **A**. In the case of returning data for many assets (timeseriesDataPerSlugJson API),
+  the number of assets is multiplied by a weight of 0.1, with a minimum of 1. In the case of returning
   data for a single asset, the weight is 1.
 - Subscription plan tier - **S**. The higher the user's plan, the larger the
   complexity limit (3 for Basic, 5 for Pro, 7 for Premium). As the complexity

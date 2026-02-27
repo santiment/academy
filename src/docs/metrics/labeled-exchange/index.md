@@ -91,7 +91,7 @@ Binance Active Deposits:
 
 
 
-Binance Withdrawals Transactions
+Binance Withdrawal Transactions:
 ```graphql-explorer
 {
   getMetric(metric: "withdrawal_transactions_per_exchange") {
@@ -110,7 +110,7 @@ Binance Withdrawals Transactions
 ```
 
 
-Binance Flow Balance
+Binance Flow Balance:
 ```graphql-explorer
 {
   getMetric(metric: "exchange_balance_per_exchange") {

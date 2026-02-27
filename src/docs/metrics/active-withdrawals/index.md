@@ -13,7 +13,7 @@ description: "The active addresses metric is the number of unique addresses part
 ### Active Withdrawals
 
 Shows the **number of unique withdrawal addresses** that have been active on a
-particular day for a given asset. Refer to a [withdrawal address explanation here](/labels/withdrawal)
+particular day for a given asset. Refer to the [withdrawal address explanation here](/labels/withdrawal).
 
 ### Withdrawal Transactions
 

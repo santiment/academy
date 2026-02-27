@@ -13,11 +13,11 @@ description: "The active addresses metric is the number of unique addresses part
 ### Active Deposits
 
 Shows the **number of unique deposit addresses** that have been active on a
-particular day for a given asset. Refer to a [deposit address explanation here](/labels/deposit)
+particular day for a given asset. Refer to the [deposit address explanation here](/labels/deposit).
 
 ![ethereum daily active deposits](daily-active-deposits-ethereum.png)
 
-`active_deposits` metric shows the number of **daily** active deposits. `active_deposits_5m` shows the amount of active deposits for a given **5 minutes** interval.
+`active_deposits` metric shows the number of **daily** active deposits. `active_deposits_5m` shows the number of active deposits for a given **5-minute** interval.
 
 
 ### Deposit Transactions

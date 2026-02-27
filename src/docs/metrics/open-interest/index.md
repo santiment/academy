@@ -66,8 +66,8 @@ Dollars
 ## SanAPI
 
 - Open interest per exchange is available under the `exchange_open_interest` name.
-- Open interest per settlement currency is available under the  `open_interest_per_settlement_currency` name.
-- Total open interest is available under the  `total_open_interest` name.
+- Open interest per settlement currency is available under the `open_interest_per_settlement_currency` name.
+- Total open interest is available under the `total_open_interest` name.
 
 ```graphql-explorer
 {
