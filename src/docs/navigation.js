@@ -126,15 +126,16 @@ export const GUIDES = [
     articles: [
       'Account settings',
       'Alerts page',
-      { slug: 'Assets page', title: 'Assets Overview page' },
+      'Charts',
       'Insights',
       'Keyboard Shortcuts',
       'Logging into Sanbase',
       {
-        slug: 'Requesting display new project',
-        title: 'Request to Display New Project',
+        slug: 'requesting new token',
+        title: 'Request New Token Coverage',
       },
       'Social Trends',
+      'Watchlists',
     ],
   },
   {
@@ -212,7 +213,6 @@ export const GUIDES = [
       </>
     ),
     articles: [
-      'Access Plans',
       {
         slug: 'sanbase-plans',
         title: 'Plans - Sanbase',
@@ -292,6 +292,7 @@ export const REFERENCES = [
       'CrvUSD Savings',
       'Daily Active Addresses',
       'Daily Aggregated Financial Metrics',
+      'Debt',
       'Decentralized Exchange Metrics',
       'Deprecated Metrics',
       { slug: 'finalized', title: 'Finalized Metrics' },
@@ -317,6 +318,7 @@ export const REFERENCES = [
       'Labeled Exchange',
       'Labelled Historical Balance',
       'Lending and Borrowing Protocols',
+      'Liquidations',
       'M2 Money Supply',
       'MVRV',
       'MakerDAO DAI Savings Rate',

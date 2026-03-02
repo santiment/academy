@@ -1,7 +1,7 @@
 ---
 title: DeFi Lending and Borrowing Protocols
-author: Filip 
-date: 2023-04-07
+author: Filip, David U.
+date: 2026-02-09
 ---
 
 Decentralized Finance (DeFi) lending and borrowing protocols are blockchain-based 
@@ -19,13 +19,17 @@ global financial system without the need for intermediaries or extensive paperwo
 However, they also carry additional risks such as smart contract vulnerabilities 
 and market volatility.
 
+Each of the protocols listed below contain their own set of protocol-specific metrics for liquidations, debt, collateral, assets supplied(lent), and repayments. There are currently no global "Total_Liquidations", "Total_debt", and "Total_repayments" metrics. Users could achieve these using the formulas tool found in charts to create combined metrics or simply load public layouts and charts, here is one example [for debt](https://app.santiment.net/charts/defi-debt-23668) and another for [liquidations](https://app.santiment.net/s/hUDwcQwN).
+
+Our Coverage:
+
 - [Aave V2](/metrics/lending-and-borrowing-protocols/aave-v2)
 - [Aave V3](/metrics/lending-and-borrowing-protocols/aave-v3)
 - [Aave Safety Module](/metrics/lending-and-borrowing-protocols/aave-safety-module)
 - [Compound](/metrics/lending-and-borrowing-protocols/compound)
 - [Compound V3](/metrics/lending-and-borrowing-protocols/compound-v3)
-- [MakerDAO](/metrics/lending-and-borrowing-protocols/makerdao)
 - [Morpho](/metrics/lending-and-borrowing-protocols/morpho)
+- [Sky (Formerly MakerDAO)](/metrics/lending-and-borrowing-protocols/makerdao)
 - [Spark](/metrics/lending-and-borrowing-protocols/spark)
 - [Fluid](/metrics/lending-and-borrowing-protocols/fluid)
 - [Liquity](/metrics/lending-and-borrowing-protocols/liquity)

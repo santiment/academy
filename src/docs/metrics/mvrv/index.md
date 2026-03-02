@@ -57,6 +57,10 @@ MVRV value of 2 means that if all holders sell their coins/tokens at the current
 ### Low MVRV Values ( < 1 )
 If the MVRV value is between 0 and 1, then the market is "undervalued" on average, meaning most people will realize losses if they all sell their holdings at the current price.
 
+### Additional Resources
+
+- [Video: How to use MVRV](https://www.youtube.com/watch?v=vbYQLNJ40yw)
+
 ## Timebound
 
 [Timebound Metrics](/metrics/details/timebound) available.

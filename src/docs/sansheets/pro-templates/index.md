@@ -37,17 +37,17 @@ This template triggers BUY and SELL signals for Bitcoin and Ethereum based on ma
 
 ## Network Growth & Daily Active Addresses Template
 
-This template compares the network growth and daily active address percentage changes of Bitcoin, Ethereum, and other projects over time. Generally, many projects create new addresses at a similar percentage rate to one another as markets ebb and flow. Identifying which projects are creating new addresses and growing their network at a faster rate than their price is an excellent strategy to find buy-low opportunities.
+This template compares the [network growth](https://academy.santiment.net/metrics/network-growth/) and [daily active address](https://academy.santiment.net/metrics/daily-active-addresses/) percentage changes of Bitcoin, Ethereum, and other projects over time. Generally, many projects create new addresses at a similar percentage rate to one another as markets ebb and flow. Identifying which projects are creating new addresses and growing their network at a faster rate than their price is an excellent strategy to find buy-low opportunities.
 
 ## MVRV and MVRV Long/Short Difference Ratio Template
 
-The MVRV ratio is calculated by dividing the market cap (market value or MV) by the realized cap (total realized value or RV). This ratio provides a reliable estimate of how overvalued or undervalued the current market cap is.
+The [MVRV](https://academy.santiment.net/metrics/mvrv/) ratio is calculated by dividing the market cap (market value or MV) by the realized cap (total realized value or RV). This ratio provides a reliable estimate of how overvalued or undervalued the current market cap is.
 
 In addition, we offer the MVRV Long/Short Difference comparison in this template to help visualize which projects are above or below their average line of profitable traders. If the ratio is above 0%, then on average, Ethereum holders will profit if they sell their coins now. If it is below 0%, then the average holder will realize a loss if they sell.
 
 ## Velocity vs. Price Template
 
-Velocity is an underutilized method for researching the speed at which money circulates in the crypto economy. It is calculated by dividing a token's transaction volume (in USD) by its market cap (in USD).
+[Velocity](https://academy.santiment.net/metrics/velocity/) is an underutilized method for researching the speed at which money circulates in the crypto economy. It is calculated by dividing a token's transaction volume (in USD) by its market cap (in USD).
 
 Similar to the Daily Active Addresses Template, this model helps visualize when tokens are being overbought or oversold based on the historical trends of its velocity metric.
 
