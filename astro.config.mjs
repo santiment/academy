@@ -31,6 +31,9 @@ const viteConfig = mergeConfig(viteBase, {
     __SVELTEKIT_APP_DIR__: '""',
     __SVELTEKIT_PATHS_RELATIVE__: '""',
   },
+  resolve: {
+    alias: [{ find: '@sentry/sveltekit', replacement: '@sentry/astro' }],
+  },
   alias: {
     $components: path.resolve(__dirname, './src/components'),
     $layouts: path.resolve(__dirname, './src/layouts'),

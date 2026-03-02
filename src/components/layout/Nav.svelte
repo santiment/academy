@@ -4,6 +4,7 @@
   import Svg from 'san-webkit-next/ui/core/Svg'
   import { AskAIButton } from 'san-webkit-next/ui/app/AIChatbot'
   import { Products } from 'san-webkit-next/ui/app/Products'
+  import { useCustomerCtx } from 'san-webkit-next/ctx/customer'
 
   import Search from '$components/features/search/Search.svelte'
   import ProductsButton from '$components/ui/ProductsButton.svelte'
@@ -18,6 +19,8 @@
   const { slug, sidebarData }: TProps = $props()
 
   let navOpen = $state(false)
+
+  useCustomerCtx()
 
   $effect(() => {
     if (navOpen) {
