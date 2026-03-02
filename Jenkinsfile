@@ -27,7 +27,7 @@ slaveTemplates.dockerTemplate { label ->
           ]) {
             def awsRegistry = "${env.aws_account_id}.dkr.ecr.eu-central-1.amazonaws.com"
             docker.withRegistry("https://${awsRegistry}", "ecr:eu-central-1:ecr-credentials") {
-              sh "docker build --build-arg BACKEND_URL=${backendUrl} --build-arg BACKEND_URL=${siteUrl} -t ${awsRegistry}/academy:stage -t ${awsRegistry}/academy:${scmVars.GIT_COMMIT} ."
+              sh "docker build --build-arg BACKEND_URL=${backendUrl} --build-arg SITE_URL=${siteUrl} -t ${awsRegistry}/academy:stage -t ${awsRegistry}/academy:${scmVars.GIT_COMMIT} ."
               sh "docker push ${awsRegistry}/academy:stage"
               sh "docker push ${awsRegistry}/academy:${scmVars.GIT_COMMIT}"
             }
@@ -50,7 +50,7 @@ slaveTemplates.dockerTemplate { label ->
           ]) {
             def awsRegistry = "${env.aws_account_id}.dkr.ecr.eu-central-1.amazonaws.com"
             docker.withRegistry("https://${awsRegistry}", "ecr:eu-central-1:ecr-credentials") {
-              sh "docker build --build-arg BACKEND_URL=${backendUrl} --build-arg BACKEND_URL=${siteUrl} -t ${awsRegistry}/academy:production -t ${awsRegistry}/academy:${scmVars.GIT_COMMIT} ."
+              sh "docker build --build-arg BACKEND_URL=${backendUrl} --build-arg SITE_URL=${siteUrl} -t ${awsRegistry}/academy:production -t ${awsRegistry}/academy:${scmVars.GIT_COMMIT} ."
               sh "docker push ${awsRegistry}/academy:production"
               sh "docker push ${awsRegistry}/academy:${scmVars.GIT_COMMIT}"
             }
