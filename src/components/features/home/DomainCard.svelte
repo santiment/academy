@@ -55,12 +55,12 @@
     'text-rhino transition-all duration-100 ease-in-out',
     'hover:-translate-y-1 hover:cursor-pointer',
     '[&_path,&_rect,&_h4]:transition-colors [&_path,&_rect,&_h4]:duration-200',
-    wide && 'py-8 px-10 items-baseline sm:p-5'
+    wide && 'py-8 px-10 items-baseline md:pr-[100px] sm:p-5'
   )}
 >
   <div class={cn(
     "mb-8 flex h-16 w-16 items-center justify-center fill-none sm:mr-2",
-    wide && 'absolute -right-2.5 top-0 bottom-0 m-0 h-auto w-auto -z-[1] md:right-5 md:scale-75'
+    wide && 'absolute -right-2.5 top-0 bottom-0 m-0 h-auto w-auto -z-[1] md:-right-8 md:scale-75 md:scale-50'
   )}>
     {#if Icon}
       <Icon />
