@@ -20,7 +20,7 @@
 
   let navOpen = $state(false)
 
-  useCustomerCtx()
+  useCustomerCtx({ currentUser: { settings: { theme: null } } } as any)
 
   $effect(() => {
     if (navOpen) {

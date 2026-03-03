@@ -8,7 +8,7 @@
   })
 
   const { aiChatbot } = useAIChatbotCtx()
-  useCustomerCtx()
+  useCustomerCtx({ currentUser: { settings: { theme: null } } } as any)
 
 
   const queries = [
