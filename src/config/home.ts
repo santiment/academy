@@ -53,7 +53,7 @@ export const GUIDES = [
     description: 'Santiment webinars, video<br />tutorials and more',
     icon: 'Youtube',
   },
-]
+] as const
 
 export const RESOURCES = [
   {
@@ -82,4 +82,4 @@ export const RESOURCES = [
       'Directory of key stakeholder data anomalies available on Santiment',
     icon: 'Signals',
   },
-]
+] as const
