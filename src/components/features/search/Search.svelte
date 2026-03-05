@@ -103,18 +103,19 @@
         {#each results as result}
           <a 
             href={result.url} 
-            class="block p-1 bg-white transition-colors text-left group"
+            class="block p-1 bg-white text-left group hover:bg-green-light-1 rounded"
             onclick={() => {
               query = ''
               results = []
               showResults = false
+              if (inputRef.$) inputRef.$.value = ''
             }}
           >
             <div class="font-medium text-sm text-rhino py-1 border-b border-b-porcelain">
               {result.meta.title}
             </div>
 
-            <div class="text-xs text-rhino mt-1 line-clamp-2 [&_mark]:bg-green-light-1 [&_mark]:text-green group-hover:bg-green-light-1 p-1.5 pr-0">
+            <div class="text-xs text-rhino mt-1 line-clamp-2 [&_mark]:text-white [&_mark]:bg-green-light-4 [&_mark]:rounded-sm [&_mark]:px-[1px] [&_mark]:text-green group-hover:bg-green-light-2 p-1.5 pr-0">
               {@html result.excerpt}
             </div>
           </a>
