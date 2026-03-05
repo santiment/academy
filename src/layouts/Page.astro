@@ -11,6 +11,7 @@ import Nav from '$components/layout/Nav.svelte'
 
 import GoogleAnalytics from '$modules/analytics/components/GoogleAnalytics.astro'
 import Intercom from '$modules/support/components/Intercom.astro'
+import FirstPromoter from '$modules/analytics/components/FirstPromoter.astro'
 
 type Props = {
   sidebarData?: SidebarSection[]
@@ -36,6 +37,7 @@ const { sidebarData } = Astro.props
         <>
           <GoogleAnalytics id="G-H53MB0V33X" />
           <Intercom appId="cyjjko9u" />
+          <FirstPromoter id="ks4svmdl" />
         </>
       )
     }
