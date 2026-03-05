@@ -5,3 +5,5 @@ import { useAIChatbotCtx } from 'san-webkit-next/ui/app/AIChatbot'
 useDeviceCtx()
 useUiCtx()
 useAIChatbotCtx({ type: 'ACADEMY_QA' })
+
+console.log(process.env.GIT_HEAD, process.env.GIT_HEAD_DATETIME)
