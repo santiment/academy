@@ -11,6 +11,7 @@ RUN pnpm i --frozen-lockfile
 
 FROM base AS builder
 ENV NODE_ENV=production
+ENV ASTRO_TELEMETRY_DISABLED=1
 
 ARG BACKEND_URL
 ARG SITE_URL
