@@ -1,0 +1,26 @@
+---
+interface Props {
+  id: string
+  domain?: string
+}
+
+const { id, domain = '.santiment.net' } = Astro.props
+---
+
+<script is:inline define:vars={{ id, domain }}>
+  ;(function () {
+    var t = document.createElement('script')
+    t.type = 'text/javascript'
+    t.async = !0
+    t.src = 'https://cdn.firstpromoter.com/fprom.js'
+    t.onload = t.onreadystatechange = function () {
+      var t = this.readyState
+      if (!t || 'complete' == t || 'loaded' == t)
+        try {
+          $FPROM.init(id, domain)
+        } catch (t) {}
+    }
+    var e = document.getElementsByTagName('script')[0]
+    e.parentNode.insertBefore(t, e)
+  })()
+</script>
