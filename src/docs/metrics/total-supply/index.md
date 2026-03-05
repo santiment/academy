@@ -48,7 +48,7 @@ half of tokens are in loss, so the metric value drops below 50%.
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

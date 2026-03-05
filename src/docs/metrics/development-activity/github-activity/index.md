@@ -50,7 +50,7 @@ There are 3 github activity metrics available:
 
 ## Latency
 
-[Development Activity Data Latency](/metrics/details/latency#development-activity-latency)
+[Development Activity Data Latency](/metrics/details/latency#development-activity)
 
 ---
 

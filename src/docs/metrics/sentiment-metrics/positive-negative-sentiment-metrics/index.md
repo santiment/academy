@@ -68,7 +68,7 @@ Sum of sentiment scores
 
 ## Latency
 
-[Social Data Latency](/metrics/details/latency#social-data-latency)
+[Social Data Latency](/metrics/details/latency#social-data)
 
 ---
 

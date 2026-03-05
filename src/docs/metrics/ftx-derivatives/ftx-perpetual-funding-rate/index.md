@@ -41,7 +41,7 @@ Ratio
 
 ## Latency
 
-[Funding Rates Latency](/metrics/details/latency#funding-rates-latency)
+[Funding Rates Latency](/metrics/details/latency#funding-rates)
 
 ---
 

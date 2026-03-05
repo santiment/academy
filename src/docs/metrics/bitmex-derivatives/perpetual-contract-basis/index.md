@@ -42,7 +42,7 @@ Dollars/Ratio
 
 ## Latency
 
-[Price Latency](/metrics/details/latency#price-latency)
+[Price Latency](/metrics/details/latency#price-data)
 
 ---
 

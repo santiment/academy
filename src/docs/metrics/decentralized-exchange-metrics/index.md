@@ -81,7 +81,7 @@ Tether, USD coin, DAI, Binance USD, TrueUSD and other stablecoins.
 
 ## Latency
 
-[Price Latency](/metrics/details/latency#price-latency)
+[Price Latency](/metrics/details/latency#price-data)
 
 ---
 

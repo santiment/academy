@@ -69,7 +69,7 @@ The rest of the metrics have [Daily Intervals](/metrics/details/frequency#daily-
 
 ## Latency
 
-[Price Latency](/metrics/details/latency#price-latency)
+[Price Latency](/metrics/details/latency#price-data)
 
 ---
 

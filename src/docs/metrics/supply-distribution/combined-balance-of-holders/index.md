@@ -54,7 +54,7 @@ exceeding a specified balance [threshold](/metrics/details/supply_distribution_p
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

@@ -62,7 +62,7 @@ Number of github accounts
 
 ## Latency
 
-[Development Activity Data Latency](/metrics/details/latency#development-activity-latency)
+[Development Activity Data Latency](/metrics/details/latency#development-activity)
 
 ---
 

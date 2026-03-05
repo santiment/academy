@@ -42,7 +42,7 @@ Decimal percentage
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#funding-rates-latency)
+[On-Chain Latency](/metrics/details/latency#funding-rates)
 
 ---
 

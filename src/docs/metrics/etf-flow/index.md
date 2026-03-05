@@ -41,7 +41,7 @@ USD
 
 ## Latency
 
-[Price Latency](/metrics/details/latency#daily-metrics-latency)
+[Price Latency](/metrics/details/latency#daily-metrics)
 
 ---
 

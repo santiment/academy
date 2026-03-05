@@ -39,7 +39,7 @@ Amount in USD or ETH
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

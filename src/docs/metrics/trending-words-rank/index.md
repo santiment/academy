@@ -43,7 +43,7 @@ Ordinal number
 
 ## Latency
 
-[Social Data Latency](/metrics/details/latency#social-data-latency)
+[Social Data Latency](/metrics/details/latency#social-data)
 
 ---
 

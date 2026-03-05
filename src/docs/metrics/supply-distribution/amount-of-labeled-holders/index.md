@@ -53,7 +53,7 @@ Number of addresses
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

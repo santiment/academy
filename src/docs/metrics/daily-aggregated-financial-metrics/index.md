@@ -46,7 +46,7 @@ Amount in USD
 
 ## Latency
 
-[Daily Metrics Latency](/metrics/details/latency#daily-metrics-latency)
+[Daily Metrics Latency](/metrics/details/latency#daily-metrics)
 
 ---
 

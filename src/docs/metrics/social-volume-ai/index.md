@@ -40,7 +40,7 @@ Amount of distinct related to the given asset documents extracted by NLP model.
 
 ## Latency
 
-[Social Data Latency](/metrics/details/latency#social-data-latency)
+[Social Data Latency](/metrics/details/latency#social-data)
 
 ---
 

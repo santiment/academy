@@ -58,7 +58,7 @@ Please note that metrics may undergo changes in historical values due to automat
 
 ## Latency
 
-[Price Latency](/metrics/details/latency#price-latency)
+[Price Latency](/metrics/details/latency#price-data)
 
 ---
 

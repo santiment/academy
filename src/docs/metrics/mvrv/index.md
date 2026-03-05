@@ -128,7 +128,7 @@ Intervals](/metrics/details/frequency#five-minute-frequency)
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

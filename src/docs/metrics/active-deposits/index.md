@@ -79,7 +79,7 @@ Non-negative number of addresses
 
 ## Latency
 
-Daily Active Deposits has [on-chain Latency](/metrics/details/latency#on-chain-latency)
+Daily Active Deposits has [on-chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

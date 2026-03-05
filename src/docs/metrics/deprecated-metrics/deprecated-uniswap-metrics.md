@@ -61,7 +61,7 @@ Metrics that have `percent` in name represent the percentage.
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

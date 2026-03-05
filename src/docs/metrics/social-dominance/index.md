@@ -66,7 +66,7 @@ Number - % between 0 and 100
 
 ## Latency
 
-[Social Data Latency](/metrics/details/latency#social-data-latency)
+[Social Data Latency](/metrics/details/latency#social-data)
 
 ---
 

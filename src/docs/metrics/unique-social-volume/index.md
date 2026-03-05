@@ -62,7 +62,7 @@ Amount of distinct documents that mention the given text pattern.
 
 ## Latency
 
-[Social Data Latency](/metrics/details/latency#social-data-latency)
+[Social Data Latency](/metrics/details/latency#social-data)
 
 ---
 

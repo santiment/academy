@@ -50,7 +50,7 @@ a clear view of overall lending dynamics in DeFi.
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

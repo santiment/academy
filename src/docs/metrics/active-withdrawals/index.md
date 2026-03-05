@@ -58,7 +58,7 @@ Non-negative number of addresses
 
 ## Latency
 
-[On-chain Latency](/metrics/details/latency#on-chain-latency)
+[On-chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

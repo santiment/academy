@@ -60,7 +60,7 @@ A non-negative number of times coin/token changes wallet
 
 ## Latency
 
-[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+[On-Chain Latency](/metrics/details/latency#on-chain-data)
 
 ---
 

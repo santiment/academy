@@ -127,7 +127,7 @@ Emerging Trends are available at [hourly intervals](/metrics/details/frequency#h
 
 ## Latency
 
-Emerging Trends have [social data Latency](/metrics/details/latency#social-data-latency)
+Emerging Trends have [social data Latency](/metrics/details/latency#social-data)
 
 ---
 

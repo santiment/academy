@@ -50,7 +50,7 @@ Amount in dollars/usdt/bitcoins
 
 ## Latency
 
-[Price Latency](/metrics/details/latency#price-latency)
+[Price Latency](/metrics/details/latency#price-data)
 
 ---
 
