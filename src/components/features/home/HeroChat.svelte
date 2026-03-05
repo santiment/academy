@@ -1,15 +1,8 @@
 <script lang="ts">
-  import { useCustomerCtx } from 'san-webkit-next/ctx/customer'
   import { ChatInput, useAIChatbotCtx } from 'san-webkit-next/ui/app/AIChatbot'
   import Button from 'san-webkit-next/ui/core/Button'
 
-  useAIChatbotCtx.set({
-    type: 'ACADEMY_QA',
-  })
-
   const { aiChatbot } = useAIChatbotCtx()
-  useCustomerCtx()
-
 
   const queries = [
     'What is Santiment known for?',
