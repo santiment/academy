@@ -30,12 +30,12 @@ minimizing the number of API calls and reducing bandwidth usage.
 Apart from precomputed metrics, Santiment has the [Santiment Queries](/santiment-queries)
 product, which allows developers to write custom SQL to obtain the data from the
 database directly. These SQL queries can be executed from the [Queries web page](https://queries.santiment.net/)
-or [execute the queries through the API](/santiment-queries/api-access)
+or [execute the queries through the API](/santiment-queries/api-access).
 
 ### GraphQL API
 
 In this example, the query fetches the daily active addresses for Bitcoin. The
-query is self-descriptive and easy to maintain. New members to your team can
+query is self-descriptive and easy to maintain. New members of your team can
 intuitively understand the query without the need to consult the documentation.
 
 ```graphql explorer
@@ -52,8 +52,8 @@ intuitively understand the query without the need to consult the documentation.
 ```
 
 Find more GraphQL query examples on the [Common
-Queries](/sanapi/common-queries) page, or read [How to access the
-API](sanapi/accessing-the-api) article
+Queries](/sanapi/common-queries) page, or read the [How to Access the
+API](/sanapi/accessing-the-api) article.
 
 ### Python API-wrapper library
 
@@ -92,14 +92,14 @@ To request data exporting and S3 bucket access credentials, please
 There are a few different ways to explore the available metrics.
 
 - Visit the [metrics' docs articles page](/metrics) where you can find links to
-  the documentation articles of the metrics.
+  the documentation articles for the metrics.
 - Open the [Metrics Catalog](https://api.santiment.net/available_metrics)
-  webpage that list all the metrics with information about the available
+  webpage that lists all the metrics with information about the available
   assets. This page allows you to filter the metrics supported by a given asset
   and download the data as CSV.
 - Open any [chart page on Sanbase](https://app.santiment.net/charts?slug=ethereum) and explore the metrics on the sidebar.
 - Use the [GraphQL API](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(filter%3A%20METRIC%2C%20product%3A%20SANAPI%2C%20plan%3A%20BUSINESS_PRO)%20%7B%0A%20%20%20%20name%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20isDeprecated%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%20%20docs%20%7B%0A%20%20%20%20%20%20link%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
-  that shows the restrictions for each subscription product -- which metrics are accessible and what are the time range restrictions for them.
+  that shows the restrictions for each subscription product — which metrics are accessible and what are the time range restrictions for them.
 
 <Notebox type="none">
 

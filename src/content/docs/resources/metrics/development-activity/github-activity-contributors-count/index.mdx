@@ -10,11 +10,11 @@ dateModified: 2025-04-30
 
 The Github Activity Contributors Count metrics show the unique number of
 people (represented as Github accounts) that have contributed to a public
-Github repository in an organization that is followed. 
+Github repository in an organization that is followed.
 
 There are 3 development activity contributors count metrics available:
 - `github_activity_contributors_count` - Computed on-the-fly using the Github
-  data. Because of this the metric can compute data for any asset or just any
+  data. Because of this, the metric can compute data for any asset or just any
   random Github organization that has public repositories like Google,
   Facebook, or any other organization.
 - `github_activity_contributors_count_7d` - Precomputed weekly metric for each
@@ -22,12 +22,12 @@ There are 3 development activity contributors count metrics available:
   when the value is needed for all assets at once.
 - `ecosystem_github_activity_contributors_count_7d` - Precomputed for each
   ecosystem. The metric is defined as the total count of unique contributors
-  that contributed to the github organization of at least one of assets that
+  that contributed to the Github organization of at least one of the assets that
   belong to it.
 
 > Note: The precomputed metrics `github_activity_contributors_count_7d` and
 > `ecosystem_github_activty_contributors_count_7d` cannot be aggregated using the
-> `SUM` aggregation, i.e. you cannot obtain the number of monthly contributors
+> `SUM` aggregation, i.e., you cannot obtain the number of monthly contributors
 > by taking the sum of 4 weekly values. This is because the same contributors
 > may or may not make up the separate values, so the `SUM` operation can count
 > some contributors multiple times. To achieve monthly contributors, use the
@@ -43,7 +43,7 @@ There are 3 development activity contributors count metrics available:
 
 ## Measuring Unit
 
-Number of github accounts
+Number of Github accounts
 
 ---
 

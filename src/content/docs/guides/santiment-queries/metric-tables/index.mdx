@@ -86,7 +86,7 @@ Test in [Queries](https://queries.santiment.net/query/price-example-478)
 
 ### labeled_intraday_metrics_v2
 
-Table `labeled_intraday_metrics_v2` stores metrics for a given `blockchain` and `label_id`. Each `label_id` corresponds to a certain [label FQN.](/labels/label-fqn) The data for that ID is stored in the `label_metadata` table. Blockchain column contains the string for blockchain name, e.g. `bictoin`, `ethereum`, etc.
+Table `labeled_intraday_metrics_v2` stores metrics for a given `blockchain` and `label_id`. Each `label_id` corresponds to a certain [label FQN.](/labels/label-fqn) The data for that ID is stored in the `label_metadata` table. Blockchain column contains the string for blockchain name, e.g. `bitcoin`, `ethereum`, etc.
 
 For instance, you can retrieve ethereum balance of all centralized exchange addresses with the query:
 
@@ -113,7 +113,7 @@ Test in [Queries](https://queries.santiment.net/query/cex-balance-example-479)
 
 Table `intraday_metrics` also has `label` and `owner` columns so that metrics stored in that table correspond to a particular label and owner.
 
-> Note that this table uses old way to filter labels (plain label/owner instead of label_fqn).
+> Note that this table uses the old way to filter labels (plain label/owner instead of label_fqn).
 
 This table could be used to retrieve [labelled exchange](/metrics/labeled-exchange) metrics under names:
 
@@ -228,7 +228,7 @@ WHERE name LIKE '%price%'
 
 Test in [Queries](https://queries.santiment.net/query/price-related-metrics-example-488)
 
-Also you're able to find deciamals and contract addresses for a particular asset, e.g. uniswap:
+Also you're able to find decimals and contract addresses for a particular asset, e.g. uniswap:
 
 ```SQL
 SELECT DISTINCT name, asset_id, decimals, contract_addresses
@@ -244,7 +244,7 @@ WHERE name = 'uniswap'
 
 ### Using precomputed metrics to build new metrics
 
-Not all metrics are build from the raw data only. Some of the metrics are
+Not all metrics are built from the raw data only. Some of the metrics are
 computed by combining a set of pre-computed metrics.
 
 The MVRV is defined as the ratio between the Market Value and Realized Value.
@@ -295,7 +295,7 @@ Test in [Queries](https://queries.santiment.net/query/usage-of-precomputed-metri
 ```
 
 To return only some of the columns, the query can be provided as a FROM subquery. This does not induce any
-performence degradation. This example also shows how the [WITH Clause](https://clickhouse.com/docs/en/sql-reference/statements/select/with/)
+performance degradation. This example also shows how the [WITH Clause](https://clickhouse.com/docs/en/sql-reference/statements/select/with/)
 can be used to avoid string literals repetition.
 
 ```sql

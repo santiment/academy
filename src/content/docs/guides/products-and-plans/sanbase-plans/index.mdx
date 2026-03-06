@@ -19,18 +19,18 @@ Sanbase Plans provide access to various metrics through the [Sanbase website](ht
 - Full access to free metrics
 - Partial access to restricted metrics on the Sanbase website:
   - 2 years of historical data
-  - Last 30 days of data are cut-off
+  - Last 30 days of data are cut off
 - Allowed number of alerts: 3
 - Limited access to insights
 
 ### API
 
 - Full access to free metrics
-- Partial access to restricted metrics via Graphql API:
+- Partial access to restricted metrics via the GraphQL API:
   - 1 year of historical data
-  - Last 30 days of data are cut-off
+  - Last 30 days of data are cut off
 - Rate limits:
-  - 1000 API calls per month
+  - 1,000 API calls per month
   - 500 API calls per hour
   - 100 API calls per minute
 - Detailed metrics access restrictions can be found [here](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(plan%3A%20FREE%2C%20product%3A%20SANBASE)%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A>)
@@ -48,12 +48,12 @@ The Pro Plan includes everything in the Free Plan, plus:
 
 ### API
 
-- Partial access to restricted metrics via Graphql API:
+- Partial access to restricted metrics via the GraphQL API:
   - 1 year of historical data
-  - The last 30 days of data are cut-off
+  - Last 30 days of data are cut off
 - Rate limits:
-  - 5000 API calls per month
-  - 1000 API calls per hour
+  - 5,000 API calls per month
+  - 1,000 API calls per hour
   - 100 API calls per minute
 - Detailed metrics access restrictions can be found [here](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getAccessRestrictions(plan%3A%20PRO%2C%20product%3A%20SANBASE)%20%7B%0A%20%20%20%20name%0A%20%20%20%20type%0A%20%20%20%20isAccessible%0A%20%20%20%20isRestricted%0A%20%20%20%20restrictedFrom%0A%20%20%20%20restrictedTo%0A%20%20%7D%0A%7D%0A>)
 
@@ -67,10 +67,10 @@ The Max Plan includes everything in the Pro Plan, plus:
 
 ### API
 
-- Partial access to restricted metrics via the Graphql API:
+- Partial access to restricted metrics via the GraphQL API:
   - 2 years of historical data
   - No realtime restriction
-- Rate limits
+- Rate limits:
   - 80K API calls per month
   - 4K API calls per hour
   - 100 API calls per minute

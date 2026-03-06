@@ -28,8 +28,8 @@ When creating a new article, do the following steps:
 
 Always start with the header structure, which looks like this.
 Fields `title` and `datePublished` are mandatory.
-`datePublished` field must not be update after article deploy.
-Add field `dateModified` and write any changes thee instead.
+`datePublished` field must not be updated after article deploy.
+Add field `dateModified` and write any changes there instead.
 
 ```
 ---
@@ -85,7 +85,7 @@ be `###`, and so on.
 
 Markdown link syntax is: `[Link Text](Link URL)`. The link URL can be:
 
-- External (link to sanbase) -- the full URL must be provided. Example: `[Sanbase](https://app.santment.net)`
+- External (link to sanbase) -- the full URL must be provided. Example: `[Sanbase](https://app.santiment.net)`
 - Internal -- point to some other page of Academy. These paths are relative. Relative paths allow you to link to stage
   pages on stage and to prod pages on prod. Do not use full paths when linking to other Academy pages!
 

@@ -12,7 +12,7 @@ import Notebox from '$components/markdown/Notebox.svelte'
 
 Note: MakerDAO metrics have been migrated to a new framework.
 **Although older data remains accessible through the API, we do not recommend its use.**
-The old metrics will stop being computed and they will be removed.
+The old metrics will stop being computed and will be removed.
 
 </Notebox>
 
@@ -28,11 +28,11 @@ Metrics related to MakerDAO protocols.
 **Multi-Collateral DAI**:
 
 - `mcd_locked_token` - The volume of collateral locked in Multi-Collateral DAI contracts,
-  measured by a token<sup>[1]</sup>
+  measured by token<sup>[1]</sup>
 - `mcd_liquidation` - Amount of liquidated tokens<sup>[2]</sup>
 - `mcd_erc20_supply` - DAI ERC20 token total supply
-- `mcd_supply` - The total amount of Multi-Collareral DAI tokens: DAI ERC20 Supply plus DAI in DSR
-- `mcd_collat_ratio_weth` - These metrics show the collateralization ratio of MCD collateral tokens.
+- `mcd_supply` - The total amount of Multi-Collateral DAI tokens: DAI ERC20 Supply plus DAI in DSR
+- `mcd_collat_ratio_weth` - Shows the collateralization ratio of MCD collateral tokens.
 
 > [1]: Please switch to the new metric `makerdao_total_supplied_usd`,
 > [2]: Please switch to the new metric `makerdao_action_liquidations_usd`
@@ -47,7 +47,7 @@ Metrics related to MakerDAO protocols.
 
 ## Measuring Unit
 
-The following metrics' unit is amount of coins:
+The following metrics' unit is the amount of coins:
 
 - `mcd_locked_token`
 - `scd_locked_token`
@@ -68,11 +68,11 @@ The rest:
 
 ## Frequency
 
-The following metrics have [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
+The following metrics have [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency):
 
 - `mcd_supply` - [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
 
-The rest of the metrics have [Daily Intervals](/metrics/details/frequency#daily-frequency)
+The rest of the metrics have [Daily Intervals](/metrics/details/frequency#daily-frequency).
 
 ---
 
