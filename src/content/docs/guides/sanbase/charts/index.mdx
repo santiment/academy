@@ -16,18 +16,18 @@ sidebar:
 ## Table of Contents
 
 - [Overview](#overview)
-    - [Purpose](#purpose)
-    - [What's New](#whats-new)
-    - [Video Walkthrough](#video-walkthrough)
+  - [Purpose](#purpose)
+  - [What's New](#whats-new)
+  - [Video Walkthrough](#video-walkthrough)
 - [Getting Started](#getting-started)
-    - [Selecting an Asset](#selecting-an-asset)
-    - [Chart Display Settings](#chart-display-settings)
-    - [The Sidebar](#the-sidebar)
-    - [Adding Metrics](#adding-metrics)
-    - [Combining Metrics](#combining-metrics)
+  - [Selecting an Asset](#selecting-an-asset)
+  - [Chart Display Settings](#chart-display-settings)
+  - [The Sidebar](#the-sidebar)
+  - [Adding Metrics](#adding-metrics)
+  - [Combining Metrics](#combining-metrics)
 - [Step-by-Step Guides](#step-by-step-guides)
-    - [Formula Interface Guide](#formula-interface-guide)
-    - [Creating and Backtesting Strategies](#creating-and-backtesting-strategies)
+  - [Formula Interface Guide](#formula-interface-guide)
+  - [Creating and Backtesting Strategies](#creating-and-backtesting-strategies)
 - [Before and After Comparison Images](#before-and-after-comparison-images)
 
 ## Overview
@@ -48,7 +48,16 @@ We've upgraded our [chart system](https://app.santiment.net/charts) to deliver a
 
 ### Video Walkthrough
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HGmzAVdchLo?si=GnRJ9UQd9N_9rJbL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/HGmzAVdchLo?si=GnRJ9UQd9N_9rJbL"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
 
 ## Getting Started
 
@@ -161,10 +170,10 @@ Guidelines:
 
 1. Look up metrics on [Santiment Academy.](https://academy.santiment.net/metrics)
 2. Define the variables, each on their own line using the format:
-A1 = api_metric("metric", {slug: "asset"})
-Note: the formula will appear for you, so you will only need to input the "metric" and "asset" of your choice.
+   `A1 = api_metric("metric", {slug: "asset"})`
+   Note: the formula will appear for you, so you will only need to input the "metric" and "asset" of your choice.
 3. Define the formula in a line below using the format:
-"name of combined metric" = formula
+   "name of combined metric" = formula
 
 Note:
 
@@ -191,7 +200,7 @@ The Formula Interface is a powerful tool that allows users to create personalize
 - Building trading strategies (e.g., buy/sell alerts based on conditions).
 - Back-testing trading strategies.
 - Creating composite metrics
-(e.g., Net Exchange Flow = Exchange Inflow - Outflow / Inflow + Outflow).
+  (e.g., Net Exchange Flow = Exchange Inflow - Outflow / Inflow + Outflow).
 - Defining and visualizing "signals" (eg. see when MVRV spikes 15%+ within 24hrs)
 
 **Accessing the Interface**
@@ -211,11 +220,11 @@ The Formula Interface is a powerful tool that allows users to create personalize
 - Purpose: This is the primary field where you define the mathematical expression or logic. The formula can reference chart metrics (as variables like m1), functions from the list, custom variables, and basic operators (`+, -, *, /`, etc.).
 - Validation: As you type, the system checks for validity. A green "Formula is valid" message appears when the syntax is correct; errors will highlight issues like unmatched parentheses, undefined or improperly named variables, and more.
 - Supported Syntax:
-    - Arithmetic operators: `+, -, *, /, ^`
-    - Comparison operators: `>, <, >=, <=, ==, !=` (useful for signals)
-    - Logical operators: `AND, OR, NOT` (for conditional logic)
-    - Parentheses for grouping: `(expression)`
-    - Conditional statements: Use ternary-like syntax, e.g.,
+  - Arithmetic operators: `+, -, *, /, ^`
+  - Comparison operators: `>, <, >=, <=, ==, !=` (useful for signals)
+  - Logical operators: `AND, OR, NOT` (for conditional logic)
+  - Parentheses for grouping: `(expression)`
+  - Conditional statements: Use ternary-like syntax, e.g.,
     `if(condition, true_value, false_value)`
 - Example: `sma(m1, 30)` creates a 30-interval simple moving average of the price metric.
 
@@ -223,8 +232,8 @@ The Formula Interface is a powerful tool that allows users to create personalize
 
 - Purpose: This section lists metrics already added to your current chart, available as variables in your formula. Each metric includes a description and variable name (e.g., m1 for the first metric).
 - How It Works: Metrics are auto-populated based on your chart. For instance:
-    - m1 ZEC - Price: Represents the current price of Zcash (ZEC) in USD. Use as m1 in formulas.
-    - m2 ZEC Mean Dollar Invested Age: A calculated metric like the average age of dollars invested in ZEC.
+  - m1 ZEC - Price: Represents the current price of Zcash (ZEC) in USD. Use as m1 in formulas.
+  - m2 ZEC Mean Dollar Invested Age: A calculated metric like the average age of dollars invested in ZEC.
 - Adding Metrics: If a needed metric isn't listed, close the interface, add it to the chart first, then reopen.
 - Example Usage: In the formula, reference m1 for price data, e.g., `rsi(m1, 14)` for a 14-period RSI.
 
@@ -232,29 +241,29 @@ The Formula Interface is a powerful tool that allows users to create personalize
 
 - Purpose: A library of built-in functions for technical analysis, math, and data manipulation. Hover over a function for a tooltip with parameters and description.
 - Available Functions:
-    - sma(source, period): Simple Moving Average. Example: sma(m1, 30) averages the price over 30 periods.
-    - ema(source, period): Exponential Moving Average. Weights recent data more heavily.
-    - rsi(source, period): Relative Strength Index. Measures momentum; typically 14 periods.
-    - atr(source, period): Average True Range. Volatility indicator.
-    - z_score(source, period): Z-Score. Standardizes values for anomaly detection.
-    - pow(base, exponent): Raises base to the exponent power.
-    - log(value): Natural logarithm.
-    - exp(value): Exponential function (e^value).
-    - absolute(value): Absolute value.
-    - shift(source, periods): Shifts the data series by the specified periods (positive for lag, negative for lead).
-    - diff(source):  Difference between current and previous value.
+  - sma(source, period): Simple Moving Average. Example: sma(m1, 30) averages the price over 30 periods.
+  - ema(source, period): Exponential Moving Average. Weights recent data more heavily.
+  - rsi(source, period): Relative Strength Index. Measures momentum; typically 14 periods.
+  - atr(source, period): Average True Range. Volatility indicator.
+  - z_score(source, period): Z-Score. Standardizes values for anomaly detection.
+  - pow(base, exponent): Raises base to the exponent power.
+  - log(value): Natural logarithm.
+  - exp(value): Exponential function (e^value).
+  - absolute(value): Absolute value.
+  - shift(source, periods): Shifts the data series by the specified periods (positive for lag, negative for lead).
+  - diff(source): Difference between current and previous value.
     e.g., diff(m1) computes price change period-over-period.
-    - cumprod(source): Cumulative product of the series. Useful for compounded returns.
-    - cumsum(source): Cumulative sum of the series.
+  - cumprod(source): Cumulative product of the series. Useful for compounded returns.
+  - cumsum(source): Cumulative sum of the series.
     e.g., cumsum(volume) tracks running total volume.
-    - api_metric(metric_type, asset): Fetches API metric data for a given asset.
-    - selector_from(asset): Creates or references an asset selector for use in other functions.
-    - if(condition, true_value, false_value): Conditional evaluation.
+  - api_metric(metric_type, asset): Fetches API metric data for a given asset.
+  - selector_from(asset): Creates or references an asset selector for use in other functions.
+  - if(condition, true_value, false_value): Conditional evaluation.
     e.g., if(rsi(m1, 14) > 70, 1, 0) flags overbought conditions.
-    - backtest(strategy_logic): Simulates a strategy over historical data and returns performance metrics (may output equity curve, signals, or stats depending on implementation).
+  - backtest(strategy_logic): Simulates a strategy over historical data and returns performance metrics (may output equity curve, signals, or stats depending on implementation).
 - Advanced Usage: Define local variables in the formula for clarity,
-e.g., x1 = api_metric("price_usd", "zcash").
-Note that local variables cannot contain spaces or special characters.
+  e.g., x1 = api_metric("price_usd", "zcash").
+  Note that local variables cannot contain spaces or special characters.
 
 **Creating a Custom Formula: Step-by-Step**
 
@@ -313,64 +322,60 @@ x2 = api_metric("price_usd", "bitcoin"); x1 / x2`
 
 1. **Come up with a strategy idea**
 
-    I have a assumption, that I want to open long position when price > 30 day moving average, and exit when it's not.
+   I have a assumption, that I want to open long position when price > 30 day moving average, and exit when it's not.
 
 2. **Add needed metrics**
-    - BTC price - named as `m1`
-    - BTC 30 day moving average - named as `m2`
-    Create using the formula interface using the `sma` function to define the specific metric.
-    See image below for reference.
+   - BTC price - named as `m1`
+   - BTC 30 day moving average - named as `m2`
+     Create using the formula interface using the `sma` function to define the specific metric.
+     See image below for reference.
 
-    ![addMAmetric.png](addMAmetric.png)
-
-    1. **Save the new metric and add a new one to the chart, go to the formulas interface again**
-    2. **Specify the strategy using the `backtest` function**
-    details in next section.
+   ![addMAmetric.png](addMAmetric.png)
+   1. **Save the new metric and add a new one to the chart, go to the formulas interface again**
+   2. **Specify the strategy using the `backtest` function**
+      details in next section.
 
 ### Backtesting the Strategy
 
 1. **Understand the `backtest` function**
 
-    It accepts 3 parameters, separated by commas:
+   It accepts 3 parameters, separated by commas:
+   - price_data - the asset price we want to backtest on, in this case, BTC price
+   - signals - this will determine our positions: direction and size
+   - options - we will ignore this for now
 
-    - price_data - the asset price we want to backtest on, in this case, BTC price
-    - signals - this will determine our positions: direction and size
-    - options - we will ignore this for now
-
-    ![backtest11.png](backtest11.png)
+   ![backtest11.png](backtest11.png)
 
 2. **Design the signal**
 
-    Remember our strategy?
+   Remember our strategy?
 
-    ```
-    1. if price > 30 day moving average, we go all in, to open long position
+   ```
+   1. if price > 30 day moving average, we go all in, to open long position
 
-    2. Else, we hold no position
-    ```
+   2. Else, we hold no position
+   ```
 
-    which will be translated into:
+   which will be translated into:
 
-    ![ifcondition.png](ifcondition.png)
+   ![ifcondition.png](ifcondition.png)
 
-    `if` function also accepts 3 parameters:
+   `if` function also accepts 3 parameters:
+   - condition
+   - The return value, if the condition stands - in this case it's 1, meaning we use 100% of our position
+   - The return value, if the condition fails - in this case it's 0, meaning we use 0% of our position - meaning we are doing absolute nothing
 
-    - condition
-    - The return value, if the condition stands - in this case it's 1, meaning we use 100% of our position
-    - The return value, if the condition fails - in this case it's 0, meaning we use 0% of our position - meaning we are doing absolute nothing
+   > Note: this explanation is just to make life a bit easier. Back to the origin, the `if` function is just used to return values in different situation, and can return any numbers. Only when it goes into `backtest` function, that's when numbers get associated with position size.
 
-    > Note: this explanation is just to make life a bit easier. Back to the origin, the `if` function is just used to return values in different situation, and can return any numbers. Only when it goes into `backtest` function, that's when numbers get associated with position size.
-    >
+   ```
+   1 means 100% long position
+   0 means no position
+   -1 means 100% short position
 
-    ```
-    1 means 100% long position
-    0 means no position
-    -1 means 100% short position
+   0.5 means 50% long position
+   -0.3 means 30% short position
 
-    0.5 means 50% long position
-    -0.3 means 30% short position
-
-    ```
+   ```
 
 3. **Create the backtest function**
 
@@ -396,9 +401,7 @@ In the top left corner of the graph, we can hide our intermediate metrics, to ma
 
 ![formerdefault.png](formerdefault.png)
 
-**New charts default screen**   (won't have until launch)
-
-<image>
+**New charts default screen** (won't have until launch)
 
 **Former gobal asset selector vs new global asset selector**
 
