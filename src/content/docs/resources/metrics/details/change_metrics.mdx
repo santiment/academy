@@ -13,9 +13,6 @@ dateModified: 2025-04-30
 - [API examples](#api-examples)
   - [Get timeseries data of a change metric](#get-timeseries-data-of-a-change-metric)
   - [Get aggregated value for multiple assets](#get-aggregated-value-for-multiple-assets)
-    metric](#get-timeseries-data-of-a-change-metric)
-  - [Get aggregated value for multiple
-    assets](#get-aggregated-value-for-multiple-assets)
 
 ## Definition
 
@@ -23,7 +20,7 @@ The metrics with the suffix `_change_<interval>` indicate the percent value
 change at the given time compared to `interval` time ago. This allows the
 percent changes to be fetched historically and to be plotted on charts.
 
-Change metrics' names are formed from the original metric name and a change
+Change metric names are formed from the original metric name and a change
 suffix. Available change intervals and their suffixes are:
 
 - `_change_1h` - 1 hour. Available only for USD price
@@ -39,8 +36,9 @@ suffix. Available change intervals and their suffixes are:
 ## Units
 
 The metric units are numbers where `0` corresponds to 0% change, `1` corresponds
-to 100% change. Negative values indicate decrease. These values cannot be
+to 100% change. Negative values indicate a decrease. These values cannot be
 aggregated using `SUM`. The default aggregation is `LAST`.
+
 ## Examples
 
 ### price_usd_change_1d

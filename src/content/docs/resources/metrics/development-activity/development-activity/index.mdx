@@ -9,17 +9,17 @@ dateModified: 2025-09-18
 
 ## Definition
 
-Development Activity metric shows the 'pure' development activity. It excludes events that are not related to development like:
+The Development Activity metric shows the 'pure' development activity. It excludes events that are not related to development, such as:
 
 - Comments on issues;
 - Issues created and closed;
-- Creating of forks;
+- Creation of forks;
 - Comments on commits;
 - People following an issue;
 - Downloading releases;
 - Watching a repository;
 - Project management events;
-- Other.
+- Others.
 
 This allows for better comparison between projects that use GitHub for issue tracking and
 projects that use an external tool (like Notion) for issue tracking. If such events are not
@@ -30,7 +30,7 @@ team to fix something, without any actual work being done.
 
 There are 3 development activity metrics available:
 
-- `dev_activity` - Computed on-the-fly using the Github data. Because of this
+- `dev_activity` - Computed on-the-fly using the Github data. Because of this,
   the metric can compute data for any asset or just any random Github
   organization that has public repositories like Google, Facebook, or any other
   organization.
