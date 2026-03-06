@@ -100,8 +100,9 @@ over longer time horizons.
 ## Daily Metrics Latency
 
 Daily metrics produce one value per day. The value for a given day is finalized
-at least **1 hour after midnight UTC**. All daily metrics use the **UTC
-timezone** as the reference boundary.
+between **1 and 2 hours after midnight UTC**. All daily metrics use the **UTC
+timezone** as the reference boundary. This delay is due to validation and
+processing of the previous day's data for data integrity.
 
 This means that daily metric values for a given day should not be considered
-final until at least 01:00 UTC the following day.
+final until at least 02:00 UTC the following day.
