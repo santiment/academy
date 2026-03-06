@@ -32,6 +32,19 @@ const { sidebarData } = Astro.props
     <slot name="seo" />
     <slot name="head" />
 
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
     <ClientRouter />
   </head>
 
