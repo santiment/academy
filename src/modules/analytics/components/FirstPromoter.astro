@@ -8,7 +8,7 @@ const { id, domain = '.santiment.net' } = Astro.props
 ---
 
 <script is:inline define:vars={{ id, domain }}>
-  ;(function () {
+  window.addEventListener('load', () => {
     var t = document.createElement('script')
     t.type = 'text/javascript'
     t.async = !0
@@ -22,5 +22,5 @@ const { id, domain = '.santiment.net' } = Astro.props
     }
     var e = document.getElementsByTagName('script')[0]
     e.parentNode.insertBefore(t, e)
-  })()
+  })
 </script>

@@ -9,7 +9,8 @@ const { id } = Astro.props
 <script
   is:inline
   async
-  src={`https://www.googletagmanager.com/gtag/js?id=${id}`}></script>
+  src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
+  fetchpriority="low"></script>
 
 <script is:inline define:vars={{ id }}>
   window.dataLayer = window.dataLayer || []

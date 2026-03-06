@@ -32,15 +32,18 @@ const { sidebarData } = Astro.props
     <slot name="seo" />
     <slot name="head" />
 
-    {
-      import.meta.env.PROD && (
-        <>
-          <GoogleAnalytics id="G-H53MB0V33X" />
-          <Intercom appId="cyjjko9u" />
-          <FirstPromoter id="ks4svmdl" />
-        </>
-      )
-    }
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
 
     <ClientRouter />
   </head>
@@ -53,6 +56,16 @@ const { sidebarData } = Astro.props
 
       <slot />
     </div>
+
+    {
+      import.meta.env.PROD && (
+        <>
+          <GoogleAnalytics id="G-H53MB0V33X" />
+          <FirstPromoter id="ks4svmdl" />
+          <Intercom />
+        </>
+      )
+    }
   </body>
 </html>
 
