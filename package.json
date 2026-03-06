@@ -24,7 +24,7 @@
     "rehype-slug": "^6.0.0",
     "remark-gemoji": "^8.0.0",
     "san-webkit-next": "github:santiment/san-webkit#lib-d2a185e1-060326",
-    "svelte": "^5.33.7",
+    "svelte": "^5.53.5",
     "unist-util-visit": "^5.0.0",
     "vite-plugin-mkcert": "^1.17.9"
   },
