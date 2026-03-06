@@ -7,6 +7,7 @@
   {#snippet children({ ref })}
     <Button
       {ref}
+      aria-label="Products menu"
       size="auto"
       icon="products-toggle"
       iconSize={16}

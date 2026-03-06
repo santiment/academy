@@ -40,7 +40,7 @@
     )}
   >
     <div class="flex gap-2">
-      <Button icon="menu" class="hidden md:flex" onclick={() => (navOpen = !navOpen)}></Button>
+      <Button aria-label='Navigation menu' icon="menu" class="hidden md:flex" onclick={() => (navOpen = !navOpen)}></Button>
 
       <a class={cn('inline-flex items-center [&>svg]:fill-rhino')} href="/">
         <Svg illus id="san-logo" w={32} />
