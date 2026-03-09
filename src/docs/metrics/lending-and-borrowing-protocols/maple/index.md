@@ -1,0 +1,122 @@
+---
+title: Maple Protocol
+author: Filip
+date: 2026-03-01
+description: Maple Protocol Metrics
+---
+
+## Description
+[Maple](https://maple.finance) is an on-chain lending protocol designed for institutional 
+credit in digital asset markets. It allows lenders to allocate capital to professionally 
+managed lending pools, while borrowers access undercollateralized financing. The protocol 
+combines smart contracts with credit underwriting to create transparent and scalable 
+credit markets.
+
+### Metrics related to Maple protocol:
+
+Action metrics:
+* `maple_action_deposits` - Amount of deposited tokens
+* `maple_action_deposits_usd` - Amount of deposited tokens in USD
+* `maple_action_new_debt` - Amount of borrowed tokens
+* `maple_action_new_debt_usd` - Amount of borrowed tokens in USD
+* `maple_action_repayments` - Amount of repaid tokens
+* `maple_action_repayments_usd` - Amount of repaid tokens in USD
+
+Protocol total action metrics:
+* `maple_total_deposits_usd` - Total amount of deposits on Maple protocol (combining all assets in USD)
+* `maple_total_new_debt_usd` - Total amount of borrowings on Maple protocol (combining all assets in USD)
+* `maple_total_repayments_usd` - Total amount of repayments on Maple protocol (combining all assets in USD)
+
+Daily active addresses:
+* `maple_active_addresses` - Daily active addresses on Maple protocol
+
+---
+
+## Access
+
+[Restricted Access](/metrics/details/access#restricted-access)
+
+---
+
+## Measuring Unit
+
+* Amount in tokens/USD
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Frequency
+
+* [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency) - Action metrics
+* [Daily Intervals](/metrics/details/frequency#daily-frequency) - Active addresses metric
+
+---
+
+## Latency
+
+[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+
+---
+
+## Available Assets
+
+Metrics related to the entire protocol available for `maple-finance`.
+
+Other metrics: 
+available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22maple_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+
+---
+
+### SanAPI
+
+Action metrics: `maple_action_deposits<_usd>`, `maple_action_new_debt<_usd>` 
+and `maple_action_repayments<_usd>`
+
+```graphql-explorer
+{
+  getMetric(metric: "maple_action_deposits"){
+    timeseriesDataJson(
+      slug: "usd-coin"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-02T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m")
+  }
+}
+```
+
+Total action/supply metrics: `maple_total_deposits_usd`, `maple_total_new_debt_usd`
+and `maple_total_repayments_usd` 
+
+```graphql-explorer
+{
+  getMetric(metric: "maple_total_new_debt_usd"){
+    timeseriesDataJson(
+      slug: "maple-finance"
+      from: "2026-03-01T00:00:00Z"
+      to: "2026-03-07T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d")
+  }
+}
+```
+
+Daily active addresses: `maple_active_addresses`
+
+```graphql-explorer
+{
+  getMetric(metric: "maple_active_addresses"){
+    timeseriesDataJson(
+      slug: "maple-finance"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d")
+  }
+}
+```
