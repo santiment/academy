@@ -44,8 +44,6 @@ python scripts/generate_llms_txt.py
 
 ```
 
----
-
 ### Metadata
 
 A metadata block (Frontmatter) should be in YAML notation directly at the top of the MDX file.
@@ -74,6 +72,13 @@ The number of distinct addresses that ...
 ```
 
 `h2` (##) headings will be used to generate the fast navigation (Table of Contents) on the right.
+
+### Uploading updates to the production environment
+
+To deploy updates to the production environment, follow these steps:
+
+1. Create a pull request (e.g. "Main and Production branches sync") to merge changes from the `main` into the `production` branch - [https://github.com/santiment/academy/compare/production...main](https://github.com/santiment/academy/compare/production...main)
+2. Merge the pull request to deploy the updates to the production environment.
 
 ---
 
