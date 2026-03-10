@@ -106,7 +106,7 @@ The following fields are selected:
 
 - `name` - the name of the metric
 - `minInterval` - what is the minimal interval between two data points (5 minutes or 1 day in most cases)
-- `isDeprecated` - is the deprecated. If true, you must stop using this metric as it will be removed in the future.
+- `isDeprecated` - is the metric deprecated. If true, you must stop using this metric as it will be removed in the future.
 - `isAccessible` - is the metric accessible with the selected subscription plan.
 - `restrictedFrom` - what is the earliest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 - `restrictedTo` - what is the latest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
@@ -260,7 +260,7 @@ the `timeseriesDataJson` field of the `getMetric` API.
 | interval              | The intervals to be returned. The default is `1d`. This is optional                                               |
 | aggregation           | The aggregation to be used when fetching data for longer intervals. This is optional                              |
 | includeIncompleteData | Exclude the last incomplete day (today) if it could lead to misleading data. Default is `false`. This is optional |
-| fields                | Optionally give aliases the returned fields `datetime` and `value`                                                |
+| fields                | Optionally give aliases to the returned fields `datetime` and `value`                                                |
 | transform             | Apply a transformation to the result. Default is `none`. This is optional                                         |
 
 - `aggregation`: This parameter is optional. If not provided, each metric has a
@@ -270,8 +270,8 @@ the `timeseriesDataJson` field of the `getMetric` API.
   current value can be misleading. For instance, fetching daily active
   addresses at 12pm would include only half a day's data, potentially making
   the data for that day appear too low.
-- `fields`: If the returned fields name should be something other than `datetime` or `value`, aliases can be given.
-  In case of `aggregation: OHLC`, the fields that can be overriden are `valueOhlc`, `open`, `high`, `close` and `low`
+- `fields`: If the returned field names should be something other than `datetime` or `value`, aliases can be given.
+  In case of `aggregation: OHLC`, the fields that can be overridden are `valueOhlc`, `open`, `high`, `close` and `low`
   - `{datetime: "dt", value: "v"}`
 - `transform`: Apply a transformation to the timeseries data result. Available transformations include:
   - `{type: "none"}`: Do not apply any transformation

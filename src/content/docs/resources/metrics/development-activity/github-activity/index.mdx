@@ -8,11 +8,11 @@ dateModified: 2025-04-30
 
 ## Definition
 
-Unlike [Development Activity](metrics/development-activity/development-activity) which excludes some of the events, the GitHub Activity metric uses all events to compute the metric.
+Unlike [Development Activity](/metrics/development-activity/development-activity), which excludes some of the events, the GitHub Activity metric uses all events to compute the metric.
 
 There are 3 github activity metrics available:
 
-- `github_activity` - Computed on-the-fly using the Github data. Because of this the metric can compute data for any
+- `github_activity` - Computed on-the-fly using the Github data. Because of this, the metric can compute data for any
   asset or any random Github organization that has public repositories like Google, Facebook, or any other organization.
 - `github_activity_1d` - Precomputed daily metric for each asset that is available on Santiment. This allows the metric
   to be aggregated when the value is needed for all assets at once.
@@ -64,7 +64,7 @@ There are 3 github activity metrics available:
 
 ## SanAPI
 
-Fetch the dev activity for an asset:
+Fetch the GitHub activity for an asset:
 
 ```graphql explorer
 {
@@ -99,7 +99,7 @@ to the parameter, not the whole URL. Github links look like this: `https://githu
 
 ---
 
-Fetch the `ecosystem_github_activity`, combining the dev activities of all assets
+Fetch the `ecosystem_github_activity`, combining the GitHub activities of all assets
 that contribute to that ecosystem:
 
 ```graphql explorer

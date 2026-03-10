@@ -34,3 +34,5 @@ static/~partytown
 .idea/
 
 mkcert
+
+.claude
