@@ -79,8 +79,7 @@ pipeline.
 The funding rates are updated every **15 minutes**.
 
 This makes funding rate data suitable for near-real-time monitoring of
-derivatives market conditions, with a maximum expected lag of 15 minutes from the
-moment a rate is set on the exchange.
+derivatives market conditions, with a worst-case delay of just under 15 minutes.
 
 ## Price Latency
 
@@ -91,8 +90,8 @@ Santiment API and can be relied upon for near-real-time price tracking.
 
 ## Development Activity Latency
 
-The development activity metrics are updated every **1 hour** with max delays of
-up to **3 hours** in edge cases.
+The development activity metrics are updated every **1 hour** with delays of up
+to **3 hours** in edge cases.
 
 Due to the nature of repository event aggregation, development activity metrics
 are not suitable for real-time monitoring and are better used for trend analysis
