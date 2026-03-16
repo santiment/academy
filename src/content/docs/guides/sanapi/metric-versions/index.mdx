@@ -15,6 +15,7 @@ import Notebox from '$components/markdown/Notebox.svelte'
 - [Why Metrics Have Versions](#why-metrics-have-versions)
 - [How Versions Work](#how-versions-work)
 - [Querying a Specific Version](#querying-a-specific-version)
+- [Using Versions in sanpy](#using-versions-in-sanpy)
 - [Discovering Available Versions](#discovering-available-versions)
 - [Version-Aware Fields](#version-aware-fields)
 - [Comparing Versions](#comparing-versions)
@@ -171,6 +172,52 @@ Omitting the `version` parameter is equivalent to specifying `version: "1.0"`:
 ```
 
 Both aliases above return identical results.
+
+## Using Versions in sanpy
+
+The [sanpy](https://github.com/santiment/sanpy#versioned-metrics) Python library
+(`0.12.6+`) supports versioned metrics. You can check which versions a metric
+has and pass the desired version to `san.get` or `san.get_many`.
+
+Check available versions for a metric:
+
+```python
+import san
+
+san.available_metric_versions("social_dominance_total")
+# ['1.0', '2.0']
+```
+
+Fetch data for a specific version:
+
+```python
+import san
+
+san.get(
+    "social_dominance_total",
+    slug="bitcoin",
+    from_date="2026-01-01",
+    to_date="2026-01-10",
+    interval="1d",
+    version="2.0"
+)
+
+san.get_many(
+    "social_dominance_total",
+    slugs=["bitcoin", "ethereum"],
+    from_date="2026-01-01",
+    to_date="2026-01-10",
+    interval="1d",
+    version="2.0"
+)
+```
+
+When `version` is omitted, `"1.0"` is used by default — the same behavior as
+the GraphQL API.
+
+The [santiment-research-quickstart](https://github.com/santiment/santiment-research-quickstart#using-new-version-metrics)
+repository contains additional examples and Agent skills that can work with
+versioned metrics.
 
 ## Discovering Available Versions
 
