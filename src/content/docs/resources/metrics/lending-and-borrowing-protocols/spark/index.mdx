@@ -35,7 +35,7 @@ Total supplied/borrowed metrics:
 - `spark_total_borrowed` - Total borrowed tokens
 - `spark_total_borrowed_usd` - Total borrowed tokens in USD
 
-APY (annual percentage yield) metric:
+APY (annual percentage yield) metrics:
 
 - `spark_supply_apy` - Supply APY
 - `spark_borrow_apy` - Variable borrow APY (variable interest rate will fluctuate based on the market conditions)
@@ -98,10 +98,10 @@ Flashloan metrics:
 
 ## Available Assets
 
-Metrics related to the entire protocol available for `maker` and `multi-collateral-dai`
+Metrics related to the entire protocol are available for `maker` and `multi-collateral-dai`.
 
-Other metrics:
-available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>)
+Other metrics are
+available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22spark_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>).
 
 ---
 
@@ -175,7 +175,7 @@ Protocol total supplied/borrowed metrics: `spark_protocol_total_supplied_usd` an
 }
 ```
 
-APY metric: `spark_supply_apy` and `spark_borrow_apy`
+APY metrics: `spark_supply_apy` and `spark_borrow_apy`
 
 ```graphql explorer
 {

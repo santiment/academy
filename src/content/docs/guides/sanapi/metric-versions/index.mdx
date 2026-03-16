@@ -1,0 +1,399 @@
+---
+title: Metric Versions
+author: Santiment Team
+date: 2026-02-27
+datePublished: 2026-02-27
+dateModified: 2026-03-16
+sidebar:
+  order: 25
+---
+
+import Notebox from '$components/markdown/Notebox.svelte'
+
+- [Overview](#overview)
+- [Finding Versions](#finding-versions)
+- [Why Metrics Have Versions](#why-metrics-have-versions)
+- [How Versions Work](#how-versions-work)
+- [Querying a Specific Version](#querying-a-specific-version)
+- [Using Versions in sanpy](#using-versions-in-sanpy)
+- [Discovering Available Versions](#discovering-available-versions)
+- [Version-Aware Fields](#version-aware-fields)
+- [Comparing Versions](#comparing-versions)
+- [Experimental Versions](#experimental-versions)
+- [Default Behavior and Backward Compatibility](#default-behavior-and-backward-compatibility)
+
+## Overview
+
+Some metrics in the Santiment API have multiple versions. Each version
+represents a different implementation, calculation methodology, or underlying
+data source used to compute the metric.
+
+You can select the desired version using the version parameter in the getMetric
+query.
+
+Different versions of the same metric typically exist when improvements are made
+to the calculation process or when the metric starts using a different dataset.
+This allows us to introduce enhancements without altering the historical
+behavior of existing versions.
+
+For example, social metrics have a version 2.0 that uses the same calculation
+methodology as the previous version but is computed on a larger and more
+up-to-date set of social media sources.
+
+Adding new social accounts or servers to an existing metric version could change
+its historical values. Alternatively, if historical recomputation is not
+performed, the introduction of new sources may create artificial spikes in the
+data. These spikes do not reflect real changes in social activity but are simply
+the result of expanding the underlying data coverage.
+
+This page covers version semantics in detail. For a general introduction to
+`getMetric` and its fields, see [Fetching Metrics](/sanapi/fetching-metrics).
+
+## Finding Versions
+
+To get versions for a single metric, execute:
+
+```graphql explorer
+{
+  getMetric(metric: "social_volume_total") {
+    metadata {
+      availableVersions {
+        version
+      }
+    }
+  }
+}
+```
+
+To get versions for all metrics, execute:
+
+```graphql explorer
+{
+  getAccessRestrictions(filter: METRIC) {
+    name
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+To get versions for a specific product and plan, execute:
+
+```graphql explorer
+{
+  getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
+    name
+    isAccessible
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+## Why Metrics Have Versions
+
+Analytical methodologies evolve over time. When Santiment improves how a metric
+is calculated, the updated logic is published as a new version rather than
+overwriting the original. This approach provides several benefits:
+
+- **Historical stability** — data you have already queried or stored does not
+  change retroactively, because the original version continues to return the
+  same results.
+- **Backward compatibility** — existing integrations, dashboards, and alerts
+  keep working without modification.
+- **Side-by-side comparison** — you can compare the old and new calculation to
+  understand how the methodology has changed before migrating.
+
+## How Versions Work
+
+Each version is identified by a **version string**. The most common values are
+simple numeric strings like `"1.0"` and `"2.0"`. Experimental versions use
+descriptive names such as `"Experimental (Weighted Age)"`.
+
+Key points:
+
+- Every metric has at least version `"1.0"`.
+- The version parameter scopes the **entire** `getMetric` context — all
+  subfields (timeseries data, available slugs, available since, etc.) return
+  data for that version.
+- Versions are sorted in semantic order: `"1.0"` < `"2.0"` < `"3.0"`, with
+  experimental versions listed after stable ones.
+
+## Querying a Specific Version
+
+Pass the `version` argument to `getMetric`. When omitted, it defaults to
+`"1.0"`.
+
+```graphql explorer
+{
+  getMetric(metric: "social_volume_total", version: "1.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+Omitting the `version` parameter is equivalent to specifying `version: "1.0"`:
+
+```graphql explorer
+{
+  noVersion: getMetric(metric: "social_volume_total") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+  # Will return the same data as noVersion, as the 1.0 version is the default
+  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+  v2: getMetric(metric: "social_volume_total", version: "2.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+Both aliases above return identical results.
+
+## Using Versions in sanpy
+
+The [sanpy](https://github.com/santiment/sanpy#versioned-metrics) Python library
+(`0.12.6+`) supports versioned metrics. You can check which versions a metric
+has and pass the desired version to `san.get` or `san.get_many`.
+
+Check available versions for a metric:
+
+```python
+import san
+
+san.available_metric_versions("social_dominance_total")
+# ['1.0', '2.0']
+```
+
+Fetch data for a specific version:
+
+```python
+import san
+
+san.get(
+    "social_dominance_total",
+    slug="bitcoin",
+    from_date="2026-01-01",
+    to_date="2026-01-10",
+    interval="1d",
+    version="2.0"
+)
+
+san.get_many(
+    "social_dominance_total",
+    slugs=["bitcoin", "ethereum"],
+    from_date="2026-01-01",
+    to_date="2026-01-10",
+    interval="1d",
+    version="2.0"
+)
+```
+
+When `version` is omitted, `"1.0"` is used by default — the same behavior as
+the GraphQL API.
+
+The [santiment-research-quickstart](https://github.com/santiment/santiment-research-quickstart#using-new-version-metrics)
+repository contains additional examples and Agent skills that can work with
+versioned metrics.
+
+## Discovering Available Versions
+
+### For a single metric
+
+Use the `availableVersions` field inside the `metadata` query:
+
+```graphql explorer
+{
+  getMetric(metric: "social_volume_total") {
+    metadata {
+      availableVersions {
+        version
+      }
+    }
+  }
+}
+```
+
+````json
+{
+  "data": {
+    "getMetric": {
+      "metadata": {
+        "availableVersions": [
+          {
+            "version": "1.0"
+          },
+          {
+            "version": "2.0"
+          }
+        ]
+      }
+    }
+  }
+}```
+
+Most metrics only have version `"1.0"`. Metrics with multiple versions will
+list all of them.
+
+### For all metrics
+
+Use the `availableVersions` field on the `getAccessRestrictions` query to
+fetch versions for every metric at once:
+
+```graphql explorer
+{
+  getAccessRestrictions(filter: METRIC) {
+    name
+    availableVersions {
+      version
+    }
+  }
+}
+````
+
+For a specific product and plan, execute:
+
+```graphql explorer
+{
+  getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
+    name
+    isAccessible
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+```json
+{
+  "data": {
+    "getAccessRestrictions": [
+      {
+        "name": "social_volume_total",
+        "isAccessible": true,
+        "availableVersions": [
+          {
+            "version": "1.0"
+          },
+          {
+            "version": "2.0"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+## Version-Aware Fields
+
+The `version` parameter on `getMetric` affects the following fields:
+
+| Field                                  | Effect                                                           |
+| -------------------------------------- | ---------------------------------------------------------------- |
+| `timeseriesDataJson`                   | Returns timeseries data for the specified version                |
+| `timeseriesDataPerSlugJson`            | Returns per-slug timeseries data for the specified version       |
+| `aggregatedTimeseriesData`             | Returns the aggregated value computed from the specified version |
+| `histogramData`                        | Returns histogram buckets for the specified version              |
+| `availableSlugs` / `availableProjects` | Returns only the assets that have data for the specified version |
+| `availableSince`                       | Returns the first available date for the specified version       |
+
+## Comparing Versions
+
+You can compare versioned query outputs side-by-side in a single request by
+using GraphQL **aliases**.
+
+```graphql explorer
+{
+  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+  v2: getMetric(metric: "social_volume_total", version: "2.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+The response contains both `v1` and `v2` objects so you can compare
+default behavior vs explicit version pinning. After discovering additional
+versions from `availableVersions`,
+replace `version: "1.0"` with the desired version string and rerun the query.
+You can apply the same pattern to compare availability:
+
+```graphql explorer
+{
+  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+    availableSince(slug: "bitcoin")
+  }
+  v2: getMetric(metric: "social_volume_total", version: "2.0") {
+    availableSince(slug: "bitcoin")
+  }
+}
+```
+
+## Experimental Versions
+
+Some metrics have experimental versions with descriptive names like
+`"Experimental (Weighted Age)"`. These differ from stable versions in
+several ways:
+
+- **Access requirements** — experimental versions are only accessible to users
+  with **alpha-level** metric access. Querying an experimental version without
+  the required access level returns an error.
+- **Naming convention** — experimental version strings start with
+  `"Experimental"` followed by a short description in parentheses, making them
+  easy to identify in the `availableVersions` list.
+- **Stability** — experimental versions may change without notice. They are
+  intended for testing and evaluation, not for production use.
+
+## Default Behavior and Backward Compatibility
+
+- **No version = `"1.0"`** — if you do not provide a `version` parameter, the
+  API defaults to `"1.0"`. This means all existing queries that were written
+  before versions were introduced continue to work exactly as before.
+- **Existing integrations are unaffected** — introducing a new version of a
+  metric does not change the behavior of the default version. Your dashboards,
+  alerts, and scripts will keep returning the same data.
+- **Pin versions in production** — if you rely on a specific version, pass it
+  explicitly (e.g. `version: "1.0"`) rather than relying on the default. This
+  protects your integration even if the default changes in the future.
+
+<Notebox type="none">
+
+**Read next: [Common GraphQL Queries](/sanapi/common-queries)**
+
+</Notebox>

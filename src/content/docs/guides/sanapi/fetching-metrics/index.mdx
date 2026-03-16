@@ -19,6 +19,7 @@ import Notebox from '$components/markdown/Notebox.svelte'
 - [Available Projects Per Metric](#available-projects-per-metric)
 - [Minimal Interval](#minimal-interval)
 - [Aggregation](#aggregation)
+- [Metric Versions](#metric-versions)
 - [Queryable Fields](#queryable-fields)
   - [timeseriesDataJson](#timeseriesdatajson)
   - [timeseriesDataPerSlugJson](#timeseriesdataperslugjson)
@@ -95,6 +96,9 @@ You can obtain detailed information about the restrictions on all metrics for a 
     isDeprecated
     restrictedFrom
     restrictedTo
+    availableVersions {
+      version
+    }
     docs {
       link
     }
@@ -110,6 +114,7 @@ The following fields are selected:
 - `isAccessible` - is the metric accessible with the selected subscription plan.
 - `restrictedFrom` - what is the earliest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 - `restrictedTo` - what is the latest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
+- `availableVersions` - a list of available [versions](#metric-versions) for this metric. Each version has a `version` field (e.g. `"1.0"`, `"2.0"`).
 - `docs` - link to the documentation of the metric.
 
 ## Metrics Documentation
@@ -229,6 +234,86 @@ The following query retrieves the default aggregation and all available aggregat
 }
 ```
 
+## Metric Versions
+
+Some metrics have multiple versions that represent different implementations,
+calculation methods, or different underlaying data. The `getMetric` query accepts an optional `version`
+parameter. When omitted, it defaults to `"1.0"`.
+
+```graphql explorer
+{
+  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+
+  v2: getMetric(metric: "social_volume_total", version: "2.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+The version parameter scopes the entire `getMetric` context — all data fields,
+`availableSlugs`, `availableProjects`, and `availableSince` return results for
+the specified version. You can discover available versions through the
+[metadata](#metadata) query's `availableVersions` field or through the
+`getAccessRestrictions` query.
+
+Discover versions for a single metric:
+
+```graphql explorer
+{
+  getMetric(metric: "social_volume_total") {
+    metadata {
+      availableVersions {
+        version
+      }
+    }
+  }
+}
+```
+
+Discover versions for all metrics:
+
+```graphql explorer
+{
+  getAccessRestrictions(filter: METRIC) {
+    name
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+To get the same data for a specific product and plan, execute:
+
+```graphql explorer
+{
+  getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
+    name
+    isRestricted
+    isAccessible
+    restrictedFrom
+    restrictedTo
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+For the full guide see [Metric Versions](/sanapi/metric-versions).
+
 ## Queryable fields
 
 In the `getMetric` function, you can query the following fields:
@@ -260,7 +345,7 @@ the `timeseriesDataJson` field of the `getMetric` API.
 | interval              | The intervals to be returned. The default is `1d`. This is optional                                               |
 | aggregation           | The aggregation to be used when fetching data for longer intervals. This is optional                              |
 | includeIncompleteData | Exclude the last incomplete day (today) if it could lead to misleading data. Default is `false`. This is optional |
-| fields                | Optionally give aliases to the returned fields `datetime` and `value`                                                |
+| fields                | Optionally give aliases to the returned fields `datetime` and `value`                                             |
 | transform             | Apply a transformation to the result. Default is `none`. This is optional                                         |
 
 - `aggregation`: This parameter is optional. If not provided, each metric has a
@@ -268,7 +353,7 @@ the `timeseriesDataJson` field of the `getMetric` API.
   aggregation function using the [metadata](#metadata) query.
 - `includeIncompleteData`: In some cases, if the day is not yet complete, the
   current value can be misleading. For instance, fetching daily active
-  addresses at 12pm would include only half a day's data, potentially making
+  addresses at 12 PM would include only half a day's data, potentially making
   the data for that day appear too low.
 - `fields`: If the returned field names should be something other than `datetime` or `value`, aliases can be given.
   In case of `aggregation: OHLC`, the fields that can be overridden are `valueOhlc`, `open`, `high`, `close` and `low`
@@ -351,7 +436,7 @@ The following query fetches the all-time highest price for Santiment:
 
 ### aggregatedTimeseriesData on the project type
 
-Queries like `allProject` or `projectBySlug` also have `aggregatedTimeseriesData` field that works the same way.
+Queries like `allProjects` or `projectBySlug` also have an `aggregatedTimeseriesData` field that works the same way.
 The only difference is that when using `getMetric` the `metric` is already pinned and the `slug` needs to be provided, while
 for `allProjects` and `projectBySlug` it is vice versa.
 Using aliases, the `aggregatedTimeseriesData` can be selected multiple times.
@@ -430,6 +515,7 @@ Each metric is accompanied by metadata that describes the following:
 - The existing selectors for the metric.
 - The projects for which the metric is available.
 - The type of the metric, which can be either a timeseries or a histogram.
+- The available [versions](#metric-versions) of the metric.
 
 ```graphql explorer
 {
@@ -438,6 +524,9 @@ Each metric is accompanied by metadata that describes the following:
       availableAggregations
       availableSelectors
       availableSlugs
+      availableVersions {
+        version
+      }
       dataType
       defaultAggregation
       minInterval
@@ -473,7 +562,7 @@ capitalization, is also only available since July 2010.
 > **Note:** This field may be complex to understand. However, in the general
 > case, this field is not used.
 
-The `lastDatetimeComputedAt` shows the when the latest
+The `lastDatetimeComputedAt` shows when the latest
 data point was computed.
 
 ```graphql explorer
@@ -568,7 +657,7 @@ project over the last 60 days, with a 1-day interval.
 }
 ```
 
-The response result is a list that contains a 2-element range of datetimes and a float value.
+The response is a list that contains a 2-element range of datetimes and a float value.
 
 **Histogram Metric Example**
 
@@ -598,6 +687,6 @@ The response is a list that contains a 2-element range of float (prices) and a f
 
 <Notebox type="none">
 
-**Read next: [Common GraphQL Queries](/sanapi/common-queries)**
+**Read next: [Metric Versions](/sanapi/metric-versions)**
 
 </Notebox>
