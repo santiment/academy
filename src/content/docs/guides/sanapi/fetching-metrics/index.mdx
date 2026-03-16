@@ -236,13 +236,22 @@ The following query retrieves the default aggregation and all available aggregat
 
 ## Metric Versions
 
-Some metrics have multiple versions that represent different implementations or
-calculation methods. The `getMetric` query accepts an optional `version`
+Some metrics have multiple versions that represent different implementations,
+calculation methods, or different underlaying data. The `getMetric` query accepts an optional `version`
 parameter. When omitted, it defaults to `"1.0"`.
 
 ```graphql explorer
 {
-  getMetric(metric: "daily_active_addresses", version: "2.0") {
+  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+
+  v2: getMetric(metric: "social_volume_total", version: "2.0") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-30d"
@@ -259,9 +268,51 @@ the specified version. You can discover available versions through the
 [metadata](#metadata) query's `availableVersions` field or through the
 `getAccessRestrictions` query.
 
-For the full guide — including version comparison with aliases, experimental
-versions, and backward-compatibility guarantees — see
-[Metric Versions](/sanapi/metric-versions).
+Discover versions for a single metric:
+
+```graphql explorer
+{
+  getMetric(metric: "social_volume_total") {
+    metadata {
+      availableVersions {
+        version
+      }
+    }
+  }
+}
+```
+
+Discover versions for all metrics:
+
+```graphql explorer
+{
+  getAccessRestrictions(filter: METRIC) {
+    name
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+To get the same data for a specific product and plan, execute:
+
+```graphql explorer
+{
+  getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
+    name
+    isRestricted
+    isAccessible
+    restrictedFrom
+    restrictedTo
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+For the full guide see [Metric Versions](/sanapi/metric-versions).
 
 ## Queryable fields
 
@@ -294,7 +345,7 @@ the `timeseriesDataJson` field of the `getMetric` API.
 | interval              | The intervals to be returned. The default is `1d`. This is optional                                               |
 | aggregation           | The aggregation to be used when fetching data for longer intervals. This is optional                              |
 | includeIncompleteData | Exclude the last incomplete day (today) if it could lead to misleading data. Default is `false`. This is optional |
-| fields                | Optionally give aliases to the returned fields `datetime` and `value`                                                |
+| fields                | Optionally give aliases to the returned fields `datetime` and `value`                                             |
 | transform             | Apply a transformation to the result. Default is `none`. This is optional                                         |
 
 - `aggregation`: This parameter is optional. If not provided, each metric has a
@@ -473,7 +524,9 @@ Each metric is accompanied by metadata that describes the following:
       availableAggregations
       availableSelectors
       availableSlugs
-      availableVersions { version }
+      availableVersions {
+        version
+      }
       dataType
       defaultAggregation
       minInterval

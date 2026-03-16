@@ -2,6 +2,8 @@
 title: Metric Versions
 author: Santiment Team
 date: 2026-02-27
+datePublished: 2026-02-27
+dateModified: 2026-03-16
 sidebar:
   order: 25
 ---
@@ -9,6 +11,7 @@ sidebar:
 import Notebox from '$components/markdown/Notebox.svelte'
 
 - [Overview](#overview)
+- [Finding Versions](#finding-versions)
 - [Why Metrics Have Versions](#why-metrics-have-versions)
 - [How Versions Work](#how-versions-work)
 - [Querying a Specific Version](#querying-a-specific-version)
@@ -20,13 +23,73 @@ import Notebox from '$components/markdown/Notebox.svelte'
 
 ## Overview
 
-Some metrics in the Santiment API have multiple **versions** that represent
-different implementations or calculation methodologies for the same metric. The
-`version` parameter on the [`getMetric`](/sanapi/fetching-metrics) query lets
-you choose which version of a metric to retrieve.
+Some metrics in the Santiment API have multiple versions. Each version
+represents a different implementation, calculation methodology, or underlying
+data source used to compute the metric.
+
+You can select the desired version using the version parameter in the getMetric
+query.
+
+Different versions of the same metric typically exist when improvements are made
+to the calculation process or when the metric starts using a different dataset.
+This allows us to introduce enhancements without altering the historical
+behavior of existing versions.
+
+For example, social metrics have a version 2.0 that uses the same calculation
+methodology as the previous version but is computed on a larger and more
+up-to-date set of social media sources.
+
+Adding new social accounts or servers to an existing metric version could change
+its historical values. Alternatively, if historical recomputation is not
+performed, the introduction of new sources may create artificial spikes in the
+data. These spikes do not reflect real changes in social activity but are simply
+the result of expanding the underlying data coverage.
 
 This page covers version semantics in detail. For a general introduction to
 `getMetric` and its fields, see [Fetching Metrics](/sanapi/fetching-metrics).
+
+## Finding Versions
+
+To get versions for a single metric, execute:
+
+```graphql explorer
+{
+  getMetric(metric: "social_volume_total") {
+    metadata {
+      availableVersions {
+        version
+      }
+    }
+  }
+}
+```
+
+To get versions for all metrics, execute:
+
+```graphql explorer
+{
+  getAccessRestrictions(filter: METRIC) {
+    name
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+To get versions for a specific product and plan, execute:
+
+```graphql explorer
+{
+  getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
+    name
+    isAccessible
+    availableVersions {
+      version
+    }
+  }
+}
+```
 
 ## Why Metrics Have Versions
 
@@ -64,7 +127,7 @@ Pass the `version` argument to `getMetric`. When omitted, it defaults to
 
 ```graphql explorer
 {
-  getMetric(metric: "daily_active_addresses", version: "2.0") {
+  getMetric(metric: "social_volume_total", version: "1.0") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-30d"
@@ -79,11 +142,30 @@ Omitting the `version` parameter is equivalent to specifying `version: "1.0"`:
 
 ```graphql explorer
 {
-  noVersion: getMetric(metric: "daily_active_addresses") {
-    timeseriesDataJson(slug: "bitcoin", from: "utc_now-7d", to: "utc_now", interval: "1d")
+  noVersion: getMetric(metric: "social_volume_total") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
   }
-  v1: getMetric(metric: "daily_active_addresses", version: "1.0") {
-    timeseriesDataJson(slug: "bitcoin", from: "utc_now-7d", to: "utc_now", interval: "1d")
+  # Will return the same data as noVersion, as the 1.0 version is the default
+  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+  v2: getMetric(metric: "social_volume_total", version: "2.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
   }
 }
 ```
@@ -98,7 +180,7 @@ Use the `availableVersions` field inside the `metadata` query:
 
 ```graphql explorer
 {
-  getMetric(metric: "daily_active_addresses") {
+  getMetric(metric: "social_volume_total") {
     metadata {
       availableVersions {
         version
@@ -107,6 +189,24 @@ Use the `availableVersions` field inside the `metadata` query:
   }
 }
 ```
+
+````json
+{
+  "data": {
+    "getMetric": {
+      "metadata": {
+        "availableVersions": [
+          {
+            "version": "1.0"
+          },
+          {
+            "version": "2.0"
+          }
+        ]
+      }
+    }
+  }
+}```
 
 Most metrics only have version `"1.0"`. Metrics with multiple versions will
 list all of them.
@@ -125,33 +225,64 @@ fetch versions for every metric at once:
     }
   }
 }
+````
+
+For a specific product and plan, execute:
+
+```graphql explorer
+{
+  getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
+    name
+    isAccessible
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+```json
+{
+  "data": {
+    "getAccessRestrictions": [
+      {
+        "name": "social_volume_total",
+        "isAccessible": true,
+        "availableVersions": [
+          {
+            "version": "1.0"
+          },
+          {
+            "version": "2.0"
+          }
+        ]
+      }
+    ]
+  }
+}
 ```
 
 ## Version-Aware Fields
 
 The `version` parameter on `getMetric` affects the following fields:
 
-| Field | Effect |
-|-------|--------|
-| `timeseriesDataJson` | Returns timeseries data for the specified version |
-| `timeseriesDataPerSlugJson` | Returns per-slug timeseries data for the specified version |
-| `aggregatedTimeseriesData` | Returns the aggregated value computed from the specified version |
-| `histogramData` | Returns histogram buckets for the specified version |
+| Field                                  | Effect                                                           |
+| -------------------------------------- | ---------------------------------------------------------------- |
+| `timeseriesDataJson`                   | Returns timeseries data for the specified version                |
+| `timeseriesDataPerSlugJson`            | Returns per-slug timeseries data for the specified version       |
+| `aggregatedTimeseriesData`             | Returns the aggregated value computed from the specified version |
+| `histogramData`                        | Returns histogram buckets for the specified version              |
 | `availableSlugs` / `availableProjects` | Returns only the assets that have data for the specified version |
-| `availableSince` | Returns the first available date for the specified version |
-
-Fields that are **not** affected by the version parameter include `metadata`
-(which describes all versions) and `lastDatetimeComputedAt`.
+| `availableSince`                       | Returns the first available date for the specified version       |
 
 ## Comparing Versions
 
-You can compare two versions of a metric side-by-side in a single request by
-using GraphQL **aliases**. This is useful when evaluating whether to migrate
-from one version to another.
+You can compare versioned query outputs side-by-side in a single request by
+using GraphQL **aliases**.
 
 ```graphql explorer
 {
-  v1: getMetric(metric: "daily_active_addresses", version: "1.0") {
+  v1: getMetric(metric: "social_volume_total", version: "1.0") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-7d"
@@ -159,7 +290,7 @@ from one version to another.
       interval: "1d"
     )
   }
-  v2: getMetric(metric: "daily_active_addresses", version: "2.0") {
+  v2: getMetric(metric: "social_volume_total", version: "2.0") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-7d"
@@ -170,15 +301,18 @@ from one version to another.
 }
 ```
 
-The response contains both `v1` and `v2` objects so you can compare values
-directly. You can extend this pattern to compare availability as well:
+The response contains both `v1` and `v2` objects so you can compare
+default behavior vs explicit version pinning. After discovering additional
+versions from `availableVersions`,
+replace `version: "1.0"` with the desired version string and rerun the query.
+You can apply the same pattern to compare availability:
 
 ```graphql explorer
 {
-  v1: getMetric(metric: "daily_active_addresses", version: "1.0") {
+  v1: getMetric(metric: "social_volume_total", version: "1.0") {
     availableSince(slug: "bitcoin")
   }
-  v2: getMetric(metric: "daily_active_addresses", version: "2.0") {
+  v2: getMetric(metric: "social_volume_total", version: "2.0") {
     availableSince(slug: "bitcoin")
   }
 }
@@ -198,8 +332,6 @@ several ways:
   easy to identify in the `availableVersions` list.
 - **Stability** — experimental versions may change without notice. They are
   intended for testing and evaluation, not for production use.
-- **Promotion path** — once an experimental version is validated, it may be
-  promoted to a stable numbered version (e.g. `"2.0"`).
 
 ## Default Behavior and Backward Compatibility
 
