@@ -1,0 +1,220 @@
+---
+title: Metric Versions
+author: Santiment Team
+date: 2026-02-27
+sidebar:
+  order: 25
+---
+
+import Notebox from '$components/markdown/Notebox.svelte'
+
+- [Overview](#overview)
+- [Why Metrics Have Versions](#why-metrics-have-versions)
+- [How Versions Work](#how-versions-work)
+- [Querying a Specific Version](#querying-a-specific-version)
+- [Discovering Available Versions](#discovering-available-versions)
+- [Version-Aware Fields](#version-aware-fields)
+- [Comparing Versions](#comparing-versions)
+- [Experimental Versions](#experimental-versions)
+- [Default Behavior and Backward Compatibility](#default-behavior-and-backward-compatibility)
+
+## Overview
+
+Some metrics in the Santiment API have multiple **versions** that represent
+different implementations or calculation methodologies for the same metric. The
+`version` parameter on the [`getMetric`](/sanapi/fetching-metrics) query lets
+you choose which version of a metric to retrieve.
+
+This page covers version semantics in detail. For a general introduction to
+`getMetric` and its fields, see [Fetching Metrics](/sanapi/fetching-metrics).
+
+## Why Metrics Have Versions
+
+Analytical methodologies evolve over time. When Santiment improves how a metric
+is calculated, the updated logic is published as a new version rather than
+overwriting the original. This approach provides several benefits:
+
+- **Historical stability** — data you have already queried or stored does not
+  change retroactively, because the original version continues to return the
+  same results.
+- **Backward compatibility** — existing integrations, dashboards, and alerts
+  keep working without modification.
+- **Side-by-side comparison** — you can compare the old and new calculation to
+  understand how the methodology has changed before migrating.
+
+## How Versions Work
+
+Each version is identified by a **version string**. The most common values are
+simple numeric strings like `"1.0"` and `"2.0"`. Experimental versions use
+descriptive names such as `"Experimental (Weighted Age)"`.
+
+Key points:
+
+- Every metric has at least version `"1.0"`.
+- The version parameter scopes the **entire** `getMetric` context — all
+  subfields (timeseries data, available slugs, available since, etc.) return
+  data for that version.
+- Versions are sorted in semantic order: `"1.0"` < `"2.0"` < `"3.0"`, with
+  experimental versions listed after stable ones.
+
+## Querying a Specific Version
+
+Pass the `version` argument to `getMetric`. When omitted, it defaults to
+`"1.0"`.
+
+```graphql explorer
+{
+  getMetric(metric: "daily_active_addresses", version: "2.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+Omitting the `version` parameter is equivalent to specifying `version: "1.0"`:
+
+```graphql explorer
+{
+  noVersion: getMetric(metric: "daily_active_addresses") {
+    timeseriesDataJson(slug: "bitcoin", from: "utc_now-7d", to: "utc_now", interval: "1d")
+  }
+  v1: getMetric(metric: "daily_active_addresses", version: "1.0") {
+    timeseriesDataJson(slug: "bitcoin", from: "utc_now-7d", to: "utc_now", interval: "1d")
+  }
+}
+```
+
+Both aliases above return identical results.
+
+## Discovering Available Versions
+
+### For a single metric
+
+Use the `availableVersions` field inside the `metadata` query:
+
+```graphql explorer
+{
+  getMetric(metric: "daily_active_addresses") {
+    metadata {
+      availableVersions {
+        version
+      }
+    }
+  }
+}
+```
+
+Most metrics only have version `"1.0"`. Metrics with multiple versions will
+list all of them.
+
+### For all metrics
+
+Use the `availableVersions` field on the `getAccessRestrictions` query to
+fetch versions for every metric at once:
+
+```graphql explorer
+{
+  getAccessRestrictions(filter: METRIC) {
+    name
+    availableVersions {
+      version
+    }
+  }
+}
+```
+
+## Version-Aware Fields
+
+The `version` parameter on `getMetric` affects the following fields:
+
+| Field | Effect |
+|-------|--------|
+| `timeseriesDataJson` | Returns timeseries data for the specified version |
+| `timeseriesDataPerSlugJson` | Returns per-slug timeseries data for the specified version |
+| `aggregatedTimeseriesData` | Returns the aggregated value computed from the specified version |
+| `histogramData` | Returns histogram buckets for the specified version |
+| `availableSlugs` / `availableProjects` | Returns only the assets that have data for the specified version |
+| `availableSince` | Returns the first available date for the specified version |
+
+Fields that are **not** affected by the version parameter include `metadata`
+(which describes all versions) and `lastDatetimeComputedAt`.
+
+## Comparing Versions
+
+You can compare two versions of a metric side-by-side in a single request by
+using GraphQL **aliases**. This is useful when evaluating whether to migrate
+from one version to another.
+
+```graphql explorer
+{
+  v1: getMetric(metric: "daily_active_addresses", version: "1.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+  v2: getMetric(metric: "daily_active_addresses", version: "2.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+The response contains both `v1` and `v2` objects so you can compare values
+directly. You can extend this pattern to compare availability as well:
+
+```graphql explorer
+{
+  v1: getMetric(metric: "daily_active_addresses", version: "1.0") {
+    availableSince(slug: "bitcoin")
+  }
+  v2: getMetric(metric: "daily_active_addresses", version: "2.0") {
+    availableSince(slug: "bitcoin")
+  }
+}
+```
+
+## Experimental Versions
+
+Some metrics have experimental versions with descriptive names like
+`"Experimental (Weighted Age)"`. These differ from stable versions in
+several ways:
+
+- **Access requirements** — experimental versions are only accessible to users
+  with **alpha-level** metric access. Querying an experimental version without
+  the required access level returns an error.
+- **Naming convention** — experimental version strings start with
+  `"Experimental"` followed by a short description in parentheses, making them
+  easy to identify in the `availableVersions` list.
+- **Stability** — experimental versions may change without notice. They are
+  intended for testing and evaluation, not for production use.
+- **Promotion path** — once an experimental version is validated, it may be
+  promoted to a stable numbered version (e.g. `"2.0"`).
+
+## Default Behavior and Backward Compatibility
+
+- **No version = `"1.0"`** — if you do not provide a `version` parameter, the
+  API defaults to `"1.0"`. This means all existing queries that were written
+  before versions were introduced continue to work exactly as before.
+- **Existing integrations are unaffected** — introducing a new version of a
+  metric does not change the behavior of the default version. Your dashboards,
+  alerts, and scripts will keep returning the same data.
+- **Pin versions in production** — if you rely on a specific version, pass it
+  explicitly (e.g. `version: "1.0"`) rather than relying on the default. This
+  protects your integration even if the default changes in the future.
+
+<Notebox type="none">
+
+**Read next: [Common GraphQL Queries](/sanapi/common-queries)**
+
+</Notebox>

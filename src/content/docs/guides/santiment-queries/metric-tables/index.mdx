@@ -37,7 +37,7 @@ Metrics are located in different tables, depending on some different parameters.
 
 ### daily_metrics_v2
 
-The `daily_metrics_v2` table stores a single metric value for each asset for each day. I.e. in that tables stored metrics that have exactly 1 value per day.
+The `daily_metrics_v2` table stores a single metric value for each asset for each day. That is, it stores metrics that have exactly 1 value per day.
 
 Here's an example how to fetch `daily_active_addresses` for `bitcoin` using `daily_metrics_v2`
 
@@ -111,7 +111,7 @@ Test in [Queries](https://queries.santiment.net/query/cex-balance-example-479)
 
 ### daily_label_based_metrics
 
-Table `intraday_metrics` also has `label` and `owner` columns so that metrics stored in that table correspond to a particular label and owner.
+The `daily_label_based_metrics` table also has `label` and `owner` columns so that metrics stored in that table correspond to a particular label and owner.
 
 > Note that this table uses the old way to filter labels (plain label/owner instead of label_fqn).
 

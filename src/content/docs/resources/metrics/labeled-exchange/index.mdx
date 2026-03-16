@@ -12,7 +12,7 @@ Exchange-labeled metrics showcase exchange metrics from the perspective of a sin
 
 ---
 
-Supported_metrics:
+Supported metrics:
 
 * `active_deposits_per_exchange` - The number of unique deposit addresses that have been active on a particular day for a given asset within a specific exchange. Essentially, this metric serves as an indicator of how many users have deposited a given asset into the specified exchange.
 
@@ -92,7 +92,7 @@ Binance Active Deposits:
 
 
 
-Binance Withdrawals Transactions
+Binance Withdrawal Transactions:
 ```graphql explorer
 {
   getMetric(metric: "withdrawal_transactions_per_exchange") {
@@ -111,7 +111,7 @@ Binance Withdrawals Transactions
 ```
 
 
-Binance Flow Balance
+Binance Flow Balance:
 ```graphql explorer
 {
   getMetric(metric: "exchange_balance_per_exchange") {
