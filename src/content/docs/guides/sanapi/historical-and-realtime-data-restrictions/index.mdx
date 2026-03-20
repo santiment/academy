@@ -63,17 +63,22 @@ specific subscription plan using this query:
     isRestricted
     restrictedFrom
     restrictedTo
+    stabilizationPeriod
+    canMutate
   }
 }
 ```
 
 The following fields are selected:
 
-- `name` - the name of the metric
+- `name` - the name of the metric.
 - `isDeprecated` - is the metric deprecated. If true, you must stop using this metric as it will be removed in the future.
 - `isAccessible` - is the metric accessible with the selected subscription plan.
+- `isRestricted` - whether any time (historical or real-time) restrictions are applied.
 - `restrictedFrom` - what is the earliest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 - `restrictedTo` - what is the latest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
+- `stabilizationPeriod` - the time period after which the metric value is considered stable. Returns `null` when not specified for the metric. See [Stabilization Period and Data Mutability](/sanapi/fetching-metrics#stabilization-period-and-data-mutability) for details.
+- `canMutate` - whether the metric value can change after the stabilization period ends. Returns `null` when not specified for the metric. See [Stabilization Period and Data Mutability](/sanapi/fetching-metrics#stabilization-period-and-data-mutability) for details.
 
 You are interested in the `restrictedFrom` and `restrictedTo` fields.
 If they are both `null` -- the selected subscription plan has access to the full historical and realtime data for that metric.
