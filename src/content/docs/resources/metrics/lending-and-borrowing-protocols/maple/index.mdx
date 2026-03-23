@@ -19,10 +19,22 @@ Action metrics:
 * `maple_action_repayments` - Amount of repaid tokens
 * `maple_action_repayments_usd` - Amount of repaid tokens in USD
 
+Total supplied/borrowed metrics:
+
+- `maple_total_supplied` - Total supplied tokens
+- `maple_total_supplied_usd` - Total supplied tokens in USD
+- `maple_total_borrowed` - Total borrowed tokens
+- `maple_total_borrowed_usd` - Total borrowed tokens in USD
+
 Protocol total action metrics:
 * `maple_total_deposits_usd` - Total amount of deposits on Maple protocol (combining all assets in USD)
 * `maple_total_new_debt_usd` - Total amount of borrowings on Maple protocol (combining all assets in USD)
 * `maple_total_repayments_usd` - Total amount of repayments on Maple protocol (combining all assets in USD)
+
+Protocol total supplied/borrowed metrics:
+
+- `maple_protocol_total_supplied_usd` - Total amount supplied on Maple (combining all assets in USD)
+- `maple_protocol_total_borrowed_usd` - Total amount borrowed on Maple (combining all assets in USD)
 
 Daily active addresses:
 * `maple_active_addresses` - Daily active addresses on Maple protocol
@@ -114,6 +126,40 @@ Daily active addresses: `maple_active_addresses`
       to: "2026-01-10T00:00:00Z"
       includeIncompleteData: true
       interval: "1d")
+  }
+}
+```
+
+Total supplied/borrowed metrics: `maple_total_supplied<_usd>` and
+`maple_total_borrowed<_usd>`
+
+```graphql explorer
+{
+  getMetric(metric: "maple_total_borrowed") {
+    timeseriesDataJson(
+      slug: "usd-coin"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"
+    )
+  }
+}
+```
+
+Protocol total supplied/borrowed metrics: `maple_protocol_total_supplied_usd` and
+`maple_protocol_total_borrowed_usd`
+
+```graphql explorer
+{
+  getMetric(metric: "maple_protocol_total_borrowed_usd") {
+    timeseriesDataJson(
+      slug: "maple-finance"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"
+    )
   }
 }
 ```
