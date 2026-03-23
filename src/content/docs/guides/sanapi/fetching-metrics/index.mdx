@@ -20,6 +20,7 @@ import Notebox from '$components/markdown/Notebox.svelte'
 - [Minimal Interval](#minimal-interval)
 - [Aggregation](#aggregation)
 - [Metric Versions](#metric-versions)
+- [Stabilization Period and Data Mutability](#stabilization-period-and-data-mutability)
 - [Queryable Fields](#queryable-fields)
   - [timeseriesDataJson](#timeseriesdatajson)
   - [timeseriesDataPerSlugJson](#timeseriesdataperslugjson)
@@ -91,6 +92,8 @@ You can obtain detailed information about the restrictions on all metrics for a 
   getAccessRestrictions(product: SANAPI, plan: BUSINESS_PRO, filter: METRIC) {
     name
     minInterval
+    stabilizationPeriod
+    canMutate
     isAccessible
     isRestricted
     isDeprecated
@@ -108,10 +111,13 @@ You can obtain detailed information about the restrictions on all metrics for a 
 
 The following fields are selected:
 
-- `name` - the name of the metric
-- `minInterval` - what is the minimal interval between two data points (5 minutes or 1 day in most cases)
+- `name` - the name of the metric.
+- `minInterval` - what is the minimal interval between two data points (5 minutes or 1 day in most cases).
+- `stabilizationPeriod` - the time period after which the metric value is considered stable (e.g. `"1h"`, `"24h"`). During this period, the value may be recalculated as new data (such as confirmation blocks) arrives. Returns `null` when not specified for the metric. See [Stabilization Period and Data Mutability](#stabilization-period-and-data-mutability) for details.
+- `canMutate` - a boolean indicating whether the metric value can change after the stabilization period ends. If `true`, historical values may still be updated. If `false`, values are immutable once stabilized. Returns `null` when not specified for the metric. See [Stabilization Period and Data Mutability](#stabilization-period-and-data-mutability) for details.
 - `isDeprecated` - is the metric deprecated. If true, you must stop using this metric as it will be removed in the future.
 - `isAccessible` - is the metric accessible with the selected subscription plan.
+- `isRestricted` - whether any time (historical or real-time) restrictions are applied.
 - `restrictedFrom` - what is the earliest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 - `restrictedTo` - what is the latest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 - `availableVersions` - a list of available [versions](#metric-versions) for this metric. Each version has a `version` field (e.g. `"1.0"`, `"2.0"`).
@@ -314,6 +320,68 @@ To get the same data for a specific product and plan, execute:
 
 For the full guide see [Metric Versions](/sanapi/metric-versions).
 
+## Stabilization Period and Data Mutability
+
+Metric values may not be immediately final when first computed. Two metadata
+fields describe the data stability characteristics of each metric:
+
+- **`stabilizationPeriod`** — the time duration after which the metric value is
+  considered stable (e.g. `"1h"`, `"24h"`). During this window, the value may
+  be recalculated as new data arrives — for example, a daily metric may be
+  recomputed throughout the day as new blockchain events are processed.
+- **`canMutate`** — a boolean indicating whether the metric value can change
+  *after* the stabilization period ends. When `false`, the value should be
+  immutable once the stabilization period has elapsed. When `true`,
+  historical values may still be updated even after stabilization.
+
+Note that these fields are best-effort estimates. In rare cases — such as
+discovered data issues — historical values may be recalculated regardless of
+these settings.
+
+Not all metrics have these fields specified — both fields return `null` when the
+stability characteristics have not been defined for a given metric.
+
+Together, when present, these fields define the mutability contract:
+
+| Scenario | Value can change? |
+| --- | --- |
+| Within the stabilization period | Yes — regardless of `canMutate` |
+| After the stabilization period, `canMutate: false` | No — the value should be immutable |
+| After the stabilization period, `canMutate: true` | Yes — the value may still be updated |
+
+You can query these fields via `getMetric` metadata:
+
+```graphql explorer
+{
+  getMetric(metric: "daily_active_addresses") {
+    metadata {
+      stabilizationPeriod
+      canMutate
+    }
+  }
+}
+```
+
+Or for all metrics at once via `getAccessRestrictions`:
+
+```graphql explorer
+{
+  getAccessRestrictions(filter: METRIC) {
+    name
+    stabilizationPeriod
+    canMutate
+  }
+}
+```
+
+<Notebox type="note">
+
+If you need guaranteed finalized data points, see the
+[Finalized Metrics](/metrics/finalized) page for the `onlyFinalizedData` query
+flag.
+
+</Notebox>
+
 ## Queryable fields
 
 In the `getMetric` function, you can query the following fields:
@@ -512,10 +580,12 @@ Each metric is accompanied by metadata that describes the following:
 - The default aggregation that will be used when retrieving the metric at a
   higher resolution.
 - The supported aggregations for the metric.
-- The existing selectors for the metric.
+- The existing selectors and required selectors for the metric.
 - The projects for which the metric is available.
 - The type of the metric, which can be either a timeseries or a histogram.
 - The available [versions](#metric-versions) of the metric.
+- The [stabilization period and mutability](#stabilization-period-and-data-mutability) of the metric values.
+- Whether the metric has incomplete data, is timebound, or is a label FQN metric.
 
 ```graphql explorer
 {
@@ -523,6 +593,7 @@ Each metric is accompanied by metadata that describes the following:
     metadata {
       availableAggregations
       availableSelectors
+      requiredSelectors
       availableSlugs
       availableVersions {
         version
@@ -530,6 +601,53 @@ Each metric is accompanied by metadata that describes the following:
       dataType
       defaultAggregation
       minInterval
+      stabilizationPeriod
+      canMutate
+      hasIncompleteData
+      isTimebound
+      isLabelFqnMetric
+    }
+  }
+}
+```
+
+The metadata fields include:
+
+- `minInterval` — the minimal interval between two data points (e.g. `"5m"`, `"1d"`). See [Minimal Interval](#minimal-interval).
+- `defaultAggregation` — the aggregation applied when fetching data at a larger interval. See [Aggregation](#aggregation).
+- `availableAggregations` — the list of supported aggregation types for this metric.
+- `availableSelectors` — the selector types that can be used when querying this metric (e.g. `SLUG`, `TEXT`, `HOLDERS_COUNT`).
+- `requiredSelectors` — a list of lists describing which selectors must be provided. Each
+  inner list represents alternatives — you must provide one selector from each group. For
+  example, `[["SLUG"], ["LABEL_FQN", "LABEL_FQNS"]]` means you need `SLUG` **and** either
+  `LABEL_FQN` or `LABEL_FQNS`.
+- `dataType` — either `TIMESERIES` or `HISTOGRAM`. See [Data Type](/metrics/details/data-type).
+- `stabilizationPeriod` — the time after which the metric value is considered stable. Returns `null` when not specified for the metric. See [Stabilization Period and Data Mutability](#stabilization-period-and-data-mutability).
+- `canMutate` — whether the metric value can change after the stabilization period. Returns `null` when not specified for the metric. See [Stabilization Period and Data Mutability](#stabilization-period-and-data-mutability).
+- `hasIncompleteData` — `true` when the metric's latest data point may be incomplete. These
+  are typically daily metrics computed multiple times throughout the day — for example,
+  `daily_active_addresses` fetched at 18:00 only includes 3/4 of the day. The
+  `includeIncompleteData` query parameter (default `false`) controls whether such data
+  points are returned.
+- `isTimebound` — `true` if the metric is computed on the set of coins/tokens that moved
+  within a specified time period. See [Timebound](/metrics/details/timebound).
+- `isLabelFqnMetric` — `true` if the metric is computed on addresses identified by a
+  specific [label](/labels). These labels can identify exchanges, funds, whales, and other
+  entities. Use `availableLabelFqns` to discover which labels are available for a given metric.
+- `availableLabelFqns` — the list of [label FQNs](/labels/label-fqn) that can be provided in
+  the `labelFqn` selector when querying this metric. Accepts an optional `slug` argument to
+  filter for a specific asset.
+- `availableVersions` — the available [versions](#metric-versions) for this metric.
+
+```graphql explorer
+{
+  getMetric(metric: "active_addresses_24h") {
+    metadata {
+      requiredSelectors
+      hasIncompleteData
+      isTimebound
+      isLabelFqnMetric
+      availableLabelFqns(slug: "bitcoin")
     }
   }
 }
