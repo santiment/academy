@@ -51,9 +51,9 @@ const { sidebarData } = Astro.props
   <body class="pt-[70px]">
     <Notifications client:only="svelte" />
 
-    <div data-vaul-drawer-wrapper>
-      <Nav {slug} {sidebarData} client:load transition:persist />
+    <Nav {slug} {sidebarData} client:load transition:persist />
 
+    <div data-vaul-drawer-wrapper>
       <slot />
     </div>
 

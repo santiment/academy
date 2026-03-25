@@ -14,6 +14,7 @@ import TableOfContents from '$components/layout/TableOfContents.svelte'
 import LastUpdated from '$components/shared/LastUpdated.svelte'
 import DiscordCTA from '$components/shared/DiscordCTA.svelte'
 import SupportButton from '$components/shared/SupportButton.svelte'
+import ImageViewerHandler from '$components/shared/ImageViewerHandler.svelte'
 
 import H1 from '$components/markdown/headings/H1.astro'
 
@@ -65,5 +66,7 @@ const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
       </div>
     </main>
   </div>
+
+  <ImageViewerHandler client:load />
   <SupportButton client:only="svelte" />
 </div>
