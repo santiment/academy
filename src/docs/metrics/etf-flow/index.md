@@ -47,17 +47,31 @@ USD
 
 ## Available Assets
 
-- gbtc 
-- ibit 
-- fbtc 
-- arkb 
-- btco 
-- bitb 
-- hodl 
-- brrr 
-- btc  
-- btcw 
+- gbtc
+- ibit
+- fbtc
+- arkb
+- btco
+- bitb
+- hodl
+- ethv
+- ethw
+- ezet
+- qeth
+- etha
+- ethe
+- brrr
+- btc
+- btcw
 - ezbtc
+- bsol
+- vsol
+- fsol
+- gsol
+- feth
+- teth
+- eth
+- soez
 
 ---
 
