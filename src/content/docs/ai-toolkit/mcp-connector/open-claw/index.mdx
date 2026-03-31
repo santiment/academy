@@ -1,0 +1,38 @@
+---
+title: Setup OpenClaw with Santiment MCP Connector
+author: Santiment Team
+datePublished: 2026-03-31
+dateModified: 2026-03-31
+sidebar:
+  order: 10
+  label: OpenClaw
+---
+
+OpenClaw does not currently natively support remote OAuth-based MCP servers. To connect, use [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) as a local bridge.
+
+1. Add the following to your `~/.openclaw/openclaw.json` under `mcp.servers`:
+
+   ```json
+   {
+     "mcp": {
+       "servers": {
+         "santiment": {
+           "command": "npx",
+           "args": ["-y", "mcp-remote", "https://api.santiment.net/mcp"]
+         }
+       }
+     }
+   }
+   ```
+
+2. Restart the gateway:
+
+   ```
+   openclaw gateway restart
+   ```
+
+3. Send your agent any Santiment-related query, for example: _“What are the top crypto narratives trending right now?”_. You should be prompted to complete Santiment OAuth in your browser. Log in (or create a free account at [app.santiment.net](https://app.santiment.net/)) and approve the connection.
+
+   Note: on a headless server or inside Docker, the browser won’t open automatically. Check `openclaw logs` for the OAuth URL and open it on your local machine.
+
+4. Once authorized, start asking questions about any token, metric, or market condition.
