@@ -7,7 +7,9 @@ sidebar:
   order: 10
 ---
 
-Santiment's MCP (Model Context Protocol) connector gives Claude direct access to crypto market intelligence — on-chain metrics, social sentiment, trending narratives, and analyst insights — so you can research, validate, and analyze without leaving the conversation.
+import instructionVideo from './instruction.mp4';
+
+Santiment's MCP (Model Context Protocol) connector gives AI Tools (Claude, ChatGPT, etc.) direct access to crypto market intelligence — on-chain metrics, social sentiment, trending narratives, and analyst insights — so you can research, validate, and analyze without leaving the conversation.
 
 ## Features
 
@@ -22,25 +24,52 @@ Santiment's MCP (Model Context Protocol) connector gives Claude direct access to
 
 ### Claude.ai / Claude Desktop
 
-1. Open Claude and navigate to the Connectors section.
-2. Find **Santiment** and click Connect.
-3. You'll be redirected to Santiment to authorize access via OAuth.
-4. Log in (or create a free account at [app.santiment.net](https://app.santiment.net)) and approve the connection.
-5. Start asking questions about any token, metric, or market condition.
+Note: currently this setting is not available in the mobile app, but can be configured in Claude.ai / Claude Desktop and then used in the mobile app.
 
-### Claude Code
+1. Open Claude and navigate to the Customize->Connectors section.
+2. Click on the "+" button to add a new connector and select "Add Custom Connector".
+3. Specify the name as **Santiment** and in `Remote MCP server URL` paste
+
+   ```
+   https://api.santiment.net/mcp
+   ```
+
+   Then click `Add`.
+4. You'll be redirected to Santiment to authorize access via OAuth.
+5. Log in (or create a free account at [app.santiment.net](https://app.santiment.net)) and approve the connection.
+6. Start asking questions about any token, metric, or market condition.
+
+Video how to setup:
+
+<video autoplay loop muted playsinline>
+  <source src={instructionVideo} type="video/mp4" />
+</video>
+
+
+### Claude Code CLI
 
 Run:
 
 ```bash
-claude mcp add santiment --transport streamable-http https://api.santiment.net/mcp
+claude mcp add santiment --transport http https://api.santiment.net/mcp
 ```
 
 You'll be prompted to authorize via OAuth on first use.
 
+### ChatGPT
+
+Note: currently this setting is not available in the mobile app, but can be configured in chatgpt.com and then used in the mobile app.
+
+1. Open chatgpt.com and navigate to the Settings->Apps->Advanced Settings section.
+2. Turn on the "Developer Mode" switch and click on the "Create app" button.
+3. Specify the name as **Santiment**, MCP Server URL as `https://api.santiment.net/mcp`, Authentication as `OAuth`, confirm security risk warning and click Create.
+4. You'll be redirected to Santiment to authorize access via OAuth.
+5. Log in (or create a free account at [app.santiment.net](https://app.santiment.net)) and approve the connection.
+6. Open new chat, click "+" button and select "Santiment" from the list of connectors/apps. Start asking questions about any token, metric, or market condition.
+
 ## Authentication
 
-The connector uses **OAuth 2.0 authorization code flow** with PKCE. When you first connect, you'll be prompted to log in to your Santiment account and authorize Claude to access data on your behalf.
+The connector uses **OAuth 2.0 authorization code flow** with PKCE. When you first connect, you'll be prompted to log in to your Santiment account and authorize your AI Tool to access data on your behalf.
 
 - Access tokens are valid for 1 hour and automatically refresh.
 - A free Santiment account provides access to core metrics and signals.

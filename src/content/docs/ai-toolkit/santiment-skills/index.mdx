@@ -1,0 +1,59 @@
+---
+title: Santiment Skills for AI Agents
+author: Santiment Team
+datePublished: 2026-03-24
+dateModified: 2026-03-24
+description: Learn about Santiment's skills for Claude and other compatible AI platforms.
+---
+
+A skill is either a standalone `.md` file or a folder containing:
+
+- `SKILL.md` (required): Instructions in Markdown with YAML frontmatter
+- `scripts/` (optional): Executable code (Python, Bash, etc.)
+- `references/` (optional): Documentation loaded as needed
+- `assets/` (optional): Templates, fonts, icons used in output
+
+Our skills instruct agents on how to work with and interpret our data in specific ways. Once a skill is installed, the agent can utilize metrics for on-chain flows, social sentiment, holder behavior, exchange activity, developer activity, and more across 3,000+ assets.
+
+Different skills offer different functionalities and levels of depth. Claude can load multiple skills simultaneously. Advanced users can even write their own skills.
+
+Below are the two skills we've released so far as well as a research toolkit that contains a separate API usage skill.
+
+## Skill: GraphQL API Access
+
+This skill gives AI agents (Claude Code, OpenClaw, and others) the ability to fetch on-chain, financial, social, and development data from Santiment's GraphQL API. The agent learns how to construct queries, handle errors, manage rate limits, and discover metrics dynamically. No Python, no library installation, no dependencies.
+
+Works with Claude Code, OpenClaw, and other agent frameworks. If you need a fast, universal connection between your agent and Santiment data, this is the most direct path available today.
+
+Access the skill and learn more:
+[GitHub: balresch/santiment-api-skill](https://github.com/balresch/santiment-api-skill)
+
+## Skill: Read the Crowd, Social Trends Analysis
+
+This skill teaches Claude how to think and behave like a Santiment power user. Once installed, Claude can guide you through Social Trends in real time: explaining what you're seeing, flagging genuine signals while filtering out noise, and walking you through the workflow and analysis step by step.
+
+The knowledge inside this skill was extracted directly from an experienced Santiment team member. This methodology would have taken a new user months to learn.
+
+Access the skill and learn more:
+[AI for Social Trends](../ai-for-social-trends/)
+
+## Research Quickstart: Designed for Quants and Python Users, Contains API Skill
+
+This research kit enables deep data research, back-testing, correlations, multi-metric analysis, and maximum maneuverability.
+
+Santiment’s most comprehensive AI integration. Your agent learns how to use an API and has access to a full Python toolkit — the `sanpy` library, working example scripts, case studies, correlation analyses, and interactive notebooks. It reads the documentation, writes its own Python code, and executes complex analytical workflows while pulling data from Santiment's GraphQL API.
+
+This path requires a Python environment and is designed for users comfortable with local development tools or coding agents like Claude Code or Cursor. More setup than the other options, but it unlocks capabilities the lighter integrations can’t match: batch processing across dozens of assets, SQL queries against Santiment’s database, multi-metric correlation studies, and strategy backtesting with proper methodology.
+
+Access the skill and learn more:
+[GitHub: santiment/santiment-research-quickstart](https://github.com/santiment/santiment-research-quickstart)
+
+## Which One Should I Choose?
+
+If you want Santiment data with zero setup in Claude or other platforms that support the `Skills.md` standard and MCP use the **Connector**.
+
+If you want your agent to fetch metrics quickly and you don’t need Python — install the **API Skill**.
+
+If you want full research capabilities, custom analysis, and backtesting — set up the **Research Quickstart**.
+
+You can start with the API Skill today and move to Research Quickstart later if your needs grow.
