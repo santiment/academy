@@ -11,6 +11,7 @@ import { sluggify } from 'san-webkit-next/utils/url'
 import Sidebar from '$components/layout/Sidebar.svelte'
 import Breadcrumbs from '$components/shared/Breadcrumbs.astro'
 import TableOfContents from '$components/layout/TableOfContents.svelte'
+import ArticleImageViewer from '$components/layout/ArticleImageViewer.svelte'
 import LastUpdated from '$components/shared/LastUpdated.svelte'
 import DiscordCTA from '$components/shared/DiscordCTA.svelte'
 import SupportButton from '$components/shared/SupportButton.svelte'
@@ -49,20 +50,22 @@ const { doc, breadcrumbs, relatedProduct, sidebarData, headings } = Astro.props
 
       <Breadcrumbs {breadcrumbs} />
 
-      <div class="wrapper mt-6 md:mt-0">
-        {
-          doc.data.title && (
-            <H1 id={sluggify(doc.data.title)}>{doc.data.title}</H1>
-          )
-        }
+      <ArticleImageViewer client:load>
+        <div class="wrapper mt-6 md:mt-0">
+          {
+            doc.data.title && (
+              <H1 id={sluggify(doc.data.title)}>{doc.data.title}</H1>
+            )
+          }
 
-        <slot />
+          <slot />
 
-        <div class="mt-16">
-          <LastUpdated dateModified={doc.data.dateModified} />
-          <DiscordCTA />
+          <div class="mt-16">
+            <LastUpdated dateModified={doc.data.dateModified} />
+            <DiscordCTA />
+          </div>
         </div>
-      </div>
+      </ArticleImageViewer>
     </main>
   </div>
   <SupportButton client:only="svelte" />
