@@ -1,3 +1,8 @@
+---
+name: santiment-social-trends
+description: "Use this skill whenever the user is interpreting Santiment's Social Trends feature, analysing crypto social signals, or deciding what to do with trending words, social volume spikes, or crowd sentiment data. Triggers include: mentions of 'Social Trends', 'trending words', 'social volume', 'sentiment', 'crowd sentiment', 'bullish/bearish words', or questions like 'is this a buy signal?', 'why is X trending?', 'what does this social spike mean?'. Also use when the user is new to Santiment's social tools and needs to be walked through them, or when they ask about spam detection, Telegram-only pumps, source breakdown, contrarian signals, or cross-referencing social data with price charts. Do NOT use for on-chain metrics, holder analysis, development activity, or token unlocks — only social/sentiment interpretation."
+---
+
 # Santiment Social Trends — Power User Guide
 
 This skill encodes expert, non-obvious knowledge about using Santiment's Social Trends feature effectively. Apply it when helping users interpret social signals, spot crowd behaviour patterns, and cross-reference with price action.
