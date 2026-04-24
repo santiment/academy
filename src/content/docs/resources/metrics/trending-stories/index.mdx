@@ -1,7 +1,7 @@
 ---
 title: Trending Stories
 author: Santiment Team
-description: List of stories (clusters of related messages) getting the most social attraction over the last 24 hours
+description: List of top narratives discussed across crypto social data, ranked by trending score
 datePublished: 2026-04-24
 dateModified: 2026-04-24
 ---
@@ -10,16 +10,20 @@ dateModified: 2026-04-24
 
 ## Definition
 
-**Trending Stories** is a list of stories — clusters of related messages
-discussing the same topic — that attracted the most social attention over the
-last 24 hours. While [Trending Words](/metrics/emerging-trends) surface
-individual trending _words_, Trending Stories group related messages into a
-single narrative and return a human-readable title, a summary of what is being
-discussed, the related tokens, and bullish/bearish sentiment ratios.
+**Trending Stories** surfaces the top narratives being discussed in
+[social data](/metrics/details/social-data/) over a given time range.
 
-The stories are built on top of [social data](/metrics/details/social-data/) by
-clustering semantically similar messages, scoring each cluster by its volume and
-velocity, and ranking the clusters in descending order of that score.
+For each story the metric returns:
+
+- `title` — short human-readable headline
+- `summary` — a paragraph describing what the story is about, including
+  explicit bullish and bearish takes
+- `searchText` — an OR-joined search query (e.g. `solana OR chainlink OR tether`)
+  that can be used to pull the underlying social posts
+- `score` — trending score, used to rank stories in descending order
+- `bullishRatio` / `bearishRatio` — bullish/bearish sentiment ratios
+  computed over the posts related to the story
+- `relatedTokens` — list of tokens in `SYMBOL_slug` form (e.g. `BTC_bitcoin`)
 
 ---
 
@@ -32,12 +36,12 @@ The metric's historical data has [restricted access](/metrics/details/access#res
 
 ## Measuring Unit
 
-Each story has a `score` that reflects how much social attention the story is
-getting. It has no absolute qualitative meaning — the higher the score, the
-more a given story is trending relative to the rest.
+The `score` reflects how much social attention a story is getting. It has no
+absolute qualitative meaning — the higher the score, the more a given story is
+trending relative to the rest.
 
-Two additional per-story numbers — `bullishRatio` and `bearishRatio` — describe
-the sentiment split of the messages in the cluster.
+`bullishRatio` and `bearishRatio` are floats in the `[0, 1]` range describing
+the bullish/bearish sentiment split of the social posts related to the story.
 
 ---
 
@@ -70,18 +74,23 @@ Trending Stories can be computed per data source via the `source` argument:
 
 ## How to Access
 
+### [Sanbase](https://app.santiment.net/social-trends/trending-stories)
+
+Trending Stories are available on the [Trending Stories page](https://app.santiment.net/social-trends/trending-stories).
+
 ### [SanAPI](https://api.santiment.net)
 
 Trending stories are available as part of the API, the metric is called
 `getTrendingStories`:
 
-```graphql
+```graphql explorer
 {
   getTrendingStories(
-    from: "2024-01-01T12:00:00Z"
-    to: "2024-01-01T13:00:00Z"
+    from: "2026-01-01T12:00:00Z"
+    to: "2026-01-01T13:00:00Z"
     size: 10
     interval: "1h"
+    source: TWITTER_CRYPTO
   ) {
     datetime
     topStories {
@@ -96,5 +105,3 @@ Trending stories are available as part of the API, the metric is called
   }
 }
 ```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getTrendingStories(from%3A%20%222024-01-01T12%3A00%3A00Z%22%2C%20to%3A%20%222024-01-01T13%3A00%3A00Z%22%2C%20size%3A%2010%2C%20interval%3A%20%221h%22%2C%20source%3A%20TWITTER_CRYPTO)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20topStories%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%20%20summary%0A%20%20%20%20%20%20searchText%0A%20%20%20%20%20%20score%0A%20%20%20%20%20%20bullishRatio%0A%20%20%20%20%20%20bearishRatio%0A%20%20%20%20%20%20relatedTokens%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**

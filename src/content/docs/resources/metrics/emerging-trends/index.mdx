@@ -10,16 +10,16 @@ dateModified: 2026-04-24
 
 ## Definition
 
-The **Trending words** is a list of words that describe
-the topics which _emerged_ faster than any others over the last 24 hours. By
-"emerging" we mean getting more social attraction from the crowd, being
-discussed much more than any other topic.
+**Trending Words** is a list of words that describe the topics which _emerged_
+faster than any others over the last 24 hours. By "emerging" we mean getting
+more social attraction from the crowd, being discussed much more than any
+other topic.
 
 We detect these words by computing the so-called _hype score_ for each single
 word that is present in the [social data](/metrics/details/social-data/) after filtering
 and cleaning the data. Once this number is calculated, the words are ranked
 according to the corresponding scores in a descending order. The top 10 words in
-the resulting list are the top emerging trends.
+the resulting list are the top trending words.
 
 We constantly update our labels, which helps us keep them as fresh as possible but results in historical data changes. Any modifications to labels, social sources, or relevant jobs will prompt recalculation of the previous month's data. Within a 12-hour period, the metric can be supplemented with new data.
 
@@ -122,22 +122,20 @@ be treated as a relative number: the higher it gets, the faster a given word is
 
 ## Frequency
 
-Emerging Trends are available at [hourly intervals](/metrics/details/frequency#hourly-frequency)
+Trending Words are available at [hourly intervals](/metrics/details/frequency#hourly-frequency)
 
 ---
 
 ## Latency
 
-Emerging Trends have [social data Latency](/metrics/details/latency#social-data-latency)
+Trending Words have [social data Latency](/metrics/details/latency#social-data-latency)
 
 ---
 
 ## Available Assets
 
 The algorithm takes into account all the [social data](/metrics/details/social-data/),
-so the list may or may not contain asset names and tickers. We do track the
-emerging projects separately for the assets only, but currently it is not
-available through any of the products.
+so the list may or may not contain asset names and tickers.
 
 ---
 
@@ -145,18 +143,18 @@ available through any of the products.
 
 ### [Sanbase](https://app.santiment.net/social-trends)
 
-The emerging trends are available in the _`Labs`_ section.
+Trending Words are available on the [Social Trends page](https://app.santiment.net/social-trends).
 
 ### [SanAPI](https://api.santiment.net)
 
-The emerging trends are available as part of the API, the metric is called
+Trending Words are available as part of the API, the metric is called
 `getTrendingWords`:
 
-```graphql
+```graphql explorer
 {
   getTrendingWords(
-    from: "2020-01-01T12:00:00Z"
-    to: "2020-01-01T13:00:00Z"
+    from: "2026-01-01T12:00:00Z"
+    to: "2026-01-01T13:00:00Z"
     size: 10
     interval: "1h"
   ) {
@@ -168,5 +166,3 @@ The emerging trends are available as part of the API, the metric is called
   }
 }
 ```
-
-**[Run in Explorer](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getTrendingWords(from%3A%20%222020-01-01T12%3A00%3A00Z%22%2C%20to%3A%20%222020-01-01T13%3A00%3A00Z%22%2C%20size%3A10%2C%20interval%3A%221h%22)%20%7B%0A%20%20%20%20datetime%0A%20%20%20%20topWords%20%7B%0A%20%20%20%20%20%20word%0A%20%20%20%20%20%20score%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
