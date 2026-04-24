@@ -1,0 +1,107 @@
+---
+title: Trending Stories
+author: Santiment Team
+description: List of top narratives discussed across crypto social data, ranked by trending score
+datePublished: 2026-04-24
+dateModified: 2026-04-24
+---
+
+![Trending Stories on Sanbase](trending_stories.jpg)
+
+## Definition
+
+**Trending Stories** surfaces the top narratives being discussed in
+[social data](/metrics/details/social-data/) over a given time range.
+
+For each story the metric returns:
+
+- `title` — short human-readable headline
+- `summary` — a paragraph describing what the story is about, including
+  explicit bullish and bearish takes
+- `searchText` — an OR-joined search query (e.g. `solana OR chainlink OR tether`)
+  that can be used to pull the underlying social posts
+- `score` — trending score, used to rank stories in descending order
+- `bullishRatio` / `bearishRatio` — bullish/bearish sentiment ratios
+  computed over the posts related to the story
+- `relatedTokens` — list of tokens in `SYMBOL_slug` form (e.g. `BTC_bitcoin`)
+
+---
+
+## Access
+
+The metric's real-time data is **free**.
+The metric's historical data has [restricted access](/metrics/details/access#restricted-access).
+
+---
+
+## Measuring Unit
+
+The `score` reflects how much social attention a story is getting. It has no
+absolute qualitative meaning — the higher the score, the more a given story is
+trending relative to the rest.
+
+`bullishRatio` and `bearishRatio` are floats in the `[0, 1]` range describing
+the bullish/bearish sentiment split of the social posts related to the story.
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Frequency
+
+Trending Stories are available at [hourly intervals](/metrics/details/frequency#hourly-frequency)
+
+---
+
+## Latency
+
+Trending Stories have [social data Latency](/metrics/details/latency#social-data-latency)
+
+---
+
+## Available Sources
+
+Trending Stories can be computed per data source via the `source` argument:
+
+- `TWITTER_CRYPTO`
+- `TELEGRAM`
+
+---
+
+## How to Access
+
+### [Sanbase](https://app.santiment.net/social-trends/trending-stories)
+
+Trending Stories are available on the [Trending Stories page](https://app.santiment.net/social-trends/trending-stories).
+
+### [SanAPI](https://api.santiment.net)
+
+Trending stories are available as part of the API, the metric is called
+`getTrendingStories`:
+
+```graphql explorer
+{
+  getTrendingStories(
+    from: "2026-01-01T12:00:00Z"
+    to: "2026-01-01T13:00:00Z"
+    size: 10
+    interval: "1h"
+    source: TWITTER_CRYPTO
+  ) {
+    datetime
+    topStories {
+      title
+      summary
+      searchText
+      score
+      bullishRatio
+      bearishRatio
+      relatedTokens
+    }
+  }
+}
+```
