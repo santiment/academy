@@ -35,11 +35,15 @@ Detailed access restrictions per product and plan can be found here:
 
 Description of the fields:
 
-- `type` - Either [query](/glossary/#query) or [metric](/glossary/#metric)
+- `type` - Either [query](/glossary/#query) or [metric](/glossary/#metric).
 - `name` - The name of the query or metric. Check the [query](/glossary/#query) and [metric](/glossary/#metric) definition and examples in order to understand what the name represents exactly.
 - `isAccessible` - Shows if the given metric/query is accessible for the provided product/plan.
 - `isRestricted` - Shows if any time (historical or real-time) restrictions are applied.
 - `restrictedFrom` - Shows the first date the given product/plan has access to for the specific metric/query. If it is `null` then no restrictions are applied.
 - `restrictedTo` - Shows the last date the given product/plan has access to for the specific metric/query. If it is `null` then no restrictions are applied.
+- `stabilizationPeriod` - The time period after which the metric value is considered stable (e.g. `"1h"`, `"24h"`). During this window, values may be recalculated as new data arrives. Returns `null` when not specified for the metric. See [Stabilization Period and Data Mutability](/sanapi/fetching-metrics#stabilization-period-and-data-mutability) for details.
+- `canMutate` - A boolean indicating whether the metric value can change after the stabilization period ends. If `false`, the value is immutable once stabilized. Returns `null` when not specified for the metric. See [Stabilization Period and Data Mutability](/sanapi/fetching-metrics#stabilization-period-and-data-mutability) for details.
+- `isDeprecated` - Whether the metric is deprecated. If `true`, you should stop using it as it will be removed in the future.
+- `hardDeprecateAfter` - The datetime after which a deprecated metric will become inaccessible. May be `null` if not yet scheduled.
 
 > Note: The `isRestricted`, `restrictedFrom` and `restrictedTo` fields are meaningful only if `isAccessible` is `true`.
