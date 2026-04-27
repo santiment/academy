@@ -81,12 +81,28 @@ The funding rates are updated every **15 minutes**.
 This makes funding rate data suitable for near-real-time monitoring of
 derivatives market conditions, with a worst-case delay of just under 15 minutes.
 
+### Observed Availability
+
+End-to-end latency measured for open interest and funding rate metrics:
+
+| Metric | Mean | Median | P80 | P90 | P95 |
+| --- | --- | --- | --- | --- | --- |
+| **Funding Rate** | ~57 min | 60 min | 60 min | 60 min | 60 min |
+
 ## Price Latency
 
 The prices are updated every **5 minutes**.
 
 Price data is one of the lowest-latency data categories available in the
 Santiment API and can be relied upon for near-real-time price tracking.
+
+### Observed Availability
+
+End-to-end latency measured for price metrics:
+
+| Metric | Mean | Median | P80 | P90 | P95 |
+| --- | --- | --- | --- | --- | --- |
+| **Price** | ~20 min | 15 min | 25 min | 30 min | 35 min |
 
 ## Development Activity Latency
 
