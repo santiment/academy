@@ -103,7 +103,7 @@ Join thousands of members worldwide in our [community server](https://santiment.
 
 ## Get the Latest News
 
-- [Twitter](https://twitter.com/santimentfeed)
+- [X](https://x.com/santimentdata)
 - [Blog](https://insights.santiment.net)
 - [Youtube](https://www.youtube.com/channel/UCSzP_Z3MrygWlbLMyrNmMkg)
 
