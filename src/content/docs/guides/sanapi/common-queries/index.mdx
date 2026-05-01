@@ -374,4 +374,29 @@ You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/gr
 }
 ```
 
+### Retrieve Current Trending Stories
+
+```graphql explorer
+{
+  getTrendingStories(
+    from: "utc_now-3h"
+    to: "utc_now"
+    size: 10
+    interval: "1h"
+    source: TWITTER_CRYPTO
+  ) {
+    datetime
+    topStories {
+      title
+      summary
+      searchText
+      score
+      bullishRatio
+      bearishRatio
+      relatedTokens
+    }
+  }
+}
+```
+
 <Notebox type="none">**Read next: [Rate Limits](/sanapi/rate-limits)**</Notebox>
