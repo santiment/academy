@@ -105,6 +105,6 @@ Join thousands of members worldwide in our [community server](https://santiment.
 
 - [X](https://x.com/santimentdata)
 - [Blog](https://insights.santiment.net)
-- [Youtube](https://www.youtube.com/channel/UCSzP_Z3MrygWlbLMyrNmMkg)
+- [Youtube](https://www.youtube.com/@Santimentdata)
 
 Any other questions, reach out to us at [support@santiment.net](mailto:support@santiment.net). We’d be happy to help!
