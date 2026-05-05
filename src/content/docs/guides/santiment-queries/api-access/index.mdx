@@ -22,7 +22,7 @@ For those who want to automate the process of executing queries, we provide
 access via our GraphQL API. You can query the API endpoint directly or use our
 [python library](https://github.com/santiment/sanpy).
 
-## When to use it?
+## When to Use It?
 
 If the data needs to be consumed by another system, that system can use the API
 to compute an SQL query and get the results as a JSON object.
@@ -36,7 +36,7 @@ A few examples of when the API can be used:
 - Any use case that requires automation is a good candidate for
   using the API.
 
-## How to use the Web interface to write queries for the API?
+## How to Use the Web Interface to Write Queries for the API?
 
 The web interface is a powerful tool for exploring the data, writing queries,
 observing the results in real-time or exploring prebuilt dashboards.
@@ -57,7 +57,7 @@ There are two ways to execute queries using the API:
 - Directly execute the `runRawSqlQuery` GraphQL query against the API graphql endpoint;
 - Use the [sanpy execute_sql function](https://github.com/santiment/sanpy#sql-queries-santiment-queries) to execute an SQL query and get the result as a Pandas DataFrame. The python library itself also uses the API, but provides functions that hide the details of the API.
 
-### The query
+### The Query
 
 The query that is used in the examples below is the following:
 
@@ -85,7 +85,7 @@ The following parameters are used:
 - `metric` - A string representing the name of a metric;
 - `last_n_day` - An integer representing the number of days to be fetched.
 
-### Direct API call
+### Direct API Call
 
 The direct API calls can be made using any HTTP client in any programming language.
 What you need to do is send a POST request and put the query in the body.
@@ -105,9 +105,9 @@ The query looks like this:
 }
 ```
 
-> **Note**: In order to be able to run the query in the GraphiQL Explorer you need to login on [Sanbase](https://app.santiment.net) on the same browser.
+> **Note**: In order to be able to run the query in the GraphiQL Explorer you need to login on [Sanbase](https://app.santiment.net?utm_source=academy) on the same browser.
 
-### curl
+### Curl
 
 You can execute the query in your terminal via the following curl command:
 
@@ -145,7 +145,7 @@ The result of both the direct API call and the curl command is a JSON. The dates
 }
 ```
 
-#### API request arguments definition
+#### API Request Arguments Definition
 
 The `runRawSqlQuery` accepts two arguments:
 
@@ -156,7 +156,7 @@ The `runRawSqlQuery` accepts two arguments:
 - `sqlQueryParameters` - A stringified JSON object that contains the key-value pairs. When the SQL query
   is executed, the `{{key}}` templates are replaced with the corresponding values from the `sqlQueryParameters` map.
 
-#### API result fields interpretation
+#### API Result Fields Interpretation
 
 The result of the GraphQL query contains the result of the executed SQL query.
 The selected fields in this example are: `columns`, `columnTypes` and `rows`.
@@ -179,13 +179,13 @@ The meaning of the fields is:
   rows is the same as in the result of the SQL query. The order of the columns in the
   inner list is the same as in the `columns` field.
 
-### Using the Python library
+### Using the Python Library
 
 The [sanpy](https://github.com/santiment/sanpy) provides the `execute_sql` function, which
 interacts with the above described `runRawSqlQuery` API. The function accepts two
 named parameters - `query` and `parameters`, runs the query and returns the result as a Pandas DataFrame.
 
-#### sanpy request example
+#### Sanpy Request Example
 
 To run the code:
 
@@ -219,7 +219,7 @@ parameters={
 set_index="dt")
 ```
 
-#### sanpy result example
+#### Sanpy Result Example
 
 The result is a Pandas DataFrame:
 
@@ -234,7 +234,7 @@ dt                   metric    asset       value
 2023-03-29T00:00:00Z    nvt  bitcoin  376.403649
 ```
 
-#### sanpy request parameters definition
+#### Sanpy Request Parameters Definition
 
 The `execute_sql` function accepts three named parameters - one mandatory and two optional:
 
@@ -245,7 +245,7 @@ The `execute_sql` function accepts three named parameters - one mandatory and tw
 - `set_index` - The name of the column to use as the index of the returned DataFrame. If not
   specified, the index will be a range of integers. This parameter is optional.
 
-#### sanpy result parameters definition
+#### Sanpy Result Parameters Definition
 
 The `execute_sql` function returns a Pandas DataFrame with the result of the query.
 The name of each column is the name of the column in the database table or the alias

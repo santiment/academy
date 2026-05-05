@@ -56,7 +56,7 @@ browser:
 
 [GraphQL Request fetching transaction volume](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22transaction_volume%22)%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20slug%3A%20%22santiment%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-90d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now-60d%22%0A%20%20%20%20%20%20interval%3A%20%221d%22)%0A%20%20%7D%0A%7D&variables=>)
 
-### Python library
+### Python Library
 
 Santiment offers a Python wrapper for the GraphQL API, known as `sanpy`. You
 can find the documentation and installation instructions for this library
@@ -91,7 +91,7 @@ datetime                    activity
 2019-01-06 00:00:00+00:00       22.0
 ```
 
-### Programming language of your choice
+### Programming Language of Your Choice
 
 In the [san-sdk](https://github.com/santiment/san-sdk) repository, you can find
 examples of how to query the API using various programming languages. Here are
@@ -101,7 +101,7 @@ some examples:
 - [Ruby](https://github.com/santiment/san-sdk/blob/master/ruby-graphql/example.rb)
 - [Elixir](https://github.com/santiment/san-sdk/blob/master/elixir-graphql/san_graphql_ex/lib/san_graphql_ex.ex)
 
-### curl
+### Curl
 
 The following GraphQL request will be executed with curl:
 
@@ -206,7 +206,7 @@ page.
 After generating your API key, you need to include it as an additional HTTP
 header in the format `Authorization: Apikey <YOUR_OWN_API_KEY>`.
 
-### Authentication with curl
+### Authentication With Curl
 
 Include the `Authorization: Apikey <YOUR_OWN_API_KEY>` header using the `-H` option:
 
@@ -234,7 +234,7 @@ issue. Here are some possibilities:
 - `5xx` - An internal server error has occurred. Please let us know in the
   support channel on our [Discord server](https://santiment.net/discord).
 
-### Error example - syntax error
+### Error Example - Syntax Error
 
 For instance, if an invalid query is passed to the API, the following will occur:
 
@@ -262,7 +262,7 @@ $ curl \
 }
 ```
 
-### Error example - missing parameter
+### Error Example - Missing Parameter
 
 If your query is missing an argument, the error response will describe this:
 
@@ -299,7 +299,7 @@ $  curl \
 }
 ```
 
-### Error example - historical and realtime data restriction
+### Error Example - Historical and Realtime Data Restriction
 
 If the `from` and/or `to` parameters are outside of the allowed interval for the subscription plan and
 [Historical and Realtime data restrictions](/sanapi/historical-and-realtime-data-restrictions) are applied,
