@@ -25,26 +25,26 @@ html {
 }
 
 .wrapper h1 {
-  @apply text-3xl text-rhino;
+  @apply text-rhino text-3xl;
   margin: 26px 0 32px;
   font-weight: 500;
 }
 
 .wrapper h2 {
-  @apply text-xl text-rhino;
+  @apply text-rhino text-xl;
   margin: 56px 0 24px;
   font-weight: 500;
 }
 
 .wrapper h3 {
-  @apply text-xl text-rhino;
+  @apply text-rhino text-xl;
   margin: 40px 0 24px;
   font-size: 22px;
 }
 
 .wrapper h4,
 .wrapper h5 {
-  @apply text-lg font-semibold text-rhino;
+  @apply text-rhino text-lg font-semibold;
   margin: 12px 0 16px;
 }
 

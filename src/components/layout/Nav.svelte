@@ -80,6 +80,8 @@
 </nav>
 
 <style is:global>
+  @reference '#app.css';
+
   .products-styled-list {
     @apply w-full flex-col p-0 text-rhino;
   }
