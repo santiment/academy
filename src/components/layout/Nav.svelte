@@ -30,7 +30,7 @@
 
 <nav
   class={cn(
-    'select-none w-full bg-white fixed top-0 z-[2] border-b border-b-porcelain'
+    'select-none w-full bg-white fixed top-0 z-2 border-b border-b-porcelain'
   )}
 >
   <div

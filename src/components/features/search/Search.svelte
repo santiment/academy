@@ -75,7 +75,7 @@
         bind:this={containerWrapperRef.$}
         class={cn(
           'w-full flex flex-col items-center relative',
-          'w-[296px] ml-auto bg-none z-[1000] items-baseline',
+          'w-[296px] ml-auto bg-none z-1000 items-baseline',
           'sm:hidden'
         )}
       >
@@ -115,7 +115,7 @@
               {result.meta.title}
             </div>
 
-            <div class="text-xs text-rhino mt-1 line-clamp-2 [&_mark]:text-white [&_mark]:bg-green-light-4 [&_mark]:rounded-sm [&_mark]:px-[1px] [&_mark]:text-green group-hover:bg-green-light-2 p-1.5 pr-0">
+            <div class="text-xs text-rhino mt-1 line-clamp-2 [&_mark]:text-white [&_mark]:bg-green-light-4 [&_mark]:rounded-sm [&_mark]:px-px [&_mark]:text-green group-hover:bg-green-light-2 p-1.5 pr-0">
               {@html result.excerpt}
             </div>
           </a>
