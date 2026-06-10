@@ -76,7 +76,7 @@
             class={cn(
               'relative block py-1.5 pl-4 pr-4 text-base transition-colors',
               'hover:text-green text-fiord',
-              isSubActive && "text-green before:absolute before:left-[-1px] before:top-0 before:h-full before:w-[1px] before:bg-green"
+              isSubActive && "text-green before:absolute before:-left-px before:top-0 before:h-full before:w-px before:bg-green"
             )}
             onclick={onLinkClick}
           >
