@@ -1,3 +1,7 @@
+@import 'tailwindcss';
+
+@config '#tailwind.config.js';
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--casper) var(--porcelain);
