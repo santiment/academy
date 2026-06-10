@@ -2,13 +2,23 @@
 
 @config '#tailwind.config.js';
 
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--casper) var(--porcelain);
-}
+@layer base {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--casper) var(--porcelain);
+  }
 
-html {
-  scroll-behavior: smooth;
+  html {
+    scroll-behavior: smooth;
+  }
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--porcelain);
+  }
 }
 
 .wrapper {
