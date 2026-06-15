@@ -19,7 +19,7 @@
   onSubmit={(query) => aiChatbot.openWithPrompt(query)}
 />
 
-<div class="flex flex-wrap items-center justify-center gap-3">
+<div class="flex flex-wrap items-center justify-start gap-3">
   {#each queries as query}
     <Button
       size="auto"
