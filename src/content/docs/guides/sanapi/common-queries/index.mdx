@@ -15,7 +15,7 @@ import Notebox from '$components/markdown/Notebox.svelte'
 
 In this article, we explore some of the most frequently used queries in the SanAPI.
 
-### Retrieve data for one asset
+### Retrieve Data for One Asset
 
 This query obtains the daily active addresses for bitcoin for a period of 30 days.
 
@@ -32,7 +32,7 @@ This query obtains the daily active addresses for bitcoin for a period of 30 day
 }
 ```
 
-### Retrieve data for one asset, apply some transformation - I
+### Retrieve Data for One Asset, Apply Some Transformation - I
 
 The development activity is very sensitive to day/night cycles, as well as public holidays or vacation days taken by the team.
 To smooth the data we can apply a moving average transformation to the data directly in the API call.
@@ -53,7 +53,7 @@ To smooth the data we can apply a moving average transformation to the data dire
 
 You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22dev_activity%22)%20%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-365d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20%20%20transform%3A%20%7B%20type%3A%20%22moving_average%22%2C%20movingAverageBase%3A%204%20%7D%0A%20%20%20%20)%0A%20%20%7D%0A%7D%0A>).
 
-### Retrieve data for one asset, apply some transformation - II
+### Retrieve Data for One Asset, Apply Some Transformation - II
 
 The `twitter_followers` metric shows the total number of Twitter followers of
 the handle of a project. If we apply the `consecutive_difference` we can
@@ -77,7 +77,7 @@ lost for each time period.
 
 You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22twitter_followers%22)%20%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20slug%3A%20%22ethereum%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-365d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20interval%3A%20%227d%22%0A%20%20%20%20%20%20transform%3A%20%7B%20type%3A%20%22consecutive_differences%22%20%7D%0A%20%20%20%20)%0A%20%20%7D%0A%7D%0A>)
 
-### Retrieve data for multiple assets with a single API call
+### Retrieve Data for Multiple Assets With a Single API Call
 
 This query obtains data for a list of assets in a single request.
 You can specify the assets by providing a list of their slugs using the `slugs`
@@ -136,7 +136,7 @@ intervals for the past minute:
 
 You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22price_usd%22)%20%7B%0A%20%20%20%20timeseriesDataJson(%0A%20%20%20%20%20%20selector%3A%20%7B%20slug%3A%20%22bitcoin%22%2C%20source%3A%20%22cryptocompare%22%20%7D%0A%20%20%20%20%20%20from%3A%20%22utc_now-1m%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20interval%3A%20%221s%22%0A%20%20%20%20%20%20cachingParams%3A%20%7B%20baseTtl%3A%201%2C%20maxTtlOffset%3A%201%20%7D%0A%20%20%20%20)%0A%20%20%7D%0A%7D%0A>).
 
-### Get some information about each project
+### Get Some Information About Each Project
 
 Get some data for each project
 
@@ -187,7 +187,7 @@ following is a simple solution:
 
 You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20allProjects(selector%3A%20%7BbaseProjects%3A%20%7Bslugs%3A%20%5B%22ethereum%22%2C%20%22bitcoin%22%2C%20%22aave%22%5D%7D%7D)%20%7B%0A%20%20%20%20slug%0A%20%20%20%20aggregatedTimeseriesData(metric%3A%20%22mvrv_usd_intraday_365d%22%2C%20from%3A%20%22utc_now-1d%22%2C%20to%3A%20%22utc_now%22%2C%20aggregation%3A%20LAST)%0A%0A%20%20%7D%0A%7D%0A>).
 
-### Get an aggregated value for each asset
+### Get an Aggregated Value for Each Asset
 
 The example below returns 3 values for each asset:
 
@@ -225,7 +225,7 @@ The example below returns 3 values for each asset:
 
 [Run the example](<https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects%20%7B%0A%20%20%20%20slug%0A%20%20%20%20name%0A%20%20%20%20ticker%0A%20%20%20%20latestPrice%3A%20aggregatedTimeseriesData(metric%3A%20%22price_usd%22%20aggregation%3A%20LAST%20from%3A%20%22utc_now-1d%22%20to%3A%20%22utc_now%22)%0A%20%20%20%20highestWeeklyPrice%3A%20aggregatedTimeseriesData(metric%3A%20%22price_usd%22%20aggregation%3A%20MAX%20from%3A%20%22utc_now-7d%22%20to%3A%20%22utc_now%22)%0A%20%20%20%20devActivity30d%3A%20aggregatedTimeseriesData(metric%3A%20%22dev_activity-1d%22%20aggregation%3A%20SUM%20from%3A%20%22utc_now-30d%22%20to%3A%20%22utc_now%22)%0A%20%20%7D%0A%7D%0A>)
 
-### Filter and order assets and get data for them
+### Filter and Order Assets and Get Data for Them
 
 The API allows for very complex queries that filter, order and paginate projects. The example below:
 
@@ -275,7 +275,7 @@ The API allows for very complex queries that filter, order and paginate projects
 
 [Run the example](<https://api.santiment.net/graphiql?query=%7B%0A%20%20allProjects(%0A%20%20%20%20selector%3A%20%7B%0A%20%20%20%20%20%20baseProjects%3A%20%5B%7B%20watchlistSlug%3A%20%22stablecoins%22%20%7D%2C%20%7B%20slugs%3A%20%5B%22santiment%22%2C%20%22bitcoin%22%2C%20%22ethereum%22%5D%7D%5D%0A%20%20%20%20%20%20filters%3A%20%5B%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20metric%3A%20%22daily_active_addresses%22%0A%20%20%20%20%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20%20%20%20%20aggregation%3A%20AVG%0A%20%20%20%20%20%20%20%20%20%20operator%3A%20GREATER_THAN%0A%20%20%20%20%20%20%20%20%20%20threshold%3A%201000%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20orderBy%3A%20%7B%0A%20%20%20%20%20%20%20%20metric%3A%20%22daily_active_addresses%22%0A%20%20%20%20%20%20%20%20from%3A%20%22utc_now-3d%22%0A%20%20%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20%20%20aggregation%3A%20LAST%0A%20%20%20%20%20%20%20%20direction%3A%20DESC%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20pagination%3A%20%7B%20page%3A%201%2C%20pageSize%3A%20100%20%7D%0A%20%20%20%20%7D%0A%20%20)%20%7B%0A%20%20%20%20slug%0A%20%20%20%20avgDaa7d%3A%20aggregatedTimeseriesData(%0A%20%20%20%20%20%20metric%3A%20%22daily_active_addresses%22%0A%20%20%20%20%20%20from%3A%20%22utc_now-7d%22%0A%20%20%20%20%20%20to%3A%20%22utc_now%22%0A%20%20%20%20%20%20aggregation%3A%20AVG%0A%20%20%20%20)%0A%20%20%7D%0A%7D>)
 
-### Retrieve all available projects for a specific metric
+### Retrieve All Available Projects for a Specific Metric
 
 ```graphql
 {
@@ -291,7 +291,7 @@ The API allows for very complex queries that filter, order and paginate projects
 
 You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22daily_active_addresses%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableProjects%7B%0A%20%20%20%20%20%20%20%20%20%20slug%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>).
 
-### Retrieve all available metrics for a specific project
+### Retrieve All Available Metrics for a Specific Project
 
 ```graphql
 {
@@ -313,7 +313,7 @@ You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/gr
 
 You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20projectBySlug(slug%3A%20%22bitcoin%22)%7B%0A%20%20%20%20%23%20All%20metrics%0A%20%20%20%20availableMetrics%0A%20%20%20%20%23%20Only%20the%20timeseries%20metrics%20--%20those%20that%20are%20fetched%20by%20getMetric%27s%20timeseriesData%20field%0A%20%20%20%20availableTimeseriesMetrics%0A%20%20%20%20%23%20The%20available%20metrics%20paired%20with%20the%20link%20to%20their%20documentation%0A%20%20%20%20availableMetricsExtended%20%7B%20metric%20docs%20%7B%20link%20%7D%20%7D%0A%20%20%7D%0A%7D%0A>)
 
-### Retrieve the access restrictions for each metric for a given subscription plan
+### Retrieve the Access Restrictions for Each Metric for a Given Subscription Plan
 
 ```graphql
 {
@@ -369,6 +369,31 @@ You can test this query in the [GraphiQL Explorer](<https://api.santiment.net/gr
     topWords {
       word
       score
+    }
+  }
+}
+```
+
+### Retrieve Current Trending Stories
+
+```graphql explorer
+{
+  getTrendingStories(
+    from: "utc_now-3h"
+    to: "utc_now"
+    size: 10
+    interval: "1h"
+    source: TWITTER_CRYPTO
+  ) {
+    datetime
+    topStories {
+      title
+      summary
+      searchText
+      score
+      bullishRatio
+      bearishRatio
+      relatedTokens
     }
   }
 }

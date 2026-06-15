@@ -33,7 +33,9 @@ function isGroup(item: SidebarItem): item is SidebarGroup {
 }
 
 function sortSidebarItems(items: SidebarItem[]) {
-  items.sort((a, b) => a.order - b.order)
+  items.sort(
+    (a, b) => (a.order - b.order) || a.title.localeCompare(b.title),
+  )
 
   items.forEach((item) => {
     if (isGroup(item)) {

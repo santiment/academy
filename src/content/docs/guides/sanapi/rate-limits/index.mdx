@@ -31,7 +31,7 @@ clients.
    (Denial of Service) attacks. By limiting the number of requests from a
    single source, Santiment can mitigate potential harm.
 
-## How are API calls counted?
+## How Are API Calls Counted?
 
 Each [GraphQL Query](/glossary/#query) is counted
 as one API call. One GraphQL request can contain any number of GraphQL queries
@@ -78,7 +78,7 @@ Executing the following GraphQL request will count as 2 API calls:
 }
 ```
 
-## How are rate limits applied and refreshed?
+## How Are Rate Limits Applied and Refreshed?
 
 API Rate Limits are applied on a **per account** basis. This means that all API
 keys associated with a single account share the same limits. It's important to
@@ -121,7 +121,7 @@ of API calls remaining before you reach the limit of allowed API calls:
 - `x-ratelimit-remaining-hour`
 - `x-ratelimit-remaining-minute`
 
-## What to do if the rate limits are reached?
+## What to Do If the Rate Limits Are Reached?
 
 Rate limits can be reached for various different reasons:
 
