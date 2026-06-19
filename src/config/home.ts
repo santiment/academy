@@ -1,3 +1,34 @@
+export const GETTING_STARTED = [
+  {
+    href: '/santiment-introduction/',
+    title: 'Getting Started With Santiment',
+    description:
+      'Exploring the purpose and benefits of Santiment, this document highlights the available tools and provides guidance on effectively utilizing them.',
+    extraClass: 'bg-green',
+  },
+  {
+    href: '/for-traders/',
+    title: 'For Traders',
+    description:
+      'Explanations, tutorials and use cases for Santiment metrics and tools. Learn how to use our platform to better understand market behavior, network activity and stakeholder trends.',
+    extraClass: 'bg-rhino',
+  },
+  {
+    href: '/for-developers/',
+    title: 'For Developers',
+    description:
+      'Technical documentation on Santiment metrics and indicators. Understand the calculations, logic and algorithms behind our metrics - many of them custom-built by the Santiment Team.',
+    extraClass: 'bg-waterloo',
+  },
+  {
+    href: '/for-ai/',
+    title: 'Explore Options For AI',
+    description:
+      'Plug your preferred AI into Santiment’s full data stack for deep research & analysis - now in natural language.',
+    extraClass: 'bg-waterloo',
+  },
+] as const
+
 export const GUIDES = [
   {
     title: 'Education and Use cases',
