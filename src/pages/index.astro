@@ -6,6 +6,7 @@ import { cn } from 'san-webkit-next/ui/utils'
 import Page from '$layouts/Page.astro'
 
 import DomainCard from '$components/features/home/DomainCard.astro'
+import GettingStartedCard from '$components/features/home/GettingStartedCard.astro'
 import HeroChat from '$components/features/home/HeroChat.svelte'
 import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
 import SEO from '$components/layout/SEO.astro'
@@ -13,7 +14,7 @@ import SEO from '$components/layout/SEO.astro'
 import turtleDesktopIllustration from '$components/ui/illustrations/turtle-desktop.svg'
 import turtleMobileIllustration from '$components/ui/illustrations/turtle-mobile.svg'
 
-import { GUIDES, RESOURCES } from '$config/home'
+import { GETTING_STARTED, GUIDES, RESOURCES } from '$config/home'
 
 const bgImage = `url(${turtleDesktopIllustration.src})`
 ---
@@ -68,62 +69,9 @@ const bgImage = `url(${turtleDesktopIllustration.src})`
         <h2 class="mb-8 text-xl text-rhino">Getting started</h2>
 
         <div
-          class="grid w-full grid-cols-3 gap-6 md:grid-cols-2 sm:grid-cols-1"
+          class="grid w-full grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1"
         >
-          <a href="/santiment-introduction/">
-            <article
-              class={cn(
-                'h-full rounded transition-all ease-in-out duration-100 hover:-translate-y-1',
-                'bg-green py-8 px-10 sm:py-6 sm:px-5',
-              )}
-            >
-              <h3 class="mb-4 text-lg font-medium text-white">
-                Getting Started With Santiment
-              </h3>
-
-              <p class="m-0 text-base text-porcelain sm:text-sm">
-                Exploring the purpose and benefits of Santiment, this document
-                highlights the available tools and provides guidance on
-                effectively utilizing them.
-              </p>
-            </article>
-          </a>
-
-          <a href="/for-traders/">
-            <article
-              class={cn(
-                'h-full rounded transition-all ease-in-out duration-100 hover:-translate-y-1',
-                'bg-rhino py-8 px-10 sm:py-6 sm:px-5',
-              )}
-            >
-              <h3 class="mb-4 text-lg font-medium text-white">For Traders</h3>
-
-              <p class="m-0 text-base text-porcelain sm:text-sm">
-                Explanations, tutorials and use cases for Santiment metrics
-                and tools. Learn how to use our platform to better understand
-                market behavior, network activity and stakeholder trends.
-              </p>
-            </article>
-          </a>
-
-          <a href="/for-developers/">
-            <article
-              class={cn(
-                'h-full rounded transition-all ease-in-out duration-100 hover:-translate-y-1',
-                'bg-waterloo py-8 px-10 sm:py-6 sm:px-5',
-              )}
-            >
-              <h3 class="mb-4 text-lg font-medium text-white">
-                For Developers
-              </h3>
-
-              <p class="m-0 text-base text-porcelain sm:text-sm">
-                Technical documentation on Santiment metrics and indicators.
-                Understand the calculations, logic and algorithms behind our
-                metrics - many of them custom-built by the Santiment Team.
-              </p>
-            </article>
-          </a>
+          {GETTING_STARTED.map((item) => <GettingStartedCard {...item} />)}
         </div>
       </section>
 
