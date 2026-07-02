@@ -3,7 +3,7 @@ title: Fetching Metrics
 author: Santiment Team
 date: 2020-04-06
 datePublished: 2019-11-21
-dateModified: 2025-04-30
+dateModified: 2026-07-01
 sidebar:
   order: 20
 ---
@@ -28,6 +28,7 @@ import Notebox from '$components/markdown/Notebox.svelte'
   - [metadata](#metadata)
   - [availableSince](#availablesince)
   - [lastDatetimeComputedAt](#lastdatetimecomputedat)
+- [computedAt](#computedat)
 - [Examples](#examples)
 
 ## Overview
@@ -345,7 +346,8 @@ the `timeseriesDataJson` field of the `getMetric` API.
 | interval              | The intervals to be returned. The default is `1d`. This is optional                                               |
 | aggregation           | The aggregation to be used when fetching data for longer intervals. This is optional                              |
 | includeIncompleteData | Exclude the last incomplete day (today) if it could lead to misleading data. Default is `false`. This is optional |
-| fields                | Optionally give aliases to the returned fields `datetime` and `value`                                             |
+| fields                | Rename the returned fields. All default fields are always present. This is optional                               |
+| includeComputedAt     | Include the `computedAt` field. Default is `false`. This is optional. See [computedAt](#computedat)               |
 | transform             | Apply a transformation to the result. Default is `none`. This is optional                                         |
 
 - `aggregation`: This parameter is optional. If not provided, each metric has a
@@ -355,9 +357,15 @@ the `timeseriesDataJson` field of the `getMetric` API.
   current value can be misleading. For instance, fetching daily active
   addresses at 12 PM would include only half a day's data, potentially making
   the data for that day appear too low.
-- `fields`: If the returned field names should be something other than `datetime` or `value`, aliases can be given.
-  In case of `aggregation: OHLC`, the fields that can be overridden are `valueOhlc`, `open`, `high`, `close` and `low`
+- `fields`: Renames the returned fields. Each entry maps a field name to the key
+  it should appear under in the response. `fields` only **renames** — it does not
+  select. All default fields are always present; naming a field only changes its
+  key. Fields you omit keep their default key.
   - `{datetime: "dt", value: "v"}`
+  - In case of `aggregation: OHLC`, the fields that can be renamed are
+    `valueOhlc`, `open`, `high`, `close` and `low`.
+- `includeComputedAt`: Set to `true` to include the `computedAt` field. Defaults
+  to `false`. See [computedAt](#computedat).
 - `transform`: Apply a transformation to the timeseries data result. Available transformations include:
   - `{type: "none"}`: Do not apply any transformation
   - `{type: "moving_average", moving_average_base: base}`: Apply a simple moving average. Each data point value is calculated as the average of the last `base` intervals. To compute this, it fetches enough data before `from` so it can be computed.
@@ -572,6 +580,178 @@ data point was computed.
   }
 }
 ```
+
+## computedAt
+
+Every metric data point has two distinct timestamps:
+
+- `datetime` — the point in time the value **describes** (e.g. the day the daily
+  active addresses were measured).
+- `computedAt` — the point in time Santiment's data pipeline **computed and
+  wrote** that value. If a value is later revised, `computedAt` moves forward to
+  the time of the most recent recomputation.
+
+`computedAt` is useful for auditing data freshness, detecting revisions, and
+reconciling a value you fetched earlier with the current one.
+
+> **No look-ahead / no future peeking.** If `computedAt` is much later than
+> `datetime`, this **does not** mean the value used future data. `computedAt`
+> records only **when** the value was calculated; it says nothing about which
+> data went into it. The value for a given `datetime` is always derived solely
+> from data available up to that `datetime`.
+>
+> This matters for backtesting: a large gap between `datetime` and `computedAt`
+> is normal and introduces no leakage. For example, if we ship a brand-new
+> metric in 2026 and backfill its full history, the data point for a day in 2020
+> will carry a `computedAt` in 2026 — yet its value still reflects only what was
+> known in 2020. The late computation timestamp is bookkeeping about our
+> pipeline, not a window into the future.
+
+> **Note:** `computedAt` is **opt-in**. It is never returned unless you
+> explicitly request it, so existing queries are unaffected.
+
+### Requesting computedAt
+
+On the JSON fields (`timeseriesDataJson` and `timeseriesDataPerSlugJson`) you opt
+in with the `includeComputedAt` argument. It defaults to `false`; set it to
+`true` to append `computedAt` to the response:
+
+```graphql explorer
+{
+  getMetric(metric: "daily_active_addresses") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      includeComputedAt: true
+    )
+  }
+}
+```
+
+A sample response:
+
+```json
+[
+  {
+    "datetime": "2024-06-24T00:00:00Z",
+    "value": 921034,
+    "computedAt": "2024-06-25T02:14:07Z"
+  },
+  {
+    "datetime": "2024-06-25T00:00:00Z",
+    "value": 887219,
+    "computedAt": "2024-06-26T02:11:52Z"
+  }
+]
+```
+
+For `timeseriesDataPerSlugJson`, `computedAt` is appended inside each element of
+`data` (it belongs to a specific slug at a specific datetime):
+
+```graphql explorer
+{
+  getMetric(metric: "daily_active_addresses") {
+    timeseriesDataPerSlugJson(
+      selector: { slugs: ["bitcoin", "ethereum"] }
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "1d"
+      includeComputedAt: true
+    )
+  }
+}
+```
+
+A sample response (trimmed to two datetimes):
+
+```json
+[
+  {
+    "datetime": "2026-06-25T00:00:00Z",
+    "data": [
+      {
+        "slug": "bitcoin",
+        "value": 676073,
+        "computedAt": "2026-06-27T00:10:58Z"
+      },
+      {
+        "slug": "ethereum",
+        "value": 651124,
+        "computedAt": "2026-06-27T00:12:01Z"
+      }
+    ]
+  },
+  {
+    "datetime": "2026-06-26T00:00:00Z",
+    "data": [
+      {
+        "slug": "bitcoin",
+        "value": 662658,
+        "computedAt": "2026-06-27T23:59:03Z"
+      },
+      {
+        "slug": "ethereum",
+        "value": 701375,
+        "computedAt": "2026-06-27T23:58:42Z"
+      }
+    ]
+  }
+]
+```
+
+### Renaming the computedAt key
+
+By default `computedAt` is returned under the key `computedAt`. To emit it under
+a different key, name `computedAt` in [`fields`](#timeseriesdatajson) **and** keep
+`includeComputedAt: true`:
+
+```graphql explorer
+{
+  getMetric(metric: "daily_active_addresses") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-7d"
+      to: "utc_now"
+      includeComputedAt: true
+      fields: {
+        computedAt: "updated_at"
+      }
+    )
+  }
+}
+```
+
+This returns `datetime` and `value` under their default keys, with the compute
+timestamp under `updated_at`.
+
+> **Note:** Naming `computedAt` in `fields` only controls the key name; the value
+> is included only when `includeComputedAt: true`. Naming it in `fields` while
+> `includeComputedAt` is `false` is contradictory and **returns an error**.
+
+### Behavior matrix (JSON fields)
+
+Remember that [`fields`](#timeseriesdatajson) only **renames** keys — every
+default field is always present. `computedAt` is the exception: it appears only
+when `includeComputedAt: true`.
+
+| Arguments                                                           | Returned keys                     |
+| ------------------------------------------------------------------- | --------------------------------- |
+| _(none)_                                                            | `datetime`, `value`               |
+| `fields: {datetime: "d"}`                                           | `d`, `value`                      |
+| `includeComputedAt: true`                                           | `datetime`, `value`, `computedAt` |
+| `fields: {datetime: "d"}, includeComputedAt: true`                  | `d`, `value`, `computedAt`        |
+| `fields: {datetime: "d", computedAt: "c"}, includeComputedAt: true` | `d`, `value`, `c`                 |
+| `fields: {computedAt: "c"}` _(no flag)_                             | error                             |
+
+### Caveats
+
+- **Only v2 ClickHouse metrics track `computedAt`.** For metrics served by other
+  data sources (e.g. price, price-pair, GitHub/dev-activity), `computedAt` is
+  `null` (JSON: the key is present with a `null` value when requested).
+- **Transforms drop `computedAt`.** When a `transform` (e.g. `moving_average`) is
+  applied, data points are rebuilt from `datetime`/`value` only, so `computedAt`
+  is `null`.
 
 ## Examples
 
