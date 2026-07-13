@@ -11,7 +11,6 @@ import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
 import SEO from '$components/layout/SEO.astro'
 
 import illusBg from '$components/ui/illustrations/back.svg'
-import claudeIcon from '$components/ui/icons/claude.svg'
 
 import { GUIDES, RESOURCES } from '$config/home'
 import Button from 'san-webkit-next/ui/core/Button'
@@ -37,7 +36,7 @@ const bgImage = `url(${illusBg.src})`
   </Fragment>
 
   <section class="flex flex-col" role="main">
-    <div class="hero-bg px-5 py-14">
+    <div class="hero-bg min-h-[370px] px-5 py-14">
       <div class="container flex items-start justify-between">
         <div class="block">
           <h1 class="mb-8 text-3xl text-rhino">
@@ -54,9 +53,10 @@ const bgImage = `url(${illusBg.src})`
             Access our data with <span class="font-bold">AI connections</span>
           </h3>
 
-          <Button class="bg-white hover:bg-mystic" href="/mcp-connector/">
-            <img src={claudeIcon.src} />
-
+          <Button
+            class="justify-center bg-white hover:bg-mystic"
+            href="/mcp-connector/"
+          >
             Try now with Claude
           </Button>
         </article>
@@ -213,6 +213,6 @@ const bgImage = `url(${illusBg.src})`
 <style define:vars={{ bgImage }}>
   .hero-bg {
     background-image: var(--bgImage);
-    @apply bg-cover bg-bottom bg-no-repeat;
+    @apply bg-contain bg-bottom bg-no-repeat;
   }
 </style>

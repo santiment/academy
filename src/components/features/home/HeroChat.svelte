@@ -24,7 +24,7 @@
     <Button
       size="auto"
       variant="border"
-      class="border-porcelain text-sm sm:text-base p-2"
+      class="border-porcelain text-sm sm:text-base p-2 bg-white"
       onclick={() => aiChatbot.openWithPrompt(query)}
     >
       {query}
