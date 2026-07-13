@@ -1,0 +1,25 @@
+---
+import { cn } from 'san-webkit-next/ui/utils'
+
+type Props = {
+  href: string
+  title: string
+  description: string
+  extraClass?: string
+}
+
+const { href, title, description, extraClass } = Astro.props
+---
+
+<a
+  href={href}
+  class={cn(
+    'block rounded transition-all ease-in-out duration-100 hover:-translate-y-1',
+    'py-8 px-10 sm:py-6 sm:px-5',
+    extraClass,
+  )}
+>
+  <h3 class="mb-4 text-lg font-medium text-white">{title}</h3>
+
+  <p class="m-0 text-base text-porcelain sm:text-sm">{description}</p>
+</a>
