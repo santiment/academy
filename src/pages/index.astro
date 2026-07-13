@@ -37,7 +37,9 @@ const bgImage = `url(${illusBg.src})`
 
   <section class="flex flex-col" role="main">
     <div class="hero-bg min-h-[370px] px-5 py-14">
-      <div class="container flex items-start justify-between">
+      <div
+        class="container flex items-start justify-between md:flex-col md:items-center md:gap-10"
+      >
         <div class="block">
           <h1 class="mb-8 text-3xl text-rhino">
             Try our AI Guide for Santiment Academy
@@ -48,8 +50,8 @@ const bgImage = `url(${illusBg.src})`
           </div>
         </div>
 
-        <article class="rounded bg-porcelain p-10 md:hidden">
-          <h3 class="mb-6 w-[164px] text-center text-lg">
+        <article class="rounded bg-porcelain p-10 md:w-full">
+          <h3 class="mb-6 w-[164px] text-center text-lg md:mx-auto">
             Access our data with <span class="font-bold">AI connections</span>
           </h3>
 
@@ -160,6 +162,6 @@ const bgImage = `url(${illusBg.src})`
 <style define:vars={{ bgImage }}>
   .hero-bg {
     background-image: var(--bgImage);
-    @apply bg-contain bg-bottom bg-no-repeat;
+    @apply bg-cover bg-center bg-no-repeat;
   }
 </style>
