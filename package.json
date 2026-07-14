@@ -6,12 +6,17 @@
   "scripts": {
     "dev": "astro dev",
     "dev:https": "astro dev --host -- --https",
+    "dev:https:force": "astro dev --host --force -- --https",
     "build": "astro build && pagefind --site public",
     "preview": "astro preview",
     "astro": "astro"
   },
   "keywords": [],
   "license": "ISC",
+  "imports": {
+    "#app.css": "./src/app.css",
+    "#tailwind.config.js": "./tailwind.config.js"
+  },
   "dependencies": {
     "@expressive-code/plugin-line-numbers": "^0.41.4",
     "@melt-ui/svelte": "^0.86.0",
@@ -31,20 +36,21 @@
   "devDependencies": {
     "@astrojs/mdx": "^4.3.13",
     "@astrojs/svelte": "^7.2.5",
-    "@astrojs/tailwind": "^6.0.2",
     "@astrojs/ts-plugin": "^1.10.6",
     "@sentry/astro": "^10.40.0",
+    "@tailwindcss/vite": "^4.3.0",
     "@trivago/prettier-plugin-sort-imports": "^6.0.0",
     "katex": "^0.16.25",
     "prettier": "^3.7.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-svelte": "^3.4.0",
-    "prettier-plugin-tailwindcss": "^0.7.1",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "sharp": "^0.34.5",
     "svelte-preprocess": "^5.1.4",
     "svelte-preprocess-cssmodules": "^3.0.1",
+    "tailwindcss": "4.3.0",
     "typescript": "^5.9.3",
     "vite": "^7.1.12"
   }
