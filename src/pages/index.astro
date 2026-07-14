@@ -11,12 +11,12 @@ import HeroChat from '$components/features/home/HeroChat.svelte'
 import ForwardedEmailIcon from '$components/ui/icons/ForwardedEmail.svelte'
 import SEO from '$components/layout/SEO.astro'
 
-import turtleDesktopIllustration from '$components/ui/illustrations/turtle-desktop.svg'
-import turtleMobileIllustration from '$components/ui/illustrations/turtle-mobile.svg'
+import illusBg from '$components/ui/illustrations/back.svg'
 
 import { GETTING_STARTED, GUIDES, RESOURCES } from '$config/home'
+import Button from 'san-webkit-next/ui/core/Button'
 
-const bgImage = `url(${turtleDesktopIllustration.src})`
+const bgImage = `url(${illusBg.src})`
 ---
 
 <Page>
@@ -28,39 +28,40 @@ const bgImage = `url(${turtleDesktopIllustration.src})`
   <Fragment>
     <link
       rel="preload"
-      href={turtleDesktopIllustration.src}
+      href={illusBg.src}
       as="image"
-      media="(min-width: 992px)"
       type="image/svg+xml"
-      fetchpriority="high"
-    />
-
-    <link
-      rel="preload"
-      href={turtleMobileIllustration.src}
-      as="image"
-      media="(max-width: 991px)"
       fetchpriority="high"
     />
   </Fragment>
 
   <section class="flex flex-col" role="main">
-    <div class="hero-bg px-5 py-14">
-      <img
-        src={turtleMobileIllustration.src}
-        alt="Turtoshi"
-        width="242"
-        height="152"
-        fetchpriority="high"
-        class="mx-auto my-0 mb-6 hidden h-[152px] w-[242px] md:block"
-      />
+    <div class="hero-bg min-h-[370px] px-5 py-14">
+      <div
+        class="container flex items-start justify-between md:flex-col md:items-center md:gap-10"
+      >
+        <div class="block">
+          <h1 class="mb-8 text-3xl text-rhino">
+            Try our AI Guide for Santiment Academy
+          </h1>
 
-      <h1 class="mb-8 text-center text-3xl text-rhino">
-        Hi, I’m Turtoshi — your AI guide to Academy
-      </h1>
+          <div class="min-h-[152px] max-w-[600px]">
+            <HeroChat client:load />
+          </div>
+        </div>
 
-      <div class="mx-auto min-h-[152px] max-w-[600px] items-center">
-        <HeroChat client:load />
+        <article class="rounded bg-porcelain p-10 md:w-full">
+          <h3 class="mb-6 w-[164px] text-center text-lg md:mx-auto">
+            Access our data with <span class="font-bold">AI connections</span>
+          </h3>
+
+          <Button
+            class="justify-center bg-white hover:bg-mystic"
+            href="/mcp-connector/"
+          >
+            Try now with Claude
+          </Button>
+        </article>
       </div>
     </div>
 
@@ -161,6 +162,6 @@ const bgImage = `url(${turtleDesktopIllustration.src})`
 <style define:vars={{ bgImage }}>
   .hero-bg {
     background-image: var(--bgImage);
-    @apply bg-cover bg-bottom bg-no-repeat md:bg-none;
+    @apply bg-cover bg-center bg-no-repeat;
   }
 </style>
