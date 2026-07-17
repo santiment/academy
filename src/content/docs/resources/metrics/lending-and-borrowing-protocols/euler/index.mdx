@@ -1,0 +1,200 @@
+---
+title: Euler Protocol
+author: Filip
+description: Euler Protocol Metrics
+datePublished: 2026-07-17
+dateModified: 2026-07-17
+---
+
+## Description
+
+[Euler](https://www.euler.finance/) is a permissionless lending protocol on Ethereum that lets anyone create
+isolated lending markets, called vaults, for almost any ERC-20 asset. Rather than relying on a single shared
+pool with protocol-wide risk parameters, each Euler vault sets its own collateral, oracle, and liquidation
+rules, keeping risk contained to that specific market. This modular, vault-based design gives lenders more
+choice over where they deposit and gives borrowers access to a wider range of assets and more tailored
+borrowing terms than traditional pooled lending protocols.
+
+### Metrics Related to Euler Protocol
+
+Action metrics:
+* `euler_action_deposits` - Amount of deposited tokens
+* `euler_action_deposits_usd` - Amount of deposited tokens in USD
+* `euler_action_liquidations` - Amount of liquidated tokens
+* `euler_action_liquidations_usd` - Amount of liquidated tokens in USD
+* `euler_action_new_debt` - Amount of borrowed tokens
+* `euler_action_new_debt_usd` - Amount of borrowed tokens in USD
+* `euler_action_repayments` - Amount of repaid tokens
+* `euler_action_repayments_usd` - Amount of repaid tokens in USD
+
+Protocol total action metrics:
+
+- `euler_total_deposits_usd` - Total amount of deposits on Euler protocol (combining all assets in USD)
+- `euler_total_liquidations_usd` - Total amount of liquidations on Euler protocol (combining all assets in USD)
+- `euler_total_new_debt_usd` - Total amount of borrowings on Euler protocol (combining all assets in USD)
+- `euler_total_repayments_usd` - Total amount of repayments on Euler protocol (combining all assets in USD)
+
+Euler vaults metrics:
+
+- `euler_vaults_total_supplied_usd` - [Euler vault](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22euler_vaults_total_supplied_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>) total supplied in USD
+- `euler_vaults_total_borrowed_usd` - [Euler vault](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22euler_vaults_total_borrowed_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>) total borrowed in USD
+- `euler_vaults_supply_apy` - [Euler vault](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22euler_vaults_supply_apy%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>) supply APY
+- `euler_vaults_borrow_apy` - [Euler vault](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22euler_vaults_borrow_apy%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>) borrow APY
+
+Protocol total supplied/borrowed metrics:
+
+- `euler_total_protocol_supplied_usd` - Total amount supplied on Euler (combining all assets in USD)
+- `euler_total_protocol_borrowed_usd` - Total amount borrowed on Euler (combining all assets in USD)
+
+Daily active addresses:
+
+- `euler_active_addresses` - Daily active addresses on Euler protocol
+
+---
+
+## Access
+
+[Restricted Access](/metrics/details/access#restricted-access)
+
+---
+
+## Measuring Unit
+
+- Amount in tokens/USD
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Frequency
+
+- [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency) - Actions metrics
+- [Daily Intervals](/metrics/details/frequency#daily-frequency) - Active addresses metric
+
+---
+
+## Latency
+
+[On-Chain Latency](/metrics/details/latency#on-chain-latency)
+
+---
+
+## Available Assets
+
+Metrics related to the entire protocol are available for `euler-finance`.
+
+Other metrics are
+available for [these assets](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getMetric(metric%3A%20%22euler_action_deposits%22)%7B%0A%20%20%20%20metadata%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>).
+
+---
+
+### SanAPI
+
+Action metrics: `euler_action_deposits<_usd>`, `euler_action_liquidations<_usd>`,
+`euler_action_new_debt<_usd>` and `euler_action_repayments<_usd>`
+
+```graphql explorer
+{
+  getMetric(metric: "euler_action_deposits_usd") {
+    timeseriesDataJson(
+      slug: "weth"
+      from: "2026-06-01T00:00:00Z"
+      to: "2026-07-01T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"
+    )
+  }
+}
+```
+
+Total action metrics: `euler_total_deposits_usd`, `euler_total_liquidations_usd`,
+`euler_total_new_debt_usd` and `euler_total_repayments_usd`
+
+```graphql explorer
+{
+  getMetric(metric: "euler_total_new_debt_usd") {
+    timeseriesDataJson(
+      slug: "euler-finance"
+      from: "2026-06-10T00:00:00Z"
+      to: "2026-06-12T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1h"
+    )
+  }
+}
+```
+
+Euler vaults total supplied/borrowed metrics: `euler_vaults_total_supplied_usd` and `euler_vaults_total_borrowed_usd`
+
+```graphql explorer
+{
+  getMetric(metric: "euler_vaults_total_supplied_usd") {
+    timeseriesDataJson(
+      selector: {
+        slug: "euler-finance"
+        labelFqn: "santiment/euler_vault->sentora pyusd - pyusd:v1"
+      }
+      from: "2026-06-01T00:00:00Z"
+      to: "2026-06-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1h"
+    )
+  }
+}
+```
+
+Euler vaults supply/borrow APY metrics: `euler_vaults_supply_apy` and `euler_vaults_borrow_apy`
+
+```graphql explorer
+{
+  getMetric(metric: "euler_vaults_supply_apy") {
+    timeseriesDataJson(
+      selector: {
+        slug: "euler-finance"
+        labelFqn: "santiment/euler_vault->k3 capital prime market - usdc:v1"
+      }
+      from: "2026-06-01T00:00:00Z"
+      to: "2026-07-01T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"
+    )
+  }
+}
+```
+
+Protocol total supplied/borrowed metrics: `euler_total_protocol_supplied_usd` and
+`euler_total_protocol_borrowed_usd`
+
+```graphql explorer
+{
+  getMetric(metric: "euler_total_protocol_supplied_usd") {
+    timeseriesDataJson(
+      slug: "euler-finance"
+      from: "2026-06-01T00:00:00Z"
+      to: "2026-06-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"
+    )
+  }
+}
+```
+
+Daily active addresses: `euler_active_addresses`
+
+```graphql explorer
+{
+  getMetric(metric: "euler_active_addresses") {
+    timeseriesDataJson(
+      slug: "euler-finance"
+      from: "2026-06-01T00:00:00Z"
+      to: "2026-06-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"
+    )
+  }
+}
+```
