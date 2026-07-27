@@ -3,7 +3,7 @@ title: Morpho Protocol
 author: Filip
 description: Morpho Protocol Metrics
 datePublished: 2024-08-01
-dateModified: 2025-09-22
+dateModified: 2026-07-27
 ---
 
 ## Description
@@ -40,6 +40,10 @@ Morpho vaults metrics:
 - `morpho_vaults_total_supplied_usd` - [Morpho vault](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_vaults_total_supplied_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>) total supplied in USD
 - `morpho_vaults_apy` - [Morpho vault](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22morpho_vaults_total_supplied_usd%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>) APY
 
+APY (annual percentage yield) metric:
+
+- `morpho_supply_apy` - Supply APY, calculated as a weighted average of `morpho_vaults_apy` across all Morpho vaults for an asset, weighted by each vault's total supplied amount (`morpho_vaults_total_supplied_usd`)
+
 Protocol total supplied/borrowed metrics:
 
 - `morpho_protocol_total_supplied_usd` - Total amount supplied on Morpho (combining all assets in USD)
@@ -66,6 +70,7 @@ Flashloan metrics:
 ## Measuring Unit
 
 - Amount in tokens/USD
+- APY metrics in percentages
 
 ---
 
@@ -164,6 +169,22 @@ Morpho vaults APY metric: `morpho_vaults_apy`
       }
       from: "2025-09-01T00:00:00Z"
       to: "2025-10-10T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"
+    )
+  }
+}
+```
+
+Protocol-level supply APY metric: `morpho_supply_apy`
+
+```graphql explorer
+{
+  getMetric(metric: "morpho_supply_apy") {
+    timeseriesDataJson(
+      slug: "weth"
+      from: "2025-09-01T00:00:00Z"
+      to: "2025-10-01T00:00:00Z"
       includeIncompleteData: true
       interval: "1d"
     )

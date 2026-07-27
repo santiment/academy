@@ -3,7 +3,7 @@ title: Euler Protocol
 author: Filip
 description: Euler Protocol Metrics
 datePublished: 2026-07-17
-dateModified: 2026-07-17
+dateModified: 2026-07-27
 ---
 
 ## Description
@@ -41,6 +41,11 @@ Euler vaults metrics:
 - `euler_vaults_supply_apy` - [Euler vault](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22euler_vaults_supply_apy%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>) supply APY
 - `euler_vaults_borrow_apy` - [Euler vault](<https://api.santiment.net/graphiql?variables=%7B%7D&query=%7B%0A%20%20getMetric(metric%3A%20%22euler_vaults_borrow_apy%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableLabelFqns%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D>) borrow APY
 
+APY (annual percentage yield) metrics:
+
+- `euler_supply_apy` - Supply APY, calculated as a weighted average of `euler_vaults_supply_apy` across all Euler vaults for an asset, weighted by each vault's total supplied amount (`euler_vaults_total_supplied_usd`)
+- `euler_borrow_apy` - Borrow APY, calculated as a weighted average of `euler_vaults_borrow_apy` across all Euler vaults for an asset, weighted by each vault's total supplied amount (`euler_vaults_total_supplied_usd`)
+
 Protocol total supplied/borrowed metrics:
 
 - `euler_total_protocol_supplied_usd` - Total amount supplied on Euler (combining all assets in USD)
@@ -61,6 +66,7 @@ Daily active addresses:
 ## Measuring Unit
 
 - Amount in tokens/USD
+- APY metrics in percentages
 
 ---
 
@@ -157,6 +163,22 @@ Euler vaults supply/borrow APY metrics: `euler_vaults_supply_apy` and `euler_vau
         slug: "euler-finance"
         labelFqn: "santiment/euler_vault->k3 capital prime market - usdc:v1"
       }
+      from: "2026-06-01T00:00:00Z"
+      to: "2026-07-01T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"
+    )
+  }
+}
+```
+
+Protocol-level supply/borrow APY metrics: `euler_supply_apy` and `euler_borrow_apy`
+
+```graphql explorer
+{
+  getMetric(metric: "euler_supply_apy") {
+    timeseriesDataJson(
+      slug: "weth"
       from: "2026-06-01T00:00:00Z"
       to: "2026-07-01T00:00:00Z"
       includeIncompleteData: true
