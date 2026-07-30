@@ -4,14 +4,14 @@
 </script>
 
 <ProductsButton class="md:hidden">
-  {#snippet children({ ref })}
+  {#snippet children({ props })}
     <Button
-      {ref}
       aria-label="Products menu"
       size="auto"
       icon="products-toggle"
       iconSize={16}
       class="fill-waterloo hover:bg-transparent hover:fill-green-hover p-2 mr-[42px] md:hidden"
+      {...props}
     ></Button>
   {/snippet}
 </ProductsButton>
