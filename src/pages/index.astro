@@ -103,7 +103,7 @@ const bgImage = `url(${illusBg.src})`
       <section
         class={cn(
           'relative mt-20 flex items-center justify-center rounded bg-athens px-5 py-12 sm:flex-col sm:p-5 xs:mt-[50px]',
-          "after:content-[''] after:left-1/2 after:absolute after:block after:w-[1px] after:h-[104px] after:bg-porcelain sm:after:hidden",
+          "after:content-[''] after:left-1/2 after:absolute after:block after:w-px after:h-[104px] after:bg-porcelain sm:after:hidden",
         )}
       >
         <a
@@ -160,6 +160,8 @@ const bgImage = `url(${illusBg.src})`
 </Page>
 
 <style define:vars={{ bgImage }}>
+  @reference '#app.css';
+
   .hero-bg {
     background-image: var(--bgImage);
     @apply bg-cover bg-center bg-no-repeat;
