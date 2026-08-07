@@ -1,10 +1,10 @@
 ---
 title: Point-in-Time for Social Metrics
 headline: 'Metrics Details: Point-in-Time for Social Metrics'
-description: 'Eplains how Santiment’s point-in-time social metrics preserve immutable historical data to prevent look-ahead bias, including the cutoff rules, computation process, supported sources and metrics, risks, and API versioning required to query them.'
+description: 'Explains how Santiment’s point-in-time social metrics preserve immutable historical data to prevent look-ahead bias, including the cutoff rules, computation process, supported sources and metrics, risks, and API versioning required to query them.'
 author: Santiment Team
 datePublished: 2026-08-06
-dateModified: 2026-08-06
+dateModified: 2026-08-07
 ---
 
 Point-in-Time (PIT) metrics provide a consistent, **immutable** view of data as it was known at a specific moment in the past. Unlike traditional mutable metrics that may change retroactively, PIT metrics preserve historical data without applying any future knowledge or corrections that emerged later.
@@ -51,7 +51,7 @@ There is always a risk that:
 
 In these cases, we run a historical job to re-scrape documents for the affected time interval and compute the metrics for that source, filling the gap.
 
-# Supported list of sources
+## Supported List of Sources
 
 - 4chan
 - bitcointalk
@@ -59,9 +59,9 @@ In these cases, we run a historical job to re-scrape documents for the affected 
 - twitter
 - total (4chan, bitcointalk, reddit, twitter)
 
-# Supported list of Metrics
+## Supported List of Metrics
 
-## Total metrics
+### Total Metrics
 
 - unique_social_volume_5m
 - unique_social_volume_1h
@@ -73,7 +73,7 @@ In these cases, we run a historical job to re-scrape documents for the affected 
 - sentiment_neutral
 - sentiment_bearish
 
-## Separate Source metrics
+### Separate Source Metrics
 
 - social_volume_twitter
 - unique_social_volume_twitter_5m
