@@ -1,0 +1,165 @@
+---
+title: Point-in-Time for Social Metrics
+headline: 'Metrics Details: Point-in-Time for Social Metrics'
+description: 'Eplains how Santiment’s point-in-time social metrics preserve immutable historical data to prevent look-ahead bias, including the cutoff rules, computation process, supported sources and metrics, risks, and API versioning required to query them.'
+author: Santiment Team
+datePublished: 2026-08-06
+dateModified: 2026-08-06
+---
+
+Point-in-Time (PIT) metrics provide a consistent, **immutable** view of data as it was known at a specific moment in the past. Unlike traditional mutable metrics that may change retroactively, PIT metrics preserve historical data without applying any future knowledge or corrections that emerged later.
+
+Throughout this document, a **document** refers to a single piece of social content we process — a post, message, or thread reply.
+
+## Why Point-in-Time?
+
+Many datasets evolve over time due to late-arriving information, retrospective corrections, or refined methodologies. If not handled carefully, this can introduce *look-ahead bias*, where a model or analysis unintentionally uses information that wasn't actually available at the time — leading to misleading results.
+
+PIT metrics solve this by freezing data as it was *known at the time*, avoiding hindsight adjustments and ensuring results are reproducible and free from future information leaks.
+
+> 📌 **Recommendation**: All systematic use cases (e.g., algorithmic trading, quantitative models, historical backtesting) **should rely on PIT metrics** for historical data.
+
+## Common Reasons for Data Mutations in Social Metrics
+
+Social data can change after the fact for several reasons:
+
+* **Scraper issues on our side** — our collectors miss or under-report documents for a time period.
+* **Source-side issues** — the platforms we scrape have outages, rate limits, or feed delays.
+* **ML pipeline delays** — Named Entity Recognition (NER) and sentiment models finish computing after the initial metric is published.
+
+**Example:** A document arrives late because it didn't appear in the feed, channel, or thread when it was first published. If we later recompute history for that period, the document is included and the original metric values change.
+
+PIT metrics eliminate the impact of such updates by recording and serving data exactly as it appeared at that time.
+
+## How We Achieve It
+
+There are many ways to keep metrics stable. Our approach combines two rules:
+
+1. **A 30-minute inclusion cutoff.** We do not include any document that arrives more than 30 minutes after it was published. This prevents late arrivals from altering already-computed history.
+2. **Delayed, fixed-window computation.** We compute metrics every 15 minutes for a 15-minute window, with a delay. For example, at **00:30** we compute metrics for the time range **[00:00, 00:15)**.
+
+The delay gives us time to collect all documents for the window — even those that arrive a little late — and to run the ML inference models across the full range before the metric is finalized.
+
+## Risks
+
+There is always a risk that:
+
+* a source goes down,
+* our scraper goes down,
+* the cloud provider has problems,
+* or other unexpected failures occur.
+
+In these cases, we run a historical job to re-scrape documents for the affected time interval and compute the metrics for that source, filling the gap.
+
+# Supported list of sources
+
+- 4chan
+- bitcointalk
+- reddit
+- twitter
+- total (4chan, bitcointalk, reddit, twitter)
+
+# Supported list of Metrics
+
+## Total metrics
+
+- unique_social_volume_5m
+- unique_social_volume_1h
+- sentiment_positive
+- sentiment_negative
+- sentiment_balance_v2
+- sentiment_balance_v2_1h
+- sentiment_bullish
+- sentiment_neutral
+- sentiment_bearish
+
+## Separate Source metrics
+
+- social_volume_twitter
+- unique_social_volume_twitter_5m
+- unique_social_volume_twitter_1h
+- social_volume_twitter_trader
+- social_volume_twitter_kol
+- social_volume_twitter_media
+- social_volume_twitter_memecoins
+- social_volume_twitter_trading_firm
+- social_volume_twitter_btc_maxi
+- social_volume_twitter_builder
+- sentiment_positive_reddit
+- sentiment_negative_reddit
+- sentiment_positive_twitter
+- sentiment_negative_twitter
+- sentiment_positive_bitcointalk
+- sentiment_negative_bitcointalk
+- sentiment_positive_4chan
+- sentiment_negative_4chan
+- sentiment_bullish_reddit
+- sentiment_neutral_reddit
+- sentiment_bearish_reddit
+- sentiment_bullish_twitter
+- sentiment_neutral_twitter
+- sentiment_bearish_twitter
+- sentiment_bullish_bitcointalk
+- sentiment_neutral_bitcointalk
+- sentiment_bearish_bitcointalk
+- sentiment_bullish_4chan
+- sentiment_neutral_4chan
+- sentiment_bearish_4chan
+- social_volume_reddit
+- unique_social_volume_reddit_5m
+- unique_social_volume_reddit_1h
+- social_volume_bitcointalk
+- unique_social_volume_bitcointalk_5m
+- unique_social_volume_bitcointalk_1h
+- social_volume_4chan
+- unique_social_volume_4chan_5m
+- unique_social_volume_4chan_1h
+- community_social_volume_reddit
+- sentiment_balance_reddit_v2
+- sentiment_balance_reddit_v2_1h
+- sentiment_balance_twitter_v2
+- sentiment_balance_twitter_v2_1h
+- sentiment_balance_bitcointalk_v2
+- sentiment_balance_bitcointalk_v2_1h
+- sentiment_balance_4chan_v2
+- sentiment_balance_4chan_v2_1h
+
+## How to Query PIT Metrics
+
+PIT metrics are served under two API versions, depending on whether you need
+**realtime** or **historical** data:
+
+| Metric type    | Realtime data | Historical data |
+| -------------- | ------------- | --------------- |
+| Total metrics  | `v2.1`        | `v2.1`          |
+| Source metrics | `v2.1`        | `v2.0`          |
+
+* **Total metrics** are always queried from `v2.1`. We recompute their history
+  because the `telegram` source is excluded from their computation, so `v2.1`
+  holds the correct values for both realtime and historical ranges.
+* **Source metrics** use `v2.1` for realtime data, but you must query `v2.0`
+  for historical data.
+
+Example:
+```
+{
+  v2: getMetric(metric: "social_volume_twitter", version: "2.0") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-2h"
+      to: "utc_now"
+      interval: "5m"
+    )
+  }
+  v21: getMetric(metric: "social_volume_twitter", version: "2.1") {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-2h"
+      to: "utc_now"
+      interval: "5m"
+    )
+  }
+}
+```
+
+To check full documentation for versions check academy [Metrics Versions](/sanapi/metric-versions/#finding-versions).
