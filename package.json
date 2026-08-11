@@ -23,7 +23,7 @@
     "pagefind": "^1.4.0",
     "rehype-slug": "^6.0.0",
     "remark-gemoji": "^8.0.0",
-    "san-webkit-next": "github:santiment/san-webkit#lib-4979a14e-300726",
+    "san-webkit-next": "github:santiment/san-webkit#lib-d4613f0a-110826",
     "svelte": "^5.33.7",
     "unist-util-visit": "^5.0.0",
     "vite-plugin-mkcert": "^1.17.9"

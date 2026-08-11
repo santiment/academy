@@ -36,8 +36,8 @@ dependencies:
     specifier: ^8.0.0
     version: 8.0.0
   san-webkit-next:
-    specifier: github:santiment/san-webkit#lib-4979a14e-300726
-    version: github.com/santiment/san-webkit/061f0ef8b7ca7d122227544ef077834e47d77346(@amplitude/rrweb@2.0.0-alpha.33)(@floating-ui/dom@1.7.4)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.48.2)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@2.18.1)(driver.js@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.5)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rollup@4.52.5)(rxjs@7.8.2)(svelte@5.42.3)(tailwind-merge@2.6.0)(tailwindcss@3.4.18)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@7.1.12)(wagmi@2.19.0)
+    specifier: github:santiment/san-webkit#lib-d4613f0a-110826
+    version: github.com/santiment/san-webkit/0cb6f8c486654447124084a655cbc68a246e686e(@amplitude/rrweb@2.0.0-alpha.33)(@floating-ui/dom@1.7.4)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.48.2)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@2.18.1)(driver.js@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.5)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rollup@4.52.5)(rxjs@7.8.2)(svelte@5.42.3)(tailwind-merge@2.6.0)(tailwindcss@3.4.18)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@7.1.12)(wagmi@2.19.0)
   svelte:
     specifier: ^5.33.7
     version: 5.42.3
@@ -11127,9 +11127,9 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
-  github.com/santiment/san-webkit/061f0ef8b7ca7d122227544ef077834e47d77346(@amplitude/rrweb@2.0.0-alpha.33)(@floating-ui/dom@1.7.4)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.48.2)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@2.18.1)(driver.js@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.5)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rollup@4.52.5)(rxjs@7.8.2)(svelte@5.42.3)(tailwind-merge@2.6.0)(tailwindcss@3.4.18)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@7.1.12)(wagmi@2.19.0):
-    resolution: {tarball: https://codeload.github.com/santiment/san-webkit/tar.gz/061f0ef8b7ca7d122227544ef077834e47d77346}
-    id: github.com/santiment/san-webkit/061f0ef8b7ca7d122227544ef077834e47d77346
+  github.com/santiment/san-webkit/0cb6f8c486654447124084a655cbc68a246e686e(@amplitude/rrweb@2.0.0-alpha.33)(@floating-ui/dom@1.7.4)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.48.2)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@2.18.1)(driver.js@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.5)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rollup@4.52.5)(rxjs@7.8.2)(svelte@5.42.3)(tailwind-merge@2.6.0)(tailwindcss@3.4.18)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@7.1.12)(wagmi@2.19.0):
+    resolution: {tarball: https://codeload.github.com/santiment/san-webkit/tar.gz/0cb6f8c486654447124084a655cbc68a246e686e}
+    id: github.com/santiment/san-webkit/0cb6f8c486654447124084a655cbc68a246e686e
     name: san-webkit-next
     version: 0.0.1
     hasBin: true
