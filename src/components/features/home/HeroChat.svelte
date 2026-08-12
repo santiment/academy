@@ -2,7 +2,7 @@
   import { ChatInput, useAIChatbotCtx } from 'san-webkit-next/ui/app/AIChatbot'
   import Button from 'san-webkit-next/ui/core/Button'
 
-  const { aiChatbot } = useAIChatbotCtx()
+  const { aiChatbot } = useAIChatbotCtx({ type: 'ACADEMY_QA' })
 
   const queries = [
     'What is Santiment known for?',
