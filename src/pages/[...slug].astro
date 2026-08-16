@@ -36,6 +36,12 @@ const headings = rawHeadings.filter((h) => h.depth <= 3)
     slot="seo"
     title=`${doc.data.headline || doc.data.title} | Santiment Academy`
     description={doc.data.description}
+    article={{
+      headline: doc.data.headline || doc.data.title,
+      datePublished: doc.data.datePublished,
+      dateModified: doc.data.dateModified,
+    }}
+    {breadcrumbs}
   />
 
   <Document {doc} {breadcrumbs} {relatedProduct} {sidebarData} {headings}>
