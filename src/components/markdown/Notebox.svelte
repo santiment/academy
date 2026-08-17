@@ -46,7 +46,7 @@
   const style = TYPE_CLASSES[type] ?? TYPE_CLASSES.note
 </script>
 
-<div class={cn('flex rounded-lg py-4 px-6 m-4 [&_p]:p-0 [&_p]:m-0', style)}>
+<div class={cn('flex rounded-lg py-4 px-6 my-4 [&_p]:p-0 [&_p]:m-0', style)}>
   <div class="mr-3">{icon}</div>
 
   <div>
