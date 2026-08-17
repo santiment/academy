@@ -31,9 +31,7 @@ function isGroup(item: SidebarItem): item is SidebarGroup {
 }
 
 function sortSidebarItems(items: SidebarItem[]) {
-  items.sort(
-    (a, b) => (a.order - b.order) || a.title.localeCompare(b.title),
-  )
+  items.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title))
 
   items.forEach((item) => {
     if (isGroup(item)) {
@@ -90,7 +88,6 @@ export function getSidebar(
       return
     }
 
-    // Top-level order comes from the section's items array, not frontmatter
     item.order = ROOT_SECTIONS[section].items.indexOf(rootId)
     sidebarMap[section].items.push(item)
   })
