@@ -1,8 +1,6 @@
 import { type CollectionEntry } from 'astro:content'
 
-import { getPublicSlug } from '$modules/navigation/paths'
-
-import { ROOT_SECTIONS } from '$config/navigation'
+import { ROOT_SECTIONS, SECTION_BY_ITEM } from '$config/navigation'
 
 export type SidebarLink = {
   type: 'link'
@@ -33,9 +31,7 @@ function isGroup(item: SidebarItem): item is SidebarGroup {
 }
 
 function sortSidebarItems(items: SidebarItem[]) {
-  items.sort(
-    (a, b) => (a.order - b.order) || a.title.localeCompare(b.title),
-  )
+  items.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title))
 
   items.forEach((item) => {
     if (isGroup(item)) {
@@ -52,7 +48,7 @@ export function getSidebar(
   const sidebarMap: Record<string, SidebarSection> = Object.fromEntries(
     Object.keys(ROOT_SECTIONS).map((key) => [
       key,
-      { title: ROOT_SECTIONS[key], items: [] },
+      { title: ROOT_SECTIONS[key].label, items: [] },
     ]),
   )
 
@@ -62,27 +58,38 @@ export function getSidebar(
     itemMap.set(doc.id, {
       type: 'link',
       title: doc.data.sidebar.label || doc.data.title,
-      href: `/${getPublicSlug(doc.id)}/`,
+      href: `/${doc.id}/`,
       order: doc.data.sidebar.order ?? 999,
-      slug: getPublicSlug(doc.id),
+      slug: doc.id,
       items: [],
     })
   })
 
   docs.forEach((doc) => {
     const item = itemMap.get(doc.id)!
-    const parts = doc.id.split('/')
-    const [rootKey] = parts
 
-    const parentId = parts.slice(0, -1).join('/')
+    const parentId = doc.id.split('/').slice(0, -1).join('/')
     const parentItem = itemMap.get(parentId)
 
     if (parentItem) {
       parentItem.type = 'group'
       parentItem.items.push(item)
-    } else if (sidebarMap[rootKey]) {
-      sidebarMap[rootKey].items.push(item)
+      return
     }
+
+    const rootId = doc.id.split('/')[0]
+    const section = SECTION_BY_ITEM[rootId]
+
+    if (!section) {
+      console.warn(
+        `[sidebar] Doc "${doc.id}" belongs to no section and won't be shown. ` +
+          `Add its root folder to ROOT_SECTIONS in src/config/navigation.ts.`,
+      )
+      return
+    }
+
+    item.order = ROOT_SECTIONS[section].items.indexOf(rootId)
+    sidebarMap[section].items.push(item)
   })
 
   const result = Object.values(sidebarMap)
