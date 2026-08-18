@@ -1,10 +1,18 @@
 ---
+import type { TBreadcrumb } from '$modules/navigation/breadcrumbs'
+
 import { SEO as seoConfig } from '../../config/seo'
 
 export interface Props {
   title?: string
   description?: string
   meta?: Array<Record<string, string>>
+  article?: {
+    headline: string
+    datePublished: Date
+    dateModified?: Date
+  }
+  breadcrumbs?: TBreadcrumb[]
 }
 
 const {
@@ -18,23 +26,72 @@ const props = Astro.props
 const pageTitle = props.title ?? defaultTitle
 const metaDescription = props.description ?? defaultDescription
 const extraMeta = props.meta ?? []
+const { article, breadcrumbs } = props
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).href
 
 const imageUrl = new URL('/academy.png', Astro.site).href
+
+const articleDates = article && {
+  datePublished: article.datePublished.toISOString(),
+  dateModified: (article.dateModified ?? article.datePublished).toISOString(),
+}
+
+const articleSchema = article && {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: article.headline,
+  description: metaDescription,
+  image: [imageUrl],
+  ...articleDates,
+  publisher: {
+    '@type': 'Organization',
+    name: 'Santiment',
+    url: new URL('/', Astro.site).href,
+    logo: { '@type': 'ImageObject', url: imageUrl },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalURL },
+}
+
+const breadcrumbSchema = breadcrumbs &&
+  breadcrumbs.length > 1 && {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbs.map((crumb, idx) => ({
+      '@type': 'ListItem',
+      position: idx + 1,
+      name: crumb.label,
+      item: new URL(crumb.pathname, Astro.site).href,
+    })),
+  }
 ---
 
 <title>{pageTitle}</title>
 <link rel="canonical" href={canonicalURL} />
 
 <meta name="description" content={metaDescription} />
-<meta property="og:type" content="website" />
+<meta property="og:type" content={article ? 'article' : 'website'} />
 <meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={metaDescription} />
 <meta property="og:image" content={imageUrl} />
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
+
+{
+  articleDates && (
+    <>
+      <meta
+        property="article:published_time"
+        content={articleDates.datePublished}
+      />
+      <meta
+        property="article:modified_time"
+        content={articleDates.dateModified}
+      />
+    </>
+  )
+}
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={pageTitle} />
@@ -43,3 +100,17 @@ const imageUrl = new URL('/academy.png', Astro.site).href
 <meta name="twitter:creator" content={defaultAuthor} />
 
 {extraMeta.map((attrs) => <meta {...attrs} />)}
+
+{
+  articleSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  )
+}
+{
+  breadcrumbSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+  )
+}
