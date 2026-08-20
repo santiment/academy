@@ -12,7 +12,7 @@ import { fileURLToPath } from 'url'
 import astroExpressiveCode from 'astro-expressive-code'
 import { defineConfig, mergeConfig } from 'astro/config'
 
-import { AstroSvelteCtxPlugin } from 'san-webkit-next/plugins/vite.js'
+import { AstroSvelteCtx } from 'san-webkit-next/plugins/astro.js'
 import { createAstroConfig } from 'san-webkit-next/vite.config.js'
 
 import { expressiveCodeExplorer } from './plugins/ec-explorer-outside.mjs'
@@ -49,9 +49,7 @@ const viteConfig = mergeConfig(viteBase, {
     exclude: ['svelte', '@astrojs/svelte'],
   },
 
-  plugins: [
-    AstroSvelteCtxPlugin(path.resolve(__dirname, './src/svelte-root.js')),
-  ],
+  plugins: [],
 })
 
 const siteUrl = process.env.SITE_URL || 'https://academy.santiment.net'
@@ -69,6 +67,7 @@ export default defineConfig({
       '/education-and-use-cases/understanding-daily-active-addresses/',
   },
   integrations: [
+    AstroSvelteCtx(path.resolve(__dirname, './src/svelte-root.js')),
     svelte({
       extensions: ['.svelte'],
     }),
