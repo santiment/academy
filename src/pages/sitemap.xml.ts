@@ -1,8 +1,6 @@
 import type { APIRoute } from 'astro'
 import { getCollection } from 'astro:content'
 
-import { getPublicSlug } from '$modules/navigation/paths'
-
 const buildSitemapEntry = (loc: string, lastmod?: string) =>
   `  <url>\n    <loc>${loc}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ''}\n  </url>`
 
@@ -26,7 +24,7 @@ export const GET: APIRoute = async ({ site }) => {
   const docEntries = docs
     .map((doc) => {
       const date = doc.data.dateModified || doc.data.datePublished
-      const rawUrl = new URL(getPublicSlug(doc.id), siteUrl).href
+      const rawUrl = new URL(doc.id, siteUrl).href
       const loc = rawUrl.endsWith('/') ? rawUrl : `${rawUrl}/`
 
       return buildSitemapEntry(loc, date.toISOString())

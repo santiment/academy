@@ -16,7 +16,6 @@ export async function getStaticPaths() {
   const context = {
     sidebarData,
     docsMap: new Map(allDocs.map((d) => [d.id, d])),
-    slugRegistry: new Map<string, string>(),
   }
 
   return allDocs.map((doc) => prepareDocProps(doc, context))
