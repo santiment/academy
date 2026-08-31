@@ -8,11 +8,22 @@ dateModified: 2025-10-30
 
 ## Definition
 
-**Liquidations** anomaly is designed to monitor significant liquidations on the blockchain. A rapid succession of anomalies indicates a sharp increase in the scale of these liquidations.
+**Liquidations** anomaly is designed to monitor significant liquidations on Ethereum. Signals is triggered when the total liquidations sum exceeds threshold. The threshold itself is adaptive during some time after the latest fired signal. A rapid succession of anomalies indicates a sharp increase in the scale of these liquidations.
 
 A huge liquidation in the crypto space refers to the forced selling of a trader's position, typically on leveraged trades, when the market moves against them. In the context of cryptocurrencies, liquidation occurs when a trader borrows funds to trade (using margin or leverage) and the value of their position falls below a certain threshold, at which point the exchange automatically sells the assets to cover the loss.
 
 ![](image1.png)
+
+## List of included lending protocols
+
+* Compound
+* Compound v3
+* Aave v2
+* Aave v3
+* MakerDAO
+* Spark
+* Fraxlend
+* Morpho
 
 ## Use Cases
 
