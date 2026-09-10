@@ -4,7 +4,7 @@ headline: 'Crypto Metrics: Explore our Set of Onchain Social & Dev Metrics'
 description: 'Crypto metrics to delve into key on-chain, social, financial and development data to better understand and navigate the ever-evolving cryptocurrency landscape'
 author: Santiment Team
 datePublished: 2019-10-19
-dateModified: 2026-08-13
+dateModified: 2026-09-09
 sidebar:
   label: Metrics
   order: 10
@@ -84,9 +84,19 @@ Funding Rates
 Open Interest
 - [Open Interest](/metrics/open-interest)
 
+Derivatives by Exchange
+- [Binance Derivatives](/metrics/binance-derivatives)
+- [Bitfinex Derivatives](/metrics/bitfinex-derivatives)
+- [BitMEX Derivatives](/metrics/bitmex-derivatives)
+- [Deribit Derivatives](/metrics/deribit-derivatives)
+- [dYdX Derivatives](/metrics/dydx-derivatives)
+- [FTX Derivatives](/metrics/ftx-derivatives)
+- [Huobi Derivatives](/metrics/huobi-derivatives)
+
 Indicators
 - [Adjusted Price DAA Divergence](/metrics/price-daa-divergence)
 - [BTC and S&P 500 Price Divergence](/metrics/btc-and-s-and-p-500-price-divergence)
+- [M2 Money Supply](/metrics/m2-money-supply)
 - [Price DAA Divergence](/metrics/price-daa-divergence)
 - [Price Volatility](/metrics/price-volatility)
 - [RSI](/metrics/rsi)
@@ -94,6 +104,10 @@ Indicators
 ETF
 - [ETF Flow](/metrics/etf-flow)
 - [Bitcoin ETF Volume](/metrics/bitcoin-etf-volume)
+
+NFT
+- [NFT Collection Price](/metrics/nft-collection-price)
+- [NFT Market Volume/Count](/metrics/nft-market-volume)
 
 </Resource>
 
@@ -116,21 +130,30 @@ Sentiment
 - [Bullish, Bearish, and Neutral Sentiment](/metrics/sentiment-metrics/bullish-bearish-sentiment-metrics)
 - [Positive, Negative, and Balance Sentiment](/metrics/sentiment-metrics/positive-negative-sentiment-metrics)
 - [Weighted Sentiment](/metrics/sentiment-metrics/weighted-sentiment-metrics)
+- [Labeled Social Volume](/metrics/social-volume-labeled)
+- [Sentiment Ratio](/metrics/sentiment-ratio)
+- [Sentiment Energy](/metrics/sentiment-energy)
+- [Total Market Sentiment](/metrics/total-market-sentiment)
 
 Social Volume
 - [Social Volume](/metrics/social-volume)
-- [Community Social Volume](/metrics/social-volume)
+- [Community Social Volume](/metrics/community-social-volume)
 - [Unique Social Volume](/metrics/unique-social-volume)
 - [Social Volume AI](/metrics/social-volume-ai)
+- [Categorized Social Volume](/metrics/social-volume-categorized)
+- [Community Messages Count](/metrics/community-messages-count)
 
 Social Dominance
 - [Social Dominance](/metrics/social-dominance)
 
 Trends
 - [Trending Coins](/metrics/trending-coins)
-- [Trending Stories](metrics/trending-stories)
+- [Trending Stories](/metrics/trending-stories)
 - [Trending Words](/metrics/emerging-trends)
 - [Trending Words Rank](/metrics/trending-words-rank)
+
+Audience
+- [Twitter Followers](/metrics/twitter-followers)
 
 </Resource>
 
@@ -163,7 +186,7 @@ Fees
 
 Holders Distribution
 
-Each of these metrics is available broken down by balance-size bucket (e.g. 0 to 0.001, 0.001 to 0.01, 0.01 to 0.1, 0.1 to 1, 1 to 10, 10 to 100, 100 to 1k, 1k to 10k, 10k to 100k, 100k to 1M, 1M to 10M, etc., up to a 10M+/1B+ bucket), plus an all-holders total.
+Each of these metrics is available broken down by balance-size bucket.
 
 - [Holders Distribution](/metrics/supply-distribution/amount-of-holders) — all holders and active holders, as counts or percentages
 - [Holders Distribution by Combined Balance](/metrics/supply-distribution/combined-balance-of-holders) — all holders and active holders, as balances or percentages
@@ -173,13 +196,16 @@ MVRV and Valuation, Network Value
 - [Mean Realized Price USD](/metrics/mean-realized-price)
 - [Realized Cap HODL Waves](/metrics/realized-market-capitalization-hodl-waves)
 - [Realized Value USD](/metrics/realized-value)
+- [Transacted Coin Acquisition Cost](/metrics/transacted-coin-acquisition-cost)
 
 Miners
 - [Average Difficulty](/metrics/difficulty)
+- [Thermocap](/metrics/thermocap)
 
 NFT
 - [NFT Trade Volume USD](/metrics/nft-trade-volume-usd)
 - [NFT Trades Count](/metrics/nft-trades-count)
+- [NFT Network Profit Loss](/metrics/nft-network-profit-loss)
 
 Network Profit-Loss and Supply, Network Value
 - [NVT](/metrics/nvt) — NVT and NVT transaction volume
@@ -204,12 +230,15 @@ Transaction and Payment, Network Activity
 - [Transaction Volume](/metrics/transaction-volume) — native units and USD
 - [Transaction Volume in Profit or Loss](/metrics/transaction-volume-in-profit-or-loss) — in profit, in loss, and profit/loss ratio
 
+XRPL
+- [XRPL Chain Metrics](/metrics/xrpl-metrics)
+
 </Resource>
 
 <Resource title="OnChain Labels">
 
 Centralized Exchanges
-- [Active Deposits](/metrics/daily-active-deposits) — active deposits and deposit transactions
+- [Active Deposits](/metrics/active-deposits) — active deposits and deposit transactions
 - [Active Withdrawals](/metrics/active-withdrawals) — active withdrawals and withdrawal transactions
 - [Exchange Funds Flow](/metrics/exchange-funds-flow) — exchange balance, inflow, and outflow, in native units and USD
 - [Deposits and Withdrawals per Exchange](/metrics/labeled-exchange) — active deposits, active withdrawals, deposit transactions, and withdrawal transactions
@@ -225,17 +254,22 @@ DEXes
 Labeled Balances
 - [Balance per Label and Owner Delta](/metrics/labeled-balance)
 - [Exchange Balance per Exchange](/metrics/labeled-balance)
+- [Ethereum Spent](/metrics/ethereum-spent)
+
+Top Holders
+- [Top Holders](/metrics/top-holders)
+- [Amount in Top Holders](/metrics/amount-in-top-holders)
 
 Labeled Supply Distribution
 
-Each of these metrics is available broken down by balance-size bucket (e.g. 0 to 0.001, 0.001 to 0.01, 0.01 to 0.1, 0.1 to 1, 1 to 10, 10 to 100, 100 to 1k, 1k to 10k, 10k to 100k, 100k to 1M, 1M to 10M, etc., up to a 10M+/1B+ bucket), plus an all-holders total.
+Each of these metrics is available broken down by balance-size bucket.
 
 - [Labeled Holders Distribution](/metrics/supply-distribution/amount-of-labeled-holders) — labeled and negative labeled
 - [Labeled Holders Distribution by Combined Balance](/metrics/supply-distribution/combined-balance-of-labeled-holders) — labeled and negative labeled
 
 Lending and Borrowing Protocols
 
-Each protocol page covers that protocol's deposits, new debt, repayments, liquidations, total supplied and borrowed, APYs, and active addresses, where the protocol reports them.
+Each page covers that protocol's deposits, new debt, repayments, liquidations, total supplied and borrowed, APYs, and active addresses if available.
 
 - [Aave V3](/metrics/lending-and-borrowing-protocols/aave-v3)
 - [Aave Safety Module](/metrics/lending-and-borrowing-protocols/aave-safety-module)
@@ -253,6 +287,7 @@ Each protocol page covers that protocol's deposits, new debt, repayments, liquid
 NFT
 - [NFT Trade Volume USD](/metrics/nft-trade-volume-usd) — retail and whale
 - [NFT Trades Count](/metrics/nft-trades-count) — retail and whale
+- [NFT Collection Holders Balance](/metrics/nft-collection-holders-balance)
 
 Whales
 - [Whale Transaction Count](/metrics/whale-transaction-count) — 100K USD and above
@@ -260,10 +295,18 @@ Whales
 - [Whale Transaction Count 1M USD and Above](/metrics/whale-transaction-volume)
 
 Yield, Savings & Staking
-- [Ethena Staking](/metrics/ethena-staking) — APY, deposits, and withdrawals
+- [Ethena Protocol](/metrics/ethena-protocol)
 - [GHO Savings](/metrics/gho-savings) — deposits, withdrawals, and total supplied
 - [Pendle Markets](/metrics/pendle-markets) — implied APY, underlying APY, yield spread, and total markets TVL
 - [Sky Savings](/metrics/sky-savings) — APY, deposits, withdrawals, and total supplied
 - [crvUSD Savings](/metrics/crvusd-savings) — APY, distributions, and total supplied
+
+Address & Transaction Lookups
+- [Historical Balance](/metrics/historical-balance)
+- [Labelled Historical Balance](/metrics/labelled-historical-balance)
+- [Latest Transactions](/metrics/latest-transactions)
+- [Top Transfers](/metrics/top-transfers)
+- [Contract Transactions Count](/metrics/contract-transactions-count)
+- [Contract Interacting Address Count](/metrics/contract-interacting-address-count)
 
 </Resource>
