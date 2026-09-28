@@ -1,0 +1,209 @@
+---
+title: Sentiment Energy
+author: Santiment Team
+description: A single bullish-vs-bearish signal for an asset, weighted by volume and compared to its own history
+datePublished: 2026-09-01
+dateModified: 2026-09-01
+---
+
+## Definition
+
+Sentiment Energy is a single bullish-vs-bearish reading for an asset.
+It answers one question: right now, is the crowd unusually bullish or unusually bearish about this coin — and is there real volume behind it?
+
+It is built on top of the [Sentiment Bullish / Bearish](/metrics/sentiment-metrics/bullish-bearish-sentiment-metrics) metrics, which add up the model's bullish, bearish, and neutral scores across every social message (document) about an asset — classified by Santiment's CryptoBERT model across Telegram, Twitter/X, Reddit, 4chan, Bitcointalk, and more.
+Sentiment Energy combines those totals into one easy-to-read line.
+
+### Intuitive definition
+
+Think of it as a needle that swings between bullish and bearish:
+
+- **Positive values — bullish energy.**
+  There is more bullish than bearish chatter than is normal for this asset, and there is volume behind it.
+- **Negative values — bearish energy.**
+  The balance has tipped unusually bearish.
+- **The bigger the value, the stronger the signal** — either the balance is more lopsided than usual, or there is simply a lot more chatter than usual, or both.
+- **Around zero — nothing unusual.**
+  Sentiment is mixed, or the asset just isn't being talked about much right now.
+
+The key word is *unusually*.
+Sentiment Energy always compares today's balance to the same asset's own recent history, not to some fixed scale.
+That keeps it honest: a quiet coin and a mega-cap are each measured against their own normal, so a spike means the same thing for both.
+
+### How to read it
+
+| You see... | It means... |
+| --- | --- |
+| Large positive value | Strongly bullish crowd, with volume — a notable positive shift |
+| Small positive value | Mildly bullish, or bullish but on thin volume |
+| Near zero | Normal / mixed sentiment, or quiet period |
+| Small negative value | Mildly bearish |
+| Large negative value | Strongly bearish crowd, with volume — a notable negative shift |
+
+Many users overlay it on price to eyeball whether crowd sentiment is leading, lagging, or diverging from the market.
+
+### Technical definition
+
+The metric starts from a 5-minute base series and is built in a few simple steps (here a "bucket" is one time step — for example a day, an hour, or 5 minutes):
+
+1. **Add up the sentiment.**
+   Sum the bullish, bearish, and neutral message scores in the bucket.
+   The bullish-vs-bearish balance is measured as the (log) ratio of the bullish total to the bearish total.
+2. **Compare to the asset's own past.**
+   Rank that balance against the last 180 days of the same asset's history: out of the last 180 days, how unusual is today's balance?
+   This step removes the model's natural optimism and makes assets comparable to themselves.
+3. **Put it on a clean scale.**
+   The rank is reshaped onto a -1 to +1 scale, so middling readings sit near zero and only genuine extremes approach the ends.
+4. **Weight by volume.**
+   Multiply by how much total chatter there was.
+   The same sentiment from 1,000 messages counts for more than from 5.
+5. **Smooth.**
+   Apply a short exponential moving average so the line is readable and not jumpy.
+
+Because of step 4, the published value is centered on zero but not capped at ±1 — strong, high-volume moves can push it to several units in either direction.
+The sign is the direction; the size reflects how unusual and how loud the sentiment is.
+
+Because step 2 ranks each reading against the last 180 days of the same asset's history, values are not meaningful until an asset has roughly six months of social history behind it.
+
+#### Formulas
+
+For one asset and one time bucket $t$ at a given interval, let $\text{bull}_t$, $\text{bear}_t$, $\text{neu}_t$ be the building-block Sentiment Bullish / Bearish / Neutral values — each a sum of sentiment scores over the messages in the bucket — and let the total volume be $V_t = \text{bull}_t + \text{bear}_t + \text{neu}_t$.
+
+**1. Balance signal** — log-ratio of the bullish vs bearish totals:
+
+$$
+x_t = \ln(1 + \text{bull}_t) - \ln(1 + \text{bear}_t)
+$$
+
+**2. 180-day percentile rank** of $x_t$ against the same asset's earlier buckets $h \in [\,t - 180\text{d},\ t\,)$:
+
+$$
+p_t = \operatorname{clip}\!\left( \frac{\#\{\, x_h \le x_t \,\}}{\#\{\, x_h \,\}},\ 0.001,\ 0.999 \right)
+$$
+
+**3. Normalize to $[-1, 1]$** via the inverse standard-normal CDF $\Phi^{-1}$:
+
+$$
+s_t = \frac{\Phi^{-1}(p_t)}{\Phi^{-1}(0.999)}
+$$
+
+**4. Volume weighting:**
+
+$$
+e_t = s_t \cdot \ln(1 + V_t)
+$$
+
+**5. EMA smoothing** — exponential moving average with span $N$ (so $\alpha = \tfrac{2}{N+1}$):
+
+$$
+\text{Sentiment Energy}_t = \frac{\sum_{k \ge 0} (1-\alpha)^k\, e_{t-k}}{\sum_{k \ge 0} (1-\alpha)^k}
+$$
+
+Default span $N = 14$ for the daily interval and $N = 21$ for hourly and 5-minute.
+
+### Good to know
+
+Sentiment Energy is a relative signal.
+A value of +2 for one asset and +2 for another both mean "unusually bullish for that asset" — it is not a cross-asset absolute scale.
+
+---
+
+## Access
+
+[Restricted Access](/metrics/details/access#restricted-access).
+
+As of this writing, the SanAPI returns the following error for every asset covered by these metrics, regardless of subscription tier:
+
+> The metric `integral_sentiment_bb` is currently in beta phase and is exclusively available to alpha and beta users.
+
+---
+
+## Measuring Unit
+
+A signal centered on 0.
+Typical values fall roughly between -1 and 1, but the value is not hard-capped and strong, high-volume moves can push it further in either direction.
+Positive means bullish, negative means bearish. {/* TODO(verify): re-test the exact realistic range once the beta gate lifts and real values can be observed */}
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Change Metrics
+
+No `_change_1d`, `_change_7d`, or `_change_30d` variants exist for these metrics.
+
+---
+
+## Frequency
+
+Sentiment Energy ships as three separately computed base series:
+
+- `integral_sentiment_bb` — [five-minute intervals](/metrics/details/frequency#five-minute-frequency)
+- `integral_sentiment_bb_1h` — [hourly intervals](/metrics/details/frequency#hourly-frequency)
+- `integral_sentiment_bb_1d` — [daily intervals](/metrics/details/frequency#daily-frequency)
+
+Each of these can also be queried at coarser aggregation windows: the 5-minute series at 1h, 2h, 3h, 4h, 6h, 8h, or 12h; the hourly series at those same hourly windows; and the daily series at 2d, 3d, or 7d. {/* TODO(verify): this list of queryable aggregation windows is carried over from the source draft as given — the beta-access gate blocks independently confirming which specific interval values the API actually accepts */}
+
+---
+
+## Latency
+
+[Social Data Latency](/metrics/details/latency#social-data-latency)
+
+---
+
+## Available Assets
+
+Available for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22integral_sentiment_bb%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>).
+
+Unlike most metric families on this site, the three base series do **not** share the same asset set.
+As of this writing:
+
+- `integral_sentiment_bb` (5-minute) — 2,146 assets
+- `integral_sentiment_bb_1h` (hourly) — 2,227 assets
+- `integral_sentiment_bb_1d` (daily) — 2,597 assets
+
+The daily series covers more assets than the hourly series, which covers more than the 5-minute series — consistent with the 180-day warm-up requirement being easier to satisfy at a coarser, less data-hungry interval. {/* TODO(verify): this explanation for the asset-count gap is a plausible inference from the warm-up mechanism described above, not something confirmed directly */}
+
+---
+
+## Sanbase
+
+Sentiment Energy is available in the [Sanbase](https://app.santiment.net) app at all intervals except 5-minute, which is API-only via SanAPI.
+
+---
+
+## SanAPI
+
+Available under the metric names `integral_sentiment_bb`, `integral_sentiment_bb_1h`, and `integral_sentiment_bb_1d`.
+
+### Sentiment Energy for an Asset
+
+```graphql explorer
+{
+  getMetric(metric: "integral_sentiment_bb") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-7d"
+      to: "utc_now"
+      interval: "5m"
+    )
+  }
+}
+```
+
+As of this writing, this query returns the beta-access error described under [Access](#access) instead of data. {/* TODO(verify): re-run this example once the beta gate lifts and confirm it returns real values before publishing */}
+
+---
+
+## Full List of Metrics
+
+Sentiment Energy ships as three metrics:
+
+- integral_sentiment_bb
+- integral_sentiment_bb_1h
+- integral_sentiment_bb_1d

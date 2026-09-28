@@ -1,0 +1,186 @@
+---
+title: Twitter Followers
+author: Santiment Team
+description: The size of a project's audience on X/Twitter, tracked as a raw follower count
+datePublished: 2026-09-02
+dateModified: 2026-09-02
+---
+
+## Definition
+
+Twitter Followers is the size of a project's audience on X/Twitter: how many accounts currently follow the project's official handle?
+
+It is a raw counter, not a model output.
+The scraper asks X's own web API for the project's profile and reads back the number X itself shows on the profile page.
+There is no scoring, no normalization, and no aggregation over messages — one handle, one integer, one timestamp.
+
+> **A note on wording.** "Followers" here means people following the project.
+> X's profile payload also carries `friends_count` — the number of accounts the project itself follows (the "Following" number on the profile).
+> That field is parsed elsewhere in Santiment's pipeline for account scoring and categorization, but it is not published to Kafka and is not part of this metric.
+
+### Intuitive definition
+
+Think of it as the project's reach — the standing size of the crowd it can talk to:
+
+- **The level** tells you how big the audience is.
+  It is slow-moving and almost monotonically increasing.
+- **The change** is where the signal is.
+  A handle that adds 3% of its base in a week is being discovered; a flat handle is not.
+- **Sharp jumps** mean something happened — an exchange listing, an airdrop, a giveaway, a viral post — or that followers were bought.
+- **Drops** are rare and usually mean X purged bot accounts, or the handle was renamed or restricted.
+
+Unlike social volume or sentiment, this series is cumulative and sticky: it remembers everything that ever worked.
+The growth or decline of the figures contain the most meaning, rather than just the raw follower count alone.
+
+### How to read it
+
+| You see... | It means... |
+| --- | --- |
+| Steady, small daily climb | Normal organic growth — the baseline for an active project |
+| Sharp jump (several % in a day) | A campaign, listing, airdrop, or viral moment — or purchased followers |
+| Flat line for many days | Stagnant attention, **or** a scrape gap for that handle (check for missing points) |
+| Sudden drop | X bot purge, handle rename, or the account went private or was suspended |
+| Series stops entirely | The handle no longer resolves — usually renamed and not yet updated in Santiment's project registry |
+
+Most users chart it with a `consecutive_differences` transform (see [SanAPI](#sanapi)) to turn the cumulative line into "followers gained per period," which is the readable form.
+
+Real example: `ethereum`, 14 daily points to 2026-08-27, went from 4,459,920 to 4,501,435.
+That is +41,515 in 13 days (roughly 3,190 per day, +0.93%),  a textbook steady-climb profile for a mega-cap asset's handle.
+
+### Coverage and cadence
+
+The way handles are distributed across hourly scrape slices has two consequences worth knowing before reading the series:
+
+- **Up to 125 handles per hour, up to 3,000 per day.**
+  The scraper only cycles through hour slots 0 through 23, so a handle sitting past position 2,999 in Santiment's project list is never sampled.
+  That list has no fixed sort order, so which handles land in which slice is not guaranteed stable across runs.
+- **Each handle is refreshed roughly once per 24 hours** — whichever hour its slice falls in.
+  Despite the job firing hourly, the per-handle sampling rate is daily, which is why the published series is effectively a daily snapshot even though the API advertises a 6-hour minimum interval.
+
+No backfill is possible.
+X exposes only the current follower count, so history exists only from the moment a handle entered the scrape rotation.
+There is no way to reconstruct missed days.
+
+### Derived views
+
+For one handle, let $F_t$ be the follower count at bucket $t$.
+
+**Followers gained** over one bucket (what `consecutive_differences` returns):
+
+$$
+\Delta_t = F_t - F_{t-1}
+$$
+
+**Relative growth** over a window of $\tau$ buckets, in percent:
+
+$$
+g_t = \left( \frac{F_t}{F_{t-\tau}} - 1 \right) \times 100
+$$
+
+Growth rate is the fair way to compare handles: +5,000 followers is noise for a 4.5M-follower handle and a doubling for a 5,000-follower one.
+
+### Good to know
+
+- **X's number includes bots and inactive accounts.**
+  Nothing in this pipeline filters them.
+  A follower spike can be bought, and a follower drop can simply be X cleaning up.
+- **The level is a vanity metric; the slope is not.**
+  Use `consecutive_differences` or a percentage change, and compare a project to its own past rather than to other projects.
+- **Gaps are normal.**
+  A rate-limited or unavailable handle publishes nothing for that day.
+  At coarse intervals the `LAST` aggregation hides this; at a daily interval it shows up as a missing point.
+- **A zero is never published.**
+  The producer only emits when the follower count is truthy, so a genuine 0-follower handle produces no data point.
+- **The series is keyed on the handle in Santiment's project registry.**
+  If a project renames its X handle and the registry is not updated, the series silently stops rather than erroring.
+
+---
+
+## Access
+
+[Free Access](/metrics/details/access#free-access).
+
+---
+
+## Measuring Unit
+
+A raw count of followers (integer).
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Change Metrics
+
+No `_change_1d`, `_change_7d`, or `_change_30d` variants exist for this metric.
+Use the `consecutive_differences` transform instead — see [Derived Views](#derived-views).
+
+---
+
+## Frequency
+
+The API's minimum interval is 6 hours, which does not map onto any of the standard frequency buckets used across this site.
+In practice, each handle is sampled about once per day — see [Coverage and Cadence](#coverage-and-cadence) for why.
+
+---
+
+## Latency
+
+Up to about 24 hours: a point reflects the last time that handle's scrape slice ran.
+
+---
+
+## Available Assets
+
+Available for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22twitter_followers%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>).
+
+As of this writing, that is 1,888 assets: Those with a non-null Twitter handle, up to the coverage limit described in [Coverage and Cadence](#coverage-and-cadence).
+
+This metric only accepts a single slug per query, not a list of slugs.
+
+---
+
+## SanAPI
+
+Available under the metric name `twitter_followers`.
+
+### Follower Count for an Asset
+
+```graphql explorer
+{
+  getMetric(metric: "twitter_followers") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-90d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+### Followers Gained per Week
+
+```graphql explorer
+{
+  getMetric(metric: "twitter_followers") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-365d"
+      to: "utc_now"
+      interval: "7d"
+      transform: { type: "consecutive_differences" }
+    )
+  }
+}
+```
+
+---
+
+## Full List of Metrics
+
+Twitter Followers ships as a single metric: `twitter_followers`.

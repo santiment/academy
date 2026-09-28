@@ -3,13 +3,16 @@ title: Social Volume
 author: Ivan
 description: The amount of messages/documents containing a given search term
 datePublished: 2019-10-04
-dateModified: 2026-06-17
+dateModified: 2026-08-26
 ---
 
 
 ## Definition
 
 Social Volume is built on top of the [Social Data](/metrics/details/social-data).
+
+Twitter social volume can be broken down further by account category — see
+[Categorized Social Volume](/metrics/social-volume-categorized).
 
 The total number of [social data text documents](/metrics/details/social-data) that
 contain the given search term at least once. Examples of documents are Telegram
@@ -108,13 +111,13 @@ Available for [these assets](<https://api.santiment.net/graphiql?variables=&quer
 
 ## Sanbase
 
-Combined Social Volume from all sources for an asset can be seen on a [project's page](https://app.santiment.net/charts).
+Social Volume from all sources for an asset can be seen on the [Charts Tool](https://app.santiment.net/charts).
 
-Social Volume for arbitrary search terms can be viewed from the [trends page](https://app.santiment.net/social-trends) ![trends page](trends-page.png)
+Social Volume for arbitrary search terms and combinations of them can be viewed from the [My Narratives Tool](https://app.santiment.net/social-trends/my-narratives)
 
-The combined social volume from all sources is displayed. From the bottom of the
-page social volume for a specific source can be displayed, too. ![social volume
-search term](social-volume-search-term.png)
+![Social volume for a custom search term](./social-volume-search-term.png)
+
+Social volume from specific sources are displayed below the primary chart.
 
 ## SanAPI
 
@@ -128,6 +131,9 @@ names, where the available sources are:
 - bitcointalk
 - youtube_videos
 - total (combines all sources)
+
+Twitter social volume is further split by account category — see
+[Categorized Social Volume](/metrics/social-volume-categorized).
 
 ### Social Volume for an Asset
 

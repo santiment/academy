@@ -65,6 +65,8 @@ export default defineConfig({
     '/metrics/holders-distribution/': '/metrics/supply-distribution/',
     '/education-and-use-cases/understaning-daily-active-addresses/':
       '/education-and-use-cases/understanding-daily-active-addresses/',
+    '/education-and-use-cases/santiment-pro-reports-samples/':
+      '/education-and-use-cases/santiment-research-hub-samples/',
   },
   integrations: [
     AstroSvelteCtx(path.resolve(__dirname, './src/svelte-root.js')),

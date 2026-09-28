@@ -1,0 +1,170 @@
+---
+title: Sentiment Ratio
+author: Santiment Team
+description: The share of documents in each sentiment bucket, relative to all documents
+datePublished: 2026-09-01
+dateModified: 2026-09-01
+---
+
+## Definition
+
+Sentiment Ratio compares [Labeled Social Volume](/metrics/social-volume-labeled) counts to show what share of documents fall into each sentiment bucket — positive, neutral, or negative.
+
+$$
+\text{Positive Ratio} = \frac{\text{Positive Docs Count}}{\text{Positive Docs Count} + \text{Neutral Docs Count} + \text{Negative Docs Count}}
+$$
+
+$$
+\text{Neutral Ratio} = \frac{\text{Neutral Docs Count}}{\text{Positive Docs Count} + \text{Neutral Docs Count} + \text{Negative Docs Count}}
+$$
+
+$$
+\text{Negative Ratio} = \frac{\text{Negative Docs Count}}{\text{Positive Docs Count} + \text{Neutral Docs Count} + \text{Negative Docs Count}}
+$$
+
+These metrics are currently in beta status.
+
+---
+
+## Access
+
+[Restricted Access](/metrics/details/access#restricted-access).
+
+> The metric `sentiment_positive_ratio_total` is currently in beta phase and is exclusively available to alpha and beta users.
+
+---
+
+## Measuring Unit
+
+Ratio of documents in the given sentiment bucket to all documents, as a number between 0 and 1.
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Change Metrics
+
+No `_change_1d`, `_change_7d`, or `_change_30d` variants exist for these metrics.
+
+---
+
+## Frequency
+
+Each source is available at three frequencies: the plain metric name is computed on [five-minute intervals](/metrics/details/frequency#five-minute-frequency), the `_1h` suffix on [hourly intervals](/metrics/details/frequency#hourly-frequency), and the `_1d` suffix on [daily intervals](/metrics/details/frequency#daily-frequency).
+
+---
+
+## Latency
+
+[Social Data Latency](/metrics/details/latency#social-data-latency)
+
+---
+
+## Available Assets
+
+Available for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22sentiment_positive_ratio_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>).
+
+---
+
+## SanAPI
+
+Available under the `sentiment_positive_ratio_total` and `sentiment_positive_ratio_<source>`, `sentiment_neutral_ratio_total` and `sentiment_neutral_ratio_<source>`, `sentiment_negative_ratio_total` and `sentiment_negative_ratio_<source>` names, where the available sources are:
+
+- 4chan
+- telegram
+- reddit
+- twitter
+- total (combines all sources)
+
+Each of the names above is also available with a `_1h` or `_1d` suffix — see [Frequency](#frequency).
+
+### Sentiment Ratio for an Asset
+
+```graphql explorer
+{
+  getMetric(metric: "sentiment_positive_ratio_total") {
+    timeseriesDataJson(
+      selector: { slug: "bitcoin" }
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-15T00:00:00Z"
+      interval: "1d"
+    )
+  }
+}
+```
+
+---
+
+## Full List of Metrics
+
+The full list of Sentiment Ratio metrics is:
+
+<details>
+
+<summary>Open Positive Sentiment Ratio</summary>
+
+- sentiment_positive_ratio_total
+- sentiment_positive_ratio_total_1d
+- sentiment_positive_ratio_total_1h
+- sentiment_positive_ratio_4chan
+- sentiment_positive_ratio_4chan_1d
+- sentiment_positive_ratio_4chan_1h
+- sentiment_positive_ratio_reddit
+- sentiment_positive_ratio_reddit_1d
+- sentiment_positive_ratio_reddit_1h
+- sentiment_positive_ratio_telegram
+- sentiment_positive_ratio_telegram_1d
+- sentiment_positive_ratio_telegram_1h
+- sentiment_positive_ratio_twitter
+- sentiment_positive_ratio_twitter_1d
+- sentiment_positive_ratio_twitter_1h
+
+</details>
+
+<details>
+
+<summary>Open Neutral Sentiment Ratio</summary>
+
+- sentiment_neutral_ratio_total
+- sentiment_neutral_ratio_total_1d
+- sentiment_neutral_ratio_total_1h
+- sentiment_neutral_ratio_4chan
+- sentiment_neutral_ratio_4chan_1d
+- sentiment_neutral_ratio_4chan_1h
+- sentiment_neutral_ratio_reddit
+- sentiment_neutral_ratio_reddit_1d
+- sentiment_neutral_ratio_reddit_1h
+- sentiment_neutral_ratio_telegram
+- sentiment_neutral_ratio_telegram_1d
+- sentiment_neutral_ratio_telegram_1h
+- sentiment_neutral_ratio_twitter
+- sentiment_neutral_ratio_twitter_1d
+- sentiment_neutral_ratio_twitter_1h
+
+</details>
+
+<details>
+
+<summary>Open Negative Sentiment Ratio</summary>
+
+- sentiment_negative_ratio_total
+- sentiment_negative_ratio_total_1d
+- sentiment_negative_ratio_total_1h
+- sentiment_negative_ratio_4chan
+- sentiment_negative_ratio_4chan_1d
+- sentiment_negative_ratio_4chan_1h
+- sentiment_negative_ratio_reddit
+- sentiment_negative_ratio_reddit_1d
+- sentiment_negative_ratio_reddit_1h
+- sentiment_negative_ratio_telegram
+- sentiment_negative_ratio_telegram_1d
+- sentiment_negative_ratio_telegram_1h
+- sentiment_negative_ratio_twitter
+- sentiment_negative_ratio_twitter_1d
+- sentiment_negative_ratio_twitter_1h
+
+</details>

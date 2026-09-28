@@ -1,0 +1,138 @@
+---
+title: Labeled Social Volume
+author: Santiment Team
+description: Social volume split by document sentiment score
+datePublished: 2026-09-01
+dateModified: 2026-09-01
+sidebar:
+  label: Social Volume Labeled
+---
+
+## Definition
+
+Labeled Social Volume splits [Social Volume](/metrics/social-volume) by document sentiment score.
+Each document is labeled positive, neutral, or negative, then counted.
+
+A document is:
+
+- **Positive** when `sentiment.positive > 0.55`.
+- **Neutral** when `0.45 ≤ sentiment.positive ≤ 0.55` and `sentiment.positive != 0.5`.
+  Documents scored exactly `0.5` are excluded as noise.
+- **Negative** when `sentiment.negative > 0.55` or `sentiment.positive < 0.45`.
+
+These metrics are currently in beta status.
+
+---
+
+## Access
+
+[Restricted Access](/metrics/details/access#restricted-access).
+
+As of this writing, the SanAPI returns the following error for every asset covered by these metrics, regardless of subscription tier:
+
+> The metric `positive_docs_count_total` is currently in beta phase and is exclusively available to alpha and beta users.
+
+---
+
+## Measuring Unit
+
+Amount of documents that fall into the given sentiment bucket.
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Change Metrics
+
+No `_change_1d`, `_change_7d`, or `_change_30d` variants exist for these metrics.
+
+---
+
+## Frequency
+
+[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+
+---
+
+## Latency
+
+[Social Data Latency](/metrics/details/latency#social-data-latency)
+
+---
+
+## Available Assets
+
+Available for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22positive_docs_count_total%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>).
+
+---
+
+## SanAPI
+
+Available under the `positive_docs_count_total` and `positive_docs_count_<source>`, `neutral_docs_count_total` and `neutral_docs_count_<source>`, `negative_docs_count_total` and `negative_docs_count_<source>` names, where the available sources are:
+
+- 4chan
+- telegram
+- reddit
+- twitter
+- total (combines all sources)
+
+### Documents Count by Sentiment for an Asset
+
+```graphql explorer
+{
+  getMetric(metric: "positive_docs_count_total") {
+    timeseriesDataJson(
+      selector: { slug: "bitcoin" }
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-15T00:00:00Z"
+      interval: "1d"
+    )
+  }
+}
+```
+
+---
+
+## Full List of Metrics
+
+The full list of Labeled Social Volume metrics is:
+
+<details>
+
+<summary>Open Positive Docs Count</summary>
+
+- positive_docs_count_total
+- positive_docs_count_4chan
+- positive_docs_count_reddit
+- positive_docs_count_telegram
+- positive_docs_count_twitter
+
+</details>
+
+<details>
+
+<summary>Open Neutral Docs Count</summary>
+
+- neutral_docs_count_total
+- neutral_docs_count_4chan
+- neutral_docs_count_reddit
+- neutral_docs_count_telegram
+- neutral_docs_count_twitter
+
+</details>
+
+<details>
+
+<summary>Open Negative Docs Count</summary>
+
+- negative_docs_count_total
+- negative_docs_count_4chan
+- negative_docs_count_reddit
+- negative_docs_count_telegram
+- negative_docs_count_twitter
+
+</details>

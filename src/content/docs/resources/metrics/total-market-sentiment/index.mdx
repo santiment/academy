@@ -1,0 +1,90 @@
+---
+title: Total Market Sentiment
+author: Santiment Team
+description: Aggregated bullish vs. bearish sentiment across the whole crypto market
+datePublished: 2026-09-01
+dateModified: 2026-09-01
+---
+
+## Definition
+
+Total Market Sentiment aggregates the bullish and bearish sentiment found across documents that mention at least one asset, on 4chan, Bitcointalk, Reddit, and Twitter.
+
+$$
+\text{Total Market Sentiment} = \frac{\text{Market Sentiment Bullish} - \text{Market Sentiment Bearish}}{\text{Market Sentiment Bullish} + \text{Market Sentiment Bearish}}
+$$
+
+The result is a single number between -1 (entirely bearish) and 1 (entirely bullish).
+A value of 0 means bullish and bearish documents are in balance.
+
+---
+
+## Access
+
+[Restricted Access](/metrics/details/access#restricted-access).
+
+> The metric `sentiment_bb_ratio_selective` is currently in beta phase and is exclusively available to alpha and beta users.
+
+---
+
+## Measuring Unit
+
+A ratio between -1 and 1.
+
+---
+
+## Data Type
+
+[Timeseries Data](/metrics/details/data-type#timeseries-data)
+
+---
+
+## Change Metrics
+
+No `_change_1d`, `_change_7d`, or `_change_30d` variants exist for this metric.
+
+---
+
+## Frequency
+
+[Five-Minute Intervals](/metrics/details/frequency#five-minute-frequency)
+
+---
+
+## Latency
+
+[Social Data Latency](/metrics/details/latency#social-data-latency)
+
+---
+
+## Available Assets
+
+This metric is not queried per-asset.
+It uses a single fixed selector, slug `total_market`, representing the aggregate crypto market rather than any one asset.
+
+---
+
+## SanAPI
+
+Available under the metric name `sentiment_bb_ratio_selective`, with the slug selector `total_market`.
+
+### Total Market Sentiment
+
+```graphql explorer
+{
+  getMetric(metric: "sentiment_bb_ratio_selective") {
+    timeseriesDataJson(
+      selector: { slug: "total_market" }
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-15T00:00:00Z"
+      interval: "1d"
+    )
+  }
+}
+```
+
+---
+
+## Full List of Metrics
+
+Total Market Sentiment ships as a single metric: `sentiment_bb_ratio_selective`.

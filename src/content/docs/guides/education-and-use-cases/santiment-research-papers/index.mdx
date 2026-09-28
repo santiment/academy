@@ -1,0 +1,68 @@
+---
+title: Santiment Research Papers
+author: Santiment Team
+datePublished: 2026-09-08
+dateModified: 2026-09-09
+sidebar:
+  label: Santiment Research Papers
+  order: 81
+---
+
+Academic-style research papers from Santiment Research, evaluating Santiment data as inputs to trading strategies, risk-state features, and attention baselines.
+
+Full reports are available to institutional subscribers; the first page of each paper is available below.
+
+### Social Data as a Strategy Enhancement Layer
+
+*Cost-Aware Evidence from Three Matched Crypto Strategies*
+
+**Author:** Larry Cao, Santiment Research
+
+This paper tests whether lagged Social Volume and Social Dominance improve three daily BTC, ETH, and SOL strategies, each compared against the same market rule with the Social input removed.
+Signals used one-day-lagged Social observations, executed on the next day's return, with 5 bps of cost per position or weight change.
+Parameters and portfolio weights were fixed from 2022–2024 development data before the retrospective test.
+
+Across the full sample, the Social-informed portfolio achieved a 14.5% CAGR, a 0.79 Sharpe ratio, and a -26.1% maximum drawdown, against 4.2% CAGR, a 0.31 Sharpe ratio, and a -34.6% maximum drawdown for the matched market portfolio.
+The advantage held in every reported calendar partition except the final 2026 partition, which was approximately flat.
+
+Full report access available for institutional subscribers.
+
+<a href="/research-papers/social-data-strategy-enhancement_first_page.pdf" data-astro-reload>First page preview</a>
+
+---
+
+### Santiment Social Volume Intraday Seasonality
+
+*A Baseline for Crypto Attention*
+
+**Author:** Larry Cao, Santiment Research
+
+This paper measures hour-of-day and weekday seasonality in Santiment Social Volume for ten large-cap assets — bitcoin, ethereum, solana, xrp, dogecoin, binance-coin, cardano, chainlink, avalanche, and tron — over complete UTC days from 2025-06-20 through 2026-05-19.
+
+The paper's conclusion is a practical one: treat hour-of-day and weekday seasonality as the first risk control in any short-horizon Social Volume strategy, since raw data is not a clean abnormality signal unless the clock is part of the model.
+This is framed as an attention-baseline study, not a claim about return predictability.
+
+Full report access available for institutional subscribers.
+
+<a href="/research-papers/social_volume_intraday_seasonality_send_report_first_page.pdf" data-astro-reload>First page preview</a>
+
+---
+
+### Santiment Data Anomalies as Conditional Market-State Features
+
+*A Production-Audited Event Study on Binance-Tradable Crypto Assets*
+
+**Author:** Santiment Research
+
+This paper evaluates four Santiment data anomalies — [Social Dev Score](/data-anomaly/social-dev-score), [ETH Whale Dump](/data-anomaly/eth-whale-dump), [Price/Network Activity Divergence](/data-anomaly/network-activity-price-divergence), and [Project in Trends](/data-anomaly/project-in-trends) — as conditional market-state features.
+Production event rows are compared against same-asset, same-quarter control timestamps over 1h, 4h, 24h, and 72h horizons, using Binance hourly USDT prices for 1,211 unique events across 34 mapped tradable assets from 2023-01-01 through 2026-05-28.
+
+The strongest evidence is concentrated in Price/Network Activity Divergence, which shows positive event-minus-control signed returns and materially higher realized volatility.
+Project in Trends behaves more like an attention and risk-state marker: post-event realized volatility rises while 24-hour signed returns are negative in this sample.
+ETH Whale Dump remains an ETH-specific event-risk label, and Social Dev Score has limited statistical evidence after the Binance and sparse-asset filters.
+
+The paper frames these as conditional event-state evidence, not a transaction-cost-aware trading strategy, out-of-sample validation, or standalone proof of alpha.
+
+Full report access available for institutional subscribers.
+
+<a href="/research-papers/data_anomaly_event_study_first_page.pdf" data-astro-reload>First page preview</a>

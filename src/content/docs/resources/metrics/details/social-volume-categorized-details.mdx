@@ -1,0 +1,100 @@
+---
+title: Categorized Social Volume Details
+author: Santiment Team
+datePublished: 2026-08-26
+dateModified: 2026-08-26
+---
+
+## Definition
+
+Each [Categorized Social Volume](/metrics/social-volume-categorized) metric counts documents from Twitter accounts assigned to one defined category.
+There are seven categories: BTC Maxi, Builder, KOL, Media, Memecoin, Trader, and Trading Firm.
+
+---
+
+## How Accounts Are Classified
+
+Accounts are classified into categories by an LLM (gpt-5-mini).
+
+As of the current classification run, 18,203 Twitter accounts have been categorized, based on account activity between `2025-03-09` and `2026-03-09`.
+
+An account can belong to more than one category at a time.
+
+There are also accounts that don't belong to any category, whole volume is only reflected in the regular social volume metric.
+
+Classification runs over a relative historical window.
+We use the last 12 months of data or the last 20 X.com posts for newer accounts.
+Currently classification is not re-run for already classified accounts; for newly added accounts it runs at the moment we follow the account.
+
+---
+
+## Categories
+
+### BTC Maxi
+
+Focuses almost exclusively on Bitcoin, promoting BTC dominance, sound money ideology, and dismissing altcoins or memecoins.
+
+In the metric name, this category is typed as `btc_maxi`.
+Example: `social_volume_twitter_btc_maxi`.
+
+---
+
+### Builder
+
+A developer or technical contributor actively involved in building or maintaining crypto products or protocols.
+
+In the metric name, this category is typed as `builder`.
+Example: `social_volume_twitter_builder`.
+
+---
+
+### KOL
+
+An influential individual shaping opinions through strong market views or ideological perspectives.
+A KOL is defined as an account with 10,000 or more followers.
+
+In the metric name, this category is typed as `kol`.
+Example: `social_volume_twitter_kol`.
+
+---
+
+### Media
+
+Crypto-focused journalism, content creation, and educational channels.
+
+In the metric name, this category is typed as `media`.
+Example: `social_volume_twitter_media`.
+
+---
+
+### Memecoin
+
+Centers on memecoins, hype-driven narratives, viral trends, and short-term speculation, often using humor and FOMO.
+A Memecoin account is always dedicated to promoting one specific coin, excluding the majors.
+
+In the metric name, this category is typed as `memecoins`.
+Example: `social_volume_twitter_memecoins`.
+
+---
+
+### Trader
+
+Focuses on short-term market analysis and trading activity, emphasizing charts, technical setups, and signals.
+
+In the metric name, this category is typed as `trader`.
+Example: `social_volume_twitter_trader`.
+
+---
+
+### Trading Firm
+
+Professional trading entities focused on market making or proprietary strategies.
+
+In the metric name, this category is typed as `trading_firm`.
+Example: `social_volume_twitter_trading_firm`.
+
+---
+
+## History
+
+All seven categories share the same original classification window: `2025-03-09` to `2026-03-09`.
