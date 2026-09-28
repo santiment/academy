@@ -2,7 +2,7 @@
 title: Santiment MCP Connector
 author: Santiment Team
 datePublished: 2026-03-24
-dateModified: 2026-03-24
+dateModified: 2026-09-28
 sidebar:
   order: 10
 ---
@@ -73,6 +73,61 @@ The connector uses **OAuth 2.0 authorization code flow** with PKCE. When you fir
 - Access tokens are valid for 1 hour and automatically refresh.
 - A free Santiment account provides access to core metrics and signals.
 - Paid tiers unlock full on-chain depth and advanced metrics.
+
+## Rate Limits
+
+MCP usage is metered **per Santiment account** — every connected AI client and session draws from the same budget. Each tool call counts as one call, and MCP prompt invocations count too.
+
+The connector requires a logged-in Santiment account. Unauthenticated requests are rejected before any limit is even checked.
+
+Two budgets apply at the same time: a global one across all tools, and a tighter sub-cap for `combined_trends_tool`. A `combined_trends_tool` call counts against both.
+
+### Global limits — all tools combined
+
+| Plan                                    | Per minute | Per hour | Per day | Per 30 days |
+| --------------------------------------- | ---------: | -------: | ------: | ----------: |
+| Free                                    |         25 |      100 |     500 |       2,000 |
+| Sanbase Pro                             |         30 |      250 |     600 |       2,000 |
+| Sanbase Max, Business Pro, Business Max |         60 |      600 |   2,000 |      10,000 |
+
+### `combined_trends_tool` sub-cap
+
+This tool uses an LLM to analyze text, so it is costlier to serve and gets a tighter budget.
+
+| Plan                                    | Per minute | Per hour | Per day | Per 30 days |
+| --------------------------------------- | ---------: | -------: | ------: | ----------: |
+| Free                                    |          3 |       20 |      50 |         100 |
+| Sanbase Pro                             |          5 |       40 |     150 |         300 |
+| Sanbase Max, Business Pro, Business Max |         10 |       80 |     400 |         800 |
+
+If you hold subscriptions on both products, the highest tier wins — any paid SanAPI plan grants Max-tier MCP limits, even alongside a free Sanbase account.
+
+### How the windows work
+
+All four windows are **rolling**, unlike [SanAPI rate limits](/sanapi/rate-limits), which reset on clock boundaries:
+
+- **minute** — the last 60 seconds
+- **hour** — the last 60 minutes
+- **day** — the last 24 hours
+- **30 days** — the last 30 × 24 hours
+
+Nothing resets at midnight or on the 1st of the month. Capacity frees up gradually as old calls age out of the window.
+
+### When you hit a limit
+
+The tool returns an error instead of data, naming the window and your current count:
+
+```
+Rate limit exceeded: 30/30 MCP tool calls per minute. Please wait up to 60 seconds before trying again.
+```
+
+When it is the sub-cap that ran out, the message names the tool instead:
+
+```
+Rate limit exceeded: 40/40 combined_trends_tool calls per hour. Please wait before trying again.
+```
+
+Your AI tool surfaces this as a tool error. Wait for the window to roll forward, or upgrade on the [pricing page](https://app.santiment.net/pricing?utm_source=academy) for more headroom.
 
 ## Available Tools
 

@@ -165,6 +165,15 @@ html {
   @apply text-sm;
 }
 
+/* `.wrapper` sets `word-break: break-word`, which lets a narrow column split a
+   word mid-character ("Sanbas / e"). Cells opt out: columns size to the longest
+   word, and a word only breaks when it cannot fit a line on its own. */
+.wrapper th,
+.wrapper td {
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
 .wrapper table,
 .wrapper th,
 .wrapper td {
