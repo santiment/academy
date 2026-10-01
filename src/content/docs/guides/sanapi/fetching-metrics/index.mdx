@@ -3,7 +3,7 @@ title: Fetching Metrics
 author: Santiment Team
 date: 2020-04-06
 datePublished: 2019-11-21
-dateModified: 2026-07-01
+dateModified: 2026-10-01
 sidebar:
   order: 20
 ---
@@ -115,7 +115,7 @@ The following fields are selected:
 - `isAccessible` - is the metric accessible with the selected subscription plan.
 - `restrictedFrom` - what is the earliest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 - `restrictedTo` - what is the latest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
-- `availableVersions` - a list of available [versions](#metric-versions) for this metric. Each version has a `version` field (e.g. `"1.0"`, `"2.0"`).
+- `availableVersions` - a list of available [versions](#metric-versions) for this metric. Each version has a `version` field (e.g. `"1.0"`, `"2.0"`, or `"original:v1"`, `"modern:v1"` for [social metrics](/metrics/details/social-data-versions)).
 - `docs` - link to the documentation of the metric.
 
 ## Metrics Documentation
@@ -239,11 +239,12 @@ The following query retrieves the default aggregation and all available aggregat
 
 Some metrics have multiple versions that represent different implementations,
 calculation methods, or different underlaying data. The `getMetric` query accepts an optional `version`
-parameter. When omitted, it defaults to `"1.0"`.
+parameter. When omitted, it defaults to `"1.0"`, or to `"original:v1"` for
+[social metrics](/metrics/details/social-data-versions).
 
 ```graphql explorer
 {
-  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+  original: getMetric(metric: "social_volume_total", version: "original:v1") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-30d"
@@ -252,7 +253,7 @@ parameter. When omitted, it defaults to `"1.0"`.
     )
   }
 
-  v2: getMetric(metric: "social_volume_total", version: "2.0") {
+  modern: getMetric(metric: "social_volume_total", version: "modern:v1") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-30d"

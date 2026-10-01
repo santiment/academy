@@ -4,17 +4,8 @@ headline: 'Metrics Details: Point-in-Time for Social Metrics'
 description: 'Explains how Santiment’s point-in-time social metrics preserve immutable historical data to prevent look-ahead bias, including the cutoff rules, computation process, supported sources and metrics, risks, and API versioning required to query them.'
 author: Santiment Team
 datePublished: 2026-09-28
-dateModified: 2026-09-10
+dateModified: 2026-10-01
 ---
-
-import Notebox from '$components/markdown/Notebox.svelte'
-
-<Notebox type="note">
-
-**PIT has not yet been implemented.**
-**Coming Soon!**
-
-</Notebox>
 
 Point-in-Time (PIT) metrics provide a consistent, **immutable** view of data as it was known at a specific moment in the past. Unlike traditional mutable metrics that may change retroactively, PIT metrics preserve historical data without applying any future knowledge or corrections that emerged later.
 
@@ -135,24 +126,28 @@ In these cases, we run a historical job to re-scrape documents for the affected 
 
 ## How to Query PIT Metrics
 
-PIT metrics are served under two API versions, depending on whether you need
-**realtime** or **historical** data:
+PIT metrics are served under two [social data versions](/metrics/details/social-data-versions),
+depending on whether you need **realtime** or **historical** data:
 
-| Metric type    | Realtime data | Historical data |
-| -------------- | ------------- | --------------- |
-| Total metrics  | `v2.1`        | `v2.1`          |
-| Source metrics | `v2.1`        | `v2.0`          |
+| Metric type    | Realtime data   | Historical data |
+| -------------- | --------------- | --------------- |
+| Total metrics  | `modern_pit:v1` | `modern_pit:v1` |
+| Source metrics | `modern_pit:v1` | `modern:v1`     |
 
-* **Total metrics** are always queried from `v2.1`. We recompute their history
-  because the `telegram` source is excluded from their computation, so `v2.1`
-  holds the correct values for both realtime and historical ranges.
-* **Source metrics** use `v2.1` for realtime data, but you must query `v2.0`
-  for historical data.
+* **Total metrics** are always queried from `modern_pit:v1`. We recompute their
+  history because the `telegram` source is excluded from their computation, so
+  `modern_pit:v1` holds the correct values for both realtime and historical
+  ranges.
+* **Source metrics** use `modern_pit:v1` for realtime data, but you must query
+  `modern:v1` for historical data.
+
+`modern_pit:v1` requires a paid yearly Business Max plan. See
+[Version Access by Plan](/sanapi/metric-versions#version-access-by-plan).
 
 Example:
-```
+```graphql explorer
 {
-  v2: getMetric(metric: "social_volume_twitter", version: "2.0") {
+  modern: getMetric(metric: "social_volume_twitter", version: "modern:v1") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-2h"
@@ -160,7 +155,7 @@ Example:
       interval: "5m"
     )
   }
-  v21: getMetric(metric: "social_volume_twitter", version: "2.1") {
+  modernPit: getMetric(metric: "social_volume_twitter", version: "modern_pit:v1") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-2h"
@@ -171,4 +166,4 @@ Example:
 }
 ```
 
-To check full documentation for versions check academy [Metrics Versions](/sanapi/metric-versions/#finding-versions).
+For the full documentation on versions, see [Metric Versions](/sanapi/metric-versions#finding-versions).

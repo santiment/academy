@@ -3,7 +3,7 @@ title: Metric Versions
 author: Santiment Team
 date: 2026-02-27
 datePublished: 2026-02-27
-dateModified: 2026-09-28
+dateModified: 2026-10-01
 sidebar:
   order: 25
 ---
@@ -38,9 +38,10 @@ to the calculation process or when the metric starts using a different dataset.
 This allows us to introduce enhancements without altering the historical
 behavior of existing versions.
 
-For example, social metrics have a version 2.0 that uses the same calculation
-methodology as the previous version but is computed on a larger and more
-up-to-date set of social media sources.
+For example, social metrics have a `modern:v1` version that is computed on a
+dataset of currently active Crypto Twitter users, alongside the long-running
+`original:v1` dataset. See [Social Data Versions](/metrics/details/social-data-versions)
+for the list of social versions and when to use each one.
 
 Adding new social accounts or servers to an existing metric version could change
 its historical values. Alternatively, if historical recomputation is not
@@ -110,27 +111,30 @@ overwriting the original. This approach provides several benefits:
 
 ## How Versions Work
 
-Each version is identified by a **version string**. The most common values are
-simple numeric strings like `"1.0"` and `"2.0"`. Experimental versions use
+Each version is identified by a **version string**. Most metrics use simple
+numeric strings like `"1.0"` and `"2.0"`. Social metrics use named
+[social data versions](/metrics/details/social-data-versions):
+`"original:v1"`, `"modern:v1"`, and `"modern_pit:v1"`. Experimental versions use
 descriptive names such as `"Experimental (Weighted Age)"`.
 
 Key points:
 
-- Every metric has at least version `"1.0"`.
+- Every non-social metric has at least version `"1.0"`. Every social metric has
+  at least version `"original:v1"`.
 - The version parameter scopes the **entire** `getMetric` context — all
   subfields (timeseries data, available slugs, available since, etc.) return
   data for that version.
-- Versions are sorted in semantic order: `"1.0"` < `"2.0"` < `"3.0"`, with
-  experimental versions listed after stable ones.
+- Numeric versions are sorted in semantic order: `"1.0"` < `"2.0"` < `"3.0"`,
+  with experimental versions listed after stable ones.
 
 ## Querying a Specific Version
 
 Pass the `version` argument to `getMetric`. When omitted, it defaults to
-`"1.0"`.
+`"1.0"`, or to `"original:v1"` for social metrics.
 
 ```graphql explorer
 {
-  getMetric(metric: "social_volume_total", version: "1.0") {
+  getMetric(metric: "social_volume_total", version: "original:v1") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-30d"
@@ -141,7 +145,8 @@ Pass the `version` argument to `getMetric`. When omitted, it defaults to
 }
 ```
 
-Omitting the `version` parameter is equivalent to specifying `version: "1.0"`:
+Omitting the `version` parameter is equivalent to specifying the default
+version. For the social metric below, that is `version: "original:v1"`:
 
 ```graphql explorer
 {
@@ -153,8 +158,8 @@ Omitting the `version` parameter is equivalent to specifying `version: "1.0"`:
       interval: "1d"
     )
   }
-  # Will return the same data as noVersion, as the 1.0 version is the default
-  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+  # Will return the same data as noVersion, as original:v1 is the default
+  original: getMetric(metric: "social_volume_total", version: "original:v1") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-7d"
@@ -162,7 +167,7 @@ Omitting the `version` parameter is equivalent to specifying `version: "1.0"`:
       interval: "1d"
     )
   }
-  v2: getMetric(metric: "social_volume_total", version: "2.0") {
+  modern: getMetric(metric: "social_volume_total", version: "modern:v1") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-7d"
@@ -173,7 +178,7 @@ Omitting the `version` parameter is equivalent to specifying `version: "1.0"`:
 }
 ```
 
-Both aliases above return identical results.
+The `noVersion` and `original` aliases above return identical results.
 
 ## Using Versions in Sanpy
 
@@ -187,7 +192,7 @@ Check available versions for a metric:
 import san
 
 san.available_metric_versions("social_dominance_total")
-# ['1.0', '2.0']
+# ['original:v1', 'modern:v1', 'modern_pit:v1']
 ```
 
 Fetch data for a specific version:
@@ -201,7 +206,7 @@ san.get(
     from_date="2026-01-01",
     to_date="2026-01-10",
     interval="1d",
-    version="2.0"
+    version="modern:v1"
 )
 
 san.get_many(
@@ -210,12 +215,12 @@ san.get_many(
     from_date="2026-01-01",
     to_date="2026-01-10",
     interval="1d",
-    version="2.0"
+    version="modern:v1"
 )
 ```
 
-When `version` is omitted, `"1.0"` is used by default — the same behavior as
-the GraphQL API.
+When `version` is omitted, the default version (`"1.0"`, or `"original:v1"`
+for social metrics) is used — the same behavior as the GraphQL API.
 
 The [santiment-research-quickstart](https://github.com/santiment/santiment-research-quickstart#using-new-version-metrics)
 repository contains additional examples and Agent skills that can work with
@@ -239,26 +244,30 @@ Use the `availableVersions` field inside the `metadata` query:
 }
 ```
 
-````json
+```json
 {
   "data": {
     "getMetric": {
       "metadata": {
         "availableVersions": [
           {
-            "version": "1.0"
+            "version": "original:v1"
           },
           {
-            "version": "2.0"
+            "version": "modern:v1"
+          },
+          {
+            "version": "modern_pit:v1"
           }
         ]
       }
     }
   }
-}```
+}
+```
 
-Most metrics only have version `"1.0"`. Metrics with multiple versions will
-list all of them.
+Most non-social metrics only have version `"1.0"`. Metrics with multiple
+versions will list all of them.
 
 ### For All Metrics
 
@@ -274,7 +283,7 @@ fetch versions for every metric at once:
     }
   }
 }
-````
+```
 
 For a specific product and plan, execute:
 
@@ -299,10 +308,13 @@ For a specific product and plan, execute:
         "isAccessible": true,
         "availableVersions": [
           {
-            "version": "1.0"
+            "version": "original:v1"
           },
           {
-            "version": "2.0"
+            "version": "modern:v1"
+          },
+          {
+            "version": "modern_pit:v1"
           }
         ]
       }
@@ -313,14 +325,14 @@ For a specific product and plan, execute:
 
 ## Version Access by Plan
 
-Newer versions of social metrics need a higher subscription plan than the
-default `"1.0"`:
+Newer [social data versions](/metrics/details/social-data-versions) need a
+higher subscription plan than the default `"original:v1"`:
 
-| Version | Minimum SanAPI plan              |
-| ------- | -------------------------------- |
-| `"1.0"` | Follows the metric's normal access rules |
-| `"2.0"` | Business Pro or Business Max     |
-| `"2.1"` | Business Max, paid yearly        |
+| Version           | Minimum SanAPI plan                      |
+| ----------------- | ---------------------------------------- |
+| `"original:v1"`   | Follows the metric's normal access rules |
+| `"modern:v1"`     | Business Pro or Business Max             |
+| `"modern_pit:v1"` | Business Max, paid yearly                |
 
 If you request a version your plan does not include, that `getMetric` alias
 returns `null` and the response has an error like this one:
@@ -345,7 +357,8 @@ The `version` parameter on `getMetric` affects the following fields:
 <Notebox type="note">
 
 `availableSince` without a `version` argument returns the start date of the
-default version (`"1.0"`), not of the newest version. Before you backtest on a
+default version (`"1.0"`, or `"original:v1"` for social metrics), not of the
+newest version. Before you backtest on a
 newer version, pass that version explicitly (see the `availableSince`
 comparison in [Comparing Versions](#comparing-versions)). A value of
 `1970-01-01T00:00:00Z` means the version has no data for that asset.
@@ -359,11 +372,12 @@ affects how soon after a bar closes you can treat its value as final:
 
 | Version | When a bar is final | Notes |
 | ------- | ------------------- | ----- |
-| `"1.0"` (default) | Up to ~12 hours after the bar closes | Documents that arrive late are added for up to 12 hours, so recent values can still go up. Changes to labels or sources can also trigger a recalculation of the previous month. |
-| `"2.1"` ([point-in-time](/metrics/details/point_in_time)) | ~15–30 minutes after the 15-minute window closes | Computed once, 15 minutes after the window ends, for example `[00:00, 00:15)` at `00:30`. Documents that arrive more than 30 minutes after publication are never included, so the value does not change later. |
+| `"original:v1"` (default) | Up to ~12 hours after the bar closes | Documents that arrive late are added for up to 12 hours, so recent values can still go up. Changes to labels or sources can also trigger a recalculation of the previous month. |
+| `"modern_pit:v1"` ([point-in-time](/metrics/details/point_in_time)) | ~15–30 minutes after the 15-minute window closes | Computed once, 15 minutes after the window ends, for example `[00:00, 00:15)` at `00:30`. Documents that arrive more than 30 minutes after publication are never included, so the value does not change later. |
 
-If you compare `"1.0"` and `"2.1"` for the most recent hours, expect the `"1.0"`
-values to keep changing while the `"2.1"` values stay fixed.
+If you compare `"original:v1"` and `"modern_pit:v1"` for the most recent hours,
+expect the `"original:v1"` values to keep changing while the `"modern_pit:v1"`
+values stay fixed.
 
 
 ## Comparing Versions
@@ -373,7 +387,7 @@ using GraphQL **aliases**.
 
 ```graphql explorer
 {
-  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+  original: getMetric(metric: "social_volume_total", version: "original:v1") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-7d"
@@ -381,7 +395,7 @@ using GraphQL **aliases**.
       interval: "1d"
     )
   }
-  v2: getMetric(metric: "social_volume_total", version: "2.0") {
+  modern: getMetric(metric: "social_volume_total", version: "modern:v1") {
     timeseriesDataJson(
       slug: "bitcoin"
       from: "utc_now-7d"
@@ -392,18 +406,18 @@ using GraphQL **aliases**.
 }
 ```
 
-The response contains both `v1` and `v2` objects so you can compare
-default behavior vs explicit version pinning. After discovering additional
-versions from `availableVersions`,
-replace `version: "1.0"` with the desired version string and rerun the query.
+The response contains both `original` and `modern` objects so you can compare
+the two datasets. After discovering additional versions from
+`availableVersions`, replace `version: "modern:v1"` with the desired version
+string and rerun the query.
 You can apply the same pattern to compare availability:
 
 ```graphql explorer
 {
-  v1: getMetric(metric: "social_volume_total", version: "1.0") {
+  original: getMetric(metric: "social_volume_total", version: "original:v1") {
     availableSince(slug: "bitcoin")
   }
-  v2: getMetric(metric: "social_volume_total", version: "2.0") {
+  modern: getMetric(metric: "social_volume_total", version: "modern:v1") {
     availableSince(slug: "bitcoin")
   }
 }
@@ -426,15 +440,17 @@ several ways:
 
 ## Default Behavior and Backward Compatibility
 
-- **No version = `"1.0"`** — if you do not provide a `version` parameter, the
-  API defaults to `"1.0"`. This means all existing queries that were written
+- **No version = default version** — if you do not provide a `version`
+  parameter, the API defaults to `"1.0"`, or to `"original:v1"` for social
+  metrics. This means all existing queries that were written
   before versions were introduced continue to work exactly as before.
 - **Existing integrations are unaffected** — introducing a new version of a
   metric does not change the behavior of the default version. Your dashboards,
   alerts, and scripts will keep returning the same data.
 - **Pin versions in production** — if you rely on a specific version, pass it
-  explicitly (e.g. `version: "1.0"`) rather than relying on the default. This
-  protects your integration even if the default changes in the future.
+  explicitly (e.g. `version: "1.0"` or `version: "modern:v1"`) rather than
+  relying on the default. This protects your integration even if the default
+  changes in the future.
 
 <Notebox type="none">
 
