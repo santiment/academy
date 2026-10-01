@@ -3,7 +3,7 @@ title: Metric Versions
 author: Santiment Team
 date: 2026-02-27
 datePublished: 2026-02-27
-dateModified: 2026-03-16
+dateModified: 2026-09-28
 sidebar:
   order: 25
 ---
@@ -17,7 +17,9 @@ import Notebox from '$components/markdown/Notebox.svelte'
 - [Querying a Specific Version](#querying-a-specific-version)
 - [Using Versions in sanpy](#using-versions-in-sanpy)
 - [Discovering Available Versions](#discovering-available-versions)
+- [Version Access by Plan](#version-access-by-plan)
 - [Version-Aware Fields](#version-aware-fields)
+- [Update Lag per Version](#update-lag-per-version)
 - [Comparing Versions](#comparing-versions)
 - [Experimental Versions](#experimental-versions)
 - [Default Behavior and Backward Compatibility](#default-behavior-and-backward-compatibility)
@@ -309,6 +311,24 @@ For a specific product and plan, execute:
 }
 ```
 
+## Version Access by Plan
+
+Newer versions of social metrics need a higher subscription plan than the
+default `"1.0"`:
+
+| Version | Minimum SanAPI plan              |
+| ------- | -------------------------------- |
+| `"1.0"` | Follows the metric's normal access rules |
+| `"2.0"` | Business Pro or Business Max     |
+| `"2.1"` | Business Max, paid yearly        |
+
+If you request a version your plan does not include, that `getMetric` alias
+returns `null` and the response has an error like this one:
+
+> Metric version modern_pit:v1 requires a paid yearly SanAPI Business Max subscription. Anonymous requests have access to original:v1.
+
+Other aliases in the same request still return data.
+
 ## Version-Aware Fields
 
 The `version` parameter on `getMetric` affects the following fields:
@@ -321,6 +341,30 @@ The `version` parameter on `getMetric` affects the following fields:
 | `histogramData`                        | Returns histogram buckets for the specified version              |
 | `availableSlugs` / `availableProjects` | Returns only the assets that have data for the specified version |
 | `availableSince`                       | Returns the first available date for the specified version       |
+
+<Notebox type="note">
+
+`availableSince` without a `version` argument returns the start date of the
+default version (`"1.0"`), not of the newest version. Before you backtest on a
+newer version, pass that version explicitly (see the `availableSince`
+comparison in [Comparing Versions](#comparing-versions)). A value of
+`1970-01-01T00:00:00Z` means the version has no data for that asset.
+
+</Notebox>
+
+## Update Lag per Version
+
+Versions of the same metric do not all finalize a bar at the same time. This
+affects how soon after a bar closes you can treat its value as final:
+
+| Version | When a bar is final | Notes |
+| ------- | ------------------- | ----- |
+| `"1.0"` (default) | Up to ~12 hours after the bar closes | Documents that arrive late are added for up to 12 hours, so recent values can still go up. Changes to labels or sources can also trigger a recalculation of the previous month. |
+| `"2.1"` ([point-in-time](/metrics/details/point_in_time)) | ~15–30 minutes after the 15-minute window closes | Computed once, 15 minutes after the window ends, for example `[00:00, 00:15)` at `00:30`. Documents that arrive more than 30 minutes after publication are never included, so the value does not change later. |
+
+If you compare `"1.0"` and `"2.1"` for the most recent hours, expect the `"1.0"`
+values to keep changing while the `"2.1"` values stay fixed.
+
 
 ## Comparing Versions
 
