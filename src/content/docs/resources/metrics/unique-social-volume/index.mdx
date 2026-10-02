@@ -4,7 +4,7 @@ author: Ivan
 description: The amount of messages/documents containing a given search term without spam
 # REF metrics-hub/metricshub/unique_social_volume.py
 datePublished: 2021-07-14
-dateModified: 2026-06-17
+dateModified: 2026-09-28
 ---
 
 ## Definition
@@ -96,6 +96,14 @@ Available under the:
 - unique_social_volume_4chan_5m
 - unique_social_volume_4chan_1h
 - unique_social_volume_4chan_1d
+
+> Note: The per-source `1h` metrics (`unique_social_volume_twitter_1h`,
+> `unique_social_volume_reddit_1h`, `unique_social_volume_4chan_1h`,
+> `unique_social_volume_bitcointalk_1h`, `unique_social_volume_telegram_1h`)
+> are not populated right now. They return an empty series, and
+> `availableSince` returns `1970-01-01T00:00:00Z`, even for major assets such
+> as Bitcoin and Ethereum. For per-source data, use the `5m` or `1d` variants,
+> which have data from early 2023. `unique_social_volume_total_1h` is populated.
 
 
 ### Unique Social Volume Computed on 5 Minute Intervals
