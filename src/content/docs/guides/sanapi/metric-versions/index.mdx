@@ -3,7 +3,7 @@ title: Metric Versions
 author: Santiment Team
 date: 2026-02-27
 datePublished: 2026-02-27
-dateModified: 2026-10-01
+dateModified: 2026-10-02
 sidebar:
   order: 25
 ---
@@ -62,6 +62,7 @@ To get versions for a single metric, execute:
     metadata {
       availableVersions {
         version
+        versionName
       }
     }
   }
@@ -76,6 +77,7 @@ To get versions for all metrics, execute:
     name
     availableVersions {
       version
+      versionName
     }
   }
 }
@@ -90,6 +92,7 @@ To get versions for a specific product and plan, execute:
     isAccessible
     availableVersions {
       version
+      versionName
     }
   }
 }
@@ -112,10 +115,27 @@ overwriting the original. This approach provides several benefits:
 ## How Versions Work
 
 Each version is identified by a **version string**. Most metrics use simple
-numeric strings like `"1.0"` and `"2.0"`. Social metrics use named
+numeric strings like `"1.0"` and `"2.0"`. Social metrics also have named
 [social data versions](/metrics/details/social-data-versions):
 `"original:v1"`, `"modern:v1"`, and `"modern_pit:v1"`. Experimental versions use
 descriptive names such as `"Experimental (Weighted Age)"`.
+
+Each entry in `availableVersions` has these fields:
+
+| Field         | Description                                          | Example                                 |
+| ------------- | ---------------------------------------------------- | --------------------------------------- |
+| `version`     | The numeric version string                           | `"2.0"`                                 |
+| `versionName` | The version name, used for social metrics            | `"modern:v1"`                           |
+| `versionNum`  | The numeric version, same as `version`               | `"2.0"`                                 |
+| `description` | A short description of the computation               | `"Modern computation, v1."`             |
+
+For social metrics, the names map to numbers like this:
+
+| `versionName`   | `version` |
+| --------------- | --------- |
+| `original:v1`   | `1.0`     |
+| `modern:v1`     | `2.0`     |
+| `modern_pit:v1` | `2.1`     |
 
 Key points:
 
@@ -192,8 +212,12 @@ Check available versions for a metric:
 import san
 
 san.available_metric_versions("social_dominance_total")
-# ['original:v1', 'modern:v1', 'modern_pit:v1']
+# ['1.0', '2.0', '2.1']
 ```
+
+`available_metric_versions` returns the numeric `version` values. To get the
+version names, query `versionName` through the
+[API](#for-a-single-metric).
 
 Fetch data for a specific version:
 
@@ -238,6 +262,7 @@ Use the `availableVersions` field inside the `metadata` query:
     metadata {
       availableVersions {
         version
+        versionName
       }
     }
   }
@@ -251,13 +276,16 @@ Use the `availableVersions` field inside the `metadata` query:
       "metadata": {
         "availableVersions": [
           {
-            "version": "original:v1"
+            "version": "1.0",
+            "versionName": "original:v1"
           },
           {
-            "version": "modern:v1"
+            "version": "2.0",
+            "versionName": "modern:v1"
           },
           {
-            "version": "modern_pit:v1"
+            "version": "2.1",
+            "versionName": "modern_pit:v1"
           }
         ]
       }
@@ -280,6 +308,7 @@ fetch versions for every metric at once:
     name
     availableVersions {
       version
+      versionName
     }
   }
 }
@@ -294,6 +323,7 @@ For a specific product and plan, execute:
     isAccessible
     availableVersions {
       version
+      versionName
     }
   }
 }
@@ -308,13 +338,16 @@ For a specific product and plan, execute:
         "isAccessible": true,
         "availableVersions": [
           {
-            "version": "original:v1"
+            "version": "1.0",
+            "versionName": "original:v1"
           },
           {
-            "version": "modern:v1"
+            "version": "2.0",
+            "versionName": "modern:v1"
           },
           {
-            "version": "modern_pit:v1"
+            "version": "2.1",
+            "versionName": "modern_pit:v1"
           }
         ]
       }
@@ -373,6 +406,7 @@ affects how soon after a bar closes you can treat its value as final:
 | Version | When a bar is final | Notes |
 | ------- | ------------------- | ----- |
 | `"original:v1"` (default) | Up to ~12 hours after the bar closes | Documents that arrive late are added for up to 12 hours, so recent values can still go up. Changes to labels or sources can also trigger a recalculation of the previous month. |
+| `"modern:v1"` | Up to ~12 hours after the bar closes | Documents that arrive late are added for up to 12 hours, so recent values can still go up. History is not recalculated when labels or sources change. |
 | `"modern_pit:v1"` ([point-in-time](/metrics/details/point_in_time)) | ~15–30 minutes after the 15-minute window closes | Computed once, 15 minutes after the window ends, for example `[00:00, 00:15)` at `00:30`. Documents that arrive more than 30 minutes after publication are never included, so the value does not change later. |
 
 If you compare `"original:v1"` and `"modern_pit:v1"` for the most recent hours,

@@ -3,7 +3,7 @@ title: Fetching Metrics
 author: Santiment Team
 date: 2020-04-06
 datePublished: 2019-11-21
-dateModified: 2026-10-01
+dateModified: 2026-10-02
 sidebar:
   order: 20
 ---
@@ -115,7 +115,7 @@ The following fields are selected:
 - `isAccessible` - is the metric accessible with the selected subscription plan.
 - `restrictedFrom` - what is the earliest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
 - `restrictedTo` - what is the latest date for which this subscription plan can fetch data. If `null`, then no restrictions apply.
-- `availableVersions` - a list of available [versions](#metric-versions) for this metric. Each version has a `version` field (e.g. `"1.0"`, `"2.0"`, or `"original:v1"`, `"modern:v1"` for [social metrics](/metrics/details/social-data-versions)).
+- `availableVersions` - a list of available [versions](#metric-versions) for this metric. Each version has a numeric `version` field (e.g. `"1.0"`, `"2.0"`) and a `versionName` field (e.g. `"original:v1"`, `"modern:v1"` for [social metrics](/metrics/details/social-data-versions)).
 - `docs` - link to the documentation of the metric.
 
 ## Metrics Documentation
