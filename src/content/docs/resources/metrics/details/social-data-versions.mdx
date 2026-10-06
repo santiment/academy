@@ -1,0 +1,105 @@
+---
+title: Social Data Versions
+headline: 'Metrics Details: Social Data Versions'
+description: 'Explains Santiment social data versions (original:v1, modern:v1, modern_pit:v1): what each dataset covers, how to select a version with getMetric, and which version to use for your analysis.'
+author: Santiment Team
+datePublished: 2026-10-01
+dateModified: 2026-10-01
+---
+
+## Overview
+
+Santiment social metrics support versioning. A version identifies the
+underlying dataset and methodology used to calculate a social metric. This makes
+it possible to work with multiple interpretations of the same metric without
+changing the metric name itself.
+
+Social-data versioning serves three purposes:
+
+- **Audience-specific datasets.** Different versions can analyze different sets
+  of accounts, enabling metrics tailored to a specific social audience.
+- **Processing methodology.** Versions can represent alternative technical
+  approaches to collecting or processing social data.
+- **Point-in-time (PIT) data.** PIT versions support historically accurate
+  analysis by using the dataset state that would have been available at each
+  point in time.
+
+## Available Versions
+
+| Version         | Description |
+| --------------- | ----------- |
+| `original:v1`   | The original social dataset. It has been collected and maintained since 2021 and includes many long-standing participants in the crypto market. |
+| `modern:v1`     | A dataset designed to track engagement from currently active Crypto Twitter users. |
+| `modern_pit:v1` | The [point-in-time](/metrics/details/point_in_time) version of `modern:v1`. Use it when historical analyses require PIT-consistent data. |
+
+Choose the version deliberately. Data from different versions may differ because
+their account universe, processing logic, or historical availability rules are
+different. Avoid comparing values across versions as though they were generated
+by one identical dataset.
+
+## Selecting a Version
+
+Specify the desired version through the `version` argument of `getMetric`. The
+metric name remains unchanged; only the dataset version changes.
+
+For example, the query below retrieves `social_volume_twitter` for Bitcoin from
+both the modern dataset and its PIT counterpart over the same two-hour interval.
+
+```graphql explorer
+{
+  modern: getMetric(
+    metric: "social_volume_twitter",
+    version: "modern:v1"
+  ) {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-2h"
+      to: "utc_now"
+      interval: "5m"
+    )
+  }
+
+  modernPit: getMetric(
+    metric: "social_volume_twitter",
+    version: "modern_pit:v1"
+  ) {
+    timeseriesDataJson(
+      slug: "bitcoin"
+      from: "utc_now-2h"
+      to: "utc_now"
+      interval: "5m"
+    )
+  }
+}
+```
+
+Not every version is available on every plan. See
+[Version Access by Plan](/sanapi/metric-versions#version-access-by-plan).
+
+## Which Version to Use
+
+### Use original:v1
+
+Use the original version when your analysis needs the long-running social
+dataset maintained since 2021, including long-standing crypto-market
+participants.
+
+### Use modern:v1
+
+Use the modern version when you want to measure engagement among currently
+active Crypto Twitter users.
+
+### Use modern_pit:v1
+
+Use the PIT version for historical research, backtesting, or any workflow where
+data must reflect what was available at the time rather than a later revised
+dataset.
+
+### Keep the version fixed
+
+For a single analysis, dashboard, or backtest, keep the version consistent
+across all queries and time ranges unless you intentionally want to study
+methodological differences.
+
+For general information about metric versions, see
+[Metric Versions](/sanapi/metric-versions).
