@@ -3,16 +3,8 @@ title: Development Activity Metric
 author: Santiment Team
 description: The development activity metrics provide data and insight about the amount of work done in Github public repositories.
 datePublished: 2023-06-02
-dateModified: 2026-08-03
+dateModified: 2026-10-06
 ---
-
-import Notebox from '$components/markdown/Notebox.svelte'
-
-<Notebox type="exclamation">
-
-**Data reliability notice (August 2026):** The Development Activity metrics are currently broken due to an issue with our GitHub data collection, and are expected to remain unreliable for a while. The affected metrics are labeled accordingly and temporarily hidden on the Santiment platform. We will update this page once the data is restored.
-
-</Notebox>
 
 ## Definition
 
@@ -49,6 +41,65 @@ There are 3 development activity metrics available:
   belong to it. For example the `ethereum` ecosystem contains all the projects
   that build on the Ethereum blockchain or contribute to the blockchain in any
   other way.
+
+---
+
+## Versions
+
+`dev_activity` has two versions:
+
+| Version | Version name  | Description |
+| ------- | ------------- | ----------- |
+| `1.0`   | `original:v1` | The default. Counts the unique GitHub events of an organization. |
+| `2.0`   | `modern:v1`   | Removes the activity of bots, both official bot accounts and suspicious activity from personal accounts. |
+
+Version 2.0 is designed to measure the work done by people rather than by bots
+and automation:
+
+- **Official bot accounts.** Activity from accounts that identify as bots, such
+  as Dependabot and other GitHub apps, is removed.
+- **Unofficial bots.** Some automation runs under regular, personal accounts, so
+  its name does not show that it is a bot. Version 2.0 recognizes it by its
+  behavior, looking at each account one UTC day at a time:
+  - **Removed.** A person does not work around the clock or at a machine's
+    pace. If an account contributes code in 20 or more different hours of a
+    day, or makes 100 or more code contributions within a single hour, all of
+    its activity in that GitHub organization on that day is removed. For
+    example, an account that makes 150 code contributions between 14:00 and
+    15:00 UTC is treated as a bot for that day, and its activity outside that
+    busy hour is removed too.
+  - **Limited.** An account below these limits can still be very busy in a
+    single repository. Its code contributions in one repository count as at
+    most 100 per day. For example, 400 code contributions in one repository on
+    one day count as 100.
+
+  Only development-related activity counts toward these checks. Activity such
+  as deleting many branches in quick succession, forking or watching
+  repositories, or commenting on issues never marks an account as a bot and
+  never triggers the daily limit.
+
+In version 2.0, `dev_activity` also counts only the activity that reflects work
+on the code.
+
+Pass the version in the `version` argument of `getMetric`. When it is omitted,
+version `1.0` is used. Both versions are free. Only `dev_activity` has version
+2.0; the precomputed, ecosystem and change metrics have only version `1.0`.
+
+```graphql explorer
+{
+  getMetric(metric: "dev_activity", version: "modern:v1") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+See [Development Activity Versions](/metrics/development-activity/development-activity-versions)
+for the full description of version 2.0.
 
 ---
 
@@ -166,6 +217,91 @@ To check what assets are part of the ecosystem and what are their github links:
 ```
 
 **[Run in Explorer](<https://api.santiment.net/graphiql?query=%7B%0A%20%20getEcosystems(ecosystems%3A%20%5B%22ethereum%22%5D)%7B%0A%20%20%20%20name%0A%20%20%20%20projects%7B%0A%20%20%20%20%20%20slug%0A%20%20%20%20%20%20githubLinks%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)**
+
+---
+
+### Version 2.0 Queries
+
+The queries below use version 2.0 (`modern:v1`). See
+[Development Activity Versions](/metrics/development-activity/development-activity-versions)
+for how it differs from version 1.0.
+
+Compare version 1.0 and version 2.0 side by side. The difference shows how
+much of the activity comes from bots and suspicious activity:
+
+```graphql explorer
+{
+  original: getMetric(metric: "dev_activity", version: "original:v1") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+  modern: getMetric(metric: "dev_activity", version: "modern:v1") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+---
+
+Fetch the total version 2.0 dev activity over the last 90 days:
+
+```graphql explorer
+{
+  getMetric(metric: "dev_activity", version: "modern:v1") {
+    aggregatedTimeseriesData(
+      slug: "ethereum"
+      from: "utc_now-90d"
+      to: "utc_now"
+      aggregation: SUM
+    )
+  }
+}
+```
+
+---
+
+Smooth the daily values with a 7-day moving average:
+
+```graphql explorer
+{
+  getMetric(metric: "dev_activity", version: "modern:v1") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-90d"
+      to: "utc_now"
+      interval: "1d"
+      transform: {type: "moving_average", movingAverageBase: 7}
+    )
+  }
+}
+```
+
+---
+
+Fetch hourly values. The bot checks look at whole UTC days, so a day's activity
+is removed or limited the same way with hourly intervals:
+
+```graphql explorer
+{
+  getMetric(metric: "dev_activity", version: "modern:v1") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-2d"
+      to: "utc_now"
+      interval: "1h"
+    )
+  }
+}
+```
 
 ---
 
