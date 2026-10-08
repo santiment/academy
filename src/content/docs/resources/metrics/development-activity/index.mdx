@@ -2,16 +2,8 @@
 title: Development Activity Metrics
 author: Santiment Team
 datePublished: 2020-03-31
-dateModified: 2026-08-03
+dateModified: 2026-10-06
 ---
-
-import Notebox from '$components/markdown/Notebox.svelte'
-
-<Notebox type="exclamation">
-
-**Data reliability notice (August 2026):** Our GitHub-based metrics (Development Activity, GitHub Activity, and their contributors count variants) are currently broken due to an issue with our GitHub data collection, and are expected to remain unreliable for a while. The affected metrics are labeled accordingly and temporarily hidden on the Santiment platform. We will update this page once the data is restored.
-
-</Notebox>
 
 ## Metrics
 
@@ -27,6 +19,20 @@ These metrics include:
   events for a project.
 - [Github Activity Contributors Count](/metrics/development-activity/github-activity-contributors-count) -
   Tracks the number of unique Github activity contributors.
+
+Development Activity and Github Activity have two versions. Version 2.0
+(`modern:v1`) removes the activity of bots, both official bot accounts and
+suspicious activity from personal accounts. See
+[Development Activity Versions](/metrics/development-activity/development-activity-versions/).
+
+> **Note:** The full development activity data is available through the
+> [API](/sanapi/accessing-the-api/). This includes data for crypto assets and for
+> any GitHub organization with public repositories, at every supported interval.
+>
+> The [S3 export](/for-developers/metrics-exported-s3) is more limited. It
+> contains only **daily** values, and only for the **supported crypto assets**.
+> Data for other GitHub organizations and intervals lower than one day are not
+> included in the S3 export, but you can still fetch them through the API.
 
 ---
 
@@ -119,26 +125,5 @@ If you want to learn more about the difference - and the benefits of our bespoke
 approach - I highly suggest [this
 piece](https://medium.com/santiment/tracking-github-activity-of-crypto-projects-introducing-a-better-approach-9fb1af3f1c32)
 by Valentin, our ex-CTO.
-
----
-
-## As a Trading Strategy
-
-While not common, development-related metrics can also be used as a novel
-trading strategy. Some time ago, we tested a portfolio of only the top ERC20
-projects by development activity, refreshed each month.
-
-We backtested the strategy from August 2017 to October 2018. [The portfolio
-1](https://santiment.net/blog/github-activity-portfolio/) turned a profit, but
-did not beat hodling BTC overall.
-![dev-activity-backtest](./dev-activity-backtest.png)
-
-However, our portfolio was also more volatile than hodling over time,
-registering significantly larger tops in January and May of 2018. If you were to
-sell at one of those intersections instead, our Github portfolio would in fact
-be the winner.
-
-As a custom metric, dev activity can help you understand a project's dedication
-to its product, and in turn - its end users.
 
 ---
