@@ -3,7 +3,7 @@ title: MVRV - Market Value To Realized Value
 author: Santiment Team
 description: MVRV (Market Value to Realized Value) ratio shows the average profit or loss of all the coins currently in circulation according to the current price.
 datePublished: 2019-11-21
-dateModified: 2025-10-28
+dateModified: 2026-10-21
 ---
 
 
@@ -68,6 +68,18 @@ MVRV value of 2 means that if all holders sell their coins/tokens at the current
 
 If the MVRV value is between 0 and 1, then the market is "undervalued" on average, meaning most people will realize losses if they all sell their holdings at the current price.
 
+### Where Do Specific Thresholds (like ±15%) Come From?
+
+You may see MVRV-based warning thresholds referenced elsewhere, such as a ±15% divergence on the 30-day MVRV for a given asset.
+These are not fixed values derived from the MVRV formula itself.
+They are rule-of-thumb levels based on backtests Santiment standardized across many assets, meant to flag when an asset is entering an "opportunity" or "danger" zone relative to its own history.
+
+Because assets differ significantly in volatility, a single threshold does not transfer cleanly between them.
+Bitcoin is comparatively low-volatility, so a 15% average move already stands out.
+A small, newly listed, high-volatility token might only become notable around ±50%.
+
+Treat any such threshold as a probability strengthener rather than a hard rule: the closer the ratio gets to a historical extreme for that asset, the more likely a reversal becomes, but the rule can and does break.
+
 ### Additional Resources
 
 - [Video: How to use MVRV](https://www.youtube.com/watch?v=vbYQLNJ40yw)
@@ -124,6 +136,10 @@ and the short-term holders manage to realize profits.
 
 Ratio
 
+The API returns this ratio directly, not a percentage.
+A value of `1.15` means the average holder is sitting on a 15% unrealized profit, and a value of `0.85` means a 15% unrealized loss.
+This matches the "100% (or 2.0)" example above: a ratio of `2.0` is a 100% profit.
+
 ---
 
 ## Data Type
@@ -147,6 +163,43 @@ Intervals](/metrics/details/frequency#five-minute-frequency).
 
 ---
 
+## Metric Version
+
+As of this writing, MVRV metrics have a single version, `1.0` (`original:v1`), confirmed live via `availableVersions`.
+See [Metric Versions](/sanapi/metric-versions) for how versioning works generally across the API.
+
+```graphql explorer
+{
+  getMetric(metric: "mvrv_usd_30d") {
+    metadata {
+      availableVersions {
+        version
+        versionName
+      }
+    }
+  }
+}
+```
+
+---
+
+## Revisions
+
+A daily MVRV value can still change for about 48 hours after the day closes, while late-arriving data is incorporated.
+This is its stabilization period.
+Beyond that window, there is no scheduled revision cycle, and the routine pipeline does not revise the value further.
+
+Historical values can still change outside that window if Santiment deliberately reruns the full computation, for example after fixing a bug in the price, market cap, or on-chain supply data that MVRV depends on.
+Such a rerun can affect the full history of the metric, not just recent values.
+
+MVRV is not currently part of the [`onlyFinalizedData`](/metrics/finalized) scope, which is limited to Bitcoin Cash and a small set of other metrics as of this writing.
+
+Santiment does not retain point-in-time snapshots of MVRV metrics as they were originally published.
+The API always returns the latest revised value for a given timestamp; there is no way to retrieve a prior, unrevised value.
+[Point-in-Time (PIT) metrics](/metrics/details/point_in_time) exist for social metrics such as Social Volume and Sentiment, but not for on-chain metrics like MVRV.
+
+---
+
 ## Available Assets
 
 The daily interval MVRV metrics are available for [these
@@ -154,6 +207,17 @@ assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetr
 
 The 5-minute MVRV metrics are available for [these
 assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22mvrv_usd_intraday%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+
+The earliest reliable date varies by asset; for example, the earliest available `mvrv_usd_30d` data point for Ethereum is 2015-08-07, and values normalize after 2015-08-29 as the realized cap accumulates enough history.
+Use `availableSince` to check the earliest data point for any asset:
+
+```graphql explorer
+{
+  getMetric(metric: "mvrv_usd_30d") {
+    availableSince(slug: "ethereum")
+  }
+}
+```
 
 ---
 
