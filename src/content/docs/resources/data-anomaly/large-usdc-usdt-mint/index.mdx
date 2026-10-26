@@ -8,11 +8,18 @@ dateModified: 2025-10-30
 
 ## Definition
 
-**Large USDC-USDT Mint** Anomaly monitors and detects unusually large minting events of USDC and USDT stablecoins on the Ethereum blockchain. It tracks daily mint volumes and triggers alerts when the combined minting amount exceeds a predefined threshold (default: $1 billion USD).
+**Large USDC-USDT Mint** Anomaly monitors and detects unusually large minting events of USDC and USDT stablecoins on the Ethereum blockchain. It tracks daily mint volumes and triggers alerts when the combined minting amount exceeds a predefined threshold (default: 0.8% of total supply).
 
 The data anomaly aggregates mint events from both USDC and USDT smart contracts and analyzes the total daily volume to identify significant market events that could indicate major institutional activity or market movements.
 
-![](image1.png)
+![](large_usdc_usdt_mint.png)
+
+## Covered assets
+
+* UST-coin
+* Tether (USDT)
+
+Both are tracked on the Ethereum blockchain.
 
 ## Use Cases
 - **Market Analysis**: Identifying periods of high stablecoin demand that may precede significant crypto market activity

@@ -2,7 +2,7 @@
 title: API Historical and Realtime data restrictions
 author: Santiment Team
 datePublished: 2024-07-02
-dateModified: 2025-04-30
+dateModified: 2026-09-28
 sidebar:
   label: Historical and Realtime data restrictions
   order: 50
@@ -77,6 +77,21 @@ The following fields are selected:
 
 You are interested in the `restrictedFrom` and `restrictedTo` fields.
 If they are both `null` -- the selected subscription plan has access to the full historical and realtime data for that metric.
+
+## Provisional Edge Bars
+
+The data point closest to `restrictedTo` (for example, the bar from 30 days ago
+on the Free plan) may be provisional:
+
+- if the interval you query goes past `restrictedTo`, that last bar only
+  includes data up to the cutoff, so it can be lower than the full value;
+- for social metrics, the default version can still receive late data for up
+  to 12 hours after a bar closes (see [Update Lag per Version](/sanapi/metric-versions#update-lag-per-version)).
+
+The same bar can therefore look different on a paid plan or in a later request.
+If you need consistent values, leave out the last bar before `restrictedTo`.
+Likewise, if `restrictedFrom` falls inside an interval, the first bar only
+covers part of it.
 
 <Notebox type="none">
 

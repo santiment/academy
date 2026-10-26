@@ -3,7 +3,7 @@ title: Categorized Social Volume
 author: Santiment Team
 description: Twitter social volume broken down by account category
 datePublished: 2026-08-26
-dateModified: 2026-08-26
+dateModified: 2026-09-28
 sidebar:
   label: Social Volume Categorized
 ---
@@ -28,9 +28,12 @@ These metrics are currently in beta status.
 
 [Restricted Access](/metrics/details/access#restricted-access).
 
-As of this writing, the SanAPI returns the following error for every asset covered by these metrics, regardless of subscription tier:
+As of this writing, these metrics are available only to alpha and beta users.
+Every other account gets the following error for every asset, whatever its subscription plan, Business Max included:
 
-> The metric `social_volume_twitter_btc_maxi` is currently in beta phase and is exclusively available to select users.
+> The metric social_volume_twitter_kol is currently in beta phase and is exclusively available to alpha and beta users.
+
+`getAccessRestrictions` still shows these metrics as `isAccessible: true` for paid plans, because it does not account for the beta restriction.
 
 ---
 

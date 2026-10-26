@@ -1,0 +1,40 @@
+---
+title: Social Price Correlation
+author: Santiment Team
+description: Data Anomaly shows when social sentiment and price stop moving together as usual, highlighting potential regime shifts and reversals.
+datePublished: 2026-08-31
+dateModified: 2026-08-31
+---
+
+## Definition
+
+**Social Price Correlation** signal watches whether the crowd's mood and price are moving in sync — or drifting apart in an unusual way.
+
+Every hour, we measure how positive the conversation around a coin is on Twitter, and compare it to that coin's price. When the two are behaving the way they normally do relative to each other, no signal fires. When they start moving in an unusually tight lockstep — or unusually independently — that's when we flag it.
+
+The signal doesn't just look at whether sentiment and price are correlated right now. It asks: is the current correlation meaningfully different from how this asset has behaved over the past several weeks? We use over 40 days of history as a baseline, and only fire when the current reading is more than 3 standard deviations away from that baseline — a threshold that filters out most noise.
+
+The signal can fire in either direction:
+
+- **Aligned** — sentiment and price are moving together much more tightly than usual. This can happen before or during strong trending moves, when the crowd and the market are unusually in agreement.
+- **Decoupled** — sentiment and price are diverging more than usual. The crowd is feeling one way; the market is doing another. Historically, these divergences can precede reversals or periods of high volatility.
+
+In practice, this signal is not just checking whether correlation is positive or negative. It checks whether the current social-price relationship is abnormally different from that asset's own recent baseline.
+
+## Covered assets
+
+* Bitcoin
+* Ethereum
+* Solana
+* Dogecoin
+* XRP
+* Tron
+* Cardano
+
+## Use Cases
+
+- Detect regime shifts in how crowd sentiment and price interact, especially when the usual relationship suddenly breaks or becomes unusually tight.
+- Flag "disbelief rally" style setups: price is strong while sentiment does not confirm, leading to unusually weak or negative correlation versus baseline.
+- Flag "denial" style selloffs: price is weak while sentiment stays resilient or rises, creating unusually weak correlation versus baseline.
+- Flag euphoric or capitulation-like environments: price and sentiment move together more strongly than usual, producing unusually high correlation versus baseline.
+- Use as context for market structure and risk assessment rather than as a standalone directional trigger. The anomaly score tells us the relationship is abnormal; price direction and sentiment direction still need to be interpreted together.
