@@ -23,3 +23,25 @@ dateModified: 2025-10-30
 - Risk management for ETH positions
 
 This data anomaly helps traders and analysts anticipate potential market pressure from large ETH holders, particularly focusing on cases where long-term holders (30+ days) initiate substantial outflows that could impact market conditions.
+
+## SanAPI
+
+Available under the `anomaly_eth_whale_dump` name.
+
+Example of query for the **raw signals**, including their metadata:
+
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_eth_whale_dump"
+    from: "utc_now-30d"
+    to: "utc_now"
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```
