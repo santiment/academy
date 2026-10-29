@@ -35,3 +35,25 @@ Exchanges or asset managers can use this anomaly to detect early signs of artifi
 - **Alpha Signal for Reversals**
 Divergence between price and network activity may indicate upcoming price correction. Traders can use this anomaly as a contrarian indicator to time exits or hedging strategies.
 
+## SanAPI
+
+Available under the `anomaly_price_network_activity_divergence` name.
+
+Example of query for the **raw signals** for all covered assets, including their metadata:
+
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_price_network_activity_divergence"
+    from: "utc_now-30d"
+    to: "utc_now"
+    selector: { watchlistSlug: "projects" }
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```

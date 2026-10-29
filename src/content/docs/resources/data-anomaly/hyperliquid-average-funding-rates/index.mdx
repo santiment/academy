@@ -14,7 +14,7 @@ dateModified: 2025-10-30
 
 ## Covered assets
 
-* Ass assets
+* All assets
 
 ## Use Cases
 
@@ -32,3 +32,26 @@ dateModified: 2025-10-30
 
 - Track liquidity conditions and market sentiment
 - Monitor unusual market behavior for research/compliance
+
+## SanAPI
+
+Available under the `anomaly_hyperliquid_avg_funding_rate` name.
+
+Example of query for the **raw signals** for all covered assets, including their metadata:
+
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_hyperliquid_avg_funding_rate"
+    from: "utc_now-30d"
+    to: "utc_now"
+    selector: { watchlistSlug: "projects" }
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```

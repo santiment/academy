@@ -28,3 +28,26 @@ Version 3 uses the native daily Age Consumed metric for the top 300 non-stableco
 The signal helps analysts spot unusual movement from previously idle holdings and focus follow-up research on holder behavior, exchange flows, price action, and market context.
 
 It is a contextual risk marker, not a standalone trading signal. A trigger does not by itself show that the assets were sold, deposited to an exchange, or will produce negative future returns.
+
+## SanAPI
+
+Available under the `anomaly_old_coins_moved` name.
+
+Example of query for the **raw signals** for all covered assets, including their metadata:
+
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_old_coins_moved"
+    from: "utc_now-30d"
+    to: "utc_now"
+    selector: { watchlistSlug: "projects" }
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```

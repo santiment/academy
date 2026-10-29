@@ -32,3 +32,26 @@ The anomaly processes z-score values that represent how many standard deviations
 - **Market Sentiment Analysis**: Understanding shifts in public perception and social sentiment toward specific assets before they impact prices
 - **Risk Management**: Detecting when assets are losing social traction, potentially indicating weakening fundamentals or community support
 - **Trading Opportunities**: Finding assets gaining unexpected social momentum that may precede price movements
+
+## SanAPI
+
+Available under the `anomaly_social_dominance_spike` name.
+
+Example of query for the **raw signals** for all covered assets, including their metadata:
+
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_social_dominance_spike"
+    from: "utc_now-30d"
+    to: "utc_now"
+    selector: { watchlistSlug: "projects" }
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```
