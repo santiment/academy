@@ -3,12 +3,12 @@
   import type { HTMLQuoteAttributes } from 'svelte/elements'
   import { cn } from 'san-webkit-next/ui/utils'
 
-  type Props = HTMLQuoteAttributes & {
+  type TProps = HTMLQuoteAttributes & {
     children: Snippet
     class?: string
   }
 
-  let { children, class: className, ...rest }: Props = $props()
+  let { children, class: className, ...rest }: TProps = $props()
 </script>
 
 <blockquote

@@ -1,5 +1,5 @@
 ---
-import type { SidebarSection } from '$modules/navigation/sidebar'
+import type { TSidebarSection } from '$modules/navigation/sidebar'
 
 import '../app.css'
 import 'san-webkit-next/app.css'
@@ -14,7 +14,7 @@ import Intercom from '$modules/support/components/Intercom.astro'
 import FirstPromoter from '$modules/analytics/components/FirstPromoter.astro'
 
 type Props = {
-  sidebarData?: SidebarSection[]
+  sidebarData?: TSidebarSection[]
 }
 
 const { slug } = Astro.params

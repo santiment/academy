@@ -1,17 +1,17 @@
 <script lang="ts">
-  import type { SidebarGroup } from '$modules/navigation/sidebar'
+  import type { TSidebarGroup } from '$modules/navigation/sidebar'
 
   import { slide } from 'svelte/transition'
   import { cn } from 'san-webkit-next/ui/utils'
   import Button from 'san-webkit-next/ui/core/Button'
 
-  interface Props {
-    item: SidebarGroup
+  type TProps = {
+    item: TSidebarGroup
     currentSlug: string
     onLinkClick?: () => void
   }
 
-  let { item, currentSlug, onLinkClick }: Props = $props()
+  let { item, currentSlug, onLinkClick }: TProps = $props()
 
   const checkActive = (slug: string) => 
     slug === item.slug || (item.items?.some(child => child.slug === slug) ?? false)
@@ -25,7 +25,7 @@
     if (isActive) isOpen = true
   })
 
-  const handleToggle = (e: MouseEvent) => {
+  function handleToggle(e: MouseEvent) {
     e.preventDefault()
     e.stopPropagation()
 
@@ -76,7 +76,7 @@
             class={cn(
               'relative block py-1.5 pl-4 pr-4 text-base transition-colors',
               'hover:text-green text-fiord',
-              isSubActive && "text-green before:absolute before:left-[-1px] before:top-0 before:h-full before:w-[1px] before:bg-green"
+              isSubActive && "text-green before:absolute before:-left-px before:top-0 before:h-full before:w-px before:bg-green"
             )}
             onclick={onLinkClick}
           >
