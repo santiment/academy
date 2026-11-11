@@ -52,7 +52,11 @@
 <ul class="fixed ml-[660px] top-[95px] pr-2 flex flex-col max-h-[85vh] max-w-[210px] overflow-y-auto overflow-x-hidden lg:hidden">
   {#if relatedProduct}
     <li>
-      <a href={relatedProduct.href} target="_blank" class="flex items-center gap-2 text-green hover:text-green-hover fill-green hover:fill-green-hover">
+      <a
+        href={relatedProduct.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 text-green hover:text-green-hover fill-green hover:fill-green-hover">
         Go to {relatedProduct.title}
         <Svg id="right-arrow" />
       </a>

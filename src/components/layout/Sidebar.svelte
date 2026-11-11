@@ -1,17 +1,17 @@
 <script lang="ts">
   import { cn } from 'san-webkit-next/ui/utils'
-  import type { SidebarSection } from '$modules/navigation/sidebar'
+  import type { TSidebarSection } from '$modules/navigation/sidebar'
   import SidebarGroup from './SidebarGroup.svelte'
   import SidebarLink from './SidebarLink.svelte'
 
-  interface Props {
-    sidebarData: SidebarSection[]
+  type TProps = {
+    sidebarData: TSidebarSection[]
     slug: string
     class?: string
     onLinkClick?: () => void
   }
 
-  let { sidebarData, slug, class: className, onLinkClick }: Props = $props()
+  let { sidebarData, slug, class: className, onLinkClick }: TProps = $props()
 </script>
 
 {#snippet sectionHeader(title: string, hasBorder: boolean)}

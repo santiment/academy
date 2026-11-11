@@ -2,17 +2,17 @@ import type { CollectionEntry } from 'astro:content'
 
 import { getBreadcrumbs } from '$modules/navigation/breadcrumbs'
 import { getPublicSlug } from '$modules/navigation/paths'
-import type { SidebarSection } from '$modules/navigation/sidebar'
+import type { TSidebarSection } from '$modules/navigation/sidebar'
 
 import { PRODUCTS } from '$config/products'
 
-interface Context {
-  sidebarData: SidebarSection[]
+type TContext = {
+  sidebarData: TSidebarSection[]
   docsMap: Map<string, CollectionEntry<'docs'>>
   slugRegistry: Map<string, string>
 }
 
-export function prepareDocProps(doc: CollectionEntry<'docs'>, ctx: Context) {
+export function prepareDocProps(doc: CollectionEntry<'docs'>, ctx: TContext) {
   const { sidebarData, docsMap, slugRegistry } = ctx
 
   const publicSlug = getPublicSlug(doc.id)

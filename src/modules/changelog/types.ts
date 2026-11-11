@@ -1,49 +1,49 @@
-export type Pagination = {
+export type TPagination = {
   hasMore: boolean
   currentPage: number
   totalDates: number
   totalPages: number
 }
 
-type ChangelogResponse<EntryType> = {
+type TChangelogResponse<EntryType> = {
   entries: EntryType[]
-  pagination: Pagination
+  pagination: TPagination
 }
 
-type MetricDocs = {
+type TMetricDocs = {
   link: string
 }
 
-type Metric = {
+type TMetric = {
   humanReadableName: string
   metric: string
-  docs?: MetricDocs
+  docs?: TMetricDocs
 }
 
-export type MetricCreatedEvent = {
-  metric: Metric
+export type TMetricCreatedEvent = {
+  metric: TMetric
   eventTimestamp: string
 }
 
-export type MetricDeprecatedEvent = {
-  metric: Metric
+export type TMetricDeprecatedEvent = {
+  metric: TMetric
   eventTimestamp: string
   deprecationNote?: string
 }
 
-type MetricsChangelogEntry = {
+type TMetricsChangelogEntry = {
   date: string
-  createdMetrics: MetricCreatedEvent[]
-  deprecatedMetrics: MetricDeprecatedEvent[]
+  createdMetrics: TMetricCreatedEvent[]
+  deprecatedMetrics: TMetricDeprecatedEvent[]
 }
 
-export type MetricsChangelogData = ChangelogResponse<MetricsChangelogEntry>
+export type TMetricsChangelogData = TChangelogResponse<TMetricsChangelogEntry>
 
-export type MetricsChangelogQueryResponse = {
-  metricsChangelog: MetricsChangelogData
+export type TMetricsChangelogQueryResponse = {
+  metricsChangelog: TMetricsChangelogData
 }
 
-type Asset = {
+type TAsset = {
   name: string
   ticker: string
   slug: string
@@ -52,25 +52,25 @@ type Asset = {
   link?: string
 }
 
-export type AssetCreatedEvent = {
-  asset: Asset
+export type TAssetCreatedEvent = {
+  asset: TAsset
   eventTimestamp: string
 }
 
-export type AssetHiddenEvent = {
-  asset: Asset
+export type TAssetHiddenEvent = {
+  asset: TAsset
   eventTimestamp: string
   hidingReason?: string
 }
 
-export type AssetsChangelogEntry = {
+export type TAssetsChangelogEntry = {
   date: string
-  createdAssets: AssetCreatedEvent[]
-  hiddenAssets: AssetHiddenEvent[]
+  createdAssets: TAssetCreatedEvent[]
+  hiddenAssets: TAssetHiddenEvent[]
 }
 
-export type AssetsChangelogData = ChangelogResponse<AssetsChangelogEntry>
+export type TAssetsChangelogData = TChangelogResponse<TAssetsChangelogEntry>
 
-export type AssetsChangelogQueryResponse = {
-  assetsChangelog: AssetsChangelogData
+export type TAssetsChangelogQueryResponse = {
+  assetsChangelog: TAssetsChangelogData
 }

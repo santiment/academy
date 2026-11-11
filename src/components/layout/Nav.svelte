@@ -8,11 +8,11 @@
   import Search from '$components/features/search/Search.svelte'
   import ProductsButton from '$components/ui/ProductsButton.svelte'
   import Sidebar from '$components/layout/Sidebar.svelte'
-  import type { SidebarSection } from '$modules/navigation/sidebar'
+  import type { TSidebarSection } from '$modules/navigation/sidebar'
 
   type TProps = {
     slug?: string
-    sidebarData?: SidebarSection[]
+    sidebarData?: TSidebarSection[]
   }
 
   const { slug, sidebarData }: TProps = $props()
