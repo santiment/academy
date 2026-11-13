@@ -38,3 +38,26 @@ In practice, this signal is not just checking whether correlation is positive or
 - Flag "denial" style selloffs: price is weak while sentiment stays resilient or rises, creating unusually weak correlation versus baseline.
 - Flag euphoric or capitulation-like environments: price and sentiment move together more strongly than usual, producing unusually high correlation versus baseline.
 - Use as context for market structure and risk assessment rather than as a standalone directional trigger. The anomaly score tells us the relationship is abnormal; price direction and sentiment direction still need to be interpreted together.
+
+## SanAPI
+
+Available under the `anomaly_social_price_correlation` name.
+
+Example of query for the **raw signals** for all covered assets, including their metadata:
+
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_social_price_correlation"
+    from: "utc_now-30d"
+    to: "utc_now"
+    selector: { watchlistSlug: "projects" }
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```

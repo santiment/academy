@@ -29,3 +29,25 @@ Both are tracked on the Ethereum blockchain.
 - **Trading Insights**: Providing early indicators of potential market movements driven by large capital inflows
 
 The data anomaly helps traders, analysts, and institutions stay informed about significant stablecoin supply changes that often correlate with broader cryptocurrency market dynamics.
+
+## SanAPI
+
+Available under the `anomaly_large_stablecoin_mint` name.
+
+Example of query for the **raw signals**, including their metadata:
+
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_large_stablecoin_mint"
+    from: "utc_now-30d"
+    to: "utc_now"
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```
