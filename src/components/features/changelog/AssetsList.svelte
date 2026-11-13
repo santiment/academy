@@ -5,18 +5,18 @@
   import { getFormattedDetailedTimestamp } from 'san-webkit-next/utils/dates'
 
   import type { 
-    AssetsChangelogData, 
-    AssetCreatedEvent, 
-    AssetHiddenEvent 
+    TAssetsChangelogData, 
+    TAssetCreatedEvent, 
+    TAssetHiddenEvent 
   } from '$modules/changelog/types'
 
-  let { initialData, pageSize = 20 } = $props<{ initialData: AssetsChangelogData, pageSize?: number }>()
+  let { initialData, pageSize = 20 } = $props<{ initialData: TAssetsChangelogData, pageSize?: number }>()
 
   const fetchNextPage = (page: number) => 
     queryAssetsChangelog(UniQuery(fetch))(page, pageSize, '')
 </script>
 
-{#snippet createdAsset(item: AssetCreatedEvent)}
+{#snippet createdAsset(item: TAssetCreatedEvent)}
   {@const asset = item.asset}
 
   <a href={asset?.link} target="_blank" rel="noreferrer">
@@ -25,7 +25,7 @@
   </a>
 {/snippet}
 
-{#snippet hiddenAsset(item: AssetHiddenEvent)}
+{#snippet hiddenAsset(item: TAssetHiddenEvent)}
   {@const asset = item.asset}
 
   <strong>Hidden</strong> {asset?.name}

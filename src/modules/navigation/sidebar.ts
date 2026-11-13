@@ -4,7 +4,7 @@ import { getPublicSlug } from '$modules/navigation/paths'
 
 import { ROOT_SECTIONS } from '$config/navigation'
 
-export type SidebarLink = {
+export type TSidebarLink = {
   type: 'link'
   title: string
   href: string
@@ -12,30 +12,28 @@ export type SidebarLink = {
   order: number
 }
 
-export type SidebarGroup = Omit<SidebarLink, 'type'> & {
+export type TSidebarGroup = Omit<TSidebarLink, 'type'> & {
   type: 'group'
-  items: SidebarItem[]
+  items: TSidebarItem[]
 }
 
-export type SidebarItem = SidebarLink | SidebarGroup
+export type TSidebarItem = TSidebarLink | TSidebarGroup
 
-export type SidebarSection = {
+export type TSidebarSection = {
   title: string
-  items: SidebarItem[]
+  items: TSidebarItem[]
 }
 
-type SidebarItemDraft = Omit<SidebarGroup, 'type'> & {
+type TSidebarItemDraft = Omit<TSidebarGroup, 'type'> & {
   type: 'link' | 'group'
 }
 
-function isGroup(item: SidebarItem): item is SidebarGroup {
+function isGroup(item: TSidebarItem): item is TSidebarGroup {
   return item.type === 'group'
 }
 
-function sortSidebarItems(items: SidebarItem[]) {
-  items.sort(
-    (a, b) => (a.order - b.order) || a.title.localeCompare(b.title),
-  )
+function sortSidebarItems(items: TSidebarItem[]) {
+  items.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title))
 
   items.forEach((item) => {
     if (isGroup(item)) {
@@ -46,17 +44,17 @@ function sortSidebarItems(items: SidebarItem[]) {
 
 export function getSidebar(
   allDocs: CollectionEntry<'docs'>[],
-): SidebarSection[] {
+): TSidebarSection[] {
   const docs = allDocs.filter((d) => !d.data.sidebar.hidden)
 
-  const sidebarMap: Record<string, SidebarSection> = Object.fromEntries(
+  const sidebarMap: Record<string, TSidebarSection> = Object.fromEntries(
     Object.keys(ROOT_SECTIONS).map((key) => [
       key,
       { title: ROOT_SECTIONS[key], items: [] },
     ]),
   )
 
-  const itemMap = new Map<string, SidebarItemDraft>()
+  const itemMap = new Map<string, TSidebarItemDraft>()
 
   docs.forEach((doc) => {
     itemMap.set(doc.id, {

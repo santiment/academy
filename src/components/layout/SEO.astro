@@ -3,7 +3,7 @@ import type { TBreadcrumb } from '$modules/navigation/breadcrumbs'
 
 import { SEO as seoConfig } from '../../config/seo'
 
-export interface Props {
+export type Props = {
   title?: string
   description?: string
   meta?: Array<Record<string, string>>
@@ -103,7 +103,10 @@ const breadcrumbSchema = breadcrumbs &&
 
 {
   articleSchema && (
-    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(articleSchema)}
+    />
   )
 }
 {
