@@ -203,7 +203,7 @@ The `noVersion` and `original` aliases above return identical results.
 ## Using Versions in Sanpy
 
 The [sanpy](https://github.com/santiment/sanpy#versioned-metrics) Python library
-(`0.12.6+`) supports versioned metrics. You can check which versions a metric
+(`0.15.0+`) supports versioned metrics. You can check which versions a metric
 has and pass the desired version to `san.get` or `san.get_many`.
 
 Check available versions for a metric:
@@ -212,12 +212,17 @@ Check available versions for a metric:
 import san
 
 san.available_metric_versions("social_dominance_total")
-# ['1.0', '2.0', '2.1']
+# ['original:v1', 'modern:v1', 'modern_pit:v1']
 ```
 
-`available_metric_versions` returns the numeric `version` values. To get the
-version names, query `versionName` through the
-[API](#for-a-single-metric).
+`available_metric_versions` returns the version names (`versionName`). A
+version that has no name is returned by its `version` value instead. Pass
+`names=False` to get the numeric `version` values:
+
+```python
+san.available_metric_versions("social_dominance_total", names=False)
+# ['1.0', '2.0', '2.1']
+```
 
 Fetch data for a specific version:
 
