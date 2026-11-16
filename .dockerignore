@@ -1,0 +1,32 @@
+# .git is NOT ignored: san-webkit-next's vite config runs `git rev-parse HEAD`,
+# `git rev-list --count HEAD` and `git show` during `pnpm build`.
+# It only lives in the builder stage; the final image gets just /app/public.
+
+# dependencies (installed inside the image)
+node_modules
+
+# build output and generated files
+public
+dist
+.astro
+.svelte-kit
+.cache
+static/webkit
+static/vendors
+static/~partytown
+
+# local / editor files
+.idea
+.vscode
+.DS_Store
+.claude
+.worktrees
+.tool-versions
+*.log
+
+# secrets
+.env
+.env.*
+*.pem
+*.key
+mkcert
