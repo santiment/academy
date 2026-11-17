@@ -4,6 +4,7 @@
   "singleQuote": true,
   "tabWidth": 2,
   "trailingComma": "all",
+  "tailwindStylesheet": "./src/app.css",
   "plugins": [
     "prettier-plugin-astro",
     "prettier-plugin-svelte",
