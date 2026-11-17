@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'san-webkit-next/app.css';
 
 @config '#tailwind.config.js';
 
