@@ -5,8 +5,8 @@
   "description": "Santiment Academy",
   "scripts": {
     "dev": "astro dev",
-    "dev:https": "astro dev --host -- --https",
-    "dev:https:force": "astro dev --host --force -- --https",
+    "dev:https": "astro dev --host --https",
+    "dev:https:force": "astro dev --host --force --https",
     "build": "astro build && pagefind --site public",
     "preview": "astro preview",
     "astro": "astro"
