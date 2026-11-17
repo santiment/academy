@@ -10,9 +10,21 @@ dateModified: 2025-10-30
 
 **Social Dominance Spike** Anomaly identifies abnormal spikes in social dominance metrics for cryptocurrency assets using statistical z-score analysis. It monitors pre-calculated z-scores from social data and detects when assets experience unusually high or low levels of social attention compared to their historical patterns.
 
-The anomaly processes z-score values that represent how many standard deviations an asset's current social dominance deviates from its historical average, triggering alerts when these values exceed statistical significance thresholds (default: 3.0 standard deviations).
+The anomaly processes z-score values that represent how many standard deviations an asset's current social dominance deviates from its historical average, triggering alerts when these values exceed statistical significance thresholds.
 
-![](image1.png)
+## Examples
+
+![](social_dominance_spike_ethereum.png)
+
+![](social_dominance_spike_hyperliquid.png)
+
+![](social_dominance_spike_cardano.png)
+
+![](social_dominance_spike_xrp.png)
+
+## Covered assets
+
+* TOP-300 assets by current market capitalization
 
 ## Use Cases
 
@@ -20,3 +32,26 @@ The anomaly processes z-score values that represent how many standard deviations
 - **Market Sentiment Analysis**: Understanding shifts in public perception and social sentiment toward specific assets before they impact prices
 - **Risk Management**: Detecting when assets are losing social traction, potentially indicating weakening fundamentals or community support
 - **Trading Opportunities**: Finding assets gaining unexpected social momentum that may precede price movements
+
+## SanAPI
+
+Available under the `anomaly_social_dominance_spike` name.
+
+Example of query for the **raw signals** for all covered assets, including their metadata:
+
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_social_dominance_spike"
+    from: "utc_now-30d"
+    to: "utc_now"
+    selector: { watchlistSlug: "projects" }
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```

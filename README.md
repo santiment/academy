@@ -87,7 +87,7 @@ To deploy updates to the production environment, follow these steps:
 - [Sanbase](https://app.santiment.net)
 - [Insights](https://insights.santiment.net)
 - [Sheets](https://sheets.santiment.net)
-- [SanR](https://sanr.app)
+- [Score Arena](https://scorearena.ai)
 - [API](https://api.santiment.net)
 - [Knowledge Base](https://academy.santiment.net)
 

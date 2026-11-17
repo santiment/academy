@@ -1,0 +1,258 @@
+---
+title: Development Activity Versions
+headline: 'Development Activity Versions: original:v1 and modern:v1'
+description: 'Explains the versions of the dev_activity and github_activity metrics (1.0/original:v1 and 2.0/modern:v1): how version 2.0 handles bots and automation, and how to select a version with getMetric.'
+author: Santiment Team
+datePublished: 2026-10-06
+dateModified: 2026-10-06
+---
+
+import Notebox from '$components/markdown/Notebox.svelte'
+
+- [Overview](#overview)
+- [Available Versions](#available-versions)
+- [What Version 2.0 Changes](#what-version-20-changes)
+- [Selecting a Version](#selecting-a-version)
+- [Which Version to Use](#which-version-to-use)
+
+## Overview
+
+The [Development Activity](/metrics/development-activity/development-activity)
+and [GitHub Activity](/metrics/development-activity/github-activity) metrics
+have two versions. Version 2.0 focuses on the work done by people. Unlike version
+1.0, it does not count bots or automation that runs under a personal account.
+
+Version 1.0 reflects GitHub activity as it is. It counts the events a project
+generates, regardless of whether a person, a bot or a script produced them.
+
+As bots, automation and AI agents produce a growing share of GitHub activity,
+version 2.0 takes a different approach. It aims to approximate how much
+people take part in developing a project.
+
+Version 2.0 does not try to tell apart work a developer does alone from work
+they do with the help of AI tools. If a developer uses AI assistance and their
+activity follows normal human patterns, it is counted like any other activity.
+Version 2.0 removes only bots and spam-like, high-volume activity that can
+inflate the metric far beyond the real development effort.
+
+Versions are available only for the metrics computed on the fly:
+
+| Metric            | Versions                           |
+| ----------------- | ---------------------------------- |
+| `dev_activity`    | `1.0` (`original:v1`), `2.0` (`modern:v1`) |
+| `github_activity` | `1.0` (`original:v1`), `2.0` (`modern:v1`) |
+
+The precomputed metrics (`dev_activity_1d`, `github_activity_1d`,
+`ecosystem_dev_activity`, `ecosystem_github_activity`), the change metrics and
+the contributors count metrics have only version `1.0`.
+
+All versions of the development activity metrics are free and available on
+every plan, including anonymous requests.
+
+<Notebox type="none">
+
+**Note:** The social metrics also have a version called `modern:v1`. The two
+are unrelated: each family of metrics has its own version names. For
+development activity, `modern:v1` is another name for version `2.0`. For the
+social version, see [Social Data Versions](/metrics/details/social-data-versions).
+
+</Notebox>
+
+---
+
+## Available Versions
+
+| Version | Version name  | Description |
+| ------- | ------------- | ----------- |
+| `1.0`   | `original:v1` | The default. Counts the unique GitHub events of an organization. `dev_activity` leaves out a fixed list of non-development events. |
+| `2.0`   | `modern:v1`   | Counts only pushes, pull requests, reviews and releases as development activity. Leaves out bot accounts and automation that runs under personal accounts. Caps the daily events of a single contributor in a single repository. |
+
+You can pass either the version (`"2.0"`) or its name (`"modern:v1"`) as the
+`version` argument. Both return the same data.
+
+---
+
+## What Version 2.0 Changes
+
+### Development events
+
+In version 1.0, `dev_activity` counts every event except a list of
+non-development events, such as issues, comments, forks and stars. GitHub event
+types that are not on that list, including any new ones, are counted.
+
+In version 2.0, `dev_activity` counts only these events:
+
+- `PushEvent` - pushing commits;
+- `PullRequestEvent` - opening, closing and merging pull requests;
+- `PullRequestReviewEvent` - reviewing pull requests;
+- `PullRequestReviewCommentEvent` - commenting in a pull request review;
+- `ReleaseEvent` - publishing releases.
+
+Creating and deleting branches and tags (`CreateEvent`, `DeleteEvent`) is not
+counted. How many branches a team creates depends on its workflow, for example
+one branch per pull request, rather than on the amount of work done. Any other
+event type, including ones GitHub introduces later, is not counted as
+development activity.
+
+`github_activity` still counts every event type.
+
+### Bots
+
+Version 2.0 does not count events by these accounts in either metric:
+
+- GitHub apps, whose names end in `[bot]` (for example `dependabot[bot]`);
+- machine accounts whose names end in `-bot`;
+- other known bot accounts, such as `copilot`.
+
+### Automation under personal accounts
+
+Some automation runs under a regular user account, so its name does not show
+that it is a bot. Version 2.0 treats a contributor's day in an organization as
+automation if the contributor has, on that UTC day:
+
+- development events in 20 or more different hours of the day, or
+- 100 or more development events within a single hour.
+
+A person does not work around the clock or at that pace. All events of that
+contributor in that organization on that day are left out of both metrics.
+
+Only development events count toward these limits. A burst of other events,
+such as deleting many merged branches at once, is not treated as automation.
+
+### Daily cap per contributor and repository
+
+Version 2.0 limits how much a single contributor can add to the metric. A
+contributor's development events in one repository on one UTC day count as at
+most 100 events.
+
+If a contributor has more than 100 development events in a repository on a day,
+each of their events in that repository on that day gets the weight
+`100 / development events`. For example, 400 pushes in a day count as 100
+events, each with a weight of 0.25.
+
+`github_activity` uses the same weight for the contributor's other events in
+that repository on that day. Only development events decide the weight, so a
+contributor with only non-development events in a repository on a day is not
+capped.
+
+Because of the weights, version 2.0 returns decimal values, while version 1.0
+returns whole numbers.
+
+### Relation between the two metrics
+
+In version 2.0, `github_activity` includes every event `dev_activity` counts,
+with the same weights and the same days left out as automation. Because of
+this, `github_activity` is never lower than `dev_activity` in version 2.0.
+
+### Time ranges and intervals
+
+The automation checks and the daily cap are computed over whole UTC days. The
+value of an event does not depend on the time range or interval of the query.
+With intervals shorter than a day, such as `1h`, the cap still applies to the
+whole day.
+
+---
+
+## Selecting a Version
+
+Pass the version name or number in the `version` argument of `getMetric`. When
+`version` is omitted, the API returns version `1.0`.
+
+```graphql explorer
+{
+  getMetric(metric: "dev_activity", version: "modern:v1") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+---
+
+Compare the two versions side by side using GraphQL aliases:
+
+```graphql explorer
+{
+  original: getMetric(metric: "github_activity", version: "original:v1") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+  modern: getMetric(metric: "github_activity", version: "modern:v1") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "utc_now-30d"
+      to: "utc_now"
+      interval: "1d"
+    )
+  }
+}
+```
+
+---
+
+Fetch the total over a period with `aggregatedTimeseriesData`:
+
+```graphql explorer
+{
+  getMetric(metric: "dev_activity", version: "modern:v1") {
+    aggregatedTimeseriesData(
+      slug: "ethereum"
+      from: "utc_now-30d"
+      to: "utc_now"
+      aggregation: SUM
+    )
+  }
+}
+```
+
+---
+
+List the versions of a metric, with their names and descriptions:
+
+```graphql explorer
+{
+  getMetric(metric: "dev_activity") {
+    metadata {
+      availableVersions {
+        version
+        versionName
+        description
+      }
+    }
+  }
+}
+```
+
+---
+
+## Which Version to Use
+
+### Use modern:v1
+
+Use version 2.0 to measure how much people work on a project. It is better for
+comparing projects, because a project's numbers do not grow with the number of
+bots it runs, how often its automation runs, or how it uses branches.
+
+### Use original:v1
+
+Use version 1.0 when you need the values that existing dashboards, alerts or
+stored datasets are based on, or when you want the precomputed metrics
+(`dev_activity_1d`, `ecosystem_dev_activity` and others), which are only
+available in version 1.0.
+
+### Keep the version fixed
+
+Use one version for all queries in a single analysis, dashboard or backtest.
+The values of the two versions are computed differently and should not be
+mixed.
+
+For general information about metric versions, see
+[Metric Versions](/sanapi/metric-versions).

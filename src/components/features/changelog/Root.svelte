@@ -1,6 +1,6 @@
 <script lang="ts" generics="EntryType extends { date: string }, TCreated, TRemoved">
   import type { Snippet } from 'svelte'
-  import type { Pagination } from '$modules/changelog/types'
+  import type { TPagination } from '$modules/changelog/types'
 
   import Button from 'san-webkit-next/ui/core/Button'
   import { mergeEntries } from '$modules/changelog/utils'
@@ -9,9 +9,9 @@
   type TProps = {
     initialData: {
       entries: EntryType[]
-      pagination: Pagination
+      pagination: TPagination
     }
-    fetchNextPage: (page: number) => Promise<{ entries: EntryType[], pagination: Pagination }>
+    fetchNextPage: (page: number) => Promise<{ entries: EntryType[], pagination: TPagination }>
     keys: { 
       created: keyof EntryType
       removed: keyof EntryType

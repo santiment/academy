@@ -2,7 +2,7 @@
   import type { Snippet } from 'svelte'
   import { BROWSER } from 'esm-env'
 
-  import Svg from 'san-webkit-next/ui/core/Svg'
+  import Button from 'san-webkit-next/ui/core/Button'
   import { copy } from 'san-webkit-next/utils'
   import { notification } from 'san-webkit-next/ui/core/Notifications'
 
@@ -17,21 +17,22 @@
   function handleCopy() {
     if (BROWSER) {
       const url = `${window.location.origin}${window.location.pathname}#${id}`
-      
+
       copy(url, () => notification.success('Copied'), 0)
     }
   }
 </script>
 
-<svelte:element this={`h${level}`} {id} class="relative group">
-  <button
-    type="button"
+<svelte:element this={`h${level}`} {id} class="group relative">
+  <Button
+    variant="plain"
+    size="sm"
+    icon="link"
+    iconSize={16}
     aria-label={`Copy link to section ${id}`}
-    class="opacity-0 fill-waterloo absolute w-[1em] h-full left-[-1em] -top-px border-b-0 hover:fill-green md:hidden group-hover:opacity-100 flex items-center"
+    class="fill-waterloo hover:fill-green absolute -top-px left-[-1em] h-full w-[1em] border-b-0 opacity-0 group-hover:opacity-100 md:hidden"
     onclick={handleCopy}
-  >
-    <Svg id="link" />
-  </button>
+  />
 
   {@render children?.()}
 </svelte:element>

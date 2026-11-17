@@ -10,14 +10,39 @@ dateModified: 2025-10-30
 
 **Project in Trends** Anomaly is triggered when a specific crypto token (excluding Ethereum and Bitcoin) gains significant traction in online discussions, placing it among the top 10 most-mentioned words in crypto-related conversations across social media platforms. By leveraging real-time data, the ‘project in trends’ anomaly helps users identify tokens that are generating buzz, allowing them to react quickly to market trends, sentiment shifts, and potential investment opportunities.
 
-- Uniswap anomalies:
-![](image1.png)
-- Tron anomalies:
-![](image2.png)
-- Dogecoin anomalies:
-![](image3.png)
+## Examples
+
+![](project_in_trends_ethereum.png)
+
+![](project_in_trends_solana.png)
+
+![](project_in_trends_xrp.png)
+
+![](project_in_trends_binance-coin.png)
+
+## Covered assets
+
+* All assets
 
 ## Use Cases
 
 - **Early Trend Detection for Traders**
 A sudden surge in mentions can indicate both hype and risk. If a token is trending due to controversy or security issues, users can take precautionary measures to protect their investments.
+
+## SanAPI
+
+Available under the `anomaly_project_in_trending_words` name.
+
+Example of query for the **number of times the anomaly fired** for `aave` between the `from` and `to` dates:
+
+```graphql explorer
+{
+  getSignal(signal: "anomaly_project_in_trending_words") {
+    aggregatedTimeseriesData(
+      selector: { slug: "aave" }
+      from: "utc_now-90d"
+      to: "utc_now"
+    )
+  }
+}
+```

@@ -5,25 +5,25 @@ import {
   ONE_MONTH_IN_MS,
 } from 'san-webkit-next/utils/dates'
 
-enum TimeType {
-  Minute = 'minute',
-  Hour = 'hour',
-  Day = 'day',
-  Month = 'month',
-  Year = 'year',
-}
-const TimeTypeDivider = {
+const TimeType = {
+  Minute: 'minute',
+  Hour: 'hour',
+  Day: 'day',
+  Month: 'month',
+  Year: 'year',
+} as const
+const TimeTypeDivider: Record<string, number> = {
   [TimeType.Minute]: ONE_MINUTE_IN_MS,
   [TimeType.Hour]: ONE_HOUR_IN_MS,
   [TimeType.Day]: ONE_DAY_IN_MS,
   [TimeType.Month]: ONE_MONTH_IN_MS,
 }
-export function dateDifferenceInWords(from: Date, to = new Date()): string {
+export function dateDifferenceInWords(from: Date, to = new Date()) {
   const diff = +to - +from
   if (diff < ONE_MINUTE_IN_MS) return 'a few seconds ago'
 
   let amount = 0
-  let timeType: TimeType
+  let timeType: string
 
   if (diff < ONE_HOUR_IN_MS) timeType = TimeType.Minute
   else if (diff < ONE_DAY_IN_MS) timeType = TimeType.Hour
@@ -37,7 +37,7 @@ export function dateDifferenceInWords(from: Date, to = new Date()): string {
     amount = Math.floor(amount / 12)
   }
 
-  if (amount > 1) (timeType as string) += 's'
+  if (amount > 1) timeType += 's'
 
   return `${amount} ${timeType} ago`
 }

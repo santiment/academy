@@ -2,7 +2,7 @@
 title: Santiment API Plans
 author: David Utro
 datePublished: 2020-04-08
-dateModified: 2025-10-28
+dateModified: 2026-09-28
 sidebar:
   label: 'Plans - SanAPI'
   order: 20
@@ -42,3 +42,8 @@ Check the [pricing page](https://app.santiment.net/pricing?utm_source=academy) f
 | Hourly Limit       | 30,000 API calls                                                               | 60,000 API calls                                    | custom                                              |
 | Per Minute Limit   | 600 API calls                                                                  | 1,200 API calls                                     | custom                                              |
 | **Sanbase Access** | Full access to [Sanbase](https://app.santiment.net?utm_source=academy)                            | Full access to [Sanbase](https://app.santiment.net?utm_source=academy) | Full access to [Sanbase](https://app.santiment.net?utm_source=academy) |
+
+> Note: Some metrics and metric versions are not included in every plan:
+>
+> - **Beta metrics** (for example, [Categorized Social Volume](/metrics/social-volume-categorized): `social_volume_twitter_kol`, `_trader`, `_media`, `_builder`, ...) are available only to alpha and beta users, on every plan including Business Max. `getAccessRestrictions` still reports them as accessible.
+> - **Newer metric versions** need a higher plan: `version: "modern:v1"` needs Business Pro or Business Max, and `version: "modern_pit:v1"` needs a paid yearly Business Max plan. See [Metric Versions](/sanapi/metric-versions#version-access-by-plan).

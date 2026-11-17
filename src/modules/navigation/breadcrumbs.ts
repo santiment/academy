@@ -7,11 +7,11 @@ export type TBreadcrumb = {
   label: string
 }
 
-type DocsMap = Map<string, CollectionEntry<'docs'>>
+type TDocsMap = Map<string, CollectionEntry<'docs'>>
 
 export const getBreadcrumbs = (
   docId: string,
-  docsMap: DocsMap,
+  docsMap: TDocsMap,
 ): TBreadcrumb[] => {
   const segments = docId.split('/')
 

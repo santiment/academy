@@ -4,7 +4,7 @@ author: Ivan
 description: The amount of messages/documents containing a given search term without spam
 # REF metrics-hub/metricshub/unique_social_volume.py
 datePublished: 2021-07-14
-dateModified: 2025-07-10
+dateModified: 2026-09-28
 ---
 
 ## Definition
@@ -69,7 +69,7 @@ Amount of distinct documents that mention the given text pattern.
 
 ## Available Assets
 
-Available for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22unique_social_volume_5m%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
+Available for [these assets](<https://api.santiment.net/graphiql?variables=&query=%7B%0A%20%20getMetric(metric%3A%20%22unique_social_volume_total_5m%22)%20%7B%0A%20%20%20%20metadata%20%7B%0A%20%20%20%20%20%20availableSlugs%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A>)
 
 > Note: All the unique social volume metrics are available for the same set of assets.
 
@@ -96,9 +96,14 @@ Available under the:
 - unique_social_volume_4chan_5m
 - unique_social_volume_4chan_1h
 - unique_social_volume_4chan_1d
-- unique_social_volume_farcaster_5m
-- unique_social_volume_farcaster_1h
-- unique_social_volume_farcaster_1d
+
+> Note: The per-source `1h` metrics (`unique_social_volume_twitter_1h`,
+> `unique_social_volume_reddit_1h`, `unique_social_volume_4chan_1h`,
+> `unique_social_volume_bitcointalk_1h`, `unique_social_volume_telegram_1h`)
+> are not populated right now. They return an empty series, and
+> `availableSince` returns `1970-01-01T00:00:00Z`, even for major assets such
+> as Bitcoin and Ethereum. For per-source data, use the `5m` or `1d` variants,
+> which have data from early 2023. `unique_social_volume_total_1h` is populated.
 
 
 ### Unique Social Volume Computed on 5 Minute Intervals

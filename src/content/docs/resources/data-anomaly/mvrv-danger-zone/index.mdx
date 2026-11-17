@@ -17,3 +17,23 @@ dateModified: 2025-10-30
 - MVRV can help institutional investors gauge market liquidity and risk exposure. Spikes in MVRV ratios can indicate that the market is becoming over-leveraged, while dips may signal safer entry points.
 - Long-term investors can use MVRV to track market cycles and identify when it might be wise to enter or exit positions.
 - The MVRV Danger Zone Data Anomaly becomes even more powerful when used in conjunction with the [MVRV Opportunity (Undervaluation) Zone](/data-anomaly/mvrv-opportunity-zone) Data Anomaly. While the Opportunity Data Anomaly identifies undervaluation and potential accumulation points, the Danger Anomaly warns of potential overvaluation and the risk of a price correction. By leveraging both anomalies, you can strategically time their entry and exit points.
+
+## SanAPI
+
+Available under names: `mvrv_usd_30d_upper_zone`, `mvrv_usd_60d_upper_zone`, `mvrv_usd_180d_upper_zone` and `mvrv_usd_365d_upper_zone`.
+
+The example below uses the 30-day variant; replace `30d` in the name with `60d`, `180d` or `365d` to query the other variants.
+
+Example of query for the **number of times the anomaly fired** for `bitcoin` between the `from` and `to` dates:
+
+```graphql explorer
+{
+  getSignal(signal: "mvrv_usd_30d_upper_zone") {
+    aggregatedTimeseriesData(
+      selector: { slug: "bitcoin" }
+      from: "utc_now-90d"
+      to: "utc_now"
+    )
+  }
+}
+```

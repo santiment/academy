@@ -1,7 +1,7 @@
 <script lang="ts">
   import { cn } from 'san-webkit-next/ui/utils'
 
-  interface TProps {
+  type TProps = {
     title: string
     href: string
     isActive: boolean

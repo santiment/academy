@@ -4,7 +4,7 @@ import 'katex/dist/katex.min.css'
 import type { CollectionEntry } from 'astro:content'
 import type { MarkdownHeading } from 'astro'
 import type { TBreadcrumb } from '$modules/navigation/breadcrumbs'
-import type { SidebarSection } from '$modules/navigation/sidebar'
+import type { TSidebarSection } from '$modules/navigation/sidebar'
 
 import { sluggify } from 'san-webkit-next/utils/url'
 
@@ -21,7 +21,7 @@ import H1 from '$components/markdown/headings/H1.astro'
 type Props = {
   doc: CollectionEntry<'docs'>
   breadcrumbs: TBreadcrumb[]
-  sidebarData: SidebarSection[]
+  sidebarData: TSidebarSection[]
   relatedProduct: { href: string; title: string } | null
   headings: MarkdownHeading[]
   lastUpdatedAt?: Date | string

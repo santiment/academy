@@ -8,11 +8,11 @@
   import Search from '$components/features/search/Search.svelte'
   import ProductsButton from '$components/ui/ProductsButton.svelte'
   import Sidebar from '$components/layout/Sidebar.svelte'
-  import type { SidebarSection } from '$modules/navigation/sidebar'
+  import type { TSidebarSection } from '$modules/navigation/sidebar'
 
   type TProps = {
     slug?: string
-    sidebarData?: SidebarSection[]
+    sidebarData?: TSidebarSection[]
   }
 
   const { slug, sidebarData }: TProps = $props()
@@ -70,7 +70,7 @@
         />
       {/if}
 
-      <div class="pb-3 pt-3 mt-3">
+      <div class={cn('pb-3', slug && sidebarData && 'pt-3 mt-3')}>
         <Products
           class="products-styled-list"
         />
@@ -83,14 +83,10 @@
   @reference '#app.css';
 
   .products-styled-list {
-    @apply w-full flex-col p-0 text-rhino;
+    @apply w-full flex-col rounded-none !p-0 text-rhino;
   }
 
-  .products-styled-list > div {
-    @apply border-b border-b-porcelain;
-  }
-
-  .products-styled-list a {
+  .products-styled-list section > a {
     @apply items-center px-2 py-2 w-full;
   }
 
@@ -106,15 +102,11 @@
     @apply hidden;
   }
 
-  .products-styled-list > div > section {
+  .products-styled-list > section {
     @apply pb-3;
   }
 
-  .products-styled-list > div > section > a > div:has(svg) {
+  .products-styled-list > section > a > div:has(svg) {
     @apply h-8 w-8 min-w-8;
-  }
-
-  .products-styled-list > div > section:first-of-type {
-    @apply border-b border-b-porcelain;
   }
 </style>

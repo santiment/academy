@@ -14,6 +14,18 @@ The detection logic is based on the modified z-score applied to the price-to-gro
 
 The anomaly is triggered only if the price growth exceeds 3% on the same day — ensuring the alert is relevant for significant bullish moves.
 
+## Examples
+
+![](price_daa_divergence_ethereum.png)
+
+![](price_daa_divergence_chainlink.png)
+
+![](price_daa_divergence_cardano.png)
+
+## Covered assets
+
+* TOP-300 non-stablecoin tokens by current market capitalization
+
 ## Use Cases
 
 - **Token Due Diligence**
@@ -23,19 +35,25 @@ Exchanges or asset managers can use this anomaly to detect early signs of artifi
 - **Alpha Signal for Reversals**
 Divergence between price and network activity may indicate upcoming price correction. Traders can use this anomaly as a contrarian indicator to time exits or hedging strategies.
 
-## Examples:
+## SanAPI
 
-- **Ethereum**:
-![](image1.png)
+Available under the `anomaly_price_network_activity_divergence` name.
 
-- **Dogecoin**:
-![](image2.png)
+Example of query for the **raw signals** for all covered assets, including their metadata:
 
-- **XRP**:
-![](image3.png)
-
-- **Chainlink**:
-![](image4.png)
-
-- **Cardano**:
-![](image5.png)
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_price_network_activity_divergence"
+    from: "utc_now-30d"
+    to: "utc_now"
+    selector: { watchlistSlug: "projects" }
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```

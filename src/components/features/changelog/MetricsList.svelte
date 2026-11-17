@@ -6,18 +6,18 @@
   import { getFormattedDetailedTimestamp } from 'san-webkit-next/utils/dates'
 
   import type { 
-    MetricsChangelogData, 
-    MetricCreatedEvent, 
-    MetricDeprecatedEvent 
+    TMetricsChangelogData, 
+    TMetricCreatedEvent, 
+    TMetricDeprecatedEvent 
   } from '$modules/changelog/types'
 
-  let { initialData, pageSize = 20 } = $props<{ initialData: MetricsChangelogData, pageSize?: number }>()
+  let { initialData, pageSize = 20 } = $props<{ initialData: TMetricsChangelogData, pageSize?: number }>()
 
   const fetchNextPage = (page: number) => 
     queryMetricsChangelog(UniQuery(fetch))(page, pageSize, '')
 </script>
 
-{#snippet createdMetric(item: MetricCreatedEvent)}
+{#snippet createdMetric(item: TMetricCreatedEvent)}
   {@const metricName = item.metric?.humanReadableName || item.metric?.metric || '—'}
   <strong>Created</strong> {metricName} - <time>{getFormattedDetailedTimestamp(new Date(item.eventTimestamp), { utc: true })}</time>
 
@@ -26,7 +26,7 @@
   {/if}
 {/snippet}
 
-{#snippet deprecatedMetric(item: MetricDeprecatedEvent)}
+{#snippet deprecatedMetric(item: TMetricDeprecatedEvent)}
   {@const metricName = item.metric?.humanReadableName || item.metric?.metric || '—'}
   <strong>Deprecated</strong> {metricName} - <time>{getFormattedDetailedTimestamp(new Date(item.eventTimestamp), { utc: true })}</time>
 

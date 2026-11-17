@@ -23,6 +23,10 @@ a clear view of overall lending dynamics in DeFi.
 - `total_lending_new_debt_stablecoins_usd` - Total USD value of new debt issued in stablecoin assets
 - `total_lending_repayments_non_stablecoins_usd` - Total USD value of repayments made in non-stablecoin assets
 - `total_lending_repayments_stablecoins_usd` - Total USD value of repayments made in stablecoin assets
+- `defi_stablecoins_borrowed_usd` - Total USD value of stablecoins currently borrowed on DeFi lending and
+  borrowing protocols: Aave v2, Aave v3, Compound, Compound v3 and Spark
+- `defi_stablecoins_borrowed_supply_ratio` - Ratio of the total USD value of borrowed stablecoins to the daily
+  average market capitalization (`total_lending_borrowed_stablecoins_usd / daily_avg_marketcap_usd`)
 
 ---
 
@@ -35,6 +39,7 @@ a clear view of overall lending dynamics in DeFi.
 ## Measuring Unit
 
 - Amount in USD
+- Ratio for `defi_stablecoins_borrowed_supply_ratio`
 
 ---
 
@@ -47,6 +52,7 @@ a clear view of overall lending dynamics in DeFi.
 ## Frequency
 
 - [Five-minute Intervals](/metrics/details/frequency#five-minute-frequency)
+- [Daily Intervals](/metrics/details/frequency#daily-frequency) for `defi_stablecoins_borrowed_supply_ratio`
 
 ---
 
@@ -77,6 +83,38 @@ Aggregate Metrics: `total_lending_liquidations<_non>_stablecoins_usd`,
       to: "2026-01-07T00:00:00Z"
       includeIncompleteData: true
       interval: "5m"
+    )
+  }
+}
+```
+
+Stablecoins Borrowed: `defi_stablecoins_borrowed_usd`
+
+```graphql explorer
+{
+  getMetric(metric: "defi_stablecoins_borrowed_usd") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-07T00:00:00Z"
+      includeIncompleteData: true
+      interval: "5m"
+    )
+  }
+}
+```
+
+Stablecoins Borrowed to Supply Ratio: `defi_stablecoins_borrowed_supply_ratio`
+
+```graphql explorer
+{
+  getMetric(metric: "defi_stablecoins_borrowed_supply_ratio") {
+    timeseriesDataJson(
+      slug: "ethereum"
+      from: "2026-01-01T00:00:00Z"
+      to: "2026-01-07T00:00:00Z"
+      includeIncompleteData: true
+      interval: "1d"
     )
   }
 }

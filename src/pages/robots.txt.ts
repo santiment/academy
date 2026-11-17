@@ -3,9 +3,6 @@ import type { APIRoute } from 'astro'
 const getRobotsTxt = (sitemapURL: URL) => `\
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow: /*.jpg$
-Disallow: /*.png$
-Disallow: /*.gif$
 Sitemap: ${sitemapURL.href}
 `
 
