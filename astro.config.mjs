@@ -1,3 +1,4 @@
+import { unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import svelte from '@astrojs/svelte'
 import tailwind from '@astrojs/tailwind'
@@ -31,6 +32,7 @@ const viteConfig = mergeConfig(viteBase, {
     __SVELTEKIT_PAYLOAD__: '""',
     __SVELTEKIT_APP_DIR__: '""',
     __SVELTEKIT_PATHS_RELATIVE__: '""',
+    __SVELTEKIT_HASH_ROUTING__: '""',
   },
   resolve: {
     alias: [{ find: '@sentry/sveltekit', replacement: '@sentry/astro' }],
@@ -109,8 +111,10 @@ export default defineConfig({
         SQL: 'sql',
       },
     },
-    remarkPlugins: [remarkMath, remarkGemoji],
-    rehypePlugins: [rehypeKatex, rehypeSlug],
+    processor: unified({
+      remarkPlugins: [remarkMath, remarkGemoji],
+      rehypePlugins: [rehypeKatex, rehypeSlug],
+    }),
   },
   publicDir: './static',
   outDir: './public',
