@@ -2,8 +2,9 @@
 """
 Generate llms.txt file for Santiment Academy
 
-This script scans all markdown files in the docs directory and creates an llms.txt file
-that provides LLMs with a structured overview of available documentation pages.
+Scans markdown files in src/content/docs and produces an llms.txt that mirrors
+the public URLs served by Astro's content collection. Root sections listed in
+ROOT_SECTIONS are stripped from the public slug, matching src/modules/navigation/paths.ts.
 
 Requirements:
     pip install pyyaml
@@ -18,11 +19,18 @@ from typing import Dict, List, Tuple
 import yaml
 
 
-def extract_frontmatter(content: str) -> Dict[str, str]:
-    """Extract YAML frontmatter from markdown content."""
+ROOT_SECTIONS = {
+    'getting-started',
+    'guides',
+    'resources',
+    'ai-toolkit',
+}
+
+
+def extract_frontmatter(content: str) -> Dict[str, object]:
     frontmatter_pattern = r'^---\s*\n(.*?)\n---\s*\n'
     match = re.match(frontmatter_pattern, content, re.DOTALL)
-    
+
     if match:
         try:
             return yaml.safe_load(match.group(1)) or {}
@@ -32,118 +40,127 @@ def extract_frontmatter(content: str) -> Dict[str, str]:
 
 
 def get_title_from_frontmatter(content: str, filepath: Path) -> str:
-    """Extract title from frontmatter, fallback to filename if not found."""
     frontmatter = extract_frontmatter(content)
-    
+
     if 'title' in frontmatter:
         return frontmatter['title']
-    
-    # Fallback: use filename and clean it up
+
     filename = filepath.stem
     if filename == 'index':
-        # Use parent directory name
         filename = filepath.parent.name
-    
-    # Convert kebab-case or snake_case to title case
-    title = filename.replace('-', ' ').replace('_', ' ').title()
-    return title
+
+    return filename.replace('-', ' ').replace('_', ' ').title()
 
 
-def slug_to_url_path(filepath: Path, docs_root: Path) -> str:
-    """Convert file path to URL path for the academy site."""
-    # Get relative path from docs root
+def is_hidden(content: str) -> bool:
+    frontmatter = extract_frontmatter(content)
+    sidebar = frontmatter.get('sidebar') or {}
+    if isinstance(sidebar, dict):
+        return bool(sidebar.get('hidden'))
+    return False
+
+
+def get_public_slug(filepath: Path, docs_root: Path) -> str:
+    """Mirror src/modules/navigation/paths.ts::getPublicSlug.
+
+    doc.id from Astro's glob loader is the path relative to docs_root with the
+    file extension stripped; for index files Astro drops the trailing /index.
+    If the first segment is a known root section, it is stripped from the URL.
+    """
     rel_path = filepath.relative_to(docs_root)
-    
-    # Remove 'index.md' or just '.md' extension
     parts = list(rel_path.parts)
-    if parts[-1] == 'index.md':
+
+    # Strip extension on final segment.
+    last = parts[-1]
+    if last.endswith('.mdx'):
+        parts[-1] = last[:-4]
+    elif last.endswith('.md'):
+        parts[-1] = last[:-3]
+
+    # Drop trailing 'index' segment (Astro strips /index from doc.id).
+    if parts and parts[-1] == 'index':
         parts = parts[:-1]
-    elif parts[-1].endswith('.md'):
-        parts[-1] = parts[-1][:-3]
-    
-    # Join with forward slashes
-    if parts:
-        return '/' + '/'.join(parts) + '/'
-    return '/'
+
+    # Strip leading root-section segment.
+    if parts and parts[0] in ROOT_SECTIONS:
+        parts = parts[1:]
+
+    if not parts:
+        return '/'
+    return '/' + '/'.join(parts) + '/'
 
 
 def collect_markdown_files(docs_root: Path) -> List[Tuple[str, str, Path]]:
-    """
-    Collect all markdown files and return list of (title, url_path, filepath) tuples.
-    Returns sorted list.
-    """
     markdown_files = []
-    
-    for md_file in sorted(docs_root.rglob('*.md')):
-        if md_file.is_file():
-            try:
-                with open(md_file, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                
-                title = get_title_from_frontmatter(content, md_file)
-                url_path = slug_to_url_path(md_file, docs_root)
-                
-                markdown_files.append((title, url_path, md_file))
-            except Exception as e:
-                print(f"Warning: Could not process {md_file}: {e}")
-                continue
-    
+
+    paths = sorted(
+        list(docs_root.rglob('*.md')) + list(docs_root.rglob('*.mdx'))
+    )
+
+    for md_file in paths:
+        if not md_file.is_file():
+            continue
+        try:
+            content = md_file.read_text(encoding='utf-8')
+        except Exception as e:
+            print(f"Warning: Could not read {md_file}: {e}")
+            continue
+
+        if is_hidden(content):
+            continue
+
+        title = get_title_from_frontmatter(content, md_file)
+        url_path = get_public_slug(md_file, docs_root)
+        markdown_files.append((title, url_path, md_file))
+
+    markdown_files.sort(key=lambda x: x[1])
     return markdown_files
 
 
-def generate_llms_txt(markdown_files: List[Tuple[str, str, Path]], base_url: str) -> str:
-    """Generate the llms.txt content with links to rendered HTML pages."""
+def generate_llms_txt(
+    markdown_files: List[Tuple[str, str, Path]], base_url: str
+) -> str:
     lines = [
         "# Santiment Academy",
         "",
         "## Docs",
-        ""
+        "",
     ]
-    
+
     for title, url_path, _ in markdown_files:
-        # Create the full URL to the rendered HTML page
         full_url = f"{base_url}{url_path}"
         lines.append(f"- [{title}]({full_url}): {title}")
-    
+
     return '\n'.join(lines) + '\n'
 
 
 def main():
-    """Main function to generate llms.txt file."""
-    # Determine paths
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
-    docs_root = project_root / 'src' / 'docs'
+    docs_root = project_root / 'src' / 'content' / 'docs'
     static_dir = project_root / 'static'
     output_file = static_dir / 'llms.txt'
-    
-    # Base URL for the academy site
+
     base_url = "https://academy.santiment.net"
-    
+
     print(f"Scanning markdown files in: {docs_root}")
-    
+
     if not docs_root.exists():
         print(f"Error: Docs directory not found at {docs_root}")
         return 1
-    
-    # Collect all markdown files
+
     markdown_files = collect_markdown_files(docs_root)
-    
+
     print(f"Found {len(markdown_files)} markdown files")
-    
-    # Generate llms.txt content
+
     llms_txt_content = generate_llms_txt(markdown_files, base_url)
-    
-    # Ensure output directory exists
+
     output_file.parent.mkdir(parents=True, exist_ok=True)
-    
-    # Write to file
-    with open(output_file, 'w', encoding='utf-8') as f:
-        f.write(llms_txt_content)
-    
-    print(f"✓ Successfully generated: {output_file}")
-    print(f"✓ File will be available at: {base_url}/llms.txt")
-    
+    output_file.write_text(llms_txt_content, encoding='utf-8')
+
+    print(f"Generated: {output_file}")
+    print(f"Available at: {base_url}/llms.txt")
+
     return 0
 
 
