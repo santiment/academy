@@ -27,7 +27,8 @@ podTemplate(label: 'academy-production-deploy', nodeSelector: 'cpu.credits=no', 
             sh "docker pull ${taggedSource}"
             sh "mkdir -p artifacts"
             sh "docker create --name academy-temp ${taggedSource}"
-            sh "docker cp academy-temp:/app/public ./artifacts/"
+            // /public since the slim artifact image; /app/public for older tags
+            sh "docker cp academy-temp:/public ./artifacts/ || docker cp academy-temp:/app/public ./artifacts/"
             sh "docker rm academy-temp"
           }
         }

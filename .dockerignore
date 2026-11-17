@@ -1,0 +1,20 @@
+# Keep .git: san-webkit's vite.config runs `git rev-parse HEAD` and
+# `git rev-list --count HEAD` during the build.
+
+# dependencies and build output (installed/produced inside the image)
+node_modules
+public
+dist
+.astro
+.svelte-kit
+
+# local env and tooling
+.env
+.env.*
+mkcert
+.claude
+.worktrees
+.cache
+.idea
+.DS_Store
+*.log

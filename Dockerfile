@@ -19,3 +19,10 @@ ARG SITE_URL
 COPY . /app
 
 RUN pnpm build
+
+# Artifact-only image: the deploy jobs `docker create` it, copy /public out and
+# sync it to S3. Nothing runs it, so ship just the built site (no node_modules,
+# source or .git). CMD is a placeholder because `docker create` needs one.
+FROM scratch AS site
+COPY --from=builder /app/public /public
+CMD ["/none"]
