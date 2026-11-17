@@ -34,3 +34,25 @@ A huge liquidation in the crypto space refers to the forced selling of a trader'
     - Trigger Stop Losses: Close positions before liquidity dries up or prices fall drastically.
     - Execute Hedging: Initiate hedging strategies, such as buying options or shorting correlated assets, to offset potential losses.
     - Human Intervention: The risk management team receives the alert and analyzes the market conditions to determine if additional manual intervention is required. They might pause trading or adjust strategies based on market sentiment.
+
+## SanAPI
+
+Available under the `anomaly_total_liquidations` name.
+
+Example of query for the **raw signals**, including their metadata:
+
+```graphql explorer
+{
+  getRawSignals(
+    signals: "anomaly_total_liquidations"
+    from: "utc_now-30d"
+    to: "utc_now"
+  ) {
+    datetime
+    signal
+    slug
+    value
+    metadata
+  }
+}
+```

@@ -36,8 +36,8 @@ dependencies:
     specifier: ^8.0.0
     version: 8.0.0
   san-webkit-next:
-    specifier: github:santiment/san-webkit#lib-1ae3e3932-240826
-    version: github.com/santiment/san-webkit/da576e1c1e9f96d17025e7693948640479c20988(@amplitude/rrweb@2.1.6)(@floating-ui/dom@1.8.0)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.5.8)(@sveltejs/kit@2.51.0)(@sveltejs/vite-plugin-svelte@5.1.1)(@types/react@19.3.0)(@wagmi/connectors@5.11.2)(@wagmi/core@2.21.2)(bits-ui@2.21.0)(driver.js@1.12.1)(estree-walker@3.0.3)(graphql@16.15.0)(highlight.js@11.12.0)(indicatorts@2.6.1)(lottie-web@5.13.0)(marked-highlight@2.2.4)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.16)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.57.3)(tailwind-merge@2.6.1)(tailwindcss@3.4.19)(typescript@5.9.3)(uuid@11.1.1)(viem@2.57.18)(vite@8.3.8)(wagmi@2.19.5)
+    specifier: github:santiment/san-webkit#lib-d3e99a072-131126
+    version: github.com/santiment/san-webkit/a056d7747d067bea12937efb333a8663dbf2e046(@amplitude/rrweb@2.1.6)(@floating-ui/dom@1.8.0)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.5.8)(@sveltejs/kit@2.51.0)(@sveltejs/vite-plugin-svelte@5.1.1)(@types/react@19.3.0)(@wagmi/connectors@5.11.2)(@wagmi/core@2.21.2)(bits-ui@2.21.0)(driver.js@1.12.1)(estree-walker@3.0.3)(graphql@16.15.0)(highlight.js@11.12.0)(indicatorts@2.6.1)(lottie-web@5.13.0)(marked-highlight@2.2.4)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.16)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.57.3)(tailwind-merge@2.6.1)(tailwindcss@3.4.19)(typescript@5.9.3)(uuid@11.1.1)(viem@2.57.18)(vite@8.3.8)(wagmi@2.19.5)
   svelte:
     specifier: ^5.57.3
     version: 5.57.3
@@ -3423,7 +3423,7 @@ packages:
   /@scure/bip32@1.7.0:
     resolution: {integrity: sha512-E4FFX/N3f4B80AKWp5dP6ow+flD1LQZo/w8UnLGYZO674jS6YnYeepycOOksv+vLPSpgN35wgKgy+ybfTb2SMw==}
     dependencies:
-      '@noble/curves': 1.9.1
+      '@noble/curves': 1.9.7
       '@noble/hashes': 1.8.0
       '@scure/base': 1.2.6
     dev: false
@@ -6081,6 +6081,21 @@ packages:
     dependencies:
       typescript: 5.9.3
       zod: 3.25.76
+    dev: false
+
+  /abitype@1.3.0(typescript@5.9.3)(zod@3.22.4):
+    resolution: {integrity: sha512-fk6Te+bojIFrMvMZrnOO+SxCB+RUksTGOzq/60ZRvs1L+BVzvi2bqt9L3W/17ZLdZsyM1FuYf65P5nlmoiH1Bg==}
+    peerDependencies:
+      typescript: '>=5.0.4'
+      zod: ^3.22.0 || ^4.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      zod:
+        optional: true
+    dependencies:
+      typescript: 5.9.3
+      zod: 3.22.4
     dev: false
 
   /abitype@1.3.0(typescript@5.9.3)(zod@3.25.76):
@@ -9145,7 +9160,7 @@ packages:
       '@noble/hashes': 1.8.0
       '@scure/bip32': 1.7.0
       '@scure/bip39': 1.6.0
-      abitype: 1.2.3(typescript@5.9.3)(zod@3.22.4)
+      abitype: 1.3.0(typescript@5.9.3)(zod@4.6.7)
       eventemitter3: 5.0.1
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -9166,7 +9181,7 @@ packages:
       '@noble/hashes': 1.8.0
       '@scure/bip32': 1.7.0
       '@scure/bip39': 1.6.0
-      abitype: 1.2.3(typescript@5.9.3)(zod@3.22.4)
+      abitype: 1.3.0(typescript@5.9.3)(zod@3.22.4)
       eventemitter3: 5.0.1
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -9187,7 +9202,7 @@ packages:
       '@noble/hashes': 1.8.0
       '@scure/bip32': 1.7.0
       '@scure/bip39': 1.6.0
-      abitype: 1.2.3(typescript@5.9.3)(zod@3.25.76)
+      abitype: 1.3.0(typescript@5.9.3)(zod@3.25.76)
       eventemitter3: 5.0.1
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -11971,9 +11986,9 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
-  github.com/santiment/san-webkit/da576e1c1e9f96d17025e7693948640479c20988(@amplitude/rrweb@2.1.6)(@floating-ui/dom@1.8.0)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.5.8)(@sveltejs/kit@2.51.0)(@sveltejs/vite-plugin-svelte@5.1.1)(@types/react@19.3.0)(@wagmi/connectors@5.11.2)(@wagmi/core@2.21.2)(bits-ui@2.21.0)(driver.js@1.12.1)(estree-walker@3.0.3)(graphql@16.15.0)(highlight.js@11.12.0)(indicatorts@2.6.1)(lottie-web@5.13.0)(marked-highlight@2.2.4)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.16)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.57.3)(tailwind-merge@2.6.1)(tailwindcss@3.4.19)(typescript@5.9.3)(uuid@11.1.1)(viem@2.57.18)(vite@8.3.8)(wagmi@2.19.5):
-    resolution: {tarball: https://codeload.github.com/santiment/san-webkit/tar.gz/da576e1c1e9f96d17025e7693948640479c20988}
-    id: github.com/santiment/san-webkit/da576e1c1e9f96d17025e7693948640479c20988
+  github.com/santiment/san-webkit/a056d7747d067bea12937efb333a8663dbf2e046(@amplitude/rrweb@2.1.6)(@floating-ui/dom@1.8.0)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.5.8)(@sveltejs/kit@2.51.0)(@sveltejs/vite-plugin-svelte@5.1.1)(@types/react@19.3.0)(@wagmi/connectors@5.11.2)(@wagmi/core@2.21.2)(bits-ui@2.21.0)(driver.js@1.12.1)(estree-walker@3.0.3)(graphql@16.15.0)(highlight.js@11.12.0)(indicatorts@2.6.1)(lottie-web@5.13.0)(marked-highlight@2.2.4)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.16)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.57.3)(tailwind-merge@2.6.1)(tailwindcss@3.4.19)(typescript@5.9.3)(uuid@11.1.1)(viem@2.57.18)(vite@8.3.8)(wagmi@2.19.5):
+    resolution: {tarball: https://codeload.github.com/santiment/san-webkit/tar.gz/a056d7747d067bea12937efb333a8663dbf2e046}
+    id: github.com/santiment/san-webkit/a056d7747d067bea12937efb333a8663dbf2e046
     name: san-webkit-next
     version: 0.0.1
     hasBin: true
