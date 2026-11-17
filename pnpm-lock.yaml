@@ -36,8 +36,8 @@ dependencies:
     specifier: ^8.0.0
     version: 8.0.0
   san-webkit-next:
-    specifier: github:santiment/san-webkit#lib-d3e99a072-131126
-    version: github.com/santiment/san-webkit/a056d7747d067bea12937efb333a8663dbf2e046(@amplitude/rrweb@2.0.0-alpha.33)(@floating-ui/dom@1.7.4)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.51.0)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@2.21.0)(driver.js@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.5)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.57.3)(tailwind-merge@2.6.0)(tailwindcss@4.3.0)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@8.3.8)(wagmi@2.19.0)
+    specifier: github:santiment/san-webkit#lib-88cc52874-171126
+    version: github.com/santiment/san-webkit/a92f8d5bb123e1f24eef1f554653ad76de6e2061(@amplitude/rrweb@2.0.0-alpha.33)(@floating-ui/dom@1.8.0)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.51.0)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@2.21.0)(driver.js@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.5)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.57.3)(tailwind-merge@3.7.0)(tailwindcss@4.3.0)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@8.3.8)(wagmi@2.19.0)
   svelte:
     specifier: ^5.57.3
     version: 5.57.3
@@ -66,7 +66,7 @@ devDependencies:
     version: 1.11.0(typescript@5.9.3)
   '@sentry/astro':
     specifier: ^10.78.0
-    version: 10.78.0(@opentelemetry/core@2.5.1)(astro@7.4.12)
+    version: 10.78.0(@opentelemetry/core@2.12.0)(astro@7.4.12)
   '@sveltejs/kit':
     specifier: ~2.51.0
     version: 2.51.0(@opentelemetry/api@1.9.1)(@sveltejs/vite-plugin-svelte@5.1.1)(svelte@5.57.3)(typescript@5.9.3)(vite@8.3.8)
@@ -248,7 +248,7 @@ packages:
   /@amplitude/rrweb-snapshot@2.0.0-alpha.33:
     resolution: {integrity: sha512-06CgbRFS+cYDo1tUa+Fe8eo4QA9qmYv9Azio3UYlYxqJf4BtAYSL0eXuzVBuqt3ZXnQwzBlsUj/8QWKKySkO7A==}
     dependencies:
-      postcss: 8.5.6
+      postcss: 8.5.33
     dev: false
 
   /@amplitude/rrweb-types@2.0.0-alpha.32:
@@ -1722,7 +1722,7 @@ packages:
       debug: 4.4.3
       lodash: 4.17.21
       pony-cause: 2.1.11
-      semver: 7.7.3
+      semver: 7.8.6
       uuid: 9.0.1
     transitivePeerDependencies:
       - supports-color
@@ -1736,7 +1736,7 @@ packages:
       '@ethereumjs/tx': 4.2.0
       '@types/debug': 4.1.12
       debug: 4.4.3
-      semver: 7.7.3
+      semver: 7.8.6
       superstruct: 1.0.4
     transitivePeerDependencies:
       - supports-color
@@ -1754,7 +1754,7 @@ packages:
       '@types/debug': 4.1.12
       debug: 4.4.3
       pony-cause: 2.1.11
-      semver: 7.7.3
+      semver: 7.8.6
       uuid: 9.0.1
     transitivePeerDependencies:
       - supports-color
@@ -1772,7 +1772,7 @@ packages:
       '@types/debug': 4.1.12
       debug: 4.4.3
       pony-cause: 2.1.11
-      semver: 7.7.3
+      semver: 7.8.6
       uuid: 9.0.1
     transitivePeerDependencies:
       - supports-color
@@ -1939,16 +1939,6 @@ packages:
 
   /@opentelemetry/core@2.12.0(@opentelemetry/api@1.9.1):
     resolution: {integrity: sha512-1HsSAuvT4/my0QrXWsyXFdWjKaPeCHsismKZgEEIb8NK13LP6DrMRlsUbvD/0F9mDWK3xDom9AMv3IscxgOnOQ==}
-    engines: {node: ^18.19.0 || >=20.6.0}
-    peerDependencies:
-      '@opentelemetry/api': '>=1.0.0 <1.10.0'
-    dependencies:
-      '@opentelemetry/api': 1.9.1
-      '@opentelemetry/semantic-conventions': 1.40.0
-    dev: true
-
-  /@opentelemetry/core@2.5.1(@opentelemetry/api@1.9.1):
-    resolution: {integrity: sha512-Dwlc+3HAZqpgTYq0MUyZABjFkcrKTePwuiFVLjahGD8cx3enqihmpAmdgNFO1R4m/sIe5afjJrA25Prqy4NXlA==}
     engines: {node: ^18.19.0 || >=20.6.0}
     peerDependencies:
       '@opentelemetry/api': '>=1.0.0 <1.10.0'
@@ -3148,10 +3138,10 @@ packages:
       '@rollup/pluginutils': 5.3.0(rollup@4.52.5)
       commondir: 1.0.1
       estree-walker: 2.0.2
-      fdir: 6.5.0(picomatch@4.0.3)
+      fdir: 6.5.0(picomatch@4.0.7)
       is-reference: 1.2.1
       magic-string: 0.30.21
-      picomatch: 4.0.3
+      picomatch: 4.0.7
       rollup: 4.52.5
     dev: false
 
@@ -3207,9 +3197,9 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@types/estree': 1.0.8
+      '@types/estree': 1.0.10
       estree-walker: 2.0.2
-      picomatch: 4.0.3
+      picomatch: 4.0.7
       rollup: 4.52.5
     dev: false
 
@@ -3514,7 +3504,7 @@ packages:
       '@scure/base': 1.2.6
     dev: false
 
-  /@sentry/astro@10.78.0(@opentelemetry/core@2.5.1)(astro@7.4.12):
+  /@sentry/astro@10.78.0(@opentelemetry/core@2.12.0)(astro@7.4.12):
     resolution: {integrity: sha512-0zrIt8OKMx79mYJLqp2hRbJBVIJBZ8BeofAbP05rfmbq5a516zGzWIfaEJpuFjA3a2PhgkutMWzuyMsnLFHo0A==}
     engines: {node: '>=18.19.1'}
     peerDependencies:
@@ -3523,7 +3513,7 @@ packages:
       '@sentry/browser': 10.78.0
       '@sentry/conventions': 0.16.0
       '@sentry/core': 10.78.0
-      '@sentry/node': 10.78.0(@opentelemetry/core@2.5.1)
+      '@sentry/node': 10.78.0(@opentelemetry/core@2.12.0)
       '@sentry/vite-plugin': 5.4.1
       astro: 7.4.12(@astrojs/markdown-remark@7.3.9)
     transitivePeerDependencies:
@@ -3694,7 +3684,7 @@ packages:
       '@sentry/core': 10.78.0
     dev: true
 
-  /@sentry/node-core@10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.5.1)(@opentelemetry/instrumentation@0.220.0)(@opentelemetry/sdk-trace-base@2.12.0):
+  /@sentry/node-core@10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0)(@opentelemetry/instrumentation@0.220.0)(@opentelemetry/sdk-trace-base@2.12.0):
     resolution: {integrity: sha512-HJ3k7xINBiiTzc/QaIRHdt5ugctVYtcZnjruTxFa2tXFJSJYhVtgCE+DzLSkHXbVAlVS/rilAMGcO9GUiIqWTQ==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -3716,16 +3706,16 @@ packages:
         optional: true
     dependencies:
       '@opentelemetry/api': 1.9.1
-      '@opentelemetry/core': 2.5.1(@opentelemetry/api@1.9.1)
+      '@opentelemetry/core': 2.12.0(@opentelemetry/api@1.9.1)
       '@opentelemetry/instrumentation': 0.220.0(@opentelemetry/api@1.9.1)
       '@opentelemetry/sdk-trace-base': 2.12.0(@opentelemetry/api@1.9.1)
       '@sentry/conventions': 0.16.0
       '@sentry/core': 10.78.0
-      '@sentry/opentelemetry': 10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.5.1)(@opentelemetry/sdk-trace-base@2.12.0)
+      '@sentry/opentelemetry': 10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0)(@opentelemetry/sdk-trace-base@2.12.0)
       import-in-the-middle: 3.6.0
     dev: true
 
-  /@sentry/node@10.78.0(@opentelemetry/core@2.5.1):
+  /@sentry/node@10.78.0(@opentelemetry/core@2.12.0):
     resolution: {integrity: sha512-AE6nyehiCK6zcktrqzzBby5OCBqIL2ZwOyOLqoenczI7ufumfmcOMSpD0IVqjeIC/Kf0N0ymujqGPzqXgu9KrA==}
     engines: {node: '>=18'}
     dependencies:
@@ -3734,8 +3724,8 @@ packages:
       '@opentelemetry/sdk-trace-base': 2.12.0(@opentelemetry/api@1.9.1)
       '@sentry/conventions': 0.16.0
       '@sentry/core': 10.78.0
-      '@sentry/node-core': 10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.5.1)(@opentelemetry/instrumentation@0.220.0)(@opentelemetry/sdk-trace-base@2.12.0)
-      '@sentry/opentelemetry': 10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.5.1)(@opentelemetry/sdk-trace-base@2.12.0)
+      '@sentry/node-core': 10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0)(@opentelemetry/instrumentation@0.220.0)(@opentelemetry/sdk-trace-base@2.12.0)
+      '@sentry/opentelemetry': 10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0)(@opentelemetry/sdk-trace-base@2.12.0)
       '@sentry/server-utils': 10.78.0
       import-in-the-middle: 3.6.0
     transitivePeerDependencies:
@@ -3744,7 +3734,7 @@ packages:
       - supports-color
     dev: true
 
-  /@sentry/opentelemetry@10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.5.1)(@opentelemetry/sdk-trace-base@2.12.0):
+  /@sentry/opentelemetry@10.78.0(@opentelemetry/api@1.9.1)(@opentelemetry/core@2.12.0)(@opentelemetry/sdk-trace-base@2.12.0):
     resolution: {integrity: sha512-s47uqNaHres6ijiMsaoI6/DRev80vUqTqRMk0u/DfF9xAJttK7gOGqZBESr0YD2BXA21O+sUPsPeWuHlYHiScA==}
     engines: {node: '>=18'}
     peerDependencies:
@@ -3753,7 +3743,7 @@ packages:
       '@opentelemetry/sdk-trace-base': ^1.30.1 || ^2.1.0
     dependencies:
       '@opentelemetry/api': 1.9.1
-      '@opentelemetry/core': 2.5.1(@opentelemetry/api@1.9.1)
+      '@opentelemetry/core': 2.12.0(@opentelemetry/api@1.9.1)
       '@opentelemetry/sdk-trace-base': 2.12.0(@opentelemetry/api@1.9.1)
       '@sentry/conventions': 0.16.0
       '@sentry/core': 10.78.0
@@ -3962,7 +3952,7 @@ packages:
       magic-string: 0.30.21
       svelte: 5.57.3
       vite: 8.3.8
-      vitefu: 1.1.1(vite@8.3.8)
+      vitefu: 1.1.4(vite@8.3.8)
     transitivePeerDependencies:
       - supports-color
 
@@ -4938,7 +4928,7 @@ packages:
     dependencies:
       '@walletconnect/safe-json': 1.0.2
       idb-keyval: 6.2.2
-      unstorage: 1.17.4(idb-keyval@6.2.2)
+      unstorage: 1.17.6(idb-keyval@6.2.2)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -5848,7 +5838,7 @@ packages:
       zod: 3.25.76
     dev: false
 
-  /abitype@1.1.1(typescript@5.9.3)(zod@4.1.12):
+  /abitype@1.1.1(typescript@5.9.3)(zod@4.6.7):
     resolution: {integrity: sha512-Loe5/6tAgsBukY95eGaPSDmQHIjRZYQq8PB1MpsNccDIK8WiV+Uw6WzaIXipvaxTEL2yEB0OpEaQv3gs8pkS9Q==}
     peerDependencies:
       typescript: '>=5.0.4'
@@ -5860,7 +5850,7 @@ packages:
         optional: true
     dependencies:
       typescript: 5.9.3
-      zod: 4.1.12
+      zod: 4.6.7
     dev: false
 
   /acorn-jsx@5.3.2(acorn@8.19.0):
@@ -5996,7 +5986,7 @@ packages:
       tinyps: 0.5.2
       ultrahtml: 1.7.0
       unifont: 1.0.3
-      unstorage: 1.17.6
+      unstorage: 1.17.6(idb-keyval@6.2.2)
       verkit: 0.5.0
       vite: 8.3.8
       vitefu: 1.1.4(vite@8.3.8)
@@ -6347,10 +6337,6 @@ packages:
     resolution: {integrity: sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==}
     dev: true
 
-  /cookie-es@1.2.2:
-    resolution: {integrity: sha512-+W7VmiVINB+ywl1HGXJXmrqkOhpKrIiVZV6tQuV54ZyQC7MMuBt81Vc336GMLoHBq5hV/F9eXgt5Mnx0Rha5Fg==}
-    dev: false
-
   /cookie-es@1.2.3:
     resolution: {integrity: sha512-lXVyvUvrNXblMqzIRrxHb57UUVmqsSWlxqt3XIjCkUP0wDAf6uicO6KMbEgYrMNtEvWgWHwe42CKxPu9MYAnWw==}
 
@@ -6515,10 +6501,6 @@ packages:
       es-define-property: 1.0.1
       es-errors: 1.3.0
       gopd: 1.2.0
-    dev: false
-
-  /defu@6.1.4:
-    resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
     dev: false
 
   /defu@6.1.7:
@@ -6972,18 +6954,6 @@ packages:
       reusify: 1.1.0
     dev: false
 
-  /fdir@6.5.0(picomatch@4.0.3):
-    resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      picomatch: ^3 || ^4
-    peerDependenciesMeta:
-      picomatch:
-        optional: true
-    dependencies:
-      picomatch: 4.0.3
-    dev: false
-
   /fdir@6.5.0(picomatch@4.0.7):
     resolution: {integrity: sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==}
     engines: {node: '>=12.0.0'}
@@ -7201,20 +7171,6 @@ packages:
       radix3: 1.1.2
       ufo: 1.6.4
       uncrypto: 0.1.3
-
-  /h3@1.15.5:
-    resolution: {integrity: sha512-xEyq3rSl+dhGX2Lm0+eFQIAzlDN6Fs0EcC4f7BNUmzaRX/PTzeuM+Tr2lHB8FoXggsQIeXLj8EDVgs5ywxyxmg==}
-    dependencies:
-      cookie-es: 1.2.2
-      crossws: 0.3.5
-      defu: 6.1.4
-      destr: 2.0.5
-      iron-webcrypto: 1.2.1
-      node-mock-http: 1.0.4
-      radix3: 1.1.2
-      ufo: 1.6.3
-      uncrypto: 0.1.3
-    dev: false
 
   /has-property-descriptors@1.0.2:
     resolution: {integrity: sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg==}
@@ -7496,7 +7452,6 @@ packages:
 
   /idb-keyval@6.2.2:
     resolution: {integrity: sha512-yjD9nARJ/jb1g+CvD0tlhUHOrJ9Sy0P8T9MF3YaLlHnSRpwPfpTX0XIvpmw3gAJUmEu3FiICLBDPXVwyEvrleg==}
-    dev: false
 
   /idb@8.0.0:
     resolution: {integrity: sha512-l//qvlAKGmQO31Qn7xdzagVPPaHTxXx199MhrAFuVBTPqydcPYBWjkrbv4Y0ktB+GmWOiwHl237UUOrLmQxLvw==}
@@ -7632,7 +7587,7 @@ packages:
   /is-reference@1.2.1:
     resolution: {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
     dependencies:
-      '@types/estree': 1.0.8
+      '@types/estree': 1.0.10
     dev: false
 
   /is-reference@3.0.3:
@@ -7942,6 +7897,7 @@ packages:
   /lru-cache@11.2.6:
     resolution: {integrity: sha512-ESL2CrkS/2wTPfuend7Zhkzo2u0daGJ/A2VucJOgQ/C48S/zB8MMeMHSGKYpXhIjbPxfuezITkaBH1wqv00DDQ==}
     engines: {node: 20 || >=22}
+    dev: true
 
   /lru-cache@11.5.3:
     resolution: {integrity: sha512-U4N8FgzmWxc8k1VH8Kr6lQg18U7Fjvby6wXHVRX/ZZ7IwWbRMgrRbP0Wrb5q5NVinryp4SQampHKdvtecItxUg==}
@@ -8798,7 +8754,7 @@ packages:
       '@noble/hashes': 1.8.0
       '@scure/bip32': 1.7.0
       '@scure/bip39': 1.6.0
-      abitype: 1.1.1(typescript@5.9.3)(zod@4.1.12)
+      abitype: 1.1.1(typescript@5.9.3)(zod@4.6.7)
       eventemitter3: 5.0.1
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -8841,7 +8797,7 @@ packages:
       '@noble/hashes': 1.8.0
       '@scure/bip32': 1.7.0
       '@scure/bip39': 1.6.0
-      abitype: 1.1.1(typescript@5.9.3)(zod@4.1.12)
+      abitype: 1.1.1(typescript@5.9.3)(zod@4.6.7)
       eventemitter3: 5.0.1
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -8870,7 +8826,7 @@ packages:
     dev: false
     optional: true
 
-  /ox@0.9.14(typescript@5.9.3)(zod@4.1.12):
+  /ox@0.9.14(typescript@5.9.3)(zod@4.6.7):
     resolution: {integrity: sha512-lxZYCzGH00WtIPPrqXCrbSW/ZiKjigfII6R0Vu1eH2GpobmcwVheiivbCvsBZzmVZcNpwkabSamPP+ZNtdnKIQ==}
     peerDependencies:
       typescript: '>=5.4.0'
@@ -8884,7 +8840,7 @@ packages:
       '@noble/hashes': 1.8.0
       '@scure/bip32': 1.7.0
       '@scure/bip39': 1.6.0
-      abitype: 1.1.1(typescript@5.9.3)(zod@4.1.12)
+      abitype: 1.1.1(typescript@5.9.3)(zod@4.6.7)
       eventemitter3: 5.0.1
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -8926,7 +8882,7 @@ packages:
       '@noble/hashes': 1.8.0
       '@scure/bip32': 1.7.0
       '@scure/bip39': 1.6.0
-      abitype: 1.1.1(typescript@5.9.3)(zod@4.1.12)
+      abitype: 1.1.1(typescript@5.9.3)(zod@4.6.7)
       eventemitter3: 5.0.1
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -9114,11 +9070,6 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
-  /picomatch@4.0.3:
-    resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
-    engines: {node: '>=12'}
-    dev: false
-
   /picomatch@4.0.7:
     resolution: {integrity: sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==}
     engines: {node: '>=12'}
@@ -9246,12 +9197,12 @@ packages:
       hono: 4.10.3
       idb-keyval: 6.2.2
       mipd: 0.0.7(typescript@5.9.3)
-      ox: 0.9.14(typescript@5.9.3)(zod@4.1.12)
+      ox: 0.9.14(typescript@5.9.3)(zod@4.6.7)
       react: 16.14.0
       typescript: 5.9.3
       viem: 2.38.5(typescript@5.9.3)
       wagmi: 2.19.0(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(react@16.14.0)(typescript@5.9.3)(viem@2.38.5)
-      zod: 4.1.12
+      zod: 4.6.7
       zustand: 5.0.8(@types/react@19.2.2)(react@16.14.0)(use-sync-external-store@1.4.0)
     transitivePeerDependencies:
       - '@types/react'
@@ -9297,12 +9248,12 @@ packages:
       hono: 4.10.3
       idb-keyval: 6.2.2
       mipd: 0.0.7(typescript@5.9.3)
-      ox: 0.9.14(typescript@5.9.3)(zod@4.1.12)
+      ox: 0.9.14(typescript@5.9.3)(zod@4.6.7)
       react: 16.14.0
       typescript: 5.9.3
       viem: 2.38.5(typescript@5.9.3)
       wagmi: 2.19.0(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(react@16.14.0)(typescript@5.9.3)(viem@2.38.5)
-      zod: 4.1.12
+      zod: 4.6.7
       zustand: 5.0.8(@types/react@19.2.2)(react@16.14.0)(use-sync-external-store@1.4.0)
     transitivePeerDependencies:
       - '@types/react'
@@ -10065,13 +10016,6 @@ packages:
     hasBin: true
     dev: false
 
-  /semver@7.7.3:
-    resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
-    engines: {node: '>=10'}
-    hasBin: true
-    requiresBuild: true
-    dev: false
-
   /semver@7.8.6:
     resolution: {integrity: sha512-9lpSSU4Mly3mrtruwLs1eLK6+gzbzqeBFwRNjIjE+9LuDpWdYctrQlQ3ej1Ilgi7gknpsTRnPoLP8DpCHqHIJw==}
     engines: {node: '>=10'}
@@ -10495,21 +10439,23 @@ packages:
     resolution: {integrity: sha512-XgdnB1nGU6KU4VgMnZPaZCx7M1hBrLyEiZYau2G2gq9UT0d7d4FUBlNX7vvPlm/B1vk1PjrzJBx9Lbv4fsqS9g==}
     dev: false
 
-  /tailwind-merge@2.5.4:
-    resolution: {integrity: sha512-0q8cfZHMu9nuYP/b5Shb7Y7Sh1B7Nnl5GqNr1U+n2p6+mybvRtayrQ+0042Z5byvTA8ihjlP8Odo8/VnHbZu4Q==}
+  /tailwind-merge@3.7.0:
+    resolution: {integrity: sha512-XPPUyAc+cvspz3lHTcR/QgPfW2A0lv/xQNIjX3HGhLR+Nq2lHaLq5MtTesHn8GUr3W3DguT2KT5x3NVgRtYwmA==}
     dev: false
 
-  /tailwind-merge@2.6.0:
-    resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
-    dev: false
-
-  /tailwind-variants@0.3.1(tailwindcss@4.3.0):
-    resolution: {integrity: sha512-krn67M3FpPwElg4FsZrOQd0U26o7UDH/QOkK8RNaiCCrr052f6YJPBUfNKnPo/s/xRzNPtv1Mldlxsg8Tb46BQ==}
-    engines: {node: '>=16.x', pnpm: '>=7.x'}
+  /tailwind-variants@3.3.1(tailwind-merge@3.7.0)(tailwindcss@4.3.0):
+    resolution: {integrity: sha512-4pAvwUtM4HKBiRZftncAbpn6V9Hhwoa5Fl7O2u5zbp7Z5Cvu+/o/6+176WY3WCEES209543quG8zFIcXCsc5Jw==}
+    engines: {node: '>=16.9.x', pnpm: '>=7.x'}
     peerDependencies:
+      tailwind-merge: '>=3.0.0'
       tailwindcss: '*'
+    peerDependenciesMeta:
+      tailwind-merge:
+        optional: true
+      tailwindcss:
+        optional: true
     dependencies:
-      tailwind-merge: 2.5.4
+      tailwind-merge: 3.7.0
       tailwindcss: 4.3.0
     dev: false
 
@@ -10636,10 +10582,6 @@ packages:
     hasBin: true
     dev: false
 
-  /ufo@1.6.3:
-    resolution: {integrity: sha512-yDJTmhydvl5lJzBmy/hyOAA0d+aqCBuwl818haVdYCRrWV84o7YyeVm4QlVHStqNrrJSTb6jKuFAVqAFsr+K3Q==}
-    dev: false
-
   /ufo@1.6.4:
     resolution: {integrity: sha512-JFNbkD1Svwe0KvGi8GOeLcP4kAWQ609twvCdcHxq1oSL8svv39ZuSvajcD8B+5D0eL4+s1Is2D/O6KN3qcTeRA==}
 
@@ -10747,80 +10689,7 @@ packages:
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.1.0
 
-  /unstorage@1.17.4(idb-keyval@6.2.2):
-    resolution: {integrity: sha512-fHK0yNg38tBiJKp/Vgsq4j0JEsCmgqH58HAn707S7zGkArbZsVr/CwINoi+nh3h98BRCwKvx1K3Xg9u3VV83sw==}
-    peerDependencies:
-      '@azure/app-configuration': ^1.8.0
-      '@azure/cosmos': ^4.2.0
-      '@azure/data-tables': ^13.3.0
-      '@azure/identity': ^4.6.0
-      '@azure/keyvault-secrets': ^4.9.0
-      '@azure/storage-blob': ^12.26.0
-      '@capacitor/preferences': ^6 || ^7 || ^8
-      '@deno/kv': '>=0.9.0'
-      '@netlify/blobs': ^6.5.0 || ^7.0.0 || ^8.1.0 || ^9.0.0 || ^10.0.0
-      '@planetscale/database': ^1.19.0
-      '@upstash/redis': ^1.34.3
-      '@vercel/blob': '>=0.27.1'
-      '@vercel/functions': ^2.2.12 || ^3.0.0
-      '@vercel/kv': ^1 || ^2 || ^3
-      aws4fetch: ^1.0.20
-      db0: '>=0.2.1'
-      idb-keyval: ^6.2.1
-      ioredis: ^5.4.2
-      uploadthing: ^7.4.4
-    peerDependenciesMeta:
-      '@azure/app-configuration':
-        optional: true
-      '@azure/cosmos':
-        optional: true
-      '@azure/data-tables':
-        optional: true
-      '@azure/identity':
-        optional: true
-      '@azure/keyvault-secrets':
-        optional: true
-      '@azure/storage-blob':
-        optional: true
-      '@capacitor/preferences':
-        optional: true
-      '@deno/kv':
-        optional: true
-      '@netlify/blobs':
-        optional: true
-      '@planetscale/database':
-        optional: true
-      '@upstash/redis':
-        optional: true
-      '@vercel/blob':
-        optional: true
-      '@vercel/functions':
-        optional: true
-      '@vercel/kv':
-        optional: true
-      aws4fetch:
-        optional: true
-      db0:
-        optional: true
-      idb-keyval:
-        optional: true
-      ioredis:
-        optional: true
-      uploadthing:
-        optional: true
-    dependencies:
-      anymatch: 3.1.3
-      chokidar: 5.0.0
-      destr: 2.0.5
-      h3: 1.15.5
-      idb-keyval: 6.2.2
-      lru-cache: 11.2.6
-      node-fetch-native: 1.6.7
-      ofetch: 1.5.1
-      ufo: 1.6.3
-    dev: false
-
-  /unstorage@1.17.6:
+  /unstorage@1.17.6(idb-keyval@6.2.2):
     resolution: {integrity: sha512-gjKtcmn/KwZuJZO9o2sc0esAQnhmTw0LviDHwevTXbJMYs0dRTp8ZEEWXHU0vTpzbN3cA0yxlTeyXssMp3zDqw==}
     peerDependencies:
       '@azure/app-configuration': ^1.8.0
@@ -10886,6 +10755,7 @@ packages:
       chokidar: 5.0.0
       destr: 2.0.5
       h3: 1.15.11
+      idb-keyval: 6.2.2
       lru-cache: 11.5.3
       node-fetch-native: 1.6.7
       ofetch: 1.5.1
@@ -11232,16 +11102,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vitefu@1.1.1(vite@8.3.8):
-    resolution: {integrity: sha512-B/Fegf3i8zh0yFbpzZ21amWzHmuNlLlmJT6n7bu5e+pCHUKQIfXSYokrqOBGEMMe9UG2sostKQF9mml/vYaWJQ==}
-    peerDependencies:
-      vite: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0-beta.0
-    peerDependenciesMeta:
-      vite:
-        optional: true
-    dependencies:
-      vite: 8.3.8
-
   /vitefu@1.1.4(vite@8.3.8):
     resolution: {integrity: sha512-qbEIDswfXH3x3IYRMScl/bf1AVW0dn7Z8qkr7g7nohkusfuC7tcFa7t5EoTOz60AunosLM9sDrDjHxsX+Up+CQ==}
     peerDependencies:
@@ -11528,10 +11388,6 @@ packages:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
     dev: false
 
-  /zod@4.1.12:
-    resolution: {integrity: sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==}
-    dev: false
-
   /zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
@@ -11608,9 +11464,9 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
-  github.com/santiment/san-webkit/a056d7747d067bea12937efb333a8663dbf2e046(@amplitude/rrweb@2.0.0-alpha.33)(@floating-ui/dom@1.7.4)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.51.0)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@2.21.0)(driver.js@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.5)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.57.3)(tailwind-merge@2.6.0)(tailwindcss@4.3.0)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@8.3.8)(wagmi@2.19.0):
-    resolution: {tarball: https://codeload.github.com/santiment/san-webkit/tar.gz/a056d7747d067bea12937efb333a8663dbf2e046}
-    id: github.com/santiment/san-webkit/a056d7747d067bea12937efb333a8663dbf2e046
+  github.com/santiment/san-webkit/a92f8d5bb123e1f24eef1f554653ad76de6e2061(@amplitude/rrweb@2.0.0-alpha.33)(@floating-ui/dom@1.8.0)(@melt-ui/svelte@0.86.6)(@sveltejs/adapter-auto@3.3.1)(@sveltejs/adapter-node@5.4.0)(@sveltejs/kit@2.51.0)(@sveltejs/vite-plugin-svelte@5.1.1)(@tanstack/react-query@5.90.5)(@types/react@19.2.2)(@wagmi/connectors@5.11.2)(@wagmi/core@2.22.1)(bits-ui@2.21.0)(driver.js@1.8.0)(estree-walker@3.0.3)(graphql@16.11.0)(highlight.js@11.11.1)(indicatorts@2.2.2)(lottie-web@5.13.0)(marked-highlight@2.2.2)(marked@15.0.12)(mathjs@14.9.1)(monaco-editor@0.52.2)(phoenix@1.8.5)(photoswipe@5.4.4)(react-dom@16.14.0)(react@16.14.0)(rxjs@7.8.2)(svelte@5.57.3)(tailwind-merge@3.7.0)(tailwindcss@4.3.0)(typescript@5.9.3)(uuid@11.1.0)(viem@2.38.5)(vite@8.3.8)(wagmi@2.19.0):
+    resolution: {tarball: https://codeload.github.com/santiment/san-webkit/tar.gz/a92f8d5bb123e1f24eef1f554653ad76de6e2061}
+    id: github.com/santiment/san-webkit/a92f8d5bb123e1f24eef1f554653ad76de6e2061
     name: san-webkit-next
     version: 0.0.1
     hasBin: true
@@ -11639,8 +11495,8 @@ packages:
       photoswipe: ^5.4.4
       rxjs: ^7.8.1
       svelte: 5.35.4
-      tailwind-merge: ^2.3.0
-      tailwindcss: ^3.4.3
+      tailwind-merge: ^3.7.0
+      tailwindcss: ^4.3.0
       uuid: ^11.1.0
       viem: ~2.21.7
       vite: ^5.4.8
@@ -11648,7 +11504,7 @@ packages:
     dependencies:
       '@amplitude/analytics-browser': 2.29.0
       '@amplitude/plugin-session-replay-browser': 1.23.0(@amplitude/rrweb@2.0.0-alpha.33)
-      '@floating-ui/dom': 1.7.4
+      '@floating-ui/dom': 1.8.0
       '@internationalized/date': 3.10.0
       '@melt-ui/svelte': 0.86.6(svelte@5.57.3)
       '@reown/appkit': 1.8.12(@types/react@19.2.2)(react@16.14.0)(typescript@5.9.3)(zod@3.25.76)
@@ -11682,8 +11538,8 @@ packages:
       svelte: 5.57.3
       svelte-runes: 0.0.7(svelte@5.57.3)
       svelte-sonner: 0.3.28(svelte@5.57.3)
-      tailwind-merge: 2.6.0
-      tailwind-variants: 0.3.1(tailwindcss@4.3.0)
+      tailwind-merge: 3.7.0
+      tailwind-variants: 3.3.1(tailwind-merge@3.7.0)(tailwindcss@4.3.0)
       tailwindcss: 4.3.0
       tailwindcss-animate: 1.0.7(tailwindcss@4.3.0)
       ua-parser-js: 1.0.39
