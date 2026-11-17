@@ -160,6 +160,8 @@ const bgImage = `url(${illusBg.src})`
 </Page>
 
 <style define:vars={{ bgImage }}>
+  @reference '#app.css';
+
   .hero-bg {
     background-image: var(--bgImage);
     @apply bg-cover bg-center bg-no-repeat;

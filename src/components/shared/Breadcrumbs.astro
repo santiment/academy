@@ -16,10 +16,10 @@ const { breadcrumbs, class: className } = Astro.props
   <ul class="flex flex-wrap gap-y-4">
     {
       breadcrumbs.map(({ pathname, label }, index) => (
-        <li class="flex items-center before:m-0 before:w-0 before:!content-['']">
+        <li class="flex items-center before:m-0 before:w-0 before:content-['']!">
           <a
             href={pathname}
-            class="!text-rhino hover:!text-green-hover hover:!no-underline"
+            class="text-rhino! hover:text-green-hover! hover:no-underline!"
           >
             {label}
           </a>

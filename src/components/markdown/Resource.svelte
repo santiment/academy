@@ -14,7 +14,7 @@
   class={cn(
     'flex flex-col bg-athens rounded-lg my-6 py-6 px-8',
     '[&>div]:flex [&>div]:flex-col',
-    '[&>div]:space-y-2',
+    '[&>div]:gap-2',
     '[&>div_p]:m-0 [&>div_p]:p-0'
   )}
 >

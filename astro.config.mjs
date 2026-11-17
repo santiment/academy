@@ -1,8 +1,8 @@
 import { unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import svelte from '@astrojs/svelte'
-import tailwind from '@astrojs/tailwind'
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
+import tailwind from '@tailwindcss/vite'
 import path from 'path'
 import rehypeKatex from 'rehype-katex'
 import rehypeSlug from 'rehype-slug'
@@ -127,9 +127,8 @@ export default defineConfig({
       },
     }),
     mdx(),
-    tailwind(),
   ],
-  vite: viteConfig,
+  vite: { ...viteConfig, plugins: [...viteConfig.plugins, tailwind()] },
   base: '/',
   markdown: {
     shikiConfig: {

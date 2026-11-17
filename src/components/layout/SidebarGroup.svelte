@@ -49,7 +49,7 @@
         icon="arrow-right"
         iconSize={8}
         class={cn(
-          "w-6 h-6 cursor-pointer focus:outline-none fill-green hover:bg-green-light-2",
+          "w-6 h-6 cursor-pointer focus:outline-hidden fill-green hover:bg-green-light-2",
           '[&_svg]:transition-transform [&_svg]:duration-200 [&_svg]:ease-in-out',
           isOpen ? '[&_svg]:rotate-90' : '[&_svg]:rotate-0',
           isActive || isOpen
