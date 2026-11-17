@@ -23,7 +23,7 @@
   {#each queries as query}
     <Button
       variant="border"
-      class="border-porcelain text-sm sm:text-base p-[9px] bg-white !h-auto"
+      class="border-porcelain text-sm sm:text-base p-[9px] bg-white h-auto!"
       onclick={() => aiChatbot.openWithPrompt(query)}
     >
       {query}

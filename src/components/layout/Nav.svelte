@@ -83,7 +83,7 @@
   @reference '#app.css';
 
   .products-styled-list {
-    @apply w-full flex-col rounded-none !p-0 text-rhino;
+    @apply w-full flex-col rounded-none p-0! text-rhino;
   }
 
   .products-styled-list section > a {
