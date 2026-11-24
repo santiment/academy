@@ -77,7 +77,7 @@ const viteConfig = mergeConfig(viteBase, {
     exclude: ['svelte', '@astrojs/svelte'],
   },
 
-  plugins: [imageServiceSkipBeforeHydration],
+  plugins: [imageServiceSkipBeforeHydration, tailwind()],
 })
 
 const siteUrl = process.env.SITE_URL || 'https://academy.santiment.net'
@@ -128,7 +128,7 @@ export default defineConfig({
     }),
     mdx(),
   ],
-  vite: { ...viteConfig, plugins: [...viteConfig.plugins, tailwind()] },
+  vite: viteConfig,
   base: '/',
   markdown: {
     shikiConfig: {
