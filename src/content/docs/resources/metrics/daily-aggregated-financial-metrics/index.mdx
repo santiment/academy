@@ -3,7 +3,7 @@ title: Daily Aggregated Financial Metrics in USD
 author: Ivan
 description: Daily Aggregated OHLC Price, Trading Volume and Marketcap
 datePublished: 2024-03-26
-dateModified: 2025-04-30
+dateModified: 2026-11-23
 ---
 
 ## Definition
@@ -19,6 +19,14 @@ in a given day.
 - daily_low_price_usd
 - daily_opening_price_usd
 - daily_trading_volume_usd
+
+### Total Market Closing Marketcap
+
+In addition to individual assets, `daily_closing_marketcap_usd` is available for the following aggregate market capitalization assets, commonly used in the crypto industry:
+
+- `total_market` (TOTAL) - The combined market capitalization of all tracked cryptocurrencies. This includes Bitcoin, Ethereum, stablecoins, and all other crypto assets.
+- `total_market_2` (TOTAL2) - The total cryptocurrency market capitalization excluding Bitcoin (BTC). This metric is often used to analyze the altcoin market independently of Bitcoin's market dominance.
+- `total_market_3` (TOTAL3) - The total cryptocurrency market capitalization excluding Bitcoin (BTC) and Ethereum (ETH). This metric is used to evaluate the performance and size of the broader altcoin market beyond the two largest assets.
 
 ---
 
@@ -58,6 +66,8 @@ Available Assets for [daily_avg_marketcap_usd](https://api.santiment.net/graphiq
 
 Use the same API call to check the available assets for the other metrics.
 
+`daily_closing_marketcap_usd` is also available for the `total_market`, `total_market_2` and `total_market_3` assets.
+
 ---
 
 ## SanAPI
@@ -67,6 +77,21 @@ Use the same API call to check the available assets for the other metrics.
   getMetric(metric: "daily_closing_price_usd") {
     timeseriesDataJson(
       slug: "ethereum"
+      from: "2020-04-01T00:00:00Z"
+      to: "2020-04-07T00:00:00Z"
+      interval: "1d"
+    )
+  }
+}
+```
+
+### Total Market Closing Marketcap
+
+```graphql explorer
+{
+  getMetric(metric: "daily_closing_marketcap_usd") {
+    timeseriesDataJson(
+      slug: "total_market_2"
       from: "2020-04-01T00:00:00Z"
       to: "2020-04-07T00:00:00Z"
       interval: "1d"
