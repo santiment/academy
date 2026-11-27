@@ -28,3 +28,21 @@ dateModified: 2025-10-30
 
 - **Early Trend Detection for Traders**
 A sudden surge in mentions can indicate both hype and risk. If a token is trending due to controversy or security issues, users can take precautionary measures to protect their investments.
+
+## SanAPI
+
+Available under the `anomaly_project_in_trending_words` name.
+
+Example of query for the **number of times the anomaly fired** for `aave` between the `from` and `to` dates:
+
+```graphql explorer
+{
+  getSignal(signal: "anomaly_project_in_trending_words") {
+    aggregatedTimeseriesData(
+      selector: { slug: "aave" }
+      from: "utc_now-90d"
+      to: "utc_now"
+    )
+  }
+}
+```

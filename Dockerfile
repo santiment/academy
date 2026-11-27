@@ -1,4 +1,4 @@
-FROM node:20-alpine AS base
+FROM node:22.23.4-alpine AS base
 
 RUN apk add git
 RUN npm install -g pnpm@8
@@ -20,13 +20,9 @@ COPY . /app
 
 RUN pnpm build
 
-# The site is static (Astro, no adapter). The deploy jobs only
-# `docker create` this image and `docker cp /app/public` to S3, so the final
-# image carries just the build output: no node_modules, pnpm store or sources.
-FROM node:20-alpine
-ENV NODE_ENV=production
-ENV ASTRO_TELEMETRY_DISABLED=1
-
-WORKDIR /app
-
-COPY --from=builder /app/public /app/public
+# Artifact-only image: the deploy jobs `docker create` it, copy /public out and
+# sync it to S3. Nothing runs it, so ship just the built site (no node_modules,
+# source or .git). CMD is a placeholder because `docker create` needs one.
+FROM scratch AS site
+COPY --from=builder /app/public /public
+CMD ["/none"]
