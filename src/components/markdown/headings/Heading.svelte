@@ -23,14 +23,14 @@
   }
 </script>
 
-<svelte:element this={`h${level}`} {id} class="relative group">
+<svelte:element this={`h${level}`} {id} class="group relative">
   <Button
     variant="plain"
     size="sm"
     icon="link"
     iconSize={16}
     aria-label={`Copy link to section ${id}`}
-    class="opacity-0 fill-waterloo absolute w-[1em] h-full -left-[1em] -top-px border-b-0 hover:fill-green md:hidden group-hover:opacity-100"
+    class="fill-waterloo hover:fill-green absolute -top-px left-[-1em] h-full w-[1em] border-b-0 opacity-0 group-hover:opacity-100 md:hidden"
     onclick={handleCopy}
   />
 

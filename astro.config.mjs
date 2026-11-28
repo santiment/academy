@@ -1,8 +1,8 @@
 import { unified } from '@astrojs/markdown-remark'
 import mdx from '@astrojs/mdx'
 import svelte from '@astrojs/svelte'
-import tailwind from '@astrojs/tailwind'
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
+import tailwind from '@tailwindcss/vite'
 import path from 'path'
 import rehypeKatex from 'rehype-katex'
 import rehypeSlug from 'rehype-slug'
@@ -77,7 +77,7 @@ const viteConfig = mergeConfig(viteBase, {
     exclude: ['svelte', '@astrojs/svelte'],
   },
 
-  plugins: [imageServiceSkipBeforeHydration],
+  plugins: [imageServiceSkipBeforeHydration, tailwind()],
 })
 
 const siteUrl = process.env.SITE_URL || 'https://academy.santiment.net'
@@ -127,7 +127,6 @@ export default defineConfig({
       },
     }),
     mdx(),
-    tailwind(),
   ],
   vite: viteConfig,
   base: '/',

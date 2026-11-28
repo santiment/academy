@@ -30,7 +30,7 @@
 
 <nav
   class={cn(
-    'select-none w-full bg-white fixed top-0 z-[2] border-b border-b-porcelain'
+    'select-none w-full bg-white fixed top-0 z-2 border-b border-b-porcelain'
   )}
 >
   <div
@@ -80,8 +80,10 @@
 </nav>
 
 <style is:global>
+  @reference '#app.css';
+
   .products-styled-list {
-    @apply w-full flex-col rounded-none !p-0 text-rhino;
+    @apply w-full flex-col rounded-none p-0! text-rhino;
   }
 
   .products-styled-list section > a {
